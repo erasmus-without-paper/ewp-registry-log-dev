@@ -1,0 +1,81 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v1/manifest-entry.xsd
+    "
+>
+    <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
+    <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
+    <ewp:admin-notes>SIGMA UVa EWP Dev Manifest</ewp:admin-notes>
+    <r:apis-implemented>
+        <discovery
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+            version="4.0.0"
+        >
+            <url>https://erasmuswithoutpaper.sigmaaie.org:1453/manifest_saas.xml</url>
+        </discovery>
+        <echo
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+            version="1.0.0"
+        >
+            <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
+            <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
+            <ewp:admin-notes>SIGMA UVa Echo API Dev.</ewp:admin-notes>
+            <url>https://example.com/ewp/echo</url>
+        </echo>
+    </r:apis-implemented>
+    <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+        <hei id="uva.es">
+            <other-id type="erasmus">SP UVA01</other-id>
+            <other-id type="pic">999862809</other-id>
+            <name xml:lang="sp">UNIVERSIDAD DE VALLADOLID</name>
+        </hei>
+    </mf:institutions-covered>
+    <client-credentials-in-use>
+        <certificate>
+          MIIFPTCCBCWgAwIBAgIQCCijy8kxMVXUyV1V5unuWjANBgkqhkiG9w0BAQsFADBk
+          MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+          QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+          Q0EgMzAeFw0xNjAxMDcwMDAwMDBaFw0xOTAxMTExMjAwMDBaMH0xCzAJBgNVBAYT
+          AkVTMRMwEQYDVQQIEwpWYWxsYWRvbGlkMRMwEQYDVQQHEwpWYWxsYWRvbGlkMSIw
+          IAYDVQQKExlVbml2ZXJzaWRhZCBkZSBWYWxsYWRvbGlkMSAwHgYDVQQDExdkZXNh
+          cnJvbGxvLnNpZ21hLnV2YS5lczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+          ggEBAKKQGYOAU5JQXJ+cTGRSGPw9r4SRlI333MEk/mCFmCsg4l1a4phX4E5s/dTe
+          XtCqWSx9NcTy6fHySIICyQkY8iWudWYpko+Y20nCx+uYZTAo5eFZ1zottpWyRrBE
+          QWG6uzhgD9zdgO+6zzILCgkDyQK2zNXy9j/osL6doozi6NjQs+bXzyOxbvTQ7+y1
+          iBOkrEcGNNxOo/jSH1bkHt9255ZuALizJEeNLwk93PUo0j/SQpUQsCAMn/Ff04Zg
+          q92S2L5ldD0AV37w6qqG4hQJN5HbLg8s8PiTI73td2ru3uKUs+Vo4ID5tP22U76d
+          CBATuuWlnnZIpo+TZhgX4Idpi3UCAwEAAaOCAdAwggHMMB8GA1UdIwQYMBaAFGf9
+          iCAUJ5jHCdIlGbvpURFjdVBiMB0GA1UdDgQWBBTIeqIzP0N68cjNJVaXrtCk5sTv
+          aTAiBgNVHREEGzAZghdkZXNhcnJvbGxvLnNpZ21hLnV2YS5lczAOBgNVHQ8BAf8E
+          BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIw
+          L6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3Js
+          MC+gLaArhilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNy
+          bDBMBgNVHSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsGAQUFBwIBFhxodHRwczov
+          L3d3dy5kaWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBuBggrBgEFBQcBAQRiMGAw
+          JAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcw
+          AoYsaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcnQw
+          DAYDVR0TAQH/BAIwADANBgkqhkiG9w0BAQsFAAOCAQEAJIPWtu9PZhwu8fS0AMD8
+          +VTRhgIfcA75ybKLtsKc72ZkRKF8itJ5JB8Pp1vgckOx1IvME9Pvl0af+lehLKcl
+          YU7FHxrTAb8if8AAeLWnjWkHJlFzIz83Im9ic3F63MsgSMW6c8nYaYnCq21AqUdp
+          GM4V7HMBH8adasFTauNnuK0GhfydZonoOkMrVkka9O4htEWXXPC82k0YGN686dAo
+          K1yqFGjKRJ2cbpuMzbwFor/KmjfAoiOiMBFLnlbRY1ZNp6q67G0L7duT4YBQmmAZ
+          IO/i6NgjKwtiwMtjJAjbA4wy7KbNP+h70eC7FLTftiRqVaQBB139TIwu+gMOKjwr
+          LA==
+        </certificate>
+    </client-credentials-in-use>
+</manifest>
