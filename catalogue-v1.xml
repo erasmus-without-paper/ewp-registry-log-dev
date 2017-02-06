@@ -108,6 +108,14 @@ This also means that API URLs published here don't really take any parameters, s
             <d4:discovery version="4.0.0">
                 <d4:url>https://schowek.usos.edu.pl/w.rygielski/ewp/ladok.se/manifest.xml</d4:url>
             </d4:discovery>
+            <institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/master/manifest-entry.xsd"
+                version="0.5.0"
+            >
+                <ewp:admin-notes>This is a "fake" API which serves a static response *with a factsheet PDF url*. We use it in Poland to test importing factsheets from other hosts.</ewp:admin-notes>
+                <url>https://schowek.usos.edu.pl/w.rygielski/ewp/ladok.se/lund-institution.xml</url>
+                <max-hei-ids>123</max-hei-ids>
+            </institutions>
             <emrex
                 xmlns="https://github.com/emrex-eu/elmo-schemas/blob/v1/manifest-entry.xsd"
                 version="1.1.0"
@@ -118,6 +126,7 @@ This also means that API URLs published here don't really take any parameters, s
         </apis-implemented>
         <institutions-covered>
             <hei-id>lu.se</hei-id>
+            <hei-id>hv.se</hei-id>
         </institutions-covered>
     </host>
     <host>
@@ -539,6 +548,10 @@ This also means that API URLs published here don't really take any parameters, s
         </hei>
         <hei id="hei02.developers.erasmuswithoutpaper.eu">
             <name>Artificial HEI for testing Echo APIs</name>
+        </hei>
+        <hei id="hv.se">
+            <other-id type="national-swedish-hei-number">123</other-id>
+            <name xml:lang="en">University West</name>
         </hei>
         <hei id="ikea.university.se">
             <other-id type="erasmus">S Ikea01</other-id>
