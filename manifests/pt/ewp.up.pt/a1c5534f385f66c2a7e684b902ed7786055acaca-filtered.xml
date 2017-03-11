@@ -1,8 +1,6 @@
-<mf:manifest
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:i="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/master/manifest-entry.xsd"
-    xmlns:ou="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/master/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 >
     <ewp:admin-email>accarvalho@uporto.pt</ewp:admin-email>
@@ -11,33 +9,68 @@
     <r:apis-implemented>
         <discovery
             xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
-            version="4.0.0"
+            version="4.0.2"
         >
             <url>https://ewp.up.pt/rest/manifest</url>
         </discovery>
         <echo
             xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
-            version="1.0.0"
+            version="1.0.4"
         >
             <url>https://ewp.up.pt/rest/echo</url>
         </echo>
-        <i:institutions version="0.5.0">
-            <i:url>https://ewp.up.pt/rest/institutions</i:url>
-            <i:max-hei-ids>1</i:max-hei-ids>
-        </i:institutions>
-        <ou:organizational-units version="0.3.0">
-            <ou:url>https://ewp.up.pt/rest/ounits</ou:url>
-            <ou:max-ounit-ids>1</ou:max-ounit-ids>
-        </ou:organizational-units>
+        <institutions
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/master/manifest-entry.xsd"
+            version="1.0.0"
+        >
+            <url>https://ewp.up.pt/rest/institutions</url>
+            <max-hei-ids>1</max-hei-ids>
+        </institutions>
+        <organizational-units
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/tree/stable-v1"
+            version="1.0.0"
+        >
+            <url>https://ewp.up.pt/rest/ounits</url>
+            <max-ounit-ids>1</max-ounit-ids>
+            <max-ounit-codes>1</max-ounit-codes>
+        </organizational-units>
+        <courses
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/tree/master"
+            version="0.5.0"
+        >
+            <url>https://ewp.up.pt/rest/courses</url>
+            <max-los-ids>1</max-los-ids>
+            <max-los-codes>1</max-los-codes>
+        </courses>
+        <simple-course-replication
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/tree/stable-v1"
+            version="1.0.0"
+        >
+            <url>https://ewp.up.pt/rest/coursesrep</url>
+            <allows-anonymous-access>false</allows-anonymous-access>
+            <supports-modified-since>true</supports-modified-since>
+        </simple-course-replication>
+        <mobilities
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/blob/master/manifest-entry.xsd"
+            version="0.4.0"
+        >
+            <get-url>https://ewp.up.pt/</get-url>
+            <index-url>https://ewp.up.pt/</index-url>
+            <update-url>https://ewp.up.pt/</update-url>
+            <max-mobility-ids>1</max-mobility-ids>
+            <sends-notifications/>
+        </mobilities>
     </r:apis-implemented>
-    <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-        <hei id="up.pt">
-            <other-id type="pic">999894916</other-id>
-            <name xml:lang="pt">University of Porto</name>
-        </hei>
-    </mf:institutions-covered>
-    <mf:client-credentials-in-use>
-        <mf:certificate>MIIGNjCCBR6gAwIBAgIQBNKhDAkHSiP0raZ4BCUn8TANBgkqhkiG9w0BAQsFADBk
+    <institutions-covered>
+        <r:hei id="up.pt">
+            <r:other-id type="pic">999894916</r:other-id>
+            <r:other-id type="erasmus">P PORTO02</r:other-id>
+            <r:name xml:lang="en">University of Porto</r:name>
+            <r:name xml:lang="pt">Universidade do Porto</r:name>
+        </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+        <certificate>MIIGNjCCBR6gAwIBAgIQBNKhDAkHSiP0raZ4BCUn8TANBgkqhkiG9w0BAQsFADBk
 MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
 QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
 Q0EgMzAeFw0xNzAyMDEwMDAwMDBaFw0yMDAyMDYxMjAwMDBaMHUxCzAJBgNVBAYT
@@ -71,6 +104,6 @@ d8FGMb4YRi4lwx8wy/jPOjWWqdG6rmJddQG2aQ8uR2/dOLQJbncoZceLCeu4bJlj
 5DYC9inPlyfiT1OdFIzSCtEo6HomGvhuDDUcEOCFqx2xEAaFpGR90sYjEu1cwjC6
 tnaQ4IULjAQZ/WsWmGMBYjzbODeMCGEKUerCrbmSupy/foRFFmbKVzP0OMDiw4kM
 U4KrTJK3Yhy+Yg==
-</mf:certificate>
-    </mf:client-credentials-in-use>
-</mf:manifest>
+</certificate>
+    </client-credentials-in-use>
+</manifest>
