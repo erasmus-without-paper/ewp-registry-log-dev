@@ -1,12 +1,12 @@
 <catalogue
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:d4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
-    xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+    xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ia1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
-    xmlns:iac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v1/manifest-entry.xsd"
-    xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
@@ -19,23 +19,23 @@
         https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest-entry.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v1/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
 
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/manifest-entry.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v1/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-ounits/stable-v1/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-ounits/stable-v2/manifest-entry.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v1/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v2/manifest-entry.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v1/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iia-cnr/stable-v1/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iia-cnr/stable-v2/manifest-entry.xsd
     "
 >
     <host>
@@ -54,7 +54,7 @@
             <hei-id>hei02.developers.erasmuswithoutpaper.eu</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="b21b0d5610d4f610f0ed927a4732d293a257e39ff4980d14a7d85801fcc3dd4c"/>
+            <certificate sha-256="1a99c774f99ac1b53d99e5b24ff89b2c717d1246587a5fc03a705743405ccea7"/>
         </client-credentials-in-use>
     </host>
     <host>
@@ -63,19 +63,31 @@
             <d4:discovery version="4.0.1">
                 <d4:url>https://schowek.usos.edu.pl/m.kurzydlowski/ewp/demo_cuni/manifest.xml</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.1">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
                 <e1:url>https://ewp.demo.usos.edu.pl/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://ewp.demo.usos.edu.pl/institutions</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://ewp.demo.usos.edu.pl/ounits</ou1:url>
                 <ou1:max-ounit-ids>100</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>100</ou1:max-ounit-codes>
             </ou1:organizational-units>
-            <ia1:iias version="1.0.0">
+            <ia1:iias
+                xmlns:ia1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ia1:get-url>https://ewp.demo.usos.edu.pl/iia/get</ia1:get-url>
                 <ia1:max-iia-ids>100</ia1:max-iia-ids>
                 <ia1:max-iia-codes>100</ia1:max-iia-codes>
@@ -108,17 +120,26 @@
             <d4:discovery version="4.0.0">
                 <d4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/SIGMA_SaaS_HOST.xml</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.0">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
                 <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
                 <ewp:admin-notes>SIGMA SaaS Echo API Dev.</ewp:admin-notes>
                 <e1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
@@ -133,7 +154,10 @@
                 <max-mobility-ids>1</max-mobility-ids>
                 <supported-update-types/>
             </mobilities>
-            <ia1:iias version="1.0.0">
+            <ia1:iias
+                xmlns:ia1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ia1:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ia1:get-url>
                 <ia1:max-iia-ids>1</ia1:max-iia-ids>
                 <ia1:max-iia-codes>1</ia1:max-iia-codes>
@@ -166,17 +190,26 @@
             <d4:discovery version="4.0.0">
                 <d4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/UVA_HOST.xml</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.0">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
                 <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
                 <ewp:admin-notes>SIGMA UVa Echo API Dev.</ewp:admin-notes>
                 <e1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
@@ -191,7 +224,10 @@
                 <max-mobility-ids>1</max-mobility-ids>
                 <supported-update-types/>
             </mobilities>
-            <ia1:iias version="1.0.0">
+            <ia1:iias
+                xmlns:ia1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ia1:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ia1:get-url>
                 <ia1:max-iia-ids>1</ia1:max-iia-ids>
                 <ia1:max-iia-codes>1</ia1:max-iia-codes>
@@ -221,7 +257,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_dev/ewp/manifest?api=echo</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.1">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <e1:url>https://www.service4mobility.com/europe_dev/ewp/echo</e1:url>
             </e1:echo>
@@ -241,7 +280,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_dev_bremen/ewp/manifest?api=echo</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.1">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <e1:url>https://www.service4mobility.com/europe_dev_bremen/ewp/echo</e1:url>
             </e1:echo>
@@ -260,7 +302,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_dev/ewp/manifest?api=institutions</d4:url>
             </d4:discovery>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <in1:url>https://www.service4mobility.com/europe_dev/ewp/institutions</in1:url>
                 <in1:max-hei-ids>3</in1:max-hei-ids>
@@ -281,7 +326,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_dev_bremen/ewp/manifest?api=institutions</d4:url>
             </d4:discovery>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <in1:url>https://www.service4mobility.com/europe_dev_bremen/ewp/institutions</in1:url>
                 <in1:max-hei-ids>3</in1:max-hei-ids>
@@ -301,7 +349,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_dev/ewp/manifest?api=ounits</d4:url>
             </d4:discovery>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <ou1:url>https://www.service4mobility.com/europe_dev/ewp/ounits</ou1:url>
                 <ou1:max-ounit-ids>3</ou1:max-ounit-ids>
@@ -323,7 +374,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_dev_bremen/ewp/manifest?api=ounits</d4:url>
             </d4:discovery>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <ou1:url>https://www.service4mobility.com/europe_dev_bremen/ewp/ounits</ou1:url>
                 <ou1:max-ounit-ids>3</ou1:max-ounit-ids>
@@ -439,7 +493,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_test/ewp/manifest?api=echo</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.1">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <e1:url>https://www.service4mobility.com/europe_test/ewp/echo</e1:url>
             </e1:echo>
@@ -459,7 +516,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_test/ewp/manifest?api=institutions</d4:url>
             </d4:discovery>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <in1:url>https://www.service4mobility.com/europe_test/ewp/institutions</in1:url>
                 <in1:max-hei-ids>3</in1:max-hei-ids>
@@ -476,7 +536,10 @@
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <d4:url>https://www.service4mobility.com/europe_test/ewp/manifest?api=ounits</d4:url>
             </d4:discovery>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
                 <ou1:url>https://www.service4mobility.com/europe_test/ewp/ounits</ou1:url>
                 <ou1:max-ounit-ids>3</ou1:max-ounit-ids>
@@ -539,14 +602,23 @@
             <d4:discovery version="4.0.2">
                 <d4:url>https://ewp.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.4">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.4"
+            >
                 <e1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/institutions</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://ewp.its.umu.se/ewp-reference-connector/rest/ounits</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
@@ -599,14 +671,23 @@
             <d4:discovery version="4.0.2">
                 <d4:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.4">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.4"
+            >
                 <e1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/institutions</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/ounits</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
@@ -659,14 +740,23 @@
             <d4:discovery version="4.0.0">
                 <d4:url>https://qas.ewp.ugent.be/public-api/discovery/manifest.xml</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.0">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <e1:url>https://qas.ewp.ugent.be/secure-api/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://qas.ewp.ugent.be/secure-api/institutions</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://qas.ewp.ugent.be/secure-api/ounits</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
@@ -687,14 +777,23 @@
             <d4:discovery version="4.0.2">
                 <d4:url>https://ewp.up.pt/rest/manifest</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.4">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.4"
+            >
                 <e1:url>https://ewp.up.pt/rest/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://ewp.up.pt/rest/institutions</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://ewp.up.pt/rest/ounits</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
@@ -715,7 +814,10 @@
                 <allows-anonymous-access>false</allows-anonymous-access>
                 <supports-modified-since>false</supports-modified-since>
             </simple-course-replication>
-            <ia1:iias version="1.0.1">
+            <ia1:iias
+                xmlns:ia1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
                 <ia1:get-url>https://ewp.up.pt/rest/iias/get</ia1:get-url>
                 <ia1:max-iia-ids>1</ia1:max-iia-ids>
                 <ia1:max-iia-codes>1</ia1:max-iia-codes>
@@ -753,14 +855,23 @@
             <d4:discovery version="4.0.0">
                 <d4:url>https://fsweb-demo.uio.no/ewp/manifest</d4:url>
             </d4:discovery>
-            <e1:echo version="1.0.0">
+            <e1:echo
+                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <e1:url>https://fsweb-demo.uio.no/ewp/echo</e1:url>
             </e1:echo>
-            <in1:institutions version="1.0.0">
+            <in1:institutions
+                xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <in1:url>https://fsweb-demo.uio.no/ewp/institutions</in1:url>
                 <in1:max-hei-ids>1</in1:max-hei-ids>
             </in1:institutions>
-            <ou1:organizational-units version="1.0.0">
+            <ou1:organizational-units
+                xmlns:ou1="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <ou1:url>https://fsweb-demo.uio.no/ewp/ounits</ou1:url>
                 <ou1:max-ounit-ids>1</ou1:max-ounit-ids>
                 <ou1:max-ounit-codes>1</ou1:max-ounit-codes>
