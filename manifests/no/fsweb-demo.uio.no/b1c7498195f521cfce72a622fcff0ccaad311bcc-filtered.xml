@@ -5,19 +5,6 @@
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-    "
 >
     <ewp:admin-email>matija.puzar@ceres.no</ewp:admin-email>
     <ewp:admin-notes>Manifest file for Norway.</ewp:admin-notes>
@@ -48,41 +35,106 @@
             <url>https://fsweb-demo.uio.no/ewp/echo</url>
         </echo>
         <institutions
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
-            version="1.0.0"
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+            version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+                <sec:server-auth-methods>
+                    <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                </sec:server-auth-methods>
+            </http-security>
             <url>https://fsweb-demo.uio.no/ewp/institutions</url>
             <max-hei-ids>1</max-hei-ids>
         </institutions>
         <organizational-units
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
-            version="1.0.0"
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+            version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+                <sec:server-auth-methods>
+                    <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                </sec:server-auth-methods>
+            </http-security>
             <url>https://fsweb-demo.uio.no/ewp/ounits</url>
             <max-ounit-ids>1</max-ounit-ids>
             <max-ounit-codes>1</max-ounit-codes>
         </organizational-units>
         <iias
             xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/master/manifest-entry.xsd"
-            version="1.0.0"
+            version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+                <sec:server-auth-methods>
+                    <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                </sec:server-auth-methods>
+            </http-security>
             <get-url>https://fsweb-demo.uio.no/ewp/iias/get</get-url>
             <max-iia-ids>1</max-iia-ids>
             <max-iia-codes>1</max-iia-codes>
             <index-url>https://fsweb-demo.uio.no/ewp/iias/index</index-url>
         </iias>
         <courses
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-            version="1.0.0"
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v2/manifest-entry.xsd"
+            version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+                <sec:server-auth-methods>
+                    <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                </sec:server-auth-methods>
+            </http-security>
             <url>https://fsweb-demo.uio.no/ewp/courses</url>
             <max-los-ids>1</max-los-ids>
             <max-los-codes>1</max-los-codes>
         </courses>
         <course-replication
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
-            version="1.0.0"
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v2/manifest-entry.xsd"
+            version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+                <sec:server-auth-methods>
+                    <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                </sec:server-auth-methods>
+            </http-security>
             <url>https://fsweb-demo.uio.no/ewp/course-replication</url>
         </course-replication>
     </r:apis-implemented>
