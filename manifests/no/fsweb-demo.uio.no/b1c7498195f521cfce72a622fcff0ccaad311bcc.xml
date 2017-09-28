@@ -2,6 +2,7 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,6 +18,24 @@
 
         https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
     "
 >
 
@@ -28,7 +47,14 @@
             <url>https://fsweb-demo.uio.no/ewp/manifest</url>
         </discovery>
 
-        <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
+        <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd" version="2.0.0">
+            <http-security>
+                <sec:server-auth-methods>
+                    <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                </sec:server-auth-methods>
+            </http-security>
+
             <url>https://fsweb-demo.uio.no/ewp/echo</url>
         </echo>
 
@@ -110,6 +136,23 @@ L7+UJH3BDs9UvGWorMlDfuDQ3Ucjd0xLFehiEz2aki1e2exjoXegg/y6w4smccXj
 
     <server-credentials-in-use>
         <rsa-public-key>
+MIIDJzCCAg+gAwIBAgIJAK1/4w/vIClRMA0GCSqGSIb3DQEBBQUAMA0xCzAJBgNV
+BAYTAk5PMB4XDTE2MTExNjEzMjIxNVoXDTI2MTExNDEzMjIxNVowDTELMAkGA1UE
+BhMCTk8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCs1ja7R5X8WjtL
+tbbk09jBmODGGZ3DMuezUJJqhH61UVe9htsxg08Tx1kWf15v2N+B8dvXjo/P+5C/
+cS27NMj9sLGqiDAjrhYMJUSFUP8OYxG4lZfAcwoEWVckv+rKjYecoOAe5KNCJPGA
+nOMTgR4r7GAchuK8iKLv5eSFoM7VGVUNbu9XATNHKPU9dgdBMxmx+UfApq4qyWDF
+d0BNzYKC89QfXVSYrHvjjmCzsUybZjM0DBPEbNrgj+qqrYxoM/cOwv+99yS+6J0C
+Tf1kqhDpv3duR9w/yf3aKXqnLVy4J3Rvu4IH6mOgkWSQngF66gjxjAIE9cZZIGDX
+DBRjbmPHAgMBAAGjgYkwgYYwHQYDVR0OBBYEFPpgel7qkjYnUW9XWzKvfsHgRD6I
+MB8GA1UdIwQYMBaAFPpgel7qkjYnUW9XWzKvfsHgRD6IMAkGA1UdEwQCMAAwCwYD
+VR0PBAQDAgTwMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0
+aWZpY2F0ZTANBgkqhkiG9w0BAQUFAAOCAQEAY2nL7gaVs639W1YgIO4Rnsxx3Wgp
+0Mhl8pE3wZ0ZQ1NZj6JP1KY/B8GyKCEjeaDeGQHW6Ps0U0HFxjeClzJ1EwOKBXHM
+lDwXHsj9bXD108kwj47EveYdTftlBYLVHwoFrwoFgHabbNsnoNu+5GhYmuhuSIA8
+5iKa3ww2tIReHfdkIq0q19pkwkau4Paim96tB2Q1tDJYn5bNZI0l45Tak22SahQU
+sKpdNowPubxayGZR93+v90DL3dJV1fESS0oM44wVfiurQ2JcqNFf9iBCX8txy8f0
+c3xPrDUW1Xy8P/j15uaP0wsmqSXSgmgJy0POCXwfk8s/0T8FUhvIFrSzlw==
         </rsa-public-key>
     </server-credentials-in-use>
 </manifest>
