@@ -878,12 +878,15 @@
             <d4:discovery version="4.0.0">
                 <d4:url>https://fsweb-demo.uio.no/ewp/manifest</d4:url>
             </d4:discovery>
-            <e1:echo
-                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <e1:url>https://fsweb-demo.uio.no/ewp/echo</e1:url>
-            </e1:echo>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://fsweb-demo.uio.no/ewp/echo</e2:url>
+            </e2:echo>
             <in1:institutions
                 xmlns:in1="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
