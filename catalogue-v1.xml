@@ -765,6 +765,15 @@
                 <d4:url>https://qas.ewp.ugent.be/public-api/discovery/manifest.xml</d4:url>
             </d4:discovery>
             <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                </e2:http-security>
                 <e2:url>https://qas.ewp.ugent.be/secure-api/echo</e2:url>
             </e2:echo>
             <in2:institutions version="2.0.0">
@@ -792,6 +801,7 @@
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="af8bd81ba1c7e03bdd61cfd9ea259866a2c32117aa56958b3c54a3529450fbe0"/>
+            <rsa-public-key sha-256="00680e3df119f7af17674423d61742c08d1eb9e6959f9a0f20142250a655dd44"/>
         </client-credentials-in-use>
     </host>
     <host>
@@ -1097,6 +1107,14 @@
         </hei>
     </institutions>
     <binaries>
+        <rsa-public-key sha-256="00680e3df119f7af17674423d61742c08d1eb9e6959f9a0f20142250a655dd44">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgtNjWssgOprDYIlkKnf5XIbvHVwYEkL2
+            h01pzLjGnJlsai029ShumzDbf/uOVSzL3WC28GqRJve5jGiG7/gllcEKFDJ8XDO0lcH+ctc7Vj+R
+            udvSLkdxnnA82i9Sc6B8oGIY4C+DlFySobBx5+4eWDPL0MvpnvQ4dBvVdv+evl5Ah3/FdDolgdmp
+            lDgyQsoXxT6WT9JpuRJxvH0QMwOlpmNebc7BfwsSEyxzI4qFA/JnPinK24aCxh9OS4bZtpOyOify
+            n1/EaMrl2qT878cT+Mo8OT+Wec9DB3uH0OacMVxVqWVci0ANrMdABR8x+jRo6nAzptAIJBDvINKV
+            MqONcQIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="a859625706688a24778da061211f2c3565b4847e5c95a207c195556f89d7a1c6">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0R/Ikx+1bfIpcy0LuBCbLz591TOdcbhq
             0fNH/zgdJFHy3gsa7uyhEZ4hOl0CQakXvFc1XKMgwJalxMNnrsqTw+5OVSqKQVVFL7NLORjEqCit
