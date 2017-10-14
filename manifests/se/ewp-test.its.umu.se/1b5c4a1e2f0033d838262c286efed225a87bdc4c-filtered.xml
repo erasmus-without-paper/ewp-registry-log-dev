@@ -20,37 +20,9 @@
 >
     <admin-notes>This is a EWP reference connector instance.</admin-notes>
     <ns2:apis-implemented>
-        <ns7:simple-course-replication version="1.0.0">
-            <ns7:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/courses/replication</ns7:url>
-            <ns7:allows-anonymous-access>true</ns7:allows-anonymous-access>
-            <ns7:supports-modified-since>false</ns7:supports-modified-since>
-        </ns7:simple-course-replication>
-        <ns6:omobilities version="0.11.0">
-            <ns6:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/mobilities/get</ns6:get-url>
-            <ns6:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/mobilities/index</ns6:index-url>
-            <ns6:update-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/mobilities/update</ns6:update-url>
-            <ns6:max-omobility-ids>1</ns6:max-omobility-ids>
-            <ns6:sends-notifications/>
-            <ns6:supported-update-types/>
-        </ns6:omobilities>
-        <ns10:organizational-units version="2.0.0">
-            <ns10:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/ounits</ns10:url>
-            <ns10:max-ounit-ids>1</ns10:max-ounit-ids>
-            <ns10:max-ounit-codes>1</ns10:max-ounit-codes>
-        </ns10:organizational-units>
         <ns13:discovery version="4.1.0">
             <ns13:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</ns13:url>
         </ns13:discovery>
-        <ns9:iias version="2.0.0">
-            <ns9:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/get</ns9:get-url>
-            <ns9:max-iia-ids>1</ns9:max-iia-ids>
-            <ns9:max-iia-codes>1</ns9:max-iia-codes>
-            <ns9:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/index</ns9:index-url>
-        </ns9:iias>
-        <ns11:institutions version="2.0.0">
-            <ns11:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/institutions</ns11:url>
-            <ns11:max-hei-ids>1</ns11:max-hei-ids>
-        </ns11:institutions>
         <ns12:echo version="2.0.0">
             <ns12:http-security>
                 <ns5:client-auth-methods>
@@ -64,11 +36,39 @@
             </ns12:http-security>
             <ns12:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/echo</ns12:url>
         </ns12:echo>
+        <ns10:organizational-units version="2.0.0">
+            <ns10:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/ounits</ns10:url>
+            <ns10:max-ounit-ids>1</ns10:max-ounit-ids>
+            <ns10:max-ounit-codes>1</ns10:max-ounit-codes>
+        </ns10:organizational-units>
+        <ns6:omobilities version="0.11.0">
+            <ns6:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/mobilities/get</ns6:get-url>
+            <ns6:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/mobilities/index</ns6:index-url>
+            <ns6:update-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/mobilities/update</ns6:update-url>
+            <ns6:max-omobility-ids>1</ns6:max-omobility-ids>
+            <ns6:sends-notifications/>
+            <ns6:supported-update-types/>
+        </ns6:omobilities>
+        <ns9:iias version="2.0.0">
+            <ns9:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/get</ns9:get-url>
+            <ns9:max-iia-ids>1</ns9:max-iia-ids>
+            <ns9:max-iia-codes>1</ns9:max-iia-codes>
+            <ns9:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/index</ns9:index-url>
+        </ns9:iias>
+        <ns7:simple-course-replication version="1.0.0">
+            <ns7:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/courses/replication</ns7:url>
+            <ns7:allows-anonymous-access>true</ns7:allows-anonymous-access>
+            <ns7:supports-modified-since>false</ns7:supports-modified-since>
+        </ns7:simple-course-replication>
         <ns8:courses version="0.7.0">
             <ns8:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/courses</ns8:url>
             <ns8:max-los-ids>1</ns8:max-los-ids>
             <ns8:max-los-codes>1</ns8:max-los-codes>
         </ns8:courses>
+        <ns11:institutions version="2.0.0">
+            <ns11:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/institutions</ns11:url>
+            <ns11:max-hei-ids>1</ns11:max-hei-ids>
+        </ns11:institutions>
     </ns2:apis-implemented>
     <ns3:institutions-covered>
         <ns2:hei id="pomodoro.university.it">
@@ -79,24 +79,14 @@
         </ns2:hei>
     </ns3:institutions-covered>
     <ns3:client-credentials-in-use>
-        <ns3:certificate>MIIDDzCCAfegAwIBAgIJAJ1zvcssS2pfMA0GCSqGSIb3DQEBCwUAMB4xHDAaBgNV
-BAMME2V3cC10ZXN0Lml0cy51bXUuc2UwHhcNMTYxMjA3MTI0MzU5WhcNMjYxMjA1
-MTI0MzU5WjAeMRwwGgYDVQQDDBNld3AtdGVzdC5pdHMudW11LnNlMIIBIjANBgkq
-hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy2YIQ9NAfK8fGuHYADiuH9jqBSaR4HWv
-hJSbAFVK9UAItNBWeXFfZ5kbgVoJqwGyYyV3/iFPjFcRZFrB4z+GjeH5F8+4jrMO
-rSyJZwCYYNKdxTyDO2LWdIwkDT0ZdkGl15VXe2mIPWyRQUePFrq6l8lGmc8SD/Xg
-P277IO/eH51xujezpCurKD5niCKfPR2fY7NF31R8N3Xc9rpQcxRr3m9fz4RhcrcA
-vVSmzxwCzAqIECz5E9aWjCK1klfEy6FHjMx9A3ew2Vczs+14ERvjLAeIrAJ4dc3B
-JFbR0jhcN9Y+qIMQ8F9P3ODq8/ZyHlXp5RUprNTuJHqBqhPUqyVIswIDAQABo1Aw
-TjAdBgNVHQ4EFgQU2DXyrgYv5y3ImHrLCmV6Yr8rOOkwHwYDVR0jBBgwFoAU2DXy
-rgYv5y3ImHrLCmV6Yr8rOOkwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAyij7N4H4spVjfuFjhG/1RcYqApXk9mBbPK/ilfz9PrwA1FSQrQgHJy+jSV+h
-C1rxfPth8ZHN6ENRhJL6FQoe4qAOJImkOb1+r60or9OkF/8BHhfhd7cZysDzow8C
-SZo44aD75NTuNM3V3K34+j/cXzwq9I7FdN4FbxHgTTFi7PrYK8ruytL3TxXaIS+m
-RxksRguPk+rceTtl9Q66RDLcbYVLVmh41rZ2WKWa22t/R9uZycc/4/Sats+b9JWA
-pvYhe4ww0Nc/TK05pRi2GYxUR+vuO5UoVmDasvnnQT1aCDj2s5lZF+J4/MpqvU/j
-bS8hgNK045VtnbrhJsR1RG3htw==
-</ns3:certificate>
+        <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy2YIQ9NAfK8fGuHYADiu
+H9jqBSaR4HWvhJSbAFVK9UAItNBWeXFfZ5kbgVoJqwGyYyV3/iFPjFcRZFrB4z+G
+jeH5F8+4jrMOrSyJZwCYYNKdxTyDO2LWdIwkDT0ZdkGl15VXe2mIPWyRQUePFrq6
+l8lGmc8SD/XgP277IO/eH51xujezpCurKD5niCKfPR2fY7NF31R8N3Xc9rpQcxRr
+3m9fz4RhcrcAvVSmzxwCzAqIECz5E9aWjCK1klfEy6FHjMx9A3ew2Vczs+14ERvj
+LAeIrAJ4dc3BJFbR0jhcN9Y+qIMQ8F9P3ODq8/ZyHlXp5RUprNTuJHqBqhPUqyVI
+swIDAQAB
+</ns3:rsa-public-key>
     </ns3:client-credentials-in-use>
     <ns3:server-credentials-in-use>
         <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy2YIQ9NAfK8fGuHYADiu
