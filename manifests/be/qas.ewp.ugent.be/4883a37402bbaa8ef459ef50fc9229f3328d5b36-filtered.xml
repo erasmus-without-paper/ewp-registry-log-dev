@@ -51,6 +51,15 @@
             xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
             version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+            </http-security>
             <url>https://qas.ewp.ugent.be/secure-api/institutions</url>
             <max-hei-ids>1</max-hei-ids>
         </institutions>
@@ -58,6 +67,15 @@
             xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
             version="2.0.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+            </http-security>
             <url>https://qas.ewp.ugent.be/secure-api/ounits</url>
             <max-ounit-ids>1</max-ounit-ids>
             <max-ounit-codes>1</max-ounit-codes>
@@ -66,6 +84,15 @@
             xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/blob/stable-v1/manifest-entry.xsd"
             version="0.9.0"
         >
+            <http-security>
+                <sec:client-auth-methods>
+                    <tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                        allows-self-signed="true"
+                    />
+                    <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                </sec:client-auth-methods>
+            </http-security>
             <get-url>https://qas.ewp.ugent.be/secure-api/mobilities/get</get-url>
             <index-url>https://qas.ewp.ugent.be/secure-api/mobilities/index</index-url>
             <update-url>https://qas.ewp.ugent.be/secure-api/mobilities/update</update-url>
