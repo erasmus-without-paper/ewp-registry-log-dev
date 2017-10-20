@@ -61,21 +61,6 @@
     <host>
         <ewp:admin-email>hostmaster@usos.edu.pl</ewp:admin-email>
         <apis-implemented>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://schowek.usos.edu.pl/m.kurzydlowski/ewp/demo_cuni/manifest.xml</d4:url>
-            </d4:discovery>
-            <e2:echo version="2.0.0">
-                <e2:url>https://ewp.demo.usos.edu.pl/echo</e2:url>
-            </e2:echo>
-            <in2:institutions version="2.0.0">
-                <in2:url>https://ewp.demo.usos.edu.pl/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <ou2:organizational-units version="2.0.0">
-                <ou2:url>https://ewp.demo.usos.edu.pl/ounits</ou2:url>
-                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
-            </ou2:organizational-units>
             <ia2:iias version="2.0.0">
                 <ia2:get-url>https://ewp.demo.usos.edu.pl/iia/get</ia2:get-url>
                 <ia2:max-iia-ids>100</ia2:max-iia-ids>
@@ -85,13 +70,50 @@
             <iac2:iia-cnr version="2.0.1">
                 <iac2:url>https://ewp.demo.usos.edu.pl/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+            <courses
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <url>https://ewp.demo.usos.edu.pl/courses</url>
+                <max-los-ids>100</max-los-ids>
+                <max-los-codes>100</max-los-codes>
+            </courses>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://schowek.usos.edu.pl/m.kurzydlowski/ewp/demo_cuni/manifest.xml</d4:url>
+            </d4:discovery>
+            <e2:echo version="2.0.0">
+                <e2:url>https://ewp.demo.usos.edu.pl/echo</e2:url>
+            </e2:echo>
+            <imobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <get-url>https://ewp.demo.usos.edu.pl/imobilities/get</get-url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </imobilities>
+            <imobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <url>https://ewp.demo.usos.edu.pl/imobilities/cnr</url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </imobility-cnr>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://ewp.demo.usos.edu.pl/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:url>https://ewp.demo.usos.edu.pl/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <mobilities
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.9.0"
             >
-                <get-url>https://ewp.demo.usos.edu.pl/mobilities/get</get-url>
-                <index-url>https://ewp.demo.usos.edu.pl/mobilities/index</index-url>
-                <update-url>https://ewp.demo.usos.edu.pl/mobilities/update</update-url>
+                <get-url>https://ewp.demo.usos.edu.pl/omobilities/get</get-url>
+                <index-url>https://ewp.demo.usos.edu.pl/omobilities/index</index-url>
+                <update-url>https://ewp.demo.usos.edu.pl/omobilities/update</update-url>
                 <max-mobility-ids>100</max-mobility-ids>
                 <supported-update-types>
                     <update-statuses-v1/>
@@ -101,24 +123,24 @@
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.3.0"
             >
-                <url>https://ewp.demo.usos.edu.pl/mobilities/cnr</url>
+                <url>https://ewp.demo.usos.edu.pl/omobilities/cnr</url>
                 <max-mobility-ids>100</max-mobility-ids>
             </mobility-cnr>
-            <courses
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+            <imobility-tors
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="0.7.0"
             >
-                <url>https://ewp.demo.usos.edu.pl/courses</url>
-                <max-los-ids>100</max-los-ids>
-                <max-los-codes>100</max-los-codes>
-            </courses>
-            <tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-tors/blob/stable-v1/manifest-entry.xsd"
-                version="0.3.0"
+                <get-url>https://ewp.demo.usos.edu.pl/tors/get</get-url>
+                <index-url>https://ewp.demo.usos.edu.pl/tors/index</index-url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </imobility-tors>
+            <imobility-tor-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
             >
-                <url>https://ewp.demo.usos.edu.pl/tors</url>
-                <max-mobility-ids>100</max-mobility-ids>
-            </tors>
+                <url>https://ewp.demo.usos.edu.pl/tors/cnr</url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </imobility-tor-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>demo.usos.edu.pl</hei-id>
