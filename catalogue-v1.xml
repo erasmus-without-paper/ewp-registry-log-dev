@@ -747,6 +747,15 @@
     <host>
         <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
         <apis-implemented>
+            <ia2:iias version="2.0.0">
+                <ia2:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/index</ia2:index-url>
+            </ia2:iias>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
+            </d4:discovery>
             <e2:echo version="2.0.0">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -760,9 +769,10 @@
                 </e2:http-security>
                 <e2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/echo</e2:url>
             </e2:echo>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
-            </d4:discovery>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <simple-course-replication
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -771,16 +781,6 @@
                 <allows-anonymous-access>true</allows-anonymous-access>
                 <supports-modified-since>false</supports-modified-since>
             </simple-course-replication>
-            <in2:institutions version="2.0.0">
-                <in2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <ia2:iias version="2.0.0">
-                <ia2:get-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/get</ia2:get-url>
-                <ia2:max-iia-ids>1</ia2:max-iia-ids>
-                <ia2:max-iia-codes>1</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/iias/index</ia2:index-url>
-            </ia2:iias>
             <omobilities
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.11.0"
@@ -792,11 +792,6 @@
                 <sends-notifications/>
                 <supported-update-types/>
             </omobilities>
-            <ou2:organizational-units version="2.0.0">
-                <ou2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/ounits</ou2:url>
-                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
-            </ou2:organizational-units>
             <courses
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
                 version="0.7.0"
@@ -805,6 +800,11 @@
                 <max-los-ids>1</max-los-ids>
                 <max-los-codes>1</max-los-codes>
             </courses>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
         </apis-implemented>
         <institutions-covered>
             <hei-id>pomodoro.university.it</hei-id>
