@@ -20,22 +20,22 @@
     xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/update-request.xsd"
     xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/index-response.xsd"
     xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/update-response.xsd"
-    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/get-response.xsd"
-    xmlns:ns29="https://github.com/emrex-eu/elmo-schemas/tree/v1"
+    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/get-response.xsd"
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns30="http://www.w3.org/2000/09/xmldsig#"
-    xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns:ns30="https://github.com/emrex-eu/elmo-schemas/tree/v1"
+    xmlns:ns31="http://www.w3.org/2000/09/xmldsig#"
     xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/get-response.xsd"
     xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/index-response.xsd"
     xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/tree/stable-v2"
-    xmlns:ns37="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/tree/stable-v1"
-    xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/stable-v2"
-    xmlns:ns39="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/tree/stable-v1"
+    xmlns:ns37="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/tree/stable-v1"
+    xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/tree/stable-v1"
+    xmlns:ns39="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/stable-v2"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-api-mobility-cnr/tree/stable-v1"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-mobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/tree/stable-v1"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -51,6 +51,7 @@
         <ns11:imobilities version="0.1.1">
             <ns11:get-url>https://ewp.demo.usos.edu.pl/imobilities/get</ns11:get-url>
             <ns11:max-omobility-ids>100</ns11:max-omobility-ids>
+            <ns11:sends-notifications/>
         </ns11:imobilities>
         <ns10:imobility-cnr version="0.1.0">
             <ns10:url>https://ewp.demo.usos.edu.pl/imobilities/cnr</ns10:url>
@@ -70,27 +71,25 @@
             <ns12:max-iia-ids>100</ns12:max-iia-ids>
             <ns12:max-iia-codes>100</ns12:max-iia-codes>
             <ns12:index-url>https://ewp.demo.usos.edu.pl/iia/index</ns12:index-url>
+            <ns12:sends-notifications/>
         </ns12:iias>
         <ns13:iia-cnr version="2.0.1">
             <ns13:url>https://ewp.demo.usos.edu.pl/iia/cnr</ns13:url>
         </ns13:iia-cnr>
-        <ns5:omobilities version="0.12.1">
-            <ns5:get-url>https://ewp.demo.usos.edu.pl/omobilities/get</ns5:get-url>
-            <ns5:index-url>https://ewp.demo.usos.edu.pl/omobilities/index</ns5:index-url>
-            <ns5:update-url>https://ewp.demo.usos.edu.pl/omobilities/update</ns5:update-url>
+        <ns6:omobilities version="0.12.1">
+            <ns6:get-url>https://ewp.demo.usos.edu.pl/omobilities/get</ns6:get-url>
+            <ns6:index-url>https://ewp.demo.usos.edu.pl/omobilities/index</ns6:index-url>
+            <ns6:update-url>https://ewp.demo.usos.edu.pl/omobilities/update</ns6:update-url>
+            <ns6:max-omobility-ids>100</ns6:max-omobility-ids>
+            <ns6:sends-notifications/>
+            <ns6:supported-update-types>
+                <ns6:update-statuses-v1/>
+            </ns6:supported-update-types>
+        </ns6:omobilities>
+        <ns5:omobility-cnr version="0.4.0">
+            <ns5:url>https://ewp.demo.usos.edu.pl/omobilities/cnr</ns5:url>
             <ns5:max-omobility-ids>100</ns5:max-omobility-ids>
-            <ns5:supported-update-types>
-                <ns5:update-statuses-v1/>
-            </ns5:supported-update-types>
-        </ns5:omobilities>
-        <ns6:mobility-cnr version="0.3.0">
-            <ns6:url>https://ewp.demo.usos.edu.pl/omobilities/cnr</ns6:url>
-            <ns6:max-mobility-ids>100</ns6:max-mobility-ids>
-        </ns6:mobility-cnr>
-        <ns11:imobilities version="0.1.1">
-            <ns11:get-url>https://ewp.demo.usos.edu.pl/imobilities/get</ns11:get-url>
-            <ns11:max-omobility-ids>100</ns11:max-omobility-ids>
-        </ns11:imobilities>
+        </ns5:omobility-cnr>
         <ns15:courses version="0.7.0">
             <ns15:url>https://ewp.demo.usos.edu.pl/courses</ns15:url>
             <ns15:max-los-ids>100</ns15:max-los-ids>
@@ -100,6 +99,7 @@
             <ns8:get-url>https://ewp.demo.usos.edu.pl/tors/get</ns8:get-url>
             <ns8:index-url>https://ewp.demo.usos.edu.pl/tors/index</ns8:index-url>
             <ns8:max-omobility-ids>10</ns8:max-omobility-ids>
+            <ns8:sends-notifications/>
         </ns8:imobility-tors>
         <ns9:imobility-tor-cnr version="0.1.0">
             <ns9:url>https://ewp.demo.usos.edu.pl/tors/cnr</ns9:url>
