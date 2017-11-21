@@ -977,11 +977,11 @@
                 <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <mobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.9.0"
+            <om1:mobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.12.1"
             >
-                <http-security>
+                <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -990,20 +990,20 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://qas.ewp.ugent.be/secure-api/mobilities/get</get-url>
-                <index-url>https://qas.ewp.ugent.be/secure-api/mobilities/index</index-url>
-                <update-url>https://qas.ewp.ugent.be/secure-api/mobilities/update</update-url>
-                <max-mobility-ids>1</max-mobility-ids>
-                <supported-update-types/>
-            </mobilities>
-            <mobility-cnr
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.3.0"
+                </om1:http-security>
+                <om1:get-url>https://qas.ewp.ugent.be/secure-api/mobilities/get</om1:get-url>
+                <om1:index-url>https://qas.ewp.ugent.be/secure-api/mobilities/index</om1:index-url>
+                <om1:update-url>https://qas.ewp.ugent.be/secure-api/mobilities/update</om1:update-url>
+                <om1:max-mobility-ids>1</om1:max-mobility-ids>
+                <om1:supported-update-types/>
+            </om1:mobilities>
+            <omc1:mobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.0"
             >
-                <url>https://qas.ewp.ugent.be/secure-api/mobilities-cnr</url>
-                <max-mobility-ids>1</max-mobility-ids>
-            </mobility-cnr>
+                <omc1:url>https://qas.ewp.ugent.be/secure-api/mobilities-cnr</omc1:url>
+                <omc1:max-mobility-ids>1</omc1:max-mobility-ids>
+            </omc1:mobility-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>ugent.be</hei-id>
@@ -1257,6 +1257,8 @@
             <name xml:lang="es">UNIVERSITAT DE BARCELONA</name>
         </hei>
         <hei id="ugent.be">
+            <other-id type="erasmus">B  GENT01</other-id>
+            <other-id type="pic">999986096</other-id>
             <name xml:lang="en">Ghent University</name>
             <name xml:lang="nl">Universiteit Gent</name>
         </hei>
