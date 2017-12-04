@@ -1,11 +1,11 @@
 <manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
 
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
@@ -13,49 +13,57 @@
         https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd
 
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/manifest-entry.xsd
     "
 >
-    <ewp:admin-email>rygielski@mimuw.edu.pl</ewp:admin-email>
-    <ewp:admin-notes>This host handles the EWP Registry Service.</ewp:admin-notes>
-    <r:apis-implemented>
-        <discovery
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
-            version="4.1.0"
-        >
-            <url>https://dev-registry.erasmuswithoutpaper.eu/manifest.xml</url>
-        </discovery>
-        <registry
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
-            version="1.3.0"
-        >
-            <catalogue-url>https://dev-registry.erasmuswithoutpaper.eu/catalogue-v1.xml</catalogue-url>
-        </registry>
-        <fake-api-without-a-version xmlns="https://github.com/erasmus-without-paper/ewp-registry-service/issues/8"/>
-    </r:apis-implemented>
-    <institutions-covered>
-        <hei
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-            id="hei01.developers.erasmuswithoutpaper.eu"
-        >
-            <name>Artificial HEI for testing Echo APIs</name>
-        </hei>
-        <hei
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-            id="hei02.developers.erasmuswithoutpaper.eu"
-        >
-            <name>Artificial HEI for testing Echo APIs</name>
-        </hei>
-    </institutions-covered>
-    <client-credentials-in-use>
-        <certificate>MIIDLzCCAhegAwIBAgICMDkwDQYJKoZIhvcNAQELBQAwRDETMBEGA1UEAwwKRWNob1Rlc3RlcjENMAsGA1UECwwETm9uZTEPMA0GA1UECgwGTm9uZSBMMQ0wCwYDVQQGEwROb25lMB4XDTE3MTAyMzIwMDIwNFoXDTI3MTEyMDIwMDIwNFowcTFAMD4GA1UEAww3RHluYW1pY2FsbHkgR2VuZXJhdGVkIENlcnRpZmljYXRlIGZvciB0ZXN0aW5nIEVjaG8gQVBJczENMAsGA1UECwwETm9uZTEPMA0GA1UECgwGTm9uZSBMMQ0wCwYDVQQGEwROb25lMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1dyaB7a2zIpUo6IeY5tV3Mq6bnZhszMuXYtz/67RKhPTfZNetTQnINULRY07Wcsqv6IiOtQLc5pFbCWNaYQcHDcKMPAy8h2kw+UDyOnVBAIcR6PURy7JjqQcGEXYClPJxnNbBGc/y9WB0l7ghB3VwiYlzkV1yGM2IfQ62wTrWRtz6zdRKvGJcmwnDXdIo3uyWHdd9AZY5kEy5zRcEB3gVmL861O3eOx/uGBfhxbZbFbQm5dEdmuInynKb43I/pl4fqESQxmDaK9JzDHoqDgHn2RIPgWCWcQju9cO99GEdyyVj1HQXiCEuwfouGEOvPuscYzreDe85oDz/co+/PSBaQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCcNNstGm9rCfjhpb5mDhnKTkH2giVVTg4oNvF1tj+7E80nJ7yohzxGJ15misJwubMLPyVMidfVhsBF/qwp37gC/NtgV0Gsa54ZLcsTxRa35PPMV0cHWmGJsmDX5ia+cYL+xwt8w0FMF0IVdQqiXEHN1axBRCnRHmbgCFBHiiqB9aU3MOkk/sANu3LHGXMn5/Xko8l75tDAW5d8A+s7lfIDaVS9nQsCegXYldkRWlSuMPiKA1/q+D3JXFusKPeYsMuKRKsgzhUaXGc1M/gxTpq/gDRfiDZRM3vdleeTpU0YHlHcspRIjJ4FieMX2keFXE5DflGVFuguvEs320BPTsG4</certificate>
-        <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuWz8JGXwVMQrnKWHWCLydjur5/oiCIPaIcuuCnwOElrvTf4oLfpZJSkyKWEmoio11lu7QuDKXuKHn7Vrl2XA5EGUYouYMYL40tcaci4aFZLxXUNiuHJ2kNwSJbexZkGjVQzqsKUSEyoliy6WyUs3mtDRwGO2hjdUpFotMKGTS+4Qi+R0auK2EHsMPF9XDlHRPUHlJg1tEmIR8jrJzNzTbV/pKUzLLknMnULD+tKciOVIcuccVrOrHLK4tA4gXyI7VVkn2xM3VGo3snqde5VGaXMN3ulSk58Jy55jGx2f4WZQ5Ku8BKGfnMREIyOFzNHX8A3CYzju1NXKncuq0GsuQIDAQAB</rsa-public-key>
-    </client-credentials-in-use>
-    <server-credentials-in-use>
-        <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi8LXGQS4Lr0dJ4zWP+CgNNiBo0Uhq6sP+1n6yM6WwtxDdpJ4qEZtD1XQPZlbc2K39w1DDlxHigBwJqO83YZ1NBgiiKu3PP13KUItirciwZybXtml//U8zCG8XdWtyvAFni5MwBlEGIUCEPTYdAS2Dc0JkRF5EVtUheq7hOP5i6XmwHa8Z6zDihjVjDYj0oBR9DwihG47X0WlPDYzP23rlt2pr8kCXvHXvotEA5jP1GqTUAvVGGgnpTYqUTPa2gcV3SGaoo2Vns5EvhKDmC9Acut5mooH+MHg7wYvnPzYxMI8OV5Bg7wVFFGreqvU0auR4Th8UHKvOw1+oIIAaqgODwIDAQAB</rsa-public-key>
-    </server-credentials-in-use>
+    <host>
+        <ewp:admin-email>rygielski@mimuw.edu.pl</ewp:admin-email>
+        <ewp:admin-notes>This host handles the EWP Registry Service.</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://dev-registry.erasmuswithoutpaper.eu/manifest.xml</url>
+            </discovery>
+            <registry
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+                version="1.3.0"
+            >
+                <catalogue-url>https://dev-registry.erasmuswithoutpaper.eu/catalogue-v1.xml</catalogue-url>
+            </registry>
+        </r:apis-implemented>
+    </host>
+    <host>
+        <ewp:admin-email>rygielski@mimuw.edu.pl</ewp:admin-email>
+        <ewp:admin-notes>This host is needed for the Echo API Validator.</ewp:admin-notes>
+        <r:apis-implemented>
+            <fake-api-without-a-version xmlns="https://github.com/erasmus-without-paper/ewp-registry-service/issues/8"/>
+        </r:apis-implemented>
+        <institutions-covered>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="hei01.developers.erasmuswithoutpaper.eu"
+            >
+                <name>Artificial HEI for testing Echo APIs</name>
+            </hei>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="hei02.developers.erasmuswithoutpaper.eu"
+            >
+                <name>Artificial HEI for testing Echo APIs</name>
+            </hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIIDLzCCAhegAwIBAgICMDkwDQYJKoZIhvcNAQELBQAwRDETMBEGA1UEAwwKRWNob1Rlc3RlcjENMAsGA1UECwwETm9uZTEPMA0GA1UECgwGTm9uZSBMMQ0wCwYDVQQGEwROb25lMB4XDTE3MTEwNDE1MjE0NVoXDTI3MTIwMjE1MjE0NVowcTFAMD4GA1UEAww3RHluYW1pY2FsbHkgR2VuZXJhdGVkIENlcnRpZmljYXRlIGZvciB0ZXN0aW5nIEVjaG8gQVBJczENMAsGA1UECwwETm9uZTEPMA0GA1UECgwGTm9uZSBMMQ0wCwYDVQQGEwROb25lMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApL3F8TqAbwLV+29cRVPHrupiK1T6geLHl/j565YU82wH+hwAU+s/NpDaQB8rQvHrC6WNkpGlyyqlgh12JPmhIHSu3R008KeJkFhMUFBt6qmHXYl/uB8y5aGuFb/xZWebwe7hXVP/C8W5ZHVvZu2F0z6QF8Rr97uwzrZ7sYuOqW7cwAsjqyU/QdjDH5liLu70ho78wVx4ot4nn34eg5JdSnuEk9dTiaWrBod9FR8mHKlxkYPvw/7VDywf/Yj2iYAf3r3NTyjay2DPe2xFHUQzVryIGlNHGQCni2/yqBCID4+p5DWOZB3yqjJCuXOVqSEZnst4A73lXd3X5Bcpj6ohJwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBMF5QgUfy7YdsVionrBXVcoS5TkCWcYx1Zlfb1AX6G9K+p7urSh4V7ji/p07fzkGna5W5vP9jqW0++r+TDINU8bOnRqHACAikM6LtdVnGmwBa3p67ljl1zf3Fbr6Ptd/bOi5zpXn4FUqXflr3DgSuTBZ9b5EoessMzCelRs1C4pg5lRHGSXMrIHuJYpeQcYm4H+QnO+yf0vjh7xUtuJUnmSPtPddte4dgOpTBhNzDz5uTqA74fayAAzD22p5BXc2bZg+OUbvWLRcUgBUbE1vswQnBUdC6NwkMtHDZvDHCcRjW1fFlv0wQqGqTv5GMbuifjNZfndPnOpq0ZObxySwwi</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg9SPAxDkcj027BMfL+NRqmc3BBzSZ+cZTEQ3VUs34nclqN6v9ezEV0gBqAVDNtqoPuntdwJP8tKoXB+HlXTziOIMsT2kcx39mrHIRRTlFexmJ5NBk7Aldo3H13S/dVeXdsuvTsBzJDRMA9bHGDVb363NsFQUFxziwuN6VDcNxzD1X6BKgdFvwrZv7ZGz5nzJClji6Rdnqv22Y4TDTBspuLmCfpdiaAr/LWbJVW2KSA9oldm94PchR18BZ/8esQ2rsUWlKsjfaqMinEG9f4Z1nIOJVmxYJiZCGoEivJpimSCZYdzfwfR8s1did401rcTicYIF/lk885QuwVIC14vwIwIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4UfWwb7bNiwBjif+KvWOWuJBybKVkpZRAiMNkalIo1eT7SsUblMcHL/3oRANwmU5pBeP+8o3LRIpNiENC5JlHDLFYFI9CoIBvfl4MLD7FxJZehCpsp0fSAn3/cs1Tzmcvtws9QhqgKOzBYFNs+m7w+Y6oQb2Plsigv+XHgY013gI4ap6liOvlzjMXFEV5FWpKD9xKmqk0BDgRZ4tOYIKRvKiNQBYC/QbPYOJg+648K0FqExI1/xErZ7tfUmETHjFbT7I1p51zilaC+6qrXYPoLDRtpvQK6ZFtLU/t7n0tP8Kj27fTv0AkQ3bRwrqSw6ouaxVAvBm924Ms2sALghf8QIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
 </manifest>
