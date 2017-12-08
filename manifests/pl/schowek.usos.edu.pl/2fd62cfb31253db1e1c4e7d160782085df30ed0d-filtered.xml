@@ -1,7 +1,7 @@
 <manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5">
     <host>
         <admin-email xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">hostmaster@usos.edu.pl</admin-email>
-        <ns34:apis-implemented xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+        <ns36:apis-implemented xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <ns14:discovery
                 xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
                 version="4.1.0"
@@ -12,6 +12,15 @@
                 xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
+                <ns3:http-security>
+                    <ns2:client-auth-methods xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns18:tlscert
+                            xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <ns17:httpsig xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns2:client-auth-methods>
+                </ns3:http-security>
                 <ns3:url>https://ewp.demo.usos.edu.pl/echo</ns3:url>
             </ns3:echo>
             <ns11:imobilities
@@ -104,23 +113,23 @@
                 <ns9:url>https://ewp.demo.usos.edu.pl/tors/cnr</ns9:url>
                 <ns9:max-omobility-ids>10</ns9:max-omobility-ids>
             </ns9:imobility-tor-cnr>
-        </ns34:apis-implemented>
+        </ns36:apis-implemented>
         <institutions-covered>
-            <ns34:hei
-                xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+            <ns36:hei
+                xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
                 id="demo.usos.edu.pl"
             >
-                <ns34:name xml:lang="pl">Uniwersytet Warszawski</ns34:name>
-                <ns34:name xml:lang="en">University of Warsaw</ns34:name>
-            </ns34:hei>
-            <ns34:hei
-                xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                <ns36:name xml:lang="pl">Uniwersytet Warszawski</ns36:name>
+                <ns36:name xml:lang="en">University of Warsaw</ns36:name>
+            </ns36:hei>
+            <ns36:hei
+                xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
                 id="cuni.cz"
             >
-                <ns34:other-id type="pic">999923434</ns34:other-id>
-                <ns34:other-id type="erasmus">CZ PRAHA07</ns34:other-id>
-                <ns34:name xml:lang="en">Charles University</ns34:name>
-            </ns34:hei>
+                <ns36:other-id type="pic">999923434</ns36:other-id>
+                <ns36:other-id type="erasmus">CZ PRAHA07</ns36:other-id>
+                <ns36:name xml:lang="en">Charles University</ns36:name>
+            </ns36:hei>
         </institutions-covered>
         <client-credentials-in-use>
             <certificate>
