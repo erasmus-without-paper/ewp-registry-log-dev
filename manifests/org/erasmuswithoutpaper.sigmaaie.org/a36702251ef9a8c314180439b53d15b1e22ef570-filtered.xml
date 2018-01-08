@@ -1,85 +1,80 @@
-<manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
-    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4"
-    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd"
-    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v1/manifest-entry.xsd
-    "
->
-    <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
-    <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
-    <ewp:admin-notes>SIGMA UVa EWP Dev Manifest</ewp:admin-notes>
-    <r:apis-implemented>
-        <discovery
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
-            version="4.0.0"
-        >
-            <url>https://erasmuswithoutpaper.sigmaaie.org:1453/UVA_HOST.xml</url>
-        </discovery>
-        <echo
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
-            version="1.0.0"
-        >
-            <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
-            <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
-            <ewp:admin-notes>SIGMA UVa Echo API Dev.</ewp:admin-notes>
-            <url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</url>
-        </echo>
-        <ns4:institutions version="1.0.0">
-            <ns4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</ns4:url>
-            <ns4:max-hei-ids>1</ns4:max-hei-ids>
-        </ns4:institutions>
-        <ns2:organizational-units version="1.0.0">
-            <ns2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ns2:url>
-            <ns2:max-ounit-ids>1</ns2:max-ounit-ids>
-            <ns2:max-ounit-codes>1</ns2:max-ounit-codes>
-        </ns2:organizational-units>
-        <ns3:mobilities version="1.0.0">
-            <ns3:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/mobility/get</ns3:get-url>
-            <ns3:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/mobility/index</ns3:index-url>
-            <ns3:update-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/mobility/update</ns3:update-url>
-            <ns3:max-mobility-ids>1</ns3:max-mobility-ids>
-            <ns3:supported-update-types/>
-        </ns3:mobilities>
-        <ns5:iias version="1.0.0">
-            <ns5:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ns5:get-url>
-            <ns5:max-iia-ids>1</ns5:max-iia-ids>
-            <ns5:max-iia-codes>1</ns5:max-iia-codes>
-            <ns5:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/index</ns5:index-url>
-        </ns5:iias>
-        <ns6:courses version="0.1.0">
-            <ns6:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses/get</ns6:get-url>
-            <ns6:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses/all</ns6:index-url>
-            <ns6:max-mobility-ids>1</ns6:max-mobility-ids>
-            <ns6:supported-update-types/>
-        </ns6:courses>
-    </r:apis-implemented>
-    <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-        <hei id="uva.es">
-            <other-id type="erasmus">SP UVA01</other-id>
-            <other-id type="pic">999862809</other-id>
-            <name xml:lang="sp">UNIVERSIDAD DE VALLADOLID</name>
-        </hei>
-    </mf:institutions-covered>
-    <client-credentials-in-use>
-        <certificate>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5">
+    <host>
+        <ewp:admin-email xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">sistemas@sigmaaie.org</ewp:admin-email>
+        <ewp:admin-email xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">arquitectura@sigmaaie.org</ewp:admin-email>
+        <ewp:admin-notes xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">SIGMA UVa EWP Dev Manifest</ewp:admin-notes>
+        <r:apis-implemented xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <url>https://erasmuswithoutpaper.sigmaaie.org:1453/UVA_HOST.xml</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ewp:admin-email xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">arquitectura@sigmaaie.org</ewp:admin-email>
+                <ewp:admin-email xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">sistemas@sigmaaie.org</ewp:admin-email>
+                <ewp:admin-notes xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">SIGMA UVa Echo API Dev.</ewp:admin-notes>
+                <url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</url>
+            </echo>
+            <ns4:institutions
+                xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</ns4:url>
+                <ns4:max-hei-ids>1</ns4:max-hei-ids>
+            </ns4:institutions>
+            <ns2:organizational-units
+                xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ns2:url>
+                <ns2:max-ounit-ids>1</ns2:max-ounit-ids>
+                <ns2:max-ounit-codes>1</ns2:max-ounit-codes>
+            </ns2:organizational-units>
+            <ns3:mobilities
+                xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns3:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/mobility/get</ns3:get-url>
+                <ns3:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/mobility/index</ns3:index-url>
+                <ns3:update-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/mobility/update</ns3:update-url>
+                <ns3:max-mobility-ids>1</ns3:max-mobility-ids>
+                <ns3:supported-update-types/>
+            </ns3:mobilities>
+            <ns5:iias
+                xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns5:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ns5:get-url>
+                <ns5:max-iia-ids>1</ns5:max-iia-ids>
+                <ns5:max-iia-codes>1</ns5:max-iia-codes>
+                <ns5:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/index</ns5:index-url>
+            </ns5:iias>
+            <ns6:courses
+                xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <ns6:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses/get</ns6:get-url>
+                <ns6:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses/all</ns6:index-url>
+                <ns6:max-mobility-ids>1</ns6:max-mobility-ids>
+                <ns6:supported-update-types/>
+            </ns6:courses>
+        </r:apis-implemented>
+        <institutions-covered>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="uva.es"
+            >
+                <other-id type="erasmus">SP UVA01</other-id>
+                <other-id type="pic">999862809</other-id>
+                <name xml:lang="sp">UNIVERSIDAD DE VALLADOLID</name>
+            </hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>
           MIIFPTCCBCWgAwIBAgIQCCijy8kxMVXUyV1V5unuWjANBgkqhkiG9w0BAQsFADBk
           MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
           QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
@@ -110,5 +105,6 @@
           IO/i6NgjKwtiwMtjJAjbA4wy7KbNP+h70eC7FLTftiRqVaQBB139TIwu+gMOKjwr
           LA==
         </certificate>
-    </client-credentials-in-use>
+        </client-credentials-in-use>
+    </host>
 </manifest>
