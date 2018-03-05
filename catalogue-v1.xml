@@ -1339,6 +1339,18 @@
                 </e2:http-security>
                 <e2:url>https://unisa.esse3.qa.cineca.it/ewp/connector/Echo.do</e2:url>
             </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://unisa.esse3.qa.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unisa.it</hei-id>
