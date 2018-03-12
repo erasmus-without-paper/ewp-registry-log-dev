@@ -11,7 +11,7 @@
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"   
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"      
     xsi:schemaLocation="
         https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v4
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest.xsd
@@ -19,8 +19,9 @@
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
         https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd"
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v1/manifest-entry.xsd
+    "
 >
     
     <ewp:admin-email>sistemas@sigmaaie.org</ewp:admin-email>
@@ -37,8 +38,8 @@
 
         <!-- Some other API. -->
         <echo
-            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-            version="2.0.0"
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
+            version="1.0.0"
         >
             <!-- Note, that ewp:admin-email and ewp:admin-notes can be defined both on the
             global level, and on the API level. -->
@@ -85,15 +86,14 @@
           <ns7:max-omobility-ids>1</ns7:max-omobility-ids>
         </ns7:imobility-tors>
         <ns8:simple-course-replication version="1.0.0">
-          <ns8:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/course-replication</ns8:url>
-          <ns8:allows-anonymous-access>false</ns8:allows-anonymous-access>
-          <ns8:supports-modified-since>false</ns8:supports-modified-since>
-        </ns8:simple-course-replication>
+          <url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/course-replication</url>
+          <allows-anonymous-access>false</allows-anonymous-access>
+          <supports-modified-since>false</supports-modified-since>
+        </ns8:simple-course-replication>            
     </r:apis-implemented>
 
     <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">   
-        <hei id="upf.edu">
-            <other-id type="erasmus">E_BARCELO15</other-id>                    
+        <hei id="upf.edu">            
             <name xml:lang="es">UNIVERSITAT POMPEU FABRA</name>
             <name xml:lang="en">POMPEU FABRA UNIVERSITY</name>
         </hei>          
