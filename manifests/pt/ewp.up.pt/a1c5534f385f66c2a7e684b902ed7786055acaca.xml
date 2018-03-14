@@ -7,8 +7,28 @@
         <url>https://ewp.up.pt/rest/manifest</url>
       </discovery>
       <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert allows-self-signed="true"></tlscert>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert></tlscert>
+          </sec:server-auth-methods>
+        </http-security>
         <url>https://ewp.up.pt/rest/echo</url>
       </echo>
+      <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" version="2.1.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert allows-self-signed="true"></tlscert>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert></tlscert>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://ewp.up.pt/rest/institutions</url>
+        <max-hei-ids>1</max-hei-ids>
+      </institutions>
     </r:apis-implemented>
     <institutions-covered>
       <r:hei id="up.pt">
