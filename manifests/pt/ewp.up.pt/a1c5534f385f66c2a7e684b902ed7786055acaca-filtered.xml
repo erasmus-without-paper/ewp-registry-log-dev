@@ -59,6 +59,22 @@
                 <max-ounit-ids>5</max-ounit-ids>
                 <max-ounit-codes>5</max-ounit-codes>
             </organizational-units>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.14.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://ewp.up.pt/rest/omobilities/get</get-url>
+                <index-url>https://ewp.up.pt/rest/omobilities/index</index-url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobilities>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="up.pt">
