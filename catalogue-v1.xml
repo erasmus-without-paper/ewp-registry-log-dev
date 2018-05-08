@@ -644,10 +644,21 @@
         <apis-implemented>
             <ia2:iias version="2.0.0">
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
                 <ia2:get-url>https://www.service4mobility.com/europe_test/ewp/iias/get</ia2:get-url>
                 <ia2:max-iia-ids>3</ia2:max-iia-ids>
                 <ia2:max-iia-codes>3</ia2:max-iia-codes>
                 <ia2:index-url>https://www.service4mobility.com/europe_test/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
             </ia2:iias>
         </apis-implemented>
         <institutions-covered>
@@ -668,6 +679,16 @@
         <apis-implemented>
             <in2:institutions version="2.0.0">
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
                 <in2:url>https://www.service4mobility.com/europe_test/ewp/institutions</in2:url>
                 <in2:max-hei-ids>3</in2:max-hei-ids>
             </in2:institutions>
@@ -690,6 +711,16 @@
         <apis-implemented>
             <ou2:organizational-units version="2.0.0">
                 <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
                 <ou2:url>https://www.service4mobility.com/europe_test/ewp/ounits</ou2:url>
                 <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
@@ -699,6 +730,35 @@
             <hei-id/>
             <hei-id>uantwerpen.be</hei-id>
             <hei-id>ub.edu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="81b3a5ce4bc7f4adb58fa33b31113e7700c68c2b5681018bcca45f3b87bf0e8b"/>
+            <rsa-public-key sha-256="c03ea978055ee6ef16628cf0aa6c5d1abed63edcc9749ab7804a81896b5d1863"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="c03ea978055ee6ef16628cf0aa6c5d1abed63edcc9749ab7804a81896b5d1863"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+        <apis-implemented>
+            <iac2:iia-cnr version="2.0.0">
+                <ewp:admin-email>tech-support@sop.co.at</ewp:admin-email>
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://www.service4mobility.com/europe_test/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id/>
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="81b3a5ce4bc7f4adb58fa33b31113e7700c68c2b5681018bcca45f3b87bf0e8b"/>
