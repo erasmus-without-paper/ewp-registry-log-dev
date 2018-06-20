@@ -1392,6 +1392,75 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNICINECA test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://esse3beta4.esse3.pp.cineca.it/ewp/Manifest.do</d4:url>
+            </d4:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Courses.do</c1:url>
+                <c1:max-los-ids>10</c1:max-los-ids>
+                <c1:max-los-codes>10</c1:max-los-codes>
+            </c1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unisa.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="e0031175668abada3e90af1a15fadc464297ad5e0c0a767ae9e747e98cc54f17"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>ewp@it.auth.gr</ewp:admin-email>
         <ewp:admin-notes>This is the manifest file of Aristotle University of Thessaloniki Greece.</ewp:admin-notes>
         <apis-implemented>
@@ -1526,6 +1595,12 @@
             <other-id type="euc">28552-IC-1-2007-1-AT-ERASMUS-EUCX-1</other-id>
             <other-id type="pic">12345566</other-id>
             <name xml:lang="de">UNIVERSITÄT MOBILITY AT</name>
+        </hei>
+        <hei id="unisa.it">
+            <other-id type="erasmus">I SALERNO01</other-id>
+            <other-id type="pic">999899184</other-id>
+            <name xml:lang="en">University of CINECA</name>
+            <name xml:lang="it">Universita' degli Studi di CINECA</name>
         </hei>
         <hei id="up.pt">
             <other-id type="erasmus">P PORTO02</other-id>
