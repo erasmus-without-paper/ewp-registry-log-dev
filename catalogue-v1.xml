@@ -1452,6 +1452,22 @@
                 <c1:max-los-ids>10</c1:max-los-ids>
                 <c1:max-los-codes>10</c1:max-los-codes>
             </c1:courses>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/get-response.xsd"
+                version="0.14.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/MobilitiesGet.do</get-url>
+                <index-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/MobilitiesIndex.do</index-url>
+                <max-omobility-ids>10</max-omobility-ids>
+            </omobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unisa.it</hei-id>
