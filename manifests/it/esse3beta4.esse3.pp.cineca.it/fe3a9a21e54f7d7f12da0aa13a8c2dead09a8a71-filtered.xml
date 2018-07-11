@@ -157,6 +157,25 @@
                 <url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/IMobilitiesCnr.do</url>
                 <max-omobility-ids>10</max-omobility-ids>
             </imobility-cnr>
+            <imobility-tors
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility.tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Tor.do</get-url>
+                <index-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/TorIndex.do</index-url>
+                <max-omobility-ids>10</max-omobility-ids>
+            </imobility-tors>
         </r:apis-implemented>
         <institutions-covered>
             <hei

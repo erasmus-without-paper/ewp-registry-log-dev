@@ -1516,6 +1516,22 @@
                 <imc1:url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/IMobilitiesCnr.do</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
+            <imobility-tors
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility.tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/Tor.do</get-url>
+                <index-url>https://esse3beta4.esse3.pp.cineca.it/ewp/connector/TorIndex.do</index-url>
+                <max-omobility-ids>10</max-omobility-ids>
+            </imobility-tors>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unisa.it</hei-id>
