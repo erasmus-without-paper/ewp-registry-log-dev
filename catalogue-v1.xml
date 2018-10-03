@@ -1635,6 +1635,111 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for Mobility Tool.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp.up.pt:8433/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.up.pt:8433/rest/echo</e2:url>
+            </e2:echo>
+            <mt-institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://ewp.up.pt:8433/rest/institutions</url>
+                <max-ids>1</max-ids>
+            </mt-institutions>
+            <mt-dictionaries
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://ewp.up.pt:8433/rest/dictionaries</url>
+            </mt-dictionaries>
+            <courses
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://ewp.up.pt:8433/rest/projects</url>
+            </courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ec.europa.eu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="87def461e89fb029b5d043c869ce24969cb2a91b3332a44629c3e843a6a46e66"/>
+            <rsa-public-key sha-256="c3cbc9567684ca4bf44092ef153514f333ae1a213362c50664add23acee76ad5"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="c3cbc9567684ca4bf44092ef153514f333ae1a213362c50664add23acee76ad5"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>matija.puzar@unit.no</ewp:admin-email>
         <ewp:admin-notes>Manifest file for Norway.</ewp:admin-notes>
         <apis-implemented>
@@ -1962,6 +2067,9 @@
             <name xml:lang="en">University of Warsaw</name>
             <name xml:lang="pl">Uniwersytet Warszawski</name>
         </hei>
+        <hei id="ec.europa.eu">
+            <name xml:lang="en">Mobility Tool+</name>
+        </hei>
         <hei id="fh-dortmund.de">
             <other-id type="erasmus">D  DORTMUN02</other-id>
             <other-id type="euc">28737-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
@@ -2181,6 +2289,18 @@
             3+ASGsN/h9Kz6o5MnrfDqg8XgcKBgKr2xwuYlCwzhxITtZcS+8SToAdikgKDzRprw58joXpLhOoE
             jC3F7b/dzJqSBhbpH+RV+/kt9F1PkTbe/DtyK4oXurDuCUlGiENZXx0985HuvQysMg9y3dNG30Ic
             l7zdXwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="c3cbc9567684ca4bf44092ef153514f333ae1a213362c50664add23acee76ad5">
+            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyCOLNXUNUaMQ9EXRf2i8EoL2qdcScxnS
+            cSxeHWxdeInZq9NeapQHXK4g9HTPegHrKRaBBMvI9Es9ECf7RqDJQjJxPuzSRrPEX0f1EXviHvyo
+            ZhwYU5I4ft9B6266edRlSeT0DKHneUS7WPoYBNYaeX84k943ebzirK8xnoqdlx4HvCIpHJ1dhN7q
+            9wv2bn0R76E9rTYseez3e1D+awuRISXYlrk1UuqSqmMLskRgu00KPMZkkPSaoBOl0/TJd4K85QUM
+            D502u6OcfJwuV89urmctvMpnCB4xN6ce4T+FcF8/YSxTNyOElTdJdTHBPQ1jjvcOblikTD5q2glf
+            ELerxcufP5homkFMqFNEqJQGOYYSq7WVOnXp0srhJOSyaASpVep/dXWdYNO2GxDKRQSreuRRN5YV
+            69zpmifjJiY4q1mRm8wQmGwmnKWfmX0AKI+khNtvZbqSeqfh1Z64Y8cSSUmnuCzE1E9LS3Dsvqkw
+            oNjLlqoGnLItz1HeRhYKvcL7Ikhqcdd2i1G69NRAWvslOh+T2qtJVvbeVHirT7yIobcC4NP+OKPW
+            GiHD+H0TUjU02KfZNT/wQKK67RWwjo8rNopnrGGt8+ZErwzy12Hs2FmYsdAoESeRw+CceKZ0z500
+            yLyCROIzk5Ak5ZTPqrSFq3ye7/NovkXBY15fwp7dFvECAwEAAQ==
         </rsa-public-key>
         <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlcEYM0vAWp/f3jPrFqDiCW5kbBDmnulW
