@@ -1,10 +1,35 @@
-<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5">
-    <host>
-        <ewp:admin-email xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">oasis+ewp@dict.ugent.be</ewp:admin-email>
-        <r:apis-implemented xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+<mf:manifest
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+    "
+>
+    <mf:host>
+        <ewp:admin-email>oasis+ewp@dict.ugent.be</ewp:admin-email>
+        <r:apis-implemented>
             <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
-                version="4.0.0"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
             >
                 <url>https://qas.ewp.ugent.be/public-api/discovery/manifest.xml</url>
             </discovery>
@@ -13,10 +38,10 @@
                 version="2.0.0"
             >
                 <http-security>
-                    <sec:client-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
-                    <sec:server-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:server-auth-methods>
                         <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
@@ -28,10 +53,10 @@
                 version="2.0.0"
             >
                 <http-security>
-                    <sec:client-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
-                    <sec:server-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:server-auth-methods>
                         <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
@@ -44,10 +69,10 @@
                 version="2.0.0"
             >
                 <http-security>
-                    <sec:client-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
-                    <sec:server-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:server-auth-methods>
                         <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
@@ -61,10 +86,10 @@
                 version="0.12.1"
             >
                 <http-security>
-                    <sec:client-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
-                    <sec:server-auth-methods xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                    <sec:server-auth-methods>
                         <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
@@ -84,19 +109,16 @@
                 <max-omobility-ids>1</max-omobility-ids>
             </omobility-cnr>
         </r:apis-implemented>
-        <institutions-covered>
-            <hei
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-                id="ugent.be"
-            >
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="ugent.be">
                 <other-id type="erasmus">B  GENT01</other-id>
                 <other-id type="pic">999986096</other-id>
                 <name xml:lang="en">Ghent University</name>
                 <name xml:lang="nl">Universiteit Gent</name>
             </hei>
-        </institutions-covered>
-        <client-credentials-in-use>
-            <certificate>
+        </mf:institutions-covered>
+        <mf:client-credentials-in-use>
+            <mf:certificate>
 			MIIDkTCCAnmgAwIBAgIEJNij9jANBgkqhkiG9w0BAQsFADB5MQswCQYDVQQGEwJC
 			RTEYMBYGA1UECBMPT29zdC1WbGFhbmRlcmVuMQ0wCwYDVQQHEwRHZW50MRowGAYD
 			VQQKExFVbml2ZXJzaXRlaXQgR2VudDEVMBMGA1UECxMMRGlyZWN0aWUgSUNUMQ4w
@@ -117,8 +139,8 @@
 			loFXmxGBd+11300cPujE6g0uDaC0QalBx3u31tfH87NjziE72/LgR+ijWS2qyvaJ
 			OdF16EW15PJl589IVjxbmO8qhPzzSG9JbCCUXBUo5jm3jxXvrhML5VVq8uKAusbe
 			Ta7kads=
-		</certificate>
-            <rsa-public-key>
+		</mf:certificate>
+            <mf:rsa-public-key>
 			MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgtNjWssgOprDYIlkKnf5
 			XIbvHVwYEkL2h01pzLjGnJlsai029ShumzDbf/uOVSzL3WC28GqRJve5jGiG7/gl
 			lcEKFDJ8XDO0lcH+ctc7Vj+RudvSLkdxnnA82i9Sc6B8oGIY4C+DlFySobBx5+4e
@@ -126,10 +148,10 @@
 			pmNebc7BfwsSEyxzI4qFA/JnPinK24aCxh9OS4bZtpOyOifyn1/EaMrl2qT878cT
 			+Mo8OT+Wec9DB3uH0OacMVxVqWVci0ANrMdABR8x+jRo6nAzptAIJBDvINKVMqON
 			cQIDAQAB
-		</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>
+		</mf:rsa-public-key>
+        </mf:client-credentials-in-use>
+        <mf:server-credentials-in-use>
+            <mf:rsa-public-key>
 			MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgtNjWssgOprDYIlkKnf5
 			XIbvHVwYEkL2h01pzLjGnJlsai029ShumzDbf/uOVSzL3WC28GqRJve5jGiG7/gl
 			lcEKFDJ8XDO0lcH+ctc7Vj+RudvSLkdxnnA82i9Sc6B8oGIY4C+DlFySobBx5+4e
@@ -137,7 +159,7 @@
 			pmNebc7BfwsSEyxzI4qFA/JnPinK24aCxh9OS4bZtpOyOifyn1/EaMrl2qT878cT
 			+Mo8OT+Wec9DB3uH0OacMVxVqWVci0ANrMdABR8x+jRo6nAzptAIJBDvINKVMqON
 			cQIDAQAB
-		</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+		</mf:rsa-public-key>
+        </mf:server-credentials-in-use>
+    </mf:host>
+</mf:manifest>
