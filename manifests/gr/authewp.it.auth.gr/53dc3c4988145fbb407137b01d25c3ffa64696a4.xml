@@ -1,8 +1,6 @@
 <manifest
 	xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns:d5s="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-    
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -54,14 +52,14 @@
             	xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
             	version="2.0.0">
                 <http-security>
-                    <client-auth-methods>
+                    <sec:client-auth-methods>
                         <tlscert allows-self-signed="true"/>
                         <httpsig/>
-                    </client-auth-methods>
-                    <server-auth-methods>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
                         <tlscert/>
                         <httpsig/>
-                    </server-auth-methods>
+                    </sec:server-auth-methods>
                 </http-security>
                 <url>https://authewp.it.auth.gr:3001/echo</url>
             </echo>
