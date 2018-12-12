@@ -2603,11 +2603,8 @@
                 </e2:http-security>
                 <e2:url>https://authewp.it.auth.gr/echo</e2:url>
             </e2:echo>
-            <institutions
-                xmlns="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
-                <http-security>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -2616,10 +2613,10 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://authewp.it.auth.gr/institutions</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
+                </in2:http-security>
+                <in2:url>https://authewp.it.auth.gr/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>auth.gr</hei-id>
