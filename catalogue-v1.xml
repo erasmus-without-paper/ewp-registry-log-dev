@@ -3003,6 +3003,64 @@
             <rsa-public-key sha-256="9e43ab94988c95e6e30f6ea7d35ee9b705fbca2e912751ce96c317bd4988d616"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>v@uma.es</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for University of Malaga.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp.uma.es/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.uma.es/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.uma.es/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uma.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="c76779afb8834ec2645b5866f99731406ed11519309e26fb2fb0792028c3953e"/>
+            <rsa-public-key sha-256="104d965b9142a70572d60f4e760620a827bdd6effc073793d4dab847121b4e67"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="104d965b9142a70572d60f4e760620a827bdd6effc073793d4dab847121b4e67"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="auth.gr">
             <other-id type="erasmus">G THESSAL01</other-id>
@@ -3150,6 +3208,12 @@
             <other-id type="pic">999975814</other-id>
             <name xml:lang="en">University of Oslo</name>
         </hei>
+        <hei id="uma.es">
+            <other-id type="erasmus">E MALAGA01</other-id>
+            <other-id type="euc">28699-EPP-1-2014-1-ES-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999898311</other-id>
+            <name xml:lang="en">University of Malaga</name>
+        </hei>
         <hei id="uni-augsburg.de">
             <other-id type="erasmus">D  AUGSBUR01</other-id>
             <other-id type="euc">28403-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
@@ -3213,6 +3277,14 @@
             lDgyQsoXxT6WT9JpuRJxvH0QMwOlpmNebc7BfwsSEyxzI4qFA/JnPinK24aCxh9OS4bZtpOyOify
             n1/EaMrl2qT878cT+Mo8OT+Wec9DB3uH0OacMVxVqWVci0ANrMdABR8x+jRo6nAzptAIJBDvINKV
             MqONcQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="104d965b9142a70572d60f4e760620a827bdd6effc073793d4dab847121b4e67">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuQHpJYEku/xHIfcYtZkNZ6Jm0ml28R+/
+            x1rHZ0hfZR9jYWKGMDk9gowutMcDFcaRbs6vB9wMgZxMMH2qVNpUidj/E7GJsVGS19zv76te+f+9
+            5I8j4kue4uQ7JhNRrlx6ew6q3fN8EnXXYJ+rpf16LE7ecSULc/KmZlWFneJns4gvSRMLWNYH2+e+
+            w8796Um+dquCIWp+rnBiYiaqCohaU8e17JjGnZizLtAB2+FJG7YlAR8k851eJY8m/pqouh4Dh+yu
+            iD0unrDXfA1f77dG2+O/DM+Jry90oiRcGUdCEylIy6Aa+robcyJqLrt0wlT+9cXSrVJUemUQN0S7
+            Ox9rPwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="1bb29154c18bd6feac90998dc22a13c1ebb8b6b8d9c9d2ffe72458c880ca8039">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkGarH+14e0sKdmo+nJTrGnqRvwpHfV92
