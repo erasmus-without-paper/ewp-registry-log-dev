@@ -2192,6 +2192,19 @@
         <ewp:admin-email>timw@terradotta.com</ewp:admin-email>
         <ewp:admin-notes>Terradotta manifest</ewp:admin-notes>
         <apis-implemented>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <ia2:iias version="2.0.1">
                 <ia2:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ia2:get-url>
                 <ia2:max-iia-ids>1</ia2:max-iia-ids>
@@ -2214,19 +2227,6 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
             </d5:discovery>
-            <in2:institutions version="2.0.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>dev-agreements2.terradotta.com</hei-id>
