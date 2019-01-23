@@ -2193,13 +2193,6 @@
         <ewp:admin-email>denys@aktiun.com</ewp:admin-email>
         <ewp:admin-notes>Terradotta manifest</ewp:admin-notes>
         <apis-implemented>
-            <ia2:iias version="2.0.1">
-                <ia2:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ia2:get-url>
-                <ia2:max-iia-ids>1</ia2:max-iia-ids>
-                <ia2:max-iia-codes>1</ia2:max-iia-codes>
-                <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
             <in2:institutions version="2.0.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -2213,9 +2206,13 @@
                 <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <d5:discovery version="5.0.0">
-                <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
-            </d5:discovery>
+            <ia2:iias version="2.0.1">
+                <ia2:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -2228,19 +2225,22 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>https://ec2-34-224-223-40.compute-1.amazonaws.com/v1/ewp/echo</e2:url>
+                <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
             </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
+            </d5:discovery>
         </apis-implemented>
         <institutions-covered>
             <hei-id>dev-agreements2.terradotta.com</hei-id>
             <hei-id>dev-agreements1-tyler.terradotta.com</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="66f3c61dbfe9bd6800e32c05c61f5f241a676c92e555b6a878f3c79e7015f9ed"/>
-            <rsa-public-key sha-256="db576813086fdb8c43d0d675c3085c47d200bb7241bff1bd4471bdc9b63f2c5d"/>
+            <certificate sha-256="72afec03c856694c5e80ac65fdb367d32dfb7f1a1123606c0071988d7c2de3a1"/>
+            <rsa-public-key sha-256="492f8026b11c9f3071aac0055417bdd3b741848d4c4800e06f0a1f362db2bdc1"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="db576813086fdb8c43d0d675c3085c47d200bb7241bff1bd4471bdc9b63f2c5d"/>
+            <rsa-public-key sha-256="492f8026b11c9f3071aac0055417bdd3b741848d4c4800e06f0a1f362db2bdc1"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -2830,6 +2830,14 @@
             wuk+OzTK0x1jEHSSYI4+miYdtuCyF+O0UbveLrDETycZLyhGEYFL4N3V5rvuQqnimBPTfqDvceBi
             sJO6qQIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="492f8026b11c9f3071aac0055417bdd3b741848d4c4800e06f0a1f362db2bdc1">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAynERNFtFxKd6Brvq7xlb+pojcCu+YAWU
+            Q8pZNBf5Q1qJWPZisQzeEDT3xj8ibPwVVSC4Ikv9mKg6OUlMicjDoSVeEfVuyDvQ3LipxCYtGlaD
+            fsp+yPS1fkLB9Ah53dFnBhbKFAWr7IgYalXr30QPNI27Cy4nh37zDtT8BgOolVwp9vPhb9H9uFJU
+            Fx5XwegihmMHWPh9Gn/jbBlA9ig/OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkE
+            sDbc7jvUDiZ3sa6i5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ
+            +mNQsQIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="73660d649e4521a3e609d9f59bc73bea0e82839b36955b05eb1341838698d134">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxEksDXxjd4oKL/pdgApVXEEDXCQfAP43
             vfyFL8YZFVBsVfFA+FNFD9zESS/adyw8p1vdTfapz0Wwkqxzj7j4Pl9POVuu9QhA6ZhkATLZWMEX
@@ -2945,14 +2953,6 @@
             3gObtn/H4E5qMWUdC6IqpFKGHRjvY2hrg/OR23HfDi2kuDOgmo2BSgKLyr2eb0BDyuGOXqIzrECO
             PczhxRc8UyNq+dB7JVJgZmCvOU69TuzDG6XYAnyHM2hsmHz3M6sdMtijaKe8eOi3Cba9KjKzKBIv
             0AMwDQIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="db576813086fdb8c43d0d675c3085c47d200bb7241bff1bd4471bdc9b63f2c5d">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn9PCAL6ig7xMAb4395BDSdbpo50mzxog
-            1IvhOekkhEGCVpW4u8WSWN9ELDyYCNQbMf7ccWXfZA3RLTW06OTSAotYpLu3QJQzsMGaZQXqS6aT
-            PglNhVebtLxvbBnDm0aFH4j6Sh7X7m1Hy+DRfwHMjaSrraixhjOoRgRRhqHpiRo33yQZfw/YzzyG
-            jQ6JFl6jdm17TSgnXUd6Bef2Z70HTIQXBrzbvhOUkegivTq6mVEHxU6VeGHF6niF+vXC+zTtFyTG
-            jS03CJ6JEHfy+07r0mSq9gO5bbcKmB5ex+LyNHxVeP06cwv2J6FCPRa4V/BZlaDCMv16RdkedYAH
-            5H8/6QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="f798c14146923e4e35c1bd6a62855df674bb854055dd0ef6180e2595db2dded9">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAqnv6ICYjnUOMuZIOhKnZUWVMXUDCVZpl

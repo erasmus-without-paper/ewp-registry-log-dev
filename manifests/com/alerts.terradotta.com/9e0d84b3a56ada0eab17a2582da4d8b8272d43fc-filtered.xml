@@ -28,13 +28,6 @@
         <admin-email>denys@aktiun.com</admin-email>
         <admin-notes>Terradotta manifest</admin-notes>
         <ns2:apis-implemented>
-            <ns15:iias version="2.0.1">
-                <ns15:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ns15:get-url>
-                <ns15:max-iia-ids>1</ns15:max-iia-ids>
-                <ns15:max-iia-codes>1</ns15:max-iia-codes>
-                <ns15:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ns15:index-url>
-                <ns15:sends-notifications/>
-            </ns15:iias>
             <ns17:institutions version="2.0.0">
                 <ns17:http-security>
                     <ns5:client-auth-methods>
@@ -48,9 +41,13 @@
                 <ns17:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</ns17:url>
                 <ns17:max-hei-ids>1</ns17:max-hei-ids>
             </ns17:institutions>
-            <ns19:discovery version="5.0.0">
-                <ns19:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</ns19:url>
-            </ns19:discovery>
+            <ns15:iias version="2.0.1">
+                <ns15:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ns15:get-url>
+                <ns15:max-iia-ids>1</ns15:max-iia-ids>
+                <ns15:max-iia-codes>1</ns15:max-iia-codes>
+                <ns15:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ns15:index-url>
+                <ns15:sends-notifications/>
+            </ns15:iias>
             <ns18:echo version="2.0.1">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
@@ -63,8 +60,11 @@
                         <ns23:httpsig/>
                     </ns5:server-auth-methods>
                 </ns18:http-security>
-                <ns18:url>https://ec2-34-224-223-40.compute-1.amazonaws.com/v1/ewp/echo</ns18:url>
+                <ns18:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns18:url>
             </ns18:echo>
+            <ns19:discovery version="5.0.0">
+                <ns19:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</ns19:url>
+            </ns19:discovery>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="dev-agreements2.terradotta.com">
@@ -81,47 +81,45 @@
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:certificate>MIIEIzCCAwugAwIBAgIJALohW7fhZpevMA0GCSqGSIb3DQEBCwUAMIGnMQswCQYD
-VQQGEwJVUzESMBAGA1UECAwJR1VBWUFRVUlMMQ8wDQYDVQQHDAZHVUFZQVMxDTAL
-BgNVBAoMBEhPTUUxDzANBgNVBAsMBkQgSE9NRTEyMDAGA1UEAwwpZWMyLTM0LTIy
-NC0yMjMtNDAuY29tcHV0ZS0xLmFtYXpvbmF3cy5jb20xHzAdBgkqhkiG9w0BCQEW
-EGRlbnlzQGFrdGl1bi5jb20wHhcNMTkwMTIzMjA1NDIxWhcNMjAwMTIzMjA1NDIx
-WjCBpzELMAkGA1UEBhMCVVMxEjAQBgNVBAgMCUdVQVlBUVVJTDEPMA0GA1UEBwwG
-R1VBWUFTMQ0wCwYDVQQKDARIT01FMQ8wDQYDVQQLDAZEIEhPTUUxMjAwBgNVBAMM
-KWVjMi0zNC0yMjQtMjIzLTQwLmNvbXB1dGUtMS5hbWF6b25hd3MuY29tMR8wHQYJ
-KoZIhvcNAQkBFhBkZW55c0Bha3RpdW4uY29tMIIBIjANBgkqhkiG9w0BAQEFAAOC
-AQ8AMIIBCgKCAQEAn9PCAL6ig7xMAb4395BDSdbpo50mzxog1IvhOekkhEGCVpW4
-u8WSWN9ELDyYCNQbMf7ccWXfZA3RLTW06OTSAotYpLu3QJQzsMGaZQXqS6aTPglN
-hVebtLxvbBnDm0aFH4j6Sh7X7m1Hy+DRfwHMjaSrraixhjOoRgRRhqHpiRo33yQZ
-fw/YzzyGjQ6JFl6jdm17TSgnXUd6Bef2Z70HTIQXBrzbvhOUkegivTq6mVEHxU6V
-eGHF6niF+vXC+zTtFyTGjS03CJ6JEHfy+07r0mSq9gO5bbcKmB5ex+LyNHxVeP06
-cwv2J6FCPRa4V/BZlaDCMv16RdkedYAH5H8/6QIDAQABo1AwTjAdBgNVHQ4EFgQU
-vl7Y/c3B3fnOoqNPFlIrxgntjGowHwYDVR0jBBgwFoAUvl7Y/c3B3fnOoqNPFlIr
-xgntjGowDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAT3gDAPfe58cK
-b31i7MQvXNgzFkNbU2NvCN7lhVZ9LwYfssQJEhlTlqa1g4AMXhRzHukxhILw+8Ee
-tAWZIVsE+N/LXFZFeTehei7L+XR3voVtl1wBVQ//tLCfQ2JNxdb0NPKAPaSlQmDU
-pepu3olfQWtucrUObiCoHKIivtAJXIDwQG9iNC4VkqhdFOtcYjbeG+n5MTAx8gaI
-9H0lOjmskMbRxiFT3wZzp/upMCO56yHGK2DU0n20dDzmgpoNB1Uvg9iNzECfNje2
-ec922MMsVzk4hsQ/8HiMzzsy8pNUsAe1CUbi4Sd7MOKiAchTNDZxdFkBQvyTGf2C
-VLwpS4CkbQ==
+            <ns3:certificate>MIID3jCCAsYCCQCzMF1w8woVMjANBgkqhkiG9w0BAQsFADCBsDELMAkGA1UEBhMC
+VVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHDAtDaGFwZWwgSGls
+bDEZMBcGA1UECgwQVGVycmEgRG90dGEsIExMQzEbMBkGA1UECwwSVGVjaG5pY2Fs
+IERpdmlzaW9uMRkwFwYDVQQDDBAqLnRlcnJhZG90dGEuY29tMR8wHQYJKoZIhvcN
+AQkBFhBkZW55c0Bha3RpdW4uY29tMB4XDTE4MTEyNzE0NTkxMVoXDTE5MTEyNzE0
+NTkxMVowgbAxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEU
+MBIGA1UEBwwLQ2hhcGVsIEhpbGwxGTAXBgNVBAoMEFRlcnJhIERvdHRhLCBMTEMx
+GzAZBgNVBAsMElRlY2huaWNhbCBEaXZpc2lvbjEZMBcGA1UEAwwQKi50ZXJyYWRv
+dHRhLmNvbTEfMB0GCSqGSIb3DQEJARYQZGVueXNAYWt0aXVuLmNvbTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMpxETRbRcSnega76u8ZW/qaI3ArvmAF
+lEPKWTQX+UNaiVj2YrEM3hA098Y/Imz8FVUguCJL/ZioOjlJTInIw6ElXhH1bsg7
+0Ny4qcQmLRpWg37Kfsj0tX5CwfQIed3RZwYWyhQFq+yIGGpV699EDzSNuwsuJ4d+
+8w7U/AYDqJVcKfbz4W/R/bhSVBceV8HoIoZjB1j4fRp/42wZQPYoPzi8cgKdzhP0
+lpGbPOtSFGn7gXMq6HFwUNEJRHgqGBk+YBE5BLA23O471A4md7GuouWx/oJC656k
+0Tb1KtDa46SFHjWHpQsn1vV26P3PCWqb2lP11x12BKLZ+lH2CfpjULECAwEAATAN
+BgkqhkiG9w0BAQsFAAOCAQEAT+JoPAcfweFdLzdMZgycwPLiBtvMSrvwkRnvKjoH
+FyfzF42r4bbZdzN1X9V5D08EPVMUTMB07AgB38f+34JWX53kQ3P3QB9R4A+uWbl7
+yAzXybZ7xI8pULFc1szZfeeK1iLzp1c7tufpFNrz8XYv3Mkrs4jq+skDxnPWkSQF
+LUlhw+BNgy/oyGvay4Vqv7m/1+YwBQ9vni4tRp78rc/h+8+FWSlRgc1zJJkj8zkB
+utjR0xGA0uJ5QL9ho/xr8/uVvQBErlqhQiKmqRYFaKoM6L9Y8r1Ya8RBT4RL9hly
+03/NvCL9yZiOfpvaboOOOitsdr4IhATTuLVQdgUWyfn2ag==
 </ns3:certificate>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn9PCAL6ig7xMAb4395BD
-Sdbpo50mzxog1IvhOekkhEGCVpW4u8WSWN9ELDyYCNQbMf7ccWXfZA3RLTW06OTS
-AotYpLu3QJQzsMGaZQXqS6aTPglNhVebtLxvbBnDm0aFH4j6Sh7X7m1Hy+DRfwHM
-jaSrraixhjOoRgRRhqHpiRo33yQZfw/YzzyGjQ6JFl6jdm17TSgnXUd6Bef2Z70H
-TIQXBrzbvhOUkegivTq6mVEHxU6VeGHF6niF+vXC+zTtFyTGjS03CJ6JEHfy+07r
-0mSq9gO5bbcKmB5ex+LyNHxVeP06cwv2J6FCPRa4V/BZlaDCMv16RdkedYAH5H8/
-6QIDAQAB
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAynERNFtFxKd6Brvq7xlb
++pojcCu+YAWUQ8pZNBf5Q1qJWPZisQzeEDT3xj8ibPwVVSC4Ikv9mKg6OUlMicjD
+oSVeEfVuyDvQ3LipxCYtGlaDfsp+yPS1fkLB9Ah53dFnBhbKFAWr7IgYalXr30QP
+NI27Cy4nh37zDtT8BgOolVwp9vPhb9H9uFJUFx5XwegihmMHWPh9Gn/jbBlA9ig/
+OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkEsDbc7jvUDiZ3sa6i
+5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ+mNQ
+sQIDAQAB
 </ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn9PCAL6ig7xMAb4395BD
-Sdbpo50mzxog1IvhOekkhEGCVpW4u8WSWN9ELDyYCNQbMf7ccWXfZA3RLTW06OTS
-AotYpLu3QJQzsMGaZQXqS6aTPglNhVebtLxvbBnDm0aFH4j6Sh7X7m1Hy+DRfwHM
-jaSrraixhjOoRgRRhqHpiRo33yQZfw/YzzyGjQ6JFl6jdm17TSgnXUd6Bef2Z70H
-TIQXBrzbvhOUkegivTq6mVEHxU6VeGHF6niF+vXC+zTtFyTGjS03CJ6JEHfy+07r
-0mSq9gO5bbcKmB5ex+LyNHxVeP06cwv2J6FCPRa4V/BZlaDCMv16RdkedYAH5H8/
-6QIDAQAB
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAynERNFtFxKd6Brvq7xlb
++pojcCu+YAWUQ8pZNBf5Q1qJWPZisQzeEDT3xj8ibPwVVSC4Ikv9mKg6OUlMicjD
+oSVeEfVuyDvQ3LipxCYtGlaDfsp+yPS1fkLB9Ah53dFnBhbKFAWr7IgYalXr30QP
+NI27Cy4nh37zDtT8BgOolVwp9vPhb9H9uFJUFx5XwegihmMHWPh9Gn/jbBlA9ig/
+OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkEsDbc7jvUDiZ3sa6i
+5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ+mNQ
+sQIDAQAB
 </ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
