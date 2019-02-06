@@ -2571,6 +2571,20 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://is-test.czu.cz/ewp/manifest.pl</d5:url>
             </d5:discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/v2.0.1/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <url>https://is-test.czu.cz/ewp/echo.pl</url>
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+            </echo>
         </apis-implemented>
         <institutions-covered>
             <hei-id>czu.cz</hei-id>
