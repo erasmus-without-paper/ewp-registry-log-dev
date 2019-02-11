@@ -28,6 +28,18 @@
         <admin-email>denys@aktiun.com</admin-email>
         <admin-notes>Terra Dotta's test node. Fake institutions for now</admin-notes>
         <ns2:apis-implemented>
+            <ns14:iia-cnr version="2.0.1">
+                <ns14:http-security>
+                    <ns5:client-auth-methods>
+                        <ns22:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns24:tlscert/>
+                        <ns23:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns14:http-security>
+                <ns14:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</ns14:url>
+            </ns14:iia-cnr>
             <ns18:echo version="2.0.1">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
@@ -52,18 +64,6 @@
                 <ns15:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ns15:index-url>
                 <ns15:sends-notifications/>
             </ns15:iias>
-            <ns14:iia-cnr version="2.0.1">
-                <ns14:http-security>
-                    <ns5:client-auth-methods>
-                        <ns22:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns24:tlscert/>
-                        <ns23:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns14:http-security>
-                <ns14:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</ns14:url>
-            </ns14:iia-cnr>
             <ns17:institutions version="2.0.0">
                 <ns17:http-security>
                     <ns5:client-auth-methods>

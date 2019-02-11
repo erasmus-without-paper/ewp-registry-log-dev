@@ -2199,6 +2199,18 @@
         <ewp:admin-email>denys@aktiun.com</ewp:admin-email>
         <ewp:admin-notes>Terra Dotta's test node. Fake institutions for now</ewp:admin-notes>
         <apis-implemented>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</iac2:url>
+            </iac2:iia-cnr>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -2223,18 +2235,6 @@
                 <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
                 <ia2:sends-notifications/>
             </ia2:iias>
-            <iac2:iia-cnr version="2.0.1">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</iac2:url>
-            </iac2:iia-cnr>
             <in2:institutions version="2.0.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
