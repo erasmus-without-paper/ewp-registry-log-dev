@@ -2214,6 +2214,22 @@
                 </e2:http-security>
                 <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
             </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <ia2:iias version="2.0.1">
                 <ia2:http-security>
                     <sec:client-auth-methods>
@@ -2240,28 +2256,9 @@
                 </iac2:http-security>
                 <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</iac2:url>
             </iac2:iia-cnr>
-            <in2:institutions version="2.0.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A0:anonymous/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <d5:discovery version="5.0.0">
-                <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
-            </d5:discovery>
         </apis-implemented>
         <institutions-covered>
-            <hei-id>DEEA7F4B056149FAE8A0D40D7F8C3FBB.terradotta.com</hei-id>
-            <hei-id>07C3DB5F8CB2F147339B0AD41F5A4E18.terradotta.com</hei-id>
-            <hei-id>agreements-td-poc.terradotta.com</hei-id>
-            <hei-id>A7B8390E1DEFC9CDBD6467CFD5466087.terradotta.com</hei-id>
+            <hei-id>dev-agreements2.terradotta.com</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="72afec03c856694c5e80ac65fdb367d32dfb7f1a1123606c0071988d7c2de3a1"/>
@@ -2608,30 +2605,6 @@
         </server-credentials-in-use>
     </host>
     <institutions>
-        <hei id="07C3DB5F8CB2F147339B0AD41F5A4E18.terradotta.com">
-            <other-id type="erasmusCharter">my charter</other-id>
-            <other-id type="erasmusId">07C3DB5F8CB2F147339B0AD41F5A4E18.terradotta.com</other-id>
-            <other-id type="pic">my pic</other-id>
-            <name xml:lang="eng">my inst name</name>
-        </hei>
-        <hei id="A7B8390E1DEFC9CDBD6467CFD5466087.terradotta.com">
-            <other-id type="erasmusCharter">45834-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
-            <other-id type="erasmusId">A7B8390E1DEFC9CDBD6467CFD5466087.terradotta.com</other-id>
-            <other-id type="pic">987654321</other-id>
-            <name xml:lang="eng">Dev1 Institution Name (updated)</name>
-        </hei>
-        <hei id="DEEA7F4B056149FAE8A0D40D7F8C3FBB.terradotta.com">
-            <other-id type="erasmusCharter">0c704227-e5cc-41f6-836c-45dbfaeb78fe</other-id>
-            <other-id type="erasmusId">DEEA7F4B056149FAE8A0D40D7F8C3FBB.terradotta.com</other-id>
-            <other-id type="pic">123456789</other-id>
-            <name xml:lang="eng">Dev2 Instituion Name (updated)</name>
-        </hei>
-        <hei id="agreements-td-poc.terradotta.com">
-            <other-id type="erasmusCharter"/>
-            <other-id type="erasmusId"/>
-            <other-id type="pic"/>
-            <name xml:lang="eng">POC Demo University</name>
-        </hei>
         <hei id="arteveldehs.be">
             <other-id type="erasmus">B  GENT39</other-id>
             <other-id type="euc">211355-IC-1-2007-1-BE-ERASMUS-EUCX-1</other-id>
@@ -2660,6 +2633,12 @@
             <other-id type="pic">999572294</other-id>
             <name xml:lang="en">University of Warsaw</name>
             <name xml:lang="pl">Uniwersytet Warszawski</name>
+        </hei>
+        <hei id="dev-agreements2.terradotta.com">
+            <other-id type="erasmusCharter">0c704227-e5cc-41f6-836c-45dbfaeb78fe</other-id>
+            <other-id type="erasmusId">DEEA7F4B056149FAE8A0D40D7F8C3FBB.terradotta.com</other-id>
+            <other-id type="pic">123456789</other-id>
+            <name xml:lang="eng">Dev2 Instituion Name</name>
         </hei>
         <hei id="diak.fi">
             <other-id type="erasmus">HELSINK19</other-id>
