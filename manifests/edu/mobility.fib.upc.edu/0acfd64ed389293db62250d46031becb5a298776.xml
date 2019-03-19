@@ -1,0 +1,137 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>jaume.moral@fib.upc.edu</ewp:admin-email>
+		<ewp:admin-email>florencia.rimolo@fib.upc.edu</ewp:admin-email>
+        <ewp:admin-notes>This is the Manifest File for Universitat Politècnica de Catalunya.</ewp:admin-notes>
+		
+		<r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://mobility.fib.upc.edu/ewp/manifest.xml</url>
+            </discovery>
+		</r:apis-implemented>
+
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="fib.upc.edu">
+                <other-id type="pic">999976202</other-id>
+                <other-id type="erasmus">E BARCELO03</other-id>
+                <other-id type="erasmus-charter">28604-EPP-1-2014-1-ES-EPPKA3-ECHE</other-id>
+                <name xml:lang="en">Universitat Politècnica de Catalunya</name>
+            </hei>
+        </mf:institutions-covered>
+
+        <client-credentials-in-use>
+
+            <certificate>
+                MIIHRDCCBiygAwIBAgIQCEiiGpX13gJY4B8n1V8WOzANBgkqhkiG9w0BAQ0FADBk
+				MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+				QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+				Q0EgMzAeFw0xOTAyMTgwMDAwMDBaFw0yMTA1MjMwMDAwMDBaMIGOMQswCQYDVQQG
+				EwJFUzESMBAGA1UEBxMJQmFyY2Vsb25hMT4wPAYDVQQKDDVVbml2ZXJzaXRhdCBQ
+				b2xpdMOoY25pY2EgZGUgQ2F0YWx1bnlhLiBCYXJjZWxvbmFUZWNoLjEMMAoGA1UE
+				CxMDRklCMR0wGwYDVQQDExRtb2JpbGl0eS5maWIudXBjLmVkdTCCASIwDQYJKoZI
+				hvcNAQEBBQADggEPADCCAQoCggEBAOD6yMsadFVmMVzSs3klGVooqPb8GT2PXEyz
+				FUOvE0vGIHcfldziZ0eHRc0w9QFTMaiyyY+Ba12EssIOrBaEugj7S+nX6/q2424+
+				k8h5B9oyxbsGm2Ce5kBssnd+52nY4cSneAGXrXi0iGW4bw66VMPFwVJPmGTs69u4
+				HAI18X+HijBWCw4lLtUQZJvsnps7PyZh2AUUdP1z3mNUE70vz3RAuwM253G5Vmfe
+				V/zAur9EDEyVcbhIVaoTiF6/i6urWDG/523XDFqla4UOEEzZ7RpFbkTJB71JAnYt
+				LNPsoSh+KDjSoRNBRwUAMskV1CTAnr64pnbPJ24mdyS2MWS7R7cCAwEAAaOCA8Uw
+				ggPBMB8GA1UdIwQYMBaAFGf9iCAUJ5jHCdIlGbvpURFjdVBiMB0GA1UdDgQWBBR1
+				dEwyV+nBNIj0UGYftwpPDYdCRDAfBgNVHREEGDAWghRtb2JpbGl0eS5maWIudXBj
+				LmVkdTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUF
+				BwMCMGsGA1UdHwRkMGIwL6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9U
+				RVJFTkFTU0xDQTMuY3JsMC+gLaArhilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20v
+				VEVSRU5BU1NMQ0EzLmNybDBMBgNVHSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsG
+				AQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBu
+				BggrBgEFBQcBAQRiMGAwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0
+				LmNvbTA4BggrBgEFBQcwAoYsaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RF
+				UkVOQVNTTENBMy5jcnQwDAYDVR0TAQH/BAIwADCCAfQGCisGAQQB1nkCBAIEggHk
+				BIIB4AHeAHUA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFpATtr
+				oAAABAMARjBEAiAFA6IeEA+KtFBXQhKJIRyf0pKRMt+rIA//vi7Zh7g/iwIgHYwU
+				ABX3TQuz3lqf9UcPofU6WIbhP00ATJ80hlbEo90AdQBElGUusO7Or8RAB9io/ijA
+				2uaCvtjLMbU/0zOWtbaBqAAAAWkBO2uqAAAEAwBGMEQCIB6vpbJjzcq8Sme4bE39
+				gmC9C7cDJVG2QJ9qD0U952eeAiAmUEDC9P9vocvYJt4dAEIckp8TCVgvYrWATeVN
+				xOioogB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABaQE7a4wA
+				AAQDAEcwRQIgKpeSF/kasnRbBAJCDcagDEsN0GuGT/qzStmQmlTUF20CIQDWxw5W
+				wFFFoyf2CkBm6+lpJ4SKM67k2j4T8sShf0Ul2AB2AFYUBpov18Ls0/XhvUSyPsdG
+				drm8mRFcwO+UmFXWidDdAAABaQE7bMUAAAQDAEcwRQIhAJ1ua0xHnDerHy429phI
+				S+orC+D6EvjHDDhw7B0OiDReAiAGGFTD8jAzRq2iEvjpTM6U0Cy5x0015SCgT9xc
+				uJcOUDANBgkqhkiG9w0BAQ0FAAOCAQEArB8LqByEBYLwHPXSjAx4grQ/OBZlJ8Wx
+				AwlbfNj82hxyf6dFk/EaKQR+xI9nKbaVcPkQYLRk/goilsefLVkeEOLx097jbcuL
+				e8V92NoiZOAzRI5CCfPjn0cvk0OcGUk7QPfkPWEX4YruP7ozPmv6XXqSKN+b+MZJ
+				dAFtfYmblqn1gNQDkS0ZGtepzcOWuwBfVeRB45xro+P/VTFHnwx/NCxldQg19Oh2
+				gW/mp7DP2VMdzCHX3Jgq7kQqxB7FySUguAU/AZU80fC9D4wGbIWP80I74jF0WjFF
+				txITElpMglRhYWrJSwcFq3q5QkecbreOCav5szpONtS2atzD6G/whA==
+            </certificate>
+
+            <rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQojIPtX+BYGGC2f1zXr
+                U3ijq5oApW6YA+mSiB3p5pEQRUuvIHKbSKRXQaW/5hORYpWU1GzU2Wq99vykjX9b
+                8GQlM+0xbFP0cILIhjz23R0Q53mKcf2xAzQt2b3f56QOnjUaKbXsuB+ejTLAtQ4D
+                yKYSodCzUFkuUZUw+TK7G9ySMbcVHqrG8qDCw3/7CXkN0Wf9HpSnYP5fwd426fay
+                u6RXGeX5vUuX5BJkjsxoL8Smn7TB31LSFn3LbQLzG4UuxGaGgHWZCMSC35dX2d3z
+                4zcpZxgyN8LNWXCf4g95b20Ljsbnvk1dIUTJtRJJ29zbWXcgXgVl69UKQx8NxXIx
+                6wIDAQAB
+            </rsa-public-key>
+        </client-credentials-in-use>
+
+        <server-credentials-in-use>
+            <rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQojIPtX+BYGGC2f1zXr
+                U3ijq5oApW6YA+mSiB3p5pEQRUuvIHKbSKRXQaW/5hORYpWU1GzU2Wq99vykjX9b
+                8GQlM+0xbFP0cILIhjz23R0Q53mKcf2xAzQt2b3f56QOnjUaKbXsuB+ejTLAtQ4D
+                yKYSodCzUFkuUZUw+TK7G9ySMbcVHqrG8qDCw3/7CXkN0Wf9HpSnYP5fwd426fay
+                u6RXGeX5vUuX5BJkjsxoL8Smn7TB31LSFn3LbQLzG4UuxGaGgHWZCMSC35dX2d3z
+                4zcpZxgyN8LNWXCf4g95b20Ljsbnvk1dIUTJtRJJ29zbWXcgXgVl69UKQx8NxXIx
+                6wIDAQAB
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
