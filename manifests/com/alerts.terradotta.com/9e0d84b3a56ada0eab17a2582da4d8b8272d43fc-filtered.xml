@@ -28,18 +28,9 @@
         <admin-email>denys@aktiun.com</admin-email>
         <admin-notes>denys@aktiun.com</admin-notes>
         <ns2:apis-implemented>
-            <ns18:echo version="2.0.1">
-                <ns18:http-security>
-                    <ns5:client-auth-methods>
-                        <ns20:tlscert allows-self-signed="true"/>
-                        <ns22:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns23:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns18:http-security>
-                <ns18:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns18:url>
-            </ns18:echo>
+            <ns19:discovery version="5.0.0">
+                <ns19:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</ns19:url>
+            </ns19:discovery>
             <ns17:institutions version="2.0.0">
                 <ns17:http-security>
                     <ns5:client-auth-methods>
@@ -53,20 +44,6 @@
                 <ns17:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</ns17:url>
                 <ns17:max-hei-ids>1</ns17:max-hei-ids>
             </ns17:institutions>
-            <ns14:iia-cnr version="2.0.1">
-                <ns14:http-security>
-                    <ns5:client-auth-methods>
-                        <ns22:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns23:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns14:http-security>
-                <ns14:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</ns14:url>
-            </ns14:iia-cnr>
-            <ns19:discovery version="5.0.0">
-                <ns19:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</ns19:url>
-            </ns19:discovery>
             <ns15:iias version="2.0.1">
                 <ns15:http-security>
                     <ns5:client-auth-methods>
@@ -82,6 +59,29 @@
                 <ns15:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ns15:index-url>
                 <ns15:sends-notifications/>
             </ns15:iias>
+            <ns14:iia-cnr version="2.0.1">
+                <ns14:http-security>
+                    <ns5:client-auth-methods>
+                        <ns22:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns23:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns14:http-security>
+                <ns14:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</ns14:url>
+            </ns14:iia-cnr>
+            <ns18:echo version="2.0.1">
+                <ns18:http-security>
+                    <ns5:client-auth-methods>
+                        <ns20:tlscert allows-self-signed="true"/>
+                        <ns22:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns23:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns18:http-security>
+                <ns18:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns18:url>
+            </ns18:echo>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="07C3DB5F8CB2F147339B0AD41F5A4E18.terradotta.com">
