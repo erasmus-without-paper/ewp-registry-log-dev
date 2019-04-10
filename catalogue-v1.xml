@@ -3037,6 +3037,75 @@
             <rsa-public-key sha-256="2dcb753a05f3e17fab05e2a992102ec74dc27b7a22d90602f26524f08a3711f1"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNIPV test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://s3-web.unipv.it/ewp/Manifest.do</d4:url>
+            </d4:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://s3-web.unipv.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://s3-web.unipv.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.0.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://s3-web.unipv.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <c1:courses
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://s3-web.unipv.it/ewp/connector/Courses.do</c1:url>
+                <c1:max-los-ids>10</c1:max-los-ids>
+                <c1:max-los-codes>10</c1:max-los-codes>
+            </c1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unpv.eu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="3fc39a771647d2801bf64eb8e55966dd17252f3c4ffd88fb5f2657d695b56a80"/>
+        </client-credentials-in-use>
+    </host>
     <institutions>
         <hei id="A7B8390E1DEFC9CDBD6467CFD5466087.terradotta.com">
             <other-id type="erasmusCharter">45834-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
@@ -3386,6 +3455,12 @@
             <other-id type="pic">999899184</other-id>
             <name xml:lang="en">University of CINECA</name>
             <name xml:lang="it">Universita' degli Studi di CINECA</name>
+        </hei>
+        <hei id="unpv.eu">
+            <other-id type="erasmus">I PAVIA01</other-id>
+            <other-id type="pic">999893752</other-id>
+            <name xml:lang="en">University of Pavia</name>
+            <name xml:lang="it">Universita' degli Studi di Pavia</name>
         </hei>
         <hei id="uoa.gr">
             <other-id type="erasmus">G  ATHINE01</other-id>
