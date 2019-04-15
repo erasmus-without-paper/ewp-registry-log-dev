@@ -2615,6 +2615,19 @@
         <ewp:admin-email>denys@aktiun.com</ewp:admin-email>
         <ewp:admin-notes>denys@aktiun.com</ewp:admin-notes>
         <apis-implemented>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -2641,19 +2654,6 @@
                 </iac2:http-security>
                 <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</iac2:url>
             </iac2:iia-cnr>
-            <in2:institutions version="2.0.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A0:anonymous/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
             <ia2:iias version="2.0.1">
                 <ia2:http-security>
                     <sec:client-auth-methods>
