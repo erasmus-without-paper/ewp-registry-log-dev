@@ -2215,12 +2215,13 @@
         </client-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
+        <ewp:admin-email>ewp@it.auth.gr</ewp:admin-email>
+        <ewp:admin-notes>This is the manifest file of Aristotle University of Thessaloniki Greece.</ewp:admin-notes>
         <apis-implemented>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://authewp.it.auth.gr:8443/ewp/rest/manifest</d4:url>
-            </d4:discovery>
-            <e2:echo version="2.0.1">
+            <d5:discovery version="5.0.0">
+                <d5:url>https://authewp.it.auth.gr/public-api/discovery/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -2234,6 +2235,16 @@
                 <e2:url>https://authewp.it.auth.gr:8443/ewp/rest/echo</e2:url>
             </e2:echo>
             <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
                 <in2:url>https://authewp.it.auth.gr:8443/ewp/rest/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
@@ -2951,6 +2962,7 @@
             <other-id type="erasmus">G THESSAL01</other-id>
             <other-id type="erasmus-charter">31579-EPP-1-2014-1-GR-EPPKA3-ECHE</other-id>
             <other-id type="pic">999895692</other-id>
+            <name xml:lang="el">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης</name>
             <name xml:lang="en">Aristotle University of Thessaloniki</name>
         </hei>
         <hei id="czu.cz">
