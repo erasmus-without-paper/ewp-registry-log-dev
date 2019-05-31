@@ -2343,6 +2343,17 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d5:url>
             </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
+            </e2:echo>
             <in2:institutions version="2.0.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -2355,28 +2366,6 @@
                 <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <iac2:iia-cnr version="2.0.1">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</iac2:url>
-            </iac2:iia-cnr>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
-            </e2:echo>
             <ia2:iias version="2.0.1">
                 <ia2:http-security>
                     <sec:client-auth-methods>
@@ -2392,6 +2381,17 @@
                 <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
                 <ia2:sends-notifications/>
             </ia2:iias>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/notifications/cnr</iac2:url>
+            </iac2:iia-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>B7B8390E1DEFC9CDBD6467CFD5466087.terradotta.com</hei-id>
