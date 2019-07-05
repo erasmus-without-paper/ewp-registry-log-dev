@@ -2,24 +2,6 @@
     <host>
         <admin-notes xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">Terra Dotta's Host.</admin-notes>
         <ns2:apis-implemented xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-            <ns13:iias
-                xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.1"
-            >
-                <ns13:http-security>
-                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns20:httpsig xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns21:httpsig xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </ns5:server-auth-methods>
-                </ns13:http-security>
-                <ns13:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ns13:get-url>
-                <ns13:max-iia-ids>1</ns13:max-iia-ids>
-                <ns13:max-iia-codes>1</ns13:max-iia-codes>
-                <ns13:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ns13:index-url>
-                <ns13:sends-notifications/>
-            </ns13:iias>
             <ns12:iia-cnr
                 xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.1"
@@ -55,20 +37,6 @@
                 <ns15:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</ns15:url>
                 <ns15:max-hei-ids>1</ns15:max-hei-ids>
             </ns15:institutions>
-            <ns16:echo
-                xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.1"
-            >
-                <ns16:http-security>
-                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns20:httpsig xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns21:httpsig xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </ns5:server-auth-methods>
-                </ns16:http-security>
-                <ns16:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns16:url>
-            </ns16:echo>
             <ns9:omobilities
                 xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.16.0"
@@ -86,6 +54,38 @@
                 <ns9:max-omobility-ids>1</ns9:max-omobility-ids>
                 <ns9:sends-notifications/>
             </ns9:omobilities>
+            <ns16:echo
+                xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <ns16:http-security>
+                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns20:httpsig xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns21:httpsig xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </ns5:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns16:url>
+            </ns16:echo>
+            <ns13:iias
+                xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <ns13:http-security>
+                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns20:httpsig xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns21:httpsig xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </ns5:server-auth-methods>
+                </ns13:http-security>
+                <ns13:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/get</ns13:get-url>
+                <ns13:max-iia-ids>1</ns13:max-iia-ids>
+                <ns13:max-iia-codes>1</ns13:max-iia-codes>
+                <ns13:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ns13:index-url>
+                <ns13:sends-notifications/>
+            </ns13:iias>
         </ns2:apis-implemented>
         <institutions-covered>
             <ns2:hei
