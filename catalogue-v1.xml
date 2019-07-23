@@ -3129,6 +3129,20 @@
                 </e2:http-security>
                 <e2:url>https://test.ewp.kion.com.tr/api/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://test.ewp.kion.com.tr/api/institutions</in2:url>
+                <in2:max-hei-ids>100</in2:max-hei-ids>
+            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>kion.com.tr</hei-id>
