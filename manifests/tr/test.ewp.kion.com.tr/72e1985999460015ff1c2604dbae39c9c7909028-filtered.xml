@@ -6,10 +6,13 @@
     xmlns:i2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
+    xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
 >
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
@@ -28,6 +31,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tlscert/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-C2:tlscert/>
+                    </sec:response-encryption-methods>
                 </e2:http-security>
                 <e2:url>https://test.ewp.kion.com.tr/api/echo</e2:url>
             </e2:echo>
@@ -63,6 +72,7 @@
             <i2:institutions version="2.1.0">
                 <i2:http-security>
                     <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -70,9 +80,15 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tlscert/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-C2:tlscert/>
+                    </sec:response-encryption-methods>
                 </i2:http-security>
                 <i2:url>https://test.ewp.kion.com.tr/api/institutions</i2:url>
-                <i2:max-hei-ids>10</i2:max-hei-ids>
+                <i2:max-hei-ids>50</i2:max-hei-ids>
             </i2:institutions>
         </r:apis-implemented>
         <institutions-covered>
