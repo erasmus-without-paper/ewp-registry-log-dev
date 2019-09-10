@@ -81,6 +81,24 @@
                 <max-ounit-ids>1</max-ounit-ids>
                 <max-ounit-codes>1</max-ounit-codes>
             </organizational-units>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.12.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://qas.ewp.ugent.be/secure-api/mobilities/get</get-url>
+                <index-url>https://qas.ewp.ugent.be/secure-api/mobilities/index</index-url>
+                <max-omobility-ids>1</max-omobility-ids>
+                <sends-notifications/>
+            </omobilities>
             <omobility-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.4.0"
