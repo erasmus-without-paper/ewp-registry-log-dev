@@ -2921,61 +2921,6 @@
     <host>
         <ewp:admin-notes>Terra Dotta's Host.</ewp:admin-notes>
         <apis-implemented>
-            <iac2:iia-cnr version="2.0.1">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/cnr</iac2:url>
-            </iac2:iia-cnr>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
-                <om1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </om1:http-security>
-                <om1:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/omobilities/get</om1:get-url>
-                <om1:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/omobilities/index</om1:index-url>
-                <om1:max-omobility-ids>1</om1:max-omobility-ids>
-                <om1:sends-notifications/>
-            </om1:omobilities>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d4:url>
-            </d4:discovery>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
-            </e2:echo>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/ounits</ou2:url>
-                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
-            </ou2:organizational-units>
             <in2:institutions version="2.0.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -3035,6 +2980,9 @@
                 <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
                 <ia2:sends-notifications/>
             </ia2:iias>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d4:url>
+            </d4:discovery>
             <imc1:imobility-cnr
                 xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.1.1"
@@ -3050,6 +2998,58 @@
                 <imc1:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/imobilities/cnr</imc1:url>
                 <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.16.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/omobilities/get</om1:get-url>
+                <om1:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</e2:url>
+            </e2:echo>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
             <im1:imobilities
                 xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.3.1"
