@@ -1441,6 +1441,68 @@
     <host>
         <ewp:admin-email>connect-ewp@service4mobility.com</ewp:admin-email>
         <apis-implemented>
+            <ia2:iias version="2.1.0">
+                <ewp:admin-email>connect-ewp@service4mobility.com</ewp:admin-email>
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>3</ia2:max-iia-ids>
+                <ia2:max-iia-codes>3</ia2:max-iia-codes>
+                <ia2:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
+            </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>aarch.dk</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="99ef37d8edd0f5962e3368bcb4bcb817e3d5a0e9d9d79545499e2804327f0609"/>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>connect-ewp@service4mobility.com</ewp:admin-email>
+        <apis-implemented>
+            <iac2:iia-cnr version="2.0.2">
+                <ewp:admin-email>connect-ewp@service4mobility.com</ewp:admin-email>
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>aarch.dk</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="99ef37d8edd0f5962e3368bcb4bcb817e3d5a0e9d9d79545499e2804327f0609"/>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>connect-ewp@service4mobility.com</ewp:admin-email>
+        <apis-implemented>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.15.0"
