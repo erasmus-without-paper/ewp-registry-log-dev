@@ -3,8 +3,8 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2"
     xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -12,16 +12,16 @@
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
     xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-types-phonenumber/tree/stable-v1"
-    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
 >
     <ns3:host>
         <admin-email>lpinto@digitalis.pt</admin-email>
         <admin-notes>MOBILIDADEnet EWP Manifest</admin-notes>
         <ns2:apis-implemented>
-            <ns12:discovery version="5.0.0">
-                <ns12:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/manifest</ns12:url>
-            </ns12:discovery>
+            <ns8:discovery version="5.0.0">
+                <ns8:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/manifest</ns8:url>
+            </ns8:discovery>
             <ns11:echo version="2.0.1">
                 <admin-email>lpinto@digitalis.pt</admin-email>
                 <ns11:http-security>
@@ -72,10 +72,10 @@
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
             <ns3:certificate>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</ns3:certificate>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQomkEugOcOwgfZeayJWfT1z1YirlncKo0bo10Hck5x3qWdyx94kHg9Nfl4T45MX2JgmiLiLYZdPs0ZdIWy6z1QfFIiNShu2P/zscSbN3QO1TT612LtW2R9W2YUbF6LeCWTqCUw24LBEMWHKoaIzlwdHO3LRJCTuXwFwbkrH7Umh89aY5Tv2wrPrDrZyZya4OpsiC/gkNQR8d+PF25MwfYjQV6C9Z3i9+R1KBIK9NB3fYSwo//D94PVeJ1UrW23Vk5wyx+bh44wktFNFBcXbyNQnYvD3n7gC29mhd9/4AGIZS1keYW40eakrwIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2JG8XaWgUX8KZpId17QigAwkOxWGfPjIS5V8t+6MJ61BzSZKUAZXK4tvepbPZk0F0MzU5E/X8amAYz5J1q/ki/EvbeabeXe7H584CDhA9yfh87SzRanu35dv38UcccmJt0TLY0Ak56Cqfbg0bZ0epCGQxD5WWqYTEK6IW9xjD24kTmMCs9SYr+Xt2yBv0hQ4s0uOXGCPvt/2Ahzf1OYxSFn77iQEUaQdwqUOdtcabubKH9fspgCYJIjdubzwXZ3divQEMCuFHofi3ggFibfTRjE1kxLGQa4anrkUGhTK75TufES44UI6dvzpDf2dl0skusum6cMbLIC/arEaLwCxkwIDAQAB</ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQomkEugOcOwgfZeayJWfT1z1YirlncKo0bo10Hck5x3qWdyx94kHg9Nfl4T45MX2JgmiLiLYZdPs0ZdIWy6z1QfFIiNShu2P/zscSbN3QO1TT612LtW2R9W2YUbF6LeCWTqCUw24LBEMWHKoaIzlwdHO3LRJCTuXwFwbkrH7Umh89aY5Tv2wrPrDrZyZya4OpsiC/gkNQR8d+PF25MwfYjQV6C9Z3i9+R1KBIK9NB3fYSwo//D94PVeJ1UrW23Vk5wyx+bh44wktFNFBcXbyNQnYvD3n7gC29mhd9/4AGIZS1keYW40eakrwIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2JG8XaWgUX8KZpId17QigAwkOxWGfPjIS5V8t+6MJ61BzSZKUAZXK4tvepbPZk0F0MzU5E/X8amAYz5J1q/ki/EvbeabeXe7H584CDhA9yfh87SzRanu35dv38UcccmJt0TLY0Ak56Cqfbg0bZ0epCGQxD5WWqYTEK6IW9xjD24kTmMCs9SYr+Xt2yBv0hQ4s0uOXGCPvt/2Ahzf1OYxSFn77iQEUaQdwqUOdtcabubKH9fspgCYJIjdubzwXZ3divQEMCuFHofi3ggFibfTRjE1kxLGQa4anrkUGhTK75TufES44UI6dvzpDf2dl0skusum6cMbLIC/arEaLwCxkwIDAQAB</ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
