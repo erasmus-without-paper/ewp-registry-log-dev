@@ -1,13 +1,19 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2"
+    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2"
-    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/tree/stable-v2"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-types-phonenumber/tree/stable-v1"
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
 >
     <ns3:host>
         <admin-email>lpinto@digitalis.pt</admin-email>
@@ -16,31 +22,45 @@
             <ns8:discovery version="5.0.0">
                 <ns8:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/manifest</ns8:url>
             </ns8:discovery>
-            <ns7:echo version="2.0.0">
+            <ns11:echo version="2.0.0">
                 <admin-email>lpinto@digitalis.pt</admin-email>
-                <ns7:http-security>
-                    <ns6:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns6:client-auth-methods>
-                    <ns6:server-auth-methods>
-                        <ns9:httpsig/>
-                    </ns6:server-auth-methods>
-                </ns7:http-security>
-                <ns7:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/echo</ns7:url>
-            </ns7:echo>
+                <ns11:http-security>
+                    <ns9:client-auth-methods>
+                        <ns14:httpsig/>
+                    </ns9:client-auth-methods>
+                    <ns9:server-auth-methods>
+                        <ns14:httpsig/>
+                    </ns9:server-auth-methods>
+                </ns11:http-security>
+                <ns11:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/echo</ns11:url>
+            </ns11:echo>
+            <ns10:institutions version="2.0.0">
+                <admin-email>lpinto@digitalis.pt</admin-email>
+                <ns10:http-security>
+                    <ns9:client-auth-methods>
+                        <ns14:httpsig/>
+                    </ns9:client-auth-methods>
+                    <ns9:server-auth-methods>
+                        <ns14:httpsig/>
+                    </ns9:server-auth-methods>
+                </ns10:http-security>
+                <ns10:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/institutions</ns10:url>
+                <ns10:max-hei-ids>1</ns10:max-hei-ids>
+            </ns10:institutions>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="digitalis.pt">
                 <ns2:other-id type="EramusCode">P DIGI01</ns2:other-id>
                 <ns2:other-id type="EUC Code"/>
+                <ns2:other-id type="SCHAC">digitalis.pt</ns2:other-id>
                 <ns2:name xml:lang="pt">Universidade Digitalis</ns2:name>
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw6dcLpy4QcqC5X+tWijov+6fRVhAQZZDs4j71mpGM2jLm97Y4XzIdfAIK9RxiUsed0Zsv+s+w6a02AsyVTZqmhaodJOJ7JVlsQx1AhlCrbvdlvxdQzyLyTZ5T278eIRCgdxYShBi6m4mhsfKz/hkoaHxJGFGR7k7g9yZm6dk8vGHfy/mwpFO+k616BBIHjGhiNxBgohTNAuwYBgDIjxjMvIkQussdwIMaIE6nRw0+68WTCMot4FJbcyM14ArEh35yFInCBs/+xU3Cv218XKEfGgaQUwHDHDMsAWjwEcnhSgsBH0rkVbggE9B12lDoFIQVoTgqH1hS+4ynkaWsLSXuQIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQomkEugOcOwgfZeayJWfT1z1YirlncKo0bo10Hck5x3qWdyx94kHg9Nfl4T45MX2JgmiLiLYZdPs0ZdIWy6z1QfFIiNShu2P/zscSbN3QO1TT612LtW2R9W2YUbF6LeCWTqCUw24LBEMWHKoaIzlwdHO3LRJCTuXwFwbkrH7Umh89aY5Tv2wrPrDrZyZya4OpsiC/gkNQR8d+PF25MwfYjQV6C9Z3i9+R1KBIK9NB3fYSwo//D94PVeJ1UrW23Vk5wyx+bh44wktFNFBcXbyNQnYvD3n7gC29mhd9/4AGIZS1keYW40eakrwIDAQAB</ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw6dcLpy4QcqC5X+tWijov+6fRVhAQZZDs4j71mpGM2jLm97Y4XzIdfAIK9RxiUsed0Zsv+s+w6a02AsyVTZqmhaodJOJ7JVlsQx1AhlCrbvdlvxdQzyLyTZ5T278eIRCgdxYShBi6m4mhsfKz/hkoaHxJGFGR7k7g9yZm6dk8vGHfy/mwpFO+k616BBIHjGhiNxBgohTNAuwYBgDIjxjMvIkQussdwIMaIE6nRw0+68WTCMot4FJbcyM14ArEh35yFInCBs/+xU3Cv218XKEfGgaQUwHDHDMsAWjwEcnhSgsBH0rkVbggE9B12lDoFIQVoTgqH1hS+4ynkaWsLSXuQIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQomkEugOcOwgfZeayJWfT1z1YirlncKo0bo10Hck5x3qWdyx94kHg9Nfl4T45MX2JgmiLiLYZdPs0ZdIWy6z1QfFIiNShu2P/zscSbN3QO1TT612LtW2R9W2YUbF6LeCWTqCUw24LBEMWHKoaIzlwdHO3LRJCTuXwFwbkrH7Umh89aY5Tv2wrPrDrZyZya4OpsiC/gkNQR8d+PF25MwfYjQV6C9Z3i9+R1KBIK9NB3fYSwo//D94PVeJ1UrW23Vk5wyx+bh44wktFNFBcXbyNQnYvD3n7gC29mhd9/4AGIZS1keYW40eakrwIDAQAB</ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
