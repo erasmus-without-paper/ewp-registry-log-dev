@@ -4057,12 +4057,62 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>li@teste.pt</ewp:admin-email>
         <ewp:admin-notes>MOBILIDADEnet EWP Manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/manifest</d5:url>
             </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>li@teste.pt</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-D1:tls/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <ewp:admin-email>li@teste.pt</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-D1:tls/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </in2:http-security>
+                <in2:url>https://ensino.digitalis.pt/mobilidadenet/doc/ewpstage/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
         </apis-implemented>
+        <institutions-covered>
+            <hei-id>digitalis.pt</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="c643dcf784029f866a0a29143a83a9b69ebf354ea0fafd04c0e1f4742ecec8f7"/>
+            <rsa-public-key sha-256="7f5c609f9b61405a844c5dce4b7cecae81c7f3c9d42d9560b0a9989dcdaddf3f"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7f5c609f9b61405a844c5dce4b7cecae81c7f3c9d42d9560b0a9989dcdaddf3f"/>
+        </server-credentials-in-use>
     </host>
     <institutions>
         <hei id="502E4E92EB5416EC0F8513C74E4ACEE8.terradotta.com">
@@ -4185,6 +4235,12 @@
             <other-id type="euc">29524-IC-1-2007-1-FI-ERASMUS-EUCX-1</other-id>
             <other-id type="pic">947255635</other-id>
             <name xml:lang="en">Diaconia University of Applied Sciences</name>
+        </hei>
+        <hei id="digitalis.pt">
+            <other-id type="EUC Code"/>
+            <other-id type="EramusCode">P DIGI01</other-id>
+            <other-id type="SCHAC">digitalis.pt</other-id>
+            <name xml:lang="pt">Universidade Digitalis</name>
         </hei>
         <hei id="dur.ac.uk">
             <other-id type="erasmus">UK DURHAM01</other-id>
@@ -5485,6 +5541,14 @@
             Ikh2HcW5slcLwRihGZzQA1UccqBNuuCVY7a1XY/C84qNcmRwcZzzHfqJyMVp/V3eoxeT7ZMYp3Fh
             IdXSQjcBL5LQXMbg7OpCVgSn+tQYO/gCnUcPEbNnChH3Y9rWBGIijkc2A2itvVjjL6ey+4vfbRdi
             l6EzpwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="7f5c609f9b61405a844c5dce4b7cecae81c7f3c9d42d9560b0a9989dcdaddf3f">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2JG8XaWgUX8KZpId17QigAwkOxWGfPjI
+            S5V8t+6MJ61BzSZKUAZXK4tvepbPZk0F0MzU5E/X8amAYz5J1q/ki/EvbeabeXe7H584CDhA9yfh
+            87SzRanu35dv38UcccmJt0TLY0Ak56Cqfbg0bZ0epCGQxD5WWqYTEK6IW9xjD24kTmMCs9SYr+Xt
+            2yBv0hQ4s0uOXGCPvt/2Ahzf1OYxSFn77iQEUaQdwqUOdtcabubKH9fspgCYJIjdubzwXZ3divQE
+            MCuFHofi3ggFibfTRjE1kxLGQa4anrkUGhTK75TufES44UI6dvzpDf2dl0skusum6cMbLIC/arEa
+            LwCxkwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="8715a17c6c58b4d10f81322c380bfad4c6f6601026220ea5181067397e3c7537">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwSqFm9bDmn2RWs/zeTqr57z0sxfp533H
