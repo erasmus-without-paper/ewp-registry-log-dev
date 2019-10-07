@@ -1,18 +1,19 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
-    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
+    xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
 >
     <ns3:host>
         <admin-email>antonio.feliziani@unibo.it</admin-email>
@@ -23,46 +24,46 @@
             <ns4:discovery version="5.0.0">
                 <ns4:url>https://ewp-test.unibo.it/ewp/rest/manifest</ns4:url>
             </ns4:discovery>
-            <ns7:echo version="2.0.1">
+            <ns8:echo version="2.0.1">
+                <ns8:http-security>
+                    <ns5:client-auth-methods>
+                        <ns10:tlscert allows-self-signed="true"/>
+                        <ns11:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns12:tlscert/>
+                        <ns13:httpsig/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns14:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns15:tls/>
+                    </ns5:response-encryption-methods>
+                </ns8:http-security>
+                <ns8:url>https://ewp-test.unibo.it/ewp/rest/echo/v2</ns8:url>
+            </ns8:echo>
+            <ns7:institutions version="2.1.0">
                 <ns7:http-security>
                     <ns5:client-auth-methods>
-                        <ns9:tlscert allows-self-signed="true"/>
-                        <ns10:httpsig/>
+                        <ns9:anonymous/>
+                        <ns10:tlscert allows-self-signed="true"/>
+                        <ns11:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns11:tlscert/>
-                        <ns12:httpsig/>
+                        <ns12:tlscert/>
+                        <ns13:httpsig/>
                     </ns5:server-auth-methods>
                     <ns5:request-encryption-methods>
-                        <ns13:tls/>
+                        <ns14:tls/>
                     </ns5:request-encryption-methods>
                     <ns5:response-encryption-methods>
-                        <ns14:tls/>
+                        <ns15:tls/>
                     </ns5:response-encryption-methods>
                 </ns7:http-security>
-                <ns7:url>https://ewp-test.unibo.it/ewp/rest/echo/v2</ns7:url>
-            </ns7:echo>
-            <ns6:institutions version="2.1.0">
-                <ns6:http-security>
-                    <ns5:client-auth-methods>
-                        <ns8:anonymous/>
-                        <ns9:tlscert allows-self-signed="true"/>
-                        <ns10:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:tlscert/>
-                        <ns12:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
-                        <ns13:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
-                        <ns14:tls/>
-                    </ns5:response-encryption-methods>
-                </ns6:http-security>
-                <ns6:url>https://ewp-test.unibo.it/ewp/rest/institutions/v2</ns6:url>
-                <ns6:max-hei-ids>1</ns6:max-hei-ids>
-            </ns6:institutions>
+                <ns7:url>https://ewp-test.unibo.it/ewp/rest/institutions/v2</ns7:url>
+                <ns7:max-hei-ids>1</ns7:max-hei-ids>
+            </ns7:institutions>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="unibo.it">
