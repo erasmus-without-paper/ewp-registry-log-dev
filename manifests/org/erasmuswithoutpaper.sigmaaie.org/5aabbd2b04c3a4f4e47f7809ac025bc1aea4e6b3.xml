@@ -45,7 +45,18 @@
             </ns12:discovery>
         <!-- Some other API. -->
             <ns10:echo version="2.0.1">
-                <ns10:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</ns10:url>
+              <ns17:http-security>
+                <ns3:client-auth-methods>
+                  <ns44:tlscert allows-self-signed="true"/>
+                  <ns43:httpsig/>
+                </ns3:client-auth-methods>
+                <ns3:server-auth-methods>
+                  <ns21:tlscert/>
+                  <ns20:httpsig/>
+                </ns3:server-auth-methods>
+              </ns17:http-security>  
+
+              <ns10:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</ns10:url>
             </ns10:echo>
             <ns4:institutions version="2.1.0">
                 <ns4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</ns4:url>
