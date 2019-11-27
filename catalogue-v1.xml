@@ -4337,6 +4337,27 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://relint.uniroma1.it/ewp-test/manifest.xml</d5:url>
             </d5:discovery>
+            <institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://relint.uniroma1.it/ewp-test/api/institutions</url>
+                <max-hei-ids>1</max-hei-ids>
+            </institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uniroma1.it</hei-id>
