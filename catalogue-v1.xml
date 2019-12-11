@@ -2464,6 +2464,23 @@
                 </mtp1:http-security>
                 <mtp1:url>https://ewp-dev.up.pt:8433/rest/projects</mtp1:url>
             </mtp1:mt-projects>
+            <mt-mobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-mobilities/blob/master/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <report-url>https://ewp-dev.up.pt:8433/rest/mobilities</report-url>
+                <status-url>https://ewp-dev.up.pt:8433/rest/mobilities-status-request</status-url>
+            </mt-mobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>ec.europa.eu</hei-id>

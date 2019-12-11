@@ -59,7 +59,7 @@
         </http-security>
         <url>https://ewp-dev.up.pt:8433/rest/projects</url>
       </mt-projects>
-      <mt-mobilities version="0.1.0">
+      <mt-mobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-mobilities/blob/master/manifest-entry.xsd" version="0.1.0">
         <http-security>
           <sec:client-auth-methods>
             <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"></tlscert>
@@ -70,21 +70,9 @@
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
           </sec:server-auth-methods>
         </http-security>
-        <url>https://ewp-dev.up.pt:8433/rest/mobilities</url>
+        <report-url>https://ewp-dev.up.pt:8433/rest/mobilities</report-url>
+        <status-url>https://ewp-dev.up.pt:8433/rest/mobilities-status-request</status-url>
       </mt-mobilities>
-      <mt-mobilities-status-request version="0.1.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"></tlscert>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"></tlscert>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
-          </sec:server-auth-methods>
-        </http-security>
-        <url>https://ewp-dev.up.pt:8433/rest/mobilities-status-request</url>
-      </mt-mobilities-status-request>
     </r:apis-implemented>
     <institutions-covered>
       <r:hei id="ec.europa.eu">
