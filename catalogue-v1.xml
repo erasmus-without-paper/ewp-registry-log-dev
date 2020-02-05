@@ -6877,25 +6877,6 @@
     <host>
         <ewp:admin-notes>Terra Dotta's Host.</ewp:admin-notes>
         <apis-implemented>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d4:url>
-            </d4:discovery>
-            <co1:courses
-                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="0.7.1"
-            >
-                <co1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </co1:http-security>
-                <co1:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/courses</co1:url>
-                <co1:max-los-ids>1</co1:max-los-ids>
-                <co1:max-los-codes>1</co1:max-los-codes>
-            </co1:courses>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -6924,17 +6905,19 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>false</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <iac2:iia-cnr version="2.0.1">
-                <iac2:http-security>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/cnr</iac2:url>
-            </iac2:iia-cnr>
+                </ou2:http-security>
+                <ou2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <imc1:imobility-cnr
                 xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.1.1"
@@ -6998,6 +6981,37 @@
                 <omc1:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/omobilities/cnr</omc1:url>
                 <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</d4:url>
+            </d4:discovery>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/courses</co1:url>
+                <co1:max-los-ids>1</co1:max-los-ids>
+                <co1:max-los-codes>1</co1:max-los-codes>
+            </co1:courses>
             <ia2:iias version="2.0.1">
                 <ia2:http-security>
                     <sec:client-auth-methods>
@@ -7013,31 +7027,17 @@
                 <ia2:index-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/index</ia2:index-url>
                 <ia2:sends-notifications/>
             </ia2:iias>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/ounits</ou2:url>
-                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
-            </ou2:organizational-units>
-            <in2:institutions version="2.0.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
+                </iac2:http-security>
+                <iac2:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>9219361C91B3A2531AC9AF37092D3F8C.terradotta.com</hei-id>
