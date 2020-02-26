@@ -8587,6 +8587,38 @@
             <rsa-public-key sha-256="5531f9a02c44a894d0b706961259fec740ad4ae8a3555871f1a5cd9801285bd4"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stag@service.zcu.cz</ewp:admin-email>
+        <ewp:admin-notes>EWP demo connector</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://stag-demo.zcu.cz/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://stag-demo.zcu.cz/ws/services/ewp/manifest</d5:url>
+            </d5:discovery>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>zcu.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="6e4db8a2357a92db48613ccb78961e354f153fe42e2c7b5e1485a0d8198de196"/>
+            <rsa-public-key sha-256="33784661852d669bb112e13683e8ced30ae90d2cc5fa7d6faee3ea41fb560e1f"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="33784661852d669bb112e13683e8ced30ae90d2cc5fa7d6faee3ea41fb560e1f"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="502E4E92EB5416EC0F8513C74E4ACEE8.terradotta.com">
             <other-id type="erasmusCharter">0c704227-e5cc-41f6-836c-45dbfaeb78fe</other-id>
@@ -9934,6 +9966,13 @@
             <other-id type="erasmus">UK YORK01</other-id>
             <name xml:lang="en">University of York</name>
         </hei>
+        <hei id="zcu.cz">
+            <other-id type="erasmus">CZ PLZEN01</other-id>
+            <other-id type="erasmus-charter">51707-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999843894</other-id>
+            <name xml:lang="cs">ZÁPADOČESKÁ UNIVERZITA V PLZNI</name>
+            <name xml:lang="en">University of West Bohemia</name>
+        </hei>
         <hei id="zhaw.ch">
             <other-id type="erasmus">CH WINTERT03</other-id>
             <name xml:lang="de">ZHAW Zürcher Hochschule für Angewandte Wissenschaften</name>
@@ -10008,6 +10047,14 @@
             m+yemzs/JmHYBRR0/XPeY1QTvS/PdEC7AzbncblWZ95X/MC6v0QMTJVxuEhVqhOIXr+Lq6tYMb/n
             bdcMWqVrhQ4QTNntGkVuRMkHvUkCdi0s0+yhKH4oONKhE0FHBQAyyRXUJMCevrimds8nbiZ3JLYx
             ZLtHtwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="33784661852d669bb112e13683e8ced30ae90d2cc5fa7d6faee3ea41fb560e1f">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5zygkbpSRTuYP6BOePDWo1oiaQlcm3PJ
+            OzaQi6tDqLMJPAqCXKnETVyBxohJPKaLY69J2zJKk6wc3FdIMrgeRc8lKha4l7e0Elhg/pOODzl9
+            hu4Bwpi45+qftGyv5mlY5/zyk8b3ACJWis5yGel/m6barsmyGYVjUDtgdULk1b4oRaphiq8eHiMS
+            4iNrcs7FAlo+g5oc1XaRRAsHUEL+G71KlR55cfKDof+IJhV5BX7vQpxhZVc/tBQsArG7tlj81w7a
+            lSHSebeT74Fex1XY8eYPHg5/W+Q9UkB+7OtMbKVajzcWYcMwhWeOMctRjdvByLklCIWeh8qy5wkk
+            OyeJmwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="4249f6df3aa3fbb07754956b7053a9265af417d4bb34368570c21303256d953c">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8a82iIIi9QaUGjZ55ccWEpUZLPHwIjU
