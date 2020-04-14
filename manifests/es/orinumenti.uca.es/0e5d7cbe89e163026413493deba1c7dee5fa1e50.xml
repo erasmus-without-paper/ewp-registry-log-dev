@@ -49,6 +49,7 @@
         
 
         <r:apis-implemented>
+
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
                 version="5.0.0"
@@ -77,10 +78,7 @@
                 <url>https://orinumenti.uca.es/en/ewp/echo</url>
             </echo>
 
-            <iias
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/index-response.xsd"
-                version="2.2.2"
-            >
+            <iias version="2.2.2">
                 <http-security>
                     <sec:client-auth-methods>
                         <tlscert
@@ -94,7 +92,10 @@
                         
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/iias/index</url>
+                <get-url>https://orinumenti.uca.es/en/ewp/iias/get</get-url>
+                <max-iias-ids></max-iias-ids>
+                <max-iias-codes></max-iias-codes>
+                <index-url>https://orinumenti.uca.es/en/ewp/iias/index</index-url>
             </iias>
 
             <institutions
