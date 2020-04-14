@@ -7,44 +7,15 @@
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/tree/v2.2.2"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
-    "
+    xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:api1="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+    xmlns:api2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:api3="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:api4="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/v1.0.0-rc9/manifest-entry.xsd"
+    xmlns:api5="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/v0.7.1/manifest-entry.xsd"
 >
     <host>
         
@@ -64,14 +35,11 @@
             >
                 <http-security>
                     <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
+                        <ns4:tlscert allows-self-signed="true"/>
                         
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns2:tlscert/>
                         
                     </sec:server-auth-methods>
                 </http-security>
@@ -79,112 +47,85 @@
                 <url>https://orinumenti.uca.es/en/ewp/echo</url>
             </echo>
 
-            <ns1:iias version="2.2.2">
-                <http-security>
+            <api1:iias version="2.2.2">
+                <api1:http-security>
                     <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
+                        <ns4:tlscert allows-self-signed="true"/>
                         
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns2:tlscert/>
                         
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://orinumenti.uca.es/en/ewp/iias/get</get-url>
-                <max-iias-ids></max-iias-ids>
-                <max-iias-codes></max-iias-codes>
-                <index-url>https://orinumenti.uca.es/en/ewp/iias/index</index-url>
-            </ns1:iias>
+                </api1:http-security>
+                <api1:get-url>https://orinumenti.uca.es/en/ewp/iias/get</api1:get-url>
+                <api1:max-iias-ids></api1:max-iias-ids>
+                <api1:max-iias-codes></api1:max-iias-codes>
+                <api1:index-url>https://orinumenti.uca.es/en/ewp/iias/index</api1:index-url>
+            </api1:iias>
+            
+            <api2:institutions version="2.1.0">
+                <api2:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                        
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                        
+                    </sec:server-auth-methods>
+                </api2:http-security>
+                <api2:url>https://orinumenti.uca.es/en/ewp/general/institutions</api2:url>
+                <api2:max-hei-ids>1</api2:max-hei-ids>
+            </api2:institutions>
+            
+            <api3:organizational-units version="2.1.1">
+                <api3:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                        
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                        
+                    </sec:server-auth-methods>
+                </api3:http-security>
+                <api3:url>https://orinumenti.uca.es/en/ewp/general/organizational-units</api3:url>
+                <api3:max-ounit-ids></api3:max-ounit-ids>
+                <api3:max-ounit-codes></api3:max-ounit-codes>
+            </api3:organizational-units>
 
-            <institutions
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/v2.1.0/response.xsd"
-                version="2.1.0"
-            >
-                <http-security>
+            <api4:simple-course-replication version="1.0.0-rc9">
+                <api4:http-security>
                     <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
+                        <ns4:tlscert allows-self-signed="true"/>
                         
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns2:tlscert/>
                         
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/institutions</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
+                </api4:http-security>
+                <api4:url>https://orinumenti.uca.es/en/ewp/general/simple-course-replication</api4:url>
+                <api4:allows-anonymous-access>True</api4:allows-anonymous-access>
+                <api4:supports-modified-since>False</api4:supports-modified-since>
+            </api4:simple-course-replication>
 
-            <organizational-units
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/v2.1.1/response.xsd"
-                version="2.1.1"
-            >
-                <http-security>
+            <api5:courses version="0.7.1">
+                <api5:http-security>
                     <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
+                        <ns4:tlscert allows-self-signed="true"/>
                         
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns2:tlscert/>
                         
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/organizational-units</url>
-                <max-ounit-ids></max-ounit-ids>
-                <max-ounit-codes></max-ounit-codes>
-            </organizational-units>
-
-            <simple-course-replication
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/v1.0.0-rc9/response.xsd"
-                version="1.0.0-rc9"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/simple-course-replication</url>
-                <allows-anonymous-access>True</allows-anonymous-access>
-                <supports-modified-since>False</supports-modified-since>
-            </simple-course-replication>
-
-            <courses
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/v0.7.1/response.xsd"
-                version="0.7.1"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/courses</url>
-                <max-los-ids>1</max-los-ids>
-                <max-los-codes>1</max-los-codes>
-            </courses>
+                </api5:http-security>
+                <api5:url>https://orinumenti.uca.es/en/ewp/general/courses</api5:url>
+                <api5:max-los-ids>1</api5:max-los-ids>
+                <api5:max-los-codes>1</api5:max-los-codes>
+            </api5:courses>
 
         </r:apis-implemented>
 

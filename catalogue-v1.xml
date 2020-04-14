@@ -8872,43 +8872,20 @@
                 </e2:http-security>
                 <e2:url>https://orinumenti.uca.es/en/ewp/echo</e2:url>
             </e2:echo>
-            <iias
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/tree/v2.2.2"
-                version="2.2.2"
-            />
-            <institutions
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/v2.1.0/response.xsd"
-                version="2.1.0"
-            >
-                <http-security>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/institutions</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
-            <organizational-units
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/v2.1.1/response.xsd"
-                version="2.1.1"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/organizational-units</url>
-                <max-ounit-ids/>
-                <max-ounit-codes/>
-            </organizational-units>
+                </in2:http-security>
+                <in2:url>https://orinumenti.uca.es/en/ewp/general/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <simple-course-replication
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/v1.0.0-rc9/response.xsd"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/v1.0.0-rc9/manifest-entry.xsd"
                 version="1.0.0-rc9"
             >
                 <http-security>
@@ -8924,7 +8901,7 @@
                 <supports-modified-since>False</supports-modified-since>
             </simple-course-replication>
             <courses
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/v0.7.1/response.xsd"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/v0.7.1/manifest-entry.xsd"
                 version="0.7.1"
             >
                 <http-security>
