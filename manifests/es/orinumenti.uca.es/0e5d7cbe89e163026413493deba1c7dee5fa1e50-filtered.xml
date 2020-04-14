@@ -37,6 +37,20 @@
                 </http-security>
                 <url>https://orinumenti.uca.es/en/ewp/echo</url>
             </echo>
+            <api1:iias version="2.2.2">
+                <api1:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                    </sec:server-auth-methods>
+                </api1:http-security>
+                <api1:get-url>https://orinumenti.uca.es/en/ewp/iias/get</api1:get-url>
+                <api1:max-iia-ids>1</api1:max-iia-ids>
+                <api1:max-iia-codes>1</api1:max-iia-codes>
+                <api1:index-url>https://orinumenti.uca.es/en/ewp/iias/index</api1:index-url>
+            </api1:iias>
             <api2:institutions version="2.1.0">
                 <api2:http-security>
                     <sec:client-auth-methods>
@@ -49,6 +63,19 @@
                 <api2:url>https://orinumenti.uca.es/en/ewp/general/institutions</api2:url>
                 <api2:max-hei-ids>1</api2:max-hei-ids>
             </api2:institutions>
+            <api3:organizational-units version="2.1.1">
+                <api3:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                    </sec:server-auth-methods>
+                </api3:http-security>
+                <api3:url>https://orinumenti.uca.es/en/ewp/general/organizational-units</api3:url>
+                <api3:max-ounit-ids>1</api3:max-ounit-ids>
+                <api3:max-ounit-codes>1</api3:max-ounit-codes>
+            </api3:organizational-units>
             <api4:simple-course-replication version="1.0.0-rc9">
                 <api4:http-security>
                     <sec:client-auth-methods>

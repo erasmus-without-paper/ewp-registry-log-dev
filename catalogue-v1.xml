@@ -8872,6 +8872,20 @@
                 </e2:http-security>
                 <e2:url>https://orinumenti.uca.es/en/ewp/echo</e2:url>
             </e2:echo>
+            <ia2:iias version="2.2.2">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://orinumenti.uca.es/en/ewp/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:max-iia-codes>1</ia2:max-iia-codes>
+                <ia2:index-url>https://orinumenti.uca.es/en/ewp/iias/index</ia2:index-url>
+            </ia2:iias>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -8884,6 +8898,19 @@
                 <in2:url>https://orinumenti.uca.es/en/ewp/general/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://orinumenti.uca.es/en/ewp/general/organizational-units</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <simple-course-replication
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/v1.0.0-rc9/manifest-entry.xsd"
                 version="1.0.0-rc9"
