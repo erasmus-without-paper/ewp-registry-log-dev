@@ -7679,6 +7679,10 @@
     </host>
     <host>
         <apis-implemented>
+            <in2:institutions version="2.0.0">
+                <in2:url>https://ewp.solenovo.fi/ewp/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <d4:discovery version="4.1.0">
                 <ewp:admin-email>erkko.ikonen@soleno.fi</ewp:admin-email>
                 <d4:url>https://ewp.solenovo.fi/ewp/rest/manifest</d4:url>
@@ -7686,11 +7690,9 @@
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
@@ -7701,7 +7703,6 @@
             <hei-id>solenovo.fi</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="99da1ce44b576ca280df0266be452d44e8afaadf635557260b775c628bf141db"/>
             <rsa-public-key sha-256="9e71bfe7f22cca8f21e53d482e5c2e1232dafd4dfee2b82f004fb3ea4d003659"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
