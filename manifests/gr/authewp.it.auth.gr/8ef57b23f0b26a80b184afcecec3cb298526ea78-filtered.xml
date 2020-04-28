@@ -30,8 +30,8 @@
         <admin-email>adapps@it.auth.gr</admin-email>
         <admin-notes>This is a EWP reference connector instance for AUTH.</admin-notes>
         <ns2:apis-implemented>
-            <ns18:organizational-units version="2.1.0">
-                <ns18:http-security>
+            <ns14:simple-course-replication version="1.0.0">
+                <ns14:http-security>
                     <ns5:client-auth-methods>
                         <ns22:tlscert allows-self-signed="false"/>
                         <ns24:httpsig/>
@@ -40,11 +40,11 @@
                         <ns26:tlscert/>
                         <ns25:httpsig/>
                     </ns5:server-auth-methods>
-                </ns18:http-security>
-                <ns18:url>https://authewp.it.auth.gr/ewp/rest/ounits</ns18:url>
-                <ns18:max-ounit-ids>1</ns18:max-ounit-ids>
-                <ns18:max-ounit-codes>1</ns18:max-ounit-codes>
-            </ns18:organizational-units>
+                </ns14:http-security>
+                <ns14:url>https://authewp.it.auth.gr/ewp/rest/courses/replication</ns14:url>
+                <ns14:allows-anonymous-access>true</ns14:allows-anonymous-access>
+                <ns14:supports-modified-since>true</ns14:supports-modified-since>
+            </ns14:simple-course-replication>
             <ns15:courses version="0.7.1">
                 <ns15:http-security>
                     <ns5:client-auth-methods>
@@ -73,8 +73,11 @@
                 </ns20:http-security>
                 <ns20:url>https://authewp.it.auth.gr/ewp/rest/echo</ns20:url>
             </ns20:echo>
-            <ns14:simple-course-replication version="1.0.0">
-                <ns14:http-security>
+            <ns21:discovery version="5.0.0">
+                <ns21:url>https://authewp.it.auth.gr/ewp/rest/manifest</ns21:url>
+            </ns21:discovery>
+            <ns18:organizational-units version="2.1.0">
+                <ns18:http-security>
                     <ns5:client-auth-methods>
                         <ns22:tlscert allows-self-signed="false"/>
                         <ns24:httpsig/>
@@ -83,11 +86,11 @@
                         <ns26:tlscert/>
                         <ns25:httpsig/>
                     </ns5:server-auth-methods>
-                </ns14:http-security>
-                <ns14:url>https://authewp.it.auth.gr/ewp/rest/courses/replication</ns14:url>
-                <ns14:allows-anonymous-access>true</ns14:allows-anonymous-access>
-                <ns14:supports-modified-since>true</ns14:supports-modified-since>
-            </ns14:simple-course-replication>
+                </ns18:http-security>
+                <ns18:url>https://authewp.it.auth.gr/ewp/rest/ounits</ns18:url>
+                <ns18:max-ounit-ids>1</ns18:max-ounit-ids>
+                <ns18:max-ounit-codes>1</ns18:max-ounit-codes>
+            </ns18:organizational-units>
             <ns19:institutions version="2.1.0">
                 <ns19:http-security>
                     <ns5:client-auth-methods>
@@ -102,9 +105,6 @@
                 <ns19:url>https://authewp.it.auth.gr/ewp/rest/institutions</ns19:url>
                 <ns19:max-hei-ids>1</ns19:max-hei-ids>
             </ns19:institutions>
-            <ns21:discovery version="5.0.0">
-                <ns21:url>https://authewp.it.auth.gr/ewp/rest/manifest</ns21:url>
-            </ns21:discovery>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="auth.gr">
@@ -114,58 +114,5 @@
                 <ns2:name xml:lang="en">Aristotle University of Thessaloniki</ns2:name>
             </ns2:hei>
         </ns3:institutions-covered>
-        <ns3:client-credentials-in-use>
-            <ns3:certificate>MIIF1TCCBL2gAwIBAgIQc+GpO0UckAtGYwvwinLYpDANBgkqhkiG9w0BAQsFADB5
-MQswCQYDVQQGEwJHUjEtMCsGA1UECgwkQXJpc3RvdGxlIFVuaXZlcnNpdHkgb2Yg
-VGhlc3NhbG9uaWtpMTswOQYDVQQDDDJBcmlzdG90bGUgVW5pdmVyc2l0eSBvZiBU
-aGVzc2Fsb25pa2kgQ2VudHJhbCBDQSBSNTAeFw0xODA0MjQwMDAwMDBaFw0yMDA0
-MjMxNTEyNDlaMIGEMQswCQYDVQQGEwJHUjEVMBMGA1UEBxMMVGhlc3NhbG9uaWtp
-MS0wKwYDVQQKEyRBcmlzdG90bGUgVW5pdmVyc2l0eSBvZiBUaGVzc2Fsb25pa2kx
-EjAQBgNVBAsTCUlUIENlbnRlcjEbMBkGA1UEAxMSYXV0aGV3cC5pdC5hdXRoLmdy
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwT8pZ2VGho2gR3tyIldC
-hZXa7zurfUutjjbSsZV9QZy1qRWHzt0NcH6QTnIqS7aNeeORdoMwrepIkvO6YPjl
-bRQJeZY5tuCDHtjqFlg9rsvM8eGBygouXiSy65BB21BSXFNXc5Zcb7OjPawCnlD6
-IIZ9mDKVGs6hwXCZ5A/FbZM6yuBcwgVMMMlSVQtl9+TNUtc3/A3d+SZCn5N5TtRT
-QT22a7ECOsg9UOhaMJ/1o1oZlEEvOnHTkKbzFw5UQXc3vBv2hK/GTTFOHd55Y78J
-+saHIDFECN+IJnRMHhIOOOujzyWk52UXaAtdvHeGI/M3aaSz+AiF2vs1GMVGVtLS
-EwIDAQABo4ICSzCCAkcwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUF
-BwMCBggrBgEFBQcDATAdBgNVHQ4EFgQUUq+rzI2GjcQ5Xb9mZxfoU5otL8wwHwYD
-VR0jBBgwFoAUdJGEzY+bxcj7PqN08k50u/ma7kYwcQYIKwYBBQUHAQEEZTBjMCMG
-CCsGAQUFBzABhhdodHRwOi8vb2NzcC5wa2kuYXV0aC5ncjA8BggrBgEFBQcwAoYw
-aHR0cDovL3d3dy5wa2kuYXV0aC5nci9jZXJ0cy9BdXRoQ2VudHJhbENBUjUuY3J0
-MEcGA1UdHwRAMD4wPKA6oDiGNmh0dHA6Ly9jcmx2MS5wa2kuYXV0aC5nci9BdXRo
-Q2VudHJhbENBUjUvY3JsdjEuZGVyLmNybDCB+gYDVR0gBIHyMIHvMIHiBgsrBgEE
-AbwdAgAEAjCB0jA0BggrBgEFBQcCARYoaHR0cDovL3d3dy5wa2kuYXV0aC5nci9k
-b2N1bWVudHMvQ1BTLnBocDCBmQYIKwYBBQUHAgIwgYwMgYlUaGlzIGNlcnRpZmlj
-YXRlIGlzIHN1YmplY3QgdG8gR3JlZWsgbGF3cyBhbmQgb3VyIENQUy4gVGhpcyBD
-ZXJ0aWZpY2F0ZSBtdXN0IG9ubHkgYmUgdXNlZCBmb3IgYWNhZGVtaWMsIHJlc2Vh
-cmNoIG9yIGVkdWNhdGlvbmFsIHB1cnBvc2VzLjAIBgYEAI96AQcwHQYDVR0RBBYw
-FIISYXV0aGV3cC5pdC5hdXRoLmdyMA0GCSqGSIb3DQEBCwUAA4IBAQCW93zDqh+G
-dY724OwtjSw1kP++gwFcTRGt+gkPxJ4g0lyL6PyapJAVlv1LAmxqQUlEgAQekXSk
-Hc5VHIq04KJ/QlpLvYBRCiGNzmteBolDzvNUSG1F1cHhJdcnFma7hmlQulK5RGvW
-eRPFQ3HLbGhz5VAwYIGip3XsCb4a1tPtTc3ZdTFgcrNlsAs0fpg0lKvcJRYXKctA
-cTPhpk2G+iuvDIOYga78aE/c7wDJh8d3ShLZPKmfJNiPQX6B9/yikzMYV8wJBUvC
-GK0wl3oVUDKbZLPOKIwYH1h/8AO/q4jKQZ8ldEclD7R638TgwUYu85vLoO6qvDXR
-4kJbM3uFUjVa
-</ns3:certificate>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwT8pZ2VGho2gR3tyIldC
-hZXa7zurfUutjjbSsZV9QZy1qRWHzt0NcH6QTnIqS7aNeeORdoMwrepIkvO6YPjl
-bRQJeZY5tuCDHtjqFlg9rsvM8eGBygouXiSy65BB21BSXFNXc5Zcb7OjPawCnlD6
-IIZ9mDKVGs6hwXCZ5A/FbZM6yuBcwgVMMMlSVQtl9+TNUtc3/A3d+SZCn5N5TtRT
-QT22a7ECOsg9UOhaMJ/1o1oZlEEvOnHTkKbzFw5UQXc3vBv2hK/GTTFOHd55Y78J
-+saHIDFECN+IJnRMHhIOOOujzyWk52UXaAtdvHeGI/M3aaSz+AiF2vs1GMVGVtLS
-EwIDAQAB
-</ns3:rsa-public-key>
-        </ns3:client-credentials-in-use>
-        <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwT8pZ2VGho2gR3tyIldC
-hZXa7zurfUutjjbSsZV9QZy1qRWHzt0NcH6QTnIqS7aNeeORdoMwrepIkvO6YPjl
-bRQJeZY5tuCDHtjqFlg9rsvM8eGBygouXiSy65BB21BSXFNXc5Zcb7OjPawCnlD6
-IIZ9mDKVGs6hwXCZ5A/FbZM6yuBcwgVMMMlSVQtl9+TNUtc3/A3d+SZCn5N5TtRT
-QT22a7ECOsg9UOhaMJ/1o1oZlEEvOnHTkKbzFw5UQXc3vBv2hK/GTTFOHd55Y78J
-+saHIDFECN+IJnRMHhIOOOujzyWk52UXaAtdvHeGI/M3aaSz+AiF2vs1GMVGVtLS
-EwIDAQAB
-</ns3:rsa-public-key>
-        </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
