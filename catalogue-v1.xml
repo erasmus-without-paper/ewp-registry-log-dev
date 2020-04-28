@@ -536,34 +536,60 @@
     </host>
     <host>
         <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
+        <ewp:admin-notes>SIGMA EWP Dev Manifest</ewp:admin-notes>
         <apis-implemented>
-            <d4:discovery version="4.0.0">
-                <d4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/UPF_HOST.xml</d4:url>
-            </d4:discovery>
-            <e1:echo
-                xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <e1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</e1:url>
-            </e1:echo>
-            <in2:institutions version="2.0.0">
+            <d5:discovery version="5.0.0">
+                <d5:url>https://erasmuswithoutpaper.sigmaaie.org:1453/UPF_HOST.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
                 <in2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <ou2:organizational-units version="2.0.0">
+            <ou2:organizational-units version="2.1.0">
                 <ou2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ou2:url>
                 <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.0.0">
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.16.0"
+            >
+                <om1:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/get</om1:get-url>
+                <om1:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.1"
+            >
+                <im1:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <ia2:iias version="2.1.0">
                 <ia2:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ia2:get-url>
                 <ia2:max-iia-ids>1</ia2:max-iia-ids>
                 <ia2:max-iia-codes>1</ia2:max-iia-codes>
                 <ia2:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/index</ia2:index-url>
+                <ia2:sends-notifications/>
             </ia2:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
             <co1:courses
                 xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="0.7.0"
+                version="0.7.1"
             >
                 <co1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses</co1:url>
                 <co1:max-los-ids>1</co1:max-los-ids>
@@ -577,6 +603,13 @@
                 <imt1:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/index</imt1:index-url>
                 <imt1:max-omobility-ids>1</imt1:max-omobility-ids>
             </imt1:imobility-tors>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uam.es</hei-id>
