@@ -51,6 +51,7 @@
 	xmlns:ns46="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/tree/stable-v1"
 	xmlns:ns47="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/stable-v2" 
 	xmlns:ns48="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/tree/stable-v1"
+    xmlns:ns49="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
    xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
@@ -129,6 +130,21 @@
                 <ns19:max-los-ids>1</ns19:max-los-ids>
                 <ns19:max-los-codes>1</ns19:max-los-codes>
             </ns19:courses>
+            <ns49:simple-course-replication version="1.0.0">
+                <ns49:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns49:http-security>
+                <ns49:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/course-replication</ns49:url>
+                <ns49:allows-anonymous-access>false</ns49:allows-anonymous-access>
+                <ns49:supports-modified-since>true</ns49:supports-modified-since>
+            </ns49:simple-course-replication>
             <ns11:imobility-tors version="0.7.0">
                 <ns11:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/get</ns11:get-url>
                 <ns11:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/index</ns11:index-url>
