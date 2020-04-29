@@ -85,6 +85,21 @@
                 <ns6:max-los-ids>1</ns6:max-los-ids>
                 <ns6:max-los-codes>1</ns6:max-los-codes>
             </ns6:courses>
+<ns8:simple-course-replication version="1.0.0">
+                <ns8:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ns8:http-security>
+                <ns8:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/course-replication</ns8:url>
+                <ns8:allows-anonymous-access>false</ns8:allows-anonymous-access>
+                <ns8:supports-modified-since>true</ns8:supports-modified-since>
+            </ns8:simple-course-replication>
             <ns7:imobility-tors version="0.7.0">
                 <ns7:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/get</ns7:get-url>
                 <ns7:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/index</ns7:index-url>
