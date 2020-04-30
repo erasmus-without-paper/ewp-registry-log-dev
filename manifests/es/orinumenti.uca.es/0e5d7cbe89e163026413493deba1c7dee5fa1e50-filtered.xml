@@ -5,6 +5,7 @@
     xmlns:api3="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:api4="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
     xmlns:api5="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+    xmlns:api6="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
@@ -102,6 +103,17 @@
                 <api5:max-los-ids>1</api5:max-los-ids>
                 <api5:max-los-codes>1</api5:max-los-codes>
             </api5:courses>
+            <api6:iia-cnr version="2.0.2">
+                <api6:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                    </sec:server-auth-methods>
+                </api6:http-security>
+                <api6:url>https://orinumenti.uca.es/en/ewp/iias/cnr</api6:url>
+            </api6:iia-cnr>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uca.es">
