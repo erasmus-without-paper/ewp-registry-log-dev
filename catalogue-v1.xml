@@ -8417,7 +8417,87 @@
     </host>
     <host>
         <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
-        <ewp:admin-notes>Manifest File for Erasmus Dashboard.</ewp:admin-notes>
+        <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <apis-implemented>
+            <ia2:iias version="2.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://unizone-ewp.herokuapp.com/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>3</ia2:max-iia-ids>
+                <ia2:max-iia-codes>3</ia2:max-iia-codes>
+                <ia2:index-url>https://unizone-ewp.herokuapp.com/rest/iias/index</ia2:index-url>
+            </ia2:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:url>https://unizone-ewp.herokuapp.com/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <url>https://unizone-ewp.herokuapp.com/rest/iias/app/index</url>
+                <max-iia-ids>3</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <url>https://unizone-ewp.herokuapp.com/rest/iias/app/cnr</url>
+            </iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unizone-ewp.herokuapp.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="5f9e52e4a034ef28a3c599288abd9875208c344c320cb4d15e5e0fffe9f970f2"/>
+            <rsa-public-key sha-256="13e9d6d00afb9c8ac538dc002804816a42eb4bb6eb2a887d7c5dc373121a9a7d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="13e9d6d00afb9c8ac538dc002804816a42eb4bb6eb2a887d7c5dc373121a9a7d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <apis-implemented>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://unizone-ewp.herokuapp.com/rest/las/get</oml1:get-url>
+                <oml1:index-url>https://unizone-ewp.herokuapp.com/rest/las/index</oml1:index-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+        </apis-implemented>
+        <client-credentials-in-use>
+            <certificate sha-256="5f9e52e4a034ef28a3c599288abd9875208c344c320cb4d15e5e0fffe9f970f2"/>
+            <rsa-public-key sha-256="13e9d6d00afb9c8ac538dc002804816a42eb4bb6eb2a887d7c5dc373121a9a7d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="13e9d6d00afb9c8ac538dc002804816a42eb4bb6eb2a887d7c5dc373121a9a7d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://unizone-ewp.herokuapp.com/rest/manifest</d5:url>
@@ -8431,59 +8511,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
                 </e2:http-security>
                 <e2:url>https://unizone-ewp.herokuapp.com/rest/echo</e2:url>
             </e2:echo>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://unizone-ewp.herokuapp.com/rest/iias/get</ia2:get-url>
-                <ia2:max-iia-ids>3</ia2:max-iia-ids>
-                <ia2:max-iia-codes>3</ia2:max-iia-codes>
-                <ia2:index-url>https://unizone-ewp.herokuapp.com/rest/iias/index</ia2:index-url>
-            </ia2:iias>
-            <oml1:omobility-las
-                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
-                <oml1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
-                </oml1:http-security>
-                <oml1:get-url>https://unizone-ewp.herokuapp.com/rest/las/get</oml1:get-url>
-                <oml1:index-url>https://unizone-ewp.herokuapp.com/rest/las/index</oml1:index-url>
-                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
-            </oml1:omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unizone-ewp.herokuapp.com</hei-id>
@@ -10966,7 +10996,8 @@
             <name xml:lang="en">Universität Wien</name>
         </hei>
         <hei id="unizone-ewp.herokuapp.com">
-            <name xml:lang="en">Dashboard</name>
+            <other-id type="erasmus">SI MARIBOR11</other-id>
+            <name>Solski center Ptuj</name>
         </hei>
         <hei id="up.pt">
             <other-id type="erasmus">P PORTO02</other-id>
