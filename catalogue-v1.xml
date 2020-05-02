@@ -8420,6 +8420,39 @@
         <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
         <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
         <apis-implemented>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizone-ewp.herokuapp.com/rest/static-data</url>
+                <max-hei-ids>1</max-hei-ids>
+            </factsheet>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unizone-ewp.herokuapp.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="5f9e52e4a034ef28a3c599288abd9875208c344c320cb4d15e5e0fffe9f970f2"/>
+            <rsa-public-key sha-256="13e9d6d00afb9c8ac538dc002804816a42eb4bb6eb2a887d7c5dc373121a9a7d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="13e9d6d00afb9c8ac538dc002804816a42eb4bb6eb2a887d7c5dc373121a9a7d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <apis-implemented>
             <ia2:iias version="2.1.0">
                 <ia2:http-security>
                     <sec:client-auth-methods>
