@@ -9446,21 +9446,24 @@
                 </e2:http-security>
                 <e2:url>https://orinumenti.uca.es/en/ewp/echo</e2:url>
             </e2:echo>
-            <ia2:iias version="2.2.2">
-                <ia2:http-security>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://orinumenti.uca.es/en/ewp/iias/get</ia2:get-url>
-                <ia2:max-iia-ids>1</ia2:max-iia-ids>
-                <ia2:max-iia-codes>1</ia2:max-iia-codes>
-                <ia2:index-url>https://orinumenti.uca.es/en/ewp/iias/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
+                </ia3:http-security>
+                <ia3:get-url>https://orinumenti.uca.es/en/ewp/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://orinumenti.uca.es/en/ewp/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
