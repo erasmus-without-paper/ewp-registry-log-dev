@@ -2024,6 +2024,41 @@
     </host>
     <host>
         <apis-implemented>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/approve</url>
+                <max-iia-ids>3</max-iia-ids>
+                <sends-notifications/>
+            </iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>moc.demo01.sop.co.at</hei-id>
+            <hei-id>moc.demo02.sop.co.at</hei-id>
+            <hei-id>aarch.dk</hei-id>
+            <hei-id>ugal.ro</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="99ef37d8edd0f5962e3368bcb4bcb817e3d5a0e9d9d79545499e2804327f0609"/>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.15.0"
@@ -2146,6 +2181,40 @@
         </apis-implemented>
         <institutions-covered>
             <hei-id>moc.demo01.sop.co.at</hei-id>
+            <hei-id>aarch.dk</hei-id>
+            <hei-id>ugal.ro</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="99ef37d8edd0f5962e3368bcb4bcb817e3d5a0e9d9d79545499e2804327f0609"/>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="b6ef9808b999d46b24a47737451012987b9edb40562e963d204111fa9f7eacf1"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://www.service4mobility.com/mobility_connect_test/ewp/factsheets</url>
+                <max-hei-ids>3</max-hei-ids>
+            </factsheet>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>moc.demo01.sop.co.at</hei-id>
+            <hei-id>moc.demo02.sop.co.at</hei-id>
             <hei-id>aarch.dk</hei-id>
             <hei-id>ugal.ro</hei-id>
         </institutions-covered>
