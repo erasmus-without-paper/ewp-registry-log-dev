@@ -10291,6 +10291,38 @@
     </host>
     <host>
         <apis-implemented>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://mobility-test.meduniwien.ac.at/mobility/ewp/iias/approve</iaa1:url>
+                <iaa1:max-iia-ids>3</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>meduniwien.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b9327ada144b011d376d020a108cdfdf8737c78ff060a1c6cb33c695573407ce"/>
+            <rsa-public-key sha-256="7af6f7aaac6f1d17b9fefcab9712ed4f65e9d6adf1e3a6120354d9f2f697b1ff"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7af6f7aaac6f1d17b9fefcab9712ed4f65e9d6adf1e3a6120354d9f2f697b1ff"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.15.0"
@@ -10404,6 +10436,37 @@
                 <omc1:url>https://mobility-test.meduniwien.ac.at/mobility/ewp/mobility_out/cnr</omc1:url>
                 <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>meduniwien.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b9327ada144b011d376d020a108cdfdf8737c78ff060a1c6cb33c695573407ce"/>
+            <rsa-public-key sha-256="7af6f7aaac6f1d17b9fefcab9712ed4f65e9d6adf1e3a6120354d9f2f697b1ff"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7af6f7aaac6f1d17b9fefcab9712ed4f65e9d6adf1e3a6120354d9f2f697b1ff"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://mobility-test.meduniwien.ac.at/mobility/ewp/factsheets</f1:url>
+                <f1:max-hei-ids>3</f1:max-hei-ids>
+            </f1:factsheet>
         </apis-implemented>
         <institutions-covered>
             <hei-id>meduniwien.ac.at</hei-id>
