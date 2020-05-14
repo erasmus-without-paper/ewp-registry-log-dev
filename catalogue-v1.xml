@@ -10737,6 +10737,38 @@
     </host>
     <host>
         <apis-implemented>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://www.service4mobility.com/fhv_test/ewp/iias/approve</iaa1:url>
+                <iaa1:max-iia-ids>3</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>fhv.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b7db407f68a939dbe15d66dae732521fcbb428612e6b673459546c1fbf8e1bd8"/>
+            <rsa-public-key sha-256="a122fb9cdb71733aa7c3eb0ce719d9588c9af9207d64d6bc5bbb025d83577ca0"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="a122fb9cdb71733aa7c3eb0ce719d9588c9af9207d64d6bc5bbb025d83577ca0"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.15.0"
@@ -10788,6 +10820,37 @@
                 <im1:max-omobility-ids>1</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>fhv.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b7db407f68a939dbe15d66dae732521fcbb428612e6b673459546c1fbf8e1bd8"/>
+            <rsa-public-key sha-256="a122fb9cdb71733aa7c3eb0ce719d9588c9af9207d64d6bc5bbb025d83577ca0"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="a122fb9cdb71733aa7c3eb0ce719d9588c9af9207d64d6bc5bbb025d83577ca0"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://www.service4mobility.com/fhv_test/ewp/factsheets</f1:url>
+                <f1:max-hei-ids>3</f1:max-hei-ids>
+            </f1:factsheet>
         </apis-implemented>
         <institutions-covered>
             <hei-id>fhv.at</hei-id>
