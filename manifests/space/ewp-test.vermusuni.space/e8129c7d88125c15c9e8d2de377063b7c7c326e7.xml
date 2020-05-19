@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-api-discovery/tree/stable-v5" xmlns:ewpgo="https://github.com/erasmus-without-paper/ewpgo-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:r="https://github.com/erasmus-without-paper/ewpgo-specs-api-registry/tree/stable-v1" xmlns:sec="https://github.com/erasmus-without-paper/ewpgo-specs-sec-intro/tree/stable-v2" xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-none/tree/stable-v1" xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-tlscert/tree/stable-v1" xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-httpsig/tree/stable-v1">
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
   <host>
-    <ewpgo:admin-Email>abulbul@gmail.com</ewpgo:admin-Email>
-    <ewpgo:admin-notes>Manifest File for University of Vermus University.</ewpgo:admin-notes>
+    <ewp:admin-Email>abulbul@gmail.com</ewp:admin-Email>
+    <ewp:admin-notes>Manifest File for University of Vermus University.</ewp:admin-notes>
     <r:apis-implemented>
-      <discovery xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" version="5.0.0">
+      <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" version="5.0.0">
         <url>https://ewp-test.vermusuni.space/manifest.xml</url>
       </discovery>
-      <echo xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
+      <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
         <http-security>
           <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
           </sec:server-auth-methods>
           <sec:request-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-reqencr-tls/tree/stable-v1"/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
           </sec:request-encryption-methods>
           <sec:response-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-resencr-tls/tree/stable-v1"/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
           </sec:response-encryption-methods>
         </http-security>
         <url>https://ewp-test.vermusuni.space/echo</url>
       </echo>
-      <institutions xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" version="2.1.0">
+      <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" version="2.1.0">
         <http-security>
           <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
           </sec:server-auth-methods>
           <sec:request-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-reqencr-tls/tree/stable-v1"/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
           </sec:request-encryption-methods>
           <sec:response-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-resencr-tls/tree/stable-v1"/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
           </sec:response-encryption-methods>
         </http-security>
         <url>https://ewp-test.vermusuni.space/institutions</url>
         <max-hei-ids>1</max-hei-ids>
       </institutions>
-      <organizational-units xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
+      <organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
         <http-security>
           <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
           </sec:server-auth-methods>
           <sec:request-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-reqencr-tls/tree/stable-v1"/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
           </sec:request-encryption-methods>
           <sec:response-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewpgo-specs-sec-resencr-tls/tree/stable-v1"/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
           </sec:response-encryption-methods>
         </http-security>
         <url>https://ewp-test.vermusuni.space/ounits</url>
