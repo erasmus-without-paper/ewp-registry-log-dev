@@ -8320,6 +8320,61 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-test.solenovo.fi/ewp/api/manifest</d5:url>
+            </d5:discovery>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-test.solenovo.fi/ewp/api/ounits</ou2:url>
+                <ou2:max-ounit-ids>5</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>5</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-test.solenovo.fi/ewp/api/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp-test.solenovo.fi/ewp/api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>solenovo.fi</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="d095f4f27072126022dccae6121bb2be84e9214c98f23679e2161b57724ca183"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="d095f4f27072126022dccae6121bb2be84e9214c98f23679e2161b57724ca183"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>ewp@uma.es</ewp:admin-email>
         <ewp:admin-notes>Manifest File for University of Malaga.</ewp:admin-notes>
         <apis-implemented>
@@ -11748,6 +11803,9 @@
             <name xml:lang="en">SÖDERTÖRN UNIVERSITY</name>
             <name xml:lang="sv">SÖDERTÖRNS HÖGSKOLA</name>
         </hei>
+        <hei id="solenovo.fi">
+            <name xml:lang="en">University of Solenovo</name>
+        </hei>
         <hei id="spbstu.ru">
             <other-id type="erasmus">RU STPETERSBURG01</other-id>
             <name xml:lang="en">Peter the Great St. Petersburg Polytechnic University</name>
@@ -12669,6 +12727,14 @@
             VAZSONJGRVfjCE71NcKQYF/zKasn879OWSRllFUQtafZQLHDAhpZFwMqNEx2vja/TlGbo+SozUCG
             P6tfvHUgp369p9iaT+9XTvSlN/lnVwk7d4B1KzmsE1o03Di+AKYlri+KMMLTZCK9vzONLYJXuLp4
             De4nvQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="d095f4f27072126022dccae6121bb2be84e9214c98f23679e2161b57724ca183">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQeqlJyCNC8GLtu3M+d1VJpgCVH7Mugg
+            5kTtj0zodi7X9MPiGV7FInBJGRhdSl6OmJiCImFcz2WNRfRHVMb5rAWi/y9aJow5189FxQT4JaXu
+            oyZMgOswbkfMvBhoymVeH3V8IpsbiFqpLWrlSdcJWhmHA8YYgGjNxy/JZJV2Upf4KICaV8H5ITGW
+            u+0DI4KpS7ddM01S15NfuUfFAM3AdqRtz0KhMKiOfpkPsPJUjh+ubzUCDDEtlQCu98TbWJEzfX2H
+            6lpBoi6+OL1mbYeAxRAdKB9Q+BXHaMwkL73bh4OFAjQgeL22Rcz1/cO8KWd/Kmwn9k7uXUmFNxZM
+            oqDGhwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9TYtPf0Vdrf0QVni0SrYDCxTBZUOOM1
