@@ -11030,6 +11030,38 @@
             <rsa-public-key sha-256="df7644d5376d9407307e8e5ab238fafbd3b95816c4a0ade6ad86e2342d909ad2"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>volenova@civ.zcu.cz</ewp:admin-email>
+        <ewp:admin-notes>EWP demo connector</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://wstag-test.jcu.cz/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://wstag-test.jcu.cz/ws/services/ewp/manifest</d5:url>
+            </d5:discovery>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>jcu.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="0b9b67a249ff655950220b339b7116189d11e828afd49351e640e982b3d9ac17"/>
+            <rsa-public-key sha-256="37e7eddf4ae192ef8c69372dd3c41f8e723b3a5dbee077c684e58be4a1d8ef7d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="37e7eddf4ae192ef8c69372dd3c41f8e723b3a5dbee077c684e58be4a1d8ef7d"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="78FA8C3E0AFB67E54529393835EFEEC2.terradotta.com">
             <other-id type="erasmusCharter">85995dkmd</other-id>
@@ -11511,6 +11543,13 @@
             <other-id type="pic">996682955</other-id>
             <name xml:lang="en">JAMK University of Applied Sciences</name>
             <name xml:lang="fi">JAMK University of Applied Sciences</name>
+        </hei>
+        <hei id="jcu.cz">
+            <other-id type="erasmus">CZ CESKE01</other-id>
+            <other-id type="erasmus-charter">264581-LA-1-2014- CZ-E4AKA1-ECHE</other-id>
+            <other-id type="pic">999876292</other-id>
+            <name xml:lang="cs">JIHOČESKÁ UNIVERZITA V ČESKÝCH BUDĚJOVICÍCH</name>
+            <name xml:lang="en">UNIVERSITY OF SOUTH BOHEMIA IN ČESKÉ BUDĚJOVICE</name>
         </hei>
         <hei id="jyu.fi">
             <other-id type="erasmus">SF JYVASKY01</other-id>
@@ -12523,6 +12562,14 @@
             4iNrcs7FAlo+g5oc1XaRRAsHUEL+G71KlR55cfKDof+IJhV5BX7vQpxhZVc/tBQsArG7tlj81w7a
             lSHSebeT74Fex1XY8eYPHg5/W+Q9UkB+7OtMbKVajzcWYcMwhWeOMctRjdvByLklCIWeh8qy5wkk
             OyeJmwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="37e7eddf4ae192ef8c69372dd3c41f8e723b3a5dbee077c684e58be4a1d8ef7d">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0yFtO6VgmxsgtZOitu3LPpC+ADPuBFQb
+            5LK/NM4Ah9Wspt6EkOX4ZJjapzEu/goTtiZJv2C4bDDRQ95ohrlIrdvx5ZOLv4LODy6a7tlBeDUr
+            Eix3J6Ib5tZG8Iruy13hZ8H9v2y4/W+X1x8B75wMu5IfAWqXYy2n1qf4rg9ZLZEG4po77NfYiqXE
+            ikCB7+Xp1ZBgYeXPGBWkJVTmuSDl2NLKGK4YftGtFWoGSRByhP3VjyO3Jh7CGqdli1jPUgU3axrW
+            11Fb1EI1yR2jMVhreC693WxGPfN3tA43EJ70tkXZ6SKVlY1tR/rfNzJSZuW7ltwlWE6kCqJD0lzZ
+            R4647QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="4249f6df3aa3fbb07754956b7053a9265af417d4bb34368570c21303256d953c">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8a82iIIi9QaUGjZ55ccWEpUZLPHwIjU
