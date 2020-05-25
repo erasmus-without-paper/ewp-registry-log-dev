@@ -1,157 +1,203 @@
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:i2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
-    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
+    xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
 >
     <host>
         <ewp:admin-email>abulbul@gmail.com</ewp:admin-email>
-        <ewp:admin-notes>Manifest File for University of Vermus University.</ewp:admin-notes>
+        <ewp:admin-notes/>
         <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-                version="5.0.0"
-            >
-                <url>https://ewp-test.vermusuni.space/manifest.xml</url>
-            </discovery>
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.1"
-            >
-                <http-security>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-test.vermusuni.space/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
                     <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
-                    </sec:response-encryption-methods>
-                </http-security>
-                <url>https://ewp-test.vermusuni.space/echo</url>
-            </echo>
-            <institutions
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-                version="2.1.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
-                    </sec:response-encryption-methods>
-                </http-security>
-                <url>https://ewp-test.vermusuni.space/institutions</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
-            <organizational-units
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-                version="2.1.1"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
-                    </sec:response-encryption-methods>
-                </http-security>
-                <url>https://ewp-test.vermusuni.space/ounits</url>
-                <max-ounit-ids>1</max-ounit-ids>
-                <max-ounit-codes>1</max-ounit-codes>
-            </organizational-units>
+                </e2:http-security>
+                <e2:url>https://ewp-test.vermusuni.space/echo</e2:url>
+            </e2:echo>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="vermusuni.space">
-                <r:other-id type="pic">90000009</r:other-id>
-                <r:other-id type="erasmus">Vermus University</r:other-id>
-                <r:other-id type="euc">VERMUS03</r:other-id>
-                <r:name xml:lang="en">University of Vermus University</r:name>
+                <r:other-id type="pic">900000000009</r:other-id>
+                <r:other-id type="erasmus">TR VERMUS01</r:other-id>
+                <r:other-id type="erasmus-charter">VermusErasmusCharterCode</r:other-id>
+                <r:name xml:lang="tr">Vermus Üniversitesi</r:name>
+                <r:name xml:lang="en">Vermus University</r:name>
             </r:hei>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate>MIIFZzCCBE+gAwIBAgISA/PfHo2uMwfbenij5LiOpDZ3MA0GCSqGSIb3DQEBCwUA
-MEoxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MSMwIQYDVQQD
-ExpMZXQncyBFbmNyeXB0IEF1dGhvcml0eSBYMzAeFw0yMDAyMjUwODMxMzVaFw0y
-MDA1MjUwODMxMzVaMCMxITAfBgNVBAMTGGV3cC10ZXN0LnZlcm11c3VuaS5zcGFj
-ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALYmGHCwhDsiZBCTKc8a
-xucpam/e0VGHzd1VB15ZsHyWVjfZZSLvRp5UQxlGw0T+8ujB/pBmBs9ce2rP1Ba2
-3M+i53R3PpnxRCsiaM4JEdDQGTyj4yoJuIbVnZBfkrKkFFtQqqnVYhTQVEdNsTn2
-J0nnC6nM4RWrnLUYOMZI0v7bIz/tGbVD0nRoxgFcNqnwHJ0AZv+hN9TDzT97sYkG
-uyOz/g7NY8PiHYBpyzmZbZig5nnCMJnGFxuh+5AqSDiQaDus2tFZJNx7cXapzHot
-YBaegeowPBlIdLAQmvZO5jlgymhnQbIll1IaLM3xrkr1RiRPWbyPp1ZUJS0UvThL
-5RECAwEAAaOCAmwwggJoMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEF
-BQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQURE/Z8u99/LRr
-ZqsQHXZpxv/cCecwHwYDVR0jBBgwFoAUqEpqYwR93brm0Tm3pkVl7/Oo7KEwbwYI
-KwYBBQUHAQEEYzBhMC4GCCsGAQUFBzABhiJodHRwOi8vb2NzcC5pbnQteDMubGV0
-c2VuY3J5cHQub3JnMC8GCCsGAQUFBzAChiNodHRwOi8vY2VydC5pbnQteDMubGV0
-c2VuY3J5cHQub3JnLzAjBgNVHREEHDAaghhld3AtdGVzdC52ZXJtdXN1bmkuc3Bh
-Y2UwTAYDVR0gBEUwQzAIBgZngQwBAgEwNwYLKwYBBAGC3xMBAQEwKDAmBggrBgEF
-BQcCARYaaHR0cDovL2Nwcy5sZXRzZW5jcnlwdC5vcmcwggEDBgorBgEEAdZ5AgQC
-BIH0BIHxAO8AdgBep3P531bA57U2SH3QSeAyepGaDIShEhKEGHWWgXFFWAAAAXB7
-r/q8AAAEAwBHMEUCIBkpkHx0ox/PMk68Pj1du6HdDXdpcApVlAgYyVHvuggFAiEA
-pAi8pvdG1APysm8PewAnjZec04Vks8menWvwTHRmGzUAdQCyHgXMi6LNiiBOh2b5
-K7mKJSBna9r6cOeySVMt74uQXgAAAXB7r/rYAAAEAwBGMEQCIDKhwNb6aoWuMuyU
-bzGdY2kaBo9E8zo5madJjDnTzCZeAiB6Ji/RqWrbghzerQd71tiHEKU+N3mdb4G/
-aJEYVtNYqjANBgkqhkiG9w0BAQsFAAOCAQEAEoUEbvhHTkK57HXiGLcj08/ZBeyl
-vPXdS3GPGXA/HyqLz3cGN+sXPXZ0H5C0k0gmeDItKF5IN7qJP8bXppxdIjNtJW1B
-wDK2Y3ZILXrURFCrdTv6wOvRVPwMXDLRQyJnXI/xCafAACXHc6P8D+h0GpVuIqIs
-4LHgfi3Vu4N/HFF+oFhXVEiEhT8M5IyXGwQAYxPmijZGvLnBme5xpcsfse7XsZaR
-IWgXuP923NwuXxG2bsn9OCLhqVtwyF3V9Mx/Wc/3+gS1n4Z56ODAWWCLvMRDJS5B
-2zcg6d/cxcYYewE5AjG4UgmiNfASpig7CWRFOOShz7hH4if4uhJpDWENZA==</certificate>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtiYYcLCEOyJkEJMpzxrG
-5ylqb97RUYfN3VUHXlmwfJZWN9llIu9GnlRDGUbDRP7y6MH+kGYGz1x7as/UFrbc
-z6LndHc+mfFEKyJozgkR0NAZPKPjKgm4htWdkF+SsqQUW1CqqdViFNBUR02xOfYn
-SecLqczhFauctRg4xkjS/tsjP+0ZtUPSdGjGAVw2qfAcnQBm/6E31MPNP3uxiQa7
-I7P+Ds1jw+IdgGnLOZltmKDmecIwmcYXG6H7kCpIOJBoO6za0Vkk3HtxdqnMei1g
-Fp6B6jA8GUh0sBCa9k7mOWDKaGdBsiWXUhoszfGuSvVGJE9ZvI+nVlQlLRS9OEvl
-EQIDAQAB</rsa-public-key>
+            <certificate>
+                MIIDfDCCAmSgAwIBAgIQHqaw1SiD0k8TOlMe4jWVKDANBgkqhkiG9w0BAQsFADBI
+                MRswGQYDVQQDExJFU0VUIFNTTCBGaWx0ZXIgQ0ExHDAaBgNVBAoTE0VTRVQsIHNw
+                b2wuIHMgci4gby4xCzAJBgNVBAYTAlNLMB4XDTIwMDIyNTA4MzEzNVoXDTIwMDUy
+                NTA4MzEzNVowIzEhMB8GA1UEAxMYZXdwLXRlc3QudmVybXVzdW5pLnNwYWNlMIIB
+                IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApAkgrHGulYnJ8EGE1EEA/+00
+                8NoXpZ8mdJZWOSLw34y/7v66Rvz9UPnR3SFUQK5CpUZHW4BM3br4aQZDCyv/9QZC
+                V6WKXAYZOtWBx6vjBaaX0JHNlPWjjTimwE769mh8qtClWT8b6al3zwUTZOJSb3zs
+                VU8Bg5vsLO4ywskHHEaM6YhYA10VFsgwXrTIB657lt/BOi0vxicaXYSd8L7ZYLpH
+                KUyE2h+nIZO5Oni4qahzSzrumR/nW2cl/abeJoCkaswCa1EjMnO5llUkaay1Pnai
+                P1eoMo+Inr+m7Sio3bLZDkwEKSBliT+k+YyGF5dhUM7pGYPSlz5sCDQi/+yVBQID
+                AQABo4GGMIGDMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMB
+                Af8EAjAAMCMGA1UdEQQcMBqCGGV3cC10ZXN0LnZlcm11c3VuaS5zcGFjZTAOBgNV
+                HQ8BAf8EBAMCBaAwHwYDVR0jBBgwFoAUECbDaxMfE7AeRMLtxiNXj8g2UEgwDQYJ
+                KoZIhvcNAQELBQADggEBAIo0xiVugwc1/z2EWq7DqFh5yXIx6waxlv8WZb+5Ljqk
+                4C+SF5bJOUq7EjppviSzivSn/3d/VvJfFOJIkwe0vjFeBbwPquOmBFT0exvoUo/g
+                e1Oq5XAkQhkmOIvqeRpLrIg12b661Q8N+USvX1/Gi94sE4zi1FzZQi/7pdB4xOt2
+                fi6WS8ksasdL8zmzrnlOZ/voFQktm5VOwyeLpLOP+YqrvV1oVSnnt5KtU0zefpAO
+                AZ+29psgaS700s+LVv8trWwMhqZEJMKuSjbc+0H5FF2GlpSitP+uXI/sGW7R8se2
+                XrfRd5PmeeajjLrNL6MzxHtZLI3gDLQ0HQkcs2wYO6U=
+            </certificate>
+            <rsa-public-key>
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5yTlQKBM6IvjQSg+SNj0MSF2ofchNQWRA2OH3BDcIrzRt+qJhH6nRj71byQ6N2y7Xr5Jin7+r/2mNcYinoBQUrKhyvujwm8excZsgiDWl6vEuT+/eUvO3x4G7WTDOUkTIto0xfQD5KIHYKcqAHEQ4dK+7hNg+m9GE+L8qK5eY/+lovKp3rWzgc7HEeCwd+EyKnKd3P3RM9Zzr/R417HJka+cqRJhlxrNuzLpkdsB/as+YOp5NlmO1gqnGa2eWELBpIXYZStXx+cQIKT5FC32dDQy93nqNNCXFs25FAgEghcw8S+3pVFfMALUAQcM57u1UxFVjetoXpD3MWslblYeLQIDAQAB
+            </rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtiYYcLCEOyJkEJMpzxrG
-5ylqb97RUYfN3VUHXlmwfJZWN9llIu9GnlRDGUbDRP7y6MH+kGYGz1x7as/UFrbc
-z6LndHc+mfFEKyJozgkR0NAZPKPjKgm4htWdkF+SsqQUW1CqqdViFNBUR02xOfYn
-SecLqczhFauctRg4xkjS/tsjP+0ZtUPSdGjGAVw2qfAcnQBm/6E31MPNP3uxiQa7
-I7P+Ds1jw+IdgGnLOZltmKDmecIwmcYXG6H7kCpIOJBoO6za0Vkk3HtxdqnMei1g
-Fp6B6jA8GUh0sBCa9k7mOWDKaGdBsiWXUhoszfGuSvVGJE9ZvI+nVlQlLRS9OEvl
-EQIDAQAB</rsa-public-key>
+            <rsa-public-key>
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5yTlQKBM6IvjQSg+SNj0MSF2ofchNQWRA2OH3BDcIrzRt+qJhH6nRj71byQ6N2y7Xr5Jin7+r/2mNcYinoBQUrKhyvujwm8excZsgiDWl6vEuT+/eUvO3x4G7WTDOUkTIto0xfQD5KIHYKcqAHEQ4dK+7hNg+m9GE+L8qK5eY/+lovKp3rWzgc7HEeCwd+EyKnKd3P3RM9Zzr/R417HJka+cqRJhlxrNuzLpkdsB/as+YOp5NlmO1gqnGa2eWELBpIXYZStXx+cQIKT5FC32dDQy93nqNNCXFs25FAgEghcw8S+3pVFfMALUAQcM57u1UxFVjetoXpD3MWslblYeLQIDAQAB
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>sascoms@gmail.com</ewp:admin-email>
+        <ewp:admin-notes/>
+        <r:apis-implemented>
+            <i2:institutions version="2.1.0">
+                <i2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </i2:http-security>
+                <i2:url>https://ewp-test.vermusuni.space/institutions</i2:url>
+                <i2:max-hei-ids>10</i2:max-hei-ids>
+            </i2:institutions>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="vermusuni.space">
+                <r:other-id type="pic">VermusPicCode</r:other-id>
+                <r:other-id type="erasmus">VermusErasmusCode</r:other-id>
+                <r:other-id type="erasmus-charter">VermusErasmusCharterCode</r:other-id>
+                <r:name xml:lang="tr">Vermus Üniversitesi</r:name>
+                <r:name xml:lang="en">Vermus University</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>
+                MIIDfDCCAmSgAwIBAgIQHqaw1SiD0k8TOlMe4jWVKDANBgkqhkiG9w0BAQsFADBI
+                MRswGQYDVQQDExJFU0VUIFNTTCBGaWx0ZXIgQ0ExHDAaBgNVBAoTE0VTRVQsIHNw
+                b2wuIHMgci4gby4xCzAJBgNVBAYTAlNLMB4XDTIwMDIyNTA4MzEzNVoXDTIwMDUy
+                NTA4MzEzNVowIzEhMB8GA1UEAxMYZXdwLXRlc3QudmVybXVzdW5pLnNwYWNlMIIB
+                IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApAkgrHGulYnJ8EGE1EEA/+00
+                8NoXpZ8mdJZWOSLw34y/7v66Rvz9UPnR3SFUQK5CpUZHW4BM3br4aQZDCyv/9QZC
+                V6WKXAYZOtWBx6vjBaaX0JHNlPWjjTimwE769mh8qtClWT8b6al3zwUTZOJSb3zs
+                VU8Bg5vsLO4ywskHHEaM6YhYA10VFsgwXrTIB657lt/BOi0vxicaXYSd8L7ZYLpH
+                KUyE2h+nIZO5Oni4qahzSzrumR/nW2cl/abeJoCkaswCa1EjMnO5llUkaay1Pnai
+                P1eoMo+Inr+m7Sio3bLZDkwEKSBliT+k+YyGF5dhUM7pGYPSlz5sCDQi/+yVBQID
+                AQABo4GGMIGDMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMB
+                Af8EAjAAMCMGA1UdEQQcMBqCGGV3cC10ZXN0LnZlcm11c3VuaS5zcGFjZTAOBgNV
+                HQ8BAf8EBAMCBaAwHwYDVR0jBBgwFoAUECbDaxMfE7AeRMLtxiNXj8g2UEgwDQYJ
+                KoZIhvcNAQELBQADggEBAIo0xiVugwc1/z2EWq7DqFh5yXIx6waxlv8WZb+5Ljqk
+                4C+SF5bJOUq7EjppviSzivSn/3d/VvJfFOJIkwe0vjFeBbwPquOmBFT0exvoUo/g
+                e1Oq5XAkQhkmOIvqeRpLrIg12b661Q8N+USvX1/Gi94sE4zi1FzZQi/7pdB4xOt2
+                fi6WS8ksasdL8zmzrnlOZ/voFQktm5VOwyeLpLOP+YqrvV1oVSnnt5KtU0zefpAO
+                AZ+29psgaS700s+LVv8trWwMhqZEJMKuSjbc+0H5FF2GlpSitP+uXI/sGW7R8se2
+                XrfRd5PmeeajjLrNL6MzxHtZLI3gDLQ0HQkcs2wYO6U=
+	   </certificate>
+            <rsa-public-key>
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5yTlQKBM6IvjQSg+SNj0MSF2ofchNQWRA2OH3BDcIrzRt+qJhH6nRj71byQ6N2y7Xr5Jin7+r/2mNcYinoBQUrKhyvujwm8excZsgiDWl6vEuT+/eUvO3x4G7WTDOUkTIto0xfQD5KIHYKcqAHEQ4dK+7hNg+m9GE+L8qK5eY/+lovKp3rWzgc7HEeCwd+EyKnKd3P3RM9Zzr/R417HJka+cqRJhlxrNuzLpkdsB/as+YOp5NlmO1gqnGa2eWELBpIXYZStXx+cQIKT5FC32dDQy93nqNNCXFs25FAgEghcw8S+3pVFfMALUAQcM57u1UxFVjetoXpD3MWslblYeLQIDAQAB
+            </rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5yTlQKBM6IvjQSg+SNj0MSF2ofchNQWRA2OH3BDcIrzRt+qJhH6nRj71byQ6N2y7Xr5Jin7+r/2mNcYinoBQUrKhyvujwm8excZsgiDWl6vEuT+/eUvO3x4G7WTDOUkTIto0xfQD5KIHYKcqAHEQ4dK+7hNg+m9GE+L8qK5eY/+lovKp3rWzgc7HEeCwd+EyKnKd3P3RM9Zzr/R417HJka+cqRJhlxrNuzLpkdsB/as+YOp5NlmO1gqnGa2eWELBpIXYZStXx+cQIKT5FC32dDQy93nqNNCXFs25FAgEghcw8S+3pVFfMALUAQcM57u1UxFVjetoXpD3MWslblYeLQIDAQAB
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>sascoms@gmail.com</ewp:admin-email>
+        <ewp:admin-notes/>
+        <r:apis-implemented>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-test.vermusuni.space/organizationalunits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="vermusuni.space">
+                <r:other-id type="pic">VermusPicCode</r:other-id>
+                <r:other-id type="erasmus">VermusErasmusCode</r:other-id>
+                <r:other-id type="erasmus-charter">VermusErasmusCharterCode</r:other-id>
+                <r:name xml:lang="tr">Vermus Üniversitesi</r:name>
+                <r:name xml:lang="en">Vermus University</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>
+            MIIDfDCCAmSgAwIBAgIQHqaw1SiD0k8TOlMe4jWVKDANBgkqhkiG9w0BAQsFADBI
+            MRswGQYDVQQDExJFU0VUIFNTTCBGaWx0ZXIgQ0ExHDAaBgNVBAoTE0VTRVQsIHNw
+            b2wuIHMgci4gby4xCzAJBgNVBAYTAlNLMB4XDTIwMDIyNTA4MzEzNVoXDTIwMDUy
+            NTA4MzEzNVowIzEhMB8GA1UEAxMYZXdwLXRlc3QudmVybXVzdW5pLnNwYWNlMIIB
+            IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApAkgrHGulYnJ8EGE1EEA/+00
+            8NoXpZ8mdJZWOSLw34y/7v66Rvz9UPnR3SFUQK5CpUZHW4BM3br4aQZDCyv/9QZC
+            V6WKXAYZOtWBx6vjBaaX0JHNlPWjjTimwE769mh8qtClWT8b6al3zwUTZOJSb3zs
+            VU8Bg5vsLO4ywskHHEaM6YhYA10VFsgwXrTIB657lt/BOi0vxicaXYSd8L7ZYLpH
+            KUyE2h+nIZO5Oni4qahzSzrumR/nW2cl/abeJoCkaswCa1EjMnO5llUkaay1Pnai
+            P1eoMo+Inr+m7Sio3bLZDkwEKSBliT+k+YyGF5dhUM7pGYPSlz5sCDQi/+yVBQID
+            AQABo4GGMIGDMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMB
+            Af8EAjAAMCMGA1UdEQQcMBqCGGV3cC10ZXN0LnZlcm11c3VuaS5zcGFjZTAOBgNV
+            HQ8BAf8EBAMCBaAwHwYDVR0jBBgwFoAUECbDaxMfE7AeRMLtxiNXj8g2UEgwDQYJ
+            KoZIhvcNAQELBQADggEBAIo0xiVugwc1/z2EWq7DqFh5yXIx6waxlv8WZb+5Ljqk
+            4C+SF5bJOUq7EjppviSzivSn/3d/VvJfFOJIkwe0vjFeBbwPquOmBFT0exvoUo/g
+            e1Oq5XAkQhkmOIvqeRpLrIg12b661Q8N+USvX1/Gi94sE4zi1FzZQi/7pdB4xOt2
+            fi6WS8ksasdL8zmzrnlOZ/voFQktm5VOwyeLpLOP+YqrvV1oVSnnt5KtU0zefpAO
+            AZ+29psgaS700s+LVv8trWwMhqZEJMKuSjbc+0H5FF2GlpSitP+uXI/sGW7R8se2
+            XrfRd5PmeeajjLrNL6MzxHtZLI3gDLQ0HQkcs2wYO6U=
+            </certificate>
+            <rsa-public-key>
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5yTlQKBM6IvjQSg+SNj0MSF2ofchNQWRA2OH3BDcIrzRt+qJhH6nRj71byQ6N2y7Xr5Jin7+r/2mNcYinoBQUrKhyvujwm8excZsgiDWl6vEuT+/eUvO3x4G7WTDOUkTIto0xfQD5KIHYKcqAHEQ4dK+7hNg+m9GE+L8qK5eY/+lovKp3rWzgc7HEeCwd+EyKnKd3P3RM9Zzr/R417HJka+cqRJhlxrNuzLpkdsB/as+YOp5NlmO1gqnGa2eWELBpIXYZStXx+cQIKT5FC32dDQy93nqNNCXFs25FAgEghcw8S+3pVFfMALUAQcM57u1UxFVjetoXpD3MWslblYeLQIDAQAB
+            </rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5yTlQKBM6IvjQSg+SNj0MSF2ofchNQWRA2OH3BDcIrzRt+qJhH6nRj71byQ6N2y7Xr5Jin7+r/2mNcYinoBQUrKhyvujwm8excZsgiDWl6vEuT+/eUvO3x4G7WTDOUkTIto0xfQD5KIHYKcqAHEQ4dK+7hNg+m9GE+L8qK5eY/+lovKp3rWzgc7HEeCwd+EyKnKd3P3RM9Zzr/R417HJka+cqRJhlxrNuzLpkdsB/as+YOp5NlmO1gqnGa2eWELBpIXYZStXx+cQIKT5FC32dDQy93nqNNCXFs25FAgEghcw8S+3pVFfMALUAQcM57u1UxFVjetoXpD3MWslblYeLQIDAQAB
+            </rsa-public-key>
         </server-credentials-in-use>
     </host>
 </manifest>
