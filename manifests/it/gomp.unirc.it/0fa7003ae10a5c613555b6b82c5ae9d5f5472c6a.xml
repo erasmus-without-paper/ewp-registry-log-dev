@@ -1,0 +1,121 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+  <!-- This example doesn't contain many comments, but its XML Schema does! -->
+  <host>
+    <ewp:admin-email>massimiliano.severino@unirc.it</ewp:admin-email>
+    <ewp:admin-notes>TEST Service UNIRC</ewp:admin-notes>
+
+    <r:apis-implemented>
+      <!-- All API entries are defined in their own separate XML namespaces.
+            You need to use proper `xmlns` in order for them to be matched properly. -->
+
+      <!-- The entry for the Discovery Manifest API (a self-reference). -->
+      <discovery
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+          version="5.0.0"
+            >
+        <url>https://gomp.unirc.it/PublicArea/ewp/unirc/manifest.xml</url>
+      </discovery>
+
+      <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"  version="2.1.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" />
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" />
+          </sec:response-encryption-methods>
+        </http-security>
+        <url>https://gomp.unirc.it/PublicArea/ewp/api/institutions.aspx</url>
+        <max-hei-ids>1</max-hei-ids>
+      </institutions>
+
+    </r:apis-implemented>
+
+    <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+      <hei id="unict.it">
+        <other-id type="pic">997224894</other-id>
+        <other-id type="erasmus">I  REGGIO01</other-id>
+        <other-id type="erasmus-charter">29303-EPP-1-2014-1-IT-EPPKA3-ECHE</other-id>
+        <name xml:lang="en">Mediterranean University of Reggio Calabria</name>
+        <name xml:lang="it">Università Mediterranea di Reggio Calabria</name>
+        </hei>
+    </mf:institutions-covered>
+
+    <client-credentials-in-use>
+      <!-- And this one is used for HTTP Signature Authentication -->
+      <rsa-public-key>
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoXmB5qjhNNWpu9cHwf3L
+        MJ6/k6BAD2/UVeDdnP4Wyegf1G6QkYh1MDn2yh9wNoabBU4eam4tEhovgNVL8UV0
+        Ta7SBD2dkmJB0DfBb4vnoBwI7W/WsILVFiyvIhGW4XDsBDhVWZVGiRfLys6TExtx
+        bRKYr9QagBc4kTaWWQWX9ta5Z1seuCfsIzNLvNHdtLEDipzLlnGSTCTd8zAG+Wm7
+        7sM/ArZY+QwM5e/VnlyLm0zW0oaQ5wjOKIkLvGXsegd+B7Prhq34ryPaIx89rgnY
+        t/A4JXVFyu4LKM2gXfpLcA02I4/DoZ7AisNGsKC1XYFrbPCskByQTX6cLZUAvUm8
+        4wIDAQAB
+      </rsa-public-key>
+    </client-credentials-in-use>
+
+    <server-credentials-in-use>
+      <!-- Used for HTTP Signature Authentication -->
+      <rsa-public-key>
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoXmB5qjhNNWpu9cHwf3L
+        MJ6/k6BAD2/UVeDdnP4Wyegf1G6QkYh1MDn2yh9wNoabBU4eam4tEhovgNVL8UV0
+        Ta7SBD2dkmJB0DfBb4vnoBwI7W/WsILVFiyvIhGW4XDsBDhVWZVGiRfLys6TExtx
+        bRKYr9QagBc4kTaWWQWX9ta5Z1seuCfsIzNLvNHdtLEDipzLlnGSTCTd8zAG+Wm7
+        7sM/ArZY+QwM5e/VnlyLm0zW0oaQ5wjOKIkLvGXsegd+B7Prhq34ryPaIx89rgnY
+        t/A4JXVFyu4LKM2gXfpLcA02I4/DoZ7AisNGsKC1XYFrbPCskByQTX6cLZUAvUm8
+        4wIDAQAB
+      </rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+</manifest>
