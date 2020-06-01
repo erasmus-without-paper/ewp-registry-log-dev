@@ -1,5 +1,6 @@
-<manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+<ns3:manifest
+    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
@@ -15,25 +16,24 @@
     xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
 >
-    <host>
-        <ns3:admin-email>umovemove@ual.es</ns3:admin-email>
-        <ns3:admin-notes>Manifest File for University of Almeria</ns3:admin-notes>
+    <ns3:host>
+        <admin-email>umovemove@ual.es</admin-email>
+        <admin-notes>Manifest File for University of Almeria</admin-notes>
         <ns2:apis-implemented>
-            <ns4:discovery version="5.0.0">
-                <ns4:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/manifest</ns4:url>
-            </ns4:discovery>
-            <ns25:echo version="2.0.1">
-                <ns25:http-security>
+            <ns25:discovery version="5.0.0">
+                <ns25:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/manifest</ns25:url>
+            </ns25:discovery>
+            <ns24:echo version="2.0.1">
+                <ns24:http-security>
                     <ns5:client-auth-methods>
                         <ns11:tlscert allows-self-signed="true"/>
                         <ns10:httpsig/>
@@ -42,13 +42,13 @@
                         <ns8:tlscert/>
                         <ns7:httpsig/>
                     </ns5:server-auth-methods>
-                </ns25:http-security>
-                <ns25:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/echo</ns25:url>
-            </ns25:echo>
+                </ns24:http-security>
+                <ns24:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/echo</ns24:url>
+            </ns24:echo>
         </ns2:apis-implemented>
-        <institutions-covered/>
-        <client-credentials-in-use>
-            <certificate>MIIG5zCCBc+gAwIBAgIQA7V9QtCnQFkab/pGeUn2NzANBgkqhkiG9w0BAQsFADBk
+        <ns3:institutions-covered/>
+        <ns3:client-credentials-in-use>
+            <ns3:certificate>MIIG5zCCBc+gAwIBAgIQA7V9QtCnQFkab/pGeUn2NzANBgkqhkiG9w0BAQsFADBk
 MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
 QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
 Q0EgMzAeFw0yMDAyMTkwMDAwMDBaFw0yMjAzMDIxMjAwMDBaMIGAMQswCQYDVQQG
@@ -84,23 +84,23 @@ W+FrT1HY6nTjoGge/uRNE67qe/buqE0+CNYidmUKq0Pg/hQxxq8UXcevokjUOD0B
 8NNaCeN0Wnyg0ou8Z6iekMFtCC2ZSElCGdvXEAZH+NchcYiijVW6Cc89mjPZGrmQ
 t3yiJDLmeOkWxCTIl3nJ47x4gsCmYrWH2eL+roQhhNFOYXYi5dmneWcSqrCcJxCZ
 qSpE5NhPHLlA39TMwLxq7qQDXdSss9M0sqNvLekKoQkygy5pTFmJXkz3EENKXuJv
-wtq7wL4b5kg/sL7XjWiMfmm9WUtW6+A8h2Oj8TGCCBb0HvBj5ksoax4bFg==</certificate>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTaSV1ek569WQFX4VALz
+wtq7wL4b5kg/sL7XjWiMfmm9WUtW6+A8h2Oj8TGCCBb0HvBj5ksoax4bFg==</ns3:certificate>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTaSV1ek569WQFX4VALz
 9ROOsk6RRRq5LcYAIo76cyvka85CeFCca0py94nyIN1BctdDD4xdzbuU4cUGKawr
 u0Uo19GRcWXYgA4v4CAOkdHiugS/E8FfebGcz+p9Dop9+VmpiHpc5DDZtozREZNK
 iFElHjE236AV8s/oL81ywLVGAdduxQ2y9+N1qYCXFxwVKB29nRzEEmMbBWgMQa0n
 Q1Vp4FG7nZ3mwJuWaamlolKgRqjqh11qLnsOcTNbqwJP4it0tFzxKeAWKb3j70fO
 q/0W5Lx9NMS6lEQwwZOr8Qf0ewZ13+UMz+LlAY5EYbT8DifuI+W52r2QMBepLLog
-nQIDAQAB</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTaSV1ek569WQFX4VALz
+nQIDAQAB</ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+        <ns3:server-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTaSV1ek569WQFX4VALz
 9ROOsk6RRRq5LcYAIo76cyvka85CeFCca0py94nyIN1BctdDD4xdzbuU4cUGKawr
 u0Uo19GRcWXYgA4v4CAOkdHiugS/E8FfebGcz+p9Dop9+VmpiHpc5DDZtozREZNK
 iFElHjE236AV8s/oL81ywLVGAdduxQ2y9+N1qYCXFxwVKB29nRzEEmMbBWgMQa0n
 Q1Vp4FG7nZ3mwJuWaamlolKgRqjqh11qLnsOcTNbqwJP4it0tFzxKeAWKb3j70fO
 q/0W5Lx9NMS6lEQwwZOr8Qf0ewZ13+UMz+LlAY5EYbT8DifuI+W52r2QMBepLLog
-nQIDAQAB</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+nQIDAQAB</ns3:rsa-public-key>
+        </ns3:server-credentials-in-use>
+    </ns3:host>
+</ns3:manifest>
