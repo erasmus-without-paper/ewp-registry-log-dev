@@ -27,6 +27,17 @@
     <ns3:host>
         <admin-notes>Terra Dotta's Host.</admin-notes>
         <ns2:apis-implemented>
+            <ns17:echo version="2.0.1">
+                <ns17:http-security>
+                    <ns5:client-auth-methods>
+                        <ns21:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns22:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns17:http-security>
+                <ns17:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns17:url>
+            </ns17:echo>
             <ns12:courses version="0.7.1">
                 <ns12:http-security>
                     <ns5:client-auth-methods>
@@ -40,6 +51,31 @@
                 <ns12:max-los-ids>1</ns12:max-los-ids>
                 <ns12:max-los-codes>1</ns12:max-los-codes>
             </ns12:courses>
+            <ns15:organizational-units version="2.1.1">
+                <ns15:http-security>
+                    <ns5:client-auth-methods>
+                        <ns21:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns22:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns15:http-security>
+                <ns15:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/ounits</ns15:url>
+                <ns15:max-ounit-ids>1</ns15:max-ounit-ids>
+                <ns15:max-ounit-codes>1</ns15:max-ounit-codes>
+            </ns15:organizational-units>
+            <ns16:institutions version="2.0.0">
+                <ns16:http-security>
+                    <ns5:client-auth-methods>
+                        <ns21:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns22:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</ns16:url>
+                <ns16:max-hei-ids>1</ns16:max-hei-ids>
+            </ns16:institutions>
             <ns11:simple-course-replication version="1.0.0">
                 <ns11:http-security>
                     <ns5:client-auth-methods>
@@ -54,6 +90,22 @@
                 <ns11:allows-anonymous-access>true</ns11:allows-anonymous-access>
                 <ns11:supports-modified-since>false</ns11:supports-modified-since>
             </ns11:simple-course-replication>
+            <ns8:imobilities version="0.3.1">
+                <ns8:http-security>
+                    <ns5:client-auth-methods>
+                        <ns21:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns22:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns8:http-security>
+                <ns8:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/imobilities/get</ns8:get-url>
+                <ns8:max-omobility-ids>1</ns8:max-omobility-ids>
+                <ns8:sends-notifications/>
+            </ns8:imobilities>
+            <ns18:discovery version="5.0.0">
+                <ns18:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</ns18:url>
+            </ns18:discovery>
             <ns14:iias version="2.2.2">
                 <ns14:http-security>
                     <ns5:client-auth-methods>
@@ -106,58 +158,6 @@
                 <ns10:max-omobility-ids>1</ns10:max-omobility-ids>
                 <ns10:sends-notifications/>
             </ns10:omobilities>
-            <ns8:imobilities version="0.3.1">
-                <ns8:http-security>
-                    <ns5:client-auth-methods>
-                        <ns21:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns22:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns8:http-security>
-                <ns8:get-url>https://alerts.terradotta.com/agr-network-api/v1/ewp/imobilities/get</ns8:get-url>
-                <ns8:max-omobility-ids>1</ns8:max-omobility-ids>
-                <ns8:sends-notifications/>
-            </ns8:imobilities>
-            <ns15:organizational-units version="2.1.1">
-                <ns15:http-security>
-                    <ns5:client-auth-methods>
-                        <ns21:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns22:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns15:http-security>
-                <ns15:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/ounits</ns15:url>
-                <ns15:max-ounit-ids>1</ns15:max-ounit-ids>
-                <ns15:max-ounit-codes>1</ns15:max-ounit-codes>
-            </ns15:organizational-units>
-            <ns16:institutions version="2.0.0">
-                <ns16:http-security>
-                    <ns5:client-auth-methods>
-                        <ns21:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns22:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns16:http-security>
-                <ns16:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/institutions</ns16:url>
-                <ns16:max-hei-ids>1</ns16:max-hei-ids>
-            </ns16:institutions>
-            <ns17:echo version="2.0.1">
-                <ns17:http-security>
-                    <ns5:client-auth-methods>
-                        <ns21:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns22:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns17:http-security>
-                <ns17:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/echo</ns17:url>
-            </ns17:echo>
-            <ns18:discovery version="5.0.0">
-                <ns18:url>https://alerts.terradotta.com/agr-network-api/v1/ewp/manifest</ns18:url>
-            </ns18:discovery>
             <ns9:omobility-cnr version="0.4.1">
                 <ns9:http-security>
                     <ns5:client-auth-methods>
