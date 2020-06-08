@@ -9921,6 +9921,16 @@
                 xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
                 version="3.0.0"
             >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
                 <ia3:get-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/iias/get</ia3:get-url>
                 <ia3:max-iia-ids>10</ia3:max-iia-ids>
                 <ia3:max-iia-codes>10</ia3:max-iia-codes>
