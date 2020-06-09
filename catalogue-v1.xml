@@ -5291,9 +5291,18 @@
     </host>
     <host>
         <apis-implemented>
-            <d5:discovery version="5.0.0">
-                <d5:url>https://ewp-test.solenovo.fi/ewp/api/manifest</d5:url>
-            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-test.solenovo.fi/ewp/api/echo</e2:url>
+            </e2:echo>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -5307,18 +5316,9 @@
                 <in2:url>https://ewp-test.solenovo.fi/ewp/api/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://ewp-test.solenovo.fi/ewp/api/echo</e2:url>
-            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-test.solenovo.fi/ewp/api/manifest</d5:url>
+            </d5:discovery>
             <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
