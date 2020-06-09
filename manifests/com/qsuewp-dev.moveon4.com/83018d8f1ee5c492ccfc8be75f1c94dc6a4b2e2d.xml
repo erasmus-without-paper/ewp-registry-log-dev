@@ -54,7 +54,14 @@
                 <r:other-id type="erasmus">I COMO03</r:other-id>
                 <r:name xml:lang="en">Academy of Fine Arts Aldo Galli</r:name>
             </r:hei>
-
+            <r:hei id="ewp2020-bo.demo.moveon4.com">
+                <r:other-id type="erasmus">EWP2020</r:other-id>
+                <r:name xml:lang="en">Test Institution ewp2020</r:name>
+            </r:hei>
+            <r:hei id="ewp2021-bo.demo.moveon4.com">
+                <r:other-id type="erasmus">EWP2021</r:other-id>
+                <r:name xml:lang="en">Test Institution ewp2021</r:name>
+            </r:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
             <ns3:certificate>MIIDzTCCArWgAwIBAgIJAL7XxcPtzdxOMA0GCSqGSIb3DQEBCwUAMHwxCzAJBgNV
@@ -740,4 +747,329 @@
             </ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
     </ns3:host>
+	
+    <ns3:host>
+        <admin-email>umesh@qs.com</admin-email>
+        <r:apis-implemented>
+            <in2:institutions version="2.1.0">
+                <admin-email>umesh@qs.com</admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp2020-ewp.demo.moveon4.com/v1/institution</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <admin-email>umesh@qs.com</admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp2020-ewp.demo.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/get</ia2:get-url>
+                <ia2:max-iia-ids>10</ia2:max-iia-ids>
+                <ia2:max-iia-codes>10</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/index</ia2:index-url>
+            </ia2:iias>
+            <om1:omobilities
+                    xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                    version="0.16.0">
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp2020-ewp.demo.moveon4.com/v1/omobility/get</om1:get-url>
+                <om1:index-url>https://ewp2020-ewp.demo.moveon4.com/v1/omobility/index</om1:index-url>
+                <om1:max-omobility-ids>10</om1:max-omobility-ids>
+            </om1:omobilities>
+            <im1:imobilities version="0.3.0">
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp2020-ewp.demo.moveon4.com/v1/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>10</im1:max-omobility-ids>
+            </im1:imobilities>
+
+
+            <imc1:imobility-cnr
+                    xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                    version="0.1.0">
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp2020-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <omc1:omobility-cnr
+                    xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                    version="0.4.1">
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp2020-ewp.demo.moveon4.com/v1/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+
+        </r:apis-implemented>
+        <ns3:institutions-covered>
+            <r:hei id="ewp2020-bo.demo.moveon4.com">
+                <r:name xml:lang="en">Test Institution ewp2020</r:name>
+            </r:hei>
+        </ns3:institutions-covered>
+        <ns3:client-credentials-in-use>
+            <ns3:certificate>MIIDzTCCArWgAwIBAgIJAL7XxcPtzdxOMA0GCSqGSIb3DQEBCwUAMHwxCzAJBgNV
+                BAYTAklOMRIwEAYDVQQIDAlLYXJuYXRha2ExEjAQBgNVBAcMCUJhbmdhbG9yZTEL
+                MAkGA1UECgwCUVMxCzAJBgNVBAsMAklUMQ4wDAYDVQQDDAVVbWVzaDEbMBkGCSqG
+                SIb3DQEJARYMdW1lc2hAcXMuY29tMCAXDTE4MDgxMTA0NDAxMloYDzIxMTgwNzE4
+                MDQ0MDEyWjB8MQswCQYDVQQGEwJJTjESMBAGA1UECAwJS2FybmF0YWthMRIwEAYD
+                VQQHDAlCYW5nYWxvcmUxCzAJBgNVBAoMAlFTMQswCQYDVQQLDAJJVDEOMAwGA1UE
+                AwwFVW1lc2gxGzAZBgkqhkiG9w0BCQEWDHVtZXNoQHFzLmNvbTCCASIwDQYJKoZI
+                hvcNAQEBBQADggEPADCCAQoCggEBAM9rvH2YtDFp2vJt0lgxd8FD4kRRh2LlWE9U
+                C6e+F63vZroL+8ZC94D6lFNHa88zb+pJ7Xu99tSKSmWSlMRJ/AqYIf1sY2QMpmr6
+                jFrYa8qGRe0fEG6QLyJavUuahqOVRgtFmSKk4aOlkxAIEPGv7rEnL0mTWd7Qsmef
+                e2e4bvVyLxLOTHePKi2VMxaIeqPa9TMVVBGjBo24Bb0ZtMRzSfs2XlNp3V1zrPgh
+                tDWdY4i+G9Nx0X5gYMC6mWUtV6LtQ2nT9OMizTyOvE7YGW3ctNLpwC3msurfBgoM
+                L3i3otstmSn8KV9VcD05hGg4IIpzcKRMlllSDJWKy70RVTsn/F0CAwEAAaNQME4w
+                HQYDVR0OBBYEFEKsH81v1onrMZ41+AFdb5TBxjJ0MB8GA1UdIwQYMBaAFEKsH81v
+                1onrMZ41+AFdb5TBxjJ0MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+                ACZ1lhJEJ+TICzLWmuvkpw2zE3VZs7pgdH7lpmwUPNrb9D9dunhKOyg8GP6x77KW
+                jMAIxitWTKyL1DpTdwzS/slyFKw00AZlVXBj0bwZ3KoYt2h1rxv95K7+p7CLHTEK
+                MZmtw3fFsg+dm6EvNbyXpQO8YJ3hXJ+uVSiuy/bf3zCcY9EqgbjlP0Vr9OLq/sPn
+                WmaUL4zI2ABDGCnRwXxfl4xAqBPyI+L4DbhOUg4KKLpapIJx6naS3Y6+iH5zNXP8
+                OfBflFtjx6aIdjOqVT2uHLLGBGAGrbKjvW2I0zQjpKlDah5AOiLc8jknncglAtCF
+                Rv0AZv5Q11+ZRFf0ptjDNog=
+            </ns3:certificate>
+            <ns3:rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvuMp62u59WBFA1CXRwNj
+                /Vp4WYcukBowZlaOKYfhxKdkHO9bq57PAX7xRtn5+w3gWDzKG+HlqSHJu9VWDEeN
+                62MjpbUyk9hEQgsS0nQVbnIBNEa+zW0JPZqEP+J84P/LOBnBk3ccOvUv39ECIcYp
+                06JY1f53Ued2QXL2yquwUddFg44YREonW+AeIPkHs7+esbo17NK0sEf/QjAVvac3
+                K6VlSA4i0ydAeqB1b3iyxKB/wjwhgM119kZQMZXUzpIDb3htD40CPMW0D5S9Y12a
+                jUQsMNeKNx3ltPgMFi6DM8pIiojRuOqabl0lsGAGRUgvVBS5pICdNXNaire7CSmd
+                QwIDAQAB
+            </ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+    </ns3:host>
+
+    <ns3:host>
+        <admin-email>umesh@qs.com</admin-email>
+        <r:apis-implemented>
+            <in2:institutions version="2.1.0">
+                <admin-email>umesh@qs.com</admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp2021-ewp.demo.moveon4.com/v1/institution</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <admin-email>umesh@qs.com</admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp2021-ewp.demo.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia2:iias version="2.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/get</ia2:get-url>
+                <ia2:max-iia-ids>10</ia2:max-iia-ids>
+                <ia2:max-iia-codes>10</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/index</ia2:index-url>
+            </ia2:iias>
+            <om1:omobilities
+                    xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                    version="0.16.0">
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/omobility/get</om1:get-url>
+                <om1:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/omobility/index</om1:index-url>
+                <om1:max-omobility-ids>10</om1:max-omobility-ids>
+            </om1:omobilities>
+            <im1:imobilities version="0.3.0">
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>10</im1:max-omobility-ids>
+            </im1:imobilities>
+
+
+            <imc1:imobility-cnr
+                    xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                    version="0.1.0">
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <omc1:omobility-cnr
+                    xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                    version="0.4.1">
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+
+        </r:apis-implemented>
+        <ns3:institutions-covered>
+            <r:hei id="ewp2021-bo.demo.moveon4.com">
+                <r:name xml:lang="en">Test Institution ewp2021</r:name>
+            </r:hei>
+        </ns3:institutions-covered>
+        <ns3:client-credentials-in-use>
+            <ns3:certificate>MIIDzTCCArWgAwIBAgIJAL7XxcPtzdxOMA0GCSqGSIb3DQEBCwUAMHwxCzAJBgNV
+                BAYTAklOMRIwEAYDVQQIDAlLYXJuYXRha2ExEjAQBgNVBAcMCUJhbmdhbG9yZTEL
+                MAkGA1UECgwCUVMxCzAJBgNVBAsMAklUMQ4wDAYDVQQDDAVVbWVzaDEbMBkGCSqG
+                SIb3DQEJARYMdW1lc2hAcXMuY29tMCAXDTE4MDgxMTA0NDAxMloYDzIxMTgwNzE4
+                MDQ0MDEyWjB8MQswCQYDVQQGEwJJTjESMBAGA1UECAwJS2FybmF0YWthMRIwEAYD
+                VQQHDAlCYW5nYWxvcmUxCzAJBgNVBAoMAlFTMQswCQYDVQQLDAJJVDEOMAwGA1UE
+                AwwFVW1lc2gxGzAZBgkqhkiG9w0BCQEWDHVtZXNoQHFzLmNvbTCCASIwDQYJKoZI
+                hvcNAQEBBQADggEPADCCAQoCggEBAM9rvH2YtDFp2vJt0lgxd8FD4kRRh2LlWE9U
+                C6e+F63vZroL+8ZC94D6lFNHa88zb+pJ7Xu99tSKSmWSlMRJ/AqYIf1sY2QMpmr6
+                jFrYa8qGRe0fEG6QLyJavUuahqOVRgtFmSKk4aOlkxAIEPGv7rEnL0mTWd7Qsmef
+                e2e4bvVyLxLOTHePKi2VMxaIeqPa9TMVVBGjBo24Bb0ZtMRzSfs2XlNp3V1zrPgh
+                tDWdY4i+G9Nx0X5gYMC6mWUtV6LtQ2nT9OMizTyOvE7YGW3ctNLpwC3msurfBgoM
+                L3i3otstmSn8KV9VcD05hGg4IIpzcKRMlllSDJWKy70RVTsn/F0CAwEAAaNQME4w
+                HQYDVR0OBBYEFEKsH81v1onrMZ41+AFdb5TBxjJ0MB8GA1UdIwQYMBaAFEKsH81v
+                1onrMZ41+AFdb5TBxjJ0MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+                ACZ1lhJEJ+TICzLWmuvkpw2zE3VZs7pgdH7lpmwUPNrb9D9dunhKOyg8GP6x77KW
+                jMAIxitWTKyL1DpTdwzS/slyFKw00AZlVXBj0bwZ3KoYt2h1rxv95K7+p7CLHTEK
+                MZmtw3fFsg+dm6EvNbyXpQO8YJ3hXJ+uVSiuy/bf3zCcY9EqgbjlP0Vr9OLq/sPn
+                WmaUL4zI2ABDGCnRwXxfl4xAqBPyI+L4DbhOUg4KKLpapIJx6naS3Y6+iH5zNXP8
+                OfBflFtjx6aIdjOqVT2uHLLGBGAGrbKjvW2I0zQjpKlDah5AOiLc8jknncglAtCF
+                Rv0AZv5Q11+ZRFf0ptjDNog=
+            </ns3:certificate>
+            <ns3:rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvuMp62u59WBFA1CXRwNj
+                /Vp4WYcukBowZlaOKYfhxKdkHO9bq57PAX7xRtn5+w3gWDzKG+HlqSHJu9VWDEeN
+                62MjpbUyk9hEQgsS0nQVbnIBNEa+zW0JPZqEP+J84P/LOBnBk3ccOvUv39ECIcYp
+                06JY1f53Ued2QXL2yquwUddFg44YREonW+AeIPkHs7+esbo17NK0sEf/QjAVvac3
+                K6VlSA4i0ydAeqB1b3iyxKB/wjwhgM119kZQMZXUzpIDb3htD40CPMW0D5S9Y12a
+                jUQsMNeKNx3ltPgMFi6DM8pIiojRuOqabl0lsGAGRUgvVBS5pICdNXNaire7CSmd
+                QwIDAQAB
+            </ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+    </ns3:host>
+	
 </ns3:manifest>
