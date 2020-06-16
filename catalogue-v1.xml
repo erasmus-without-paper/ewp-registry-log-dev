@@ -7308,6 +7308,31 @@
                 <f1:url>https://ewp-test.vermusuni.space/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://ewp-test.vermusuni.space/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp-test.vermusuni.space/iias/index</ia3:index-url>
+            </ia3:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>vermusuni.space</hei-id>
