@@ -9012,6 +9012,38 @@
             <rsa-public-key sha-256="76d362b9ebe8a0ace6c6089437b75bf0a42509308e3cd5426343edc262582d2c"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>volenova@civ.zcu.cz</ewp:admin-email>
+        <ewp:admin-notes>EWP connector for IS/STAG</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://stag-test.tul.cz:8843/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://stag-test.tul.cz/ws/services/ewp/manifest</d5:url>
+            </d5:discovery>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>tul.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="2c30074494203a9719fb24d7575685807f774b8d03b15db8a968a124109e95d8"/>
+            <rsa-public-key sha-256="d2404ffc9f8b1724e90ee8a86a8de24775d7741f728ee64e232e74a2ba9ef161"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="d2404ffc9f8b1724e90ee8a86a8de24775d7741f728ee64e232e74a2ba9ef161"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="erasmus">DK ARHUS04</other-id>
@@ -10026,6 +10058,13 @@
             <name xml:lang="de">TECHNISCHE UNIVERSITAET HAMBURG</name>
             <name xml:lang="en">TECHNISCHE UNIVERSITAET HAMBURG</name>
         </hei>
+        <hei id="tul.cz">
+            <other-id type="erasmus">CZ LIBEREC01</other-id>
+            <other-id type="erasmus-charter">48246-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999856213</other-id>
+            <name xml:lang="cs">Technická univerzita v Liberci</name>
+            <name xml:lang="en">Technical University of Liberec</name>
+        </hei>
         <hei id="tuni.fi">
             <other-id type="erasmus">SF TAMPERE17</other-id>
             <other-id type="pic">999903161</other-id>
@@ -10908,6 +10947,14 @@
             u+0DI4KpS7ddM01S15NfuUfFAM3AdqRtz0KhMKiOfpkPsPJUjh+ubzUCDDEtlQCu98TbWJEzfX2H
             6lpBoi6+OL1mbYeAxRAdKB9Q+BXHaMwkL73bh4OFAjQgeL22Rcz1/cO8KWd/Kmwn9k7uXUmFNxZM
             oqDGhwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="d2404ffc9f8b1724e90ee8a86a8de24775d7741f728ee64e232e74a2ba9ef161">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7QsJzmc1/ApyM8741nX6eQBv/Y7o1yRe
+            bA62XvU8agTfRfFkjnLxbEun/K5a9FZAxETJoboW/EuhBuQ3X82q4n1KhgiNKyPVtrwzSjbuwppu
+            QOawIL2STBJfnqUd0N8pfErlDs8opukZPkUEH1BywjkXhZEkZWEF6gnJVEkMhATW6YIoc263XGZD
+            WL1T/kMQZZpTHqzCVRrdHw4SDtDu60lx4DsvpYbk3/nvPIi/13GQoISzORBklsT9DTwM0C8h0pBT
+            bl/QUEjP2H4IgmmQLAUaLmq/c1L4rdn2hflF9lk+iznLsU06Qva7Wtxio85grrJFSffUr3Nyjn5s
+            hd7aPQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9TYtPf0Vdrf0QVni0SrYDCxTBZUOOM1
