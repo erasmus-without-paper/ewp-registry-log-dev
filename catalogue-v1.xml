@@ -7709,6 +7709,30 @@
                 <ia3:index-url>https://ewp-test.vermusuni.space/iias/index</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ewp-test.vermusuni.space/iias/approve</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
         </apis-implemented>
         <institutions-covered>
             <hei-id>vermusuni.space</hei-id>
