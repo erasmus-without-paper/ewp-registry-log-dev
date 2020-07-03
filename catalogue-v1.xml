@@ -6637,12 +6637,28 @@
                 <ia3:sends-notifications/>
             </ia3:iias>
             <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
                 <iac2:url>https://unizone-ewp.herokuapp.com/rest/iias/cnr</iac2:url>
             </iac2:iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.1"
             >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
                 <iaa1:url>https://unizone-ewp.herokuapp.com/rest/iias/app/index</iaa1:url>
                 <iaa1:max-iia-ids>3</iaa1:max-iia-ids>
                 <iaa1:sends-notifications/>
@@ -6651,6 +6667,14 @@
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.0"
             >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
                 <iaac1:url>https://unizone-ewp.herokuapp.com/rest/iias/app/cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
         </apis-implemented>
