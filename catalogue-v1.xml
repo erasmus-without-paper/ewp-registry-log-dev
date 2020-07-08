@@ -5903,6 +5903,36 @@
     </host>
     <host>
         <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-test.solenovo.fi/ewp/api/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp-test.solenovo.fi/ewp/api/institutions</in2:url>
+                <in2:max-hei-ids>100</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-test.solenovo.fi/ewp/api/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -5915,40 +5945,7 @@
                 </e2:http-security>
                 <e2:url>https://ewp-test.solenovo.fi/ewp/api/echo</e2:url>
             </e2:echo>
-            <in2:institutions version="2.1.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://ewp-test.solenovo.fi/ewp/api/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <d5:discovery version="5.0.0">
-                <d5:url>https://ewp-test.solenovo.fi/ewp/api/manifest</d5:url>
-            </d5:discovery>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://ewp-test.solenovo.fi/ewp/api/ounits</ou2:url>
-                <ou2:max-ounit-ids>5</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>5</ou2:max-ounit-codes>
-            </ou2:organizational-units>
         </apis-implemented>
-        <institutions-covered>
-            <hei-id>solenovo.fi</hei-id>
-        </institutions-covered>
         <client-credentials-in-use>
             <rsa-public-key sha-256="d095f4f27072126022dccae6121bb2be84e9214c98f23679e2161b57724ca183"/>
         </client-credentials-in-use>
@@ -10395,9 +10392,6 @@
             <other-id type="pic">998344080</other-id>
             <name xml:lang="en">SÖDERTÖRN UNIVERSITY</name>
             <name xml:lang="sv">SÖDERTÖRNS HÖGSKOLA</name>
-        </hei>
-        <hei id="solenovo.fi">
-            <name xml:lang="en">University of Solenovo</name>
         </hei>
         <hei id="spbstu.ru">
             <other-id type="erasmus">PIC 998937817</other-id>
