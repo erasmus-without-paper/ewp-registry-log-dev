@@ -7092,7 +7092,51 @@
     </host>
     <host>
         <ewp:admin-email>uis-support@is4u.cz</ewp:admin-email>
-        <apis-implemented/>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://czuewp.is4u.cz/ewp/manifest.pl</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://czuewp.is4u.cz/ewp/echo.pl</e2:url>
+            </e2:echo>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://czuewp.is4u.cz/ewp/iias/get.pl</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://czuewp.is4u.cz/ewp/iias/index.pl</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://czuewp.is4u.cz/ewp/iias/cnr.pl</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
         <institutions-covered>
             <hei-id>dev.czu.cz</hei-id>
         </institutions-covered>
