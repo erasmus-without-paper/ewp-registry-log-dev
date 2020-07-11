@@ -7107,6 +7107,31 @@
                 </e2:http-security>
                 <e2:url>https://czuewp.is4u.cz/ewp/echo.pl</e2:url>
             </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://czuewp.is4u.cz/ewp/institutions.pl</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://czuewp.is4u.cz/ewp/organizational_units.pl</ou2:url>
+                <ou2:max-ounit-ids>20</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>20</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <ia3:iias
                 xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
                 version="3.0.0"
@@ -7120,8 +7145,8 @@
                     </sec:server-auth-methods>
                 </ia3:http-security>
                 <ia3:get-url>https://czuewp.is4u.cz/ewp/iias/get.pl</ia3:get-url>
-                <ia3:max-iia-ids>1</ia3:max-iia-ids>
-                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:max-iia-ids>20</ia3:max-iia-ids>
+                <ia3:max-iia-codes>20</ia3:max-iia-codes>
                 <ia3:index-url>https://czuewp.is4u.cz/ewp/iias/index.pl</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
