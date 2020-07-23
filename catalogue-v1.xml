@@ -9849,6 +9849,83 @@
             <rsa-public-key sha-256="251f4251af1f973c7f3b81ba771fbe028cf129bac5d21b78e5e29b63606e6f37"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>LUSPIO test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d4:discovery version="5.0.0">
+                <d4:url>https://luspio.esse3.pp.cineca.it/ewp/Manifest.do</d4:url>
+            </d4:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://luspio.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://luspio.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://luspio.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://luspio.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unint.eu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="a2dcf89b888faa6570a13322fd2bd32a29d0fa4686c56d9f4ca27a1220957954"/>
+            <rsa-public-key sha-256="3f2ccd33dbbfa2ae4296269cb8df50921d296f531134f936c1f82e5451e9042f"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="3f2ccd33dbbfa2ae4296269cb8df50921d296f531134f936c1f82e5451e9042f"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="erasmus">DK ARHUS04</other-id>
@@ -11249,6 +11326,12 @@
             <name xml:lang="de">Montanuniversität Leoben</name>
             <name xml:lang="en">Montanuniversität Leoben</name>
         </hei>
+        <hei id="unint.eu">
+            <other-id type="erasmus">I  ROMA20</other-id>
+            <other-id type="pic">949538530</other-id>
+            <name xml:lang="en">Universita degli Studi Internazionali di ROMA (UNINT)  - TEST</name>
+            <name xml:lang="it">Universita degli Studi Internazionali di ROMA (UNINT)  - TEST</name>
+        </hei>
         <hei id="unipd.it">
             <other-id type="erasmus">I  PADOVA01</other-id>
             <other-id type="pic">999995602</other-id>
@@ -11545,6 +11628,16 @@
             ikCB7+Xp1ZBgYeXPGBWkJVTmuSDl2NLKGK4YftGtFWoGSRByhP3VjyO3Jh7CGqdli1jPUgU3axrW
             11Fb1EI1yR2jMVhreC693WxGPfN3tA43EJ70tkXZ6SKVlY1tR/rfNzJSZuW7ltwlWE6kCqJD0lzZ
             R4647QIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="3f2ccd33dbbfa2ae4296269cb8df50921d296f531134f936c1f82e5451e9042f">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA8euuKgyzlBXohuYs4+KMSfRQ8X+Sd0ZY
+            dPyUYMHDOUQXqwJGgZQFwIqffyjk8DaTFFd4frUs2ZFxbaRZVyJXy7XoGe44N3L7lWNvXyoFviWL
+            /hkvrlEPB9CMX+GJMRKV+AMgPH8EZy5eBA40FgbeVpgr/BIbAdHS9Dj7Df4AyHjFQc8i8InUGOQ9
+            OnvFLqkpyrGcpgBh4fLdFAZoV8CwsBs5y+gEh+r9zDPpODuEev6rxghcGy8LoZc6npXh+hWMcPTh
+            WN//DtaVZnyl1hu0DU0hUS+8/gdQBupaHd3SxqU/2XEoZJMrkjbSyq6xIbdKmMwq6CXMFh6VB/Pa
+            eTXI0j6uMWpgU8EcL+kXZAMlQZyuSQt4K1BDAa7Q7hnRy8dmGRl99PqHnkYrXv0bWTi8jDXlCsW6
+            kLvA7V6wFEe5ZXhLGh4G7F6TVgwnUOcaz3Tdelw00R0rUQO7w9uuZoP8n4t922/oGrI0EVD6KzW9
+            iT8qS9ghJsgbg7lT3zIcLeCFAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="4249f6df3aa3fbb07754956b7053a9265af417d4bb34368570c21303256d953c">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8a82iIIi9QaUGjZ55ccWEpUZLPHwIjU
