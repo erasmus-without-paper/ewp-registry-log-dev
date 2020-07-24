@@ -9928,6 +9928,83 @@
             <rsa-public-key sha-256="3f2ccd33dbbfa2ae4296269cb8df50921d296f531134f936c1f82e5451e9042f"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNICA test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://unica.esse3.pp.cineca.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://unica.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://unica.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://unica.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://unica.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unica.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="4e5efee3c05a4c17efc5ffe487f973073754305ce6fe3f9b061eae3cb3a08550"/>
+            <rsa-public-key sha-256="46cf5755a2417bec781affe9c647965c2f07d0abe053aee2ee6807f72f399f18"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="46cf5755a2417bec781affe9c647965c2f07d0abe053aee2ee6807f72f399f18"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="erasmus">DK ARHUS04</other-id>
@@ -11303,6 +11380,12 @@
             <name xml:lang="en">University of Bologna</name>
             <name xml:lang="it">ALMA MATER STUDIORUM - Università di Bologna</name>
         </hei>
+        <hei id="unica.it">
+            <other-id type="erasmus">I CAGLIAR01</other-id>
+            <other-id type="pic">999841663</other-id>
+            <name xml:lang="en">Universita degli Studi di CAGLIARI - TEST</name>
+            <name xml:lang="it">Universita degli Studi di CAGLIARI - TEST</name>
+        </hei>
         <hei id="unict.erasmusmanager.it">
             <other-id type="erasmus">IT CATANIA01</other-id>
             <other-id type="pic">999874061</other-id>
@@ -11666,6 +11749,16 @@
             EhLdz4kwfSdFS+NN8oLWEq4o8zv+hpRW80N9GXT8DWMdgut/lDz+ZIAzvEcf/60DZeOS6m45nUfN
             wRkHuyMLoMFu80njePxg9pPrHBuTfeowKCgh0iJkgHFImSd/pcWb28O0xUNmXibpwYH8eFPg1am9
             sqWEGwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="46cf5755a2417bec781affe9c647965c2f07d0abe053aee2ee6807f72f399f18">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA6qcBCVEHQ/nQ7sF1+8Cc9Ma/4CSPQinL
+            9RTn1//ji8QrutQbs2/+Q38kMGYCQVwhK84YZMuMk1fkKh6xIq6gkyR3N8RzAUmMRqbak1DwrHP+
+            ukC1WBwHpsGPKZyIMdo6St0ye0Eh+53cJPShS9ePujvqVwmjJWihvm6OV1GhKCjNHqzuDMQzwcm9
+            XulTxixCSQFX2RW7eCV631mP1ccJsJixNqSw5NubUwcA9WM3QVbQqnNMfLEBe6ugMAUIg0lOtHMA
+            xSWQr022TlYiIaxJEMtxVmOejt1e9An07do9e37TfxzTfPab2txAJeGFwvhOGl/yLFra6JP33T0V
+            jtSREz0OiD5sCswpXZEpQ4AvcqAc+GJazzWC8G64uVZbbAwZOJPiIn8EfcnY+SCZBF1AJuIX2odH
+            ZWEDoxfrsWjYTDlWYC6J/AjmxoBR+cQpQtVNbYdIRPeLN9miIgHeFr7nKwPBbKd++I5HJxJadBHU
+            oi7NggYbjZT2dfYG7AT5K+znAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="48f7eb6826e884b05576dccf98f17fed2315d1c54b8178783e95b486a285241f">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTaSV1ek569WQFX4VALz9ROOsk6RRRq5
