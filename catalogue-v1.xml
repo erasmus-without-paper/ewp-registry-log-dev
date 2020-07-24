@@ -10082,6 +10082,83 @@
             <rsa-public-key sha-256="3796937ff1cd8c486f8f07b76912d9aafc7f8886f0becb8c6a79d6bce31ce0af"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNISS test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://uniss.esse3.pp.cineca.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://uniss.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://uniss.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://uniss.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://uniss.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uniss.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b943ceb9328ba10886ae58bb7ade6649f4750fc0b8ee34ce539d00a82aea9336"/>
+            <rsa-public-key sha-256="c0d0f7f89134bc975feeae28c3cff4349df3b2d4db76d45f14bfe8db4e1a837f"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="c0d0f7f89134bc975feeae28c3cff4349df3b2d4db76d45f14bfe8db4e1a837f"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="erasmus">DK ARHUS04</other-id>
@@ -11518,6 +11595,12 @@
             <name xml:lang="en">University of CINECA</name>
             <name xml:lang="it">Universita' degli Studi di CINECA</name>
         </hei>
+        <hei id="uniss.it">
+            <other-id type="erasmus">I  SASSARI01</other-id>
+            <other-id type="pic">999465594</other-id>
+            <name xml:lang="en">UNIVERSITY OF SASSARI - TEST</name>
+            <name xml:lang="it">Universita degli Studi di SASSARI - TEST</name>
+        </hei>
         <hei id="univ-lehavre.fr">
             <other-id type="erasmus">F  LE-HAVR11</other-id>
             <name xml:lang="en">Université Le Havre Normandie</name>
@@ -12024,6 +12107,16 @@
             irzU54/+rVhCiB3vbmzNO+ojMN2XAXg8BxXBed+i9H0cPf6Pdya2ousJNSDAnt8SZHwWJMtXz+kZ
             kfl7DLqhZXVevyBM5qPshCSbbmYAupIuowFKRnQapHAaH4Wequ6NeKmRtghEuk7U3SRZ00Pge4xb
             JqRXTwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="c0d0f7f89134bc975feeae28c3cff4349df3b2d4db76d45f14bfe8db4e1a837f">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAqA/C5C6cJRM2ppP87g8av/OksZy1VM61
+            /YKTT34fVxGFiGcwzeZGOBRymkb8LUu133jOZuSVmsRT6dTeP9OoI8V6NyIAVZyA51ss2vfzQyaq
+            Al4Mdj4crOdQdgljBkXM45lJfI4No1mG4XAcXftPkQHkYixFNygwFTLnF8bH+TwxJSyKVBL67039
+            WHV0kvKZ9UWJ5uyFDDwk/BgByRe1bK6i57VWRGPQ4kMcpfGTVsWgVYdokgq0NX/qPKH6EOek0SQZ
+            9GVyAj3q+1+7IFqCZBF+fNZObh56R2IbZmBHFxJMla2kEnHJbLlh1fPFEVd5WM178K69ugZB2AFE
+            RAncuXVb19w8LkC+qhYytpiXyEmIV43qc19+BJrCbYL4iKBl8lr/IiCF3HOKbf0NInBuJr2boC1T
+            CGV0Z3NW4+o7eCgLsrghmtVJnm7IY/s2u98PJfNCIL9UV6Ds0Uf/6BruMYEzOFyNGcxcar40DGtK
+            kCg09+l/Le4dlSRVEKi+htoFAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="c8e5d7e16a87ff8f0091078823a35b3d82d0f7f354c9344153d1338faa86d97a">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA8quGM4qLGt9c4a3m3tEkaZWP2d+TojiM
