@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns40:manifest xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd" xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd" xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/tree/stable-v2" xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1" xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-types-contact/tree/stable-v1" xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-types-phonenumber/tree/stable-v1" xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/get-response.xsd" xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/endpoints/index-response.xsd" xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-courses/tree/stable-v1" xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1" xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/tree/stable-v1" xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/index-response.xsd" xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/endpoints/get-response.xsd" xmlns:ns35="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/get-response.xsd" xmlns:ns36="https://github.com/emrex-eu/elmo-schemas/tree/v1" xmlns:ns37="http://www.w3.org/2000/09/xmldsig#" xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/endpoints/index-response.xsd" xmlns:ns39="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2" xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ns41="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/tree/stable-v2" xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/stable-v2" xmlns:ns44="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/tree/stable-v1" xmlns:ns45="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/tree/stable-v1" xmlns:ns46="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/tree/stable-v1">
     <ns40:host>
-        <ns42:admin-notes>ULisboa EWP node used for tests</ns42:admin-notes>
+        <ns42:admin-notes>ULisboa EWP node</ns42:admin-notes>
         <ns33:apis-implemented>
+            <ns3:institutions version="2.1.0">
+                <ns3:http-security>
+                    <ns2:client-auth-methods>
+                        <ns5:tlscert allows-self-signed="true"/>
+                        <ns6:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns7:tlscert/>
+                        <ns8:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns3:http-security>
+                <ns3:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/institutions</ns3:url>
+                <ns3:max-hei-ids>1</ns3:max-hei-ids>
+            </ns3:institutions>
             <ns22:discovery version="5.0.0">
                 <ns22:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/manifest</ns22:url>
             </ns22:discovery>
@@ -23,68 +37,68 @@
         <ns40:institutions-covered>
             <ns33:hei id="ulisboa.pt">
                 <ns33:other-id type="erasmus">P  LISBOA109</ns33:other-id>
-                <ns33:other-id type="pic">949885305</ns33:other-id>
                 <ns33:other-id type="erasmus-charter">269558-EPP-1-2015-1-PT-EPPKA3-ECHE</ns33:other-id>
+                <ns33:other-id type="pic">949885305</ns33:other-id>
                 <ns33:name xml:lang="en">University of Lisbon</ns33:name>
                 <ns33:name xml:lang="pt-PT">Universidade de Lisboa</ns33:name>
             </ns33:hei>
         </ns40:institutions-covered>
         <ns40:client-credentials-in-use>
-            <ns40:certificate>MIIGyDCCBbCgAwIBAgIQBhd/5DpD39gl+bMBrOFbrjANBgkqhkiG9w0BAQsFADBk
+            <ns40:certificate>MIIGvzCCBaegAwIBAgIQBPIfBRdPLsaVkZImwtsYFTANBgkqhkiG9w0BAQsFADBk
 MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
 QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
-Q0EgMzAeFw0xOTA5MzAwMDAwMDBaFw0yMTEwMDQxMjAwMDBaMIGBMQswCQYDVQQG
-EwJQVDEPMA0GA1UEBxMGTGlzYm9uMR8wHQYDVQQKExZVbml2ZXJzaWRhZGUgZGUg
-TGlzYm9hMRowGAYDVQQLExFTZXJ2aWNvcyBDZW50cmFpczEkMCIGA1UEAxMbZXdw
-LW1vYmlsaXR5LXF1YS51bGlzYm9hLnB0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
-MIIBCgKCAQEAvbpMI2aMrcVTyy9LEapFwuiKl/JyMYLiagZv7O0mgNfO2qeRR8bn
-TQb9Dpm53GxdYtoXkTux668+737taLwL8PGPFGwgiPqQetz1ovAo5UXQ49GzQGLT
-mrEmP4ufa7wXdUBHdssgal4rb/DSqnfYi4qRIrQ7tA/eZ9eJEKaYrYiOP4/T6flx
-liW8O0214PYA8OoEMh+5xPj1RHsZ2SGn/EtgVtDymjy53kPPIXVdHJY/hykrp2WH
-1ge0wb0Vbyj1kCxvvosx+HRIIjadqYJRnX6qHxWtlMelnoQ/So8PmvHLItLh2B8m
-aQzuU8z+3i5x3MA/ZgpBgJgG/Dt9HisxpQIDAQABo4IDVjCCA1IwHwYDVR0jBBgw
-FoAUZ/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFLZGsNNuwgMEGZaJ5TsI
-oIhru4nGMCYGA1UdEQQfMB2CG2V3cC1tb2JpbGl0eS1xdWEudWxpc2JvYS5wdDAO
-BgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMGsG
-A1UdHwRkMGIwL6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9URVJFTkFT
-U0xDQTMuY3JsMC+gLaArhilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vVEVSRU5B
-U1NMQ0EzLmNybDBMBgNVHSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsGAQUFBwIB
-FhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBuBggrBgEF
-BQcBAQRiMGAwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA4
-BggrBgEFBQcwAoYsaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RFUkVOQVNT
-TENBMy5jcnQwDAYDVR0TAQH/BAIwADCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFo
-AHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFtgkteOwAABAMA
-SDBGAiEAuPKU4cHqlHQQmBzi/59DyjICmxi+rIwaJhVloNJY43sCIQDKlHJX8OOF
-h3uS5e9BY41veO2CoVYoUB4/Q6sGgh6f5gB1AId1v+dZfPiMQ5lfvfNu/1aNR1Y2
-/0q1YMG06v9eoIMPAAABbYJLXtIAAAQDAEYwRAIgBTjMBcSk5hYiE/L7SZtGgL9a
-1PIHdXpa+uuktawnN20CIAwZuMRWUny15tM/SH/JCp1s5UzkPiIQUu0xOLqOZL+t
-AHYARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFtgktd3QAABAMA
-RzBFAiEAj1kw0kHKpJx/orywhgWXhRNH/16JiUa/LQoBOFvEns4CIAEdG9dBXzkG
-hjePD7j/9WM+uAmByJ5pf5RkVjKEhIgJMA0GCSqGSIb3DQEBCwUAA4IBAQBDHD4Q
-LgQ0uHfYDKXngbjGEPssCBfcGUfHLhEeGE1cza1OJ+cyseOkk5DVuEPS6i9PeKQj
-HIqiujTGr7cDTVh+jCF9MdvrWuiWLrJsQlZZhbXW2KTXCZGN6qalvkaIsmiWp59a
-VY2iqLWAmBL5WMvQZ2QVzi5p4JaGkEf9iKD1KWuraeUHiKFDrkZ/aqGdndNweujU
-nSWQsI1sMKhpna2V3epuhB89wsz662xyJ7ox7LRcX1BTsNl2ZuPNNg3UL1zm9uvU
-84f/NmATXRy+FeGB0UIod/u0xIC18DBzgWFY6H3wDv7Lo7O9LMoQNvoOjXaYhoR8
-agvR9VwB5i532zwF
+Q0EgMzAeFw0yMDA0MTcwMDAwMDBaFw0yMjA0MjIxMjAwMDBaMH0xCzAJBgNVBAYT
+AlBUMQ8wDQYDVQQHEwZMaXNib24xHzAdBgNVBAoTFlVuaXZlcnNpZGFkZSBkZSBM
+aXNib2ExGjAYBgNVBAsTEVNlcnZpY29zIENlbnRyYWlzMSAwHgYDVQQDExdld3At
+bW9iaWxpdHkudWxpc2JvYS5wdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMvqWyeMxQtLiWnDydd9U+gZ++GtlOF9ZWuTmSrMYgzTyC/BKWKViAQJFZgr
+sbxwjGkqxJo4rzIkChHkHETHr3SdfKdHlmChUMtUMDvuv9iKFI4MtU8TBKs9a2Sz
+rIHJd2E0NQcPZzzOouHHddl0w/4zFSznrWBGvYCuHncZi5dL1Apd5hiTgNewgzzK
+6CZAbB/YTrU8GGuHht0pqhpo94uMpkizHqYr9Ja3n3NPAKjW/JWYzCre6b7y5s2H
+1CzswqaeozU1+Oj1o41kJrcKSVCrAtEik+mLKXtNUNuSUReUdVdD/fH+pno7whF1
+l4jgt1RQ3RnmGBvFrgSGBX6GIqECAwEAAaOCA1IwggNOMB8GA1UdIwQYMBaAFGf9
+iCAUJ5jHCdIlGbvpURFjdVBiMB0GA1UdDgQWBBT0rptD3UidF/Yx3aNmtbGVTXOy
+PjAiBgNVHREEGzAZghdld3AtbW9iaWxpdHkudWxpc2JvYS5wdDAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIw
+L6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3Js
+MC+gLaArhilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNy
+bDBMBgNVHSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsGAQUFBwIBFhxodHRwczov
+L3d3dy5kaWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBuBggrBgEFBQcBAQRiMGAw
+JAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcw
+AoYsaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcnQw
+DAYDVR0TAQH/BAIwADCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYAKXm+8J45
+OSHwVnOfY6V35b5XfZxgCvj5TV0mXCVdx4QAAAFxiVPjqwAABAMARzBFAiEA0Z3s
+Dojcrs37D9pt6qJ/CYPXQhd3fKJYRUswOkEAATkCIBrZDCfwDWi6HvHdIms2qJkW
+fctCask3LwgRyI4HfQOXAHYAIkVFB1lVJFaWP6Ev8fdthuAjJmOtwEt/XcaDXG7i
+DwIAAAFxiVPj0gAABAMARzBFAiEA7pUK8D3k9XLsldlfQe+C+KWG4uVUoQCJKA3d
+tL3HMqoCICwr8RLjZS0mxDWZH1DkjFUV7gJ1RHFaKTRGkr5Vaqc9AHYAUaOw9f0B
+eZxWbbg3eI8MpHrMGyfL956IQpoN/tSLBeUAAAFxiVPkFQAABAMARzBFAiAu4Efr
+gEyL17myKPT8cSCc73k8bZnFeuKPT2BHW+GlmwIhAJLKIBhDSPuJ+TDG1W/MHQcJ
+AYRVXkgDUtMM7dZvzYkiMA0GCSqGSIb3DQEBCwUAA4IBAQB3Q7Bk6qPWO3F1BXNd
+IlVnS6xHlicBHEebr4MtjRGU2nTMtdMwQ//QTagbkqpTbsHv4d/w35/81u6q6AJw
+ktL/LBX46BQElRXO4OVOeJRbiN6wyVD5LLUWK+q2OPYmaTwfWhoqL7nbXbrRPIoR
+Y5zNnc/9/JP/aQkUWpbS74kxx3oinNSn4Aqrw9elZwbey3acJRqS9tmTCJIZ1Lp2
+R9yFYWmWOynROg825ETbnew8JlhoOulguj2ibBOcAiNtnJmrJUFnd5clRvRO/T4p
+e15HypeRjX76veQ2CkKMNX8uCY7EwdOLi+0tMXLBTloAvMW1HRH7CasPeg88CDy2
+WAuw
 </ns40:certificate>
-            <ns40:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvbpMI2aMrcVTyy9LEapF
-wuiKl/JyMYLiagZv7O0mgNfO2qeRR8bnTQb9Dpm53GxdYtoXkTux668+737taLwL
-8PGPFGwgiPqQetz1ovAo5UXQ49GzQGLTmrEmP4ufa7wXdUBHdssgal4rb/DSqnfY
-i4qRIrQ7tA/eZ9eJEKaYrYiOP4/T6flxliW8O0214PYA8OoEMh+5xPj1RHsZ2SGn
-/EtgVtDymjy53kPPIXVdHJY/hykrp2WH1ge0wb0Vbyj1kCxvvosx+HRIIjadqYJR
-nX6qHxWtlMelnoQ/So8PmvHLItLh2B8maQzuU8z+3i5x3MA/ZgpBgJgG/Dt9Hisx
-pQIDAQAB
+            <ns40:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy+pbJ4zFC0uJacPJ131T
+6Bn74a2U4X1la5OZKsxiDNPIL8EpYpWIBAkVmCuxvHCMaSrEmjivMiQKEeQcRMev
+dJ18p0eWYKFQy1QwO+6/2IoUjgy1TxMEqz1rZLOsgcl3YTQ1Bw9nPM6i4cd12XTD
+/jMVLOetYEa9gK4edxmLl0vUCl3mGJOA17CDPMroJkBsH9hOtTwYa4eG3SmqGmj3
+i4ymSLMepiv0lrefc08AqNb8lZjMKt7pvvLmzYfULOzCpp6jNTX46PWjjWQmtwpJ
+UKsC0SKT6Yspe01Q25JRF5R1V0P98f6mejvCEXWXiOC3VFDdGeYYG8WuBIYFfoYi
+oQIDAQAB
 </ns40:rsa-public-key>
         </ns40:client-credentials-in-use>
         <ns40:server-credentials-in-use>
-            <ns40:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvbpMI2aMrcVTyy9LEapF
-wuiKl/JyMYLiagZv7O0mgNfO2qeRR8bnTQb9Dpm53GxdYtoXkTux668+737taLwL
-8PGPFGwgiPqQetz1ovAo5UXQ49GzQGLTmrEmP4ufa7wXdUBHdssgal4rb/DSqnfY
-i4qRIrQ7tA/eZ9eJEKaYrYiOP4/T6flxliW8O0214PYA8OoEMh+5xPj1RHsZ2SGn
-/EtgVtDymjy53kPPIXVdHJY/hykrp2WH1ge0wb0Vbyj1kCxvvosx+HRIIjadqYJR
-nX6qHxWtlMelnoQ/So8PmvHLItLh2B8maQzuU8z+3i5x3MA/ZgpBgJgG/Dt9Hisx
-pQIDAQAB
+            <ns40:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy+pbJ4zFC0uJacPJ131T
+6Bn74a2U4X1la5OZKsxiDNPIL8EpYpWIBAkVmCuxvHCMaSrEmjivMiQKEeQcRMev
+dJ18p0eWYKFQy1QwO+6/2IoUjgy1TxMEqz1rZLOsgcl3YTQ1Bw9nPM6i4cd12XTD
+/jMVLOetYEa9gK4edxmLl0vUCl3mGJOA17CDPMroJkBsH9hOtTwYa4eG3SmqGmj3
+i4ymSLMepiv0lrefc08AqNb8lZjMKt7pvvLmzYfULOzCpp6jNTX46PWjjWQmtwpJ
+UKsC0SKT6Yspe01Q25JRF5R1V0P98f6mejvCEXWXiOC3VFDdGeYYG8WuBIYFfoYi
+oQIDAQAB
 </ns40:rsa-public-key>
         </ns40:server-credentials-in-use>
     </ns40:host>

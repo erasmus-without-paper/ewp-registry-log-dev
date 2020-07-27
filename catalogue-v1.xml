@@ -7144,8 +7144,22 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-notes>ULisboa EWP node used for tests</ewp:admin-notes>
+        <ewp:admin-notes>ULisboa EWP node</ewp:admin-notes>
         <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <d5:discovery version="5.0.0">
                 <d5:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/manifest</d5:url>
             </d5:discovery>
@@ -7167,11 +7181,11 @@
             <hei-id>ulisboa.pt</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="9f540262d0ea335553d8ef9a9d5421b552f80b5af840573a3a7869c3751ebd11"/>
-            <rsa-public-key sha-256="8a79f7f7e77ff34748ef72b0d512f41e496e375594914015ef198040654d81f6"/>
+            <certificate sha-256="841a5f737ff0eba94103d2ae999e8ece2bc04348230ec169feba89db5594f0d1"/>
+            <rsa-public-key sha-256="ca387de51be0d23059fa81574ddee3975189f6940fd0d0c4875fcdd36cedc34e"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="8a79f7f7e77ff34748ef72b0d512f41e496e375594914015ef198040654d81f6"/>
+            <rsa-public-key sha-256="ca387de51be0d23059fa81574ddee3975189f6940fd0d0c4875fcdd36cedc34e"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -12037,14 +12051,6 @@
             Pb/YPV7GoOxlqiInt9+es0uZ90QO0i+S9jTdAgYHbrQhaahDtlIR/cxXvJuNNb4WIlea7gzUw40c
             O4whPQIDAQAB
         </rsa-public-key>
-        <rsa-public-key sha-256="8a79f7f7e77ff34748ef72b0d512f41e496e375594914015ef198040654d81f6">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvbpMI2aMrcVTyy9LEapFwuiKl/JyMYLi
-            agZv7O0mgNfO2qeRR8bnTQb9Dpm53GxdYtoXkTux668+737taLwL8PGPFGwgiPqQetz1ovAo5UXQ
-            49GzQGLTmrEmP4ufa7wXdUBHdssgal4rb/DSqnfYi4qRIrQ7tA/eZ9eJEKaYrYiOP4/T6flxliW8
-            O0214PYA8OoEMh+5xPj1RHsZ2SGn/EtgVtDymjy53kPPIXVdHJY/hykrp2WH1ge0wb0Vbyj1kCxv
-            vosx+HRIIjadqYJRnX6qHxWtlMelnoQ/So8PmvHLItLh2B8maQzuU8z+3i5x3MA/ZgpBgJgG/Dt9
-            HisxpQIDAQAB
-        </rsa-public-key>
         <rsa-public-key sha-256="9b3e81af86e6565449c6d70bcbcaba63f80a41f9087d7b71748c6a0451942e08">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAli5adXlejIoGqa3K58pe/2bq/qu3R9HU
             Yidxpm2ahWql/cUFPRn/0ttAJpvctwycRm1HKr9oRq6lTYMGgZU1l/Ozb4aOJgUYsjZGStVeFP68
@@ -12114,6 +12120,14 @@
             vI0A4x6fGeZzl4rHg94+J8JHdZwMmBjvgI6vC2hURUbAaEf0zc3rPXNCt/ATajDBD94IG3PL+2Nb
             w836+tFZo/TRvQ+n9wNDfUDK71dxzjBCVPUsE5I8N6ZTDWMN0mm4FiwMzxNF1CP9iBF1lkDpe6qI
             3Q366HDk6YIOqItXSKVrE5UWh8wsTf/CptbTb2TU7JMCAwEAAQ==
+        </rsa-public-key>
+        <rsa-public-key sha-256="ca387de51be0d23059fa81574ddee3975189f6940fd0d0c4875fcdd36cedc34e">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy+pbJ4zFC0uJacPJ131T6Bn74a2U4X1l
+            a5OZKsxiDNPIL8EpYpWIBAkVmCuxvHCMaSrEmjivMiQKEeQcRMevdJ18p0eWYKFQy1QwO+6/2IoU
+            jgy1TxMEqz1rZLOsgcl3YTQ1Bw9nPM6i4cd12XTD/jMVLOetYEa9gK4edxmLl0vUCl3mGJOA17CD
+            PMroJkBsH9hOtTwYa4eG3SmqGmj3i4ymSLMepiv0lrefc08AqNb8lZjMKt7pvvLmzYfULOzCpp6j
+            NTX46PWjjWQmtwpJUKsC0SKT6Yspe01Q25JRF5R1V0P98f6mejvCEXWXiOC3VFDdGeYYG8WuBIYF
+            foYioQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="cbf8f8dec7dd772b8c6ca1a5492a8e5c78805f543813f8bfa1ee04480c8a4c35">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlcEYM0vAWp/f3jPrFqDiCW5kbBDmnulW
