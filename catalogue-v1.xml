@@ -8270,9 +8270,11 @@
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
                 <e2:url>https://orinumenti.uca.es/en/ewp/echo</e2:url>
@@ -8369,7 +8371,11 @@
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="34f75cb43a3af0b4849309bee3479007a48c30003dcc3b1596e3d76ab8e5b51f"/>
+            <rsa-public-key sha-256="29cb7e696d645a404a188037e3336da6d7dce7aed91ca2249ec9aac588aadaa5"/>
         </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="29cb7e696d645a404a188037e3336da6d7dce7aed91ca2249ec9aac588aadaa5"/>
+        </server-credentials-in-use>
     </host>
     <host>
         <apis-implemented>
@@ -12874,6 +12880,14 @@
             x1FzQhqRlrs7pxAXKdMm4vMFCu56LIwSWNcE7KH0UbOjkBShF/81f+YiNKy4t60/ux9Co1l96Slp
             y2hQcI0N8MQfp5/IljyjJGUW0Bj7pldMELzBekkm+aDum8LNpCZJhclM8FSEinsBSFQVHuiSsNat
             Tegc8wIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="29cb7e696d645a404a188037e3336da6d7dce7aed91ca2249ec9aac588aadaa5">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA39QdwaJYtzKjkH4uLCDznokuAlopXtxt
+            qI9ohyg0J0nBPfTgUJqJAbSnwidpuijOrb5xLO1q70DT2BlFQIfxTp52NcQLAkQEntklwGm5l3OX
+            8kDRYoG/Gd2BKTJ/42ar6g9mZVQPeJ/ZPGscddHy+uJwRh37bsb9zbZT5Pbi2Va0GaK2fQ+1yMUh
+            9uXVh3lTX4/3EjoHkfrs4x4NJ+OdY/x5zJs/dCV5oC6MhKR8Gmnm2ojAEFN84avGn3+89L9YhCl2
+            EK4jimeVI0pCjyqgnPT7GIVnAnj/NXi06NnpaObmB7K32sbp1fGVv569sfdfGRxezG8diTeCz1is
+            fLOLDQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="2bb9dc9f8accfde1a1f87a0dc68178c540ab906ee0ab5814a4337ca585eff210">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz5EmO1EFiTipZAOneaTEIq52XCADubPz
