@@ -1,48 +1,41 @@
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns:arch-1.10.0="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:disc-5.0.0="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns:echo-2.0.1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2"
-    xmlns:reg-1.4.1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:sec-2.0.2="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:api-disc="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:api-echo="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:api-inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:arch="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:disc="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:reg="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
 >
-    <disc-5.0.0:host>
-        <arch-1.10.0:admin-email>manuel.pereira@ulusofona.pt</arch-1.10.0:admin-email>
-        <arch-1.10.0:admin-notes>Test manifest file</arch-1.10.0:admin-notes>
-        <reg-1.4.1:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
-                version="4.1.1"
-            >
-                <arch-1.10.0:admin-email>manuel.pereira@ulusofona.pt</arch-1.10.0:admin-email>
-                <url>https://ewp.playdev.ulusofona.pt/discovery-4.1.1</url>
-            </discovery>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-                version="5.0.0"
-            >
-                <arch-1.10.0:admin-email>manuel.pereira@ulusofona.pt</arch-1.10.0:admin-email>
-                <url>https://ewp.playdev.ulusofona.pt/discovery</url>
-            </discovery>
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.1"
-            >
-                <arch-1.10.0:admin-email>manuel.pereira@ulusofona.pt</arch-1.10.0:admin-email>
-                <http-security>
-                    <sec-2.0.2:client-auth-methods>
+    <disc:host>
+        <arch:admin-email>manuel.pereira@ulusofona.pt</arch:admin-email>
+        <arch:admin-notes>Test manifest file</arch:admin-notes>
+        <reg:apis-implemented>
+            <api-disc:discovery version="4.1.1">
+                <arch:admin-email>manuel.pereira@ulusofona.pt</arch:admin-email>
+                <api-disc:url>https://ewp.playdev.ulusofona.pt/discovery-4.1.1</api-disc:url>
+            </api-disc:discovery>
+            <api-disc:discovery version="5.0.0">
+                <arch:admin-email>manuel.pereira@ulusofona.pt</arch:admin-email>
+                <api-disc:url>https://ewp.playdev.ulusofona.pt/discovery</api-disc:url>
+            </api-disc:discovery>
+            <api-echo:echo version="2.0.1">
+                <arch:admin-email>manuel.pereira@ulusofona.pt</arch:admin-email>
+                <api-echo:http-security>
+                    <sec:client-auth-methods>
                         <cliauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/blob/stable-v1/security-entries.xsd"/>
                         <cliauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/blob/stable-v1/security-entries.xsd"/>
-                    </sec-2.0.2:client-auth-methods>
-                    <sec-2.0.2:server-auth-methods>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
                         <srvauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/blob/stable-v1/security-entries.xsd"/>
                         <srvauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/blob/stable-v1/security-entries.xsd"/>
-                    </sec-2.0.2:server-auth-methods>
-                </http-security>
-                <url>https://ewp.playdev.ulusofona.pt/echo</url>
-            </echo>
-        </reg-1.4.1:apis-implemented>
-        <disc-5.0.0:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+                    </sec:server-auth-methods>
+                </api-echo:http-security>
+                <api-echo:url>https://ewp.playdev.ulusofona.pt/echo</api-echo:url>
+            </api-echo:echo>
+        </reg:apis-implemented>
+        <disc:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="ulusofona.pt">
                 <other-id type="pic">997605425</other-id>
                 <other-id type="erasmus">P LISBOA52</other-id>
@@ -50,7 +43,7 @@
                 <name xml:lang="en">Lusófona University</name>
                 <name xml:lang="pt">Universidade Lusófona</name>
             </hei>
-        </disc-5.0.0:institutions-covered>
+        </disc:institutions-covered>
         <client-credentials-in-use>
             <certificate>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</certificate>
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4k9bNqqUgx05NOndYs5NkT0p30qAtqmGCRtWnSySuExU/4/YOcqOQjBP9snVefdwD7Zz9g7CDeBpym9v20NbfeVEQSXcNq7bqm7smCUNQzHO48T1+ZZw4FwVGftPu0k63aw/EvGUDb0M7mftn3S00nWqr6ib9v+OaM2eXQtMJA57LWsL6GtsBMKypt50jukS6SF53DdShR9P4nfvp4vSIROgGAyBgmk1kmNW5sPPRVXQ58iHl30SEXZXUW+lJFO2lf/3TQKqa48XYbff2IxmXCr2I7elAiNf2H7B6yfhSDObxJ0ioqIfMiHBC82poo2IT2GZu40yqh0Ws7MYGdv/bQIDAQAB</rsa-public-key>
@@ -58,5 +51,5 @@
         <server-credentials-in-use>
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4k9bNqqUgx05NOndYs5NkT0p30qAtqmGCRtWnSySuExU/4/YOcqOQjBP9snVefdwD7Zz9g7CDeBpym9v20NbfeVEQSXcNq7bqm7smCUNQzHO48T1+ZZw4FwVGftPu0k63aw/EvGUDb0M7mftn3S00nWqr6ib9v+OaM2eXQtMJA57LWsL6GtsBMKypt50jukS6SF53DdShR9P4nfvp4vSIROgGAyBgmk1kmNW5sPPRVXQ58iHl30SEXZXUW+lJFO2lf/3TQKqa48XYbff2IxmXCr2I7elAiNf2H7B6yfhSDObxJ0ioqIfMiHBC82poo2IT2GZu40yqh0Ws7MYGdv/bQIDAQAB</rsa-public-key>
         </server-credentials-in-use>
-    </disc-5.0.0:host>
+    </disc:host>
 </manifest>
