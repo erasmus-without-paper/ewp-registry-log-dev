@@ -11179,7 +11179,46 @@
     <host>
         <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
         <ewp:admin-notes>Test manifest file</ewp:admin-notes>
-        <apis-implemented/>
+        <apis-implemented>
+            <d4:discovery version="4.1.1">
+                <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
+                <d4:url>https://ewp.playdev.ulusofona.pt/discovery-4.1.1</d4:url>
+            </d4:discovery>
+            <d5:discovery version="5.0.0">
+                <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
+                <d5:url>https://ewp.playdev.ulusofona.pt/discovery</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <cliauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/blob/stable-v1/security-entries.xsd"/>
+                        <cliauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/blob/stable-v1/security-entries.xsd"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/blob/stable-v1/security-entries.xsd"/>
+                        <srvauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/blob/stable-v1/security-entries.xsd"/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.playdev.ulusofona.pt/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <cliauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/blob/stable-v1/security-entries.xsd"/>
+                        <cliauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/blob/stable-v1/security-entries.xsd"/>
+                        <cliauth-none xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/blob/stable-v1/security-entries.xsd"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/blob/stable-v1/security-entries.xsd"/>
+                        <srvauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/blob/stable-v1/security-entries.xsd"/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.playdev.ulusofona.pt/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
         <institutions-covered>
             <hei-id>ulusofona.pt</hei-id>
         </institutions-covered>
