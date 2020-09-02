@@ -11329,6 +11329,105 @@
             <rsa-public-key sha-256="77f3d8005094e193ce946aed4c22beeec9959c5413b42c30725a223d81ae41e6"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>volenova@civ.zcu.cz</ewp:admin-email>
+        <ewp:admin-notes>EWP connector for IS/STAG</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://stag-demo.uhk.cz:8843/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://stag-demo.uhk.cz/ws/services/ewp/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://stag-demo.uhk.cz:8843/ws/services/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://stag-demo.uhk.cz:8843/ws/services/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://stag-demo.uhk.cz:8843/ws/services/ewp/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://stag-demo.uhk.cz:8843/ws/services/ewp/iias/index</ia3:index-url>
+            </ia3:iias>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://stag-demo.uhk.cz:8843/ws/services/ewp/iias/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uhk.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="ea82f9785f4b490490cab578e214470d56ca2e16e189d82ea39955d564959189"/>
+            <rsa-public-key sha-256="0de814209bd92ee2f5b71f17b76bddbe3abb3799ddc049c156cd0c44c10787f2"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="0de814209bd92ee2f5b71f17b76bddbe3abb3799ddc049c156cd0c44c10787f2"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="erasmus">DK ARHUS04</other-id>
@@ -12491,6 +12590,13 @@
             <name xml:lang="en">Ghent University</name>
             <name xml:lang="nl">Universiteit Gent</name>
         </hei>
+        <hei id="uhk.cz">
+            <other-id type="erasmus">CZ HRADEC01</other-id>
+            <other-id type="erasmus-charter">48675-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999865719</other-id>
+            <name xml:lang="cs">UNIVERZITA HRADEC KRÁLOVÉ</name>
+            <name xml:lang="en">University of Hradec Králové</name>
+        </hei>
         <hei id="uib.no">
             <other-id type="erasmus">N BERGEN01</other-id>
             <other-id type="pic">999974456</other-id>
@@ -12987,6 +13093,14 @@
             IPkHs7+esbo17NK0sEf/QjAVvac3K6VlSA4i0ydAeqB1b3iyxKB/wjwhgM119kZQMZXUzpIDb3ht
             D40CPMW0D5S9Y12ajUQsMNeKNx3ltPgMFi6DM8pIiojRuOqabl0lsGAGRUgvVBS5pICdNXNaire7
             CSmdQwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="0de814209bd92ee2f5b71f17b76bddbe3abb3799ddc049c156cd0c44c10787f2">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoUjzzdxSJ/4eCNxu/DaM8b+LjpSwwy6g
+            Ar3/5j1NHLRW5ksFrUnltSojuPm9GpuG8ULo6deyqVOwiXiwO4J+C2xP+FZSyzrdxRyCG7nHpLKo
+            ecO4hCnF9kfO7a9NWwyDxDv28Wqu1Fo5R13u3C83NXqNgeI9xSiGyGZftA8+I2/lVQqZF9rFkBtY
+            Q5OEGN2a9plD/7XG9svJUXYAw0tkALn5dqe0PmY/MQwcMcfPmA4CZGYWoi87/pnX/Dp288GpekDn
+            Qk4SCF3D7UDzfVBjt+8/xvCzHaNix766HpNiu5eK2cL7ItficvT58B0I7lqMCOdKRdI/WWSMvYuk
+            W4r4iQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="0f9b2bc1d3e4f733fb0146f193f520babb1a4c1ed8e0798906ebca8a7e81cb8c">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtSH8lLEsSYcMcmi0AFiYmxPnhWEG6Mot
