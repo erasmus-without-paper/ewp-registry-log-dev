@@ -8251,6 +8251,30 @@
                 </iac2:http-security>
                 <iac2:url>https://ewp-test.vermusuni.space/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp-test.vermusuni.space/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp-test.vermusuni.space/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+            </om1:omobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>massey.edu.si</hei-id>
