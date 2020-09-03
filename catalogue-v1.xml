@@ -8300,6 +8300,22 @@
                 <ia3:index-url>https://orinumenti.uca.es/en/ewp/iias/index</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/v0.2.1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://orinumenti.uca.es/en/ewp/iias/approval</url>
+                <max-iia-ids>1</max-iia-ids>
+                <sends-notifications/>
+            </iias-approval>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
