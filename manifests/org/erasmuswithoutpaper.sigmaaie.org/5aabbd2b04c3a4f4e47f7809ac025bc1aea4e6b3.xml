@@ -92,37 +92,107 @@
                 <ns17:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</ns17:url>
             </ns17:echo>
             <ns10:institutions version="2.1.0">
+		  <ns10:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns10:http-security>
                 <ns10:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/institutions/get</ns10:url>
                 <ns10:max-hei-ids>1</ns10:max-hei-ids>
             </ns10:institutions>
             <ns4:organizational-units version="2.1.1">
+		  <ns4:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns4:http-security>
                 <ns4:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/departments/get</ns4:url>
                 <ns4:max-ounit-ids>100</ns4:max-ounit-ids>
                 <ns4:max-ounit-codes>100</ns4:max-ounit-codes>
             </ns4:organizational-units>            
             <ns5:omobilities version="0.16.0">
+		  <ns5:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns5:http-security>
                 <ns5:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/get</ns5:get-url>
                 <ns5:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/index</ns5:index-url>                
                 <ns5:max-omobility-ids>1</ns5:max-omobility-ids>
                 <ns5:sends-notifications/>
             </ns5:omobilities>
             <ns14:imobilities version="0.3.1">
+		  <ns14:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns14:http-security>
                 <ns14:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/imobility/get</ns14:get-url>                
                 <ns14:max-omobility-ids>1</ns14:max-omobility-ids>
                 <ns14:sends-notifications/>
             </ns14:imobilities>
             <ns9:omobility-cnr version="0.4.1">
+		  <ns9:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns9:http-security>
                 <ns9:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/omobility/cnr</ns9:url>
                 <ns9:max-omobility-ids>10</ns9:max-omobility-ids>
             </ns9:omobility-cnr>
             <ns15:iias version="3.0.0">
+		  <ns15:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns15:http-security>
                 <ns15:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/get</ns15:get-url>
                 <ns15:max-iia-ids>1</ns15:max-iia-ids>
                 <ns15:max-iia-codes>1</ns15:max-iia-codes>
                 <ns15:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/index</ns15:index-url>
                 <ns15:sends-notifications/>
             </ns15:iias>
-            <ns16:iia-cnr version="2.0.2">            
+            <ns16:iia-cnr version="2.0.2">
+		  <ns16:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns16:http-security>            
                 <ns16:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iias/cnr</ns16:url>                
             </ns16:iia-cnr>
             <ns50:iias-approval version="0.2.1">
@@ -154,6 +224,16 @@
                 <ns51:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/iia/approval/cnr</ns51:url>
             </ns51:iia-approval-cnr>
             <ns19:courses version="0.7.1">
+	         <ns19:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns19:http-security>
                 <ns19:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/courses</ns19:url>
                 <ns19:max-los-ids>1</ns19:max-los-ids>
                 <ns19:max-los-codes>1</ns19:max-los-codes>
@@ -174,11 +254,31 @@
                 <ns49:supports-modified-since>true</ns49:supports-modified-since>
             </ns49:simple-course-replication>
             <ns11:imobility-tors version="0.7.0">
+		  <ns11:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns11:http-security>
                 <ns11:get-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/get</ns11:get-url>
                 <ns11:index-url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/tor/index</ns11:index-url>
                 <ns11:max-omobility-ids>1</ns11:max-omobility-ids>
             </ns11:imobility-tors>
             <ns13:imobility-cnr version="0.1.1">
+		  <ns13:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns13:http-security>
                 <ns13:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/imobility/cnr</ns13:url>
                 <ns13:max-omobility-ids>10</ns13:max-omobility-ids>
             </ns13:imobility-cnr>            
