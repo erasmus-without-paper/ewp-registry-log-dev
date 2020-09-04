@@ -11642,6 +11642,64 @@
             <rsa-public-key sha-256="458ae2465f983466dafd544a7d015541db133ac85e411088e80d1add7ff8cbd3"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-notes>EWP connection API for CTU Mobility application</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://mobility-test.is.cvut.cz/ewp/api/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</ia3:index-url>
+            </ia3:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>cvut.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="30336187c2ba89758f493ce5a85ec84a0e2fe1a456e5ec6a564f21f964a281f5"/>
+            <rsa-public-key sha-256="2012292741e313b1ffadfc173066770e55624d0dd6463719583d2d366858d593"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="2012292741e313b1ffadfc173066770e55624d0dd6463719583d2d366858d593"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="erasmus">DK ARHUS04</other-id>
@@ -11860,6 +11918,13 @@
         <hei id="csmvigo.com">
             <other-id type="erasmus">E VIGO03</other-id>
             <name xml:lang="en">CONSERVATORIO SUPERIOR DE MUSICA IN VIGO</name>
+        </hei>
+        <hei id="cvut.cz">
+            <other-id type="erasmus">CZ PRAHA10</other-id>
+            <other-id type="erasmus-charter">51698-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999848744</other-id>
+            <name xml:lang="cs">České vysoké učení technické v Praze</name>
+            <name xml:lang="en">Czech Technical University in Prague</name>
         </hei>
         <hei id="demo.jekab.eu">
             <other-id type="erasmus">LV JEKABPI01</other-id>
@@ -13739,6 +13804,14 @@
             +Aw7GT5B6HbOKQo1CrrNSX2Jvey+SpIISVRQ6K8br2Re6pJcNFjjAPJE0vdxmGyQbAqgs/OpE8TB
             U8Z15AVLN78r9VoElYExFbwFaxfN8em9Txoc4kRrjX77hT/ldUCK3CCCSAjaxVdtjq1dDDeuT+4c
             xk1egwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="2012292741e313b1ffadfc173066770e55624d0dd6463719583d2d366858d593">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+MqaskQsibym6agoQF4iUCDDz0QMeJ3U
+            Cz2cbXgkadGE1a/IE/BvQB/M0Z/87T1QWfBv8xeNj/mfFPxaO30rYLvMTeBn0aqMRedFgtxOaamw
+            EqcXNraGeTWPiMdVRv/lowXygtlYHmCB9HNvcfE57vpyjLNU2Qa3mJ4bt3tw75cvFzrkkvXN2+ky
+            zlimYbVTMVAISMmLvJ3mV05JVUBLo5J+Tf377sWimhKWjbVX4Uxa4O4ZMEjxXJE8hjvswvaugqge
+            qAE0IwxpezyrU4R1m/DsjEMobBFkljT7qktueBriwalMXA/okhaZDDM5cw7J7mfNuB6sM8eCimZ7
+            gblu9QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="251f4251af1f973c7f3b81ba771fbe028cf129bac5d21b78e5e29b63606e6f37">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0Cun9MS0EWfsVsH1jhsfZqZQdK+3ExCZ
