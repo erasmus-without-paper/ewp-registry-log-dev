@@ -11742,22 +11742,26 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>developers@cvut.cz</ewp:admin-email>
         <ewp:admin-notes>EWP connection API for CTU Mobility application</ewp:admin-notes>
         <apis-implemented>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://mobility-test.is.cvut.cz/api/manifest</d5:url>
+            </d5:discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://mobility-test.is.cvut.cz/ewp/api/echo</e2:url>
-            </e2:echo>
-            <d5:discovery version="5.0.0">
-                <d5:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</d5:url>
-            </d5:discovery>
+                </http-security>
+                <url>https://mobility-test.is.cvut.cz/api/echo</url>
+            </echo>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -11767,7 +11771,7 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </in2:http-security>
-                <in2:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</in2:url>
+                <in2:url>https://mobility-test.is.cvut.cz/api/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
             <iias
@@ -11782,10 +11786,10 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </http-security>
-                <get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</get-url>
+                <get-url>https://mobility-test.is.cvut.cz/api/iias/get</get-url>
                 <max-iia-ids>1</max-iia-ids>
                 <max-iia-codes>1</max-iia-codes>
-                <index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</index-url>
+                <index-url>https://mobility-test.is.cvut.cz/api/iias/index</index-url>
             </iias>
         </apis-implemented>
         <institutions-covered>
