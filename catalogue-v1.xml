@@ -11343,6 +11343,26 @@
         <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
         <ewp:admin-notes>Test manifest file</ewp:admin-notes>
         <apis-implemented>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <cliauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/blob/stable-v1/security-entries.xsd"/>
+                        <cliauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/blob/stable-v1/security-entries.xsd"/>
+                        <cliauth-none xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/blob/stable-v1/security-entries.xsd"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauth-tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/blob/stable-v1/security-entries.xsd"/>
+                        <srvauth-httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/blob/stable-v1/security-entries.xsd"/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://ewp.playdev.ulusofona.pt/courses</co1:url>
+                <co1:max-los-ids>1</co1:max-los-ids>
+                <co1:max-los-codes>1</co1:max-los-codes>
+            </co1:courses>
             <d4:discovery version="4.1.1">
                 <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
                 <d4:url>https://ewp.playdev.ulusofona.pt/discovery-4.1.1</d4:url>
