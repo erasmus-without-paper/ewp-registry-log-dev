@@ -630,6 +630,16 @@
                 <d5:url>https://erasmuswithoutpaper.sigmaaie.org:1453/UPF_HOST.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
                 <e2:url>https://erasmuswithoutpaper.sigmaaie.org:1453/ewp/rest/echo</e2:url>
             </e2:echo>
             <in2:institutions version="2.1.0">
