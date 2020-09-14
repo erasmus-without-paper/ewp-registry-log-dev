@@ -18,6 +18,7 @@
     xmlns:api5="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
     xmlns:api6="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:api7="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:api8="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
 >
     <host>
         
@@ -82,6 +83,20 @@
                 <api7:max-iia-ids>1</api7:max-iia-ids>
                 <api7:sends-notifications></api7:sends-notifications>
             </api7:iias-approval>
+            
+            <api8:iia-approval-cnr version="0.2.0">
+                <api8:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                        
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                        
+                    </sec:server-auth-methods>
+                </api8:http-security>
+                <api8:url>https://orinumenti.uca.es/en/ewp/iias/approval-cnr</api8:url>
+            </api8:iia-approval-cnr>
             
             <api2:institutions version="2.1.0">
                 <api2:http-security>
