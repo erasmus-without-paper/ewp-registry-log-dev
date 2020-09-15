@@ -623,6 +623,260 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>arquitectura@sigmaaie.org</ewp:admin-email>
+        <ewp:admin-notes>SIGMA EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://uamci.sigmaaie.org/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://uamci.sigmaaie.org/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://uamci.sigmaaie.org/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://uamci.sigmaaie.org/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.16.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://uamci.sigmaaie.org/ewp/rest/omobility/get</om1:get-url>
+                <om1:index-url>https://uamci.sigmaaie.org/ewp/rest/omobility/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.1"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://uamci.sigmaaie.org/ewp/rest/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://uamci.sigmaaie.org/ewp/rest/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://uamci.sigmaaie.org/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://uamci.sigmaaie.org/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://uamci.sigmaaie.org/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://uamci.sigmaaie.org/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://uamci.sigmaaie.org/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://uamci.sigmaaie.org/ewp/rest/courses</co1:url>
+                <co1:max-los-ids>1</co1:max-los-ids>
+                <co1:max-los-codes>1</co1:max-los-codes>
+            </co1:courses>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </cr1:http-security>
+                <cr1:url>https://uamci.sigmaaie.org/ewp/rest/course-replication</cr1:url>
+                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://uamci.sigmaaie.org/ewp/rest/tor/get</imt1:get-url>
+                <imt1:index-url>https://uamci.sigmaaie.org/ewp/rest/tor/index</imt1:index-url>
+                <imt1:max-omobility-ids>1</imt1:max-omobility-ids>
+            </imt1:imobility-tors>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://uamci.sigmaaie.org/ewp/rest/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uam.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="10107262c9dc18954bec87472be29ab1cca544f90c001e94d04ed5b9c622677d"/>
+            <certificate sha-256="2b455719a3577f473c7e2c2f24a8da78428ce7230a3992a564f9007c453af0f6"/>
+            <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://www.service4mobility.com/europe_test/ewp/manifest?api=all</d5:url>
@@ -13436,6 +13690,12 @@
             <name xml:lang="en">University of Almeria</name>
             <name xml:lang="es">Universidad de Almería</name>
         </hei>
+        <hei id="uam.es">
+            <other-id type="erasmus">E MADRID04</other-id>
+            <other-id type="pic">999861354</other-id>
+            <name xml:lang="en">AUTONOMOUS UNIVERSITY OF MADRID</name>
+            <name xml:lang="es">UNIVERSIDAD AUTONOMA DE MADRID</name>
+        </hei>
         <hei id="ub.edu">
             <other-id type="erasmus">E  BARCELO01</other-id>
             <other-id type="euc">28570-IC-1-2007-1-ES-ERASMUS-EUCX-1</other-id>
@@ -14526,6 +14786,14 @@
             WL1T/kMQZZpTHqzCVRrdHw4SDtDu60lx4DsvpYbk3/nvPIi/13GQoISzORBklsT9DTwM0C8h0pBT
             bl/QUEjP2H4IgmmQLAUaLmq/c1L4rdn2hflF9lk+iznLsU06Qva7Wtxio85grrJFSffUr3Nyjn5s
             hd7aPQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9TYtPf0Vdrf0QVni0SrYDCxTBZUOOM1
+            zHUwASSgzs/1gz3VqQBap4FciZ7LFMUve4bEzjYHIGBHWfghB9vK7p9v+akiuyyp9Ld/QYWhFQbH
+            uaseWm39ZL+F1ZPvc3ni6T+bip1HWBaIUnHR3faaNkobzcA3uv0rV3AWLJh/YbGOzBXoK0AewKIu
+            +xBc+7qk9+0rQ3yK0ntED1jKrNFZwLiL6l+ZZlVqlh0l25JOhHfi0Q3XZC8Gh+M5tQmAQgN0/wRM
+            7PxmR4Bl2nlqXgh1rISKx1BnfAvL54y1yDur6PnECwu3hSuaN3RBNpiCfZSpyCqspU2mbSBwsiiT
+            AIbQNQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="d9513d66267a0f5ff9a08d34919d89407754c2c0527c726a528dfcd775cda2b4">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmxt1dWM7wF18z9ZKd9IdolvVXPKYWsQo
