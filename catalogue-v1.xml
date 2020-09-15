@@ -12145,6 +12145,83 @@
             <rsa-public-key sha-256="4236520f225fef6505ee2adf870234e1e6ffba70ae9c7f25da4af21c603827c1"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>IUAV test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://iuav.esse3.pp.cineca.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://iuav.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://iuav.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://iuav.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://iuav.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>iuav.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="2105e1d2c9a065b7a19c554de6e44e87f41c260b3aaf1a9dfbceef498ae09062"/>
+            <rsa-public-key sha-256="6c4fd75763789a9ca881c872389e3883a7207dc232223bdd06e793ff9d823adb"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="6c4fd75763789a9ca881c872389e3883a7207dc232223bdd06e793ff9d823adb"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="@helha.be">
             <other-id type="eche">257622-LA-1-2014-1-BE-E4AKA1-ECHE</other-id>
@@ -12935,6 +13012,12 @@
             <other-id type="pic">996273421</other-id>
             <name xml:lang="en">Polytechnic of Leiria</name>
             <name xml:lang="pt">Polytechnic of Leiria</name>
+        </hei>
+        <hei id="iuav.it">
+            <other-id type="erasmus">I  VENEZIA02</other-id>
+            <other-id type="pic">998948293</other-id>
+            <name xml:lang="en">Universita' IUAV di Venezia - TEST</name>
+            <name xml:lang="it">Universita' IUAV di Venezia - TEST</name>
         </hei>
         <hei id="jamk.fi">
             <other-id type="eche">29483-EPP-1-2014-1-FI-EPPKA3-ECHE</other-id>
@@ -14461,6 +14544,16 @@
             Jvu+j2HgjxYb6WZbNFWbzlYn4qeqqYc8TIXDorPKPPUAjHBsLpVmjpkpBM4+6Gxi1BMOCRjyvbAc
             rFJZ2POk6MBsWaBzrAW+/iPq4+Zvt43XhUv+jnCLydSYMdQzi9U1haZ31nhoP8Ti/XanjltJ2EgY
             Y4ZWKTItrJq6hhjFV4Qh2QXtAgMBAAE=
+        </rsa-public-key>
+        <rsa-public-key sha-256="6c4fd75763789a9ca881c872389e3883a7207dc232223bdd06e793ff9d823adb">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAsZpAYGlO53sKun8kffcf29cIF+jC4gRu
+            chdjLzEUSDFfpIsUj4T9Z4VtvgahPFnV6x70Fkla5E+mtG/tqym/FsFsnJD29Zp1EVoQq3oPcmOL
+            kccpn9TVfDEF0HWcJha0vhDKFZl6sUrc/v15lIISyOBXtxhT0LRp+WSuz2CIm1B82Ra+e1B+eNOp
+            GM1AtvhZ6y/EdXh5GyPNQc+OOV97A4A6YuxGFLYFD5M00dz44WyHOkPVzGA1Rq2sJS9WWl1E6mY8
+            1ePNxqCnD3xPpOUwxNYAUzIK1Kasqm5izv1aAy0UCt3KTWXY5/r+Y6QF+EcQD+Wuvf0bkhy9syG3
+            Fm8P0eTkqhEiSxzuosHC0M83Sym1Ro70KN5I3wNO1Efb9XHD1g+kEjDGBEK2xP5L9jmFCejLWFkx
+            eH7JllmljLhr7KU3yptRWT1u5UsO9dn6Cik5s6NpO7dIWg1Si3zh1UDudvOG2Ppm+1BBeXUFWmk9
+            NWJDI/bSTiQB/3u58/D3HwhtAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="716638de2b9e909c159480bb3cc991bf24095fff66b6de91991e2eee6dbac5f6">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAwSBMyZbigWpN4fqoHBM7YJBIGm0hdcr3
