@@ -9,6 +9,8 @@
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -1662,6 +1664,34 @@
                 </iac2:http-security>
                 <iac2:url>https://ref05v31-ewp.qa.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ref05v31-ewp.qa.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ref05v31-ewp.qa.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ref05v31-ewp.qa.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ref05v31-ewp.qa.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="ref05v31-bo.qa.moveon4.com">
@@ -1826,6 +1856,34 @@
                 </iac2:http-security>
                 <iac2:url>https://ref05v35-ewp.qa.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ref05v35-ewp.qa.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ref05v35-ewp.qa.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ref05v35-ewp.qa.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ref05v35-ewp.qa.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="ref05v35-bo.qa.moveon4.com">
