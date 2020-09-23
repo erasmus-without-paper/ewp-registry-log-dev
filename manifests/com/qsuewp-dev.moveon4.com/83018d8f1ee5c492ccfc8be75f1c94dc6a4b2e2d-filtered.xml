@@ -3,12 +3,15 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
     xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -152,8 +155,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -162,17 +165,14 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp18-ewp.staging.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp18-ewp.staging.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp18-ewp.staging.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp18-ewp.staging.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -187,7 +187,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -201,10 +201,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -217,10 +214,7 @@
                 <imc1:url>https://ewp18-ewp.staging.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -328,8 +322,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -337,17 +331,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp19-ewp.staging.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp19-ewp.staging.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp19-ewp.staging.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp19-ewp.staging.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -362,7 +353,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -376,10 +367,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -392,10 +380,7 @@
                 <imc1:url>https://ewp19-ewp.staging.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -492,8 +477,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -501,17 +486,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp100-ewp.staging.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp100-ewp.staging.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp100-ewp.staging.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp100-ewp.staging.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -526,7 +508,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -540,10 +522,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -556,10 +535,7 @@
                 <imc1:url>https://ewp100-ewp.staging.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -683,8 +659,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -692,17 +668,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp103-ewp.staging.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp103-ewp.staging.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp103-ewp.staging.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp103-ewp.staging.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -717,7 +690,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -731,10 +704,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -747,10 +717,7 @@
                 <imc1:url>https://ewp103-ewp.staging.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -874,8 +841,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -883,17 +850,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp2020-ewp.demo.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -908,7 +872,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -922,10 +886,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -938,10 +899,7 @@
                 <imc1:url>https://ewp2020-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1038,8 +996,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -1047,17 +1005,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1072,7 +1027,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1086,10 +1041,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1102,10 +1054,7 @@
                 <imc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1202,8 +1151,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -1211,17 +1160,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp2025-ewp.demo.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp2025-ewp.demo.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp2025-ewp.demo.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp2025-ewp.demo.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1236,7 +1182,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1250,10 +1196,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1266,10 +1209,7 @@
                 <imc1:url>https://ewp2025-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1366,8 +1306,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -1375,17 +1315,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ewp2026-ewp.demo.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ewp2026-ewp.demo.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ewp2026-ewp.demo.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp2026-ewp.demo.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1400,7 +1337,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1414,10 +1351,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1430,10 +1364,7 @@
                 <imc1:url>https://ewp2026-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1530,8 +1461,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -1539,17 +1470,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ref05v31-ewp.qa.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ref05v31-ewp.qa.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ref05v31-ewp.qa.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ref05v31-ewp.qa.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1564,7 +1492,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1578,10 +1506,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1594,10 +1519,7 @@
                 <imc1:url>https://ref05v31-ewp.qa.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1694,8 +1616,8 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia2:iias version="2.1.0">
-                <ia2:http-security>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -1703,17 +1625,14 @@
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://ref05v35-ewp.qa.moveon4.com/v1/iia/get</ia2:get-url>
-                <ia2:max-iia-ids>10</ia2:max-iia-ids>
-                <ia2:max-iia-codes>10</ia2:max-iia-codes>
-                <ia2:index-url>https://ref05v35-ewp.qa.moveon4.com/v1/iia/index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
-            >
+                </ia3:http-security>
+                <ia3:get-url>https://ref05v35-ewp.qa.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://ref05v35-ewp.qa.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1728,7 +1647,7 @@
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
-            <im1:imobilities version="0.3.0">
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1742,10 +1661,7 @@
                 <im1:max-omobility-ids>10</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -1758,10 +1674,7 @@
                 <imc1:url>https://ref05v35-ewp.qa.moveon4.com/v1/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
