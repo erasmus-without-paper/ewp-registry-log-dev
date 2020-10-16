@@ -12888,6 +12888,83 @@
             <hei-id>unimi.it</hei-id>
         </institutions-covered>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNIUD test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://uniud.esse3.pp.cineca.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://uniud.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://uniud.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://uniud.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://uniud.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uniud.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="ea81d038edfbbad4e0d8fb7a2c74350b19693b32ca39ae12aabcec7a167e5ff5"/>
+            <rsa-public-key sha-256="9f1d24ee46f8fe2b2826cd1bb622be1446820273a1df65c77438065caa8b1d43"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="9f1d24ee46f8fe2b2826cd1bb622be1446820273a1df65c77438065caa8b1d43"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="@helha.be">
             <other-id type="eche">257622-LA-1-2014-1-BE-E4AKA1-ECHE</other-id>
@@ -15002,6 +15079,12 @@
             <name xml:lang="en">Universita' degli Studi di TORINO - TEST</name>
             <name xml:lang="it">Universita' degli Studi di TORINO - TEST</name>
         </hei>
+        <hei id="uniud.it">
+            <other-id type="erasmus">I  UDINE01</other-id>
+            <other-id type="pic">999899281</other-id>
+            <name xml:lang="en">University of Udine - TEST</name>
+            <name xml:lang="it">Universita' degli Studi di UDINE - TEST</name>
+        </hei>
         <hei id="univ-lehavre.fr">
             <other-id type="erasmus">F  LE-HAVR11</other-id>
             <name xml:lang="en">Université Le Havre Normandie</name>
@@ -15649,6 +15732,16 @@
             FqFpiEydIB0lA9uJwHp3KlQ7lMsvze/PKZysaidacmonWm03fGbyJKLGUOQoI+jE794mtCcPwgxK
             ulrq79owbFSXovBLLJnU7ybWGo648nKy86VdQUIDzTpOR+t6QSPZoqBbw5Iwkh6lEwA1nAskSAtv
             v3tGhwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="9f1d24ee46f8fe2b2826cd1bb622be1446820273a1df65c77438065caa8b1d43">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAxLTKlqYQiQAPzjUm20MCfRiHc4BFCL50
+            fEsWZYeCbrnG7JWMgZorsdnQQssbW8x9rrS8Cu4YOqjw/7ZsL8T14YE/0q3+VejKXBUrwhWLBJDK
+            gvFCYdve90ZXNC8/6yzRfCzem/gygZLoZm8b+RHrEvPPPbX9AaICPPNy1vmNbY+gpkki9UEkscx1
+            2aI0SjPx0zcRkLngvh16eSS+ahtBYtOdqOBydw7W+yIZW4I9StoI+hmj3gGV+HD+VQIJHQpuH8B3
+            tkf+c5tveFQvwFvOEgFbioKFUCBbkBrVB/Ij6+0GpwbGo3Nz2DywvYsaszZ7zA9CD1VRdvU30fQ0
+            25+hkys1vbk9MSGAPs0zHbNbLfPIJ9ad3mdkOMJ3FGHZ6lNJGmunfXm+OEKazfTZ6eAbeZUO66VW
+            9Y6mOl77ZcKwa8TH6SWkgLxSa0bvHI+aGjIUQ30q+rL4Ve7J3cOEzjc2vXmuZAKM0fWwBoVkkN4W
+            FO0PO47UbUYmrqELtSTJa4xNAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="a0af8c3a2b1081f3ac68ad02f7920da4ef931b9b1b264eb914c06a9b7463fad2">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmJ7kR83RpyoaJE8mMKaKe71OAknLgX2T
