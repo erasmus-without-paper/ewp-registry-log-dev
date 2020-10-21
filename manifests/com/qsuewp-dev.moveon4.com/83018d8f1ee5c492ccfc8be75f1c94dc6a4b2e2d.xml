@@ -17,7 +17,9 @@
               xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
               xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
               xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-              xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
+              xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+              xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+              xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd">
     <ns3:host>
         <admin-email>umesh@qs.com</admin-email>
         <r:apis-implemented>
@@ -789,6 +791,7 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </in2:http-security>
                 <in2:url>https://ewp103-ewp.staging.moveon4.com/v1/institution</in2:url>
@@ -1254,6 +1257,7 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </imc1:http-security>
                 <imc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
@@ -1821,6 +1825,44 @@
                 <iac2:url>https://ref05v31-ewp.qa.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ref05v31-ewp.qa.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ref05v31-ewp.qa.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ref05v31-ewp.qa.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ref05v31-ewp.qa.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="ref05v31-bo.qa.moveon4.com">
@@ -2000,6 +2042,43 @@
                 <iac2:url>https://ref05v35-ewp.qa.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ref05v35-ewp.qa.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ref05v35-ewp.qa.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ref05v35-ewp.qa.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ref05v35-ewp.qa.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="ref05v35-bo.qa.moveon4.com">
@@ -2177,6 +2256,43 @@
                 </iac2:http-security>
                 <iac2:url>https://ulb-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ulb-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ulb-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ulb-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ulb-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -2357,6 +2473,43 @@
                 <iac2:url>https://han-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://han-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://han-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://han-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://han-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="han.nl">
@@ -2535,6 +2688,42 @@
                 <iac2:url>https://hsbremen-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://hsbremen-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://hsbremen-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://hsbremen-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://hsbremen-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="hs-bremen.de">
@@ -2712,6 +2901,43 @@
                 </iac2:http-security>
                 <iac2:url>https://ucn-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ucn-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ucn-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ucn-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ucn-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -2892,6 +3118,43 @@
                 <iac2:url>https://fuberlin-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://fuberlin-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://fuberlin-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://fuberlin-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://fuberlin-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="fu-berlin.de">
@@ -3068,6 +3331,43 @@
                 </iac2:http-security>
                 <iac2:url>https://tmma-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://tmma-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://tmma-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://tmma-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://tmma-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -3247,6 +3547,43 @@
                 <iac2:url>https://howest-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://howest-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://howest-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://howest-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://howest-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="howest.be">
@@ -3424,6 +3761,43 @@
                 </iac2:http-security>
                 <iac2:url>https://ucm-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ucm-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ucm-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ucm-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ucm-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -3603,6 +3977,43 @@
                 <iac2:url>https://tum-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://tum-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://tum-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://tum-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://tum-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="tum.de">
@@ -3780,6 +4191,43 @@
                 </iac2:http-security>
                 <iac2:url>https://hska-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://hska-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://hska-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://hska-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://hska-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -3959,6 +4407,43 @@
                 <iac2:url>https://cbs-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://cbs-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://cbs-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://cbs-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://cbs-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="cbs.dk">
@@ -4135,6 +4620,43 @@
                 </iac2:http-security>
                 <iac2:url>https://hsessling-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://hsessling-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://hsessling-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://hsessling-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://hsessling-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -4313,6 +4835,43 @@
                 </iac2:http-security>
                 <iac2:url>https://hh-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://hh-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://hh-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://hh-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://hh-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -4493,6 +5052,44 @@
                 <iac2:url>https://unival-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://unival-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://unival-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://unival-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://unival-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="uphf.fr">
@@ -4670,6 +5267,43 @@
                 </iac2:http-security>
                 <iac2:url>https://jku-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://jku-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://jku-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://jku-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://jku-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -4849,6 +5483,43 @@
                 <iac2:url>https://hsludwhf-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://hsludwhf-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://hsludwhf-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://hsludwhf-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://hsludwhf-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="hwg-lu.de">
@@ -5026,6 +5697,43 @@
                 </iac2:http-security>
                 <iac2:url>https://weimar-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://weimar-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://weimar-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://weimar-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://weimar-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
@@ -5205,6 +5913,43 @@
                 <iac2:url>https://epf-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
 
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://epf-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://epf-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://epf-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://epf-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="epf.fr">
@@ -5382,6 +6127,43 @@
                 </iac2:http-security>
                 <iac2:url>https://nu-ewp.demo.moveon4.com/v1/iia/cnr</iac2:url>
             </iac2:iia-cnr>
+
+            <oml1:omobility-las version="0.3.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://nu-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://nu-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://nu-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+
+            <omlc1:omobility-la-cnr version="0.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://nu-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
 
         </r:apis-implemented>
         <ns3:institutions-covered>
