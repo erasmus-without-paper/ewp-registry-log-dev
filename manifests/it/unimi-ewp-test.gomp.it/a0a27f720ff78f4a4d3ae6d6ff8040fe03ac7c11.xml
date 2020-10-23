@@ -95,6 +95,19 @@
         <index-url>https://unimi-ewp-test.gomp.it/api/ewp/iaasindex</index-url>
         <sends-notifications></sends-notifications>
       </iias>
+      <iia-cnr version="2.0.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd">
+        <http-security>
+          <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+            <tlscert allows-self-signed="true" xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
+          </client-auth-methods>
+          <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+          </server-auth-methods>
+        </http-security>
+        <url>https://unimi-ewp-test.gomp.it/api/ewp/iiacnr</url>
+      </iia-cnr>
       <iias-approval version="1.0.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
@@ -110,6 +123,19 @@
         <max-iia-ids>255</max-iia-ids>
         <sends-notifications></sends-notifications>
       </iias-approval>
+      <iia-approval-cnr version="1.0.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd">
+        <http-security>
+          <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+            <tlscert allows-self-signed="true" xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
+          </client-auth-methods>
+          <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+          </server-auth-methods>
+        </http-security>
+        <url>https://unimi-ewp-test.gomp.it/api/ewp/iiaapprovalcnr</url>
+      </iia-approval-cnr>
     </apis-implemented>
     <institutions-covered>
       <hei id="unimi.it" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
