@@ -17120,6 +17120,146 @@
             <rsa-public-key sha-256="9f1d24ee46f8fe2b2826cd1bb622be1446820273a1df65c77438065caa8b1d43"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>IULM test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://esse3test.iulm.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://esse3test.iulm.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://esse3test.iulm.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://esse3test.iulm.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://esse3test.iulm.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://esse3test.iulm.it/ewp/connector/IIAGet.do</get-url>
+                <max-iia-ids>10</max-iia-ids>
+                <max-iia-codes>10</max-iia-codes>
+                <index-url>https://esse3test.iulm.it/ewp/connector/IIAIndex.do</index-url>
+                <sends-notifications/>
+            </iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://esse3test.iulm.it/ewp/connector/IIACnr.do</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://esse3test.iulm.it/ewp/connector/IIAAppr.do</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://esse3test.iulm.it/ewp/connector/IIAApprCnr.do</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>iulm.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="6daa14fff94ce851f33dbe7a3eb323db923e38b334cc17b5697e8713e80d45a3"/>
+            <rsa-public-key sha-256="3272dd7e0b7c0ecbf89797b2ae63e72dc1218af876efa7faf6fb2165696e3683"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="3272dd7e0b7c0ecbf89797b2ae63e72dc1218af876efa7faf6fb2165696e3683"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -18076,6 +18216,12 @@
             <other-id type="pic">998948293</other-id>
             <name xml:lang="en">Universita' IUAV di Venezia - TEST</name>
             <name xml:lang="it">Universita' IUAV di Venezia - TEST</name>
+        </hei>
+        <hei id="iulm.it">
+            <other-id type="erasmus">I  MILANO05</other-id>
+            <other-id type="pic">955098376</other-id>
+            <name xml:lang="en">Libera Universita' di lingue e comunicazione IULM - TEST</name>
+            <name xml:lang="it">Libera Universita' di lingue e comunicazione IULM - TEST</name>
         </hei>
         <hei id="jade-hs.de">
             <other-id type="eche">258814-EPP-1-2014-1-DE-EPPKA3-ECHE</other-id>
@@ -19668,6 +19814,14 @@
             m+yemzs/JmHYBRR0/XPeY1QTvS/PdEC7AzbncblWZ95X/MC6v0QMTJVxuEhVqhOIXr+Lq6tYMb/n
             bdcMWqVrhQ4QTNntGkVuRMkHvUkCdi0s0+yhKH4oONKhE0FHBQAyyRXUJMCevrimds8nbiZ3JLYx
             ZLtHtwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="3272dd7e0b7c0ecbf89797b2ae63e72dc1218af876efa7faf6fb2165696e3683">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2DHzF2oSulBCthGEy+lBtQayS4lhxO9S
+            uew6FggC6okdzGtIRWyVtnvxhZ8GyrzFasb9WwhRUttYGeYnxkB/fbeC/u890hNwW/hGu5RP+eG6
+            ZwHCH9+BzE6DhcSlLeu38qp6Ck6lOhFsby7yvlinvyNCnyfdjWy/TNo8co3rh3Axe95v6WTiwcNo
+            o0o4Z25O1VZNZ9w4dTOixBIqVBZw52uVDdQEtgybbhJe23coxrqfgoU8D4s/ciLECpA0tguYx+Dt
+            l5Z78V3Sy2jHvxx+DzoUu4rB27w0rn/gFMLLgb6j+czw8sJiwLYYCbJHIWNjwDY95uqliMFLYUch
+            XLtekwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="33784661852d669bb112e13683e8ced30ae90d2cc5fa7d6faee3ea41fb560e1f">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5zygkbpSRTuYP6BOePDWo1oiaQlcm3PJ
