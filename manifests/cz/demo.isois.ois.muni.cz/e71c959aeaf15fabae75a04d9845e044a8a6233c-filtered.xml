@@ -1,0 +1,189 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+    xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:mtd1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/v1.0.0/manifest-entry.xsd"
+    xmlns:mti1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-institutions/blob/v1.0.0/manifest-entry.xsd"
+    xmlns:mtp1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-projects/blob/v1.0.0/manifest-entry.xsd"
+    xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-ounits/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iia-cnr/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-omobilities/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobilities/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/v1.0.0/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tors/v1.0.0/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/v1.0.0/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-mt-institutions/blob/v1.0.0/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-mt-institutions/v1.0.0/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-mt-projects/blob/v1.0.0/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-mt-projects/v1.0.0/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/v1.0.0/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/v1.0.0/manifest-entry.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>petrzelka@czs.muni.cz</ewp:admin-email>
+        <r:apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://demo.isois.ois.muni.cz/en/ewp/manifest/</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://demo.isois.ois.muni.cz/en/ewp/echo/</e2:url>
+            </e2:echo>
+        </r:apis-implemented>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="demo.muni.cz">
+                <other-id type="erasmus">CZ DEMO01</other-id>
+                <name xml:lang="en">Demo University in Brno</name>
+                <name xml:lang="cs">Demo univerzita v Brně</name>
+            </hei>
+        </mf:institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIIIUDCCBjigAwIBAgIQCTt9Fj9DO6gwlHQYaSUjoTANBgkqhkiG9w0BAQwFADBE&#xD;
+MQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UE&#xD;
+AxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjAwNzA5MDAwMDAwWhcNMjIwNzA5MjM1&#xD;
+OTU5WjCBrTELMAkGA1UEBhMCQ1oxDjAMBgNVBBETBTYwMjAwMRswGQYDVQQIDBJK&#xD;
+aWhvbW9yYXZza8O9IGtyYWoxDTALBgNVBAcTBEJybm8xJjAkBgNVBAkMHcW9ZXJv&#xD;
+dMOtbm92byBuw6FtxJtzdMOtIDYxNy85MR4wHAYDVQQKExVNYXNhcnlrb3ZhIHVu&#xD;
+aXZlcnppdGExGjAYBgNVBAMTEWlzb2lzLm9pcy5tdW5pLmN6MIIBIjANBgkqhkiG&#xD;
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxMMbXyj7n1W4Z2SXKdBtFfdFsERKgccuYkKr&#xD;
++4yARFw2jSbBla4Dpx2IswKV0+K2UboUTR77cAvh3l0FgqeNSWf2ryyOqGeetlmX&#xD;
+NOh3TxP3Q3f48C7KIgkMg4hZxlxCHvd2eLs7YjeaPPRuiTtRkSkBVGhMSwv0ISYn&#xD;
+wbXs3/vhlkc6wRxrmry33fWNKr+/oaMxTbO8Nb0qEneUNeN1FyUXOpyegEeSDD91&#xD;
+kcS8CwtlXPp4dQng3Dcwyw9zPVwcRfGu5jflci/LLKNExslpDZApMIvRHd/xskE2&#xD;
+HPfPPf7JnPQRWZ2IRvYJuOo+zGC3KXKCx+y9MgOPm7+rlaIObwIDAQABo4ID0jCC&#xD;
+A84wHwYDVR0jBBgwFoAUbx01SRBsMvpZoJ68iugflb5xegwwHQYDVR0OBBYEFBLQ&#xD;
+qa/nxMvRUi2QR4d/4XnondfEMA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAA&#xD;
+MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBJBgNVHSAEQjBAMDQGCysG&#xD;
+AQQBsjEBAgJPMCUwIwYIKwYBBQUHAgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BT&#xD;
+MAgGBmeBDAECAjA/BgNVHR8EODA2MDSgMqAwhi5odHRwOi8vR0VBTlQuY3JsLnNl&#xD;
+Y3RpZ28uY29tL0dFQU5UT1ZSU0FDQTQuY3JsMHUGCCsGAQUFBwEBBGkwZzA6Bggr&#xD;
+BgEFBQcwAoYuaHR0cDovL0dFQU5ULmNydC5zZWN0aWdvLmNvbS9HRUFOVE9WUlNB&#xD;
+Q0E0LmNydDApBggrBgEFBQcwAYYdaHR0cDovL0dFQU5ULm9jc3Auc2VjdGlnby5j&#xD;
+b20wggF8BgorBgEEAdZ5AgQCBIIBbASCAWgBZgB1AEalVet1+pEgMLWiiWn0830R&#xD;
+LEF0vv1JuIWr8vxw/m1HAAABczI9uVcAAAQDAEYwRAIgLgrmtaoHzwKsQ4v/nxT+&#xD;
+A19ScoVknTzo8IL3V8gztE0CIHsU6L+CNkmjQ6aBEPplA81hB+LacCK0lTkMVBjD&#xD;
+x847AHYA36Veq2iCTx9sre64X04+WurNohKkal6OOxLAIERcKnMAAAFzMj25fQAA&#xD;
+BAMARzBFAiEAp7yZ0FwEbyXFRQkQO6oVg9MMlKllH+5c/NMeqIRmrLkCIASvrHTP&#xD;
+vOFjq2/Ex5YA5A56/9ZGaVelj14nih+3sIDvAHUAb1N2rDHwMRnYmQCkURX/dxUc&#xD;
+EdkCwQApBo2yCJo32RMAAAFzMj25TgAABAMARjBEAiBoJOZTve9fxvvN32hB9fEd&#xD;
+jZntjWmR9IAP1zRmu8BcAAIge1ZIvzTnHRXOhqqUdrhEYdyUR2//OTRjZUZmahCm&#xD;
+3wEwgcsGA1UdEQSBwzCBwIIRaXNvaXMub2lzLm11bmkuY3qCFmRlbW8uaXNvaXMu&#xD;
+b2lzLm11bmkuY3qCD2Rvc3ZldGEubXVuaS5jeoIQZG9zdmV0YXMubXVuaS5jeoIV&#xD;
+c2x1Lmlzb2lzLm9pcy5tdW5pLmN6ghZ0ZXN0Lmlzb2lzLm9pcy5tdW5pLmN6ghZ2&#xD;
+c3RlLmlzb2lzLm9pcy5tdW5pLmN6ghN3d3cuZG9zdmV0YS5tdW5pLmN6ghR3d3cu&#xD;
+ZG9zdmV0YXMubXVuaS5jejANBgkqhkiG9w0BAQwFAAOCAgEAEgSFuvbvBryYKsXN&#xD;
+wJnlZg6MBDl80p6uKsSU1QGaddK5asCR4nsqm3iPd3fjQNkh9NI7SV4nx1aucFlX&#xD;
+GqFqm6Q13VlI+e2NSM/Auo7m6aUhgCfm/D/yi4pBtEM7NRJs0bPKTNemzZrTZ/05&#xD;
+9Hjwnb4DRyoLNkMP9MRLcKQjThwXtG2Uts/y5S4+KeKm8C8deWO/iYBoRiCPV1/h&#xD;
+43AVcZw/+8TI4lEiB5cwJ+Q7yN5/dwDcYbXGlDgdNe9t+iyWwKllXx1gLxnqcfJ1&#xD;
+AxVR+JFmel3QEITfS1ikLbNU1ZV+ntHV830Wpmq1bJLiiR108oZMjdXC3d9KubSL&#xD;
+v8jqwjMMhaz6OnnOdnZEK+SGwRyqSfQ1FyJEh1a4vor6Odqp2jv1eprGp7snQc/w&#xD;
+VNuQnjxJgu34UGgVsmwFjPTjwazFuTSuGwNyN/6QISfSjpErqKh/YxoFjM8nc96S&#xD;
+OyL5Xzxp2etCtbqYvFUgBz5uP9S0mT3QOGHxVoZxB8icJRaVLvCr/JEcDOvK6M1p&#xD;
+/cbOV209vgpkJKbf6dLDSBrvFPgUpIJDHxiOtZScUlhcuCUWIW5bjCZsZeguzlJX&#xD;
+JzGWUPyMtT6JvdPVT030JWT0+Rac6+TX5m+YqZk6xkixMMDjUlfeIsQoElGNUIBX&#xD;
+oC9LPDNZBV07RA0vulJ4eqJ17Pg=</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxMMbXyj7n1W4Z2SXKdBtFfdFsERKgccuYkKr+4yARFw2jSbBla4Dpx2IswKV0+K2UboUTR77cAvh3l0FgqeNSWf2ryyOqGeetlmXNOh3TxP3Q3f48C7KIgkMg4hZxlxCHvd2eLs7YjeaPPRuiTtRkSkBVGhMSwv0ISYnwbXs3/vhlkc6wRxrmry33fWNKr+/oaMxTbO8Nb0qEneUNeN1FyUXOpyegEeSDD91kcS8CwtlXPp4dQng3Dcwyw9zPVwcRfGu5jflci/LLKNExslpDZApMIvRHd/xskE2HPfPPf7JnPQRWZ2IRvYJuOo+zGC3KXKCx+y9MgOPm7+rlaIObwIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxMMbXyj7n1W4Z2SXKdBtFfdFsERKgccuYkKr+4yARFw2jSbBla4Dpx2IswKV0+K2UboUTR77cAvh3l0FgqeNSWf2ryyOqGeetlmXNOh3TxP3Q3f48C7KIgkMg4hZxlxCHvd2eLs7YjeaPPRuiTtRkSkBVGhMSwv0ISYnwbXs3/vhlkc6wRxrmry33fWNKr+/oaMxTbO8Nb0qEneUNeN1FyUXOpyegEeSDD91kcS8CwtlXPp4dQng3Dcwyw9zPVwcRfGu5jflci/LLKNExslpDZApMIvRHd/xskE2HPfPPf7JnPQRWZ2IRvYJuOo+zGC3KXKCx+y9MgOPm7+rlaIObwIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
