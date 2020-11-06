@@ -58,6 +58,26 @@
                 </ns15:http-security>
                 <ns15:url>https://sga-mobilidadenet.ua.pt/mobilidadenet/ewp/ewpstage/echo</ns15:url>
             </ns15:echo>
+            <ns9:institutions version="2.1.0">
+                <admin-email>noreply@ua.pt</admin-email>
+                <ns9:http-security>
+                    <ns7:client-auth-methods>
+                        <ns26:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns27:httpsig/>
+                        <ns25:tlscert/>
+                    </ns7:server-auth-methods>
+                    <ns7:request-encryption-methods>
+                        <ns28:tls/>
+                    </ns7:request-encryption-methods>
+                    <ns7:response-encryption-methods>
+                        <ns29:tls/>
+                    </ns7:response-encryption-methods>
+                </ns9:http-security>
+                <ns9:url>https://sga-mobilidadenet.ua.pt/mobilidadenet/ewp/ewpstage/institutions</ns9:url>
+                <ns9:max-hei-ids>1</ns9:max-hei-ids>
+            </ns9:institutions>
             <ns10:organizational-units version="2.1.1">
                 <admin-email>noreply@ua.pt</admin-email>
                 <ns10:http-security>
@@ -183,7 +203,16 @@
                 <ns8:url>https://sga-mobilidadenet.ua.pt/mobilidadenet/ewp/ewpstage/iias_approval_cnr</ns8:url>
             </ns8:iia-cnr>
         </ns2:apis-implemented>
-        <ns3:institutions-covered/>
+        <ns3:institutions-covered>
+            <ns2:hei id="ua.pt">
+                <ns2:other-id type="ErasmusCode">P AVEIRO01</ns2:other-id>
+                <ns2:other-id type="PIC">999865331</ns2:other-id>
+                <ns2:other-id type="OID">E10208840</ns2:other-id>
+                <ns2:other-id type="ECHE">29154-EPP-1-2014-1-PT-EPPKA3-ECHE</ns2:other-id>
+                <ns2:other-id type="SCHAC">ua.pt</ns2:other-id>
+                <ns2:name xml:lang="pt">Universidade de Aveiro</ns2:name>
+            </ns2:hei>
+        </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
             <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwEIek268j7uuj7SAhSQJOBZjHpbnpWwMurSYIJUnY30gx2OC9j3k/ofJ/0kMCWF4SJw5xkvp9BojG1ZzcEBZGblxigTdk064cPOk9VKe+Vy+TJk4ZJxvzGDcXypydNznPkYQeKw300kgkfk+gS1WBlr8EqM0Wb0CeVrgzwsepRaAllVp+zTD/nOQeoxKMJjNlObKdKycP2XBcqiF2lM9d/SSJvkYaM7bH5oo1KOZqr/PyKpYFiDjkpErcDQWNV/rZK+PrXHUnC0ijy3w+X5kpkR7WEoCJwOBomhG7C5yoWCcvFNJFZLtA1pboFkVSMTxR8ZGQnp9Zaojf/0bU+I/CQIDAQAB</ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
