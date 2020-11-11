@@ -160,6 +160,21 @@
                 </api6:http-security>
                 <api6:url>https://orinumenti.uca.es/en/ewp/api/iias/cnr</api6:url>
             </api6:iia-cnr>
+            <api9:omobilities version="1.0.0">
+                <api9:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                        <ns3:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                        <ns1:httpsig/>
+                    </sec:server-auth-methods>
+                </api9:http-security>
+                <api9:get-url>https://orinumenti.uca.es/en/ewp/api/omobilities/get</api9:get-url>
+                <api9:index-url>https://orinumenti.uca.es/en/ewp/api/omobilities/index</api9:index-url>
+                <api9:max-omobility-ids>2</api9:max-omobility-ids>
+            </api9:omobilities>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uca.es">
