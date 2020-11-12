@@ -18088,11 +18088,23 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
                 <e2:url>https://test.isois.ois.muni.cz/en/ewp/echo/</e2:url>
             </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://test.isois.ois.muni.cz/en/ewp/institutions/</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>test.muni.cz</hei-id>
@@ -20181,6 +20193,7 @@
         </hei>
         <hei id="test.muni.cz">
             <other-id type="erasmus">CZ BRNO05</other-id>
+            <other-id type="oid">E10208978</other-id>
             <name xml:lang="cs">Masarykova univerzita</name>
             <name xml:lang="en">Masaryk University</name>
         </hei>
