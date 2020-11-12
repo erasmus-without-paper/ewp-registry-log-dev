@@ -1,1 +1,248 @@
-<manifest xmlns="" xmlns:ewp="" xmlns:r="" xmlns:sec="" xmlns:sec-cli-anon="" xmlns:sec-cli-tls="" xmlns:sec-cli-http="" xmlns:sec-svr-tls="" xmlns:sec-svr-http=""></manifest>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
+  <host>
+    <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+    <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+    <r:apis-implemented>
+      <factsheet xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" version="0.3.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://unizone-ewp.herokuapp.com/rest/static-data</url>
+        <max-hei-ids>1</max-hei-ids>
+      </factsheet>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="ugent.be">
+        <r:other-id type="erasmus">B  GENT01</r:other-id>
+        <r:name>UNIVERSITEIT GENT</r:name>
+      </r:hei>
+      <r:hei id="validator-hei01.developers.erasmuswithoutpaper.eu">
+        <r:other-id type="erasmus">G  THESSAL01</r:other-id>
+        <r:name>ARISTOTELIO PANEPISTIMIO THESSALONIKIS</r:name>
+      </r:hei>
+      <r:hei id="demo.jekab.eu">
+        <r:other-id type="erasmus">LV JEKABPI01</r:other-id>
+        <r:name>Demo account 9</r:name>
+      </r:hei>
+      <r:hei id="demo.olaine.eu">
+        <r:other-id type="erasmus">LV OLAINE01</r:other-id>
+        <r:name>Olaines Mehanikas un tehnologijas koledza</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+      <certificate>MIIFqjCCA5ICCQDJcjXYwu89njANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQkUxETAPBgNVBAgMCEJydXNzZWxzMREwDwYDVQQHDAhCcnVzc2VsczEMMAoGA1UECgwDRVVGMQwwCgYDVQQLDANFVUYxIjAgBgNVBAMMGXVuaXpvbmUtZXdwLmhlcm9rdWFwcC5jb20xITAfBgkqhkiG9w0BCQEWEmZwZWl4b3RvQHVwb3J0by5wdDAeFw0yMDExMTAxMTQyMDRaFw0yMTExMTAxMTQyMDRaMIGWMQswCQYDVQQGEwJCRTERMA8GA1UECAwIQnJ1c3NlbHMxETAPBgNVBAcMCEJydXNzZWxzMQwwCgYDVQQKDANFVUYxDDAKBgNVBAsMA0VVRjEiMCAGA1UEAwwZdW5pem9uZS1ld3AuaGVyb2t1YXBwLmNvbTEhMB8GCSqGSIb3DQEJARYSZnBlaXhvdG9AdXBvcnRvLnB0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt6tJsZuWLFEnsKPzR56fWNeVOVaTL3vCUg1tWRijenlQPENIjndi3dN25yNb232PYt0WG3meWrpwXVIomO9s0Br7rufsKMtE4AEaGz3V5Eurys2hhOdeKGB3n7+8g0vX0heptxsBZHOtUDMID4V9s91VYO51Z3opdvtjaYx+c/oJrDVfP4564+q/Gq9ZWAznDvOvFE5TCJHvcqcGcz/gNTsPjhRVGpFvv9iP+VV5Avvtqdo0dUxcq+MydGOmYwo1/kyF438z6pFnsFBm8b2f42t16Lkt7Vlw2DQTEU6DmCn/qLI8Blxa3tV5EuZrSN1wkFBTj6IDE0f4a+4N2RvNDXb1l5GtujUQQY5+RUlwZaPUXzm4zieuncEpxNORIbq25R/EYWVYbcgEB305mzrNP16DzkUzU+KvUDqs+JR/lD/Df03Jfr00HogeRTZsSM4qqSx5IPsjqcdREISoh245tmvISh51kQoNHrjA/BLSSVKAyA+78BWrsaHEFp1v+bXET8XygH7y5HFldl13y9zfmTKiDP/UVQMxjYEJVwpd4IC549jVLgRdjh/7Zvw950DkJd95n6QPvEytJWAhl8+E8+gl455JA0su2GSM/upprpbPOwz6wNiRmZgvGBnO4l1ttOeZEtKBmvbBd2M4FHmCp28EW1HrBTiLuQTr1zRUYzcCAwEAATANBgkqhkiG9w0BAQsFAAOCAgEAd6JS9lmAZ5oj41e/EKUWvlDxD/DNdSnZa0ns0Kf+gTR5AVStvYCapdYlLtgtQyCQQA+22ivcHTehqzUM0gr9cU3M5yIvNBOzAxn/UGv7VFMpDX7U75JUXWROVdDXbTtXZb8nNoYN6AQzEotd2pjeg9jfECwk+lUwW6SpwJB6sQ5nftNXeCooJz1Kq7TRyGeBDneq6BJa2XiVRQyz0MsdL56qP8Wqp7iyt2/4cqTj1Y7lRx31808nCPm0zAcPcpVMzAiBNXF27l+0H6S+SsH0pFv/jnjuKAL/TJHZvL93mJVe1FNNZlKCuuxj89K8H6L8tCLYL9KLdQE7FAeKZEQFzyTLyJQLR8msRzmfnBDJVEGK/qJN1JyVEf+Tk9t2DDNyTb8WkQi8D6U20VdfjhmfvRvav270TJlvDQ9Kw0qfLTZ8NpS0qhE2EgiDCKL7Hg4fIVEMg0IildY6P+pUQFVweB4CTygJcneRyiZb7IocOSJ1NNTB5olbvn7YaLTneEFpQv2C/PROtH5WFUQcVYt8SC12OHhUPluDP+wqSHATieWiW0r9ZRkmT9YivrrVZ2MvoEtv4y+EbTK0tTqg1vy1mG/sw5twrgctEeMQVYjqSCr396di2SqSgGzW5lpDBrmjJTOHfYmF79ni+tH7DenLfrtWQqzna0S+sGfxOt+Mp+c=</certificate>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+  <host>
+    <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+    <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+    <r:apis-implemented>
+      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd" version="3.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://unizone-ewp.herokuapp.com/rest/iias/get</get-url>
+        <max-iia-ids>3</max-iia-ids>
+        <max-iia-codes>3</max-iia-codes>
+        <index-url>https://unizone-ewp.herokuapp.com/rest/iias/index</index-url>
+        <sends-notifications></sends-notifications>
+      </iias>
+      <iia-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" version="2.0.2">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://unizone-ewp.herokuapp.com/rest/iias/cnr</url>
+      </iia-cnr>
+      <iias-approval xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" version="0.2.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://unizone-ewp.herokuapp.com/rest/iias/app/index</url>
+        <max-iia-ids>3</max-iia-ids>
+        <sends-notifications></sends-notifications>
+      </iias-approval>
+      <iia-approval-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" version="0.2.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://unizone-ewp.herokuapp.com/rest/iias/app/cnr</url>
+      </iia-approval-cnr>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="ugent.be">
+        <r:other-id type="erasmus">B  GENT01</r:other-id>
+        <r:name>UNIVERSITEIT GENT</r:name>
+      </r:hei>
+      <r:hei id="demo.jekab.eu">
+        <r:other-id type="erasmus">LV JEKABPI01</r:other-id>
+        <r:name>Demo account 9</r:name>
+      </r:hei>
+      <r:hei id="demo.olaine.eu">
+        <r:other-id type="erasmus">LV OLAINE01</r:other-id>
+        <r:name>Olaines Mehanikas un tehnologijas koledza</r:name>
+      </r:hei>
+      <r:hei id="test.dash">
+        <r:other-id type="erasmus">SI MARIBOR11</r:other-id>
+        <r:name>Solski center Ptuj</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+      <certificate>MIIFqjCCA5ICCQDJcjXYwu89njANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQkUxETAPBgNVBAgMCEJydXNzZWxzMREwDwYDVQQHDAhCcnVzc2VsczEMMAoGA1UECgwDRVVGMQwwCgYDVQQLDANFVUYxIjAgBgNVBAMMGXVuaXpvbmUtZXdwLmhlcm9rdWFwcC5jb20xITAfBgkqhkiG9w0BCQEWEmZwZWl4b3RvQHVwb3J0by5wdDAeFw0yMDExMTAxMTQyMDRaFw0yMTExMTAxMTQyMDRaMIGWMQswCQYDVQQGEwJCRTERMA8GA1UECAwIQnJ1c3NlbHMxETAPBgNVBAcMCEJydXNzZWxzMQwwCgYDVQQKDANFVUYxDDAKBgNVBAsMA0VVRjEiMCAGA1UEAwwZdW5pem9uZS1ld3AuaGVyb2t1YXBwLmNvbTEhMB8GCSqGSIb3DQEJARYSZnBlaXhvdG9AdXBvcnRvLnB0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt6tJsZuWLFEnsKPzR56fWNeVOVaTL3vCUg1tWRijenlQPENIjndi3dN25yNb232PYt0WG3meWrpwXVIomO9s0Br7rufsKMtE4AEaGz3V5Eurys2hhOdeKGB3n7+8g0vX0heptxsBZHOtUDMID4V9s91VYO51Z3opdvtjaYx+c/oJrDVfP4564+q/Gq9ZWAznDvOvFE5TCJHvcqcGcz/gNTsPjhRVGpFvv9iP+VV5Avvtqdo0dUxcq+MydGOmYwo1/kyF438z6pFnsFBm8b2f42t16Lkt7Vlw2DQTEU6DmCn/qLI8Blxa3tV5EuZrSN1wkFBTj6IDE0f4a+4N2RvNDXb1l5GtujUQQY5+RUlwZaPUXzm4zieuncEpxNORIbq25R/EYWVYbcgEB305mzrNP16DzkUzU+KvUDqs+JR/lD/Df03Jfr00HogeRTZsSM4qqSx5IPsjqcdREISoh245tmvISh51kQoNHrjA/BLSSVKAyA+78BWrsaHEFp1v+bXET8XygH7y5HFldl13y9zfmTKiDP/UVQMxjYEJVwpd4IC549jVLgRdjh/7Zvw950DkJd95n6QPvEytJWAhl8+E8+gl455JA0su2GSM/upprpbPOwz6wNiRmZgvGBnO4l1ttOeZEtKBmvbBd2M4FHmCp28EW1HrBTiLuQTr1zRUYzcCAwEAATANBgkqhkiG9w0BAQsFAAOCAgEAd6JS9lmAZ5oj41e/EKUWvlDxD/DNdSnZa0ns0Kf+gTR5AVStvYCapdYlLtgtQyCQQA+22ivcHTehqzUM0gr9cU3M5yIvNBOzAxn/UGv7VFMpDX7U75JUXWROVdDXbTtXZb8nNoYN6AQzEotd2pjeg9jfECwk+lUwW6SpwJB6sQ5nftNXeCooJz1Kq7TRyGeBDneq6BJa2XiVRQyz0MsdL56qP8Wqp7iyt2/4cqTj1Y7lRx31808nCPm0zAcPcpVMzAiBNXF27l+0H6S+SsH0pFv/jnjuKAL/TJHZvL93mJVe1FNNZlKCuuxj89K8H6L8tCLYL9KLdQE7FAeKZEQFzyTLyJQLR8msRzmfnBDJVEGK/qJN1JyVEf+Tk9t2DDNyTb8WkQi8D6U20VdfjhmfvRvav270TJlvDQ9Kw0qfLTZ8NpS0qhE2EgiDCKL7Hg4fIVEMg0IildY6P+pUQFVweB4CTygJcneRyiZb7IocOSJ1NNTB5olbvn7YaLTneEFpQv2C/PROtH5WFUQcVYt8SC12OHhUPluDP+wqSHATieWiW0r9ZRkmT9YivrrVZ2MvoEtv4y+EbTK0tTqg1vy1mG/sw5twrgctEeMQVYjqSCr396di2SqSgGzW5lpDBrmjJTOHfYmF79ni+tH7DenLfrtWQqzna0S+sGfxOt+Mp+c=</certificate>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+  <host>
+    <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+    <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+    <r:apis-implemented>
+      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd" version="2.2.2">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://unizone-ewp.herokuapp.com/rest/iias/getv2</get-url>
+        <max-iia-ids>3</max-iia-ids>
+        <max-iia-codes>3</max-iia-codes>
+        <index-url>https://unizone-ewp.herokuapp.com/rest/iias/indexv2</index-url>
+      </iias>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="ugent.be">
+        <r:other-id type="erasmus">B  GENT01</r:other-id>
+        <r:name>UNIVERSITEIT GENT</r:name>
+      </r:hei>
+      <r:hei id="demo.jekab.eu">
+        <r:other-id type="erasmus">LV JEKABPI01</r:other-id>
+        <r:name>Demo account 9</r:name>
+      </r:hei>
+      <r:hei id="demo.olaine.eu">
+        <r:other-id type="erasmus">LV OLAINE01</r:other-id>
+        <r:name>Olaines Mehanikas un tehnologijas koledza</r:name>
+      </r:hei>
+      <r:hei id="test.dash">
+        <r:other-id type="erasmus">SI MARIBOR11</r:other-id>
+        <r:name>Solski center Ptuj</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+      <certificate>MIIFqjCCA5ICCQDJcjXYwu89njANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQkUxETAPBgNVBAgMCEJydXNzZWxzMREwDwYDVQQHDAhCcnVzc2VsczEMMAoGA1UECgwDRVVGMQwwCgYDVQQLDANFVUYxIjAgBgNVBAMMGXVuaXpvbmUtZXdwLmhlcm9rdWFwcC5jb20xITAfBgkqhkiG9w0BCQEWEmZwZWl4b3RvQHVwb3J0by5wdDAeFw0yMDExMTAxMTQyMDRaFw0yMTExMTAxMTQyMDRaMIGWMQswCQYDVQQGEwJCRTERMA8GA1UECAwIQnJ1c3NlbHMxETAPBgNVBAcMCEJydXNzZWxzMQwwCgYDVQQKDANFVUYxDDAKBgNVBAsMA0VVRjEiMCAGA1UEAwwZdW5pem9uZS1ld3AuaGVyb2t1YXBwLmNvbTEhMB8GCSqGSIb3DQEJARYSZnBlaXhvdG9AdXBvcnRvLnB0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt6tJsZuWLFEnsKPzR56fWNeVOVaTL3vCUg1tWRijenlQPENIjndi3dN25yNb232PYt0WG3meWrpwXVIomO9s0Br7rufsKMtE4AEaGz3V5Eurys2hhOdeKGB3n7+8g0vX0heptxsBZHOtUDMID4V9s91VYO51Z3opdvtjaYx+c/oJrDVfP4564+q/Gq9ZWAznDvOvFE5TCJHvcqcGcz/gNTsPjhRVGpFvv9iP+VV5Avvtqdo0dUxcq+MydGOmYwo1/kyF438z6pFnsFBm8b2f42t16Lkt7Vlw2DQTEU6DmCn/qLI8Blxa3tV5EuZrSN1wkFBTj6IDE0f4a+4N2RvNDXb1l5GtujUQQY5+RUlwZaPUXzm4zieuncEpxNORIbq25R/EYWVYbcgEB305mzrNP16DzkUzU+KvUDqs+JR/lD/Df03Jfr00HogeRTZsSM4qqSx5IPsjqcdREISoh245tmvISh51kQoNHrjA/BLSSVKAyA+78BWrsaHEFp1v+bXET8XygH7y5HFldl13y9zfmTKiDP/UVQMxjYEJVwpd4IC549jVLgRdjh/7Zvw950DkJd95n6QPvEytJWAhl8+E8+gl455JA0su2GSM/upprpbPOwz6wNiRmZgvGBnO4l1ttOeZEtKBmvbBd2M4FHmCp28EW1HrBTiLuQTr1zRUYzcCAwEAATANBgkqhkiG9w0BAQsFAAOCAgEAd6JS9lmAZ5oj41e/EKUWvlDxD/DNdSnZa0ns0Kf+gTR5AVStvYCapdYlLtgtQyCQQA+22ivcHTehqzUM0gr9cU3M5yIvNBOzAxn/UGv7VFMpDX7U75JUXWROVdDXbTtXZb8nNoYN6AQzEotd2pjeg9jfECwk+lUwW6SpwJB6sQ5nftNXeCooJz1Kq7TRyGeBDneq6BJa2XiVRQyz0MsdL56qP8Wqp7iyt2/4cqTj1Y7lRx31808nCPm0zAcPcpVMzAiBNXF27l+0H6S+SsH0pFv/jnjuKAL/TJHZvL93mJVe1FNNZlKCuuxj89K8H6L8tCLYL9KLdQE7FAeKZEQFzyTLyJQLR8msRzmfnBDJVEGK/qJN1JyVEf+Tk9t2DDNyTb8WkQi8D6U20VdfjhmfvRvav270TJlvDQ9Kw0qfLTZ8NpS0qhE2EgiDCKL7Hg4fIVEMg0IildY6P+pUQFVweB4CTygJcneRyiZb7IocOSJ1NNTB5olbvn7YaLTneEFpQv2C/PROtH5WFUQcVYt8SC12OHhUPluDP+wqSHATieWiW0r9ZRkmT9YivrrVZ2MvoEtv4y+EbTK0tTqg1vy1mG/sw5twrgctEeMQVYjqSCr396di2SqSgGzW5lpDBrmjJTOHfYmF79ni+tH7DenLfrtWQqzna0S+sGfxOt+Mp+c=</certificate>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+  <host>
+    <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+    <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+    <r:apis-implemented>
+      <omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" version="0.3.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://unizone-ewp.herokuapp.com/rest/las/get</get-url>
+        <index-url>https://unizone-ewp.herokuapp.com/rest/las/index</index-url>
+        <max-omobility-ids>1</max-omobility-ids>
+      </omobility-las>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="ugent.be">
+        <r:other-id type="erasmus">B  GENT01</r:other-id>
+        <r:name>UNIVERSITEIT GENT</r:name>
+      </r:hei>
+      <r:hei id="validator-hei01.developers.erasmuswithoutpaper.eu">
+        <r:other-id type="erasmus">G  THESSAL01</r:other-id>
+        <r:name>ARISTOTELIO PANEPISTIMIO THESSALONIKIS</r:name>
+      </r:hei>
+      <r:hei id="test.dash">
+        <r:other-id type="erasmus">SI MARIBOR11</r:other-id>
+        <r:name>Solski center Ptuj</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+      <certificate>MIIFqjCCA5ICCQDJcjXYwu89njANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQkUxETAPBgNVBAgMCEJydXNzZWxzMREwDwYDVQQHDAhCcnVzc2VsczEMMAoGA1UECgwDRVVGMQwwCgYDVQQLDANFVUYxIjAgBgNVBAMMGXVuaXpvbmUtZXdwLmhlcm9rdWFwcC5jb20xITAfBgkqhkiG9w0BCQEWEmZwZWl4b3RvQHVwb3J0by5wdDAeFw0yMDExMTAxMTQyMDRaFw0yMTExMTAxMTQyMDRaMIGWMQswCQYDVQQGEwJCRTERMA8GA1UECAwIQnJ1c3NlbHMxETAPBgNVBAcMCEJydXNzZWxzMQwwCgYDVQQKDANFVUYxDDAKBgNVBAsMA0VVRjEiMCAGA1UEAwwZdW5pem9uZS1ld3AuaGVyb2t1YXBwLmNvbTEhMB8GCSqGSIb3DQEJARYSZnBlaXhvdG9AdXBvcnRvLnB0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt6tJsZuWLFEnsKPzR56fWNeVOVaTL3vCUg1tWRijenlQPENIjndi3dN25yNb232PYt0WG3meWrpwXVIomO9s0Br7rufsKMtE4AEaGz3V5Eurys2hhOdeKGB3n7+8g0vX0heptxsBZHOtUDMID4V9s91VYO51Z3opdvtjaYx+c/oJrDVfP4564+q/Gq9ZWAznDvOvFE5TCJHvcqcGcz/gNTsPjhRVGpFvv9iP+VV5Avvtqdo0dUxcq+MydGOmYwo1/kyF438z6pFnsFBm8b2f42t16Lkt7Vlw2DQTEU6DmCn/qLI8Blxa3tV5EuZrSN1wkFBTj6IDE0f4a+4N2RvNDXb1l5GtujUQQY5+RUlwZaPUXzm4zieuncEpxNORIbq25R/EYWVYbcgEB305mzrNP16DzkUzU+KvUDqs+JR/lD/Df03Jfr00HogeRTZsSM4qqSx5IPsjqcdREISoh245tmvISh51kQoNHrjA/BLSSVKAyA+78BWrsaHEFp1v+bXET8XygH7y5HFldl13y9zfmTKiDP/UVQMxjYEJVwpd4IC549jVLgRdjh/7Zvw950DkJd95n6QPvEytJWAhl8+E8+gl455JA0su2GSM/upprpbPOwz6wNiRmZgvGBnO4l1ttOeZEtKBmvbBd2M4FHmCp28EW1HrBTiLuQTr1zRUYzcCAwEAATANBgkqhkiG9w0BAQsFAAOCAgEAd6JS9lmAZ5oj41e/EKUWvlDxD/DNdSnZa0ns0Kf+gTR5AVStvYCapdYlLtgtQyCQQA+22ivcHTehqzUM0gr9cU3M5yIvNBOzAxn/UGv7VFMpDX7U75JUXWROVdDXbTtXZb8nNoYN6AQzEotd2pjeg9jfECwk+lUwW6SpwJB6sQ5nftNXeCooJz1Kq7TRyGeBDneq6BJa2XiVRQyz0MsdL56qP8Wqp7iyt2/4cqTj1Y7lRx31808nCPm0zAcPcpVMzAiBNXF27l+0H6S+SsH0pFv/jnjuKAL/TJHZvL93mJVe1FNNZlKCuuxj89K8H6L8tCLYL9KLdQE7FAeKZEQFzyTLyJQLR8msRzmfnBDJVEGK/qJN1JyVEf+Tk9t2DDNyTb8WkQi8D6U20VdfjhmfvRvav270TJlvDQ9Kw0qfLTZ8NpS0qhE2EgiDCKL7Hg4fIVEMg0IildY6P+pUQFVweB4CTygJcneRyiZb7IocOSJ1NNTB5olbvn7YaLTneEFpQv2C/PROtH5WFUQcVYt8SC12OHhUPluDP+wqSHATieWiW0r9ZRkmT9YivrrVZ2MvoEtv4y+EbTK0tTqg1vy1mG/sw5twrgctEeMQVYjqSCr396di2SqSgGzW5lpDBrmjJTOHfYmF79ni+tH7DenLfrtWQqzna0S+sGfxOt+Mp+c=</certificate>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+  <host>
+    <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+    <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
+    <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+    <r:apis-implemented>
+      <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" version="5.0.0">
+        <url>https://unizone-ewp.herokuapp.com/rest/manifest</url>
+      </discovery>
+      <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://unizone-ewp.herokuapp.com/rest/echo</url>
+      </echo>
+    </r:apis-implemented>
+    <client-credentials-in-use>
+      <certificate>MIIFqjCCA5ICCQDJcjXYwu89njANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQkUxETAPBgNVBAgMCEJydXNzZWxzMREwDwYDVQQHDAhCcnVzc2VsczEMMAoGA1UECgwDRVVGMQwwCgYDVQQLDANFVUYxIjAgBgNVBAMMGXVuaXpvbmUtZXdwLmhlcm9rdWFwcC5jb20xITAfBgkqhkiG9w0BCQEWEmZwZWl4b3RvQHVwb3J0by5wdDAeFw0yMDExMTAxMTQyMDRaFw0yMTExMTAxMTQyMDRaMIGWMQswCQYDVQQGEwJCRTERMA8GA1UECAwIQnJ1c3NlbHMxETAPBgNVBAcMCEJydXNzZWxzMQwwCgYDVQQKDANFVUYxDDAKBgNVBAsMA0VVRjEiMCAGA1UEAwwZdW5pem9uZS1ld3AuaGVyb2t1YXBwLmNvbTEhMB8GCSqGSIb3DQEJARYSZnBlaXhvdG9AdXBvcnRvLnB0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAt6tJsZuWLFEnsKPzR56fWNeVOVaTL3vCUg1tWRijenlQPENIjndi3dN25yNb232PYt0WG3meWrpwXVIomO9s0Br7rufsKMtE4AEaGz3V5Eurys2hhOdeKGB3n7+8g0vX0heptxsBZHOtUDMID4V9s91VYO51Z3opdvtjaYx+c/oJrDVfP4564+q/Gq9ZWAznDvOvFE5TCJHvcqcGcz/gNTsPjhRVGpFvv9iP+VV5Avvtqdo0dUxcq+MydGOmYwo1/kyF438z6pFnsFBm8b2f42t16Lkt7Vlw2DQTEU6DmCn/qLI8Blxa3tV5EuZrSN1wkFBTj6IDE0f4a+4N2RvNDXb1l5GtujUQQY5+RUlwZaPUXzm4zieuncEpxNORIbq25R/EYWVYbcgEB305mzrNP16DzkUzU+KvUDqs+JR/lD/Df03Jfr00HogeRTZsSM4qqSx5IPsjqcdREISoh245tmvISh51kQoNHrjA/BLSSVKAyA+78BWrsaHEFp1v+bXET8XygH7y5HFldl13y9zfmTKiDP/UVQMxjYEJVwpd4IC549jVLgRdjh/7Zvw950DkJd95n6QPvEytJWAhl8+E8+gl455JA0su2GSM/upprpbPOwz6wNiRmZgvGBnO4l1ttOeZEtKBmvbBd2M4FHmCp28EW1HrBTiLuQTr1zRUYzcCAwEAATANBgkqhkiG9w0BAQsFAAOCAgEAd6JS9lmAZ5oj41e/EKUWvlDxD/DNdSnZa0ns0Kf+gTR5AVStvYCapdYlLtgtQyCQQA+22ivcHTehqzUM0gr9cU3M5yIvNBOzAxn/UGv7VFMpDX7U75JUXWROVdDXbTtXZb8nNoYN6AQzEotd2pjeg9jfECwk+lUwW6SpwJB6sQ5nftNXeCooJz1Kq7TRyGeBDneq6BJa2XiVRQyz0MsdL56qP8Wqp7iyt2/4cqTj1Y7lRx31808nCPm0zAcPcpVMzAiBNXF27l+0H6S+SsH0pFv/jnjuKAL/TJHZvL93mJVe1FNNZlKCuuxj89K8H6L8tCLYL9KLdQE7FAeKZEQFzyTLyJQLR8msRzmfnBDJVEGK/qJN1JyVEf+Tk9t2DDNyTb8WkQi8D6U20VdfjhmfvRvav270TJlvDQ9Kw0qfLTZ8NpS0qhE2EgiDCKL7Hg4fIVEMg0IildY6P+pUQFVweB4CTygJcneRyiZb7IocOSJ1NNTB5olbvn7YaLTneEFpQv2C/PROtH5WFUQcVYt8SC12OHhUPluDP+wqSHATieWiW0r9ZRkmT9YivrrVZ2MvoEtv4y+EbTK0tTqg1vy1mG/sw5twrgctEeMQVYjqSCr396di2SqSgGzW5lpDBrmjJTOHfYmF79ni+tH7DenLfrtWQqzna0S+sGfxOt+Mp+c=</certificate>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz0rIVq6T6gwY92CBP1lsjLgRV91wYBZRjzAaWpuLcXRLvcyIxLn2lmw4+yLZ8/7HAB4Kv/wIu531xurcCUvSAriKO85u8cY0nbM6gz6ElSBWTKQza+bPFRrcq2yBuCpOR84zEdEw5b/IUMtacbuMjccB1cqx1S6///09UNlPFF3/SjhJEMS1drcl6N65miYuxh7nUq2XB/uWnFRaKqq0T0xgc9hgZAX1xQTeYw0pb+f3yCGkN/9nHPJs6lgRdwbcrJsO74xChnQrEGHbdHYNSfGe4wkmFWQTmeeyQsNhmv5FhTev0wDR2sXURJO/VRvdQg9nRgueC7zwsQQcELiXPQIDAQAB</rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+</manifest>
