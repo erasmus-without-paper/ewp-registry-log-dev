@@ -3,7 +3,7 @@
     xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -120,15 +120,84 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </e2:http-security>
                 <e2:url>https://demo.isois.ois.muni.cz/en/ewp/echo/</e2:url>
             </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://demo.isois.ois.muni.cz/en/ewp/institutions/</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://demo.isois.ois.muni.cz/en/ewp/ounits/</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias version="3.0.0">
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://demo.isois.ois.muni.cz/en/ewp/iiaGet/</ia3:get-url>
+                <ia3:max-iia-ids>2</ia3:max-iia-ids>
+                <ia3:max-iia-codes>2</ia3:max-iia-codes>
+                <ia3:index-url>https://demo.isois.ois.muni.cz/en/ewp/iiaIndex/</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://demo.isois.ois.muni.cz/en/ewp/iiaCnr/</iac2:url>
+            </iac2:iia-cnr>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="demo.muni.cz">
                 <other-id type="erasmus">CZ DEMO01</other-id>
+                <other-id type="oid">DEMOOID</other-id>
                 <name xml:lang="en">Demo University in Brno</name>
                 <name xml:lang="cs">Demo univerzita v Brně</name>
             </hei>
