@@ -18032,6 +18032,22 @@
                 <om1:max-omobility-ids>2</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://test.isois.ois.muni.cz/en/ewp/omobilityCnr/</omc1:url>
+                <omc1:max-omobility-ids>2</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>test.muni.cz</hei-id>
