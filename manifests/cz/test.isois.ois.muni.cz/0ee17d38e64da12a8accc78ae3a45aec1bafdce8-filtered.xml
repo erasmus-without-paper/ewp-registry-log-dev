@@ -227,6 +227,39 @@
                 <omc1:url>https://test.isois.ois.muni.cz/en/ewp/omobilityCnr/</omc1:url>
                 <omc1:max-omobility-ids>2</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+            <im1:imobilities version="1.0.0">
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://test.isois.ois.muni.cz/en/ewp/imobilityGet/</im1:get-url>
+                <im1:max-omobility-ids>2</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr version="1.0.0">
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://test.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
+                <imc1:max-omobility-ids>2</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="test.muni.cz">
