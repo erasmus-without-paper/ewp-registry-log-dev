@@ -62,6 +62,63 @@
             <url>https://staging-ewp.uhasselt.be/api/institutions</url>
 			<max-hei-ids>2</max-hei-ids>				
         </institutions>
+		<organizational-units version="2.1.1">
+			<http-security>
+				<sec:client-auth-methods>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:client-auth-methods>
+				<sec:server-auth-methods>
+					<tlscert
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:server-auth-methods>
+			</http-security>
+			<url>https://staging-ewp.uhasselt.be/api/ounits</url>
+			<max-ounit-ids>100</max-ounit-ids>
+			<max-ounit-codes>100</max-ounit-codes>
+		</organizational-units>
+		<courses version="0.7.1">
+			<http-security>
+				<sec:client-auth-methods>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:client-auth-methods>
+				<sec:server-auth-methods>
+					<tlscert
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:server-auth-methods>
+			</http-security>
+			<url>https://staging-ewp.uhasselt.be/api/courses</url>
+			<max-los-ids>100</max-los-ids>
+			<max-los-codes>100</max-los-codes>
+		</courses>
+		<simple-course-replication version="1.0.0-rc9">
+			<http-security>
+				<sec:client-auth-methods>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:client-auth-methods>
+				<sec:server-auth-methods>
+					<tlscert
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:server-auth-methods>
+			</http-security>
+			<url>https://staging-ewp.uhasselt.be/api/coursereplication</url>
+			<allows-anonymous-access>false</allows-anonymous-access>
+			<supports-modified-since>false</supports-modified-since>
+		</simple-course-replication>
     </r:apis-implemented>
 
     <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
