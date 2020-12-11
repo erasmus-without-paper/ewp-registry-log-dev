@@ -1,0 +1,141 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+   <host>
+        <ewp:admin-email>petr.abrahamczik@vsb.cz</ewp:admin-email>
+        <ewp:admin-notes>It's a test manifest.</ewp:admin-notes>
+
+        <r:apis-implemented>
+            <!-- All API entries are defined in their own separate XML namespaces.
+            You need to use proper `xmlns` in order for them to be matched properly. -->
+
+            <!-- The entry for the Discovery Manifest API (a self-reference). -->
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://edison.vsb.cz/ewp/test/manifest.xml</url>
+            </discovery>
+
+        </r:apis-implemented>
+
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="vsb.cz">
+                <other-id type="pic">999868144</other-id>
+                <other-id type="erasmus">CZ OSTRAVA01</other-id>
+                <name>VYSOKA SKOLA BANSKA - TECHNICKA UNIVERZITA OSTRAVA</name>
+            </hei>
+        </mf:institutions-covered>
+
+        <client-credentials-in-use>
+
+            <!-- This one is used for TLS Client Authentication (optional) -->
+            <certificate>
+MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xOTA2MjcwMDAwMDBaFw0yMTA3MDExMjAwMDBaMIGAMQswCQYDVQQG
+EwJDWjEQMA4GA1UEBxMHT3N0cmF2YTFBMD8GA1UECgw4Vnlzb2vDoSDFoWtvbGEg
+YsOhxYhza8OhIC0gVGVjaG5pY2vDoSB1bml2ZXJ6aXRhIE9zdHJhdmExHDAaBgNV
+BAMTE2FzMi10ZXN0Lndwcy52c2IuY3owggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCQgBJ0L3QkUtPoRuqw13VoWH+Nnn5xmzo0HQFR8soUZX+3N+NRPIJZ
+yCltaC4i9ULfZvDZjFB9ujj0g5LmnolNxIGwcwo9B3Nkl50drrrInkKt7CGA64w8
+CvBgFwbSR1kEUSNz1ASMaJL/7pgyPA8VV98Y08K0FQMLzAV/6ROPxSzcPpQmAfGZ
+quIPEXa+UysEAx6h9pryuJ6Mq7s5TN2h3DnCRGXS7JYJLZegfyOjyaOyxYPg989W
+86lOX/NAUQaIeguE2N/ad/LdBlIbmNPHR0zlEJQXVgL0KpWGc8ZYi25tHgIZO3aH
+Umm38Rm6VUrP+MW8LR1VpEHZRR6mEdGjAgMBAAGjggNMMIIDSDAfBgNVHSMEGDAW
+gBRn/YggFCeYxwnSJRm76VERY3VQYjAdBgNVHQ4EFgQUop7Uf87uZqQiGyN+EsLh
+LNau26wwHgYDVR0RBBcwFYITYXMyLXRlc3Qud3BzLnZzYi5jejAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIw
+L6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3Js
+MC+gLaArhilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNy
+bDBMBgNVHSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsGAQUFBwIBFhxodHRwczov
+L3d3dy5kaWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBuBggrBgEFBQcBAQRiMGAw
+JAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcw
+AoYsaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcnQw
+DAYDVR0TAQH/BAIwADCCAXwGCisGAQQB1nkCBAIEggFsBIIBaAFmAHYApLkJkLQY
+WBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFrmJe88wAABAMARzBFAiAyGmGJ
+gNoyjrp6msGRtR5yxhLwG4Ih5S1gW+rCmXbSWgIhAKrHfL8HVUpvpf3yEcTCrTK8
+EtQO6ouPpsuROPzjaqvnAHUAh3W/51l8+IxDmV+9827/Vo1HVjb/SrVgwbTq/16g
+gw8AAAFrmJe9QQAABAMARjBEAiAP3LQ2GldqlPmq409BTjtby7ui0ik3H70B/tI2
+BmSLngIgIKhJ2MojeB66QHYFfPGomnKNKHrXTqSXQ3yK9H5MyjMAdQBElGUusO7O
+r8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWuYl7xLAAAEAwBGMEQCIBzKyhD6
+J5k3gIZ5+rzkooo8WsOngUVD/wTpqgA2oHhlAiByMngRRfO/200GxL1mNYbS3r70
+1Zv13dMRRbIwg0432jANBgkqhkiG9w0BAQsFAAOCAQEASG1oFkJ+mCvDuz+2f3DL
+T6LBWj+lIp051HaS0BVYDv4tVTS9mMQOuyn7g/mNbWA8+y9RzcM/NKSv1D8VUES/
+6V2LyAGxVJEYv/PCga0jSZWgIaFl3RDHniIxGefHwEZg6B/PcphqwiMWYvk7QxLA
+fZnyw3LdUJCeDxBrik2R9BEWe6rwKP6ufxZbODNTRnTYk+WOh3N58gelCAdAU0Y6
+XwUinobZKR/v26mVtiF/q+pplUlpnYOhyaH/dewwj5NvltwEjLSpClTJ/8/cGqBT
+9zIMy/qNwIem8tzT4FfZiNV6iZ0rQXHEOTuDIp4278CV/YbG7d0PrPdbDtFX2pqb
+Sg==
+            </certificate>
+
+            <!-- And this one is used for HTTP Signature Authentication -->
+            <rsa-public-key>
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxlM50uX/pQTqZA8VMp4p
+W7qnBgfK6Ax7+U+TZZL4n4ukfL/ezIHqBzbW7OgucXfRxik029eOkU0OMPqxU36d
+5QZKe1Yd8cxOt8HKyxXNOFCdlmsKuaeM5CSHLPoxwuz0p8cQBpvYq7T0stGPkO6S
+Wu9ramaPoHWOXo78us5TdFt1zp+6VB1CbH/SHYY87IhKDCpidf5H0WC4HSKNLU3y
+ugZkQ5C7Nq644V/EgXBu14w7/tJEqCRXrnL76nv0Thk8BLg/ghSFrcGjT0qOJWaT
+/orKLC3HPjuhzYi5EsfhC4vattULs1QgRXgYdgIKfvqTMggENXJv9U0AlIBvNbE1
+uQIDAQAB
+            </rsa-public-key>
+        </client-credentials-in-use>
+
+        <server-credentials-in-use>
+            <!-- Used for HTTP Signature Authentication -->
+            <rsa-public-key>
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxlM50uX/pQTqZA8VMp4p
+W7qnBgfK6Ax7+U+TZZL4n4ukfL/ezIHqBzbW7OgucXfRxik029eOkU0OMPqxU36d
+5QZKe1Yd8cxOt8HKyxXNOFCdlmsKuaeM5CSHLPoxwuz0p8cQBpvYq7T0stGPkO6S
+Wu9ramaPoHWOXo78us5TdFt1zp+6VB1CbH/SHYY87IhKDCpidf5H0WC4HSKNLU3y
+ugZkQ5C7Nq644V/EgXBu14w7/tJEqCRXrnL76nv0Thk8BLg/ghSFrcGjT0qOJWaT
+/orKLC3HPjuhzYi5EsfhC4vattULs1QgRXgYdgIKfvqTMggENXJv9U0AlIBvNbE1
+uQIDAQAB
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
