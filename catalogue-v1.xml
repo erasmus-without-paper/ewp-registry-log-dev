@@ -11676,10 +11676,10 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </ia3:http-security>
-                <ia3:get-url>https://unizone-ewp.herokuapp.com/rest/iias/get</ia3:get-url>
+                <ia3:get-url>https://unizone-ewp.herokuapp.com/rest/iias/getv3</ia3:get-url>
                 <ia3:max-iia-ids>3</ia3:max-iia-ids>
                 <ia3:max-iia-codes>3</ia3:max-iia-codes>
-                <ia3:index-url>https://unizone-ewp.herokuapp.com/rest/iias/index</ia3:index-url>
+                <ia3:index-url>https://unizone-ewp.herokuapp.com/rest/iias/indexv3</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
             <iac2:iia-cnr version="2.0.2">
@@ -11759,6 +11759,45 @@
                 <ia2:max-iia-codes>3</ia2:max-iia-codes>
                 <ia2:index-url>https://unizone-ewp.herokuapp.com/rest/iias/indexv2</ia2:index-url>
             </ia2:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ugent.be</hei-id>
+            <hei-id>demo.jekab.eu</hei-id>
+            <hei-id>demo.olaine.eu</hei-id>
+            <hei-id>up.pt</hei-id>
+            <hei-id>test.dash</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="137f36894bcb9d985312dc8d69d9978c14b213e6b72840dcd149a5dec1ea1360"/>
+            <rsa-public-key sha-256="0e40b5f5ab0cc6ca3ce6e91a35d7a199ca9843089f0de9ae5e2bebddfa54d1dd"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="0e40b5f5ab0cc6ca3ce6e91a35d7a199ca9843089f0de9ae5e2bebddfa54d1dd"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-email>daiga.kuzmane@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <apis-implemented>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://unizone-ewp.herokuapp.com/rest/iias/getv3</ia3:get-url>
+                <ia3:max-iia-ids>3</ia3:max-iia-ids>
+                <ia3:max-iia-codes>3</ia3:max-iia-codes>
+                <ia3:index-url>https://unizone-ewp.herokuapp.com/rest/iias/indexv3</ia3:index-url>
+            </ia3:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>ugent.be</hei-id>
