@@ -20897,6 +20897,258 @@
             <rsa-public-key sha-256="ba830bc879e34d1ae1b791f3c85cba2b7144586866aaa75f19e1d7b8f37acced"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>michal.pysz@uj.edu.pl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp.uj.edu.pl/test/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.uj.edu.pl/test/echo</e2:url>
+            </e2:echo>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp.uj.edu.pl/test/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp.uj.edu.pl/test/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>100</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.uj.edu.pl/test/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp.uj.edu.pl/test/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://ewp.uj.edu.pl/test/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>100</ia3:max-iia-ids>
+                <ia3:max-iia-codes>100</ia3:max-iia-codes>
+                <ia3:index-url>https://ewp.uj.edu.pl/test/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp.uj.edu.pl/test/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ewp.uj.edu.pl/test/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://ewp.uj.edu.pl/test/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.16.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp.uj.edu.pl/test/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp.uj.edu.pl/test/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.4.1"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp.uj.edu.pl/test/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>100</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://ewp.uj.edu.pl/test/courses</co1:url>
+                <co1:max-los-ids>100</co1:max-los-ids>
+                <co1:max-los-codes>100</co1:max-los-codes>
+            </co1:courses>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewp.uj.edu.pl/test/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp.uj.edu.pl/test/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://ewp.uj.edu.pl/test/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uj.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="3618fccb4984f005102e159404371d6cfe98e0062eb854d72573cbfb71009774"/>
+            <rsa-public-key sha-256="24544c615480ff565b6069916c7f1ef22d6148f59c7fc889b229033c13a7025c"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="24544c615480ff565b6069916c7f1ef22d6148f59c7fc889b229033c13a7025c"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -22876,6 +23128,10 @@
             <name xml:lang="en">UiT The Arctic University of Norway</name>
             <name xml:lang="no">UiT Norges arktiske universitet</name>
         </hei>
+        <hei id="uj.edu.pl">
+            <name xml:lang="en">Jagiellonian University in Kraków</name>
+            <name xml:lang="pl">Uniwersytet Jagielloński w Krakowie</name>
+        </hei>
         <hei id="uksw.edu.pl">
             <other-id type="erasmus">PL WARSZAW07</other-id>
             <other-id type="pic">996314743</other-id>
@@ -23648,6 +23904,14 @@
             zlimYbVTMVAISMmLvJ3mV05JVUBLo5J+Tf377sWimhKWjbVX4Uxa4O4ZMEjxXJE8hjvswvaugqge
             qAE0IwxpezyrU4R1m/DsjEMobBFkljT7qktueBriwalMXA/okhaZDDM5cw7J7mfNuB6sM8eCimZ7
             gblu9QIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="24544c615480ff565b6069916c7f1ef22d6148f59c7fc889b229033c13a7025c">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqbnU9csY6HG1m4NpkZGYBAVzTvVOHfYE
+            s+UjfFmrmThphg8umCPwEp+pNrJd8XfKDnPlUTQXr7QuPpCFbNWlhjTXRn6a4iDqcgcF2fwL77Hq
+            jWHTRSTLT3kTSyIjAmZnY38knS6M1taR+TaUBpPOO1h3+ElNyv5vkVqVlLUuSGcM44S+H9FmeLln
+            1G3VKk8eqn7y1TgCWuOw2Z4bcMJQq+0upnBBdAROWK0pGta7wN88z0w+RR4SU6QD7G39/HghoBvb
+            8OfYCPONEI1+PvBeOH2RZThZAoNSwgj82Z6UYaZ+wFpon3gL342xa1JOdTzPpnG5zRECb+w8Ruwk
+            OwOLewIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="2462ab15dee407dc1e8cd13b62ab030ac285c874f51e5ed16cd647f2e33092d2">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA39sq2mNfKqMVtOs8y/oNu9ORIpkd+Okf
