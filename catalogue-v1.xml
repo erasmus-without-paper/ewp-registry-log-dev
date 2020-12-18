@@ -22494,6 +22494,135 @@
             <rsa-public-key sha-256="97d5ab1d0461ec2497e107f63a062a3f5251c6fd4cce337c02d760d0c80106c2"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>lmeijer@ucam.edu</ewp:admin-email>
+        <ewp:admin-email>imtimon@ucam.edu</ewp:admin-email>
+        <ewp:admin-notes>UCAM EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://laurea.ucam.edu:2443/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://laurea.ucam.edu:2443/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://laurea.ucam.edu:2443/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://laurea.ucam.edu:2443/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://laurea.ucam.edu:2443/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://laurea.ucam.edu:2443/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://laurea.ucam.edu:2443/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://laurea.ucam.edu:2443/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://laurea.ucam.edu:2443/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ucam.edu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="1e76317ed12d49379375b34bc1e4c7e38ececa982b6963689a1f284a07fa3152"/>
+            <rsa-public-key sha-256="56dce566ae73868d11ca611983876fcf84364900b4201a689207ea25d62bc0c5"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="56dce566ae73868d11ca611983876fcf84364900b4201a689207ea25d62bc0c5"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -24402,6 +24531,11 @@
             <name xml:lang="en">University of Cadiz</name>
             <name xml:lang="es">Universidad de Cádiz</name>
         </hei>
+        <hei id="ucam.edu">
+            <other-id type="erasmus">E MURCIA05</other-id>
+            <other-id type="pic">E10158141</other-id>
+            <name xml:lang="es">Universidad Catolica San Antonio de Murcia</name>
+        </hei>
         <hei id="ucg.ac.me">
             <other-id type="erasmus">CG PODGORICA01</other-id>
             <name xml:lang="al">Univerzitet Crne Gore (University of Montenegro)</name>
@@ -25497,6 +25631,14 @@
             Fx5XwegihmMHWPh9Gn/jbBlA9ig/OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkE
             sDbc7jvUDiZ3sa6i5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ
             +mNQsQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="56dce566ae73868d11ca611983876fcf84364900b4201a689207ea25d62bc0c5">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7KUoXP7E7iPFnYKVD3NBBUp8IVQvT+Bw
+            roLDeu1kXchgGZjMBShdUeK3dCVBv5w88mx4EpKeK60eVofpayED8kB4sFGQt2hte4qAgkmPqe4t
+            16NYuDzwmTUUZm7JnaueqK/eeOy4vVEM1ZQAakYRMdqVDnzHHWHgA+ceC8l4tpuLrwD7lbwxgd/T
+            9ushI5nmN8tgdS5hsNxyXcC4DW4yUFZwZyZUJtHjukdVL+44QC1YaSd8LQ/kkKRxBizqqTDEf+EV
+            HZzTWACYM71lfiMHWgS797LZvr8NrcfpOziHvkNetzNFa7N+UzaAX5AcqzuJZjp8ueT+hwNxlbke
+            eytClwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="57d7a17c33d017b7110f55af4042654d42d78ccafdd6421a5c3808ab8aedff9f">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp3NLBa+08K3tLXVh0ueaOGtftFNE+B7t
