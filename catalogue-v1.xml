@@ -22366,6 +22366,134 @@
             <rsa-public-key sha-256="619923154ac49a843d8e2c7a163549ee9d31c807fdad9453d73e8a5b1b88522e"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>uri@upf.edu</ewp:admin-email>
+        <ewp:admin-notes>UPF EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://provesga.upf.edu/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://provesga.upf.edu/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://provesga.upf.edu/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://provesga.upf.edu/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://provesga.upf.edu/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://provesga.upf.edu/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://provesga.upf.edu/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://provesga.upf.edu/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://provesga.upf.edu/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>upf.edu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="10c2f847e2c8ad34a3871d2a6f3e44415f072e73b67edf04cc177e0e0e9ed706"/>
+            <rsa-public-key sha-256="97d5ab1d0461ec2497e107f63a062a3f5251c6fd4cce337c02d760d0c80106c2"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="97d5ab1d0461ec2497e107f63a062a3f5251c6fd4cce337c02d760d0c80106c2"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -24879,6 +25007,12 @@
             <name xml:lang="en">University of Porto</name>
             <name xml:lang="pt">Universidade do Porto</name>
         </hei>
+        <hei id="upf.edu">
+            <other-id type="erasmus">E BARCELO15</other-id>
+            <other-id type="pic">E10208856</other-id>
+            <name xml:lang="en">Pompeu Fabra University</name>
+            <name xml:lang="es">Universidad Pompeu Fabra</name>
+        </hei>
         <hei id="uphf.fr">
             <other-id type="erasmus">F VALENCI01</other-id>
             <other-id type="pic">999884537</other-id>
@@ -25629,6 +25763,14 @@
             IWCq6ObpS5EBoTPkqeVScAHdyM9DtNe2COdq23cP7Z4LZwi6ezr43sIT/Hp4btj63nx1+HsOdktD
             WkXq/RZJFHUuCZCrh7yPuWCKkJBlp24/N0NZBtxxO3CSbe52QaVisicLYUnAObSmP9m2ijs24HpY
             0lA6bQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="97d5ab1d0461ec2497e107f63a062a3f5251c6fd4cce337c02d760d0c80106c2">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyqOahCIXJDVYHOFzfAOXb3uS3E7KP2j5
+            xpxwMbc0T2Qudc6rKTjJ5SDHHizaMqk3pMpm3D5aFMgWQPxg/v6pEt9zxDlmypPfGM39TiplpDIi
+            3X30zd2VxLOBIggAMG2Ff0ywesuqCQYzL/G0QBg0I5F5iLPsImWMX5zhNyT0AFOykdOhWyueTmbL
+            aME2dSxS8p9/U6HtNFGKZanZ3NOXYRkOUoJvwDRDXAM+kxjGwmgYYNVWN/YhuCWGnC191R41JH+d
+            M6LEM2PiC6rEUycZNIQgVHIUcI7H8VwFXUxvtwg5s/dO29raceGKNft86kXFOy0SEltYWfDuKdOw
+            kYWb/QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="9b3e81af86e6565449c6d70bcbcaba63f80a41f9087d7b71748c6a0451942e08">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAli5adXlejIoGqa3K58pe/2bq/qu3R9HU
