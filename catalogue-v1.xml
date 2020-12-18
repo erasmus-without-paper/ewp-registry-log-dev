@@ -21470,6 +21470,134 @@
             <rsa-public-key sha-256="e31740ae208d7983318b559c17ad4976c2ea48b219512ad41c3881153bae4fb7"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>relin2@ubu.es</ewp:admin-email>
+        <ewp:admin-notes>UBU EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://sigma.ubu.es:2443/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://sigma.ubu.es:2443/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://sigma.ubu.es:2443/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://sigma.ubu.es:2443/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://sigma.ubu.es:2443/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://sigma.ubu.es:2443/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://sigma.ubu.es:2443/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://sigma.ubu.es:2443/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://sigma.ubu.es:2443/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ubu.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="2d1a4790d6f4f4ca9074e0ef306c0749cab238c3282cf3d643ee1fb54fffa256"/>
+            <rsa-public-key sha-256="57d7a17c33d017b7110f55af4042654d42d78ccafdd6421a5c3808ab8aedff9f"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="57d7a17c33d017b7110f55af4042654d42d78ccafdd6421a5c3808ab8aedff9f"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -23337,6 +23465,12 @@
             <name xml:lang="en">UNIVERSITAT DE BARCELONA</name>
             <name xml:lang="es">UNIVERSITAT DE BARCELONA</name>
         </hei>
+        <hei id="ubu.es">
+            <other-id type="erasmus">E  BURGOS01</other-id>
+            <other-id type="pic">998959642</other-id>
+            <name xml:lang="en">University of Burgos</name>
+            <name xml:lang="es">Universidad de Burgos</name>
+        </hei>
         <hei id="uc.pt">
             <other-id type="erasmus">P COIMBRA01</other-id>
             <other-id type="euc">29242-EPP-1-2014-1-PT-EPPKA3-ECHE</other-id>
@@ -24420,6 +24554,14 @@
             Fx5XwegihmMHWPh9Gn/jbBlA9ig/OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkE
             sDbc7jvUDiZ3sa6i5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ
             +mNQsQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="57d7a17c33d017b7110f55af4042654d42d78ccafdd6421a5c3808ab8aedff9f">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp3NLBa+08K3tLXVh0ueaOGtftFNE+B7t
+            SMNryVYbn+i6WWMXmbfULUyl8q4EbutlLweMltfNZ+VkcQCdEGAq7bH7oUTHv++6tj/sOVl9HUjp
+            TvNuy3f+rvNZ6ym657dRrPmR0E6wY6iGjIgIkNLUIvuzBCPm54TPVlH7prI2yuy2zPd8x+qTbvCl
+            bK6dDYDyZ7H/gm9uefoi49mOp9Y9UdW4yR7aDVI34fLNXSCOlQfrl04vQ37lvFajNq6tJvkiNWqI
+            j+lup4LIFluduTZ7s4L//1kQ1Yi93hiZ9z49c6qE3CUIvBW+fQI3gHg7yCG7YJMohX0TL4dxY9Am
+            XRPQ0wIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="5ab59e096af25e11db2a52553b3e0be9ff811a7ccbb2ccfd329debb4361c4d1b">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2CTv7ZXZ2R8iS8zyhJXE0FxQyWVDivUf
