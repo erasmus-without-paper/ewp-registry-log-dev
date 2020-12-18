@@ -22238,6 +22238,134 @@
             <rsa-public-key sha-256="acd578ecb464221526f275e2607c8707d28c66d2728da974e7b3bff2fd087e81"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>uri@upf.edu</ewp:admin-email>
+        <ewp:admin-notes>ESCI EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://gestioacademicavirtual.esci.upf.edu:2443/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://gestioacademicavirtual.esci.upf.edu:2443/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>esci.upf.edu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="c5a43ede73a05cbf9db3ea9ceb9f7a52a34cf4c73f9e412655c9a7d086fff423"/>
+            <rsa-public-key sha-256="619923154ac49a843d8e2c7a163549ee9d31c807fdad9453d73e8a5b1b88522e"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="619923154ac49a843d8e2c7a163549ee9d31c807fdad9453d73e8a5b1b88522e"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -22689,6 +22817,12 @@
             <other-id type="pic">949296321</other-id>
             <name xml:lang="en">ESAIP</name>
             <name xml:lang="fr">ESAIP</name>
+        </hei>
+        <hei id="esci.upf.edu">
+            <other-id type="erasmus">E BARCELO15</other-id>
+            <other-id type="pic">E10208856</other-id>
+            <name xml:lang="en">Pompeu Fabra University</name>
+            <name xml:lang="es">Universidad Pompeu Fabra</name>
         </hei>
         <hei id="esiea.fr">
             <other-id type="eche">98811-EPP-1-2014-1-FR-EPPKA3-ECHE</other-id>
@@ -25273,6 +25407,14 @@
             rgzzfvuByIHxHABilFLHeK4CapvE9YSafrRnVnJEZAaoDH5Bcv4H/6/gsTHPPpMde4iQ4gEDfXOG
             RxmX48y68V+NZyztHo/zC7iBUSEfKMf5CgJiB7mPAKhv+OaqFhsoITnUQq6ckGl/cLE5jw+vPdzB
             FarJJwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="619923154ac49a843d8e2c7a163549ee9d31c807fdad9453d73e8a5b1b88522e">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFuIpX+WoZSS79Vzd5E3csKTbjJmgkbW
+            TxhpLDNG5BaM7rt4VstiJLkP2sVnS0/DGOzddkzgaEQ0ca4o8BxKZXgUBpQQB4VK/bPm3FxlnFSH
+            HSTS0fK3oxy8Mm0bjPaOoK6Qa889vc8AHFLtXJfSUS/chSrvUuUSHfnqD8KDT1aaS8GFzoDjog87
+            hALkwjFacrkYCGo8QbQlPZbrWjpI6D3lAcmDSwEyKYbVIiObScMPoxqBNG0yoF5Q7TU6Q7wtBnlW
+            cBK7BiI77irT+mjy8fuQLZ4UDm+YsxE5JrSSHN32Q1zexZiIWT9fIoHxg6DsKcWqX1np4tI9VSUs
+            Y/EfYQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="6367c04499fd04480f99e8861ec590d657b8bcada8fb6e618b0f24dffbda6ece">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEArXtJHGGo/gnOwJj1B8O1lqs6Xn40Ogld
