@@ -16,6 +16,19 @@
         <l:admin-email>petr.abrahamczik@vsb.cz</l:admin-email>
         <l:admin-notes>It's a test manifest.</l:admin-notes>
         <j:apis-implemented>
+            <h:echo version="2.0.1">
+                <h:http-security>
+                    <i:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </i:client-auth-methods>
+                    <i:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </i:server-auth-methods>
+                </h:http-security>
+                <h:url>https://158.196.192.128:9443/cz.vsb.edison.edu.study.ewp.web/rest/echo</h:url>
+            </h:echo>
             <f:discovery version="5.0.0">
                 <f:url>https://edison.sso.vsb.cz/ewp/test/manifest.xml</f:url>
             </f:discovery>
