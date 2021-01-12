@@ -13517,6 +13517,23 @@
                 <om1:index-url>https://orinumenti.uca.es/en/ewp/api/omobilities/index</om1:index-url>
                 <om1:max-omobility-ids>2</om1:max-omobility-ids>
             </om1:omobilities>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://orinumenti.uca.es/en/ewp/api/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>2</im1:max-omobility-ids>
+            </im1:imobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uca.es</hei-id>

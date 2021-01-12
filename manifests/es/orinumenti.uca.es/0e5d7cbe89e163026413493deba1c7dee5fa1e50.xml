@@ -20,6 +20,7 @@
     xmlns:api7="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:api8="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:api9="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:api10="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
 >
     <host>
         
@@ -190,7 +191,24 @@
                 <api9:get-url>https://orinumenti.uca.es/en/ewp/api/omobilities/get</api9:get-url>
                 <api9:index-url>https://orinumenti.uca.es/en/ewp/api/omobilities/index</api9:index-url>
                 <api9:max-omobility-ids>2</api9:max-omobility-ids>
+
             </api9:omobilities>
+
+            <api10:imobilities version="1.0.0">
+                <api10:http-security>
+                    <sec:client-auth-methods>
+                        <ns4:tlscert allows-self-signed="true"/>
+                        <ns3:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns2:tlscert/>
+                        <ns1:httpsig/>
+                    </sec:server-auth-methods>
+                </api10:http-security>
+                <api10:get-url>https://orinumenti.uca.es/en/ewp/api/imobilities/get</api10:get-url>
+                <api10:max-omobility-ids>2</api10:max-omobility-ids>
+
+            </api10:imobilities>
 
         </r:apis-implemented>
 
