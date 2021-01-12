@@ -119,6 +119,26 @@
 			<allows-anonymous-access>false</allows-anonymous-access>
 			<supports-modified-since>false</supports-modified-since>
 		</simple-course-replication>
+		<iias>
+			<http-security>
+				<sec:client-auth-methods>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:client-auth-methods>
+				<sec:server-auth-methods>
+					<tlscert
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:server-auth-methods>
+			</http-security>
+			<get-url>https://staging-ewp.uhasselt.be/api/iiasget</get-url>
+			<max-iia-ids>10</max-iia-ids>
+			<max-iia-codes>10</max-iia-codes>
+			<index-url>https://staging-ewp.uhasselt.be/api/iiasindex</index-url>
+		</iias>
     </r:apis-implemented>
 
     <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
