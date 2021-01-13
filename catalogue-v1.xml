@@ -23038,6 +23038,442 @@
             <rsa-public-key sha-256="5efaec17d6e9595b25532e9dc792decd2bc9f3fa5faa46215a43e63724a89b8a"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-notes>Manifest File for Instituto Politécnico de Coimbra.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </in2:http-security>
+                <in2:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/institutions</in2:url>
+                <in2:max-hei-ids>5</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ou2:http-security>
+                <ou2:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/organizationunits</ou2:url>
+                <ou2:max-ounit-ids>5</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>5</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </co1:http-security>
+                <co1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/courses</co1:url>
+                <co1:max-los-ids>5</co1:max-los-ids>
+                <co1:max-los-codes>5</co1:max-los-codes>
+            </co1:courses>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </cr1:http-security>
+                <cr1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/courses/replication</cr1:url>
+                <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/interinstitutionalagreements/get</ia3:get-url>
+                <ia3:max-iia-ids>5</ia3:max-iia-ids>
+                <ia3:max-iia-codes>5</ia3:max-iia-codes>
+                <ia3:index-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/interinstitutionalagreements/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iac2:http-security>
+                <iac2:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/interinstitutionalagreements/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/interinstitutionalagreementsapproval/</iaa1:url>
+                <iaa1:max-iia-ids>5</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/interinstitutionalagreementsapproval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </f1:http-security>
+                <f1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/mobilityfactsheet</f1:url>
+                <f1:max-hei-ids>5</f1:max-hei-ids>
+            </f1:factsheet>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </om1:http-security>
+                <om1:get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilities/get</om1:get-url>
+                <om1:index-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilities/index</om1:index-url>
+                <om1:max-omobility-ids>5</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </omc1:http-security>
+                <omc1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>5</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/get</oml1:get-url>
+                <oml1:index-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/index</oml1:index-url>
+                <oml1:update-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/update</oml1:update-url>
+                <oml1:max-omobility-ids>5</oml1:max-omobility-ids>
+                <oml1:sends-notifications/>
+                <oml1:supported-update-types>
+                    <oml1:approve-components-studied-proposal-v1/>
+                    <oml1:update-components-studied-v1/>
+                </oml1:supported-update-types>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>5</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </im1:http-security>
+                <im1:get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/get</im1:get-url>
+                <im1:max-omobility-ids>5</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </imc1:http-security>
+                <imc1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>5</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/get</imt1:get-url>
+                <imt1:index-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>5</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>5</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ipc.pt</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="5d9bfdd167e249a830653eb96d89b9e68ea0693f694dc1983adfbb276e783d5d"/>
+            <rsa-public-key sha-256="e1ea691a42f9c1da9e62624d995e23dfb6fafdf136748b539d54f6d96365d360"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8d1793dc883114ab862897bb83cc925d0c81d7d1ecf2c134198220dda5da12a6"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -24042,6 +24478,12 @@
             <other-id type="pic">948639437</other-id>
             <name xml:lang="en">IPAC</name>
             <name xml:lang="fr">IPAC</name>
+        </hei>
+        <hei id="ipc.pt">
+            <other-id type="erasmus">P COIMBRA02</other-id>
+            <other-id type="pic">972374658</other-id>
+            <name xml:lang="en">Instituto Politécnico de Coimbra</name>
+            <name xml:lang="pt">Instituto Politécnico de Coimbra</name>
         </hei>
         <hei id="ipl.pt">
             <other-id type="ErasmusCode">P LISBOA05</other-id>
@@ -26332,6 +26774,14 @@
             Yc28NAU+cgeHoHv5lcCgKuxj1196kG8eqlfE8UOeAEuR2e6wCC1u+dlhh1yzTzRKcX79AYAnA19/
             oO9nTQIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="8d1793dc883114ab862897bb83cc925d0c81d7d1ecf2c134198220dda5da12a6">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAobmL4nOGqDCCwjwh7EkKMVU3ijIXNgle
+            gs3IGXXXha0kHs7gwDk1aav+TaqDYRc7VMhMLUCZ36cKjw+gJyZj9OmVogG5qJamYKUQC8Bgb5Pr
+            HOJlc1bFtSKoMhyKVJo9bNpu4mjKG6gKzK7M+Ils6peJIu0ne/zKF85Qn3wAap1cEMjbWFseJeBS
+            WW1G4h8J+jaF9V4uiInZ2AtkcgUOR2jrikl560BKzQrOLC3KmD2dUVa/uxdbKY53oEog0KcK8Gpc
+            GePkAeiH316OWJwAx4uc5WmeX3NQgZfO29vggqC2vcJOvPQnrlKDcEJc7a22XxW7UKAns/xGKfUU
+            PGp6KwIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="8f8aa0dfac2c10b7c7e8abf30991a8d48d13030dd04398f2b85a99dde3f7b13b">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEArKB7ZDRIjjZbd5ukudLIlzdZSJI9RJ9c
             DhP7f1WOos8PxkUgPBIr3IMcZqauqJ2O92LdqELi5b7RYnVAPVVgktuagI9AlPAAZ/VCoIOy2jLg
@@ -26581,6 +27031,14 @@
             fRrOvwi0590+gW62tZYjCthX+IbA2rvoVQkQ/WZ4kI14wUqXVTDQfpRHoMnJC7bx5q8xlrqvyHow
             oTdO0x2hmM6+qwKpSO1r5l8U1Duplok6mrPuM2mIBKv3JByj7Po0i6ZeOwFFZ+QROQR7GTzL1IQ1
             FhqDQwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="e1ea691a42f9c1da9e62624d995e23dfb6fafdf136748b539d54f6d96365d360">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvqkljuhZegZL+2F7MxESfAbb1R0DiuRK
+            ij4qg2qefwhaJyt84XYbAA195mO09yxWBIvNKejOqTTKlgmxnfrdt5x+KvcS+rvcaPr9NAdfXe6Q
+            LH5ts5wBVkxupenvy9H00TBYHBFuDi3j7j6CZrC56sY8XwCqhZntQGh+Bd95clknpicQ9T9ilEFF
+            pdUR5HL/o+B0FWF1KdOvi2UwnqYoObzS824pnwsaXrEmyG5b2FW0K8VZ0Prkb4+cMn/CbPTegosV
+            1X9fm1s4jBhiFTYddQS5wptQL5wiZUMTvm1LOUom6kfttY17NB0TgJCLp0z2OCgNNVoxL/F9sSbO
+            iTtqAQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="e31740ae208d7983318b559c17ad4976c2ea48b219512ad41c3881153bae4fb7">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAju3ZEJBHIsQYUXhdbHGzqG/d3rmWBCsy
