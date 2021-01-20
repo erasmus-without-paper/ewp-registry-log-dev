@@ -19140,6 +19140,21 @@
                 <om1:index-url>https://staging-ewp.uhasselt.be/api/omobindex</om1:index-url>
                 <om1:max-omobility-ids>10</om1:max-omobility-ids>
             </om1:omobilities>
+            <imobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/v1.0.0/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://staging-ewp.uhasselt.be/api/imobget</get-url>
+            </imobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uhasselt.be</hei-id>
