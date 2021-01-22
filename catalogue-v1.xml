@@ -23545,6 +23545,51 @@
                 <in2:url>https://dev107.parleto.io:23300/api/ewp/institutions.xml</in2:url>
                 <in2:max-hei-ids>50</in2:max-hei-ids>
             </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev107.parleto.io:23300/api/ewp/ounits.xml</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://dev107.parleto.io:23300/api/ewp/iias-get.xml</ia4:get-url>
+                <ia4:max-iia-ids>1</ia4:max-iia-ids>
+                <ia4:max-iia-codes>1</ia4:max-iia-codes>
+                <ia4:index-url>https://dev107.parleto.io:23300/api/ewp/iias-index.xml</ia4:index-url>
+            </ia4:iias>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://dev107.parleto.io:23300/api/ewp/iias-approval.xml</iaa1:url>
+                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
         </apis-implemented>
         <institutions-covered>
             <hei-id>asp.gda.pl</hei-id>
