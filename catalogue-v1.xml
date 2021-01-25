@@ -23611,7 +23611,7 @@
         <ewp:admin-email>ewp@akademus.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>https://akademus-ewp-dev.asp.gda.pl/source/manifest.xml</d5:url>
+                <d5:url>https://dev107.parleto.io:23999/api/ewp/manifest.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
@@ -23622,24 +23622,8 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>https://dev107.parleto.io:23300/api/ewp/echo.xml</e2:url>
+                <e2:url>https://dev107.parleto.io:23999/api/ewp/echo.xml</e2:url>
             </e2:echo>
-            <co1:courses
-                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="0.7.1"
-            >
-                <co1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </co1:http-security>
-                <co1:url>https://dev107.parleto.io:23300/api/ewp/courses.xml</co1:url>
-                <co1:max-los-ids>100</co1:max-los-ids>
-                <co1:max-los-codes>100</co1:max-los-codes>
-            </co1:courses>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -23649,7 +23633,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </in2:http-security>
-                <in2:url>https://dev107.parleto.io:23300/api/ewp/institutions.xml</in2:url>
+                <in2:url>https://dev107.parleto.io:23999/api/ewp/institutions.xml</in2:url>
                 <in2:max-hei-ids>50</in2:max-hei-ids>
             </in2:institutions>
             <ou2:organizational-units version="2.1.1">
@@ -23661,9 +23645,9 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </ou2:http-security>
-                <ou2:url>https://dev107.parleto.io:23300/api/ewp/ounits.xml</ou2:url>
-                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+                <ou2:url>https://dev107.parleto.io:23999/api/ewp/ounits.xml</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
             <ia4:iias
                 xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
@@ -23677,30 +23661,12 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </ia4:http-security>
-                <ia4:get-url>https://dev107.parleto.io:23300/api/ewp/iias-get.xml</ia4:get-url>
+                <ia4:get-url>https://dev107.parleto.io:23999/api/ewp/iias-get.xml</ia4:get-url>
                 <ia4:max-iia-ids>1</ia4:max-iia-ids>
                 <ia4:max-iia-codes>1</ia4:max-iia-codes>
-                <ia4:index-url>https://dev107.parleto.io:23300/api/ewp/iias-index.xml</ia4:index-url>
+                <ia4:index-url>https://dev107.parleto.io:23999/api/ewp/iias-index.xml</ia4:index-url>
             </ia4:iias>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://dev107.parleto.io:23300/api/ewp/iias-approval.xml</iaa1:url>
-                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
         </apis-implemented>
-        <institutions-covered>
-            <hei-id>asp.gda.pl</hei-id>
-        </institutions-covered>
         <client-credentials-in-use>
             <rsa-public-key sha-256="4773b17567de8aae714e388e0340a4028c7df55813548c8f8085e58b73ab52cd"/>
         </client-credentials-in-use>
@@ -24052,13 +24018,6 @@
         <hei id="artsaucarre.be">
             <other-id type="erasmus">B MONS24</other-id>
             <name xml:lang="en">ARTS² - Academy of Arts</name>
-        </hei>
-        <hei id="asp.gda.pl">
-            <other-id type="erasmus">PL GDANSK05</other-id>
-            <other-id type="erasmus-charter">218524-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
-            <other-id type="pic">918028856</other-id>
-            <name xml:lang="en">Academy of Fine Arts in Gdansk</name>
-            <name xml:lang="pl">Akademia Sztuk Pięknych w Gdańsku</name>
         </hei>
         <hei id="auth.gr">
             <other-id type="erasmus">G THESSAL01</other-id>

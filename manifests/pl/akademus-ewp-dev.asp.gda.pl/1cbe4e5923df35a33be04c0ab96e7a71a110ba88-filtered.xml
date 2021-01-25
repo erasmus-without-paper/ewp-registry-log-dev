@@ -12,7 +12,7 @@
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
                 version="5.0.0"
             >
-                <url>https://akademus-ewp-dev.asp.gda.pl/source/manifest.xml</url>
+                <url>https://dev107.parleto.io:23999/api/ewp/manifest.xml</url>
             </discovery>
             <echo
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
@@ -26,24 +26,8 @@
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://dev107.parleto.io:23300/api/ewp/echo.xml</url>
+                <url>https://dev107.parleto.io:23999/api/ewp/echo.xml</url>
             </echo>
-            <courses
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="0.7.1"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://dev107.parleto.io:23300/api/ewp/courses.xml</url>
-                <max-los-ids>100</max-los-ids>
-                <max-los-codes>100</max-los-codes>
-            </courses>
             <institutions
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
                 version="2.1.0"
@@ -56,7 +40,7 @@
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://dev107.parleto.io:23300/api/ewp/institutions.xml</url>
+                <url>https://dev107.parleto.io:23999/api/ewp/institutions.xml</url>
                 <max-hei-ids>50</max-hei-ids>
             </institutions>
             <organizational-units
@@ -71,9 +55,9 @@
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://dev107.parleto.io:23300/api/ewp/ounits.xml</url>
-                <max-ounit-ids>10</max-ounit-ids>
-                <max-ounit-codes>10</max-ounit-codes>
+                <url>https://dev107.parleto.io:23999/api/ewp/ounits.xml</url>
+                <max-ounit-ids>100</max-ounit-ids>
+                <max-ounit-codes>100</max-ounit-codes>
             </organizational-units>
             <iias
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
@@ -87,36 +71,13 @@
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <get-url>https://dev107.parleto.io:23300/api/ewp/iias-get.xml</get-url>
+                <get-url>https://dev107.parleto.io:23999/api/ewp/iias-get.xml</get-url>
                 <max-iia-ids>1</max-iia-ids>
                 <max-iia-codes>1</max-iia-codes>
-                <index-url>https://dev107.parleto.io:23300/api/ewp/iias-index.xml</index-url>
+                <index-url>https://dev107.parleto.io:23999/api/ewp/iias-index.xml</index-url>
             </iias>
-            <iias-approval
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://dev107.parleto.io:23300/api/ewp/iias-approval.xml</url>
-                <max-iia-ids>100</max-iia-ids>
-            </iias-approval>
         </r:apis-implemented>
-        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-            <hei id="asp.gda.pl">
-                <other-id type="pic">918028856</other-id>
-                <other-id type="erasmus">PL GDANSK05</other-id>
-                <other-id type="erasmus-charter">218524-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
-                <name xml:lang="pl">Akademia Sztuk Pięknych w Gdańsku</name>
-                <name xml:lang="en">Academy of Fine Arts in Gdansk</name>
-            </hei>
-        </mf:institutions-covered>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"/>
         <client-credentials-in-use>
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtp1xAsDs3KD0QZ2QODEO
 QEaP0oYOcba+tCpfYQoZ01PVzJ8GkKTMeqxircD/xDgcof0I9k928fUkmaZDa4a/
