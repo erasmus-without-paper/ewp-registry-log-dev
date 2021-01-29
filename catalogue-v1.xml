@@ -24826,6 +24826,146 @@
             <rsa-public-key sha-256="79a25c99627096c0990f06e403bf8567f6d6dc15775735d98677d97f9aeb3ae0"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>LIUC test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://sol.liuc.it/preprod/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://sol.liuc.it/preprod/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://sol.liuc.it/preprod/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://sol.liuc.it/preprod/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://sol.liuc.it/preprod/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://sol.liuc.it/preprod/ewp/connector/IIAGet.do</ia4:get-url>
+                <ia4:max-iia-ids>10</ia4:max-iia-ids>
+                <ia4:max-iia-codes>10</ia4:max-iia-codes>
+                <ia4:index-url>https://sol.liuc.it/preprod/ewp/connector/IIAIndex.do</ia4:index-url>
+                <ia4:sends-notifications/>
+            </ia4:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://sol.liuc.it/preprod/ewp/connector/IIACnr.do</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://sol.liuc.it/preprod/ewp/connector/IIAAppr.do</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://sol.liuc.it/preprod/ewp/connector/IIAApprCnr.do</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>liuc.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="daef5c0b575efe5b801329d15fc91e20d5c3c253c671a885800e6c88cde9ee5b"/>
+            <rsa-public-key sha-256="61ea8c1b105ee9448a032af1baf8d978d420208b5569044272ff02638a588c1a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="61ea8c1b105ee9448a032af1baf8d978d420208b5569044272ff02638a588c1a"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -26096,6 +26236,12 @@
             <other-id type="pic">998390737</other-id>
             <name xml:lang="en">UC Limburg (UCLL)</name>
             <name xml:lang="nl">UC Limburg (UCLL)</name>
+        </hei>
+        <hei id="liuc.it">
+            <other-id type="erasmus">I  CASTELL01</other-id>
+            <other-id type="pic">999428734</other-id>
+            <name xml:lang="en">UNIVERSITA' CARLO CATTANEO - TEST</name>
+            <name xml:lang="it">UNIVERSITA' CARLO CATTANEO - TEST</name>
         </hei>
         <hei id="liverpool.ac.uk">
             <other-id type="erasmus">UK LIVERPO01</other-id>
@@ -28029,6 +28175,16 @@
             hALkwjFacrkYCGo8QbQlPZbrWjpI6D3lAcmDSwEyKYbVIiObScMPoxqBNG0yoF5Q7TU6Q7wtBnlW
             cBK7BiI77irT+mjy8fuQLZ4UDm+YsxE5JrSSHN32Q1zexZiIWT9fIoHxg6DsKcWqX1np4tI9VSUs
             Y/EfYQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="61ea8c1b105ee9448a032af1baf8d978d420208b5569044272ff02638a588c1a">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA8MWWPzfQaK/mpcidCHFQyVpf1sx6qOoj
+            alHxSihrc0QC3kw7rZ+bBV2ylsNZmoqXUK8icU3h+jK3esE0PPtmWL6ThPDrj/+lYOREsQIlMxxZ
+            +FLoOW+9dgAAkaNJl4NjVYttjwDK7U1JlHrYXF1GOY3l/4BooKCA4ff0GP2rZtRhKBTs1ec/19w8
+            VBElruRD4Hgev1Hn3wEZoas0Kfl+/Cz6CLKTGU4Hr/tMUEa5e+HHU2NtxmxdC6O1N4F5PKGlpbZW
+            PpTaO8YltoMOYkiFqwhHfHT2BcTaHwvVj282NVA6yhAsX2NYunmYoie4iRiHbviyJMkNwuJuFD3R
+            C9FtO4l6Xy+VcvSVYgZ32D24A3rUf076dbJfDYEPycFPv3rhKDuu54318KRHlfYuueFC1Vq70p8g
+            TiVVHiwBpuE51xi0DYzl6FN5xAi+76xJa5Mra0HfMcg6fiPgIBJozvhx8yId0Muc/JmHq8OAqebA
+            j6NJzlDoeze/w0D/GJIfVsHdAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="6367c04499fd04480f99e8861ec590d657b8bcada8fb6e618b0f24dffbda6ece">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEArXtJHGGo/gnOwJj1B8O1lqs6Xn40Ogld
