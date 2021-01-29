@@ -24686,6 +24686,146 @@
             <rsa-public-key sha-256="d45c6ea9ee3cdbf126c2ca4fdcee357156f853b43ff6a3cc71dde94c9180c1ec"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNIVAQ test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://test.segreteriavirtuale.univaq.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://test.segreteriavirtuale.univaq.it/ewp/connector/IIAGet.do</ia4:get-url>
+                <ia4:max-iia-ids>10</ia4:max-iia-ids>
+                <ia4:max-iia-codes>10</ia4:max-iia-codes>
+                <ia4:index-url>https://test.segreteriavirtuale.univaq.it/ewp/connector/IIAIndex.do</ia4:index-url>
+                <ia4:sends-notifications/>
+            </ia4:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/IIACnr.do</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/IIAAppr.do</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://test.segreteriavirtuale.univaq.it/ewp/connector/IIAApprCnr.do</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>univaq.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="695c4d9a7688996f1f459c0e84f647512652f09a0272fb39ff5f21aa1225ae99"/>
+            <rsa-public-key sha-256="79a25c99627096c0990f06e403bf8567f6d6dc15775735d98677d97f9aeb3ae0"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="79a25c99627096c0990f06e403bf8567f6d6dc15775735d98677d97f9aeb3ae0"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -27270,6 +27410,12 @@
             <name xml:lang="en">Université de Tours</name>
             <name xml:lang="fr">Université de Tours</name>
         </hei>
+        <hei id="univaq.it">
+            <other-id type="erasmus">I  L-AQUIL01</other-id>
+            <other-id type="pic">999859511</other-id>
+            <name xml:lang="en">University of L'Aquila - TEST</name>
+            <name xml:lang="it">Universita' degli Studi dell'AQUILA - TEST</name>
+        </hei>
         <hei id="universita.corsica">
             <other-id type="erasmus">F  CORTE01</other-id>
             <other-id type="euc">28008-IC-1-2007-1-FR-ERASMUS-EUCX-1</other-id>
@@ -27987,6 +28133,16 @@
             CK6O4gi55PibAhXJ1c41eEcH+5SJHsB7421rpnnIWBwTQHDNuRZXU8TtVQ1H7Ji2R9KBzrgVzMT6
             EH0U1u1WlX60u59Faypnhh3X7IOrum2vq4KbDSvAyOtBIYYcKpcEnnlhiE/GjClUC+CuensRUiBq
             eeEtKwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="79a25c99627096c0990f06e403bf8567f6d6dc15775735d98677d97f9aeb3ae0">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA+CNX/jnPwhAXQd+wppDlEiNGk2dlYOgI
+            ZiUY/kcpcebctqgpK8gs7lKzLQBhkiQArU/r+0mlTQaUmB4/jFX952pDRfUCKwD16AXGS7hjlZL7
+            r4lhfXDT9jbAzjaUavfM5nz+mpeBx/9Izjf53e2lNPFVklNWoMHbAcPqW0XfHb8HlaEn9CtgxyDt
+            fkG4JqrZgtwyQGsHNBkLsKIa+z0lZ+BQ5x2qfvYajG393P58BdiJKACtGHdRWwKevtpj6SxDQ2CC
+            mp6CKT7JQ9HHYk229+pZs+50zUmwPTyfEUnK/ZPpRiIyA0ykJ63Lh3jNtbJa5C2vQfl++XYJTlBX
+            Hy61stwQMopCbb1aXFK+TgfLS3A9iehaRB3lPBbPz/K/F+8IPTY947OWg797kZa9c6rWcg15uCx+
+            9k/V1qXbv66RiePUrO8NJmc1hzRAJBLQasBKF0tTsS1F6xfGcaU8aTAhlnQowxLfoT4dUxfZ/LZC
+            wRlObiGKOsPQKUR664GAm2oJAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9d7aS0S3lStfaiJnmr1vkPjL+wP1Bs6c
