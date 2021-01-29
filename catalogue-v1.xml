@@ -24406,6 +24406,146 @@
             <rsa-public-key sha-256="96f7ecba3eef1490e63bfeb4e1f873336983d7cef2fe7edd67f7eb91f7eb115a"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNIMARCONI test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://esse3test.unimarconi.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://esse3test.unimarconi.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://esse3test.unimarconi.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://esse3test.unimarconi.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://esse3test.unimarconi.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://esse3test.unimarconi.it/ewp/connector/IIAGet.do</ia4:get-url>
+                <ia4:max-iia-ids>10</ia4:max-iia-ids>
+                <ia4:max-iia-codes>10</ia4:max-iia-codes>
+                <ia4:index-url>https://esse3test.unimarconi.it/ewp/connector/IIAIndex.do</ia4:index-url>
+                <ia4:sends-notifications/>
+            </ia4:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://esse3test.unimarconi.it/ewp/connector/IIACnr.do</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://esse3test.unimarconi.it/ewp/connector/IIAAppr.do</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://esse3test.unimarconi.it/ewp/connector/IIAApprCnr.do</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unimarconi.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b14aea7990ca92d9a68efe36ff7c827994363d5f12ba312f130f4ef7c5da8a06"/>
+            <rsa-public-key sha-256="bd1b630fc63c466c43b99d29f1558557879d7f847f9e9ede7f4646b54ab6dfdf"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="bd1b630fc63c466c43b99d29f1558557879d7f847f9e9ede7f4646b54ab6dfdf"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -26840,6 +26980,12 @@
             <name xml:lang="de">Montanuniversität Leoben</name>
             <name xml:lang="en">Montanuniversität Leoben</name>
         </hei>
+        <hei id="unimarconi.it">
+            <other-id type="erasmus">I  ROMA21</other-id>
+            <other-id type="pic">972964418</other-id>
+            <name xml:lang="en">Universita' degli Studi GUGLIELMO MARCONI - TEST</name>
+            <name xml:lang="it">Universita' degli Studi GUGLIELMO MARCONI - TEST</name>
+        </hei>
         <hei id="unimi.it">
             <other-id type="erasmus">I MILANO01</other-id>
             <name xml:lang="ENG">University of Milan</name>
@@ -27959,6 +28105,16 @@
             f7DTreta93aYso80ihUrSeuyE4T2r2DsijC/RRq6WX5dpUIiAFmszVq+ELblcdH+cCKdaLWN3nDR
             UGee5Q5GNjfuPlDPyVf0Yx04n4Y31Se5aVgnvXFU7DHCosaR6vKsjbTRi7mv01h539u3ZXXsJqp/
             222okQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="bd1b630fc63c466c43b99d29f1558557879d7f847f9e9ede7f4646b54ab6dfdf">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA2JJ7mvmZofqUGdlB6m9CEVcOAVgry48I
+            oRGjUBF/sT4s6dElYkUGtEdw+5bpxz/v17/erRyFZK2WnjSE7bxS140htsiZwPUwzAY0XPvb/dbX
+            ZRmNGGcJ7rmD5l5cOGLXz148ywR9mhSl4tMkAQ6dQ4JI1dE7oUZoop2sc71K7y2G13Z9lr/jJYIT
+            BLulk0fhF9xmzu9sJuRMswBykN6Z3kSFpDvwdxxW9757XAoxq6ejEG1JnzoVIuHI0eP7as+1xZYm
+            9SfvrlexykGDamzk9taImPj2Y7zZH76noPySNy1Kcq9+SjlagWcbeYGXRxnK/Q1VVssFuk8qDrRj
+            3QXJJgGhpjQdjmOBH6713lkAhIp0qmAx1UnYIVUkMOGvdgSNR+RgJTkHixVH+T0zIlgKG81tr3wD
+            Dyntm314ieJp0Oto6ClOQF4krFaM3a2X42Pl0t/VOR45EpTjwDFAyJdIJlXd8b1y6w56QzobQqik
+            pLJpweozkGsameiqbz1tMlxFAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="c0124f5082fedf5185ec429744ec219a74efca801be26ccfdc85dbaa36e4b21b">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq4eR/hqmpeRFV2aJd8qPY95VwUyue4lT
