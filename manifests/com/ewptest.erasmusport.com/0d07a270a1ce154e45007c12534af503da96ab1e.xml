@@ -211,16 +211,51 @@
         <url>https://ewptest.erasmusport.com/omobility/cnr</url>
         <max-omobility-ids>1</max-omobility-ids>
       </omobility-cnr>
+      <omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+          </sec:response-encryption-methods>
+        </http-security>
+        <get-url>https://ewptest.erasmusport.com/omobility-las/get</get-url>
+        <index-url>https://ewptest.erasmusport.com/omobility-las/index</index-url>
+        <update-url>https://ewptest.erasmusport.com/omobility-las/update</update-url>
+        <max-omobility-ids>1</max-omobility-ids>
+        <sends-notifications/>
+      </omobility-las>
+      <omobility-la-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+          </sec:response-encryption-methods>
+        </http-security>
+        <url>https://ewptest.erasmusport.com/omobility-las/cnr</url>
+        <max-omobility-ids>1</max-omobility-ids>
+      </omobility-la-cnr>
     </r:apis-implemented>
     <institutions-covered>
-      <r:hei id="strato.edu.si">
-        <r:other-id type="pic">9000000009</r:other-id>
-        <r:other-id type="erasmus">SI STRATO03</r:other-id>
-        <r:other-id type="euc"/>
-        <r:other-id type="eche">SI STRATO03</r:other-id>
-        <r:name xml:lang="en">Strato University</r:name>
-        <r:name xml:lang="si">Strato University</r:name>
-      </r:hei>
       <r:hei id="massey.edu.si">
         <r:other-id type="pic">1000000001</r:other-id>
         <r:other-id type="erasmus">SI MASSEY08</r:other-id>
@@ -228,6 +263,14 @@
         <r:other-id type="eche">222193-EPP-1-2014-1-TR-EPPKA3-ECHE</r:other-id>
         <r:name xml:lang="en">Massey University</r:name>
         <r:name xml:lang="si">Universitrut Massey</r:name>
+      </r:hei>
+      <r:hei id="strato.edu.si">
+        <r:other-id type="pic">9000000009</r:other-id>
+        <r:other-id type="erasmus">SI STRATO03</r:other-id>
+        <r:other-id type="euc"/>
+        <r:other-id type="eche">SI STRATO03</r:other-id>
+        <r:name xml:lang="en">Strato University</r:name>
+        <r:name xml:lang="si">Strato University</r:name>
       </r:hei>
     </institutions-covered>
     <client-credentials-in-use>
