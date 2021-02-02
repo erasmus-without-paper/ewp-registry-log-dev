@@ -23270,7 +23270,7 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://iris-pre.usal.es/api/manifest</d5:url>
             </d5:discovery>
-            <e2:echo version="2.0.0">
+            <e2:echo version="2.0.1">
                 <ewp:admin-email>iris@usal.es</ewp:admin-email>
                 <ewp:admin-notes>Test enviroment</ewp:admin-notes>
                 <e2:http-security>
@@ -23285,6 +23285,41 @@
                 </e2:http-security>
                 <e2:url>https://iris-pre.usal.es/api/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://iris-pre.usal.es/api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://iris-pre.usal.es/api/iias/get</ia4:get-url>
+                <ia4:max-iia-ids>100</ia4:max-iia-ids>
+                <ia4:max-iia-codes>100</ia4:max-iia-codes>
+                <ia4:index-url>https://iris-pre.usal.es/api/iias/index</ia4:index-url>
+                <ia4:sends-notifications/>
+            </ia4:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>usal.es</hei-id>
