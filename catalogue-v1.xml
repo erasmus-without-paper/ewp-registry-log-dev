@@ -23891,6 +23891,76 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp@akademus.pl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://akademus.asp.gda.pl/api/ewp-dev/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev107.parleto.io:23999/api/ewp/echo.xml</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev107.parleto.io:23999/api/ewp/institutions.xml</in2:url>
+                <in2:max-hei-ids>50</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev107.parleto.io:23999/api/ewp/ounits.xml</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://dev107.parleto.io:23999/api/ewp/iias-get.xml</ia4:get-url>
+                <ia4:max-iia-ids>1</ia4:max-iia-ids>
+                <ia4:max-iia-codes>1</ia4:max-iia-codes>
+                <ia4:index-url>https://dev107.parleto.io:23999/api/ewp/iias-index.xml</ia4:index-url>
+            </ia4:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>asp.gda.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="4773b17567de8aae714e388e0340a4028c7df55813548c8f8085e58b73ab52cd"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="4773b17567de8aae714e388e0340a4028c7df55813548c8f8085e58b73ab52cd"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usos@uwr.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -25202,6 +25272,13 @@
         <hei id="artsaucarre.be">
             <other-id type="erasmus">B MONS24</other-id>
             <name xml:lang="en">ARTS² - Academy of Arts</name>
+        </hei>
+        <hei id="asp.gda.pl">
+            <other-id type="erasmus">PL GDANSK05</other-id>
+            <other-id type="erasmus-charter">218524-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
+            <other-id type="pic">918028856</other-id>
+            <name xml:lang="en">Academy of Fine Arts in Gdansk</name>
+            <name xml:lang="pl">Akademia Sztuk Pięknych w Gdańsku</name>
         </hei>
         <hei id="auth.gr">
             <other-id type="erasmus">G THESSAL01</other-id>
@@ -28212,6 +28289,14 @@
             jtSREz0OiD5sCswpXZEpQ4AvcqAc+GJazzWC8G64uVZbbAwZOJPiIn8EfcnY+SCZBF1AJuIX2odH
             ZWEDoxfrsWjYTDlWYC6J/AjmxoBR+cQpQtVNbYdIRPeLN9miIgHeFr7nKwPBbKd++I5HJxJadBHU
             oi7NggYbjZT2dfYG7AT5K+znAgMBAAE=
+        </rsa-public-key>
+        <rsa-public-key sha-256="4773b17567de8aae714e388e0340a4028c7df55813548c8f8085e58b73ab52cd">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtp1xAsDs3KD0QZ2QODEOQEaP0oYOcba+
+            tCpfYQoZ01PVzJ8GkKTMeqxircD/xDgcof0I9k928fUkmaZDa4a/tEj02uYX59Vwm68VEunpudzz
+            nyHxOp3ppcwj6lyJV0jTDIJ55VNcQdm2BsbPMMyOnd1x1LRBurlKIj9kecA3OUj+CZ0m42LYR4XS
+            4i4Cxh6lMwxe7vBBZKaWgNa6Fb0N8x30fVtzRKU4SfYvSwrdFONlHNdHCuKXFEmSzkmhCXjs5hjy
+            WsEhn7taA4nEM3xBZbRrXjphksjajzqHg763I2z+iZCpRnRzyUnPg1Du62fdcg2orsQZNHkxmlx4
+            lZ2IKQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="48f7eb6826e884b05576dccf98f17fed2315d1c54b8178783e95b486a285241f">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTaSV1ek569WQFX4VALz9ROOsk6RRRq5
