@@ -27,6 +27,22 @@
                 </ns11:http-security>
                 <ns11:url>https://ewptest.tiss.tuwien.ac.at/echo</ns11:url>
             </ns11:echo>
+            <ns6:omobility-las version="0.0.0">
+                <ns6:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:tlscert allows-self-signed="true"/>
+                        <ns7:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns10:tlscert/>
+                        <ns8:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns6:http-security>
+                <ns6:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/get</ns6:get-url>
+                <ns6:index-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/index</ns6:index-url>
+                <ns6:update-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/update</ns6:update-url>
+                <ns6:max-omobility-ids>50</ns6:max-omobility-ids>
+            </ns6:omobility-las>
             <ns4:discovery version="5.0.0">
                 <admin-email>inside@tiss.tuwien.ac.at</admin-email>
                 <ns4:url>https://ewptest.tiss.tuwien.ac.at/manifest</ns4:url>
