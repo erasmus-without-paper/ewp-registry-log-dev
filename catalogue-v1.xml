@@ -25180,6 +25180,108 @@
             <rsa-public-key sha-256="61ea8c1b105ee9448a032af1baf8d978d420208b5569044272ff02638a588c1a"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>paolo.priarone@polito.it</ewp:admin-email>
+        <ewp:admin-email>dario.volpe@polito.it</ewp:admin-email>
+        <ewp:admin-notes>TEST</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://testewp.polito.it/ewp-connector/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://testewp.polito.it/ewp-connector/rest/echo/v2</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </in2:http-security>
+                <in2:url>https://testewp.polito.it/ewp-connector/rest/institutions/v2</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ou2:http-security>
+                <ou2:url>https://testewp.polito.it/ewp-connector/rest/ounits/v2</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <ewp:admin-notes>paramter los_at_date ignored</ewp:admin-notes>
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </co1:http-security>
+                <co1:url>https://testewp.polito.it/ewp-connector/rest/courses/v0</co1:url>
+                <co1:max-los-ids>1</co1:max-los-ids>
+                <co1:max-los-codes>1</co1:max-los-codes>
+            </co1:courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>polito.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="efb5222974b904ecbcf0f797a80a37cd9accf84b8d466d98bef3557efff69fc3"/>
+            <rsa-public-key sha-256="f10af4ee1163ccc6875bf6db008ed5a5601d0e78286fba21cf07e8431e483680"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="f10af4ee1163ccc6875bf6db008ed5a5601d0e78286fba21cf07e8431e483680"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -26752,6 +26854,13 @@
             <other-id type="erasmus-charter">29169-LA-1-2014-1-IT-E4AKA1-ECHE</other-id>
             <other-id type="oid">E10208971</other-id>
             <name xml:lang="it">Politecnico di Milano</name>
+        </hei>
+        <hei id="polito.it">
+            <other-id type="erasmus">I TORINO02</other-id>
+            <other-id type="erasmus-charter">28995-EPP-1-2014-1-IT-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999977754</other-id>
+            <name xml:lang="en">Politecnico di Torino</name>
+            <name xml:lang="it">Politecnico di Torino</name>
         </hei>
         <hei id="popakademie.de">
             <other-id type="erasmus">D  MANNHEI09</other-id>
@@ -28953,6 +29062,14 @@
             uL2CGngpXtxXMcShgETPPLJtjuYHSaCt+gcKa0BNx9GLVXEdQUp1Z63I6tDTKzEj3fjc0sjjvqKU
             watr+myYeYJe4PozJEe4Ccfxl9c5eDOjnIkyNFbe1uPofkkHFUhEnRkRa0ceWk/ndIOvsJqYukYJ
             SwOSFwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="f10af4ee1163ccc6875bf6db008ed5a5601d0e78286fba21cf07e8431e483680">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAozdt6anO7tTsP4hs85GrQ0wPoZk1K/JD
+            6muLo0aS0K6BICa4W5aNVdqvpTaoe7UUseNKuEt2DJpPGQtGfjvElmkQQOVBVj1Zw3u103zJxgo0
+            NI96SNNdxhYp1SgqWFqpYzetqh2IiXYS5R26gAVbrehwyV353xX336DbqBiqwzFx9abbbBoPNqh3
+            /Xmt9xfqJpfkAXRiMQ3ErpGBzJ1w7WV1nmtYVdSr3TZybEwgp1g+moPqRYD9JceF4vjXWjU3LBPb
+            bV2sdRU2dZsoLzypf5ps926nhpAOO7lPYZdvC73PBJ8UsmwW6FHms2yOFqa2h4YBBlf4OjJLFwa5
+            te5svwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="f12948eb15e1d18710f156610e63d9092d21a1dc24ff27f910be3d8ea907e863">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAvjeS+BVqWY5Kat5S6Wh+R8dQeSg52qMi
