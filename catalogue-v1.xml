@@ -17412,10 +17412,10 @@
     <host>
         <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
         <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
-        <ewp:admin-notes>UNIPARTH test environment.</ewp:admin-notes>
+        <ewp:admin-notes>UNIPARTH prod environment.</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>https://uniparthenope.esse3.pp.cineca.it/ewp/Manifest.do</d5:url>
+                <d5:url>https://uniparthenope.esse3.cineca.it/ewp/Manifest.do</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
                 <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
@@ -17428,7 +17428,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+                <e2:url>https://uniparthenope.esse3.cineca.it/ewp/connector/Echo.do</e2:url>
             </e2:echo>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
@@ -17440,7 +17440,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </in2:http-security>
-                <in2:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:url>https://uniparthenope.esse3.cineca.it/ewp/connector/Institutions.do</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
             <ou2:organizational-units version="2.1.1">
@@ -17453,100 +17453,20 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </ou2:http-security>
-                <ou2:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:url>https://uniparthenope.esse3.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <co1:courses
-                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="0.7.1"
-            >
-                <co1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </co1:http-security>
-                <co1:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
-                <co1:max-los-ids>10</co1:max-los-ids>
-                <co1:max-los-codes>10</co1:max-los-codes>
-            </co1:courses>
-            <ia4:iias
-                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
-                version="4.0.0"
-            >
-                <ia4:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia4:http-security>
-                <ia4:get-url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/IIAGet.do</ia4:get-url>
-                <ia4:max-iia-ids>10</ia4:max-iia-ids>
-                <ia4:max-iia-codes>10</ia4:max-iia-codes>
-                <ia4:index-url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/IIAIndex.do</ia4:index-url>
-                <ia4:sends-notifications/>
-            </ia4:iias>
-            <iac2:iia-cnr version="2.0.2">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/IIACnr.do</iac2:url>
-            </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/IIAAppr.do</iaa1:url>
-                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://uniparthenope.esse3.pp.cineca.it/ewp/connector/IIAApprCnr.do</iaac1:url>
-            </iaac1:iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uniparthenope.it</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="1d1fa214937b815d0baab5572f6a8efded83d2a6c20a25e8cd789e3e907860ab"/>
-            <rsa-public-key sha-256="6aca7be2cefb18f09667d26385cb0b0fcb893f9612918c914635ab6bb097e9a8"/>
+            <certificate sha-256="f73d0a693f0f494edc63a82c0c8e07ed4757cddb47eed9381280b36b9b25826a"/>
+            <rsa-public-key sha-256="81e75ea6fcd3bee87bf07131c9f7ed11e6e33074d385d655dd57ae77c9654631"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="6aca7be2cefb18f09667d26385cb0b0fcb893f9612918c914635ab6bb097e9a8"/>
+            <rsa-public-key sha-256="81e75ea6fcd3bee87bf07131c9f7ed11e6e33074d385d655dd57ae77c9654631"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -27937,8 +27857,8 @@
         <hei id="uniparthenope.it">
             <other-id type="erasmus">I  NAPOLI03</other-id>
             <other-id type="pic">999856019</other-id>
-            <name xml:lang="en">UNIVERSITY OF NAPLES "PARTHENOPE" - TEST</name>
-            <name xml:lang="it">Universita degli studi di Napoli Parthenope - TEST</name>
+            <name xml:lang="en">UNIVERSITY OF NAPLES "PARTHENOPE"</name>
+            <name xml:lang="it">Universita degli studi di Napoli Parthenope</name>
         </hei>
         <hei id="unipd.it">
             <other-id type="eche">29034-EPP-1-2014-1-IT-EPPKA3-ECHE</other-id>
@@ -28707,16 +28627,6 @@
             n8QE3KmWVU+AqvPrjXhmwlSwzI8tf9w4HXBzk7YSLcvt+VLLOiupZ14nmJzYp6y9JwIcw8dj1cb5
             w9i4swIDAQAB
         </rsa-public-key>
-        <rsa-public-key sha-256="6aca7be2cefb18f09667d26385cb0b0fcb893f9612918c914635ab6bb097e9a8">
-            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAwksu8XoRM1xe96J6KSWEdwfZ73eg11pg
-            NhS1We5SjMfl+jq5MO+rwyBg7nCgZkgIK2itvcBcBlsGvS5kfnq8yagVHHQHDyE2zRTQewF8I4va
-            RIKXVWwBmW3XNTKyHo7ps/elpVE/nfwbA77V/k+yxIDy+xamvqxKTeXYEcBzDRp5QBeB0eyJtDm+
-            S86IgXX2PPVjm8clDNliIdKOysLubQFkkaHEaklCykqfbMSxEWsPcx4DZazlK/ssG/zr4AmxKbzD
-            yEuPZ9f2KhKqU3ts6HeqRQjAwMyBMdPa6n19QgWrM0QODdU7KaxX5x1QM96lD8Uc5lCTJxXDJ6IH
-            Jvu+j2HgjxYb6WZbNFWbzlYn4qeqqYc8TIXDorPKPPUAjHBsLpVmjpkpBM4+6Gxi1BMOCRjyvbAc
-            rFJZ2POk6MBsWaBzrAW+/iPq4+Zvt43XhUv+jnCLydSYMdQzi9U1haZ31nhoP8Ti/XanjltJ2EgY
-            Y4ZWKTItrJq6hhjFV4Qh2QXtAgMBAAE=
-        </rsa-public-key>
         <rsa-public-key sha-256="6c4fd75763789a9ca881c872389e3883a7207dc232223bdd06e793ff9d823adb">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAsZpAYGlO53sKun8kffcf29cIF+jC4gRu
             chdjLzEUSDFfpIsUj4T9Z4VtvgahPFnV6x70Fkla5E+mtG/tqym/FsFsnJD29Zp1EVoQq3oPcmOL
@@ -28836,6 +28746,16 @@
             wi4Jg5XhJm5auVKmznyAMyJjyJ0ICnLSafgtmQ+THXIJY2yPTKIkIwpZOtY/rsFXL3VoU7+oY/iS
             L/fDojs1a0R49jV5DKiELq74ZumDVv7XDDOIo1ualaX6ISvSm+Qvyg15pE7MmDdivsin1gSpxZWu
             eCZ4XwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="81e75ea6fcd3bee87bf07131c9f7ed11e6e33074d385d655dd57ae77c9654631">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA1eX7U024PUK/+zpRu7ryWTEMzqjJ1qia
+            APhMZr2pqK6y0gOWmi9K6LoL1Wm2zcM2TefOh/kgUNpme8AV0dXyRLBQKknYy2ruswzRVi96Po+D
+            Gtd/+uBFZ1CfGnEG9S7hGyisyAT4eE8xNYAV15laylKaPmamq4wPUsKTEBuXIRzzAL2aWxytqsMY
+            CeQ+u/ZEsObWxVUkQizZpQ+SW+CRC67qkc5Rk10h0Kq3XOenXpbO9xbOGY87aJc80H/Vbrq40n0J
+            EEm38wx8n639UCk+5oOEZUcBohvGFqlOPUike1CPrm4uwjE4as+lzr3knfZtJcvBQLRBJ2O16u8U
+            JCfOXJ0PMxfvMBDwv60M7JnH2YkXsw4jsNiAZCMCaYDdu7VJ8bFx8xMPH4ef0K26AIqvIp1oePHP
+            UqbqCQltiKsb2f3Qnd8b4A8t9qGzQoRvZC0ALcw70p4O2kOwbvelaD1NiLjjY6MuqH7kAdfvOkXd
+            NVXG9sBwbF0amui9gMx6u6+lAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="820b303bb2b65fc9189f85c4a5a0aef0997d21b578ffda92683fa084c8d54b75">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyv10sxBpES6E0mKdzwNpQs2VC76vMssZ
