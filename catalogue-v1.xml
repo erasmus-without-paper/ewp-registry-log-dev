@@ -24065,6 +24065,23 @@
     </host>
     <host>
         <apis-implemented>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="0.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/get</oml1:get-url>
+                <oml1:index-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/index</oml1:index-url>
+                <oml1:update-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/update</oml1:update-url>
+                <oml1:max-omobility-ids>50</oml1:max-omobility-ids>
+            </oml1:omobility-las>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -24102,23 +24119,6 @@
                 </e2:http-security>
                 <e2:url>https://ewptest.tiss.tuwien.ac.at/echo</e2:url>
             </e2:echo>
-            <oml1:omobility-las
-                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-                version="0.0.0"
-            >
-                <oml1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </oml1:http-security>
-                <oml1:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/get</oml1:get-url>
-                <oml1:index-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/index</oml1:index-url>
-                <oml1:update-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/update</oml1:update-url>
-                <oml1:max-omobility-ids>50</oml1:max-omobility-ids>
-            </oml1:omobility-las>
             <d5:discovery version="5.0.0">
                 <ewp:admin-email>ewp@tiss.tuwien.ac.at</ewp:admin-email>
                 <d5:url>https://ewptest.tiss.tuwien.ac.at/manifest</d5:url>
