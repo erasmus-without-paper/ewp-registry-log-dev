@@ -23292,6 +23292,22 @@
                 <ia4:index-url>https://iris-pre.usal.es/api/iias/index</ia4:index-url>
                 <ia4:sends-notifications/>
             </ia4:iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/v2.0.2/manifest-entry.xsd"
+                version="2.0.2"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://iris-pre.usal.es/iias/cnr</url>
+            </iia-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>usal.es</hei-id>
