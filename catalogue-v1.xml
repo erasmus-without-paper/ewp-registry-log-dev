@@ -25344,6 +25344,133 @@
             <rsa-public-key sha-256="61baf3a6c1ee364a16cdf9355666a50a117f64d2b2e772ecfbf72d7041a9d6b4"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>relint@unizar.es</ewp:admin-email>
+        <ewp:admin-notes>UZA EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://siaformacion.unizar.es/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://siaformacion.unizar.es/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://siaformacion.unizar.es/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://siaformacion.unizar.es/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://siaformacion.unizar.es/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://siaformacion.unizar.es/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://siaformacion.unizar.es/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://siaformacion.unizar.es/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://siaformacion.unizar.es/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unizar.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="7a7e6f464b64932a427744df11218d6e9dd3f9f346a7a1fa4ec08bb9d22524fa"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a7e6f464b64932a427744df11218d6e9dd3f9f346a7a1fa4ec08bb9d22524fa"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -28002,6 +28129,12 @@
             <name xml:lang="en">University of Verona - TEST</name>
             <name xml:lang="it">Universita' degli Studi di VERONA - TEST</name>
         </hei>
+        <hei id="unizar.es">
+            <other-id type="erasmus">E  ZARAGOZ01</other-id>
+            <other-id type="pic">999898214</other-id>
+            <name xml:lang="en">University of Zaragoza</name>
+            <name xml:lang="es">Universidad de Zaragoza</name>
+        </hei>
         <hei id="up.pt">
             <other-id type="erasmus">P  PORTO02</other-id>
             <other-id type="euc">erasmus-charter</other-id>
@@ -28700,6 +28833,14 @@
             Ikh2HcW5slcLwRihGZzQA1UccqBNuuCVY7a1XY/C84qNcmRwcZzzHfqJyMVp/V3eoxeT7ZMYp3Fh
             IdXSQjcBL5LQXMbg7OpCVgSn+tQYO/gCnUcPEbNnChH3Y9rWBGIijkc2A2itvVjjL6ey+4vfbRdi
             l6EzpwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="7a7e6f464b64932a427744df11218d6e9dd3f9f346a7a1fa4ec08bb9d22524fa">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjZHz9Ps02BbloaK6JvMui/GenWTRid9Q
+            /KzBLCm8fEc2uZ6b7PFECtizL0a73+m6sZfYXMdkVgIJuDL/svAu5w2bw2dJiIJ0UgOOuGW9TAnx
+            TGSlG7xjEvOG/0cjl9HqOzF+DWcMf82VD7eStF9sU8KbIEGHo+gkHO6gdWHQv/Yxd6LNUP9SGvu+
+            /PE9NiNpMP9YkuELgv/ZxC0b9VrcSURO5CkGNqNAmzCOeeTTcMbDWOowrXZOUfVq80mSRwFqXXcz
+            2RIAszB4zhzaVp3JDEKwHtesk3UO3NTojOAvH/mGLEMcipJK9g6oCbkPHrf571iyBnS5k4+jhkwR
+            dZHBrQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="7af6f7aaac6f1d17b9fefcab9712ed4f65e9d6adf1e3a6120354d9f2f697b1ff">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jsChSAwRiG83Ami8z2lMHyvFJeHbTF2
