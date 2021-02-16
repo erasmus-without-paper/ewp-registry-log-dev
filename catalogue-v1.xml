@@ -26087,6 +26087,146 @@
             <rsa-public-key sha-256="75cb76148f148d80be96ecb9d46ec4115e948750261526bd4599e50832bd103c"/>
         </server-credentials-in-use>
     </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNIBS test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://esse3-pp.unibs.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://esse3-pp.unibs.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://esse3-pp.unibs.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://esse3-pp.unibs.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://esse3-pp.unibs.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://esse3-pp.unibs.it/ewp/connector/IIAGet.do</ia4:get-url>
+                <ia4:max-iia-ids>10</ia4:max-iia-ids>
+                <ia4:max-iia-codes>10</ia4:max-iia-codes>
+                <ia4:index-url>https://esse3-pp.unibs.it/ewp/connector/IIAIndex.do</ia4:index-url>
+                <ia4:sends-notifications/>
+            </ia4:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://esse3-pp.unibs.it/ewp/connector/IIACnr.do</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://esse3-pp.unibs.it/ewp/connector/IIAAppr.do</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://esse3-pp.unibs.it/ewp/connector/IIAApprCnr.do</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unibs.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="a4751931b8d63cca25cba07ae601c66f134ef73e9ae0d6653193e92e5a99a67c"/>
+            <rsa-public-key sha-256="d6bc1011198b27d6a5ca81a1e505006b592218445e790a4e282c7db7c1c284ca"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="d6bc1011198b27d6a5ca81a1e505006b592218445e790a4e282c7db7c1c284ca"/>
+        </server-credentials-in-use>
+    </host>
     <institutions>
         <hei id="aarch.dk">
             <other-id type="eche">28964-EPP-1-2014-1-DK-EPPKA3-ECHE</other-id>
@@ -28522,6 +28662,12 @@
             <name xml:lang="en">University of Bologna</name>
             <name xml:lang="it">ALMA MATER STUDIORUM - Università di Bologna</name>
         </hei>
+        <hei id="unibs.it">
+            <other-id type="erasmus">I  BRESCIA01</other-id>
+            <other-id type="pic">999893946</other-id>
+            <name xml:lang="en">Universita' degli Studi di BRESCIA  - TEST</name>
+            <name xml:lang="it">Universita' degli Studi di BRESCIA  - TEST</name>
+        </hei>
         <hei id="unica.it">
             <other-id type="erasmus">I CAGLIAR01</other-id>
             <other-id type="pic">999841663</other-id>
@@ -29857,6 +30003,16 @@
             MtTTJOyFEv08gQFiOAzzIIbe7xILdja54RvF16W8iD4I2BInhEsMgXlCq2H39sDFM2EgfIw/r+Ou
             szXdotf3anM1rIB+k9CvsVFGFBEpLffqDk+XGcnR9x3jC8lK2cUStDr0/3FqiKSfr0h9SoUwVrMK
             iSIJriuS2C0jyXVDtELKfXqbAgMBAAE=
+        </rsa-public-key>
+        <rsa-public-key sha-256="d6bc1011198b27d6a5ca81a1e505006b592218445e790a4e282c7db7c1c284ca">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA00gcmdnHEs6hFgEbshxXphIUY8lQ8/Ip
+            u92yDGtgz216vxRDDDkt0MGRVmbFz/lX64i/QdyGSVkxdUewzZO7f3hdGs3BQLbD/gu7/5dsHA56
+            BFvM/Px2w0Kh85X5lRYVaPBzJ/w8hKJsA8J6ptoE1Z9Ea/VS713OpaSfmVNaOUEgRKyLndPtOO3P
+            PBFOAXo6/8y2ufeowNpyxc+3RrhQTPN8PcLckqjF1mCr7VHJ6gU6sxu4WtqyNt9GfLG3Re3MP+4E
+            3q/7bp4S+TzIcHzy2i7ziSpDFZsMIXKJEOOMxeBiBcO3tqFJUUrbK+yjBuwrI/MNHjI5sHaZ5gum
+            htBxO9IBdz35N8Ea5wJgWDF6QMBDVhdPnWytBOZvipO8JlRoPcD/2ReDMz4By/DcFXLmkSm6lIov
+            k4y1HG2TCuT2CwbN1mYaaP1Yl2QPgIM+MFuLD2qyGgapOpbqmu6iV5LCD2fbZ9eFTb0fsPc9NWDL
+            qH5Jeg7grcRB6Q5AFlZ/GSyxAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="d85e663147ec92dcfb98de1fc94dd41d2c846fdaa4301f46e6ea3774af064d40">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9TYtPf0Vdrf0QVni0SrYDCxTBZUOOM1
