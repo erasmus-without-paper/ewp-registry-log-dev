@@ -1,11 +1,11 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
@@ -14,7 +14,7 @@
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
 >
     <ns3:host>
-        <ns2:apis-implemented>
+        <apis-implemented>
             <ns6:organizational-units version="2.1.1">
                 <ns6:http-security>
                     <ns5:client-auth-methods>
@@ -29,11 +29,11 @@
                 <ns6:max-ounit-codes>50</ns6:max-ounit-codes>
             </ns6:organizational-units>
             <ns4:discovery version="5.0.0">
-                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
+                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
                 <ns4:url>https://ewptest.tiss.tuwien.ac.at/manifest</ns4:url>
             </ns4:discovery>
             <ns13:echo version="2.0.1">
-                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
+                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
                 <ns13:http-security>
                     <ns5:client-auth-methods>
                         <ns7:httpsig/>
@@ -70,13 +70,13 @@
                 <ns11:update-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/update</ns11:update-url>
                 <ns11:max-omobility-ids>50</ns11:max-omobility-ids>
             </ns11:omobility-las>
-        </ns2:apis-implemented>
+        </apis-implemented>
         <ns3:institutions-covered>
-            <ns2:hei id="tuwien.ac.at">
-                <ns2:other-id type="pic">999979888</ns2:other-id>
-                <ns2:other-id type="erasmus">A WIEN02</ns2:other-id>
-                <ns2:name xml:lang="de">TECHNISCHE UNIVERSITÄT WIEN</ns2:name>
-            </ns2:hei>
+            <hei id="tuwien.ac.at">
+                <other-id type="pic">999979888</other-id>
+                <other-id type="erasmus">A WIEN02</other-id>
+                <name xml:lang="de">TECHNISCHE UNIVERSITÄT WIEN</name>
+            </hei>
         </ns3:institutions-covered>
         <ns3:server-credentials-in-use>
             <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnG1hiyuYWTBTuZinMVzSnuI/ASOvp4E0rQ4ErNn/IwRRrr2oFM/+6+Z6SRQgkkLYwox/4950EXFxN/Ty8bqxhLFkjjDTvkU9vKJqAeNNQjR14UhhfoCh57R3fMtoGedV5+ffgC0oNNFZo5AnKZunoJQxOT/Ob0wH+opobA+7wZmDt7CLhGPuOKMOwVAVygtDtIBihhHtxidoBjGSdqh2AgAmOon0kobnjwcJP3eEojWCRM/IGsZ7JufArDWff4+wBjm593szPQZZnJHbWRp2xClFJ0x+JISrmVz0WlEOWdMLm3dE0Arb4oD4mXXg51JJ4vlibY/jPDRlUHGIkehVSQIDAQAB</ns3:rsa-public-key>
