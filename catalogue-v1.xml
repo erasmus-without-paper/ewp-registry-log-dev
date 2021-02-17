@@ -24328,6 +24328,130 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>tecnico.sigma.stic@uva.es</ewp:admin-email>
+        <ewp:admin-notes>EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://wservicios.pre.sigma.uva.es:5555/EWP/UNIVERSIDAD_DE_VALLADOLID.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
+                <ia3:index-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uva.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="3764d0a73d3f0f1d227bf04d9e2a0d6724fe270caf1805a3d5be04bcc11bdde8"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>simona.lacapra@polimi.it</ewp:admin-email>
         <ewp:admin-notes>PoliMI EWP Manifest</ewp:admin-notes>
         <apis-implemented>
@@ -30340,6 +30464,12 @@
             <other-id type="pic">999900833</other-id>
             <name xml:lang="en">University of Twente</name>
             <name xml:lang="nl">University of Twente</name>
+        </hei>
+        <hei id="uva.es">
+            <other-id type="erasmus">E VALLADO01</other-id>
+            <other-id type="pic">999862809</other-id>
+            <name xml:lang="en">UNIVERSITY OF VALLADOLID</name>
+            <name xml:lang="es">UNIVERSIDAD DE VALLADOLID</name>
         </hei>
         <hei id="uw.edu.pl">
             <other-id type="erasmus">PL WARSZAW01</other-id>
