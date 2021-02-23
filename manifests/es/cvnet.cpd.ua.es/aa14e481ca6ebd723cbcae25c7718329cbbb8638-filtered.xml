@@ -1,0 +1,66 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns01="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns02="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns03="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:ns04="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns05="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/manifest-entry.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>jl.manrique@ua.es</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for University of Alicante</ewp:admin-notes>
+        <r:apis-implemented>
+            <ns01:discovery version="1.0.0">
+                <ns01:url>https://cvnet.cpd.ua.es/interoperabilidad/api/EWP/Manifest-dev</ns01:url>
+            </ns01:discovery>
+            <ns02:echo version="1.0.0">
+                <ns02:http-security>
+                    <ns03:client-auth-methods>
+                        <ns04:tlscert allows-self-signed="true"/>
+                        <ns05:httpsig/>
+                    </ns03:client-auth-methods>
+                    <ns03:server-auth-methods>
+                        <ns04:tlscert allows-self-signed="false"/>
+                        <ns05:httpsig/>
+                    </ns03:server-auth-methods>
+                </ns02:http-security>
+                <ns02:url>https://cvnet.cpd.ua.es/interoperabilidad/api/EWP/Echo-dev</ns02:url>
+            </ns02:echo>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="ua.es">
+                <r:other-id type="pic">999895886</r:other-id>
+                <r:other-id type="erasmus">E  ALICANT01</r:other-id>
+                <r:name xml:lang="es">Universidad de Alicante</r:name>
+                <r:name xml:lang="en">University of Alicante</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>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</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAut62g3tkR0byGNuRcm5msH5qAzlAAAcjjyy0TzkK3iu6Yz8RmQFtCEEGsiIi5hD8gyo8G1nLPcLiQ6KLkcNYDrOGtitnbZb8LgC+L6Em7O9RryhwsCLTsaTEKQe7XRpJjKlcdIPy8r4f7P97zrJE7TtQg9BzRcheLxaxmAQ+WxLSKQxMhVnB7rRL7XzHAN996ItYFHsm24XhhHJ5Zi5rTepMGnpmmSedl6YopPlDUEQ1W91onD+/s/whFtPQKNyRzMGTWOwI2wOCKV1Qr05UhttfcIAd2BFL8IKpcY6n7beRd1xv3GnpNj8htpv6sw0Bffh1IaTvRKP+Y3t8So93QwIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAut62g3tkR0byGNuRcm5msH5qAzlAAAcjjyy0TzkK3iu6Yz8RmQFtCEEGsiIi5hD8gyo8G1nLPcLiQ6KLkcNYDrOGtitnbZb8LgC+L6Em7O9RryhwsCLTsaTEKQe7XRpJjKlcdIPy8r4f7P97zrJE7TtQg9BzRcheLxaxmAQ+WxLSKQxMhVnB7rRL7XzHAN996ItYFHsm24XhhHJ5Zi5rTepMGnpmmSedl6YopPlDUEQ1W91onD+/s/whFtPQKNyRzMGTWOwI2wOCKV1Qr05UhttfcIAd2BFL8IKpcY6n7beRd1xv3GnpNj8htpv6sw0Bffh1IaTvRKP+Y3t8So93QwIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
