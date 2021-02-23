@@ -1,5 +1,5 @@
-<k:manifest
-    xmlns:k="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+<l:manifest
+    xmlns:l="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:a="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:b="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
@@ -8,41 +8,56 @@
     xmlns:f="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:g="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
     xmlns:h="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:i="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:j="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:l="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:i="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:j="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:k="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:m="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 >
-    <k:host>
-        <l:admin-email>petr.abrahamczik@vsb.cz</l:admin-email>
-        <l:admin-notes>It's a test manifest.</l:admin-notes>
-        <j:apis-implemented>
+    <l:host>
+        <m:admin-email>petr.abrahamczik@vsb.cz</m:admin-email>
+        <m:admin-notes>It's a test manifest.</m:admin-notes>
+        <k:apis-implemented>
             <f:discovery version="5.0.0">
                 <f:url>https://edison.sso.vsb.cz/ewp/test/manifest.xml</f:url>
             </f:discovery>
-            <h:echo version="2.0.1">
-                <h:http-security>
-                    <i:client-auth-methods>
+            <i:institutions version="2.1.0">
+                <i:http-security>
+                    <j:client-auth-methods>
                         <c:tlscert allows-self-signed="true"/>
                         <a:httpsig/>
-                    </i:client-auth-methods>
-                    <i:server-auth-methods>
+                    </j:client-auth-methods>
+                    <j:server-auth-methods>
                         <e:tlscert/>
                         <d:httpsig/>
-                    </i:server-auth-methods>
+                    </j:server-auth-methods>
+                </i:http-security>
+                <i:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</i:url>
+                <i:max-hei-ids>1</i:max-hei-ids>
+            </i:institutions>
+            <h:echo version="2.0.1">
+                <h:http-security>
+                    <j:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </j:client-auth-methods>
+                    <j:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </j:server-auth-methods>
                 </h:http-security>
                 <h:url>https://edison.sso.vsb.cz/ewp/test/rest/echo</h:url>
             </h:echo>
-        </j:apis-implemented>
-        <k:institutions-covered>
-            <j:hei id="vsb.cz">
-                <j:other-id type="pic">999868144</j:other-id>
-                <j:other-id type="erasmus">CZ OSTRAVA01</j:other-id>
-                <j:other-id type="erasmus-charter">49166-EPP-1-2014-1-CZ-EPPKA3-ECHE</j:other-id>
-                <j:name xml:lang="en">VSB - Technical University of Ostrava</j:name>
-            </j:hei>
-        </k:institutions-covered>
-        <k:client-credentials-in-use>
-            <k:certificate>MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
+        </k:apis-implemented>
+        <l:institutions-covered>
+            <k:hei id="vsb.cz">
+                <k:other-id type="pic">999868144</k:other-id>
+                <k:other-id type="erasmus">CZ OSTRAVA01</k:other-id>
+                <k:other-id type="erasmus-charter">49166-EPP-1-2014-1-CZ-EPPKA3-ECHE</k:other-id>
+                <k:name xml:lang="en">VSB - Technical University of Ostrava</k:name>
+            </k:hei>
+        </l:institutions-covered>
+        <l:client-credentials-in-use>
+            <l:certificate>MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
 MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
 QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
 Q0EgMzAeFw0xOTA2MjcwMDAwMDBaFw0yMTA3MDExMjAwMDBaMIGAMQswCQYDVQQG
@@ -79,25 +94,25 @@ fZnyw3LdUJCeDxBrik2R9BEWe6rwKP6ufxZbODNTRnTYk+WOh3N58gelCAdAU0Y6
 XwUinobZKR/v26mVtiF/q+pplUlpnYOhyaH/dewwj5NvltwEjLSpClTJ/8/cGqBT
 9zIMy/qNwIem8tzT4FfZiNV6iZ0rQXHEOTuDIp4278CV/YbG7d0PrPdbDtFX2pqb
 Sg==
-</k:certificate>
-            <k:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
+</l:certificate>
+            <l:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
 aFh/jZ5+cZs6NB0BUfLKFGV/tzfjUTyCWcgpbWguIvVC32bw2YxQfbo49IOS5p6J
 TcSBsHMKPQdzZJedHa66yJ5CrewhgOuMPArwYBcG0kdZBFEjc9QEjGiS/+6YMjwP
 FVffGNPCtBUDC8wFf+kTj8Us3D6UJgHxmariDxF2vlMrBAMeofaa8riejKu7OUzd
 odw5wkRl0uyWCS2XoH8jo8mjssWD4PfPVvOpTl/zQFEGiHoLhNjf2nfy3QZSG5jT
 x0dM5RCUF1YC9CqVhnPGWItubR4CGTt2h1Jpt/EZulVKz/jFvC0dVaRB2UUephHR
 owIDAQAB
-</k:rsa-public-key>
-        </k:client-credentials-in-use>
-        <k:server-credentials-in-use>
-            <k:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
+</l:rsa-public-key>
+        </l:client-credentials-in-use>
+        <l:server-credentials-in-use>
+            <l:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
 aFh/jZ5+cZs6NB0BUfLKFGV/tzfjUTyCWcgpbWguIvVC32bw2YxQfbo49IOS5p6J
 TcSBsHMKPQdzZJedHa66yJ5CrewhgOuMPArwYBcG0kdZBFEjc9QEjGiS/+6YMjwP
 FVffGNPCtBUDC8wFf+kTj8Us3D6UJgHxmariDxF2vlMrBAMeofaa8riejKu7OUzd
 odw5wkRl0uyWCS2XoH8jo8mjssWD4PfPVvOpTl/zQFEGiHoLhNjf2nfy3QZSG5jT
 x0dM5RCUF1YC9CqVhnPGWItubR4CGTt2h1Jpt/EZulVKz/jFvC0dVaRB2UUephHR
 owIDAQAB
-</k:rsa-public-key>
-        </k:server-credentials-in-use>
-    </k:host>
-</k:manifest>
+</l:rsa-public-key>
+        </l:server-credentials-in-use>
+    </l:host>
+</l:manifest>
