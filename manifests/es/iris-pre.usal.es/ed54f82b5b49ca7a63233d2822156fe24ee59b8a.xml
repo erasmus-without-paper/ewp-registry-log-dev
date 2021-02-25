@@ -85,6 +85,28 @@
 						<url>https://iris-pre.usal.es/api/institutions</url>
 						<max-hei-ids>1</max-hei-ids>
 					</institutions>
+					<organizational-units
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+						version="2.1.1"
+					>
+						<http-security>
+							<sec:client-auth-methods>
+								<anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                                <tlscert
+                                    xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                                    allows-self-signed="true"
+                                />
+		                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+							</sec:client-auth-methods>
+							<sec:server-auth-methods>
+                                <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                                <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                            </sec:server-auth-methods>
+						</http-security>
+						<url>https://iris-pre.usal.es/api/ounits</url>
+						<max-ounit-ids>4</max-ounit-ids>
+						<max-ounit-codes>4</max-ounit-codes>
+					</organizational-units>
 					<iias
 						xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
 						version="4.0.0"
@@ -127,6 +149,47 @@
 						</http-security>
 						<url>https://iris-pre.usal.es/api/iias/cnr</url>
 					</iia-cnr>
+					<iias-approval
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+						version="0.2.1"
+					>
+						<http-security>
+							<sec:client-auth-methods>
+                                <tlscert
+                                    xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                                    allows-self-signed="true"
+                                />
+		                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+							</sec:client-auth-methods>
+							<sec:server-auth-methods>
+                                <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                                <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                            </sec:server-auth-methods>
+						</http-security>
+						<url>https://iris-pre.usal.es/api/iias/approval</url>
+						<max-iia-ids>10</max-iia-ids>
+						<sends-notifications/>
+					</iias-approval>
+					<iias-approval-cnr
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+						version="0.2.0"
+					>
+						<http-security>
+							<sec:client-auth-methods>
+                                <tlscert
+                                    xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                                    allows-self-signed="true"
+                                />
+		                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+							</sec:client-auth-methods>
+							<sec:server-auth-methods>
+                                <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                                <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                            </sec:server-auth-methods>
+						</http-security>
+						<url>https://iris-pre.usal.es/api/iias/approval/cnr</url>
+						<sends-notifications/>
+					</iias-approval-cnr>
 		        </r:apis-implemented>
 
 		        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
