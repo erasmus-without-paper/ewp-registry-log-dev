@@ -55,14 +55,14 @@
             </discovery>
             <institutions
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-                version="2.1.0"
+                version="2.0.0"
             >
                 <http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                     <sec:request-encryption-methods>
                         <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
@@ -94,6 +94,66 @@
                 </http-security>
                 <url>https://relint.uniroma1.it/ewp-test/api/IIA_CNR.aspx</url>
             </iia-cnr>
+            <iia-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/master/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://relint.uniroma1.it/ewp-test/api/IIA_approval.aspx</url>
+            </iia-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/master/manifest-entry.xsd "
+                version="0.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://relint.uniroma1.it/ewp-test/api/IIA_approval.aspx</url>
+            </iia-approval-cnr>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd "
+                version="4.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://relint.uniroma1.it/ewp-test/api/IIA.aspx</url>
+            </iias>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uniroma1.it">
@@ -105,25 +165,25 @@
         </mf:institutions-covered>
         <client-credentials-in-use>
             <rsa-public-key>
-                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8VmcBBN89ptlRmfDJ5F1
-				Tz/fceEExNBKuleOGV9mNcUS4yLs7zDGwPaw/kHTVFLgZw1goKgICvkJeJ0mCcGN
-				R/JRtOnI62VBXzcf41iRu4T8JnQmtwpHSavEUHbtlJCf7dXdatEH3WrAVk2wJmHl
-				5zNoucE/VTNYXnFx/t3vqmDLVYkgR0ao+wqkEhLdz4kwfSdFS+NN8oLWEq4o8zv+
-				hpRW80N9GXT8DWMdgut/lDz+ZIAzvEcf/60DZeOS6m45nUfNwRkHuyMLoMFu80nj
-				ePxg9pPrHBuTfeowKCgh0iJkgHFImSd/pcWb28O0xUNmXibpwYH8eFPg1am9sqWE
-				GwIDAQAB
-            </rsa-public-key>
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8VmcBBN89ptlRmfDJ5F1
+        Tz/fceEExNBKuleOGV9mNcUS4yLs7zDGwPaw/kHTVFLgZw1goKgICvkJeJ0mCcGN
+        R/JRtOnI62VBXzcf41iRu4T8JnQmtwpHSavEUHbtlJCf7dXdatEH3WrAVk2wJmHl
+        5zNoucE/VTNYXnFx/t3vqmDLVYkgR0ao+wqkEhLdz4kwfSdFS+NN8oLWEq4o8zv+
+        hpRW80N9GXT8DWMdgut/lDz+ZIAzvEcf/60DZeOS6m45nUfNwRkHuyMLoMFu80nj
+        ePxg9pPrHBuTfeowKCgh0iJkgHFImSd/pcWb28O0xUNmXibpwYH8eFPg1am9sqWE
+        GwIDAQAB
+      </rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
             <rsa-public-key>
-                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8VmcBBN89ptlRmfDJ5F1
-				Tz/fceEExNBKuleOGV9mNcUS4yLs7zDGwPaw/kHTVFLgZw1goKgICvkJeJ0mCcGN
-				R/JRtOnI62VBXzcf41iRu4T8JnQmtwpHSavEUHbtlJCf7dXdatEH3WrAVk2wJmHl
-				5zNoucE/VTNYXnFx/t3vqmDLVYkgR0ao+wqkEhLdz4kwfSdFS+NN8oLWEq4o8zv+
-				hpRW80N9GXT8DWMdgut/lDz+ZIAzvEcf/60DZeOS6m45nUfNwRkHuyMLoMFu80nj
-				ePxg9pPrHBuTfeowKCgh0iJkgHFImSd/pcWb28O0xUNmXibpwYH8eFPg1am9sqWE
-				GwIDAQAB
-            </rsa-public-key>
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8VmcBBN89ptlRmfDJ5F1
+        Tz/fceEExNBKuleOGV9mNcUS4yLs7zDGwPaw/kHTVFLgZw1goKgICvkJeJ0mCcGN
+        R/JRtOnI62VBXzcf41iRu4T8JnQmtwpHSavEUHbtlJCf7dXdatEH3WrAVk2wJmHl
+        5zNoucE/VTNYXnFx/t3vqmDLVYkgR0ao+wqkEhLdz4kwfSdFS+NN8oLWEq4o8zv+
+        hpRW80N9GXT8DWMdgut/lDz+ZIAzvEcf/60DZeOS6m45nUfNwRkHuyMLoMFu80nj
+        ePxg9pPrHBuTfeowKCgh0iJkgHFImSd/pcWb28O0xUNmXibpwYH8eFPg1am9sqWE
+        GwIDAQAB
+      </rsa-public-key>
         </server-credentials-in-use>
     </host>
 </manifest>
