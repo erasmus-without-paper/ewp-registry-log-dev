@@ -98,6 +98,26 @@
         <url>https://relint.uniroma1.it/ewp-test/api/IIA_CNR.aspx</url>
       </iia-cnr>
 
+	  <organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" />
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" />
+          </sec:response-encryption-methods>
+        </http-security>
+        <url>https://relint.uniroma1.it/ewp-test/api/ounits.aspx</url>
+        <max-ounit-ids>10</max-ounit-ids>
+        <max-ounit-codes>10</max-ounit-codes>
+      </organizational-units>
+	  
       <iias-approval xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"  version="0.2.1">
         <http-security>
           <sec:client-auth-methods>
