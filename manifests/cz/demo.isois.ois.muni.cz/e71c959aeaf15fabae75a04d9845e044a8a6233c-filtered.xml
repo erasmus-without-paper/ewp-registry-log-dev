@@ -16,6 +16,8 @@
     xmlns:mtp1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-projects/blob/stable-v1/manifest-entry.xsd"
     xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omlac01="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omlas03="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -101,6 +103,12 @@
 
         https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/v0.1.0/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/v0.1.0/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-omobility-las/stable-v1/manifest-entry.xsd
     "
 >
     <host>
@@ -305,6 +313,30 @@
                 <imtc1:url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorCnr/</imtc1:url>
                 <imtc1:max-omobility-ids>2</imtc1:max-omobility-ids>
             </imtc1:imobility-tor-cnr>
+            <omlas03:omobility-las version="0.4.0">
+                <omlas03:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </omlas03:http-security>
+                <omlas03:get-url>https://demo.isois.ois.muni.cz/en/ewp/laGet/</omlas03:get-url>
+                <omlas03:index-url>https://demo.isois.ois.muni.cz/en/ewp/laIndex/</omlas03:index-url>
+                <omlas03:update-url>https://demo.isois.ois.muni.cz/en/ewp/laUpdate/</omlas03:update-url>
+                <omlas03:max-omobility-ids>2</omlas03:max-omobility-ids>
+                <omlas03:sends-notifications/>
+                <omlas03:supported-update-types>
+                    <omlas03:approve-components-studied-proposal-v1/>
+                    <omlas03:update-components-studied-v1/>
+                </omlas03:supported-update-types>
+            </omlas03:omobility-las>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="demo.muni.cz">
