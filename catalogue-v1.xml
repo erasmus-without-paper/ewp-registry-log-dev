@@ -20170,6 +20170,30 @@
                 <imtc1:url>https://test.isois.ois.muni.cz/en/ewp/imobilityTorCnr/</imtc1:url>
                 <imtc1:max-omobility-ids>2</imtc1:max-omobility-ids>
             </imtc1:imobility-tor-cnr>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/v0.3.0/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://test.isois.ois.muni.cz/en/ewp/laGet/</get-url>
+                <index-url>https://test.isois.ois.muni.cz/en/ewp/laIndex/</index-url>
+                <update-url>https://test.isois.ois.muni.cz/en/ewp/laUpdate/</update-url>
+                <max-omobility-ids>2</max-omobility-ids>
+                <sends-notifications/>
+                <supported-update-types>
+                    <approve-components-studied-proposal-v1/>
+                    <update-components-studied-v1/>
+                </supported-update-types>
+            </omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>test.muni.cz</hei-id>
