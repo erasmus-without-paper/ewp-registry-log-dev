@@ -83,6 +83,18 @@
                 </iac2:http-security>
                 <iac2:url>https://czuewp.is4u.cz/ewp/iias/cnr.pl</iac2:url>
             </iac2:iia-cnr>
+            <iaap:iias-approval version="1.0.0">
+                <iaap:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </iaap:http-security>
+                <iaap:url>https://czuewp.is4u.cz/ewp/iias/approval.pl</iaap:url>
+                <iaap:max-iia-ids>20</iaap:max-iia-ids>
+            </iaap:iias-approval>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.czu.cz">
