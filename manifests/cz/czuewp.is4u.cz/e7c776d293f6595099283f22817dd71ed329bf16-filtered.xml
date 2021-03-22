@@ -4,7 +4,9 @@
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+    xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
@@ -82,6 +84,29 @@
                 </iac2:http-security>
                 <iac2:url>https://czuewp.is4u.cz/ewp/iias/cnr.pl</iac2:url>
             </iac2:iia-cnr>
+            <iapc:iia-approval-cnr version="0.2.0">
+                <iapc:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </iapc:http-security>
+                <iapc:url>https://czuewp.is4u.cz/ewp/iias/approval-cnr.pl</iapc:url>
+            </iapc:iia-approval-cnr>
+            <iaap:iias-approval version="1.0.0">
+                <iaap:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </iaap:http-security>
+                <iaap:url>https://czuewp.is4u.cz/ewp/iias/approval.pl</iaap:url>
+                <iaap:max-iia-ids>1</iaap:max-iia-ids>
+            </iaap:iias-approval>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.czu.cz">
