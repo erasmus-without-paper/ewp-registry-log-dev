@@ -19689,7 +19689,7 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://unimi-ewp-test.gomp.it/api/ewp/manifest</d5:url>
             </d5:discovery>
-            <e2:echo version="2.0.0">
+            <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -19702,7 +19702,7 @@
                 </e2:http-security>
                 <e2:url>https://unimi-ewp-test.gomp.it/api/ewp/echo</e2:url>
             </e2:echo>
-            <in2:institutions version="2.0.0">
+            <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -19716,7 +19716,7 @@
                 <in2:url>https://unimi-ewp-test.gomp.it/api/ewp/institutions</in2:url>
                 <in2:max-hei-ids>255</in2:max-hei-ids>
             </in2:institutions>
-            <ou2:organizational-units version="2.0.0">
+            <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -19731,11 +19731,11 @@
                 <ou2:max-ounit-ids>255</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>255</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <co1:courses
-                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
+            <courses
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/v0.7.1/manifest-entry.xsd"
+                version="0.7.1"
             >
-                <co1:http-security>
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="false"/>
@@ -19744,11 +19744,11 @@
                         <sec-B2:httpsig/>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </co1:http-security>
-                <co1:url>https://unimi-ewp-test.gomp.it/api/ewp/courses</co1:url>
-                <co1:max-los-ids>255</co1:max-los-ids>
-                <co1:max-los-codes>255</co1:max-los-codes>
-            </co1:courses>
+                </http-security>
+                <url>https://unimi-ewp-test.gomp.it/api/ewp/courses</url>
+                <max-los-ids>255</max-los-ids>
+                <max-los-codes>255</max-los-codes>
+            </courses>
             <cr1:simple-course-replication
                 xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -19767,11 +19767,11 @@
                 <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>false</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <ia4:iias
-                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
-                version="4.0.0"
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/v6.0.1/manifest-entry.xsd"
+                version="6.0.1"
             >
-                <ia4:http-security>
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="false"/>
@@ -19780,15 +19780,18 @@
                         <sec-B2:httpsig/>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia4:http-security>
-                <ia4:get-url>https://unimi-ewp-test.gomp.it/api/ewp/iaasget</ia4:get-url>
-                <ia4:max-iia-ids>255</ia4:max-iia-ids>
-                <ia4:max-iia-codes>255</ia4:max-iia-codes>
-                <ia4:index-url>https://unimi-ewp-test.gomp.it/api/ewp/iaasindex</ia4:index-url>
-                <ia4:sends-notifications/>
-            </ia4:iias>
-            <iac2:iia-cnr version="2.0.0">
-                <iac2:http-security>
+                </http-security>
+                <get-url>https://unimi-ewp-test.gomp.it/api/ewp/iaasget</get-url>
+                <max-iia-ids>255</max-iia-ids>
+                <max-iia-codes>255</max-iia-codes>
+                <index-url>https://unimi-ewp-test.gomp.it/api/ewp/iaasindex</index-url>
+                <sends-notifications/>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/v2.0.3/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="false"/>
@@ -19797,9 +19800,9 @@
                         <sec-B2:httpsig/>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://unimi-ewp-test.gomp.it/api/ewp/iiacnr</iac2:url>
-            </iac2:iia-cnr>
+                </http-security>
+                <url>https://unimi-ewp-test.gomp.it/api/ewp/iiacnr</url>
+            </iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
