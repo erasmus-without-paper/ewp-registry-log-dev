@@ -29732,6 +29732,146 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNISANNIO test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://unisannio.esse3.pp.cineca.it/ewp/Manifest.do</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/Echo.do</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/Institutions.do</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/OrgUnits.do</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/Courses.do</co1:url>
+                <co1:max-los-ids>10</co1:max-los-ids>
+                <co1:max-los-codes>10</co1:max-los-codes>
+            </co1:courses>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://unisannio.esse3.pp.cineca.it/ewp/connector/IIAGet.do</ia4:get-url>
+                <ia4:max-iia-ids>10</ia4:max-iia-ids>
+                <ia4:max-iia-codes>10</ia4:max-iia-codes>
+                <ia4:index-url>https://unisannio.esse3.pp.cineca.it/ewp/connector/IIAIndex.do</ia4:index-url>
+                <ia4:sends-notifications/>
+            </ia4:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/IIACnr.do</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/IIAAppr.do</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://unisannio.esse3.pp.cineca.it/ewp/connector/IIAApprCnr.do</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unisannio.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="1e9721485461a965af7b477ec9d3fa2e1e53f2afce47fdcf55240b040a19efee"/>
+            <rsa-public-key sha-256="ce95d7709b006c9a938c7fb6ac0e4d319d6ca3adcbf75bfcd640c07b721738a7"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="ce95d7709b006c9a938c7fb6ac0e4d319d6ca3adcbf75bfcd640c07b721738a7"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>admin@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -33045,6 +33185,12 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="en">University of SALERNO - TEST</name>
             <name xml:lang="it">UNIVERSITA DEGLI STUDI DI SALERNO - TEST</name>
         </hei>
+        <hei id="unisannio.it">
+            <other-id type="erasmus">I  BENEVEN02</other-id>
+            <other-id type="pic">973862444</other-id>
+            <name xml:lang="en">University of SANNIO - TEST</name>
+            <name xml:lang="it">Universita' degli Studi del SANNIO di BENEVENTO - TEST</name>
+        </hei>
         <hei id="uniss.it">
             <other-id type="erasmus">I  SASSARI01</other-id>
             <other-id type="pic">999465594</other-id>
@@ -34342,6 +34488,16 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             thRwSYGeZPSZV7Kp0agZcx1/sn1yJvVrXBT0XbOPgPMZzOngI9Sxq3vTBJIMqQZnM470UleFDAWc
             6RP5mPYutQpoO8pvYizMZqRC7vZI8uizEWfmtthZO2wo9vbRLiDI442HsgUAGPYvm9QOhcGEU284
             YSBGCQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="ce95d7709b006c9a938c7fb6ac0e4d319d6ca3adcbf75bfcd640c07b721738a7">
+            MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA1YB1FJZPHH6Stzcu4p2ZrpH+Lz/svcau
+            YlxNMKVml1KtnO/CNm1c/WafI2YdUITfAAqcREYic+IUq/zUen39XWsQaS3lkjm1nSHze/l4XRIq
+            0awY/6Ud/xvjcvOOU3va0MwX+6n7WHc/gzbEGQCOHRVoWS0rGAI27Y0EXabpoD117r+g7SXjFcoB
+            Zy46OuNpVMpCBWGWX+LDAuye27quMfYSxNeEokXUUdUO7IfxlRoWLPJKWfbO/9wSyHON85/Blx9b
+            0EgMBaoXiko+bCiI8WmM4Lge1tPUXYnxmaTXO66dr8l3lsJHb5d2mD21mug5FHumaWoQR/zJHSey
+            TniuIj0KxGZB00xRrIy1T3o526J0nm05V/cJPYSXz1rVVPPebKnkgqtHqyt22UQUeLpikb1P2mp3
+            wzdBclhHrsx6EfTacJGWyCDkriOsVKzVYXQg15/siY82D+HTRzqgy91CU4Deg/dCbOFfYoMLNyxq
+            Wb2ENxuaqj3JjwSBzSEpwRKZAgMBAAE=
         </rsa-public-key>
         <rsa-public-key sha-256="d095f4f27072126022dccae6121bb2be84e9214c98f23679e2161b57724ca183">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQeqlJyCNC8GLtu3M+d1VJpgCVH7Mugg
