@@ -70,6 +70,32 @@
         <max-ounit-ids>15</max-ounit-ids>
         <max-ounit-codes>3</max-ounit-codes>
       </organizational-units>
+      <omobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" version="0.15.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+          </sec:response-encryption-methods>
+        </http-security>
+        <get-url>https://ewp-dev.up.pt:8443/rest/omobilities/get</get-url>
+        <index-url>https://ewp-dev.up.pt:8443/rest/omobilities/index</index-url>
+        <max-omobility-ids>3</max-omobility-ids>
+        <sends-notifications/>
+      </omobilities>
+      <imobility-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" version="0.1.1">
+        <url>https://ewp-dev.up.pt:8443/rest/imobilities/cnr</url>
+        <max-omobility-ids>3</max-omobility-ids>
+      </imobility-cnr>
     </r:apis-implemented>
     <institutions-covered>
       <r:hei id="up.pt">
