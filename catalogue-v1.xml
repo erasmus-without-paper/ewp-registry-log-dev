@@ -3099,12 +3099,31 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </ia3:http-security>
-                <ia3:get-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/get</ia3:get-url>
+                <ia3:get-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v3/get</ia3:get-url>
                 <ia3:max-iia-ids>3</ia3:max-iia-ids>
                 <ia3:max-iia-codes>3</ia3:max-iia-codes>
-                <ia3:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/index</ia3:index-url>
+                <ia3:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v3/index</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v6/get</ia4:get-url>
+                <ia4:max-iia-ids>3</ia4:max-iia-ids>
+                <ia4:max-iia-codes>3</ia4:max-iia-codes>
+                <ia4:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v6/index</ia4:index-url>
+            </ia4:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>moc.demo.sop.co.at</hei-id>
