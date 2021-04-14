@@ -12922,9 +12922,9 @@
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A0:anonymous/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -12943,9 +12943,9 @@
             <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A0:anonymous/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -12969,9 +12969,9 @@
                 <ewp:admin-notes>paramter los_at_date ignored</ewp:admin-notes>
                 <co1:http-security>
                     <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A0:anonymous/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -12994,9 +12994,9 @@
             >
                 <cr1:http-security>
                     <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A0:anonymous/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -13013,6 +13013,31 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>false</cr1:supports-modified-since>
             </cr1:simple-course-replication>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <get-url>https://ewp-test.unibo.it/ewp/rest/iia/v6/get</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <max-iia-codes>1</max-iia-codes>
+                <index-url>https://ewp-test.unibo.it/ewp/rest/iia/v6/index</index-url>
+            </iias>
             <ia3:iias
                 xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
                 version="3.0.0"
