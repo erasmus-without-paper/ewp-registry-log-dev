@@ -30289,6 +30289,67 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>pes@unipa.it</ewp:admin-email>
+        <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/echo</e2:url>
+            </e2:echo>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/ounits</ou2:url>
+                <ou2:max-ounit-ids>16</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>16</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unipa.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="159b85806422793f3bd633736804e1340e79e7775492fa43ff67ce1bbf777a66"/>
+            <rsa-public-key sha-256="7f53583cf8f51097cccbcb2d00bd77b02a19227c4e6d5bd6905ad562686c7daa"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7f53583cf8f51097cccbcb2d00bd77b02a19227c4e6d5bd6905ad562686c7daa"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>admin@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -33521,6 +33582,12 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="en">Universita degli Studi Internazionali di ROMA (UNINT)  - TEST</name>
             <name xml:lang="it">Universita degli Studi Internazionali di ROMA (UNINT)  - TEST</name>
         </hei>
+        <hei id="unipa.it">
+            <other-id type="erasmus">I  PALERMO01</other-id>
+            <name xml:lang="en">University of Palermo</name>
+            <name xml:lang="es">Universidad de Palermo</name>
+            <name xml:lang="it">Universita' degli Studi di Palermo</name>
+        </hei>
         <hei id="uniparthenope.it">
             <other-id type="erasmus">I  NAPOLI03</other-id>
             <other-id type="pic">999856019</other-id>
@@ -34544,6 +34611,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             xkTc5EASvo7PMOELN5jI8yVybEUgoA7NVMtY/bsKa2iCI/kOsJBcfJVElUD3FKJkkNawD2295sAA
             BKwh1ZVOHymMqUX9uaaAc6WvJ9xzrruL3l6Lspqfotub+eHXDoM0FXIfHP8Imo77TV2PN4H0uBdH
             CopYWFujCnDkLw+SeYe/Z7OjAgMBAAE=
+        </rsa-public-key>
+        <rsa-public-key sha-256="7f53583cf8f51097cccbcb2d00bd77b02a19227c4e6d5bd6905ad562686c7daa">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqEfFSybs5DB1U8FW794UGp+T8f6Mjsof
+            ZYTBlPlZNPasLlzxz+kHxhfzEdYH+z/ie8h5VoJS18/p/7gNEdIbeiHEkKArRAXgsAFO0z96GSpS
+            KCP9N+2Tt4cZUUM/03hCGZlC9igeWE9f7qYIJj3wWnlkzO45W7kV0sJri+M2l5kSUV2zzE/iHJDf
+            BYgOMgbE6dxhm+KaXbrF7dQ5SOhDr94QnE67CvmQEzoV7eaQSE2caUo/jRyQeI2Y5VHgeTBxwV55
+            Rex4995uY+l3rH7AzE7fE1Q2GMqBPbR7UkYxwr7aSsWnWTfskBcUBmOtO2Y/FxKSdet9FZ4agQOO
+            QP50jwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="805d4575c495befc667bfcfdb3cfcfed00c9d9570be7a95d1ce71651dc320505">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi7ZHe4mz5jH4zT6bdYFT8p9Fh8+OFeFA
