@@ -16474,6 +16474,38 @@
                 </e2:http-security>
                 <e2:url>https://app-pre.ehu.eus/ewp/api/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://app-pre.ehu.eus/ewp/api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ounits
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/v2.1.1/manifest-entry.xsd"
+                version="2.1.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://app-pre.ehu.eus/ewp/api/ounits</url>
+                <max-ounit-ids>3</max-ounit-ids>
+                <max-ounit-codes>3</max-ounit-codes>
+            </ounits>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -16516,7 +16548,7 @@
             </omc1:omobility-cnr>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-                version="0.3.0"
+                version="1.0.1"
             >
                 <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
                 <ewp:admin-notes/>
@@ -16542,7 +16574,7 @@
             </oml1:omobility-las>
             <omlc1:omobility-la-cnr
                 xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
+                version="1.0.0"
             >
                 <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
                 <ewp:admin-notes/>
