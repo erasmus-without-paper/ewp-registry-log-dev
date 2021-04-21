@@ -30109,11 +30109,11 @@
                 </e2:http-security>
                 <e2:url>https://webgesdes.uv.es/uvEWPWeb/echo</e2:url>
             </e2:echo>
-            <ia4:iias
-                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
             >
-                <ia4:http-security>
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -30122,12 +30122,13 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia4:http-security>
-                <ia4:get-url>https://webgesdes.uv.es/uvEWPWeb/iias/get</ia4:get-url>
-                <ia4:max-iia-ids>100</ia4:max-iia-ids>
-                <ia4:max-iia-codes>100</ia4:max-iia-codes>
-                <ia4:index-url>https://webgesdes.uv.es/uvEWPWeb/iias/index</ia4:index-url>
-            </ia4:iias>
+                </http-security>
+                <get-url>https://webgesdes.uv.es/uvEWPWeb/iias/get</get-url>
+                <max-iia-ids>100</max-iia-ids>
+                <max-iia-codes>100</max-iia-codes>
+                <index-url>https://webgesdes.uv.es/uvEWPWeb/iias/index</index-url>
+                <sends-notifications/>
+            </iias>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
