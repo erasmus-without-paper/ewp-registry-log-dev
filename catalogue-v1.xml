@@ -13899,6 +13899,24 @@
                 </e2:http-security>
                 <e2:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/echo</e2:url>
             </e2:echo>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/courses</co1:url>
+                <co1:max-los-ids>1</co1:max-los-ids>
+                <co1:max-los-codes>1</co1:max-los-codes>
+            </co1:courses>
         </apis-implemented>
         <institutions-covered>
             <hei-id>ulisboa.pt</hei-id>
