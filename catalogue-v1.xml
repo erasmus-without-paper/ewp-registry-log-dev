@@ -30737,6 +30737,24 @@
                 <in2:url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewp-test-public.unipa.it/ewp-unipa-connector/public/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>16</om1:max-omobility-ids>
+            </om1:omobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unipa.it</hei-id>
