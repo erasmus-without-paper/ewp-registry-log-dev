@@ -31933,6 +31933,73 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>przemyslaw.spychalski@ug.edu.pl</ewp:admin-email>
+        <ewp:admin-notes>It's manifest of our testing environment.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://dev-ewp.ug.edu.pl/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev-ewp.ug.edu.pl/ewp/echo</e2:url>
+            </e2:echo>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://dev-ewp.ug.edu.pl/ewp/omobilities/get</oml1:get-url>
+                <oml1:index-url>https://dev-ewp.ug.edu.pl/ewp/omobilities/index</oml1:index-url>
+                <oml1:update-url>https://dev-ewp.ug.edu.pl/ewp/omobilities/update</oml1:update-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev-ewp.ug.edu.pl/ewp/iia/index</get-url>
+                <max-iia-ids>100</max-iia-ids>
+                <max-iia-codes>100</max-iia-codes>
+                <index-url>https://dev-ewp.ug.edu.pl/ewp/iia/get</index-url>
+            </iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>dev.ug.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="ab23252a715bcbf5229571d8d5a1d1506a514c95a10343b8977140e50b3a78fc"/>
+            <rsa-public-key sha-256="17f9f87a935274017565275ce35aa88a57c3a128c7b2b69a584eb520929bc27f"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="17f9f87a935274017565275ce35aa88a57c3a128c7b2b69a584eb520929bc27f"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>admin@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -33009,6 +33076,13 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="cz">Česká zemědělská univerzita v Praze</name>
             <name xml:lang="en">Czech University of Life Sciences Prague</name>
             <name xml:lang="sk">Česká poľnohospodárska univerzita v Prahe</name>
+        </hei>
+        <hei id="dev.ug.edu.pl">
+            <other-id type="erasmus">PL GDANSK01</other-id>
+            <other-id type="erasmus-charter">50023-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
+            <other-id type="pic">9998760011</other-id>
+            <name xml:lang="en">University of Gdańsk</name>
+            <name xml:lang="pl">Uniwersytet Gdański</name>
         </hei>
         <hei id="diak.fi">
             <other-id type="erasmus">SF HELSINK19</other-id>
