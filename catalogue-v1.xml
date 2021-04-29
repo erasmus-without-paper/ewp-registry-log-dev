@@ -13931,8 +13931,8 @@
                     </sec:server-auth-methods>
                 </ou2:http-security>
                 <ou2:url>https://czuewp.is4u.cz/ewp/organizational_units.pl</ou2:url>
-                <ou2:max-ounit-ids>20</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>20</ou2:max-ounit-codes>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
             <ia3:iias
                 xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
@@ -13947,8 +13947,8 @@
                     </sec:server-auth-methods>
                 </ia3:http-security>
                 <ia3:get-url>https://czuewp.is4u.cz/ewp/iias/get.pl</ia3:get-url>
-                <ia3:max-iia-ids>20</ia3:max-iia-ids>
-                <ia3:max-iia-codes>20</ia3:max-iia-codes>
+                <ia3:max-iia-ids>1</ia3:max-iia-ids>
+                <ia3:max-iia-codes>1</ia3:max-iia-codes>
                 <ia3:index-url>https://czuewp.is4u.cz/ewp/iias/index.pl</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
@@ -13963,6 +13963,20 @@
                 </iac2:http-security>
                 <iac2:url>https://czuewp.is4u.cz/ewp/iias/cnr.pl</iac2:url>
             </iac2:iia-cnr>
+            <iaa1:iia-approval-cnr
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://czuewp.is4u.cz/ewp/iias/approval-cnr.pl</iaa1:url>
+            </iaa1:iia-approval-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -13976,23 +13990,9 @@
                     </sec:server-auth-methods>
                 </iaa1:http-security>
                 <iaa1:url>https://czuewp.is4u.cz/ewp/iias/approval.pl</iaa1:url>
-                <iaa1:max-iia-ids>20</iaa1:max-iia-ids>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
                 <iaa1:sends-notifications/>
             </iaa1:iias-approval>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://czuewp.is4u.cz/ewp/iias/approval-cnr.pl</iaac1:url>
-            </iaac1:iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>dev.czu.cz</hei-id>
