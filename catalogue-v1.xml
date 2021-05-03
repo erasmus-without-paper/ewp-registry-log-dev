@@ -5165,6 +5165,7 @@
             <hei-id>dummy23-ewp.staging.moveon4.com</hei-id>
             <hei-id>ref05v31-bo.qa.moveon4.com</hei-id>
             <hei-id>ref05v35-bo.qa.moveon4.com</hei-id>
+            <hei-id>suapi-bo.staging.moveon4.com</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="778d5f8c0ed991f125a1542ad0f60ea0986ed868bd6082186831c96f0ff8bb6f"/>
@@ -12165,6 +12166,120 @@
         </client-credentials-in-use>
         <server-credentials-in-use>
             <rsa-public-key sha-256="0e2de48fcf3e3d1b900f1487b135891489015a7c65e467d929fb2ec34b3b0180"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+        <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://suapi-ewp.staging.moveon4.com/v1/institution</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://suapi-ewp.staging.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://suapi-ewp.staging.moveon4.com/v1/iia/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://suapi-ewp.staging.moveon4.com/v1/iia/index</ia3:index-url>
+                <ia3:sends-notifications/>
+            </ia3:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://suapi-ewp.staging.moveon4.com/v1/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <ewp:admin-email>umesh@qs.com</ewp:admin-email>
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://suapi-ewp.staging.moveon4.com/v1/iia/approval/get</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://suapi-ewp.staging.moveon4.com/v1/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>suapi-bo.staging.moveon4.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="778d5f8c0ed991f125a1542ad0f60ea0986ed868bd6082186831c96f0ff8bb6f"/>
+            <rsa-public-key sha-256="090105c365425514c0bd5962179884812f1c59451b3547bb3cad4e684cdfcabc"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="090105c365425514c0bd5962179884812f1c59451b3547bb3cad4e684cdfcabc"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -34308,6 +34423,9 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="pic">9009</other-id>
             <name xml:lang="en">Strato University</name>
             <name xml:lang="si">Strato University</name>
+        </hei>
+        <hei id="suapi-bo.staging.moveon4.com">
+            <name xml:lang="en">University of Sindh</name>
         </hei>
         <hei id="supagro.fr">
             <other-id type="erasmus">F MONTPEL10</other-id>
