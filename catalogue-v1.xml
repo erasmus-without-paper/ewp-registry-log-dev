@@ -32049,6 +32049,243 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>petrzelka@czs.muni.cz</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://test.slu.isois.ois.muni.cz/en/ewp/manifest/</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://test.slu.isois.ois.muni.cz/en/ewp/echo/</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://test.slu.isois.ois.muni.cz/en/ewp/institutions/</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://test.slu.isois.ois.muni.cz/en/ewp/ounits/</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://test.slu.isois.ois.muni.cz/en/ewp/iiaGet/</get-url>
+                <max-iia-ids>2</max-iia-ids>
+                <max-iia-codes>2</max-iia-codes>
+                <index-url>https://test.slu.isois.ois.muni.cz/en/ewp/iiaIndex/</index-url>
+            </iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://test.slu.isois.ois.muni.cz/en/ewp/iiaCnr/</iac2:url>
+            </iac2:iia-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityGet/</om1:get-url>
+                <om1:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityIndex/</om1:index-url>
+                <om1:max-omobility-ids>2</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityCnr/</omc1:url>
+                <omc1:max-omobility-ids>2</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/laGet/</oml1:get-url>
+                <oml1:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/laIndex/</oml1:index-url>
+                <oml1:update-url>https://test.slu.isois.ois.muni.cz/en/ewp/laUpdate/</oml1:update-url>
+                <oml1:max-omobility-ids>2</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/laCnr/</omlc1:url>
+                <omlc1:max-omobility-ids>2</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityGet/</im1:get-url>
+                <im1:max-omobility-ids>2</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
+                <imc1:max-omobility-ids>2</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorGet/</imt1:get-url>
+                <imt1:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorIndex/</imt1:index-url>
+                <imt1:max-omobility-ids>2</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorCnr/</imtc1:url>
+                <imtc1:max-omobility-ids>2</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>test.slu.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="647c853bff6f7ef53ceb908746436fe4d46105e7d660022fd20eedfdc420070a"/>
+            <rsa-public-key sha-256="0aa076f7611766e9060d6697e3533b9f957796e0785c52fde3a55892cb5f4710"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="0aa076f7611766e9060d6697e3533b9f957796e0785c52fde3a55892cb5f4710"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>admin@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -34657,6 +34894,13 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="cs">Masarykova univerzita</name>
             <name xml:lang="en">Masaryk University</name>
         </hei>
+        <hei id="test.slu.cz">
+            <other-id type="erasmus">CZ OPAVA01</other-id>
+            <other-id type="erasmus-charter">59958-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">951208385</other-id>
+            <name xml:lang="cs">Slezská univerzita v Opavě</name>
+            <name xml:lang="en">Silesian University in Opava</name>
+        </hei>
         <hei id="test.unipv.it">
             <other-id type="eche">29255-EPP-1-2014-1-IT-EPPKA3-ECHE</other-id>
             <other-id type="erasmus">I  PAVIA01</other-id>
@@ -35838,6 +36082,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             IPkHs7+esbo17NK0sEf/QjAVvac3K6VlSA4i0ydAeqB1b3iyxKB/wjwhgM119kZQMZXUzpIDb3ht
             D40CPMW0D5S9Y12ajUQsMNeKNx3ltPgMFi6DM8pIiojRuOqabl0lsGAGRUgvVBS5pICdNXNaire7
             CSmdQwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="0aa076f7611766e9060d6697e3533b9f957796e0785c52fde3a55892cb5f4710">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApq1Gsn2uixCv5ca8QabbAX56xjLRGszL
+            YAnGvnL1hvv7xQJXi6aMhmQL3+0BlpcruabhVyQI3WaEz856zrvTTUxLCOubz2azew2UFl2jhiUH
+            tEUDBi20Ldn2egOgUc52B+zTJGunWQHPNFuM2OWxpjjablDFwY3qbUITuBWWEIsT+9wiM5kwLvT4
+            voqBsaT0a+AX1mRAHslRh/KnHp2hvav+m8zpRQsUJP127fJQpm1ZmMuWkHAshvV72N8o/KDYYya4
+            qd/k/TWfWxFlw9ZGEcmXbiGQtMd2IVNSAnVOhNgh/EFIAgXWtteDwQ8ypK7FX6E6e4l9S1WAkrDA
+            /JuyMQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="0b9ba7fd8b3739ef8abb5525b823890764d08b2c566a58d6ef215538e2f7c122">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAorAo1uxu/muBBjtJu8bYnzuOVCAEmE+Q
