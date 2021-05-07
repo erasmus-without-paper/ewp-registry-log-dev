@@ -30230,6 +30230,41 @@
                 <omc1:url>https://unict-ewp-dev.gomp.it/api/ewp/omobilitycnr</omc1:url>
                 <omc1:max-omobility-ids>255</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://unict-ewp-dev.gomp.it/api/ewp/imobilitiesget</im1:get-url>
+                <im1:max-omobility-ids>255</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://unict-ewp-dev.gomp.it/api/ewp/imobilitycnr</imc1:url>
+                <imc1:max-omobility-ids>255</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unict.it</hei-id>
