@@ -3,6 +3,8 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
 >
     <ns3:host>
         <admin-email>gdsi@iscte-iul.pt</admin-email>
@@ -11,6 +13,20 @@
                 <admin-email>gdsi@iscte-iul.pt</admin-email>
                 <ns4:url>https://fenix3.iscte-iul.pt/web-hooks/ewp/manifest</ns4:url>
             </ns4:discovery>
+            <ns6:echo version="2.0.1">
+                <admin-email>gdsi@iscte-iul.pt</admin-email>
+                <ns6:http-security>
+                    <ns5:client-auth-methods>
+                        <tlscert allows-self-signed="true"/>
+                        <httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <tlscert/>
+                        <httpsig/>
+                    </ns5:server-auth-methods>
+                </ns6:http-security>
+                <ns6:url>https://fenix3.iscte-iul.pt/web-hooks/ewp/echo</ns6:url>
+            </ns6:echo>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="iscte-iul.pt">
@@ -20,5 +36,11 @@
                 <ns2:name xml:lang="en">Iscte - University Institute of Lisbon</ns2:name>
             </ns2:hei>
         </ns3:institutions-covered>
+        <ns3:client-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxBMejH32JYUQ/Vm0kB2/pNWTWmhqb/03wie5hYVHk95rqulh+S0duJzbaK8gDawJfNZCWeNGDRkENj9TUFzQ8pcOFRUm/kQX7QF6hD281PbPnppelAhq9D9Xfi4aiLACPjNKJeuDcBBRKO7CWkrHOALWk72v+Jpdn5g+hkk2fmV8MrsmrAXR5HHgNNYKI2idLwxwWi2X1jcG26jtMdKcSD9OL38RExEMNGzMTMa/7k3WVvIzKnsqWUl05jgF4Aor6rGnxbwwpcWG1XmrBJ9zmJvECYH9v76YLyojWT3RTZw91XT28cYOZwlrDuKsrZWNSsquVNN1ctwRYOXph01hYwIDAQAB</ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+        <ns3:server-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxBMejH32JYUQ/Vm0kB2/pNWTWmhqb/03wie5hYVHk95rqulh+S0duJzbaK8gDawJfNZCWeNGDRkENj9TUFzQ8pcOFRUm/kQX7QF6hD281PbPnppelAhq9D9Xfi4aiLACPjNKJeuDcBBRKO7CWkrHOALWk72v+Jpdn5g+hkk2fmV8MrsmrAXR5HHgNNYKI2idLwxwWi2X1jcG26jtMdKcSD9OL38RExEMNGzMTMa/7k3WVvIzKnsqWUl05jgF4Aor6rGnxbwwpcWG1XmrBJ9zmJvECYH9v76YLyojWT3RTZw91XT28cYOZwlrDuKsrZWNSsquVNN1ctwRYOXph01hYwIDAQAB</ns3:rsa-public-key>
+        </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
