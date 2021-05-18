@@ -19,9 +19,20 @@
         <o:admin-email>petr.abrahamczik@vsb.cz</o:admin-email>
         <o:admin-notes>It's a test manifest.</o:admin-notes>
         <m:apis-implemented>
-            <f:discovery version="5.0.0">
-                <f:url>https://edison.sso.vsb.cz/ewp/test/manifest.xml</f:url>
-            </f:discovery>
+            <j:institutions version="2.1.0">
+                <j:http-security>
+                    <k:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </k:client-auth-methods>
+                    <k:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </k:server-auth-methods>
+                </j:http-security>
+                <j:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</j:url>
+                <j:max-hei-ids>1</j:max-hei-ids>
+            </j:institutions>
             <l:organizational-units version="2.1.1">
                 <l:http-security>
                     <k:client-auth-methods>
@@ -37,20 +48,6 @@
                 <l:max-ounit-ids>1</l:max-ounit-ids>
                 <l:max-ounit-codes>1</l:max-ounit-codes>
             </l:organizational-units>
-            <j:institutions version="2.1.0">
-                <j:http-security>
-                    <k:client-auth-methods>
-                        <c:tlscert allows-self-signed="true"/>
-                        <a:httpsig/>
-                    </k:client-auth-methods>
-                    <k:server-auth-methods>
-                        <e:tlscert/>
-                        <d:httpsig/>
-                    </k:server-auth-methods>
-                </j:http-security>
-                <j:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</j:url>
-                <j:max-hei-ids>1</j:max-hei-ids>
-            </j:institutions>
             <h:echo version="2.0.1">
                 <h:http-security>
                     <k:client-auth-methods>
@@ -64,6 +61,9 @@
                 </h:http-security>
                 <h:url>https://edison.sso.vsb.cz/ewp/test/rest/echo</h:url>
             </h:echo>
+            <f:discovery version="5.0.0">
+                <f:url>https://edison.sso.vsb.cz/ewp/test/manifest.xml</f:url>
+            </f:discovery>
             <i:factsheet version="0.3.0">
                 <i:http-security>
                     <k:client-auth-methods>
