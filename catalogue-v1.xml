@@ -33736,6 +33736,71 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>roland.francois@uliege.be</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://my-preprod.uliege.be/ws_penelope/EWP/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://my-preprod.uliege.be/ws_penelope/EWP/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://my-preprod.uliege.be/ws_penelope/EWP/institutions</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://my-preprod.uliege.be/ws_penelope/EWP/iias/get</ia4:get-url>
+                <ia4:max-iia-ids>10</ia4:max-iia-ids>
+                <ia4:max-iia-codes>10</ia4:max-iia-codes>
+                <ia4:index-url>https://my-preprod.uliege.be/ws_penelope/EWP/iias/index</ia4:index-url>
+            </ia4:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://my-preprod.uliege.be/ws_penelope/EWP/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uliege.be</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="3d430e46a4cf788163e404c3f1d0d5eefb38491abe543b72f792a8b6656e4abf"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usos@usos.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -37941,6 +38006,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             raVeU82a/gPm4K85KWhnTwYThJ8Vn+3NEx4wX5d7T1OaGTsCcXtEuVjozyXvX0z6My0Q3vkt7caL
             4OUk7Ysvo1/1tAv/UyggG8v89u4wZfSt6caaHqTObsQBlf0A7xeBI0uooLHH2Hb850SH6hP7OIGU
             oq1gSQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="3d430e46a4cf788163e404c3f1d0d5eefb38491abe543b72f792a8b6656e4abf">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyutQPUOCAgg9HAZrLsal86hUf8IAano1
+            74k5QNeRUO2PrdY0Z275Pp76NIMYJ8mQyrbh2X6jm24UWiiN4rsAOQVy+7AJa+EUoxmH8niQI9eA
+            WKiNHrFubonrLet3tnrVPUB2tbN9UNv3YFaHNLLrHViObBPxSeeVHmUhM9YKujlDf5MBFtCFagjU
+            rbGilyU1CFb/nYj3dHQW4XNBa+hTubv3TvjFxNVwpsx3cr8nz+Quh4TU8iGa/Q6o5GlsA6ZCLFra
+            Fr1rMkljnVtP2IBqjCihnO/tQnBryAzpmHK+co5z8QocOyb8FVNw2S3pbcp7P8zcqogClphrGe29
+            O2ZFpwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="3d69d19d65ec05411a78d29376d7deecbc51ac1e920bb100f1ade1322b20d05f">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxBMejH32JYUQ/Vm0kB2/pNWTWmhqb/03
