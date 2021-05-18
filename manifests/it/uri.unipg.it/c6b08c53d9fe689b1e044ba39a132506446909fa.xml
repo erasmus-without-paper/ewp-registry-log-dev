@@ -61,24 +61,24 @@
         <url>https://uri.unipg.it/ewp_test/manifest.xml</url>
       </discovery>
 
-      <institutions version="5.0.0">
+      <institutions 
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"  
+        version="2.0.0">
         <http-security>
           <sec:client-auth-methods>
-            <httpsig/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <httpsig/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
           </sec:server-auth-methods>
           <sec:request-encryption-methods>
-            <tls/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" />
           </sec:request-encryption-methods>
           <sec:response-encryption-methods>
-            <tls/>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" />
           </sec:response-encryption-methods>
         </http-security>
-        <url>
-          https://uri.unipg.it/ewp_test/API/institutions.aspx
-        </url>
+        <url>https://uri.unipg.it/ewp_test/api/institutions.aspx</url>
         <max-hei-ids>1</max-hei-ids>
       </institutions>
 
