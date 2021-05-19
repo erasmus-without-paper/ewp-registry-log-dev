@@ -33320,9 +33320,34 @@
                 <e2:url>https://ewp.pp.cineca.it/api/v1/primary/echo</e2:url>
             </e2:echo>
         </apis-implemented>
-        <institutions-covered>
-            <hei-id>gw.unicineca.it</hei-id>
-        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="e07094dcaf923decf1b84ec94530ae817cbbf86ba69418b13982220dd3a4d9e3"/>
+            <rsa-public-key sha-256="ff3707613aca407ee06160bb59fe20669981ec68161b30f32a1bd8a6225a2f70"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="ff3707613aca407ee06160bb59fe20669981ec68161b30f32a1bd8a6225a2f70"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>stefano.russo@cineca.it</ewp:admin-email>
+        <ewp:admin-email>d.orlando@cineca.it</ewp:admin-email>
+        <ewp:admin-email>a.pira@cineca.it</ewp:admin-email>
+        <ewp:admin-notes>UNICINECA test environment.</ewp:admin-notes>
+        <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
         <client-credentials-in-use>
             <certificate sha-256="e07094dcaf923decf1b84ec94530ae817cbbf86ba69418b13982220dd3a4d9e3"/>
             <rsa-public-key sha-256="ff3707613aca407ee06160bb59fe20669981ec68161b30f32a1bd8a6225a2f70"/>
@@ -35503,12 +35528,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="pic">999981925</other-id>
             <name xml:lang="en">UNIVERSITY OF GOTHENBURG</name>
             <name xml:lang="sv">UNIVERSITY OF GOTHENBURG</name>
-        </hei>
-        <hei id="gw.unicineca.it">
-            <other-id type="erasmus">I CINECA01</other-id>
-            <other-id type="pic">922899133</other-id>
-            <name xml:lang="en">University of CINECA</name>
-            <name xml:lang="it">Universita' degli Studi di CINECA</name>
         </hei>
         <hei id="h-brs.de">
             <other-id type="erasmus">D  ST-AUGU02</other-id>
