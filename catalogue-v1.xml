@@ -26589,11 +26589,11 @@
                 <ou2:max-ounit-ids>4</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>4</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia4:iias
-                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
-                version="4.0.0"
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
             >
-                <ia4:http-security>
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -26602,13 +26602,13 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia4:http-security>
-                <ia4:get-url>https://iris-pre.usal.es/api/iias/get</ia4:get-url>
-                <ia4:max-iia-ids>5</ia4:max-iia-ids>
-                <ia4:max-iia-codes>5</ia4:max-iia-codes>
-                <ia4:index-url>https://iris-pre.usal.es/api/iias/index</ia4:index-url>
-                <ia4:sends-notifications/>
-            </ia4:iias>
+                </http-security>
+                <get-url>https://iris-pre.usal.es/api/iias/get</get-url>
+                <max-iia-ids>5</max-iia-ids>
+                <max-iia-codes>5</max-iia-codes>
+                <index-url>https://iris-pre.usal.es/api/iias/index</index-url>
+                <sends-notifications/>
+            </iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -26673,6 +26673,96 @@
                 <f1:url>https://iris-pre.usal.es/api/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://iris-pre.usal.es/api/omobilities/get</om1:get-url>
+                <om1:index-url>https://iris-pre.usal.es/api/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://iris-pre.usal.es/api/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://iris-pre.usal.es/api/olas/get</oml1:get-url>
+                <oml1:index-url>https://iris-pre.usal.es/api/olas/index</oml1:index-url>
+                <oml1:update-url>https://iris-pre.usal.es/api/olas/update</oml1:update-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://iris-pre.usal.es/api/olas/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://iris-pre.usal.es/api/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>usal.es</hei-id>
