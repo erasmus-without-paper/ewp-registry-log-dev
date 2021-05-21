@@ -70,6 +70,26 @@
                 </ns25:http-security>
                 <ns25:url>https://ensino.digitalis.pt/mobilidadenet/ewp/ewpstage/echo</ns25:url>
             </ns25:echo>
+            <ns18:institutions version="2.2.0">
+                <admin-email>lpinto@digitalis.pt</admin-email>
+                <ns18:http-security>
+                    <ns17:client-auth-methods>
+                        <ns37:httpsig/>
+                    </ns17:client-auth-methods>
+                    <ns17:server-auth-methods>
+                        <ns40:httpsig/>
+                        <ns39:tlscert/>
+                    </ns17:server-auth-methods>
+                    <ns17:request-encryption-methods>
+                        <ns41:tls/>
+                    </ns17:request-encryption-methods>
+                    <ns17:response-encryption-methods>
+                        <ns42:tls/>
+                    </ns17:response-encryption-methods>
+                </ns18:http-security>
+                <ns18:url>https://ensino.digitalis.pt/mobilidadenet/ewp/ewpstage/institutions</ns18:url>
+                <ns18:max-hei-ids>1</ns18:max-hei-ids>
+            </ns18:institutions>
             <ns22:organizational-units version="2.1.1">
                 <admin-email>lpinto@digitalis.pt</admin-email>
                 <ns22:http-security>
@@ -130,7 +150,7 @@
                     </ns17:response-encryption-methods>
                 </ns29:http-security>
                 <ns29:url>https://ensino.digitalis.pt/mobilidadenet/ewp/ewpstage/courserep</ns29:url>
-                <ns29:allows-anonymous-access>false</ns29:allows-anonymous-access>
+                <ns29:allows-anonymous-access>true</ns29:allows-anonymous-access>
                 <ns29:supports-modified-since>false</ns29:supports-modified-since>
             </ns29:simple-course-replication>
             <ns27:iias version="6.0.1">
