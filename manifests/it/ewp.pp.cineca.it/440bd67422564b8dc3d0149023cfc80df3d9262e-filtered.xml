@@ -171,7 +171,7 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/gp/institutions</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/gp/institutions</url>
                 <max-hei-ids>1</max-hei-ids>
             </institutions>
             <organizational-units
@@ -187,7 +187,7 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/gp/orgunits</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/gp/orgunits</url>
                 <max-ounit-ids>10</max-ounit-ids>
                 <max-ounit-codes>10</max-ounit-codes>
             </organizational-units>
@@ -204,27 +204,10 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/gp/courses</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/gp/courses</url>
                 <max-los-ids>10</max-los-ids>
                 <max-los-codes>10</max-los-codes>
             </courses>
-            <simple-course-replication
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/gp/courserep</url>
-                <allows-anonymous-access>false</allows-anonymous-access>
-                <supports-modified-since>true</supports-modified-since>
-            </simple-course-replication>
             <iias
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -238,10 +221,10 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <get-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/iia/get</get-url>
+                <get-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/iia/get</get-url>
                 <max-iia-ids>10</max-iia-ids>
                 <max-iia-codes>10</max-iia-codes>
-                <index-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/iia/index</index-url>
+                <index-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/iia/index</index-url>
             </iias>
             <iia-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
@@ -256,7 +239,7 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/iia/cnr</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/iia/cnr</url>
             </iia-cnr>
             <iias-approval
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
@@ -271,8 +254,8 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/iia/approval</url>
-                <max-iia-ids>10</max-iia-ids>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/iia/approval</url>
+                <max-iia-ids>1</max-iia-ids>
             </iias-approval>
             <iia-approval-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -287,7 +270,7 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/iia/approval/cnr</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/iia/cnr/approval</url>
             </iia-approval-cnr>
             <omobilities
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
@@ -302,8 +285,8 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <get-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/outmob/get</get-url>
-                <index-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/outmob/index</index-url>
+                <get-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/get</get-url>
+                <index-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/index</index-url>
                 <max-omobility-ids>10</max-omobility-ids>
             </omobilities>
             <omobility-las
@@ -319,9 +302,9 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <get-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/las/get</get-url>
-                <index-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/las/index</index-url>
-                <update-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/las/update</update-url>
+                <get-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/las/get</get-url>
+                <index-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/las/index</index-url>
+                <update-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/las/update</update-url>
                 <max-omobility-ids>1</max-omobility-ids>
             </omobility-las>
             <omobility-la-cnr
@@ -337,7 +320,7 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/las/cnr</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/las/cnr</url>
                 <max-omobility-ids>1</max-omobility-ids>
             </omobility-la-cnr>
             <omobility-cnr
@@ -353,7 +336,7 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/outmob/cnr</url>
+                <url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/outmob/cnr</url>
                 <max-omobility-ids>10</max-omobility-ids>
             </omobility-cnr>
             <imobilities
@@ -369,42 +352,9 @@ T3jmimN/K1nCFxr6LscaM9n7+yQs9T+gMNSdRbKPCUO1AgMBAAE=
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
-                <get-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/incmob/get</get-url>
+                <get-url>https://ewp.pp.cineca.it/api/api/incoming/unicineca.it/incmob/get</get-url>
                 <max-omobility-ids>10</max-omobility-ids>
             </imobilities>
-            <imobility-cnr
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/incmob/cnr</url>
-                <max-omobility-ids>10</max-omobility-ids>
-            </imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/incmob/tors/get</get-url>
-                <index-url>https://ewp.pp.cineca.it/api/incoming/unicineca.it/incmob/tors/index</index-url>
-                <max-omobility-ids>10</max-omobility-ids>
-            </imobility-tors>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="unicineca.it">
