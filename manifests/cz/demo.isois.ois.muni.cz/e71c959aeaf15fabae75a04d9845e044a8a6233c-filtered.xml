@@ -279,6 +279,23 @@
                 <omlas03:update-url>https://demo.isois.ois.muni.cz/en/ewp/laUpdate/</omlas03:update-url>
                 <omlas03:max-omobility-ids>2</omlas03:max-omobility-ids>
             </omlas03:omobility-las>
+            <omlac1:omobility-la-cnr version="1.0.0">
+                <omlac1:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </omlac1:http-security>
+                <omlac1:url>https://demo.isois.ois.muni.cz/en/ewp/laCnr/</omlac1:url>
+                <omlac1:max-omobility-ids>2</omlac1:max-omobility-ids>
+            </omlac1:omobility-la-cnr>
             <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
