@@ -29436,6 +29436,23 @@
                 <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>false</cr1:supports-modified-since>
             </cr1:simple-course-replication>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://unict-ewp-dev.gomp.it/api/ewp/iaasget</ia6:get-url>
+                <ia6:max-iia-ids>255</ia6:max-iia-ids>
+                <ia6:max-iia-codes>255</ia6:max-iia-codes>
+                <ia6:index-url>https://unict-ewp-dev.gomp.it/api/ewp/iaasindex</ia6:index-url>
+            </ia6:iias>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -29447,6 +29464,21 @@
                 </iac2:http-security>
                 <iac2:url>https://unict-ewp-dev.gomp.it/api/ewp/iiacnr</iac2:url>
             </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://unict-ewp-dev.gomp.it/api/ewp/iiasappr</iaa1:url>
+                <iaa1:max-iia-ids>255</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
