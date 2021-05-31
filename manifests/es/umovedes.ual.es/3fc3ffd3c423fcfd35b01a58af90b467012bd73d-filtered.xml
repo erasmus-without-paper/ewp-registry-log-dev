@@ -110,6 +110,21 @@
                 </ns18:http-security>
                 <ns18:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/cnr</ns18:url>
             </ns18:iia-cnr>
+            <ns17:iias-approval version="0.2.1">
+                <ns17:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:tlscert allows-self-signed="true"/>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns17:http-security>
+                <ns17:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/approval</ns17:url>
+                <ns17:max-iia-ids>1</ns17:max-iia-ids>
+                <ns17:sends-notifications/>
+            </ns17:iias-approval>
             <ns16:iia-approval-cnr version="0.2.0">
                 <ns16:http-security>
                     <ns5:client-auth-methods>
