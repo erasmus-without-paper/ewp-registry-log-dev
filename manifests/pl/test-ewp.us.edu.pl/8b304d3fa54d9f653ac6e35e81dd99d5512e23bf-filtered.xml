@@ -159,6 +159,21 @@
                 </ns18:http-security>
                 <ns18:url>https://test-ewp.us.edu.pl/ewp/iia/cnr</ns18:url>
             </ns18:iia-cnr>
+            <ns17:iias-approval version="0.2.1">
+                <ns17:http-security>
+                    <ns3:client-auth-methods>
+                        <ns24:tlscert allows-self-signed="true"/>
+                        <ns23:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns44:tlscert/>
+                        <ns43:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns17:http-security>
+                <ns17:url>https://test-ewp.us.edu.pl/ewp/iia/approval</ns17:url>
+                <ns17:max-iia-ids>100</ns17:max-iia-ids>
+                <ns17:sends-notifications/>
+            </ns17:iias-approval>
             <ns19:iia-approval-cnr version="0.2.0">
                 <ns19:http-security>
                     <ns3:client-auth-methods>
