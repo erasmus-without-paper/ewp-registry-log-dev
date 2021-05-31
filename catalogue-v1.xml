@@ -16425,12 +16425,31 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </ia3:http-security>
-                <ia3:get-url>https://www.service4mobility.com/mannheim_test/ewp/iias/get</ia3:get-url>
+                <ia3:get-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v3/get</ia3:get-url>
                 <ia3:max-iia-ids>3</ia3:max-iia-ids>
                 <ia3:max-iia-codes>3</ia3:max-iia-codes>
-                <ia3:index-url>https://www.service4mobility.com/mannheim_test/ewp/iias/index</ia3:index-url>
+                <ia3:index-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v3/index</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v6/get</ia6:get-url>
+                <ia6:max-iia-ids>3</ia6:max-iia-ids>
+                <ia6:max-iia-codes>3</ia6:max-iia-codes>
+                <ia6:index-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v6/index</ia6:index-url>
+            </ia6:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uni-mannheim.de</hei-id>
@@ -16474,7 +16493,7 @@
         <apis-implemented>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -16486,10 +16505,39 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://www.service4mobility.com/mannheim_test/ewp/iias/approve</iaa1:url>
+                <iaa1:url>https://www.service4mobility.com/mannheim_test/ewp/iias-approval-v1/get</iaa1:url>
                 <iaa1:max-iia-ids>3</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
             </iaa1:iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-mannheim.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="4dc1535373be12ebff4ac522aa46c1520e9e811a95e43889d20fbbfacb890a09"/>
+            <rsa-public-key sha-256="1ee31546b02ed338702a9753576e427774f4c0eebcd81c7f021853f14378b61b"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="1ee31546b02ed338702a9753576e427774f4c0eebcd81c7f021853f14378b61b"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://www.service4mobility.com/mannheim_test/ewp/iias-approval-cnr-v1/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uni-mannheim.de</hei-id>
