@@ -2703,7 +2703,7 @@
         <apis-implemented>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -2715,9 +2715,53 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://www.service4mobility.com/mobility_test/ewp/iias/approve</iaa1:url>
+                <iaa1:url>https://www.service4mobility.com/mobility_test/ewp/iias-approval-v1/get</iaa1:url>
                 <iaa1:max-iia-ids>3</iaa1:max-iia-ids>
             </iaa1:iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>phwien.at</hei-id>
+            <hei-id>fh-vie.ac.at</hei-id>
+            <hei-id>ph-ooe.at</hei-id>
+            <hei-id>boku.ac.at</hei-id>
+            <hei-id>sbg.ac.at</hei-id>
+            <hei-id>phst.at</hei-id>
+            <hei-id>tugraz.at</hei-id>
+            <hei-id>unileoben.ac.at</hei-id>
+            <hei-id>kug.ac.at</hei-id>
+            <hei-id>mdw.ac.at</hei-id>
+            <hei-id>technikum-wien.at</hei-id>
+            <hei-id>fh-wien.ac.at</hei-id>
+            <hei-id>fh-ooe.at</hei-id>
+            <hei-id>medunigraz.at</hei-id>
+            <hei-id>fh-campuswien.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="7b0c611d7dc513804eb6053a8c3672083b2a699fd2271b71aacc2d16ecb7643d"/>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="7a42a1ba6de163d08c90e2cda78cc8545578483991c16db1bdddb31c9f803c5d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://www.service4mobility.com/mobility_test/ewp/iias-approval-cnr-v1/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>phwien.at</hei-id>
