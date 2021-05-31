@@ -181,6 +181,27 @@
                 </ns23:http-security>
                 <ns23:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/interinstitutionalagreements/cnr</ns23:url>
             </ns23:iia-cnr>
+            <ns22:iias-approval version="0.2.1">
+                <ns22:http-security>
+                    <ns5:client-auth-methods>
+                        <ns11:tlscert allows-self-signed="true"/>
+                        <ns12:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns7:tlscert/>
+                        <ns8:httpsig/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns9:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns10:tls/>
+                    </ns5:response-encryption-methods>
+                </ns22:http-security>
+                <ns22:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/interinstitutionalagreementsapproval/</ns22:url>
+                <ns22:max-iia-ids>5</ns22:max-iia-ids>
+                <ns22:sends-notifications/>
+            </ns22:iias-approval>
             <ns21:iia-approval-cnr version="0.2.0">
                 <ns21:http-security>
                     <ns5:client-auth-methods>
@@ -262,6 +283,33 @@
                 <ns18:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilities/cnr</ns18:url>
                 <ns18:max-omobility-ids>5</ns18:max-omobility-ids>
             </ns18:omobility-cnr>
+            <ns17:omobility-las version="0.3.0">
+                <ns17:http-security>
+                    <ns5:client-auth-methods>
+                        <ns11:tlscert allows-self-signed="true"/>
+                        <ns12:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns7:tlscert/>
+                        <ns8:httpsig/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns9:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns10:tls/>
+                    </ns5:response-encryption-methods>
+                </ns17:http-security>
+                <ns17:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/get</ns17:get-url>
+                <ns17:index-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/index</ns17:index-url>
+                <ns17:update-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/update</ns17:update-url>
+                <ns17:max-omobility-ids>5</ns17:max-omobility-ids>
+                <ns17:sends-notifications/>
+                <ns17:supported-update-types>
+                    <ns17:approve-components-studied-proposal-v1/>
+                    <ns17:update-components-studied-v1/>
+                </ns17:supported-update-types>
+            </ns17:omobility-las>
             <ns16:omobility-la-cnr version="0.1.0">
                 <ns16:http-security>
                     <ns5:client-auth-methods>
