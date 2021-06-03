@@ -1,5 +1,5 @@
-<n:manifest
-    xmlns:n="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+<o:manifest
+    xmlns:o="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:a="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:b="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
@@ -12,13 +12,14 @@
     xmlns:j="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:k="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:l="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:m="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:o="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:m="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:n="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:p="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 >
-    <n:host>
-        <o:admin-email>petr.abrahamczik@vsb.cz</o:admin-email>
-        <o:admin-notes>It's a test manifest.</o:admin-notes>
-        <m:apis-implemented>
+    <o:host>
+        <p:admin-email>petr.abrahamczik@vsb.cz</p:admin-email>
+        <p:admin-notes>It's a test manifest.</p:admin-notes>
+        <n:apis-implemented>
             <j:institutions version="2.1.0">
                 <j:http-security>
                     <k:client-auth-methods>
@@ -48,6 +49,22 @@
                 <l:max-ounit-ids>1</l:max-ounit-ids>
                 <l:max-ounit-codes>1</l:max-ounit-codes>
             </l:organizational-units>
+            <m:iias version="6.0.1">
+                <m:http-security>
+                    <k:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </k:client-auth-methods>
+                    <k:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </k:server-auth-methods>
+                </m:http-security>
+                <m:get-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/get</m:get-url>
+                <m:max-iia-ids>1</m:max-iia-ids>
+                <m:max-iia-codes>1</m:max-iia-codes>
+                <m:index-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/index</m:index-url>
+            </m:iias>
             <h:echo version="2.0.1">
                 <h:http-security>
                     <k:client-auth-methods>
@@ -78,17 +95,17 @@
                 <i:url>https://edison.sso.vsb.cz/ewp/test/rest/factsheet</i:url>
                 <i:max-hei-ids>1</i:max-hei-ids>
             </i:factsheet>
-        </m:apis-implemented>
-        <n:institutions-covered>
-            <m:hei id="vsb.cz">
-                <m:other-id type="pic">999868144</m:other-id>
-                <m:other-id type="erasmus">CZ OSTRAVA01</m:other-id>
-                <m:other-id type="erasmus-charter">49166-EPP-1-2014-1-CZ-EPPKA3-ECHE</m:other-id>
-                <m:name xml:lang="en">VSB - Technical University of Ostrava</m:name>
-            </m:hei>
-        </n:institutions-covered>
-        <n:client-credentials-in-use>
-            <n:certificate>MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
+        </n:apis-implemented>
+        <o:institutions-covered>
+            <n:hei id="vsb.cz">
+                <n:other-id type="pic">999868144</n:other-id>
+                <n:other-id type="erasmus">CZ OSTRAVA01</n:other-id>
+                <n:other-id type="erasmus-charter">49166-EPP-1-2014-1-CZ-EPPKA3-ECHE</n:other-id>
+                <n:name xml:lang="en">VSB - Technical University of Ostrava</n:name>
+            </n:hei>
+        </o:institutions-covered>
+        <o:client-credentials-in-use>
+            <o:certificate>MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
 MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
 QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
 Q0EgMzAeFw0xOTA2MjcwMDAwMDBaFw0yMTA3MDExMjAwMDBaMIGAMQswCQYDVQQG
@@ -125,25 +142,25 @@ fZnyw3LdUJCeDxBrik2R9BEWe6rwKP6ufxZbODNTRnTYk+WOh3N58gelCAdAU0Y6
 XwUinobZKR/v26mVtiF/q+pplUlpnYOhyaH/dewwj5NvltwEjLSpClTJ/8/cGqBT
 9zIMy/qNwIem8tzT4FfZiNV6iZ0rQXHEOTuDIp4278CV/YbG7d0PrPdbDtFX2pqb
 Sg==
-</n:certificate>
-            <n:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
+</o:certificate>
+            <o:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
 aFh/jZ5+cZs6NB0BUfLKFGV/tzfjUTyCWcgpbWguIvVC32bw2YxQfbo49IOS5p6J
 TcSBsHMKPQdzZJedHa66yJ5CrewhgOuMPArwYBcG0kdZBFEjc9QEjGiS/+6YMjwP
 FVffGNPCtBUDC8wFf+kTj8Us3D6UJgHxmariDxF2vlMrBAMeofaa8riejKu7OUzd
 odw5wkRl0uyWCS2XoH8jo8mjssWD4PfPVvOpTl/zQFEGiHoLhNjf2nfy3QZSG5jT
 x0dM5RCUF1YC9CqVhnPGWItubR4CGTt2h1Jpt/EZulVKz/jFvC0dVaRB2UUephHR
 owIDAQAB
-</n:rsa-public-key>
-        </n:client-credentials-in-use>
-        <n:server-credentials-in-use>
-            <n:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
+</o:rsa-public-key>
+        </o:client-credentials-in-use>
+        <o:server-credentials-in-use>
+            <o:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
 aFh/jZ5+cZs6NB0BUfLKFGV/tzfjUTyCWcgpbWguIvVC32bw2YxQfbo49IOS5p6J
 TcSBsHMKPQdzZJedHa66yJ5CrewhgOuMPArwYBcG0kdZBFEjc9QEjGiS/+6YMjwP
 FVffGNPCtBUDC8wFf+kTj8Us3D6UJgHxmariDxF2vlMrBAMeofaa8riejKu7OUzd
 odw5wkRl0uyWCS2XoH8jo8mjssWD4PfPVvOpTl/zQFEGiHoLhNjf2nfy3QZSG5jT
 x0dM5RCUF1YC9CqVhnPGWItubR4CGTt2h1Jpt/EZulVKz/jFvC0dVaRB2UUephHR
 owIDAQAB
-</n:rsa-public-key>
-        </n:server-credentials-in-use>
-    </n:host>
-</n:manifest>
+</o:rsa-public-key>
+        </o:server-credentials-in-use>
+    </o:host>
+</o:manifest>
