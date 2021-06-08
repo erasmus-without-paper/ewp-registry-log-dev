@@ -35208,10 +35208,10 @@
     </host>
     <host>
         <ewp:admin-email>umovemove@ual.es</ewp:admin-email>
-        <ewp:admin-notes>Manifest File for University of Almeria</ewp:admin-notes>
+        <ewp:admin-notes>Manifest File for University of Jaén</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/manifest</d5:url>
+                <d5:url>https://umovedes.ual.es/mobilityUJA/seam/resource/rest/ewp/manifest</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
@@ -35224,126 +35224,8 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/echo</e2:url>
+                <e2:url>https://umovedes.ual.es/mobilityUJA/seam/resource/rest/ewp/echo</e2:url>
             </e2:echo>
-            <in2:institutions version="2.1.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <ia4:iias
-                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
-                version="4.0.0"
-            >
-                <ia4:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia4:http-security>
-                <ia4:get-url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/get</ia4:get-url>
-                <ia4:max-iia-ids>1</ia4:max-iia-ids>
-                <ia4:max-iia-codes>1</ia4:max-iia-codes>
-                <ia4:index-url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/index</ia4:index-url>
-                <ia4:sends-notifications/>
-            </ia4:iias>
-            <ia3:iias
-                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
-                version="3.0.0"
-            >
-                <ia3:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia3:http-security>
-                <ia3:get-url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/v3/iia/get</ia3:get-url>
-                <ia3:max-iia-ids>1</ia3:max-iia-ids>
-                <ia3:max-iia-codes>1</ia3:max-iia-codes>
-                <ia3:index-url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/v3/iia/index</ia3:index-url>
-                <ia3:sends-notifications/>
-            </ia3:iias>
-            <iac2:iia-cnr version="2.0.2">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/cnr</iac2:url>
-            </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/approval</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/iia/approval/cnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
-            <f1:factsheet
-                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="0.3.0"
-            >
-                <f1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </f1:http-security>
-                <f1:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/factsheet</f1:url>
-                <f1:max-hei-ids>1</f1:max-hei-ids>
-            </f1:factsheet>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uja.es</hei-id>
@@ -38589,7 +38471,7 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="erasmus">E  JAEN01</other-id>
             <other-id type="euc"/>
             <other-id type="pic"/>
-            <name xml:lang="en">University of Almeria</name>
+            <name xml:lang="en">University of Jaén</name>
             <name xml:lang="es">UNIVERSIDAD DE JAÉN</name>
         </hei>
         <hei id="ujd.edu.pl">
