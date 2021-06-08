@@ -34644,6 +34644,23 @@
                 <in2:url>https://my-preprod.uliege.be/ws_penelope/EWP/institutions</in2:url>
                 <in2:max-hei-ids>10</in2:max-hei-ids>
             </in2:institutions>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://my-preprod.uliege.be/ws_penelope/EWP/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>10</ia6:max-iia-ids>
+                <ia6:max-iia-codes>10</ia6:max-iia-codes>
+                <ia6:index-url>https://my-preprod.uliege.be/ws_penelope/EWP/iias/index</ia6:index-url>
+            </ia6:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
