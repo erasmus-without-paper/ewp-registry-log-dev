@@ -1,5 +1,5 @@
-<q:manifest
-    xmlns:q="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+<r:manifest
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:a="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:b="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
@@ -8,133 +8,147 @@
     xmlns:f="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:g="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
     xmlns:h="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:i="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
-    xmlns:j="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-    xmlns:k="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:l="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:m="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:n="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:o="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:p="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:i="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:j="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:k="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:l="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:m="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:n="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:o="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:p="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:q="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:s="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 >
-    <q:host>
-        <r:admin-email>petr.abrahamczik@vsb.cz</r:admin-email>
-        <r:admin-notes>It's a test manifest.</r:admin-notes>
-        <p:apis-implemented>
-            <l:institutions version="2.1.0">
-                <l:http-security>
-                    <m:client-auth-methods>
+    <r:host>
+        <s:admin-email>petr.abrahamczik@vsb.cz</s:admin-email>
+        <s:admin-notes>It's a test manifest.</s:admin-notes>
+        <q:apis-implemented>
+            <m:institutions version="2.1.0">
+                <m:http-security>
+                    <n:client-auth-methods>
                         <c:tlscert allows-self-signed="true"/>
                         <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
                         <e:tlscert/>
                         <d:httpsig/>
-                    </m:server-auth-methods>
-                </l:http-security>
-                <l:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</l:url>
-                <l:max-hei-ids>1</l:max-hei-ids>
-            </l:institutions>
+                    </n:server-auth-methods>
+                </m:http-security>
+                <m:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</m:url>
+                <m:max-hei-ids>1</m:max-hei-ids>
+            </m:institutions>
             <h:echo version="2.0.1">
                 <h:http-security>
-                    <m:client-auth-methods>
+                    <n:client-auth-methods>
                         <c:tlscert allows-self-signed="true"/>
                         <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
                         <e:tlscert/>
                         <d:httpsig/>
-                    </m:server-auth-methods>
+                    </n:server-auth-methods>
                 </h:http-security>
                 <h:url>https://edison.sso.vsb.cz/ewp/test/rest/echo</h:url>
             </h:echo>
-            <n:organizational-units version="2.1.1">
-                <n:http-security>
-                    <m:client-auth-methods>
+            <o:organizational-units version="2.1.1">
+                <o:http-security>
+                    <n:client-auth-methods>
                         <c:tlscert allows-self-signed="true"/>
                         <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
                         <e:tlscert/>
                         <d:httpsig/>
-                    </m:server-auth-methods>
-                </n:http-security>
-                <n:url>https://edison.sso.vsb.cz/ewp/test/rest/ounits</n:url>
-                <n:max-ounit-ids>1</n:max-ounit-ids>
-                <n:max-ounit-codes>1</n:max-ounit-codes>
-            </n:organizational-units>
+                    </n:server-auth-methods>
+                </o:http-security>
+                <o:url>https://edison.sso.vsb.cz/ewp/test/rest/ounits</o:url>
+                <o:max-ounit-ids>1</o:max-ounit-ids>
+                <o:max-ounit-codes>1</o:max-ounit-codes>
+            </o:organizational-units>
             <f:discovery version="5.0.0">
                 <f:url>https://edison.sso.vsb.cz/ewp/test/manifest.xml</f:url>
             </f:discovery>
-            <k:iias-approval version="1.0.0">
+            <l:iias-approval version="1.0.0">
+                <l:http-security>
+                    <n:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </n:server-auth-methods>
+                </l:http-security>
+                <l:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval</l:url>
+                <l:max-iia-ids>1</l:max-iia-ids>
+            </l:iias-approval>
+            <k:factsheet version="0.3.0">
                 <k:http-security>
-                    <m:client-auth-methods>
+                    <n:client-auth-methods>
                         <c:tlscert allows-self-signed="true"/>
                         <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
                         <e:tlscert/>
                         <d:httpsig/>
-                    </m:server-auth-methods>
+                    </n:server-auth-methods>
                 </k:http-security>
-                <k:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval</k:url>
-                <k:max-iia-ids>1</k:max-iia-ids>
-            </k:iias-approval>
-            <j:factsheet version="0.3.0">
-                <j:http-security>
-                    <m:client-auth-methods>
-                        <c:tlscert allows-self-signed="true"/>
-                        <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
-                        <e:tlscert/>
-                        <d:httpsig/>
-                    </m:server-auth-methods>
-                </j:http-security>
-                <j:url>https://edison.sso.vsb.cz/ewp/test/rest/factsheet</j:url>
-                <j:max-hei-ids>1</j:max-hei-ids>
-            </j:factsheet>
-            <o:iias version="6.0.1">
-                <o:http-security>
-                    <m:client-auth-methods>
-                        <c:tlscert allows-self-signed="true"/>
-                        <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
-                        <e:tlscert/>
-                        <d:httpsig/>
-                    </m:server-auth-methods>
-                </o:http-security>
-                <o:get-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/get</o:get-url>
-                <o:max-iia-ids>1</o:max-iia-ids>
-                <o:max-iia-codes>1</o:max-iia-codes>
-                <o:index-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/index</o:index-url>
-            </o:iias>
-            <i:iia-cnr version="2.0.3">
+                <k:url>https://edison.sso.vsb.cz/ewp/test/rest/factsheet</k:url>
+                <k:max-hei-ids>1</k:max-hei-ids>
+            </k:factsheet>
+            <i:iia-approval-cnr version="1.0.0">
                 <i:http-security>
-                    <m:client-auth-methods>
+                    <n:client-auth-methods>
                         <c:tlscert allows-self-signed="true"/>
                         <a:httpsig/>
-                    </m:client-auth-methods>
-                    <m:server-auth-methods>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
                         <e:tlscert/>
                         <d:httpsig/>
-                    </m:server-auth-methods>
+                    </n:server-auth-methods>
                 </i:http-security>
-                <i:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/cnr</i:url>
-            </i:iia-cnr>
-        </p:apis-implemented>
-        <q:institutions-covered>
-            <p:hei id="vsb.cz">
-                <p:other-id type="pic">999868144</p:other-id>
-                <p:other-id type="erasmus">CZ OSTRAVA01</p:other-id>
-                <p:other-id type="erasmus-charter">49166-EPP-1-2014-1-CZ-EPPKA3-ECHE</p:other-id>
-                <p:name xml:lang="en">VSB - Technical University of Ostrava</p:name>
-            </p:hei>
-        </q:institutions-covered>
-        <q:client-credentials-in-use>
-            <q:certificate>MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
+                <i:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval/cnr</i:url>
+            </i:iia-approval-cnr>
+            <p:iias version="6.0.1">
+                <p:http-security>
+                    <n:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </n:server-auth-methods>
+                </p:http-security>
+                <p:get-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/get</p:get-url>
+                <p:max-iia-ids>1</p:max-iia-ids>
+                <p:max-iia-codes>1</p:max-iia-codes>
+                <p:index-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/index</p:index-url>
+            </p:iias>
+            <j:iia-cnr version="2.0.3">
+                <j:http-security>
+                    <n:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </n:client-auth-methods>
+                    <n:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </n:server-auth-methods>
+                </j:http-security>
+                <j:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/cnr</j:url>
+            </j:iia-cnr>
+        </q:apis-implemented>
+        <r:institutions-covered>
+            <q:hei id="vsb.cz">
+                <q:other-id type="pic">999868144</q:other-id>
+                <q:other-id type="erasmus">CZ OSTRAVA01</q:other-id>
+                <q:other-id type="erasmus-charter">49166-EPP-1-2014-1-CZ-EPPKA3-ECHE</q:other-id>
+                <q:name xml:lang="en">VSB - Technical University of Ostrava</q:name>
+            </q:hei>
+        </r:institutions-covered>
+        <r:client-credentials-in-use>
+            <r:certificate>MIIGvTCCBaWgAwIBAgIQBWIdOwhZi+bSO3tjmA6MyjANBgkqhkiG9w0BAQsFADBk
 MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
 QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
 Q0EgMzAeFw0xOTA2MjcwMDAwMDBaFw0yMTA3MDExMjAwMDBaMIGAMQswCQYDVQQG
@@ -171,25 +185,25 @@ fZnyw3LdUJCeDxBrik2R9BEWe6rwKP6ufxZbODNTRnTYk+WOh3N58gelCAdAU0Y6
 XwUinobZKR/v26mVtiF/q+pplUlpnYOhyaH/dewwj5NvltwEjLSpClTJ/8/cGqBT
 9zIMy/qNwIem8tzT4FfZiNV6iZ0rQXHEOTuDIp4278CV/YbG7d0PrPdbDtFX2pqb
 Sg==
-</q:certificate>
-            <q:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
+</r:certificate>
+            <r:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
 aFh/jZ5+cZs6NB0BUfLKFGV/tzfjUTyCWcgpbWguIvVC32bw2YxQfbo49IOS5p6J
 TcSBsHMKPQdzZJedHa66yJ5CrewhgOuMPArwYBcG0kdZBFEjc9QEjGiS/+6YMjwP
 FVffGNPCtBUDC8wFf+kTj8Us3D6UJgHxmariDxF2vlMrBAMeofaa8riejKu7OUzd
 odw5wkRl0uyWCS2XoH8jo8mjssWD4PfPVvOpTl/zQFEGiHoLhNjf2nfy3QZSG5jT
 x0dM5RCUF1YC9CqVhnPGWItubR4CGTt2h1Jpt/EZulVKz/jFvC0dVaRB2UUephHR
 owIDAQAB
-</q:rsa-public-key>
-        </q:client-credentials-in-use>
-        <q:server-credentials-in-use>
-            <q:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
+</r:rsa-public-key>
+        </r:client-credentials-in-use>
+        <r:server-credentials-in-use>
+            <r:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkIASdC90JFLT6EbqsNd1
 aFh/jZ5+cZs6NB0BUfLKFGV/tzfjUTyCWcgpbWguIvVC32bw2YxQfbo49IOS5p6J
 TcSBsHMKPQdzZJedHa66yJ5CrewhgOuMPArwYBcG0kdZBFEjc9QEjGiS/+6YMjwP
 FVffGNPCtBUDC8wFf+kTj8Us3D6UJgHxmariDxF2vlMrBAMeofaa8riejKu7OUzd
 odw5wkRl0uyWCS2XoH8jo8mjssWD4PfPVvOpTl/zQFEGiHoLhNjf2nfy3QZSG5jT
 x0dM5RCUF1YC9CqVhnPGWItubR4CGTt2h1Jpt/EZulVKz/jFvC0dVaRB2UUephHR
 owIDAQAB
-</q:rsa-public-key>
-        </q:server-credentials-in-use>
-    </q:host>
-</q:manifest>
+</r:rsa-public-key>
+        </r:server-credentials-in-use>
+    </r:host>
+</r:manifest>
