@@ -25928,11 +25928,11 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-email>international.office@ceu.es</ewp:admin-email>
-        <ewp:admin-notes>USPCEU EWP Dev Manifest</ewp:admin-notes>
+        <ewp:admin-email>mobility@uchceu.es</ewp:admin-email>
+        <ewp:admin-notes>UCHCEU EWP Dev Manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>https://gestionacademicavirtual.uspceu.es:2443/manifest.xml</d5:url>
+                <d5:url>https://gestionacademicavirtual.uchceu.es:2443/manifest.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
@@ -25945,7 +25945,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/echo</e2:url>
+                <e2:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/echo</e2:url>
             </e2:echo>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
@@ -25958,7 +25958,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </in2:http-security>
-                <in2:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/institutions/get</in2:url>
+                <in2:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/institutions/get</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
             <ou2:organizational-units version="2.1.1">
@@ -25972,15 +25972,15 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </ou2:http-security>
-                <ou2:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/departments/get</ou2:url>
+                <ou2:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/departments/get</ou2:url>
                 <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia3:iias
-                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
-                version="3.0.0"
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
             >
-                <ia3:http-security>
+                <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -25989,13 +25989,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia3:http-security>
-                <ia3:get-url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/iias/get</ia3:get-url>
-                <ia3:max-iia-ids>1</ia3:max-iia-ids>
-                <ia3:max-iia-codes>1</ia3:max-iia-codes>
-                <ia3:index-url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/iias/index</ia3:index-url>
-                <ia3:sends-notifications/>
-            </ia3:iias>
+                </ia6:http-security>
+                <ia6:get-url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/iias/index</ia6:index-url>
+            </ia6:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -26007,11 +26006,11 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iac2:http-security>
-                <iac2:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/iias/cnr</iac2:url>
+                <iac2:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/iias/cnr</iac2:url>
             </iac2:iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -26023,13 +26022,13 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/iia/approval</iaa1:url>
                 <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
                 <iaa1:sends-notifications/>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
+                version="1.0.0"
             >
                 <iaac1:http-security>
                     <sec:client-auth-methods>
@@ -26041,18 +26040,15 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iaac1:http-security>
-                <iaac1:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/iia/approval/cnr</iaac1:url>
+                <iaac1:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/iia/approval/cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
         </apis-implemented>
-        <institutions-covered>
-            <hei-id>uspceu.com</hei-id>
-        </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="1eaa481a3606a7b2b46ef1d7e78cda3a484c81e49807f5660c4c39a65fa15a05"/>
-            <rsa-public-key sha-256="455471307eb76eebe07b903e47e7a201455cf0275f98c7d4e63e3de127f529db"/>
+            <certificate sha-256="c29d0a97a7d5939b17cc904c013dafc49e1d9e4f086e37888f175c49e455a9dc"/>
+            <rsa-public-key sha-256="acd578ecb464221526f275e2607c8707d28c66d2728da974e7b3bff2fd087e81"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="455471307eb76eebe07b903e47e7a201455cf0275f98c7d4e63e3de127f529db"/>
+            <rsa-public-key sha-256="acd578ecb464221526f275e2607c8707d28c66d2728da974e7b3bff2fd087e81"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -39395,12 +39391,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="de">Università della Svizzera italiana  Servizio ricerca</name>
             <name xml:lang="en">Università della Svizzera italiana  Servizio ricerca</name>
         </hei>
-        <hei id="uspceu.com">
-            <other-id type="erasmus">E  MADRID21</other-id>
-            <other-id type="pic">E10198513</other-id>
-            <name xml:lang="en">CEU San Pablo  University</name>
-            <name xml:lang="es">Universidad San Pablo CEU </name>
-        </hei>
         <hei id="ut.ee">
             <other-id type="erasmus">EE TARTU02</other-id>
             <name xml:lang="en">University of Tartu</name>
@@ -39960,14 +39950,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             EhLdz4kwfSdFS+NN8oLWEq4o8zv+hpRW80N9GXT8DWMdgut/lDz+ZIAzvEcf/60DZeOS6m45nUfN
             wRkHuyMLoMFu80njePxg9pPrHBuTfeowKCgh0iJkgHFImSd/pcWb28O0xUNmXibpwYH8eFPg1am9
             sqWEGwIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="455471307eb76eebe07b903e47e7a201455cf0275f98c7d4e63e3de127f529db">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0zVNEHG4+ObTxKf6pUaukdQP9b/R+SZa
-            F0LnusrKo6/k6vAFlYsOt/xBrU+3KAgQnCGYGCF8lROSP1hgyU/fI/1uu+p9qZnUStnyyStVdXfi
-            seLu9yS5SDkKFVITt2kKq09FKgp6mNe4EeDWcTJCjMLL/gJsbNGw5J2qDHStRyvH54zJvm3cZUn1
-            ONqXV5sDQfNFjabIIjgJ9pxHc/iMMaQ5VKyJxdlORICammOx+wGUhcj2olDMO88L+/v1uu96gzv4
-            D4qxqSSuYKryKl7SpC0mIiD8ZhRnUVkN4Xo1lG4Q0sRb/owehZT6qTUuITDr8FrH6VThFkUCfqE6
-            1nNr1wIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="458ae2465f983466dafd544a7d015541db133ac85e411088e80d1add7ff8cbd3">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9ktkNv9SMIvAubcxW2tUbvAYPx62GL5
