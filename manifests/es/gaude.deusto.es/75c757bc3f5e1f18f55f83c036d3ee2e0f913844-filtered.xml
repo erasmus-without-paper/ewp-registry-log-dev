@@ -68,11 +68,11 @@
     "
 >
     <host>
-        <ewp:admin-email>relint@deusto.es</ewp:admin-email>
-        <ewp:admin-notes>DEUSTO EWP Dev Manifest</ewp:admin-notes>
+        <ewp:admin-email>internacional@uao.es</ewp:admin-email>
+        <ewp:admin-notes>UAO EWP Dev Manifest</ewp:admin-notes>
         <r:apis-implemented>
             <ns18:discovery version="5.0.0">
-                <ns18:url>https://gaude.deusto.es:2443/manifest.xml</ns18:url>
+                <ns18:url>https://gestionacademicavirtual.uaoceu.es:2443/manifest.xml</ns18:url>
             </ns18:discovery>
             <ns17:echo version="2.0.1">
                 <ns17:http-security>
@@ -85,7 +85,7 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns17:http-security>
-                <ns17:url>https://gaude.deusto.es:2443/ewp/rest/echo</ns17:url>
+                <ns17:url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/echo</ns17:url>
             </ns17:echo>
             <ns10:institutions version="2.1.0">
                 <ns10:http-security>
@@ -98,7 +98,7 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns10:http-security>
-                <ns10:url>https://gaude.deusto.es:2443/ewp/rest/institutions/get</ns10:url>
+                <ns10:url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/institutions/get</ns10:url>
                 <ns10:max-hei-ids>1</ns10:max-hei-ids>
             </ns10:institutions>
             <ns4:organizational-units version="2.1.1">
@@ -112,7 +112,7 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns4:http-security>
-                <ns4:url>https://gaude.deusto.es:2443/ewp/rest/departments/get</ns4:url>
+                <ns4:url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/departments/get</ns4:url>
                 <ns4:max-ounit-ids>100</ns4:max-ounit-ids>
                 <ns4:max-ounit-codes>100</ns4:max-ounit-codes>
             </ns4:organizational-units>
@@ -127,10 +127,10 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns15:http-security>
-                <ns15:get-url>https://gaude.deusto.es:2443/ewp/rest/iias/get</ns15:get-url>
+                <ns15:get-url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/iias/get</ns15:get-url>
                 <ns15:max-iia-ids>1</ns15:max-iia-ids>
                 <ns15:max-iia-codes>1</ns15:max-iia-codes>
-                <ns15:index-url>https://gaude.deusto.es:2443/ewp/rest/iias/index</ns15:index-url>
+                <ns15:index-url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/iias/index</ns15:index-url>
             </ns15:iias>
             <ns16:iia-cnr version="2.0.2">
                 <ns16:http-security>
@@ -143,7 +143,7 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns16:http-security>
-                <ns16:url>https://gaude.deusto.es:2443/ewp/rest/iias/cnr</ns16:url>
+                <ns16:url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/iias/cnr</ns16:url>
             </ns16:iia-cnr>
             <ns50:iias-approval version="1.0.0">
                 <ns50:http-security>
@@ -156,7 +156,7 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns50:http-security>
-                <ns50:url>https://gaude.deusto.es:2443/ewp/rest/iia/approval</ns50:url>
+                <ns50:url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/iia/approval</ns50:url>
                 <ns50:max-iia-ids>10</ns50:max-iia-ids>
                 <ns50:sends-notifications/>
             </ns50:iias-approval>
@@ -171,27 +171,21 @@
                         <ns20:httpsig/>
                     </ns3:server-auth-methods>
                 </ns51:http-security>
-                <ns51:url>https://gaude.deusto.es:2443/ewp/rest/iia/approval/cnr</ns51:url>
+                <ns51:url>https://gestionacademicavirtual.uaoceu.es:2443/ewp/rest/iia/approval/cnr</ns51:url>
             </ns51:iia-approval-cnr>
         </r:apis-implemented>
-        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-            <hei id="deusto.es">
-                <other-id type="pic">999876971</other-id>
-                <other-id type="erasmus">E BILBAO02</other-id>
-                <name xml:lang="es">UNIVERSIDAD DE LA IGLESIA DE DEUSTO ENTIDAD RELIGIOSA</name>
-            </hei>
-        </mf:institutions-covered>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"/>
         <client-credentials-in-use>
             <certificate>
-             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
+            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
             </certificate>
             <rsa-public-key>
-             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0ZFweOg/fIb22wMzPpIGN3EDBIUuSlhpvCfV9ghxvLb2eNXWQkuZpyVNNAtzS5AGquZ/dNJyzvBUxvLnisiIrPPNQnj8q1xor9YjVXxWlpyJ4WLheAwoy0Tv3Nvgndtvken9aXzi4C20Yo4D84GnqReZSmI/plg7y8vrDnNxVlglRpps6+YvNpg8zHZqgwlLVRFeUMezF/DhXNN/uvTf29WLE8R1e1OO0TQmlpNUkN/W+qzYTc5neu5K35EX0g6pwJS0xw43WVjep//3SpxaEDa3SHchSRtss6rW84KMuobqp0IQ/CIqnBdaTdF26j19qUg8tcS19Bta5Su1TnohtwIDAQAB
+             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArIaK26vKR362QldjIjqr4gLnkM+UiY1mEMs1NtX9F2R/PDLQzPgKQ4cLKTUDrB3Jk90NKWmtMSYV7qzhXbpqNZBChQTnG5JRo/jXPFRQw5HX5aon2IHWV8bZrYENK/xQWsa9NnRQFrDENeRFsM6B1wH3Z3OtTQ6L5mQZqPuNE7HVXQ2TcRPlVebpmVH48crVrl2xZgpxw7S6cUe7P5OfVq2APVI1TdOahvAxb95yOYFHMenK0pgpUEaY6GBJ68VCpzR7Yc28NAU+cgeHoHv5lcCgKuxj1196kG8eqlfE8UOeAEuR2e6wCC1u+dlhh1yzTzRKcX79AYAnA19/oO9nTQIDAQAB
             </rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
             <rsa-public-key>
-             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0ZFweOg/fIb22wMzPpIGN3EDBIUuSlhpvCfV9ghxvLb2eNXWQkuZpyVNNAtzS5AGquZ/dNJyzvBUxvLnisiIrPPNQnj8q1xor9YjVXxWlpyJ4WLheAwoy0Tv3Nvgndtvken9aXzi4C20Yo4D84GnqReZSmI/plg7y8vrDnNxVlglRpps6+YvNpg8zHZqgwlLVRFeUMezF/DhXNN/uvTf29WLE8R1e1OO0TQmlpNUkN/W+qzYTc5neu5K35EX0g6pwJS0xw43WVjep//3SpxaEDa3SHchSRtss6rW84KMuobqp0IQ/CIqnBdaTdF26j19qUg8tcS19Bta5Su1TnohtwIDAQAB
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArIaK26vKR362QldjIjqr4gLnkM+UiY1mEMs1NtX9F2R/PDLQzPgKQ4cLKTUDrB3Jk90NKWmtMSYV7qzhXbpqNZBChQTnG5JRo/jXPFRQw5HX5aon2IHWV8bZrYENK/xQWsa9NnRQFrDENeRFsM6B1wH3Z3OtTQ6L5mQZqPuNE7HVXQ2TcRPlVebpmVH48crVrl2xZgpxw7S6cUe7P5OfVq2APVI1TdOahvAxb95yOYFHMenK0pgpUEaY6GBJ68VCpzR7Yc28NAU+cgeHoHv5lcCgKuxj1196kG8eqlfE8UOeAEuR2e6wCC1u+dlhh1yzTzRKcX79AYAnA19/oO9nTQIDAQAB
             </rsa-public-key>
         </server-credentials-in-use>
     </host>
