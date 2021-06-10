@@ -16714,6 +16714,25 @@
                 <ia3:index-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v3/index</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v4/get</ia4:get-url>
+                <ia4:max-iia-ids>3</ia4:max-iia-ids>
+                <ia4:max-iia-codes>3</ia4:max-iia-codes>
+                <ia4:index-url>https://www.service4mobility.com/mannheim_test/ewp/iias-v4/index</ia4:index-url>
+            </ia4:iias>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.0"
