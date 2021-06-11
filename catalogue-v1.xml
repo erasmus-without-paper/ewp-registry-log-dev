@@ -13533,6 +13533,22 @@
                 </e2:http-security>
                 <e2:url>https://ewp-test.solenovo.fi/ewp/api/echo</e2:url>
             </e2:echo>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ewp-test.solenovo.fi/ewp/api/factsheet</f1:url>
+                <f1:max-hei-ids>100</f1:max-hei-ids>
+            </f1:factsheet>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
