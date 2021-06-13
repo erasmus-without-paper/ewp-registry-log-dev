@@ -396,7 +396,24 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <ia6:iias version="6.0.1">
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index</ia6:index-url>
+            </ia6:iias>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
