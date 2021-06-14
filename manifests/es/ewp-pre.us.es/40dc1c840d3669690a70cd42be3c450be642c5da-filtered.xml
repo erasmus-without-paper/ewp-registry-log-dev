@@ -72,6 +72,24 @@
                 </http-security>
                 <url>https://ewp-pre.us.es/index.php?r=echo</url>
             </echo>
+            <simple-course-replication
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert allows-self-signed="true"/>
+                        <httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert/>
+                        <httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp-pre.us.es/index.php?r=course-replication</url>
+                <allows-anonymous-access>false</allows-anonymous-access>
+                <supports-modified-since>true</supports-modified-since>
+            </simple-course-replication>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="us.es">
