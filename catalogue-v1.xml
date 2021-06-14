@@ -35962,7 +35962,7 @@
             </cr1:simple-course-replication>
             <courses
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/v0.7.1/manifest-entry.xsd"
-                version="5.0.0"
+                version="0.7.1"
             >
                 <http-security>
                     <sec:client-auth-methods>
@@ -35977,6 +35977,21 @@
                 <max-los-ids>100</max-los-ids>
                 <max-los-codes>100</max-los-codes>
             </courses>
+            <ia2:iias version="5.0.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ia2:tlscert/>
+                        <sec-A2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp-pre.us.es/index.php?r=iias%2Findex</ia2:get-url>
+                <ia2:max-iia-ids>10</ia2:max-iia-ids>
+                <ia2:max-iia-codes>10</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp-pre.us.es/index.php?r=iias%2Fget</ia2:index-url>
+            </ia2:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>us.es</hei-id>
