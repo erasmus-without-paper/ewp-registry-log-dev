@@ -64,15 +64,15 @@
 				</http-security>
 				<url>https://ewp-pre.us.es/index.php?r=echo</url>
 			</echo>
-			<!--institutions version="2.1.0">
+			<institutions version="2.1.0">
 				<http-security>
-					<client-auth-methods>
+					<!--client-auth-methods>
 						<tlscert allows-self-signed="false"/>
 						<httpsig/>
-					</client-auth-methods>
+					</client-auth-methods-->
 					<server-auth-methods>
-						<tlscert/>
-						<httpsig/>
+						<tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+						<httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
 					</server-auth-methods>
 				</http-security>
 				<url>https://ewp-pre.us.es/index.php?r=institutions</url>
@@ -80,10 +80,10 @@
 			</institutions>
 			<organizational-units version="2.1.0">
 				<http-security>
-					<client-auth-methods>
+					<!--client-auth-methods>
 						<tlscert allows-self-signed="false"/>
 						<httpsig/>
-					</client-auth-methods>
+					</client-auth-methods-->
 					<server-auth-methods>
 						<tlscert/>
 						<httpsig/>
@@ -138,7 +138,7 @@
 				<max-iia-ids>10</max-iia-ids>
 				<max-iia-codes>10</max-iia-codes>
 				<index-url>https://ewp-pre.us.es/index.php?r=iias%2Fget</index-url>
-			</iias-->
+			</iias>
 		</r:apis-implemented>
 		<mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
 			<hei id="us.es">
