@@ -34607,7 +34607,7 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-notes>Version 00.09.02 of EWPCV manifest</ewp:admin-notes>
+        <ewp:admin-notes>Version 01.00.00 of EWPCV manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://ewptest.um.es/umEWPWeb/discovery</d5:url>
@@ -34626,6 +34626,25 @@
                 </e2:http-security>
                 <e2:url>https://ewptest.um.es/umEWPWeb/echo</e2:url>
             </e2:echo>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ewptest.um.es/umEWPWeb/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://ewptest.um.es/umEWPWeb/iias/index</ia6:index-url>
+            </ia6:iias>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
