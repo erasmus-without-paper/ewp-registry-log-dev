@@ -45,6 +45,21 @@
                 <ns14:allows-anonymous-access>true</ns14:allows-anonymous-access>
                 <ns14:supports-modified-since>true</ns14:supports-modified-since>
             </ns14:simple-course-replication>
+            <ns15:courses version="0.7.1">
+                <ns15:http-security>
+                    <ns5:client-auth-methods>
+                        <ns22:tlscert allows-self-signed="false"/>
+                        <ns24:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns26:tlscert/>
+                        <ns25:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns15:http-security>
+                <ns15:url>https://authewp.it.auth.gr/ewp/rest/courses</ns15:url>
+                <ns15:max-los-ids>1</ns15:max-los-ids>
+                <ns15:max-los-codes>1</ns15:max-los-codes>
+            </ns15:courses>
             <ns19:institutions version="2.1.0">
                 <ns19:http-security>
                     <ns5:client-auth-methods>
@@ -62,21 +77,6 @@
             <ns21:discovery version="5.0.0">
                 <ns21:url>https://authewp.it.auth.gr/ewp/rest/manifest</ns21:url>
             </ns21:discovery>
-            <ns15:courses version="0.7.1">
-                <ns15:http-security>
-                    <ns5:client-auth-methods>
-                        <ns22:tlscert allows-self-signed="false"/>
-                        <ns24:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns26:tlscert/>
-                        <ns25:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns15:http-security>
-                <ns15:url>https://authewp.it.auth.gr/ewp/rest/courses</ns15:url>
-                <ns15:max-los-ids>1</ns15:max-los-ids>
-                <ns15:max-los-codes>1</ns15:max-los-codes>
-            </ns15:courses>
             <ns18:organizational-units version="2.1.0">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
