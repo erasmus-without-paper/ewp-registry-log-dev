@@ -469,11 +469,11 @@
                 <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia4:iias
-                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
-                version="4.0.0"
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
             >
-                <ia4:http-security>
+                <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -482,13 +482,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia4:http-security>
-                <ia4:get-url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/get</ia4:get-url>
-                <ia4:max-iia-ids>100</ia4:max-iia-ids>
-                <ia4:max-iia-codes>100</ia4:max-iia-codes>
-                <ia4:index-url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/index</ia4:index-url>
-                <ia4:sends-notifications/>
-            </ia4:iias>
+                </ia6:http-security>
+                <ia6:get-url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://ewp-hei.demo.usos.edu.pl/ewp/iia/index</ia6:index-url>
+            </ia6:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -572,6 +571,23 @@
                 <omc1:url>https://ewp-hei.demo.usos.edu.pl/ewp/omobilities/cnr</omc1:url>
                 <omc1:max-omobility-ids>100</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ewp-hei.demo.usos.edu.pl/ewp/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>100</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
             <co1:courses
                 xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
                 version="0.7.1"
