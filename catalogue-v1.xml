@@ -3421,6 +3421,25 @@
                 <ia3:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v3/index</ia3:index-url>
                 <ia3:sends-notifications/>
             </ia3:iias>
+            <ia4:iias
+                xmlns:ia4="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+                version="4.0.0"
+            >
+                <ia4:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia4:http-security>
+                <ia4:get-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v4/get</ia4:get-url>
+                <ia4:max-iia-ids>3</ia4:max-iia-ids>
+                <ia4:max-iia-codes>3</ia4:max-iia-codes>
+                <ia4:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-v4/index</ia4:index-url>
+            </ia4:iias>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.0"
@@ -3550,7 +3569,7 @@
         <apis-implemented>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -3562,9 +3581,76 @@
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/approve</iaa1:url>
+                <iaa1:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-approval-v1/get</iaa1:url>
                 <iaa1:max-iia-ids>3</iaa1:max-iia-ids>
             </iaa1:iias-approval>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>moc.demo.sop.co.at</hei-id>
+            <hei-id>aarch.dk</hei-id>
+            <hei-id>usamvcluj.ro</hei-id>
+            <hei-id>unak.is</hei-id>
+            <hei-id>uah.es</hei-id>
+            <hei-id>utcluj.ro</hei-id>
+            <hei-id>eu.edu.ge</hei-id>
+            <hei-id>moc.demo.02.sop.co.at</hei-id>
+            <hei-id>haaga-helia.fi</hei-id>
+            <hei-id>metropolitan.hu</hei-id>
+            <hei-id>aec-music.eu</hei-id>
+            <hei-id>uni-bge.hu</hei-id>
+            <hei-id>usi.ch</hei-id>
+            <hei-id>mta.ro</hei-id>
+            <hei-id>uni-bayreuth.de</hei-id>
+            <hei-id>fernuni-hagen.de</hei-id>
+            <hei-id>hs-bochum.de</hei-id>
+            <hei-id>hs-anhalt.de</hei-id>
+            <hei-id>ib-hochschule.de</hei-id>
+            <hei-id>uel.ac.uk</hei-id>
+            <hei-id>kphgraz.at</hei-id>
+            <hei-id>ph-kaernten.ac.at</hei-id>
+            <hei-id>rgsl.edu.lv</hei-id>
+            <hei-id>beuth-hochschule.de</hei-id>
+            <hei-id>ru.nl</hei-id>
+            <hei-id>em-normandie.fr</hei-id>
+            <hei-id>th-wildau.de</hei-id>
+            <hei-id>ankara.edu.tr</hei-id>
+            <hei-id>umfst.ro</hei-id>
+            <hei-id>jade-hs.de</hei-id>
+            <hei-id>esiea.fr</hei-id>
+            <hei-id>grenoble-inp.fr</hei-id>
+            <hei-id>sepr.edu</hei-id>
+            <hei-id>test.unipv.it</hei-id>
+            <hei-id>unipd.it</hei-id>
+            <hei-id>vmi.at</hei-id>
+            <hei-id>cbs.de</hei-id>
+            <hei-id>ipac-france.com</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9497576369d8a978672bdceaa2f2fbf5ff5966ff854d1bec7a7b964ef67b0df2"/>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="769c7a9c8bac71a238ea9e78dda3e49bcabbaf695f56fbc99dd4d6e8f777756a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-approval-cnr-v1/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>moc.demo.sop.co.at</hei-id>
