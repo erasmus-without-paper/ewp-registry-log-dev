@@ -1,102 +1,102 @@
 <d5:manifest
-        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-        xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-        xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-        xmlns:r1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-        xmlns:d5m="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-        xmlns:e2m="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-        xmlns:i2m="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-        xmlns:ou2m="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-        xmlns:las1m="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-        xmlns:lacnr1m="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-        xmlns:sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-        xmlns:ctls1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-        xmlns:csig1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-        xmlns:stls1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-        xmlns:ssig1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
-        <d5:host>
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+            xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+            xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+            xmlns:r1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+            xmlns:d5m="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+            xmlns:e2m="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+            xmlns:i2m="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+            xmlns:ou2m="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+            xmlns:las1m="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+            xmlns:lacnr1m="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+            xmlns:sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+            xmlns:ctls1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+            xmlns:csig1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+            xmlns:stls1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+            xmlns:ssig1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
+            <d5:host>
             <ewp:admin-email>events@aec-music.eu</ewp:admin-email>
             <ewp:admin-notes></ewp:admin-notes>
             <r1:apis-implemented>
-                <d5m:discovery version="5.0.0">
-                  <d5m:url>https://dev.aec-ewp.eu/v1/manifest</d5m:url>
-                </d5m:discovery>
-                <e2m:echo version="2.0.1">
-                  <e2m:http-security>
-                      <sec2:client-auth-methods>
-                          <ctls1:tlscert allows-self-signed="true"/>
-                          <csig1:httpsig/>
-                      </sec2:client-auth-methods>
-                      <sec2:server-auth-methods>
-                          <stls1:tlscert/>
-                          <ssig1:httpsig/>
-                      </sec2:server-auth-methods>
-                  </e2m:http-security>
-                  <e2m:url>https://dev.aec-ewp.eu/v1/echo</e2m:url>
-                </e2m:echo>
-                <i2m:institutions version="2.1.0">
-                  <i2m:http-security>
-                    <sec2:client-auth-methods>
-                        <ctls1:tlscert allows-self-signed="true"/>
-                        <csig1:httpsig/>
-                    </sec2:client-auth-methods>
-                    <sec2:server-auth-methods>
-                        <stls1:tlscert/>
-                        <ssig1:httpsig/>
-                    </sec2:server-auth-methods>
-                  </i2m:http-security>
-                  <i2m:url>https://dev.aec-ewp.eu/v1/institutions</i2m:url>
-                  <i2m:max-hei-ids>15</i2m:max-hei-ids>
-                </i2m:institutions>
-                <ou2m:organizational-units version="2.1.1">
-                  <ou2m:http-security>
-                      <sec2:client-auth-methods>
-                          <ctls1:tlscert allows-self-signed="true"/>
-                          <csig1:httpsig/>
-                      </sec2:client-auth-methods>
-                      <sec2:server-auth-methods>
-                          <stls1:tlscert/>
-                          <ssig1:httpsig/>
-                      </sec2:server-auth-methods>
-                  </ou2m:http-security>
-                  <ou2m:url>https://dev.aec-ewp.eu/v1/organizational-units</ou2m:url>
-                  <ou2m:max-ounit-ids>15</ou2m:max-ounit-ids>
-                  <ou2m:max-ounit-codes>15</ou2m:max-ounit-codes>
-                </ou2m:organizational-units>
-                <las1m:omobility-las version="1.0.1">
-                  <las1m:http-security>
-                      <sec2:client-auth-methods>
-                          <ctls1:tlscert allows-self-signed="true"/>
-                          <csig1:httpsig/>
-                      </sec2:client-auth-methods>
-                      <sec2:server-auth-methods>
-                          <stls1:tlscert/>
-                          <ssig1:httpsig/>
-                      </sec2:server-auth-methods>
-                  </las1m:http-security>
-                  <las1m:get-url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement/get</las1m:get-url>
-                  <las1m:index-url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement/index</las1m:index-url>
-                  <las1m:update-url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement/update</las1m:update-url>
-                  <las1m:max-omobility-ids>1</las1m:max-omobility-ids>
-                  <las1m:sends-notifications/>
-                </las1m:omobility-las>
-                <lacnr1m:omobility-la-cnr version="1.0.0">
-                  <lacnr1m:http-security>
-                    <sec2:client-auth-methods>
-                        <ctls1:tlscert allows-self-signed="true"/>
-                        <csig1:httpsig/>
-                    </sec2:client-auth-methods>
-                    <sec2:server-auth-methods>
-                        <stls1:tlscert/>
-                        <ssig1:httpsig/>
-                    </sec2:server-auth-methods>
-                  </lacnr1m:http-security>
-                  <lacnr1m:url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement-cnr</lacnr1m:url>
-                  <lacnr1m:max-omobility-ids>1</lacnr1m:max-omobility-ids>
-                </lacnr1m:omobility-la-cnr>
+            <d5m:discovery version="5.0.0">
+              <d5m:url>https://dev.aec-ewp.eu/v1/manifest</d5m:url>
+            </d5m:discovery>
+            <e2m:echo version="2.0.1">
+              <e2m:http-security>
+                  <sec2:client-auth-methods>
+                      <ctls1:tlscert allows-self-signed="true"/>
+                      <csig1:httpsig/>
+                  </sec2:client-auth-methods>
+                  <sec2:server-auth-methods>
+                      <stls1:tlscert/>
+                      <ssig1:httpsig/>
+                  </sec2:server-auth-methods>
+              </e2m:http-security>
+              <e2m:url>https://dev.aec-ewp.eu/v1/echo</e2m:url>
+            </e2m:echo>
+            <i2m:institutions version="2.1.0">
+              <i2m:http-security>
+                <sec2:client-auth-methods>
+                    <ctls1:tlscert allows-self-signed="true"/>
+                    <csig1:httpsig/>
+                </sec2:client-auth-methods>
+                <sec2:server-auth-methods>
+                    <stls1:tlscert/>
+                    <ssig1:httpsig/>
+                </sec2:server-auth-methods>
+              </i2m:http-security>
+              <i2m:url>https://dev.aec-ewp.eu/v1/institutions</i2m:url>
+              <i2m:max-hei-ids>15</i2m:max-hei-ids>
+            </i2m:institutions>
+            <ou2m:organizational-units version="2.1.1">
+              <ou2m:http-security>
+                  <sec2:client-auth-methods>
+                      <ctls1:tlscert allows-self-signed="true"/>
+                      <csig1:httpsig/>
+                  </sec2:client-auth-methods>
+                  <sec2:server-auth-methods>
+                      <stls1:tlscert/>
+                      <ssig1:httpsig/>
+                  </sec2:server-auth-methods>
+              </ou2m:http-security>
+              <ou2m:url>https://dev.aec-ewp.eu/v1/organizational-units</ou2m:url>
+              <ou2m:max-ounit-ids>15</ou2m:max-ounit-ids>
+              <ou2m:max-ounit-codes>15</ou2m:max-ounit-codes>
+            </ou2m:organizational-units>
+            <las1m:omobility-las version="1.0.1">
+              <las1m:http-security>
+                  <sec2:client-auth-methods>
+                      <ctls1:tlscert allows-self-signed="true"/>
+                      <csig1:httpsig/>
+                  </sec2:client-auth-methods>
+                  <sec2:server-auth-methods>
+                      <stls1:tlscert/>
+                      <ssig1:httpsig/>
+                  </sec2:server-auth-methods>
+              </las1m:http-security>
+              <las1m:get-url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement/get</las1m:get-url>
+              <las1m:index-url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement/index</las1m:index-url>
+              <las1m:update-url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement/update</las1m:update-url>
+              <las1m:max-omobility-ids>1</las1m:max-omobility-ids>
+              <las1m:sends-notifications/>
+            </las1m:omobility-las>
+            <lacnr1m:omobility-la-cnr version="1.0.0">
+              <lacnr1m:http-security>
+                <sec2:client-auth-methods>
+                    <ctls1:tlscert allows-self-signed="true"/>
+                    <csig1:httpsig/>
+                </sec2:client-auth-methods>
+                <sec2:server-auth-methods>
+                    <stls1:tlscert/>
+                    <ssig1:httpsig/>
+                </sec2:server-auth-methods>
+              </lacnr1m:http-security>
+              <lacnr1m:url>https://dev.aec-ewp.eu/v1/outgoing-mobility-learning-agreement-cnr</lacnr1m:url>
+              <lacnr1m:max-omobility-ids>1</lacnr1m:max-omobility-ids>
+            </lacnr1m:omobility-la-cnr>
             </r1:apis-implemented>
             <d5:institutions-covered>
-                <r1:hei id="musikkons.dk">
+            <r1:hei id="musikkons.dk">
                                   <r1:other-id type="erasmus">DK ARHUS05</r1:other-id>
                                   <r1:name xml:lang="en">The Royal Academy of Music Aarhus/Aalborg</r1:name>
                                 </r1:hei>
@@ -423,7 +423,7 @@
                                 
             </d5:institutions-covered>
             <d5:client-credentials-in-use>
-                <d5:certificate>
+<d5:certificate>
 MIIDsTCCApmgAwIBAgIJAIl0j5RtKVODMA0GCSqGSIb3DQEBCwUAMG8xCzAJBgNV
 BAYTAkVVMRUwEwYDVQQHDAxEZWZhdWx0IENpdHkxDDAKBgNVBAoMA0FFQzEXMBUG
 A1UEAwwOZGV2LmFlYy1ld3AuZXUxIjAgBgkqhkiG9w0BCQEWE2V2ZW50c0BhZWMt
@@ -445,26 +445,26 @@ ZLJNcrTkRJnKnNSQdxmxHSxz6xe2Bp0aKjotIwok9O2GMTn3wk+HeystXGc4si5D
 TbqjT8fdjv7+v52AMux0gv6ZJ4r01VgvuHpUiYur7LBuiixcf2u7hgPdH8S4Q4ow
 99YQFRUXjyFzSooR9RcWp4cKzdGt5lLaSkDrs1AbyKLaJpYvTg==
                 </d5:certificate>
-                <d5:rsa-public-key>
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuykSs7m/QFiWFRPFo0mg
+            <d5:rsa-public-key>
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuykSs7m/QFiWFRPFo0mg
 LJVS3t3Vm0fPAur5w1ozyXyLqWREVVSapf5r4FdNpvp5DD1ncq9gMAVovtpzmkoq
 QoYE/uQThZ3iTcTcRvtQNdnWMLTHzRIRKdgjm29rmiJT+zR+/ICb1rIUOiMKZQml
 gKdYho04Ml6QBAR+TswxH4qc6QwnadXrj0duwjwMh/YUaJI9jYQvrpTYGm8Os7Z7
 cx7Sk+nzmGWD8WzmyTTAs7hMGBWvbfPav5vzxOZdySsVwJK72kJqDohCabfFY6VL
 GNLuZ5NGhoNcxz3xZqTXMVa7PNKy1Eh1ixWIu93aQknS8fj+HepVVw2PVJsvOE7a
 OQIDAQAB
-                </d5:rsa-public-key>
+            </d5:rsa-public-key>
             </d5:client-credentials-in-use>
             <d5:server-credentials-in-use>
-                <d5:rsa-public-key>
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9ktkNv9SMIvAubcxW2t
+            <d5:rsa-public-key>
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk9ktkNv9SMIvAubcxW2t
 UbvAYPx62GL5XX6sJrzjCem2i0P/091aG9P8DEr2kBfdeMr/EeHaq80WHUfqKE9Z
 73xQ3pvN7+wzRZyr/PxQKOKlEaI8g+cA6fFZvAsIzgJJZj/YXfpOT9lvQZ7fJHCC
 HTZ16Mjoijjt4E3Y0L7vz809dXGDwLB+AONn453KAXmQZgaMopWgEp+5sHNotZxY
 fcQSthic5ZdETPDbp3tpmolFDLB/WyOegKsqMO/pwQqwEjAclKGNB47b2wwjnXP2
 h26fRtO/2YrricVOxCP2LcwK5Ml9X0COmLnDM3cVvtQXCtIo4n7CledkdGE2yqYn
 TwIDAQAB
-                </d5:rsa-public-key>
+            </d5:rsa-public-key>
             </d5:server-credentials-in-use>
-        </d5:host>
-    </d5:manifest>
+            </d5:host>
+            </d5:manifest>
