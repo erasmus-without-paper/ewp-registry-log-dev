@@ -27,6 +27,19 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://dev.ewp.kion.com.tr/api/manifest</d5:url>
             </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev.ewp.kion.com.tr/api/echo</e2:url>
+            </e2:echo>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
@@ -136,7 +149,23 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev.ewp.kion.com.tr/api/institutions</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -245,7 +274,24 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev.ewp.kion.com.tr/api/organizationalunits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -354,7 +400,24 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <ia6:iias version="6.0.1">
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index</ia6:index-url>
+            </ia6:iias>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -403,7 +466,21 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -452,7 +529,22 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <iaa1:iias-approval version="1.0.0">
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -501,7 +593,21 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <iaac1:iia-approval-cnr version="1.0.0">
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -550,7 +656,22 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented/>
+        <r:apis-implemented>
+            <f1:factsheet version="1.0.0">
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+        </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
