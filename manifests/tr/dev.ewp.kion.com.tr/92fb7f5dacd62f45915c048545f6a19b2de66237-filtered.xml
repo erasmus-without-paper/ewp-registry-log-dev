@@ -3,6 +3,7 @@
     xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
     xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -26,19 +27,6 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://dev.ewp.kion.com.tr/api/manifest</d5:url>
             </d5:discovery>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://dev.ewp.kion.com.tr/api/echo</e2:url>
-            </e2:echo>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kion.com.tr">
@@ -148,23 +136,7 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented>
-            <in2:institutions version="2.1.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A0:anonymous/>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://dev.ewp.kion.com.tr/api/institutions</in2:url>
-                <in2:max-hei-ids>10</in2:max-hei-ids>
-            </in2:institutions>
-        </r:apis-implemented>
+        <r:apis-implemented/>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -273,24 +245,7 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A0:anonymous/>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://dev.ewp.kion.com.tr/api/organizationalunits</ou2:url>
-                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
-            </ou2:organizational-units>
-        </r:apis-implemented>
+        <r:apis-implemented/>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -399,24 +354,7 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented>
-            <ia6:iias version="6.0.1">
-                <ia6:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index</ia6:index-url>
-            </ia6:iias>
-        </r:apis-implemented>
+        <r:apis-implemented/>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -465,21 +403,7 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented>
-            <iac2:iia-cnr version="2.0.3">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/cnr</iac2:url>
-            </iac2:iia-cnr>
-        </r:apis-implemented>
+        <r:apis-implemented/>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -528,22 +452,7 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented>
-            <iaa1:iias-approval version="1.0.0">
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
-        </r:apis-implemented>
+        <r:apis-implemented/>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
@@ -592,21 +501,56 @@ OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
     <host>
         <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
         <ewp:admin-notes/>
-        <r:apis-implemented>
-            <iaac1:iia-approval-cnr version="1.0.0">
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/cnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
-        </r:apis-implemented>
+        <r:apis-implemented/>
+        <institutions-covered>
+            <r:hei id="kion.com.tr">
+                <r:other-id type="pic">test pic value</r:other-id>
+                <r:other-id type="erasmus">test erasmus value</r:other-id>
+                <r:name xml:lang="tr">Demo Kion Üniversitesi</r:name>
+                <r:name xml:lang="en">Demo Kion University</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIID9zCCAt+gAwIBAgIULnEVVeqiFrTCpq1QXGH8FsMJitMwDQYJKoZIhvcNAQELBQAwgYkxCzAJ
+BgNVBAYTAlRSMQswCQYDVQQIDAJOQTERMA8GA1UEBwwISVNUQU5CVUwxDTALBgNVBAoMBEtJT04x
+CzAJBgNVBAsMAklUMRUwEwYDVQQDDAxNVVJBVCBZVUNFRVIxJzAlBgkqhkiG9w0BCQEWGG11cmF0
+Lnl1Y2VlckBraW9uLmNvbS50cjAgFw0yMDA2MTUxNjM2MzNaGA8yMTIwMDUyMjE2MzYzM1owgYkx
+CzAJBgNVBAYTAlRSMQswCQYDVQQIDAJOQTERMA8GA1UEBwwISVNUQU5CVUwxDTALBgNVBAoMBEtJ
+T04xCzAJBgNVBAsMAklUMRUwEwYDVQQDDAxNVVJBVCBZVUNFRVIxJzAlBgkqhkiG9w0BCQEWGG11
+cmF0Lnl1Y2VlckBraW9uLmNvbS50cjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL9v
+uJ77xvamGkixH77ehpmYhPdKr2C8IK7Ok+oiXdHFHo/mi9EK2lXWIWrIQeDRZM9ZHohZ85Wm8eDf
+ZQgJbIAfSga+PuVlMTeJG1c13oeeCHQqA229AY15O3vMf2iV0lARGlOnfzmv6zlJxqBD03s0ZeQw
+vC9ZN9LtvjrH4i+c71kaVBMD8sgPEmh1bYOMuCc/mhmoC0YSq/vbiv1BAamVrzmTkyEs+v3cpOvJ
+m6ZpQks1NGgN4FU/o9hEX/QsIKv3ZF9af3VyFZ0fDAXLXDmpjZ2y3DoMM5ieWXeVSVTFxl/8w0yJ
+RksfVS9VWr//4C5h4kVc7M0N4j3b+Nsz2PcCAwEAAaNTMFEwHQYDVR0OBBYEFNxU5xR0zUGFyGKZ
+iSJLYt31O7tUMB8GA1UdIwQYMBaAFNxU5xR0zUGFyGKZiSJLYt31O7tUMA8GA1UdEwEB/wQFMAMB
+Af8wDQYJKoZIhvcNAQELBQADggEBACGPKjv4uFl9SeoRCoHCmn3qx+XJe8RP/8+Ct7TU9I8s0dm1
+8NriZIxRX0aIwRA0HW7Gi57Reh4SNshjF89dGlMU1Qy6cIpUWT9qnVTtfm+Q2bG/a95kOB8HsaiS
+vf/bLaiAWvlQqA7idUvCqcsNcu9AsthD9vkqfWWKZnkBT2h2be2gT1u6o4+AYtDW8WRbmjpfHKVr
+Inf/KKz308IusVYij+UF0JGts6gDpvx8GsTBEEjiXhdYN1Vlqk5lnTy2S2ws4+bDl89bI3Fq0I2n
+9X5GyV2WDdUVct7ihbcHZE5TBLNgCyN2ikl+m9t5aqu3TclX6RaWNANOUXJs3CcDVU8=</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2+4nvvG9qYaSLEfvt6G
+mZiE90qvYLwgrs6T6iJd0cUej+aL0QraVdYhashB4NFkz1keiFnzlabx4N9lCAls
+gB9KBr4+5WUxN4kbVzXeh54IdCoDbb0BjXk7e8x/aJXSUBEaU6d/Oa/rOUnGoEPT
+ezRl5DC8L1k30u2+OsfiL5zvWRpUEwPyyA8SaHVtg4y4Jz+aGagLRhKr+9uK/UEB
+qZWvOZOTISz6/dyk68mbpmlCSzU0aA3gVT+j2ERf9Cwgq/dkX1p/dXIVnR8MBctc
+OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
+9wIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2+4nvvG9qYaSLEfvt6G
+mZiE90qvYLwgrs6T6iJd0cUej+aL0QraVdYhashB4NFkz1keiFnzlabx4N9lCAls
+gB9KBr4+5WUxN4kbVzXeh54IdCoDbb0BjXk7e8x/aJXSUBEaU6d/Oa/rOUnGoEPT
+ezRl5DC8L1k30u2+OsfiL5zvWRpUEwPyyA8SaHVtg4y4Jz+aGagLRhKr+9uK/UEB
+qZWvOZOTISz6/dyk68mbpmlCSzU0aA3gVT+j2ERf9Cwgq/dkX1p/dXIVnR8MBctc
+OamNnbLcOgwzmJ5Zd5VJVMXGX/zDTIlGSx9VL1Vav//gLmHiRVzszQ3iPdv42zPY
+9wIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>murat.yuceer@kion.com.tr</ewp:admin-email>
+        <ewp:admin-notes/>
+        <r:apis-implemented/>
         <institutions-covered>
             <r:hei id="kion.com.tr">
                 <r:other-id type="pic">test pic value</r:other-id>
