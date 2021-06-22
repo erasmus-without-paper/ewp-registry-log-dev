@@ -56,6 +56,20 @@
     <ns48:host>
         <ns50:admin-notes>ULisboa EWP node used for tests</ns50:admin-notes>
         <ns40:apis-implemented>
+            <ns3:institutions version="2.1.0">
+                <ns3:http-security>
+                    <ns2:client-auth-methods>
+                        <ns5:tlscert allows-self-signed="true"/>
+                        <ns6:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns7:tlscert/>
+                        <ns8:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns3:http-security>
+                <ns3:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/institutions/v2</ns3:url>
+                <ns3:max-hei-ids>1</ns3:max-hei-ids>
+            </ns3:institutions>
             <ns25:discovery version="5.0.0">
                 <ns25:url>https://ewp-mobility-qua.ulisboa.pt/rest/ewp/manifest</ns25:url>
             </ns25:discovery>
@@ -72,6 +86,36 @@
                 </ns24:http-security>
                 <ns24:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/echo</ns24:url>
             </ns24:echo>
+            <ns16:courses version="0.7.1">
+                <ns16:http-security>
+                    <ns2:client-auth-methods>
+                        <ns5:tlscert allows-self-signed="true"/>
+                        <ns6:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns7:tlscert/>
+                        <ns8:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/courses/v0</ns16:url>
+                <ns16:max-los-ids>1</ns16:max-los-ids>
+                <ns16:max-los-codes>1</ns16:max-los-codes>
+            </ns16:courses>
+            <ns15:simple-course-replication version="1.0.0">
+                <ns15:http-security>
+                    <ns2:client-auth-methods>
+                        <ns5:tlscert allows-self-signed="true"/>
+                        <ns6:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns7:tlscert/>
+                        <ns8:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns15:http-security>
+                <ns15:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/courses/replication/v1</ns15:url>
+                <ns15:allows-anonymous-access>false</ns15:allows-anonymous-access>
+                <ns15:supports-modified-since>false</ns15:supports-modified-since>
+            </ns15:simple-course-replication>
         </ns40:apis-implemented>
         <ns48:institutions-covered>
             <ns40:hei id="ulisboa.pt">
