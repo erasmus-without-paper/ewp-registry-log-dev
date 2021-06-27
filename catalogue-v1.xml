@@ -18121,6 +18121,56 @@
     </host>
     <host>
         <apis-implemented>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://www.service4mobility.com/fhv_test/ewp/mobility_out_la/get</oml1:get-url>
+                <oml1:index-url>https://www.service4mobility.com/fhv_test/ewp/mobility_out_la/index</oml1:index-url>
+                <oml1:update-url>https://www.service4mobility.com/fhv_test/ewp/mobility_out_la/update</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://www.service4mobility.com/fhv_test/ewp/mobility_out_la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>fhv.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="b7db407f68a939dbe15d66dae732521fcbb428612e6b673459546c1fbf8e1bd8"/>
+            <rsa-public-key sha-256="a122fb9cdb71733aa7c3eb0ce719d9588c9af9207d64d6bc5bbb025d83577ca0"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="a122fb9cdb71733aa7c3eb0ce719d9588c9af9207d64d6bc5bbb025d83577ca0"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
             <f1:factsheet
                 xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
                 version="0.3.0"
