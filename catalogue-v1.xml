@@ -38193,6 +38193,33 @@
     </host>
     <host>
         <apis-implemented>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://www.service4mobility.com/fontys_test/ewp/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>fontys.edu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="6ed9946a66b9ee1225a1ac468dcf42facf2c3ff7793bc59d63be46dba9c110a2"/>
+            <rsa-public-key sha-256="09a3d99b934d3fc8277455a388c30605dc3b89385012ccd3f8781fd954329bbe"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="09a3d99b934d3fc8277455a388c30605dc3b89385012ccd3f8781fd954329bbe"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
