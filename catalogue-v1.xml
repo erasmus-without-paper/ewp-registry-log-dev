@@ -39213,6 +39213,133 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>rrii@tecnocampus.cat</ewp:admin-email>
+        <ewp:admin-notes>TECNO EWP Dev Manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://gestioacademicavirtual.tecnocampus.cat:2443/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/institutions/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/departments/get</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/iias/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.2">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>tecnocampus.cat</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="fbc6ccc68a0841c30e26b13763eed4332343aaee99b318341e3d80ea0113a20e"/>
+            <rsa-public-key sha-256="c2a433940fbd0bcfd700432ac4aabfc1daa5a6c78e063aed472e400ec959d0b7"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="c2a433940fbd0bcfd700432ac4aabfc1daa5a6c78e063aed472e400ec959d0b7"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -41993,6 +42120,11 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="de">FACHHOCHSCHULE TECHNIKUM WIEN</name>
             <name xml:lang="en">FACHHOCHSCHULE TECHNIKUM WIEN</name>
         </hei>
+        <hei id="tecnocampus.cat">
+            <other-id type="erasmus">E MATARO01</other-id>
+            <other-id type="pic">966144445</other-id>
+            <name xml:lang="ca">FUNDACIO TECNOCAMPUS MATARO-MARESME</name>
+        </hei>
         <hei id="telecom-em.eu">
             <other-id type="erasmus">F  EVRY12</other-id>
             <other-id type="pic">949023557</other-id>
@@ -44299,6 +44431,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             eAmf05MUC7o/QGii10ghS8Bd15qDMyRV+uLYYheC1RhVOQkc18ZenV04+JV1g1BEswQqTmgQd8/H
             e4NYZ2S19WMuIVwtNT3sLs59CCBESvyWPiB4xGQa77Jxu6VeRHE6/ZKcaUYIZ/0wLzcLfEajMKXt
             aHMu+QIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="c2a433940fbd0bcfd700432ac4aabfc1daa5a6c78e063aed472e400ec959d0b7">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7Wvhp8wXoLUv320OLyPOeInNlWs9esD4
+            CI/oZcJVcL2Oa0/TiEjqFLGeVMXiGoC2e1rFghxVV+gb3OYsLoHiDbAMdUHTdSavryJsxM+9FfD+
+            nMUMJjKBnwAIW2xZDcY/44tvEHllXlT58H6s9i8rOkExJGmVet134yQzSWvDY5cxzxY4nSKlzeMR
+            RpeZYVu+cAxR1yAjrQwBHAWjOb0Zt+j5ypyewr0AvvOgacaBdus2y6oR0C5T2757HyCEMndD1lLw
+            kewrhrKFbpS8XFvW+TSC+WsOgMyLOP3eEQtua2bvMR1YcuMknazwJMPxkcCuODZHlaTxyag6rqrr
+            9UKQcQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="c7334e43a46199720b488dfe1d8726b1c55af9bba91e269ac4260dd9e3c60195">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8L7Yowksb3x7Jw65YeF2X5qiiaRtRfwj
