@@ -382,6 +382,25 @@
                 <omc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityCnr/</omc1:url>
                 <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+            <omlas0:omobility-las version="0.5.0">
+                <omlas0:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </omlas0:http-security>
+                <omlas0:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/laGet/</omlas0:get-url>
+                <omlas0:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/laIndex/</omlas0:index-url>
+                <omlas0:update-url>https://test.slu.isois.ois.muni.cz/en/ewp/laUpdate/</omlas0:update-url>
+                <omlas0:max-omobility-ids>1</omlas0:max-omobility-ids>
+            </omlas0:omobility-las>
             <omlas1:omobility-las version="1.0.1">
                 <omlas1:http-security>
                     <sec:client-auth-methods>

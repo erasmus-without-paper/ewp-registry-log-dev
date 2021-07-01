@@ -32890,6 +32890,25 @@
                 <omc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityCnr/</omc1:url>
                 <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/v0.5.0/manifest-entry.xsd"
+                version="0.5.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://test.slu.isois.ois.muni.cz/en/ewp/laGet/</get-url>
+                <index-url>https://test.slu.isois.ois.muni.cz/en/ewp/laIndex/</index-url>
+                <update-url>https://test.slu.isois.ois.muni.cz/en/ewp/laUpdate/</update-url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-las>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.1"
