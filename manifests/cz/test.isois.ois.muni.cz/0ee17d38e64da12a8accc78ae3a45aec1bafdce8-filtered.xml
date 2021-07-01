@@ -313,6 +313,39 @@
                 </iac2:http-security>
                 <iac2:url>https://test.isois.ois.muni.cz/en/ewp/iiaCnr/</iac2:url>
             </iac2:iia-cnr>
+            <iaasa1:iias-approval version="1.0.0">
+                <iaasa1:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </iaasa1:http-security>
+                <iaasa1:url>https://test.isois.ois.muni.cz/en/ewp/iiaApproval/</iaasa1:url>
+                <iaasa1:max-iia-ids>1</iaasa1:max-iia-ids>
+            </iaasa1:iias-approval>
+            <iaac1:iia-approval-cnr version="1.0.0">
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://test.isois.ois.muni.cz/en/ewp/iiaApprovalCnr/</iaac1:url>
+            </iaac1:iia-approval-cnr>
             <om1:omobilities version="1.0.0">
                 <om1:http-security>
                     <sec:client-auth-methods>
