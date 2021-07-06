@@ -41758,6 +41758,156 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-notes>Version 01.00.00 of EWPCV manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ujiapps.uji.es/ewpcv/discovery</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <ewp:admin-notes>Echo service covered by tls or httpSig security</ewp:admin-notes>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ujiapps.uji.es/ewpcv/echo</e2:url>
+            </e2:echo>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ujiapps.uji.es/ewpcv/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://ujiapps.uji.es/ewpcv/iias/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ujiapps.uji.es/ewpcv/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ujiapps.uji.es/ewpcv/iias/approval</iaa1:url>
+                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://ujiapps.uji.es/ewpcv/iias/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ujiapps.uji.es/ewpcv/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ujiapps.uji.es/ewpcv/omobilities/get</oml1:get-url>
+                <oml1:index-url>https://ujiapps.uji.es/ewpcv/omobilities/index</oml1:index-url>
+                <oml1:update-url>https://ujiapps.uji.es/ewpcv/omobilities/update</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ujiapps.uji.es/ewpcv/omobilities/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uji.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="72b4c95b73b76cb24c58cd3e36711f45e65cb83eb3b808933b2bae82a9af02f9"/>
+            <rsa-public-key sha-256="8969458d3efb4470b984e5278256e91ee1eef1b6e9d6fdefaf26c861028a4920"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8969458d3efb4470b984e5278256e91ee1eef1b6e9d6fdefaf26c861028a4920"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -44991,6 +45141,10 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="en">Jan Długosz University in Częstochowa</name>
             <name xml:lang="pl">Uniwersytet Humanistyczno-Przyrodniczy im. Jana Długosza w Częstochowie</name>
         </hei>
+        <hei id="uji.es">
+            <name xml:lang="en">Universitat Jaume I</name>
+            <name xml:lang="es">Universitat Jaume I</name>
+        </hei>
         <hei id="uksw.edu.pl">
             <other-id type="erasmus">PL WARSZAW07</other-id>
             <other-id type="pic">996314743</other-id>
@@ -46638,6 +46792,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             moOgtrQoKreURB790IYRVMQYCI/uvdx6w3HWtew8K3oDEfAO5n7fSewHAij9D765uqQC6IaJUKtv
             Pb/YPV7GoOxlqiInt9+es0uZ90QO0i+S9jTdAgYHbrQhaahDtlIR/cxXvJuNNb4WIlea7gzUw40c
             O4whPQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8969458d3efb4470b984e5278256e91ee1eef1b6e9d6fdefaf26c861028a4920">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuNK5MESOw6lwEr+A/DlYeraAgTQXXiAK
+            QRWbfVUHFrgrzqA/bZqH2ljytdq5tVquB1woLNiIjCX5LEsc56YEbNg0iz3EZzfHsnqvYz8lTI9d
+            Qj/MYH4BDgDegbSaLtu9exSk+tRNCDtJm+6rTm5Mp/1BYF993+8f/6Sgi6r6WnN/R5HEN7bUMJ02
+            q8NQWBqt6nKzrIBOO3q/QecVoy6F70HV2RZP3yt61abJ/fDeR+ow8n+WtLNSyqllDyCKGzKKupcN
+            mrq93Os7sg6k7byURHwTCORrBwRAp/ZE8MVpZmDJs0kNa2eJI/1C+7YE0wm0QkR10dIAOd/3H5O9
+            WEBMNwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="8a79f7f7e77ff34748ef72b0d512f41e496e375594914015ef198040654d81f6">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvbpMI2aMrcVTyy9LEapFwuiKl/JyMYLi
