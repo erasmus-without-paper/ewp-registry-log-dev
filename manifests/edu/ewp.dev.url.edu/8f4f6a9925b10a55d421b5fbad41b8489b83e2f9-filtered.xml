@@ -1,0 +1,97 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>cripoll@rectorat.url.edu</ewp:admin-email>
+        <ewp:admin-notes>DEV MANIFEST 26.04.2021</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://ewp.dev.url.edu:10007/dev_manifest.xml</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <ewp:admin-email>cripoll@rectorat.url.edu</ewp:admin-email>
+                <ewp:admin-email>alberto.martin@closerideas.com</ewp:admin-email>
+                <ewp:admin-notes>Echo service covered by httpSig security</ewp:admin-notes>
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.dev.url.edu:10007/api/echo</url>
+            </echo>
+        </r:apis-implemented>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="url.edu">
+                <other-id type="erasmus">E  BARCELO16</other-id>
+                <name xml:lang="es">Universitat Ramon Llull</name>
+            </hei>
+        </mf:institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
+phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
+DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
+e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
+RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
+EwR3IQIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
+phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
+DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
+e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
+RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
+EwR3IQIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
