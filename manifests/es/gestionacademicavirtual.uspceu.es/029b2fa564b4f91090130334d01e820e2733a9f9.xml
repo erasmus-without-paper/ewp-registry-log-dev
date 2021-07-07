@@ -52,6 +52,15 @@
     xmlns:ns49="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns50="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns51="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns52="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" 
+    xmlns:ns53="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/tree/stable-v1" 
+    xmlns:ns54="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" 
+    xmlns:ns55="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/get-response.xsd" 
+    xmlns:ns56="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index-response.xsd" 
+    xmlns:ns57="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v2" 
+    
+    
+    
     xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
@@ -172,6 +181,45 @@
                 </ns51:http-security>
                 <ns51:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/iia/approval/cnr</ns51:url>
             </ns51:iia-approval-cnr>
+    
+    
+    <ns52:omobility-la-cnr version="1.0.0">
+    <ns52:http-security>
+        <ns3:client-auth-methods>
+            <ns44:tlscert allows-self-signed="true"/>
+            <ns43:httpsig/>
+        </ns3:client-auth-methods>
+        <ns3:server-auth-methods>
+            <ns21:tlscert/>
+            <ns20:httpsig/>
+        </ns3:server-auth-methods>
+    </ns52:http-security>
+    <ns52:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/omobility-las/cnr</ns52:url>
+    <ns52:max-omobility-ids>1</ns52:max-omobility-ids>
+</ns52:omobility-la-cnr>
+<ns54:omobility-las version="1.0.0">
+    <ns54:http-security>
+        <ns3:client-auth-methods>
+            <ns44:tlscert allows-self-signed="true"/>
+            <ns43:httpsig/>
+        </ns3:client-auth-methods>
+        <sec:server-auth-methods>
+            <ns21:tlscert/>
+            <ns20:httpsig/>
+        </sec:server-auth-methods>
+    </ns54:http-security>
+    <ns54:get-url>https://Xgestionacademicavirtual.uspceu.es:2443/ewp/rest/omobility-las/get</ns54:get-url>
+    <ns54:index-url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/omobility-las/index</ns54:index-url>
+    <ns54:update-url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/omobility-las/update</ns54:update-url>
+    <ns54:max-omobility-ids>1</ns54:max-omobility-ids>
+</ns54:omobility-las>
+
+    
+    
+    
+    
+    
+    
           
         </r:apis-implemented>
 
