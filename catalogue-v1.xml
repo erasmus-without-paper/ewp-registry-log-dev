@@ -26332,25 +26332,6 @@
                 <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia6:iias
-                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.1"
-            >
-                <ia6:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/index</ia6:index-url>
-            </ia6:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -26398,6 +26379,42 @@
                 </iaac1:http-security>
                 <iaac1:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iia/approval/cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/get</oml1:get-url>
+                <oml1:index-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/index</oml1:index-url>
+                <oml1:update-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/update</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uva.es</hei-id>

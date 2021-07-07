@@ -46,6 +46,12 @@
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns50="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns51="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns52="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns53="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/tree/stable-v1"
+    xmlns:ns54="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns55="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/get-response.xsd"
+    xmlns:ns56="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns:ns57="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v2"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-mt-projects/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-mt-institutions/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd"
@@ -116,22 +122,6 @@
                 <ns4:max-ounit-ids>100</ns4:max-ounit-ids>
                 <ns4:max-ounit-codes>100</ns4:max-ounit-codes>
             </ns4:organizational-units>
-            <ns15:iias version="6.0.1">
-                <ns15:http-security>
-                    <ns3:client-auth-methods>
-                        <ns44:tlscert allows-self-signed="true"/>
-                        <ns43:httpsig/>
-                    </ns3:client-auth-methods>
-                    <ns3:server-auth-methods>
-                        <ns21:tlscert/>
-                        <ns20:httpsig/>
-                    </ns3:server-auth-methods>
-                </ns15:http-security>
-                <ns15:get-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/get</ns15:get-url>
-                <ns15:max-iia-ids>1</ns15:max-iia-ids>
-                <ns15:max-iia-codes>1</ns15:max-iia-codes>
-                <ns15:index-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iias/index</ns15:index-url>
-            </ns15:iias>
             <ns16:iia-cnr version="2.0.2">
                 <ns16:http-security>
                     <ns3:client-auth-methods>
@@ -173,6 +163,36 @@
                 </ns51:http-security>
                 <ns51:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/iia/approval/cnr</ns51:url>
             </ns51:iia-approval-cnr>
+            <ns52:omobility-la-cnr version="1.0.0">
+                <ns52:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </ns3:server-auth-methods>
+                </ns52:http-security>
+                <ns52:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/cnr</ns52:url>
+                <ns52:max-omobility-ids>1</ns52:max-omobility-ids>
+            </ns52:omobility-la-cnr>
+            <ns54:omobility-las version="1.0.0">
+                <ns54:http-security>
+                    <ns3:client-auth-methods>
+                        <ns44:tlscert allows-self-signed="true"/>
+                        <ns43:httpsig/>
+                    </ns3:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns21:tlscert/>
+                        <ns20:httpsig/>
+                    </sec:server-auth-methods>
+                </ns54:http-security>
+                <ns54:get-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/get</ns54:get-url>
+                <ns54:index-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/index</ns54:index-url>
+                <ns54:update-url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/omobility-las/update</ns54:update-url>
+                <ns54:max-omobility-ids>1</ns54:max-omobility-ids>
+            </ns54:omobility-las>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uva.es">
