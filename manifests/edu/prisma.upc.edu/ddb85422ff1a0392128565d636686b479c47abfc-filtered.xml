@@ -50,6 +50,24 @@
 https://prisma.upc.edu/ewp/manifest.xml
 </url>
             </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert allows-self-signed="true"/>
+                        <httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert/>
+                        <httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>
+https://ewp-dev.upc.edu/api/echo
+</url>
+            </echo>
         </r:apis-implemented>
         <mf:institutions-covered>
             <hei
