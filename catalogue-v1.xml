@@ -42538,29 +42538,22 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-email>carlos.espadas@upc.edu</ewp:admin-email>
-        <ewp:admin-email>alexandre.canturri@upc.edu</ewp:admin-email>
-        <ewp:admin-notes>This is the Manifest File for Universitat Politècnica de Catalunya.</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>
-https://prisma.upc.edu/ewp/manifest.xml
-</d5:url>
+                <d5:url>https://prisma.upc.edu/ewp/manifest.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.0">
                 <e2:http-security>
                     <sec:client-auth-methods>
-                        <e2:tlscert allows-self-signed="true"/>
-                        <e2:httpsig/>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <e2:tlscert/>
-                        <e2:httpsig/>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>
-https://ewp-dev.upc.edu/api/echo
-</e2:url>
+                <e2:url>https://ewp-dev.upc.edu/api/echo</e2:url>
             </e2:echo>
         </apis-implemented>
         <institutions-covered>
@@ -42568,7 +42561,6 @@ https://ewp-dev.upc.edu/api/echo
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="e33e50828cfe4f08a86bcdb1f0716397ad729a01572a51e6eb71544b9fef790e"/>
-            <certificate sha-256="e06534852e374ceb67fa290caaaed0d8e997316eba5dcb1160ccc15afedaf3e7"/>
             <rsa-public-key sha-256="14203235110f35c7c61145ca253f129cddb2aa32aeff507d1404f9274ea601d0"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
