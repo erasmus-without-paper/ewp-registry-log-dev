@@ -1,166 +1,26 @@
-<manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:xml="http://www.w3.org/XML/1998/namespace"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
-    "
->
-    <!-- This example doesn't contain many comments, but its XML Schema does! -->
-    <host>
-        <ewp:admin-email>cripoll@rectorat.url.edu</ewp:admin-email>
-        <ewp:admin-notes>DEV MANIFEST 26.04.2021</ewp:admin-notes>
-
-        <r:apis-implemented>
-            <!-- All API entries are defined in their own separate XML namespaces.
-            You need to use proper `xmlns` in order for them to be matched properly. -->
-
-            <!-- The entry for the Discovery Manifest API (a self-reference). -->
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-                version="5.0.0"
-            >
-                <url>https://ewp.dev.url.edu:10007/dev_manifest.xml</url>
-            </discovery>
-
-            <!-- Some other API, just for the purpose of example. Each API entry has a
-            different XML namespace and a different structure. These structures are often
-            quite similar to each other, but sometimes they're not. -->
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
-                <!-- Note, that ewp:admin-email and ewp:admin-notes can be defined both on the
-                global level, and on the API level. -->
-                <ewp:admin-email>cripoll@rectorat.url.edu</ewp:admin-email>
-                <ewp:admin-email>alberto.martin@closerideas.com</ewp:admin-email>
-                <ewp:admin-notes>Echo service covered by httpSig security</ewp:admin-notes>
-
-                <!-- Many APIs define the security requirements of their implementations with help
-                of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
-                <http-security>
-                    <sec:client-auth-methods>
-                        <!--<tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />-->
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <!--<tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>-->
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-
-                <!-- The URL at which this Echo API is served. See Echo API's manifest-entry.xsd
-                file for details. -->
-                <url>https://ewp.dev.url.edu:10007/api/echo</url>
-            </echo>
-        </r:apis-implemented>
-
-        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-            <hei id="url.edu">
-                <!--<other-id type="pic"></other-id>-->
-                <other-id type="erasmus">E  BARCELO16</other-id>
-                <!--<other-id type="erasmus-charter"></other-id>-->
-                <name xml:lang="es">Universitat Ramon Llull</name>
-            </hei>
-        </mf:institutions-covered>
-
-        <client-credentials-in-use>
-
-            <!-- This one is used for TLS Client Authentication (optional) -->
-            <certificate>MIIHxzCCBa+gAwIBAgIQDFZPdLYD82kFwDCwLrIHdzANBgkqhkiG9w0BAQwFADBEMQswCQYDVQQG
-EwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENB
-IDQwHhcNMjAwNzE1MDAwMDAwWhcNMjIwNzE1MjM1OTU5WjCBvjELMAkGA1UEBhMCRVMxDjAMBgNV
-BBETBTA4MDIyMRIwEAYDVQQIEwlCYXJjZWxvbmExEjAQBgNVBAcTCUJhcmNlbG9uYTEcMBoGA1UE
-CRMTQ2FsbGUgQ2xhcmF2YWxsIDEtMzEgMB4GA1UEChMXVW5pdmVyc2l0YXQgUmFtb24gTGx1bGwx
-HTAbBgNVBAsMFFNlcnZlaXMgSW5mb3Jtw6B0aWNzMRgwFgYDVQQDEw9idXMtZGV2LnVybC5lZHUw
-ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKYdocP6lvclPwquEg2oA2MtWa56iVvdim
-FSmw3dOQq8gzMUpDsp0WNpNOm4TuLgD4TqTW3QsViiNyqDqtjc+/TdJJp6636st97BvCp+nFqPYM
-B/7oNi8lhlJbfsthh3b1k7ky5Y/Duc+8ZHKPQuySTI8nL7rRj4lVXrzk85DjTxvqvww9cHaDv297
-vtbt5uAuoGDybgpMDjylZegkXDyZna1gS1Jxo2BHN8lUKHksV8fNljYa4GQS3EHWZPMxBJ3a3hVF
-sJqr4geXqGEPCjucvqwJLMAyxQkgOGyU52ftYz7OifXaNBn7JZ5FT9O2jlqTD0at91ZonBBD+2kT
-BHchAgMBAAGjggM4MIIDNDAfBgNVHSMEGDAWgBRvHTVJEGwy+lmgnryK6B+VvnF6DDAdBgNVHQ4E
-FgQUMt5lD+vnP26K/qDr8rLNRFR1AbkwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYD
-VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAk8wJTAj
-BggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMD8GA1UdHwQ4MDYw
-NKAyoDCGLmh0dHA6Ly9HRUFOVC5jcmwuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcmwwdQYI
-KwYBBQUHAQEEaTBnMDoGCCsGAQUFBzAChi5odHRwOi8vR0VBTlQuY3J0LnNlY3RpZ28uY29tL0dF
-QU5UT1ZSU0FDQTQuY3J0MCkGCCsGAQUFBzABhh1odHRwOi8vR0VBTlQub2NzcC5zZWN0aWdvLmNv
-bTAvBgNVHREEKDAmgg9idXMtZGV2LnVybC5lZHWCE3d3dy5idXMtZGV2LnVybC5lZHUwggF/Bgor
-BgEEAdZ5AgQCBIIBbwSCAWsBaQB1AEalVet1+pEgMLWiiWn0830RLEF0vv1JuIWr8vxw/m1HAAAB
-c1L3dnwAAAQDAEYwRAIgBaNCYa8mtoT0SnDD8n0/N7+GsKqIrZusiKKr1y+0BmkCIE40odCUImY1
-oEHwODEAoLmsXLv/MwPYVQePDGSxBNAMAHcA36Veq2iCTx9sre64X04+WurNohKkal6OOxLAIERc
-KnMAAAFzUvd2pAAABAMASDBGAiEAkCr2tgX3KSEiLnnlr3kR8SsBxIy0pUQasNG+n/2NhvMCIQDv
-cM95i/v/fciRAD7AnPlA5L3FIhA+zgUwTT3TUYClwwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEA
-KQaNsgiaN9kTAAABc1L3dnUAAAQDAEgwRgIhAKHghJL0v/W1Jq6QhwGZ49oEhTled5q5Z1CL8JCy
-hgoFAiEAnedJRtd7qKC1ZknZVInYSvG0LpydmFoDuef3iIFqQ2UwDQYJKoZIhvcNAQEMBQADggIB
-AFptvPpggqdr9nH44KuwqhcMQaO0YoCSIGIYpP9MI7E53wBpwr1EjgtzELiskmaMK2T8wt2H9haX
-DCe23cV48K2eF95zTIIpOjvT9cIdu6/8Px4lHZclFCt6DHdel6QoAdoV1jmUDGGvZapwsxOIYK1q
-OxtyMW62TmZuO8Wg+zfIsYO0YAfLDkZAowW1ulETl6WMST1a/Jm5xPKS9QzWKBdoCGoXQzenTpNK
-Ac8quCgQY9oEyOohA6ctEqRK/o0zGHksgWLOQF7401FliX63Q0/Zvu0xywy+k9LJXLCz4uDVgtgG
-BDm++M0mseJfusPra+yTi06/L/dsVoLbaSFCJeV99KcAO/bKWPAVn9bmEcfKpTFKJC9VwS+CFwka
-/yZp/qHxpdVkHoPb2GSYyf271VpkUHA8vZE9D14C2Zca0W/dDn4B8k+zPuv0ta/eiHBnjH6aWPPa
-9W8hm5MG0l8eBNZVMiXBRu2zPhIguoDRtXeo1I1U5rjMTFf+tArcpQoRFuxPSF8Kk8vnrzndyzX3
-VtdJn9tdmR/YXhQyO/3iUJtw8uRzZc4K+JRk2geVdcKKBCBs9x0hwYhJWs+3aNFyp/w0UZGF1Vtw
-5x9z2HTlvV2OY9tCCJXJU0+y7fbnuP3bEqHjpRqCn2BIbh/fyTLpjTVonPnTD7UvTIOvZcSKoVdC</certificate>
-
-            <!-- And this one is used for HTTP Signature Authentication -->
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
-phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
-DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
-e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
-RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
-EwR3IQIDAQAB</rsa-public-key>
-        </client-credentials-in-use>
-
-        <server-credentials-in-use>
-            <!-- Used for HTTP Signature Authentication -->
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
-phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
-DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
-e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
-RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
-EwR3IQIDAQAB</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        </head>
+    <body onload="document.forms[0].submit()">
+        <noscript>
+            <p>
+                <strong>Note:</strong> Since your browser does not support JavaScript,
+                you must press the Continue button once to proceed.
+            </p>
+        </noscript>
+        
+        <form action="https&#x3a;&#x2f;&#x2f;identitat.url.edu&#x2f;nidp&#x2f;saml2&#x2f;sso" method="post">
+            <div>
+                                
+                <input type="hidden" name="SAMLRequest" value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c2FtbDJwOkF1dGhuUmVxdWVzdCB4bWxuczpzYW1sMnA9InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDpwcm90b2NvbCIgQXNzZXJ0aW9uQ29uc3VtZXJTZXJ2aWNlVVJMPSJodHRwOi8vbG9jYWxob3N0OjkwMDcvc2FtbC9TU08iIERlc3RpbmF0aW9uPSJodHRwczovL2lkZW50aXRhdC51cmwuZWR1L25pZHAvc2FtbDIvc3NvIiBGb3JjZUF1dGhuPSJmYWxzZSIgSUQ9ImFjaWk1MGM4OGhqMzVlajI0Y2ZjMDVnMzc4aWVhNiIgSXNQYXNzaXZlPSJmYWxzZSIgSXNzdWVJbnN0YW50PSIyMDIxLTA3LTE1VDEwOjQ0OjU1LjEzOVoiIFByb3RvY29sQmluZGluZz0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmJpbmRpbmdzOkhUVFAtUE9TVCIgVmVyc2lvbj0iMi4wIj48c2FtbDI6SXNzdWVyIHhtbG5zOnNhbWwyPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj5lZHUudXJsLmFwcC1ndXMtZGV2PC9zYW1sMjpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+PGRzOlNpZ25lZEluZm8+PGRzOkNhbm9uaWNhbGl6YXRpb25NZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiLz48ZHM6U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnI3JzYS1zaGExIi8+PGRzOlJlZmVyZW5jZSBVUkk9IiNhY2lpNTBjODhoajM1ZWoyNGNmYzA1ZzM3OGllYTYiPjxkczpUcmFuc2Zvcm1zPjxkczpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjZW52ZWxvcGVkLXNpZ25hdHVyZSIvPjxkczpUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiLz48L2RzOlRyYW5zZm9ybXM+PGRzOkRpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNzaGExIi8+PGRzOkRpZ2VzdFZhbHVlPnJ5Z0cxMjNpdUhORzFyaHlKQ2tnT3FxbnV1cz08L2RzOkRpZ2VzdFZhbHVlPjwvZHM6UmVmZXJlbmNlPjwvZHM6U2lnbmVkSW5mbz48ZHM6U2lnbmF0dXJlVmFsdWU+TWFtS09GNG5URStPanUxd0RscU9HUFpMTStSWVNnczJ5MWt1Y0JKcStqeUNxc1VVQnFQNXpxZVJnVHIzcWxpbVhIZTltdG53bEp1RHhIVE1LWFFLaXFiZGwydHY4UkZWYjExSjdidG1CSnJtUmMxVEtxcnl1U3JEVlJudVpuaW1hZlJNczFWdElHZVlJOFhGQUwxMjFHWStSbCtrUE80OFZnMWh6alhVVktZenJlaXBseHcwSEFvNVUwdUN0RTNwVXl2dXRhR1VHVlpGRU5TVEd3a3BYRU5vVmdZZENTS0NRWU1sUWRjbkV4QzZyTnU2WlNWZmpHM0F2b1N3YThUeEV2ZE5MQUNiNzBpK2xBNWtvbEI3SENHVlVJUmQvd1A3UGpEV0hZTkU3TjQvZkd6SzVFN0lDQ3lzZURPWnhFOUkxR1FrYlZKOERXWkVlWFpjeUJVQkpRPT08L2RzOlNpZ25hdHVyZVZhbHVlPjxkczpLZXlJbmZvPjxkczpYNTA5RGF0YT48ZHM6WDUwOUNlcnRpZmljYXRlPk1JSURqVENDQW5XZ0F3SUJBZ0lFYVl5TW96QU5CZ2txaGtpRzl3MEJBUXNGQURCM01Rc3dDUVlEVlFRR0V3SkZVekVTTUJBR0ExVUUKQ0JNSlFtRnlZMlZzYjI1aE1SSXdFQVlEVlFRSEV3bENZWEpqWld4dmJtRXhGREFTQmdOVkJBb1RDME5zYjNObGNrbGtaV0Z6TVJRdwpFZ1lEVlFRTEV3dERiRzl6WlhKSlpHVmhjekVVTUJJR0ExVUVBeE1MUTJ4dmMyVnlTV1JsWVhNd0hoY05NakF3TWpFeE1URXhNVEU1CldoY05NekF3TWpBNE1URXhNVEU1V2pCM01Rc3dDUVlEVlFRR0V3SkZVekVTTUJBR0ExVUVDQk1KUW1GeVkyVnNiMjVoTVJJd0VBWUQKVlFRSEV3bENZWEpqWld4dmJtRXhGREFTQmdOVkJBb1RDME5zYjNObGNrbGtaV0Z6TVJRd0VnWURWUVFMRXd0RGJHOXpaWEpKWkdWaApjekVVTUJJR0ExVUVBeE1MUTJ4dmMyVnlTV1JsWVhNd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUNOCmFtSTNvWll0Nk9RTTNsMmNaczZUMVJkMnN0ZFdQYStaZ202RzQwbVpLM09mY0xyVEN4cVpLZ3phZ29PcWNieFdsQjgzQlM2TG9GTU4KRFZwTmg5aUhLcDRoaUQveE5aL29xd1FIUmRoWDZIUzRndXdPa3U1RDFZNmdYSWJzOWZBSTZMK0JUd0c4NlV4UEtBZWtkR1YwYVljYwp2eWVTTTc3Tm1PSEFLQ25paXlrUk00S04zTTlxbmhmNk1HV21xMHJIWVNIRWlvTTdyOHArWERqVDNBN0wyTlVRZUFxYXBvWEdYbk1yCnczZEFMY21hTjh0TFdwVC9sc0pGM0EvZlVlMVlUZWpUcXMwTlAySktsYW5aOXp4RkFJeTFFZzFOWmczTzNOQjg3QzAyVTVUcENTQU4KZVdDaGRreEg3cHFBQTMvaXJBMFdDOG00WUgwOUh3b3I4Q1V6QWdNQkFBR2pJVEFmTUIwR0ExVWREZ1FXQkJRT2VtcDdSSG0ybFlDUgp6ZWlOUE9HQkwwSjVxREFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBRXF2NGFSNktIekVrK1lpcjhCSXVtUDh4OWNCU2dOWmdicXJlCnBFc3RaMUViU01rQUwxajFaSHg2YnhrcG4vcVNRWXI2TmFyb29jQTNiQzF3Y3JiaDV6MkwyNlF1dThJNHZXZ1hUTldZWUhUR3JNcWUKWHArR0xPdk9hVXB3eHQxTjhOVmRrTVlNL1ppMVZWeEJpOHBZajB5bTY4Q1BoVnYra1BZajNaS0habHN2TVRIcnljOUVsV2FhM1cvQgpDV0NUWDdObXFsanhEMXA5b2tQR3IwNnBXbEhVNVZtWGYyVXo0Z1BqbW0zYWd5bktkazkwSzJOWDVERDhJQWt0Rm1rZU5hY2RlNktaCm1BaDY5N1R5eVhDZHYxRld3Mnl1aVZhYWsxRWtJQTU4K3lMNDVHTUJuVlZvMi9yR054WThDN1ZzTjgrRUxPU0oxa2szamdkMXd1aGMKalE9PTwvZHM6WDUwOUNlcnRpZmljYXRlPjwvZHM6WDUwOURhdGE+PC9kczpLZXlJbmZvPjwvZHM6U2lnbmF0dXJlPjwvc2FtbDJwOkF1dGhuUmVxdWVzdD4="/>                
+                                
+            </div>
+            <noscript>
+                <div>
+                    <input type="submit" value="Continue"/>
+                </div>
+            </noscript>
+        </form>
+            </body>
+</html>
