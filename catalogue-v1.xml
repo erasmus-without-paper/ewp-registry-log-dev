@@ -33210,6 +33210,140 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-notes>Version 01.00.00 of EWPCV manifest</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://pewpcv.umh.es/EWPWeb/discovery</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-notes>Echo service covered by tls or httpSig security</ewp:admin-notes>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://pewpcv.umh.es/EWPWeb/echo</e2:url>
+            </e2:echo>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://pewpcv.umh.es/EWPWeb/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://pewpcv.umh.es/EWPWeb/iias/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://pewpcv.umh.es/EWPWeb/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://pewpcv.umh.es/EWPWeb/iias/approval</iaa1:url>
+                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://pewpcv.umh.es/EWPWeb/iias/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://pewpcv.umh.es/EWPWeb/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://pewpcv.umh.es/EWPWeb/omobilities/get</oml1:get-url>
+                <oml1:index-url>https://pewpcv.umh.es/EWPWeb/omobilities/index</oml1:index-url>
+                <oml1:update-url>https://pewpcv.umh.es/EWPWeb/omobilities/update</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://pewpcv.umh.es/EWPWeb/omobilities/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>umh.es</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="9b5a23e967c0e7fadc5e50c40aa8d46badf2196f75c14d0e51eeb7a7e8d46944"/>
+            <rsa-public-key sha-256="f7ad3db2613736968e36df9ac87ed4b70f88d6c738c2c2b6ca00692a2f992913"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="f7ad3db2613736968e36df9ac87ed4b70f88d6c738c2c2b6ca00692a2f992913"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>susanna.bianchi@unipi.it</ewp:admin-email>
         <ewp:admin-notes>UNIPI - TEST Service</ewp:admin-notes>
         <apis-implemented>
@@ -46669,6 +46803,10 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="en">UNIVERSITATEA DE MEDICINA, FARMACIE, STIINTE SI TEHNOLOGIE DIN TARGU MURES</name>
             <name xml:lang="ro">UNIVERSITATEA DE MEDICINA, FARMACIE, STIINTE SI TEHNOLOGIE DIN TARGU MURES</name>
         </hei>
+        <hei id="umh.es">
+            <name xml:lang="en">Universitas Miguel Hernandez</name>
+            <name xml:lang="es">Universitas Miguel Hernandez</name>
+        </hei>
         <hei id="umons.ac.be">
             <other-id type="erasmus">B  MONS21</other-id>
             <other-id type="euc">256525-IC-1-2010-1-BE-ERASMUS-EUCX-1</other-id>
@@ -48819,6 +48957,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             vWUcx+2/Tw9BmOiMtQ7gQROXwIo4c58HIpQ0PyYr9bPUTPgwUuiGJXgPD17795OANlAoPnu1AIB+
             HKTwyeJJPnQ2JwAu8ROWxwfsf2l26KhJxGyNxpEXtET5Ltg3SnbLVnBTtDCvVjxdCXDYXYehK7CY
             zVdp/wIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="f7ad3db2613736968e36df9ac87ed4b70f88d6c738c2c2b6ca00692a2f992913">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuNCKxCEy03Bq7ZgyNWfMPX9Q/2ZCtFHO
+            YAYxuHAjWXAMFJS4TjjMVRss0vhpGNj2sc64Lmnct2QTueph0dmN9nzjFSe4HAA+gvhDBAOzk3/p
+            DRH1++erUJaKJku87rtfjpNAVaHlg5U7HrI00O9+u5rxFfe+HrUDLzqUUppXtpk/6ojeeygz1v8C
+            TsoGYUGwpFgmPCbSsxnh046XE7S84vN6v1TrlJWhSVzNcxEM1PNnKMhR06WxDLWkqwL3oCGquJEK
+            wWzbQPQzTPQ6BLt9o6kq40FbIdHe8fOuMlnjydCy5lRfZirn68Oy3KAR3U7e0mdFJQnhT1HypBqF
+            ioglTQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="f904fbf18adeb79e4c273db5a49c3edebbb5e7890073e28aa22773754f2bf66b">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4Ifg/CTHZHYqPQswm3+rgRqCxKMbfmFS
