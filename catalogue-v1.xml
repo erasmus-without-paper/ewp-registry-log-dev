@@ -14691,8 +14691,8 @@
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -14710,9 +14710,9 @@
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
                         <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -14731,9 +14731,9 @@
             <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
                         <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -14756,8 +14756,8 @@
             >
                 <ia6:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -14781,8 +14781,8 @@
             >
                 <ia3:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -14803,8 +14803,8 @@
             <ia2:iias version="2.2.2">
                 <ia2:http-security>
                     <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -14822,16 +14822,85 @@
                 <ia2:max-iia-codes>1</ia2:max-iia-codes>
                 <ia2:index-url>https://ewp-test.unibo.it/ewp/rest/iia/v2/index</ia2:index-url>
             </ia2:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewp-test.unibo.it/ewp/rest/iia-cnr/v2</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ewp-test.unibo.it/ewp/rest/iias-approval/v1</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://ewp-test.unibo.it/ewp/rest/iia-approval-cnr/v1</iaac1:url>
+            </iaac1:iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>unibo.it</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="187653265883417e645dabf655606359a9202f70dc1ac39c84f01433a91244b8"/>
+            <certificate sha-256="2ebaf19f001a29c9c499a56ffdc4fa53bfbea69d4f4d0bcdda1d13f86abebc8e"/>
+            <certificate sha-256="2ebaf19f001a29c9c499a56ffdc4fa53bfbea69d4f4d0bcdda1d13f86abebc8e"/>
+            <certificate sha-256="2ebaf19f001a29c9c499a56ffdc4fa53bfbea69d4f4d0bcdda1d13f86abebc8e"/>
             <rsa-public-key sha-256="42aee4a89e3192c77c0c6bf17f3d016fe0a842471a2f60444763505689089548"/>
+            <rsa-public-key sha-256="be134ba794574695588fecca3c972961496ad5f235b8cb252e8ff40c3a55f2e5"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
             <rsa-public-key sha-256="42aee4a89e3192c77c0c6bf17f3d016fe0a842471a2f60444763505689089548"/>
+            <rsa-public-key sha-256="be134ba794574695588fecca3c972961496ad5f235b8cb252e8ff40c3a55f2e5"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -48670,6 +48739,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             3QXJJgGhpjQdjmOBH6713lkAhIp0qmAx1UnYIVUkMOGvdgSNR+RgJTkHixVH+T0zIlgKG81tr3wD
             Dyntm314ieJp0Oto6ClOQF4krFaM3a2X42Pl0t/VOR45EpTjwDFAyJdIJlXd8b1y6w56QzobQqik
             pLJpweozkGsameiqbz1tMlxFAgMBAAE=
+        </rsa-public-key>
+        <rsa-public-key sha-256="be134ba794574695588fecca3c972961496ad5f235b8cb252e8ff40c3a55f2e5">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxBWIvHsYa6jyc5SPqnEIyyfKYy5heVH8
+            rmKQLVLZoKX6QF8SYfPHe2dIHe9iWZ1gpBIm4wH7HFAaHC8j/LSKBMhNBZK24D2F44mXiKKKQ3Yz
+            Akr3vn6QnXBM7MU5P+XOY8qtbLJdpVn9c6+338QSVqDse//I0gaDWY/fZFPwy219/iGYPdCp6gVd
+            sXjphqYdA4n2F5vQWirptLGYq1hW6rwLmMiSXUxDHma+wDIZy8pF+6RRJ12vENUMjSLHAs4FKM6W
+            Y/2sJKgLL8WGVj2xftlTKdYHREAMyUFJKcpQmA+syOHTWFhBIJP06pSzVIfjX/XByAzrH1vxHGIZ
+            xa8h3QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="c0124f5082fedf5185ec429744ec219a74efca801be26ccfdc85dbaa36e4b21b">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq4eR/hqmpeRFV2aJd8qPY95VwUyue4lT
