@@ -27477,38 +27477,6 @@
     </host>
     <host>
         <apis-implemented>
-            <d5:discovery version="5.0.0">
-                <ewp:admin-email>ewp@tiss.tuwien.ac.at</ewp:admin-email>
-                <d5:url>https://ewptest.tiss.tuwien.ac.at/manifest</d5:url>
-            </d5:discovery>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://ewptest.tiss.tuwien.ac.at/ewp/ounit</ou2:url>
-                <ou2:max-ounit-ids>50</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>50</ou2:max-ounit-codes>
-            </ou2:organizational-units>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://ewptest.tiss.tuwien.ac.at/ewp/iias-approval</iaa1:url>
-                <iaa1:max-iia-ids>50</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -27520,6 +27488,22 @@
                 </iac2:http-security>
                 <iac2:url>https://ewptest.tiss.tuwien.ac.at/ewp/iia-cnr</iac2:url>
             </iac2:iia-cnr>
+            <d5:discovery version="5.0.0">
+                <ewp:admin-email>ewp@tiss.tuwien.ac.at</ewp:admin-email>
+                <d5:url>https://ewptest.tiss.tuwien.ac.at/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewptest.tiss.tuwien.ac.at/ewp/inst</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -27534,6 +27518,21 @@
                 </iaac1:http-security>
                 <iaac1:url>https://ewptest.tiss.tuwien.ac.at/ewp/iia-approval-cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-la-cnr</omlc1:url>
+                <omlc1:max-omobility-ids>50</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -27551,6 +27550,21 @@
                 <ia6:max-iia-codes>50</ia6:max-iia-codes>
                 <ia6:index-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/index</ia6:index-url>
             </ia6:iias>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ewptest.tiss.tuwien.ac.at/ewp/iias-approval</iaa1:url>
+                <iaa1:max-iia-ids>50</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
             <e2:echo version="2.0.1">
                 <ewp:admin-email>ewp@tiss.tuwien.ac.at</ewp:admin-email>
                 <e2:http-security>
@@ -27563,33 +27577,6 @@
                 </e2:http-security>
                 <e2:url>https://ewptest.tiss.tuwien.ac.at/echo</e2:url>
             </e2:echo>
-            <omlc1:omobility-la-cnr
-                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <omlc1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </omlc1:http-security>
-                <omlc1:url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-la-cnr</omlc1:url>
-                <omlc1:max-omobility-ids>50</omlc1:max-omobility-ids>
-            </omlc1:omobility-la-cnr>
-            <in2:institutions version="2.1.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://ewptest.tiss.tuwien.ac.at/ewp/inst</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.1"
@@ -27607,6 +27594,19 @@
                 <oml1:update-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/update</oml1:update-url>
                 <oml1:max-omobility-ids>50</oml1:max-omobility-ids>
             </oml1:omobility-las>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewptest.tiss.tuwien.ac.at/ewp/ounit</ou2:url>
+                <ou2:max-ounit-ids>50</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>50</ou2:max-ounit-codes>
+            </ou2:organizational-units>
         </apis-implemented>
         <institutions-covered>
             <hei-id>tuwien.ac.at</hei-id>
