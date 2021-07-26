@@ -14073,6 +14073,28 @@
     <host>
         <ewp:admin-notes>This is a EWP reference connector instance.</ewp:admin-notes>
         <apis-implemented>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ewp.uma.es/rest/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://ewp.uma.es/rest/iias/index</ia6:index-url>
+            </ia6:iias>
+            <d4:discovery version="4.1.0">
+                <d4:url>https://ewp.uma.es/rest/manifest</d4:url>
+            </d4:discovery>
             <in2:institutions version="2.2.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -14100,28 +14122,6 @@
                 </e2:http-security>
                 <e2:url>https://ewp.uma.es/rest/echo</e2:url>
             </e2:echo>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://ewp.uma.es/rest/manifest</d4:url>
-            </d4:discovery>
-            <ia6:iias
-                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.1"
-            >
-                <ia6:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="false"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://ewp.uma.es/rest/iias/get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://ewp.uma.es/rest/iias/index</ia6:index-url>
-            </ia6:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uma.es</hei-id>
