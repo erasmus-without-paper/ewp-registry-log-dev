@@ -43673,6 +43673,68 @@ https://ewp-dev.upc.edu/api/echo
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>bach-admin@wu.ac.at</ewp:admin-email>
+        <ewp:admin-notes>I didn't expect the Spanish Inquisition</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="4.0.1">
+                <d5:url>https://bach.wu.ac.at/zopevc/test/ewp/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <ewp:admin-email>bach-info@wu.ac.at</ewp:admin-email>
+                <ewp:admin-notes>it's dead, that's what wrong with it</ewp:admin-notes>
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://bach.wu.ac.at/zopevc/test/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <ewp:admin-email>bach-info@wu.ac.at</ewp:admin-email>
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://bach.wu.ac.at/zopevc/test/ewp/institutions</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <ewp:admin-email>bach-info@wu.ac.at</ewp:admin-email>
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://bach.wu.ac.at/zopevc/test/ewp/omobility-las-get</oml1:get-url>
+                <oml1:index-url>https://bach.wu.ac.at/zopevc/test/ewp/omobility-las-index</oml1:index-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>wu.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="35c207d72a4c18adfd0fe7993c8479410a3c71a1926ed23868ce802e9cd70734"/>
+            <rsa-public-key sha-256="7a90094c55cc937a9ddde21a77c18be4df6a1f21d1d96d99b20eddb3f5109ebe"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -47938,6 +48000,11 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="en">Windesheim University of Applied Sciences</name>
             <name xml:lang="nl">Windesheim University of Applied Sciences</name>
         </hei>
+        <hei id="wu.ac.at">
+            <other-id type="erasmus">A WIEN05</other-id>
+            <other-id type="pic">999616138</other-id>
+            <name xml:lang="de">WIRTSCHAFTSUNIVERSITAT WIEN</name>
+        </hei>
         <hei id="www.kth.se">
             <other-id type="erasmus">S  STOCKHO04</other-id>
             <other-id type="pic">999990946</other-id>
@@ -48634,6 +48701,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             Ikh2HcW5slcLwRihGZzQA1UccqBNuuCVY7a1XY/C84qNcmRwcZzzHfqJyMVp/V3eoxeT7ZMYp3Fh
             IdXSQjcBL5LQXMbg7OpCVgSn+tQYO/gCnUcPEbNnChH3Y9rWBGIijkc2A2itvVjjL6ey+4vfbRdi
             l6EzpwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="7a90094c55cc937a9ddde21a77c18be4df6a1f21d1d96d99b20eddb3f5109ebe">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1uKvp/ZsmUT1i1YrMJHAurOTSdqxUOLy
+            OYyjYneuFiR10pmYPbPbd1QpFPDTQPen42uqZRISbjClvKxGCjP7nhgaPQj8nDMzE0aDhZw5f2g3
+            P3lGkRXgVfk8XzwExb4NFtijIOd3GDVfNHoUZxJNoY5IhxzKNIby4IFuKnKOYCyn21YEfR1nJomi
+            2jHqaDQjouQ5+t8v00T2i30oYTId+hZRpDWI4U5JTj5Z1dm2l/vScaIxCZ6nMD1yrnq50IHcp2Oo
+            YJhAj9+LHJJ/l0lxmz8LV1MTW6sjk4cb/w2uRvDQkv+hDkNA1NnX4v7FT8AHy9Y/X/QbN1MKBNac
+            Nly45QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="7af6f7aaac6f1d17b9fefcab9712ed4f65e9d6adf1e3a6120354d9f2f697b1ff">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jsChSAwRiG83Ami8z2lMHyvFJeHbTF2
