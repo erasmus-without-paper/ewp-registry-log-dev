@@ -94,6 +94,18 @@
                 file for details. -->
                 <url>https://ewp.dev.url.edu:10007/api/echo</url>
             </echo>
+            <institutions>
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.dev.url.edu:10007/api/institutions</url>
+                <max-hei-ids>1</max-hei-ids>
+            </institutions>
         </r:apis-implemented>
 
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
