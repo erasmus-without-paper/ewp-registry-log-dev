@@ -6,6 +6,7 @@
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xsi:schemaLocation="
         https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
@@ -94,18 +95,18 @@
                 file for details. -->
                 <url>https://ewp.dev.url.edu:10007/api/echo</url>
             </echo>
-            <institutions>
-                <http-security>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.dev.url.edu:10007/api/institutions</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
+                </in2:http-security>
+                <in2:url>https://ewp.dev.url.edu:10007/api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
         </r:apis-implemented>
 
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
