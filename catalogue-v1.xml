@@ -44164,6 +44164,20 @@ https://ewp.des.upc.edu/api/echo
                 </e2:http-security>
                 <e2:url>https://mobility.fh-kufstein.ac.at/testmobility/ewp/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://mobility.fh-kufstein.ac.at/testmobility/ewp/institutions</in2:url>
+                <in2:max-hei-ids>2</in2:max-hei-ids>
+            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>fh-kufstein.ac.at</hei-id>
