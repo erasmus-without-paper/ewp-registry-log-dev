@@ -42746,6 +42746,67 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>berlage@caci.nl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewpota1.osiris-link.nl/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewpota1.osiris-link.nl/echo</e2:url>
+            </e2:echo>
+            <iac2:iia-cnr version="2.0.1">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewpota1.osiris-link.nl/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ewpota1.osiris-link.nl/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>10</ia6:max-iia-ids>
+                <ia6:max-iia-codes>10</ia6:max-iia-codes>
+                <ia6:index-url>https://ewpota1.osiris-link.nl/iias/index</ia6:index-url>
+            </ia6:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ru.nl</hei-id>
+            <hei-id>uu.nl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="e29f840466ab68f73f1e558a0203e8ba50de95d5a900dd1a24b7f580647740f2"/>
+            <certificate sha-256="2298cb813015402f3baa70e5a51c6c13d7a7677ab85c190fb4156006aa6a89be"/>
+            <rsa-public-key sha-256="5859a960108da193e4b880fa29136baf61620548a4d8b865c7a57e76b0cfa26e"/>
+            <rsa-public-key sha-256="7c9fde1d877c7a5caaa7cdb0d0c7cb7d3900eeb6e90e0ac5964e7e25af15beb5"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="5859a960108da193e4b880fa29136baf61620548a4d8b865c7a57e76b0cfa26e"/>
+            <rsa-public-key sha-256="7c9fde1d877c7a5caaa7cdb0d0c7cb7d3900eeb6e90e0ac5964e7e25af15beb5"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>glemon@hmu.gr</ewp:admin-email>
         <ewp:admin-email>vfasoulas@hmu.gr</ewp:admin-email>
         <ewp:admin-notes>HMU EWP manifest file.</ewp:admin-notes>
@@ -48087,6 +48148,12 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="erasmus">DK KOBENHA39</other-id>
             <name xml:lang="en">Rhythmic Music Conservatory</name>
         </hei>
+        <hei id="ru.nl">
+            <other-id type="erasmus">ru.nl</other-id>
+            <other-id type="erasmus-charter">ru.nl</other-id>
+            <other-id type="pic">ru.nl</other-id>
+            <name xml:lang="en">ru.nl</name>
+        </hei>
         <hei id="rug.nl">
             <other-id type="erasmus">NL GRONING01</other-id>
             <other-id type="pic">999989782</other-id>
@@ -49493,6 +49560,12 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="erasmus">SF TURKU01</other-id>
             <name xml:lang="en">University of Turku</name>
         </hei>
+        <hei id="uu.nl">
+            <other-id type="erasmus">uu.nl</other-id>
+            <other-id type="erasmus-charter">uu.nl</other-id>
+            <other-id type="pic">uu.nl</other-id>
+            <name xml:lang="en">uu.nl</name>
+        </hei>
         <hei id="uv.es">
             <name xml:lang="en">University of Valencia</name>
             <name xml:lang="es">Universidad de Valencia</name>
@@ -50127,6 +50200,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             bK6dDYDyZ7H/gm9uefoi49mOp9Y9UdW4yR7aDVI34fLNXSCOlQfrl04vQ37lvFajNq6tJvkiNWqI
             j+lup4LIFluduTZ7s4L//1kQ1Yi93hiZ9z49c6qE3CUIvBW+fQI3gHg7yCG7YJMohX0TL4dxY9Am
             XRPQ0wIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="5859a960108da193e4b880fa29136baf61620548a4d8b865c7a57e76b0cfa26e">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiARYdG0TnoOZFgLMvI74GtHNKqMOkg/p
+            uaPCOHpeXfGHrmueWQ/lvHnk2RdCStwH5pc3aUXS9X0oAE7HP2kvnf4YQ50wgfmKkPW/mLocu5Iw
+            GMHBEzxP7o+NS6wkUq+veQdj483c7bbvafVVARRC7RaYuS5QacR2v8C7VyKdIu7CDdrdEw8rjeLl
+            pH8bP4pZVFkjVSoLTWM/0m0Hk5O8oif2ukHWM3Vyrk5/jqBu24K81mFlEoIy/yVk8txcADbm3Or2
+            9b72RgKXV+5CTGUkGlou6CFWiaBqnm/4lWG6Lqq/SjAxpGbiDJsWBOE/PboeM+mhO7Q0g5e7n3n+
+            31JvVQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="591befea95c88ef86539d795f18891847517e66666b9a3a509501e6f0b345f88">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiqmHlciA+DI27D/E1kDJfzNh3blTBywK
