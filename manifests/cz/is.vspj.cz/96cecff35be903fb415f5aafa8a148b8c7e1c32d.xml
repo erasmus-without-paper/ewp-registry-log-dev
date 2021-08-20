@@ -53,28 +53,23 @@
             quite similar to each other, but sometimes they're not. -->
             <echo
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
+                version="2.0.1"
             >
 
                 <!-- Many APIs define the security requirements of their implementations with help
                 of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
                 <http-security>
                     <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
 
                 <!-- The URL at which this Echo API is served. See Echo API's manifest-entry.xsd
                 file for details. -->
-                <url>https://is.vspj.cz/ewp-test/echo</url>
+                <url>https://is.vspj.cz/ewp-test/echo/</url>
             </echo>
         </r:apis-implemented>
 
