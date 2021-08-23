@@ -15476,7 +15476,21 @@
         <ewp:admin-email>jeroen.vanlent@uni-foundation.eu</ewp:admin-email>
         <ewp:admin-email>edssi@it.auth.gr</ewp:admin-email>
         <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
-        <apis-implemented/>
+        <apis-implemented>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://unizone-ewp.herokuapp.com/rest/ounits</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
         <institutions-covered>
             <hei-id>brussels.uni-foundation.eu</hei-id>
             <hei-id>uni-ruse.bg</hei-id>
