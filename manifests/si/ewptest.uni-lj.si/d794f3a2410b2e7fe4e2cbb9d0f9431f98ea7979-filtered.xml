@@ -45,7 +45,7 @@
                 <max-ounit-ids>1</max-ounit-ids>
                 <max-ounit-codes>1</max-ounit-codes>
             </organizational-units>
-            <iia-approval
+            <iias-approval
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
@@ -59,7 +59,7 @@
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/iiaApproval</url>
                 <max-iia-ids>1</max-iia-ids>
-            </iia-approval>
+            </iias-approval>
             <iias
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -77,6 +77,17 @@
                 <max-iia-codes>1</max-iia-codes>
                 <index-url>https://ewptest.uni-lj.si/ewp/communication/iia/index</index-url>
             </iias>
+            <iia-approval-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewptest.uni-lj.si/ewp/communication/iiaaCnr</url>
+            </iia-approval-cnr>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uni-lj.si">
