@@ -45648,6 +45648,18 @@ https://ewp.des.upc.edu/api/echo
                 </e2:http-security>
                 <e2:url>https://ewptest.uni-lj.si/ewp/communication/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.0.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewptest.uni-lj.si/ewp/communication/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
             <ou2:organizational-units version="2.0.0">
                 <ou2:http-security>
                     <sec:client-auth-methods>
@@ -45693,7 +45705,21 @@ https://ewp.des.upc.edu/api/echo
                 <ia6:max-iia-codes>1</ia6:max-iia-codes>
                 <ia6:index-url>https://ewptest.uni-lj.si/ewp/communication/iia/index</ia6:index-url>
             </ia6:iias>
-            <iia-approval-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr">
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewptest.uni-lj.si/ewp/communication/iiaCnr</iac2:url>
+            </iac2:iia-cnr>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr"
+                version="1.0.0"
+            >
                 <http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>

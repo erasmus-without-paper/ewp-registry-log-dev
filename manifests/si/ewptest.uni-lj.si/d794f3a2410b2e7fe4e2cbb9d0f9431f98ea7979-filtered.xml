@@ -29,6 +29,21 @@
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/echo</url>
             </echo>
+            <institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewptest.uni-lj.si/ewp/communication/institutions</url>
+                <max-hei-ids>1</max-hei-ids>
+            </institutions>
             <organizational-units
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
@@ -77,7 +92,24 @@
                 <max-iia-codes>1</max-iia-codes>
                 <index-url>https://ewptest.uni-lj.si/ewp/communication/iia/index</index-url>
             </iias>
-            <iia-approval-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr">
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewptest.uni-lj.si/ewp/communication/iiaCnr</url>
+            </iia-cnr>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr"
+                version="1.0.0"
+            >
                 <http-security>
                     <sec:client-auth-methods>
                         <httpsig:httpsig/>
