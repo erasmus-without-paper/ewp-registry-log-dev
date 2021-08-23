@@ -29,6 +29,54 @@
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/echo</url>
             </echo>
+            <organizational-units
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewptest.uni-lj.si/ewp/communication/ounits</url>
+                <max-ounit-ids>1</max-ounit-ids>
+                <max-ounit-codes>1</max-ounit-codes>
+            </organizational-units>
+            <iia-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewptest.uni-lj.si/ewp/communication/iiaApproval</url>
+                <max-iia-ids>1</max-iia-ids>
+            </iia-approval>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://ewptest.uni-lj.si/ewp/communication/iia/get</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <max-iia-codes>1</max-iia-codes>
+                <index-url>https://ewptest.uni-lj.si/ewp/communication/iia/index</index-url>
+            </iias>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uni-lj.si">
