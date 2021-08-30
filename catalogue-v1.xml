@@ -45781,18 +45781,6 @@ https://ewp.des.upc.edu/api/echo
                 </e2:http-security>
                 <e2:url>https://ewptest.uni-lj.si/ewp/communication/echo</e2:url>
             </e2:echo>
-            <in2:institutions version="2.0.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://ewptest.uni-lj.si/ewp/communication/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
             <ou2:organizational-units version="2.0.0">
                 <ou2:http-security>
                     <sec:client-auth-methods>
@@ -45838,31 +45826,17 @@ https://ewp.des.upc.edu/api/echo
                 <ia6:max-iia-codes>1</ia6:max-iia-codes>
                 <ia6:index-url>https://ewptest.uni-lj.si/ewp/communication/iia/index</ia6:index-url>
             </ia6:iias>
-            <iac2:iia-cnr version="2.0.3">
-                <iac2:http-security>
+            <iia-approval-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr">
+                <http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://ewptest.uni-lj.si/ewp/communication/iiaCnr</iac2:url>
-            </iac2:iia-cnr>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://ewptest.uni-lj.si/ewp/communication/iiaaCnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
+                </http-security>
+                <url>https://ewptest.uni-lj.si/ewp/communication/iiaaCnr</url>
+            </iia-approval-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>uni-lj.si</hei-id>
