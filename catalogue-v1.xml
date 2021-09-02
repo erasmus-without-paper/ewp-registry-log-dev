@@ -45030,7 +45030,7 @@ https://ewp.des.upc.edu/api/echo
             <d5:discovery version="5.0.0">
                 <d5:url>https://ewptest.polsl.pl/ewp/manifest</d5:url>
             </d5:discovery>
-            <e2:echo version="2.0.0">
+            <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -45107,11 +45107,11 @@ https://ewp.des.upc.edu/api/echo
                 <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia3:iias
-                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
-                version="3.0.0"
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
             >
-                <ia3:http-security>
+                <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -45120,14 +45120,13 @@ https://ewp.des.upc.edu/api/echo
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia3:http-security>
-                <ia3:get-url>https://ewptest.polsl.pl/ewp/iia/get</ia3:get-url>
-                <ia3:max-iia-ids>100</ia3:max-iia-ids>
-                <ia3:max-iia-codes>100</ia3:max-iia-codes>
-                <ia3:index-url>https://ewptest.polsl.pl/ewp/iia/index</ia3:index-url>
-                <ia3:sends-notifications/>
-            </ia3:iias>
-            <iac2:iia-cnr version="2.0.2">
+                </ia6:http-security>
+                <ia6:get-url>https://ewptest.polsl.pl/ewp/iia/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://ewptest.polsl.pl/ewp/iia/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -45142,7 +45141,7 @@ https://ewp.des.upc.edu/api/echo
             </iac2:iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -45156,11 +45155,10 @@ https://ewp.des.upc.edu/api/echo
                 </iaa1:http-security>
                 <iaa1:url>https://ewptest.polsl.pl/ewp/iia/approval</iaa1:url>
                 <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
+                version="1.0.0"
             >
                 <iaac1:http-security>
                     <sec:client-auth-methods>
@@ -45264,6 +45262,25 @@ https://ewp.des.upc.edu/api/echo
                 <imtc1:url>https://ewptest.polsl.pl/ewp/tors/cnr</imtc1:url>
                 <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
             </imtc1:imobility-tor-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewptest.polsl.pl/ewp/la/get</oml1:get-url>
+                <oml1:index-url>https://ewptest.polsl.pl/ewp/la/index</oml1:index-url>
+                <oml1:update-url>https://ewptest.polsl.pl/ewp/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>polsl.pl</hei-id>
