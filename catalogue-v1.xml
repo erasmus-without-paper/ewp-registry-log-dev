@@ -45963,7 +45963,7 @@ https://ewp.des.upc.edu/api/echo
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-notes>Version 01.00.00 of EWPCV manifest</ewp:admin-notes>
+        <ewp:admin-notes>Version 01.03.00 of EWPCV manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://preappjava.unican.es:8443/ewpcv/discovery</d5:url>
@@ -45980,6 +45980,31 @@ https://ewp.des.upc.edu/api/echo
                 </e2:http-security>
                 <e2:url>https://preappjava.unican.es:8443/ewpcv/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://preappjava.unican.es:8443/ewpcv/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://preappjava.unican.es:8443/ewpcv/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -45995,7 +46020,7 @@ https://ewp.des.upc.edu/api/echo
                 <ia6:get-url>https://preappjava.unican.es:8443/ewpcv/iias/get</ia6:get-url>
                 <ia6:max-iia-ids>100</ia6:max-iia-ids>
                 <ia6:max-iia-codes>100</ia6:max-iia-codes>
-                <ia6:index-url>https://URL_PUBLICA_EWPCV/uvEWPWeb/iias/index</ia6:index-url>
+                <ia6:index-url>https://preappjava.unican.es:8443/ewpcv/iias/index</ia6:index-url>
             </ia6:iias>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
@@ -46020,7 +46045,7 @@ https://ewp.des.upc.edu/api/echo
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://preappjava.unican.es:8443/ewpcv/approval</iaa1:url>
+                <iaa1:url>https://preappjava.unican.es:8443/ewpcv/iias/approval/get</iaa1:url>
                 <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
@@ -46085,9 +46110,6 @@ https://ewp.des.upc.edu/api/echo
                 <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
             </omlc1:omobility-la-cnr>
         </apis-implemented>
-        <institutions-covered>
-            <hei-id>unican.es</hei-id>
-        </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="b7f4fdf72c0e28af8385cc196c5648bf8cfdc38ad5fc3e1a041bcc437c639c53"/>
             <rsa-public-key sha-256="f2e6b4f982490df7df9d3b54757c7512275004210e849fb4995fbca05650982c"/>
@@ -50151,12 +50173,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="erasmus">I  CAMERIN01</other-id>
             <other-id type="pic">999845737</other-id>
             <name xml:lang="it">Universit?? degli Studi di Camerino</name>
-        </hei>
-        <hei id="unican.es">
-            <other-id type="erasmus">E SANTAND01</other-id>
-            <other-id type="pic">999880075</other-id>
-            <name xml:lang="en">University of Cantabria</name>
-            <name xml:lang="es">Universidad de Cantabria</name>
         </hei>
         <hei id="unicineca.it">
             <other-id type="erasmus">I  CINECA01</other-id>
