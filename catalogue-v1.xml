@@ -30168,7 +30168,7 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-notes>Version 01.00.00 of EWPCV manifest</ewp:admin-notes>
+        <ewp:admin-notes>Version 01.03.00 of EWPCV manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/discovery</d5:url>
@@ -30186,6 +30186,31 @@
                 </e2:http-security>
                 <e2:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/echo</e2:url>
             </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -30229,7 +30254,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/iias/approval</iaa1:url>
+                <iaa1:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/iias/approval/get</iaa1:url>
                 <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
@@ -30260,7 +30285,7 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </f1:http-security>
-                <f1:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/factsheet</f1:url>
+                <f1:url>https://ewpdesa.cpd.ua.es/uaEWPWeb/factsheet/get</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
             <oml1:omobility-las
@@ -50013,6 +50038,8 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="nl">University of Aruba</name>
         </hei>
         <hei id="ua.es">
+            <other-id type="erasmus">E ALICANT01</other-id>
+            <other-id type="pic">999895886</other-id>
             <name xml:lang="en">University of Alicante</name>
             <name xml:lang="es">Universidad de Alicante</name>
         </hei>
