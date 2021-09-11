@@ -30362,64 +30362,94 @@
     <host>
         <ewp:admin-email>roland.francois@uliege.be</ewp:admin-email>
         <apis-implemented>
-            <ewp:discovery version="5.0.0">
-                <d5:url>https://my.uliege.be/ws_penelope/EWP/manifest</d5:url>
-            </ewp:discovery>
-            <ewp:echo version="2.0.1">
+            <d5:discovery version="5.0.0">
+                <d5:url>https://my./ws_penelope/EWP/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
-                        <sec:httpsig/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec:tlscert allows-self-signed="false"/>
+                        <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </e2:http-security>
                 <e2:url>https://my.uliege.be/ws_penelope/EWP/echo</e2:url>
-            </ewp:echo>
-            <ewp:institutions version="2.1.0">
+            </e2:echo>
+            <in2:institutions version="2.2.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
-                        <sec:httpsig/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec:tlscert allows-self-signed="false"/>
+                        <sec-B1:tlscert/>
                     </sec:server-auth-methods>
                 </in2:http-security>
                 <in2:url>https://my.uliege.be/ws_penelope/EWP/institutions</in2:url>
                 <in2:max-hei-ids>10</in2:max-hei-ids>
-            </ewp:institutions>
-            <ewp:iias version="3.0.0">
-                <ia3:http-security xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd">
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
                     <sec:client-auth-methods>
-                        <sec:httpsig/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec:tlscert allows-self-signed="false"/>
+                        <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </ia3:http-security>
-                <ia3:get-url xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd">https://my.uliege.be/ws_penelope/EWP/iias/get</ia3:get-url>
-                <ia3:max-iia-ids xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd">10</ia3:max-iia-ids>
-                <ia3:max-iia-codes xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd">0</ia3:max-iia-codes>
-                <ia3:index-url xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd">https://my.uliege.be/ws_penelope/EWP/iias/index</ia3:index-url>
-            </ewp:iias>
-            <ewp:iia-cnr version="2.0.2">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec:tlscert allows-self-signed="false"/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://my.uliege.be/ws_penelope/EWP/iias/cnr</iac2:url>
-            </ewp:iia-cnr>
+                </ou2:http-security>
+                <ou2:url>https://my.uliege.be/ws_penelope/EWP/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
         </apis-implemented>
         <institutions-covered>
-            <hei-id>vinci.be</hei-id>
             <hei-id>uliege.be</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="3d430e46a4cf788163e404c3f1d0d5eefb38491abe543b72f792a8b6656e4abf"/>
+        </client-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://my.hers.be/ws_penelope/EWP/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://my.hers.be/ws_penelope/EWP/institutions</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://my.hers.be/ws_penelope/EWP/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
             <hei-id>hers.be</hei-id>
-            <hei-id>hech.be</hei-id>
-            <hei-id>heaj.be</hei-id>
         </institutions-covered>
     </host>
     <host>
@@ -48371,16 +48401,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="DE">HafenCity Universität Hamburg</name>
             <name xml:lang="en">HafenCity Universität Hamburg</name>
         </hei>
-        <hei id="heaj.be">
-            <other-id type="ERASMUS">B  NAMUR11</other-id>
-            <name xml:lang="en">College Albert Jacquard</name>
-            <name xml:lang="fr">Haute École Albert Jacquard</name>
-        </hei>
-        <hei id="hech.be">
-            <other-id type="ERASMUS">B  LIEGE43</other-id>
-            <name xml:lang="en">College Charlemagne</name>
-            <name xml:lang="fr">Haute École Charlemagne</name>
-        </hei>
         <hei id="hei.demo.usos.edu.pl">
             <other-id type="erasmus">PL WARSZAW01</other-id>
             <other-id type="pic">999572294</other-id>
@@ -48410,6 +48430,7 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="nl">Haute Ecole de Namur-Liège-Luxembourg</name>
         </hei>
         <hei id="hers.be">
+            <other-id type="erasmus">B  ARLON09</other-id>
             <name xml:lang="en">College Robert Schuman</name>
             <name xml:lang="fr">Haute École Robert Schuman</name>
         </hei>
@@ -50103,7 +50124,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <name xml:lang="en">Université Libre de Bruxelles</name>
         </hei>
         <hei id="uliege.be">
-            <other-id type="ERASMUS">B  LIEGE01</other-id>
             <other-id type="erasmus">B  LIEGE01</other-id>
             <name xml:lang="en">University of Liège</name>
             <name xml:lang="fr">Université de Liège</name>
@@ -50972,11 +50992,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="pic">915635520</other-id>
             <name xml:lang="en">VID Specialized University</name>
             <name xml:lang="no">VID Specialized University</name>
-        </hei>
-        <hei id="vinci.be">
-            <other-id type="ERASMUS">B  BRUXEL87</other-id>
-            <name xml:lang="en">College Léonard de Vinci</name>
-            <name xml:lang="fr">Haute École Léonard de Vinci</name>
         </hei>
         <hei id="vives-noord.be">
             <other-id type="erasmus">B BRUGGE11</other-id>
