@@ -1,54 +1,1263 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><ns3:manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd" xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd" xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"><ns3:host><admin-email>volenova@civ.zcu.cz</admin-email><admin-notes>EWP connector for IS/STAG</admin-notes><ns2:apis-implemented><ns23:echo version="2.0.1"><ns23:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns23:http-security><ns23:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/echo</ns23:url></ns23:echo><ns24:discovery version="5.0.0"><ns24:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/manifest</ns24:url></ns24:discovery><ns22:institutions version="2.1.0"><ns22:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/><ns26:anonymous/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns22:http-security><ns22:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/institutions</ns22:url><ns22:max-hei-ids>1</ns22:max-hei-ids></ns22:institutions><ns21:organizational-units version="2.1.1"><ns21:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/><ns26:anonymous/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns21:http-security><ns21:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/ounits</ns21:url><ns21:max-ounit-ids>10</ns21:max-ounit-ids><ns21:max-ounit-codes>10</ns21:max-ounit-codes></ns21:organizational-units><ns20:iias version="3.0.0"><ns20:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns20:http-security><ns20:get-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/iias/get</ns20:get-url><ns20:max-iia-ids>10</ns20:max-iia-ids><ns20:max-iia-codes>10</ns20:max-iia-codes><ns20:index-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/iias/index</ns20:index-url></ns20:iias><ns18:iias-approval version="0.2.1"><ns18:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns18:http-security><ns18:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/iias/approval</ns18:url><ns18:max-iia-ids>10</ns18:max-iia-ids></ns18:iias-approval><ns12:omobility-las version="1.0.1"><ns12:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns12:http-security><ns12:get-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/las/get</ns12:get-url><ns12:index-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/las/index</ns12:index-url><ns12:update-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/las/update</ns12:update-url><ns12:max-omobility-ids>10</ns12:max-omobility-ids></ns12:omobility-las><ns11:omobility-la-cnr version="1.0.0"><ns11:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns11:http-security><ns11:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/las/cnr</ns11:url><ns11:max-omobility-ids>10</ns11:max-omobility-ids></ns11:omobility-la-cnr></ns2:apis-implemented><ns3:institutions-covered><ns2:hei id="jcu.cz"><ns2:other-id type="pic">999876292</ns2:other-id><ns2:other-id type="erasmus">CZ CESKE01</ns2:other-id><ns2:other-id type="erasmus-charter">264581-LA-1-2014- CZ-E4AKA1-ECHE</ns2:other-id><ns2:name xml:lang="cs">JIHOČESKÁ UNIVERZITA V ČESKÝCH BUDĚJOVICÍCH</ns2:name><ns2:name xml:lang="en">UNIVERSITY OF SOUTH BOHEMIA IN ČESKÉ BUDĚJOVICE</ns2:name></ns2:hei></ns3:institutions-covered><ns3:client-credentials-in-use><ns3:certificate>MIIHMjCCBRqgAwIBAgIRAJWslQQ1QAZkdNiw//Ef3WAwDQYJKoZIhvcNAQEMBQAw
-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
-NlZptUTpPf2QQWqTEOGM1mFI39FxcA==
-</ns3:certificate><ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWx0pB/2NUaPJpo85VAh
-ovWOhHN1A2CXS38fI4qVtir3V2dWg95A0SOATASdLVbaxuwLpfF+/YlBgFHk6ZZk
-rYqXB1dtq0oE8zrKv+m8ip8vTGEs0La6BU6PMLnTIZVsd0Jpv4JB8F7AEvjnmtBa
-d1rYUNa38TMShf86T9dqo1XmRHaTR2ZzbL+X7ZXenHguwvXWXv59JfWi+UswsrsH
-CZJwedUilg/jFjmPz8aeWozoNATl41eaM/8AHdVr8mjQwOtHNMSQ8YDouhW++amd
-vyix1CLt7kSFxLDcAXlJcDUZ641SonAs++9S0GI25xMp4v5pCwXRPaQOfdJUbSR2
-LwIDAQAB
-</ns3:rsa-public-key></ns3:client-credentials-in-use><ns3:server-credentials-in-use><ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWx0pB/2NUaPJpo85VAh
-ovWOhHN1A2CXS38fI4qVtir3V2dWg95A0SOATASdLVbaxuwLpfF+/YlBgFHk6ZZk
-rYqXB1dtq0oE8zrKv+m8ip8vTGEs0La6BU6PMLnTIZVsd0Jpv4JB8F7AEvjnmtBa
-d1rYUNa38TMShf86T9dqo1XmRHaTR2ZzbL+X7ZXenHguwvXWXv59JfWi+UswsrsH
-CZJwedUilg/jFjmPz8aeWozoNATl41eaM/8AHdVr8mjQwOtHNMSQ8YDouhW++amd
-vyix1CLt7kSFxLDcAXlJcDUZ641SonAs++9S0GI25xMp4v5pCwXRPaQOfdJUbSR2
-LwIDAQAB
-</ns3:rsa-public-key></ns3:server-credentials-in-use></ns3:host></ns3:manifest>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <title>Portál JU - DEMO
+     - V&iacute;tejte
+  </title>
+
+  
+  <meta http-equiv="x-xrds-location"
+        content="https://wstag-test.jcu.cz/portal//xrds.xml"/>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/apple-touch-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="120x120"
+        href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="152x152"
+        href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/apple-touch-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/apple-touch-icon-180x180.png"/>
+
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/android-chrome-192x192.png"
+        sizes="192x192">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" type="image/png" href="/zdroje/portal_resources/jcu_demo/portal/img/favicon/favicon-32x32.png"
+        sizes="32x32">
+
+  <link rel="StyleSheet" type="text/css" href="/zdroje/bootstrap/dist/css/bootstrap.css?REL_210913-2144">
+  <link rel="StyleSheet" type="text/css" href="/zdroje/bootstrap/dist/css/bootstrap-theme.css?REL_210913-2144">
+  <link rel="StyleSheet" media="all" type="text/css" href="/zdroje/portal_resources/common/portal/css/portal.css?REL_210913-2144">
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/portal_resources/common/portal/css/mobile.css?REL_210913-2144">
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/portal_resources/jcu_demo/jcu_demo_color.css?REL_210913-2144">
+  <link rel="StyleSheet" href="/zdroje/css/xgui/XGui.css?REL_210913-2144">
+  <link rel="StyleSheet" href="/zdroje/css/mgui/MGui.css?REL_210913-2144" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/zdroje/js/jscalendar/calendar-cw.css" title="calendar-cw" media="all"/>
+
+
+  
+
+  <script type="text/javascript" src="/zdroje/js/COMBINED.js?REL_210913-2144"></script>
+  
+
+
+  <script type="text/javascript" src="/zdroje/bootstrap/dist/js/bootstrap.js?REL_210913-2144"></script>
+  <script type="text/javascript">
+    $.fn.bootstrapBtn = $.fn.button.noConflict();
+  </script>
+
+
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/js/footable/css/footable.bootstrap.min.css">
+  <script type="text/javascript" src="/zdroje/js/footable/js/footable.min.js"></script>
+  
+  <script type="text/javascript" charset="UTF-8" src="/zdroje/js/l10n/l10n-cs.js"></script>
+  <script type="text/javascript" src="/zdroje/js/jscalendar/lang/calendar-cs.js"></script>
+
+  <style>
+    #myAffix {
+      z-index: 1099;
+    }
+
+    #myAffix.affix {
+      top: 0;
+      width: 100%;
+      position: fixed;
+    }
+
+    .hamburgerBtn button {
+      margin-top: 0;
+    }
+
+    .mobile_header_wrapper span.app_header_center {
+      color: white;
+    }
+
+    .mobile_menu .panel {
+      border: none;
+      margin: 0;
+    }
+
+    .mobile_nav_menu_service_links {
+      padding: 6px;
+    }
+
+    .mobile_nav_menu_service_links a {
+      padding: 4px;
+      font-size: 14px;
+      white-space: nowrap;
+      line-height: 1.5em;
+    }
+
+    .mobile_nav_menu_service_links a.xg_tooltip {
+      padding-left: 12px;
+    }
+
+    #mobile_nav_menu {
+      padding-top: 50px;
+    }
+
+    #mobile_nav_menu ul.app_menubar li {
+      border-top: 0;
+    }
+
+    #mobile_nav_menu .modal-dialog, #mobile_nav_menu .modal-body {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      div.app_menu, div.app_page_menu {
+        display: none;
+      }
+
+      .mobileNavWrapper {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+<h1 class="a11y_hidden">V&iacute;tejte - 
+  Portál JU - DEMO
+</h1>
+
+<a class="a11y_hidden a11y_focusable" href="#app_page_content">Přeskočit na obsah stránky</a>
+
+<div
+  class="app_container app_container-modif_lang-cs app_container-modif_single ">
+
+  <div class="app_header_wrapper hideForMobile" role="banner" aria-label="Hlavička stránky">
+    <div class="app_header">
+
+      <div class="app_header_left">
+        <a href="http://www.jcu.cz"
+           title="Webové stránky JU - DEMO"
+           target="_blank"><span class="a11y_hidden">Webové stránky JU - DEMO</span></a>
+      </div>
+
+      <div class="app_header_center">
+        <a href="/" title="Vstupní stránka portálu JU - DEMO"
+        ><span class="a11y_hidden">Vstupní stránka portálu JU - DEMO</span></a>
+      </div>
+
+      <div class="app_header_right">
+        <div class="upper">
+
+          
+            
+            
+              
+                
+                
+                  <a class="falseLink hideForMobile" href="/saml/login?pc_originalURL=L3BvcnRhbC8" rel="nofollow"
+                     title="Přihlásit uživatele">Nepřihlášený uživatel </a>
+                  <a href="/saml/login?pc_originalURL=L3BvcnRhbC8" title="Přihlásit uživatele" rel="nofollow">Přihlásit</a>
+                
+              
+            
+          
+          
+            
+              <a href="/portal/studium/index.html?pc_lang=en" title="Switch to english">English</a>
+            
+            
+          
+        </div>
+        
+        <div class="lower">
+          
+            <a target="_blank" class="hideForMobile link_out" href="mailto:stag@rt.jcu.cz?subject=Port%C3%A1l%20STAG&amp;amp;body=P%C5%99%C3%ADjmen%C3%AD%20a%20jm%C3%A9no%3A%0AU%C5%BEivatelsk%C3%A9%20jm%C3%A9no%3A%0AStudentsk%C3%A9%20%C4%8D%C3%ADslo%3A%0A%0APopis%20chyby%20%2F%20dotazu%3A%0A%0A%0ANezapome%C5%88te%20pros%C3%ADm%20p%C5%99ilo%C5%BEit%20sn%C3%ADmek%20obrazovky!"
+               title="Kontakt na uživatelskou podporu">Kontakt na uživatelskou podporu</a><br/>
+          
+          
+          
+          
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+    
+  </div>
+
+  <div id="myAffix" class="mobile_header_wrapper affix b app_header_wrapper hideForDesktop">
+
+    <div class="app_header_wrapper">
+      <div class="app_header">
+
+
+        <div class="app_header_cell pull-left">
+          <div class="hamburgerBtn btn-group mobileNav " role="group">
+            <button role="button" class=" btn btn-primary" id="mobile_menu_display_btn" data-toggle="modal" data-target="#mobile_nav_menu" aria-label="Zobrazit navigaci">
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+      <span class="app_header_center">
+        <span>
+          V&iacute;tejte
+        </span>
+      </span>
+
+        <div class="app_header_cell  pull-right">
+          <div class="app_header_right">
+
+
+            <div class="upper">
+              
+                
+                
+                  
+                    
+                    
+                      <a href="/saml/login?pc_originalURL=L3BvcnRhbC8" title="Přihlásit uživatele" rel="nofollow">Přihlásit</a>
+                    
+                  
+                
+              
+              
+                
+                  <a href="/portal/studium/index.html?pc_lang=en" title="Switch to english">English</a>
+                
+                
+              
+            </div>
+            
+
+            <div class="lower">
+              
+                <a target="_blank" class="link_out" href="mailto:stag@rt.jcu.cz?subject=Port%C3%A1l%20STAG&amp;amp;body=P%C5%99%C3%ADjmen%C3%AD%20a%20jm%C3%A9no%3A%0AU%C5%BEivatelsk%C3%A9%20jm%C3%A9no%3A%0AStudentsk%C3%A9%20%C4%8D%C3%ADslo%3A%0A%0APopis%20chyby%20%2F%20dotazu%3A%0A%0A%0ANezapome%C5%88te%20pros%C3%ADm%20p%C5%99ilo%C5%BEit%20sn%C3%ADmek%20obrazovky!" title="Kontakt na uživatelskou podporu">Kontakt na uživatelskou podporu</a><br/>
+              
+              
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="clear"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="b mobile_menu hideForDesktop" role="navigation">
+
+    <div class="modal fade mobile_nav_menu" id="mobile_nav_menu" tabindex="-1" role="dialog" aria-label="Navigace">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+
+            <div class=" hideForDesktop mobile_nav_menu_toplinks" id="mobile_nav_menu_toplinks">
+
+              
+              <ul class=" ">
+                
+                  <li class=""><a id="toplinks_node_3" data-target="#mobile_nav_menu_node_3"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_3"
+                                  class="selected ">Vítejte
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_68616" data-target="#mobile_nav_menu_node_68616"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_68616"
+                                  class="selected collapsed">Uchazeč
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_68622" data-target="#mobile_nav_menu_node_68622"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_68622"
+                                  class="selected collapsed">Absolvent
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_61955" data-target="#mobile_nav_menu_node_61955"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_61955"
+                                  class="selected collapsed">IPS
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_64131" data-target="#mobile_nav_menu_node_64131"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_64131"
+                                  class="selected collapsed">E-learning
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_66611" data-target="#mobile_nav_menu_node_66611"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_66611"
+                                  class="selected collapsed">Aplikace StuduJU
+                  </a></li>
+                  
+              </ul>
+            </div>
+            <div id="mobile_nav_menu_accordion" class="panel panel-default mobile_nav_menu_accordion" role="tablist">
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_3" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="true"
+                     class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="toplinks_node_3">
+                  <a class=" selected page" href="/portal/studium/index.html">Vítejte</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_68616" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_68616">
+                  <a class="page" href="/portal/studium/uchazec/informace.html">Informace pro uchazeče</a><a class="page" href="/portal/studium/uchazec/eprihlaska.html">E-Přihláška</a><a class="page" href="/portal/studium/uchazec/prijimaci-rizeni.html">Přijímací řízení</a><a class="page" href="/portal/studium/uchazec/ects-prijezdy.html">ECTS příjezdy</a><a class="page" href="http://ects.jcu.cz/">Katalog předmětů<span class="link_out"></span></a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_68622" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_68622">
+                  <a class="page" href="/portal/studium/absolvent/informace.html">Úvodní informace</a><a class="page" href="/portal/studium/absolvent/registrace.html">Registrace</a><a class="page" href="/portal/studium/absolvent/prihlaseni.html">Přihlášení absolventa</a><a class="page" href="/portal/studium/absolvent/zmena-hesla.html">Zapomenuté heslo</a><a class="page" href="http://www.jcu.cz/absolvent">Web Absolvent<span class="link_out"></span></a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_61955" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_61955">
+                  <a class="link_outpage" href="https://platby.jcu.cz:4450/klient">IPS</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_64131" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_64131">
+                  <a class="link_outpage" href="https://elearning.jcu.cz/">E-learning</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_66611" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_66611">
+                  <a class="link_outpage" href="https://helpdesk.jcu.cz/sluzby/studuju-mobilni-aplikace">Aplikace StuduJU</a>
+                </div>
+              </div>
+              
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  
+
+  
+  
+    
+    
+  
+    
+    
+      <h2 class="a11y_hidden hideForMobile" id="navLevel1">Navigace první úrovně</h2>
+      <div class="app_menu" role="navigation" aria-labelledby="navLevel1">
+        <ul class="app_menubar level_1 ">
+          
+            <li class="selected "><a
+              href="/portal/studium/index.html" >Vítejte</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/uchazec" >Uchazeč</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/absolvent" >Absolvent</a>
+            </li>
+            <li class=" "><a
+              href="https://platby.jcu.cz:4450/klient" target="_blank"><span class="link_out">IPS</span></a>
+            </li>
+            <li class=" "><a
+              href="https://elearning.jcu.cz/" target="_blank"><span class="link_out">E-learning</span></a>
+            </li>
+            <li class=" "><a
+              href="https://helpdesk.jcu.cz/sluzby/studuju-mobilni-aplikace" target="_blank"><span class="link_out">Aplikace StuduJU</span></a>
+            </li>
+        </ul>
+      </div>
+      
+    
+  
+
+  
+
+
+
+
+
+    
+<script type="application/javascript">
+    jQuery(document).ready(function () {
+        // nastavim podle nastaveni v portalu
+        try {
+            civPortalRenewEvery = 300000;
+            initCivPortalSessionRenew();
+        } catch (e) {
+            console.log.call(console, e.stack || e);
+        }
+    });
+</script>
+<div id="civPortalSessionOverDialog" style="display:none; background-color: #b4b4b4">
+    <div style="padding:10pt; text-align:center; font-size: 14pt;">
+        <strong>Vzhledem k dlouhotrvající nečinnosti došlo k odpojení uživatele z portálu.</strong>
+    </div>
+    <div style="padding:10pt; text-align:center; font-size: 14pt;">
+        Klikněte, prosím, na <a href="/portal/studium/index.html" style="color: blue">tento odkaz pro obnovení připojení k portálu</a>
+    </div>
+    <div style="padding:6pt; text-align:center; font-size: 10pt;">
+        (k odpojení dochází až po 240-ti minutách nečinnosti. Pozor, na mobilních zařízeních k němu může dojít podstatně dříve).
+    </div>
+</div>
+
+
+
+  <div class="app_content" id="app_content">
+    <div class="app_page_single">
+      
+      <div class="app_page_content" id="app_page_content" role="main" aria-label="Obsah stránky, jednotlivé aplikace">
+        <div id="pc_loader_div" style="display:none; position: absolute; padding: 10pt 0pt 5pt 30pt; width: 100px; height: 30px; background: url('/zdroje/images/icons/stag/ajax-loader.gif') no-repeat left center">&nbsp;</div>
+<script type="application/javascript">
+    var pc_countdownTimer = null;
+    pc_countdownTimer = window.setInterval(function () {
+        jQuery('html, body').css('cursor', 'busy');         jQuery('#pc_loader_div').fadeIn(4000);
+        window.clearInterval(pc_countdownTimer);
+    }, 1000);
+
+</script>
+<script type="application/javascript">
+    jQuery('#pc_loader_div').remove();
+    if (typeof pc_countdownTimer != "undefined" && pc_countdownTimer != null) { window.clearInterval(pc_countdownTimer); }
+</script><table class="app_portlet_frame_out" cellpadding="0" cellspacing="0"  role="presentation"><tbody><tr><td valign="top" ><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody id="l_1"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody class="column" id="l_169502"><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: ROOT##/LoginPortlet-->
+<table id="220826" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-220826">Přihlášení (L001)</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-220826" id="cpa_220826">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='G220826validation_errors' class="xgt_validationErrors"></div>
+<div id='G220826validation_passed' class="xgt_validationPassed"></div>
+
+
+
+
+
+
+
+
+
+
+
+<form method="GET" action="/saml/login" name="loginForm" id="loginForm">
+    
+    <input type="hidden" name="pc_originalURL" value="L3BvcnRhbC8">
+    
+    <table class="ng_form_tab" cellpadding="0" cellspacing="0" style="padding-top: 3pt;">
+        <tr>
+            <th class="head" colspan="2">
+                Přihlášení do portálu:
+            </th>
+        </tr>
+        
+        
+        <tr>
+            <td class="ng_form_noback" colspan="2">
+                <div class="ng_wizard_bubles" style="margin-top: 10px; max-width: 400px; background-color: #dddff8">
+                    <div class="wizard-bubble-arrow-down"></div>
+                    Toto je TEST portal Jihoceske Univerzity (JCU). Prihlasovani je pres Shibboleth (standardni JCU identitu).
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" style="text-align: right;">
+                <input style="font-weight: bolder" type="submit" class="login_submit_button"
+                    
+                       value="Přihlásit se">
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: ROOT##/LoginPortlet-->
+</td></tr><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: StagPortletsJSR168##v210921-1534/Rozcestnik-->
+<table id="220827" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-220827">Portálový rozcestník (S087)</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-220827" id="cpa_220827">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css"  >
+  .rozcestnik-predmetDetail {
+    display:none;
+  }
+  div.staticTextContent {
+    padding: 10px 20px 0 20px;
+  }
+  div.staticTextContent p {
+    margin: 0;
+  }
+  .identitySelect input { vertical-align:bottom; }
+  div.staticTextHeader a {
+    font-weight:bold;
+  }
+  div.HideableStaticBlock div.staticTextContent {
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .rozcestnik a {
+    font-weight:bold;
+  }
+  .nolink {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+  }
+  .rozcestnikPredmetyHeader td {
+    border-bottom: 1px solid #e2e2e2;
+    font-size:10px;
+    margin: 0 0;
+    padding: 3px;
+    color: gray;
+  }
+  .rozcestnik tr {
+    vertical-align:top;
+  }
+
+  .rozcestnik td {
+    padding-top: 3px;
+  }
+
+
+.ls {
+  color: #E5B259 !important;;
+}
+.zs {
+  color: #A0C9FD !important;;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='G220827validation_errors' class="xgt_validationErrors"></div>
+<div id='G220827validation_passed' class="xgt_validationPassed"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="rozcestnik">
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="b">
+        
+        
+    </div>
+    
+  
+</div>
+
+
+<script type="text/javascript">
+$(function() {
+  $("ul.localMenu_blue li a, ul.localMenu_orange li a").each(function (i, obj) {
+    $(obj).qtip({
+      content: {
+        text: $(obj).next().find("div").html(),
+        title: { text: $(obj).next().find("h6").text() }
+      },
+      position: { at: 'right center', my: 'left center' },
+      show: { delay: 200, solo: true },
+      hide: {
+        event: 'mouseleave',
+        delay: 1000,
+        fixed: true
+      },
+      style: {
+        classes: 'ui-tooltip-rozcestnik', tip: true
+      }
+    });
+  });
+});
+</script>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: StagPortletsJSR168##v210921-1534/Rozcestnik-->
+</td></tr></tbody></table></td><td valign="top" style="padding-left: 7px;"><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody class="column" id="l_169503"><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: CoursewarePortlets2##/RSSPortlet-->
+<table id="220828" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-220828">Novinky JU</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+                <span class="mode-button">
+                    <a href="/portal/studium/index.html?pc_phs=-842010471&amp;pc_mode=help&amp;pc_windowid=220828&amp;pc_publicnavigationalstatechanges=AAAAAA**&amp;pc_phase=render&amp;pc_type=portlet&amp;pc_windowstate=maximized#cpa_220828" rel="nofollow" target="_blank">
+                        <img alt="Nápověda portletu" title="Nápověda portletu" src="/zdroje/portal_resources/jcu_demo/portal/img/portlet_icons/icon-title_help.png">
+                    </a>
+                </span>
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-220828" id="cpa_220828">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="xgt_notable" cellspacing="0" cellpadding="0">
+
+
+    
+    
+ </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: CoursewarePortlets2##/RSSPortlet-->
+</td></tr><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: CoursewarePortlets2##/RSSPortlet-->
+<table id="220829" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-220829">Upozornění z HelpDesku JU</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+                <span class="mode-button">
+                    <a href="/portal/studium/index.html?pc_phs=-842010470&amp;pc_mode=help&amp;pc_windowid=220829&amp;pc_publicnavigationalstatechanges=AAAAAA**&amp;pc_phase=render&amp;pc_type=portlet&amp;pc_windowstate=maximized#cpa_220829" rel="nofollow" target="_blank">
+                        <img alt="Nápověda portletu" title="Nápověda portletu" src="/zdroje/portal_resources/jcu_demo/portal/img/portlet_icons/icon-title_help.png">
+                    </a>
+                </span>
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-220829" id="cpa_220829">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="xgt_notable" cellspacing="0" cellpadding="0">
+
+
+    
+        <tr>
+            <td class="rss_heading"><span class="rss_heading" title=""><a href="http://helpdesk.jcu.cz/news/vypadek-autentizacnich-sluzeb-16-3-2021" class="rss_heading" target="_blank" title="Více o Výpadek autentizačních služeb 16. 3. 2021">Výpadek autentizačních služeb 16. 3. 2021</a></span><span class="rss_datum"></span></td>
+        </tr>
+        <tr>
+            <td>Dne 16. 3. 2021 došo ve večerních hodinách k výpadku autentizačních služeb.<a href="http://helpdesk.jcu.cz/news/vypadek-autentizacnich-sluzeb-16-3-2021" class="rss_dots" target="_blank" title="Více o Výpadek autentizačních služeb 16. 3. 2021">...</a></td>
+        </tr>
+    
+        <tr>
+            <td class="rss_heading"><span class="rss_heading" title=""><a href="http://helpdesk.jcu.cz/news/planovany-vypadek-pri-upgradu-paterniho-routeru-v-ceskych-budejovicich" class="rss_heading" target="_blank" title="Více o Plánovaný výpadek při upgradu páteřního routeru v Českých Budějovicích">Plánovaný výpadek při upgradu páteřního routeru v Českých Budějovicích</a></span><span class="rss_datum"></span></td>
+        </tr>
+        <tr>
+            <td>Plánovaný výpadek při upgradu páteřního routeru v Českých Budějovicích<a href="http://helpdesk.jcu.cz/news/planovany-vypadek-pri-upgradu-paterniho-routeru-v-ceskych-budejovicich" class="rss_dots" target="_blank" title="Více o Plánovaný výpadek při upgradu páteřního routeru v Českých Budějovicích">...</a></td>
+        </tr>
+    
+        <tr>
+            <td class="rss_heading"><span class="rss_heading" title=""><a href="http://helpdesk.jcu.cz/news/odstavka-upgrade-ifis-ips-utery-3-11-od-17-hodin-do-cca-20-hodin" class="rss_heading" target="_blank" title="Více o Odstávka / upgrade iFIS, IPS - úterý 3. 11. od 17. hodin do cca 20. hodin.">Odstávka / upgrade iFIS, IPS - úterý 3. 11. od 17. hodin do cca 20. hodin.</a></span><span class="rss_datum"></span></td>
+        </tr>
+        <tr>
+            <td>Z důvodu odstávky serveru fisw bude nedostupný systém iFIS, IPS, nefunkční budou tisky přes centrální<a href="http://helpdesk.jcu.cz/news/odstavka-upgrade-ifis-ips-utery-3-11-od-17-hodin-do-cca-20-hodin" class="rss_dots" target="_blank" title="Více o Odstávka / upgrade iFIS, IPS - úterý 3. 11. od 17. hodin do cca 20. hodin.">...</a></td>
+        </tr>
+    
+    
+        <tr>
+            <td>
+                <div style="float: right;">
+                    <a href="http://helpdesk.jcu.cz/news/aggregator/RSS" target="_blank">
+                        <img alt="[RSS]" src="/zdroje/images/icons/rss.png">
+                    </a>
+                </div>
+            </td>
+        </tr>
+    
+ </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: CoursewarePortlets2##/RSSPortlet-->
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1245408-48"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-1245408-48');
+</script>
+<div class="app_footer">
+
+<div class="app_footer_primary">
+</div>
+
+<div class="app_footer_secondary">
+  <div class="app_footer_col_wrapper">
+
+    <div class="footer_header">
+        <a href="http://www.jcu.cz" title="" target="_blank">
+        </a>
+    </div>
+
+    <div class="footer_column">
+        <h3>Jihočeská univerzita</h3>
+        <ul>
+		  <li><a href="http://www.jcu.cz/o-univerzite" target="_blank">O univerzitě</a></li>
+		  <li><a href="http://www.jcu.cz/o-univerzite/zazemi-a-sluzby" target="_blank">Zázemí a služby</a></li>
+		  <li><a href="http://www.jcu.cz/o-univerzite/organizacni-struktura" target="_blank">Organizační struktura</a></li>
+		  <li><a href="http://www.jcu.cz/o-univerzite/rozvoj" target="_blank">Rozvoj</a></li>
+		  <li><a href="http://www.jcu.cz/o-univerzite/media-a-propagace" target="_blank">Média a propagace</a></li>
+		  <li><a href="http://www.jcu.cz/o-univerzite/uredni-deska" target="_blank">Úřední deska</a></li>
+		  <li><a href="http://www.jcu.cz/o-univerzite/dokumenty" target="_blank">Dokumenty</a></li>
+		  <li><a href="http://www.jcu.cz/absolvent" target="_blank">Klub absolventů JU</a></li>
+		  <li><a href="https://helpdesk.jcu.cz/" target="_blank">HelpDesk CIT</a></li>
+        </ul>
+    </div>
+
+    <div class="footer_column">
+        <h3>Uchazeč o studium</h3>
+        <ul>		
+		<li><a href="http://www.jcu.cz/uchazec-o-studium" target="_blank">Informace pro uchazeče</a></li>
+		<li><a href="http://www.jcu.cz/uchazec-o-studium/proc-u-nas-studovat" target="_blank">Proč u nás studovat</a></li>
+		<li><a href="http://www.jcu.cz/uchazec-o-studium/co-u-nas-studovat" target="_blank">Co u nás studovat</a></li>
+		<li><a href="http://www.jcu.cz/uchazec-o-studium/prijimaci-rizeni" target="_blank">Přijímací řízení</a></li>
+		<li><a href="http://www.jcu.cz/uchazec-o-studium/e-prihlaska" target="_blank">E-přihláška</a></li>
+		<li><a href="http://www.jcu.cz/uchazec-o-studium/celozivotni-vzdelavani" target="_blank">Celoživotní vzdělávání</a></li>
+		<li><a href="http://www.jcu.cz/student/centrum-ssp" target="_blank">Uchazeč se spec. potřebami</a></li>
+        </ul>
+    </div>
+   
+	<div class="footer_column">
+        <h3>Student</h3>
+        <ul>		
+		<li><a href="http://www.jcu.cz/student/aktualni-informace" target="_blank">Aktuální informace</a></li>
+		<li><a href="http://www.jcu.cz/student/pravidla-pro-studium" target="_blank">Pravidla pro studium</a></li>
+		<li><a href="http://www.jcu.cz/student/akademicky-kalendar" target="_blank">Kalendář akademického roku</a></li>
+		<li><a href="http://www.jcu.cz/student/stipendia" target="_blank">Stipendia</a></li>
+		<li><a href="http://www.jcu.cz/student/centrum-ssp" target="_blank">Student se spec. potřebami</a></li>
+		<li><a href="http://www.jcu.cz/student/studentsky-zivot" target="_blank">Studentský život</a></li>
+		<li><a href="http://www.jcu.cz/student/stud_odd.html" target="_blank">Studijní oddělení na fakultách</a></li>
+		<li><a href="http://www.jcu.cz/student/it_services" target="_blank">IT služby</a></li>
+		<li><a href="http://www.jcu.cz/o-univerzite/zazemi-a-sluzby" target="_blank">Ubytování a stravování</a></li>
+		</ul>
+    </div>
+	
+	<div class="footer_column">
+        <h3>Věda a výzkum</h3>
+        <ul>		
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/kalendar-aktuality" target="_blank">Kalendář / aktuality</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/transfer-technologii" target="_blank">Transfer technologií</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/popularizace-vedy-a-vyzkumu" target="_blank">Popularizace vědy a výzkumu</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/vedecka-rada-ju" target="_blank">Vědecká rada JU</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/grantova-agentura-ju" target="_blank">Grantová agentura JU</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/habilitacni-a-jmenovaci-rizeni" target="_blank">Habilitační a jmenovací řízení</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/cestne-doktoraty" target="_blank">Čestné doktoráty</a></li>
+		<li><a href="http://www.jcu.cz/veda-a-vyzkum/odkazy" target="_blank">Odkazy</a></li>
+		</ul>
+    </div>
+	
+	<div class="footer_column">
+        <h3>Mezinárodní spolupráce</h3>
+        <ul>		
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/double-joint-degree" target="_blank">Double/joint degree</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/zahranicni-pobyty" target="_blank">Zahraniční pobyty</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/letni-skoly-2015" target="_blank">Letní školy</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/celouniverzitni-smlouvy-1" target="_blank">Celouniverzitní smlouvy</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/ects-ds-label" target="_blank">DS Label</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/cestovni-sluzby" target="_blank">Cestovní služby</a></li>
+		<li><a href="http://isc.jcu.cz/" target="_blank">Mezinárodní studentský klub</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/kalendar" target="_blank">AKTUALITY</a></li>
+		<li><a href="http://www.jcu.cz/mezinarodni-spoluprace/mezinarodni-tyden" target="_blank">Mezinárodní týden</a></li>
+		</ul>
+    </div>
+  
+      </div>
+  </div>
+</div>
+
+    
+  
+
+
+  <!--
+
+
+<a href="/portal/studium/index.html?pc_web_version=desktop">Klasická verze</a>
+<a href="/portal/studium/index.html?pc_web_version=mobile">Responsivní</a>
+
+-->
+
+
+</div>
+<script type="application/javascript">
+  jQuery(document).ready(function () {
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+
+
+    function createActionsDropDown(tableElement, tableIndex, rowElement, rowIndex, actionsColsIdx) {
+      if (actionsColsIdx === undefined || actionsColsIdx == null) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsColsIdx = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsColsIdx.push(elm.cellIndex)
+          });
+        }
+      }
+      var moveActionsToFirstCol = $(tableElement).hasClass("table-reflow");
+
+      var targetElm = moveActionsToFirstCol ? $("td:first", rowElement) : $("td:eq("+actionsColsIdx[0]+")", rowElement);
+
+      targetElm.prepend("<span class=\"dropdown row-actions-dropddown row-actions-ignore hideForDesktop\"><button class=\"btn btn-default\" id=\"dLabel-" + tableIndex + "-" + rowIndex + "\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">... <span class=\"caret\"></span></button><ul class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dLabel-" + tableIndex + "-" + rowIndex + "\" id=\"action-ul-" + tableIndex + "-" + rowIndex + "\">" +
+        "</ul></span>");
+      var isEmpty = true;
+      for (var colIdx in actionsColsIdx) {
+        var actionColumn = $("td:eq(" + actionsColsIdx[colIdx] + ")", rowElement);
+        var menuItems = $("#action-ul-" + tableIndex + "-" + rowIndex).append(actionColumn.children(":not(.row-actions-ignore)").clone()).children().wrap("<li></li>");
+        if (menuItems.length > 0) isEmpty = false;
+        if (moveActionsToFirstCol) actionColumn.addClass("hideForMobile");
+        else actionColumn.children(":not(.row-actions-ignore)").addClass("hideForMobile");
+        $('.dropdown-toggle', rowElement).dropdown();
+      }
+      
+      if (isEmpty) {
+        targetElm.children("span.row-actions-dropddown").hide();
+      }
+    }
+
+// Reflow tabulek...
+    $(".table-reflow").each(function (tableIndex, tableElement) {
+      var headers = $("tr th", tableElement);
+      var actionsCols = [];
+
+      // najdeme sloupecek s akcnimi cleny.
+      if (headers) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsCols = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsCols.push(elm.cellIndex)
+          });
+        }
+      }
+
+      $("tr", tableElement).each(function (rowIdx, rowEl) {
+        var rowElJq = $(rowEl);
+        $(".mainCell", rowEl).each(function (colIdx, colEl) {
+          rowElJq.prepend($("<" + colEl.tagName + ">").append($(colEl).html()).addClass("mainCellClone"));
+        });
+        if (actionsCols != null && actionsCols.length > 0 && !rowElJq.hasClass("hideForMobile")) {
+          createActionsDropDown(tableElement, tableIndex, rowEl, rowIdx, actionsCols);
+        }
+      });
+
+      $("tr", tableElement).each(function (rowIdx, rowEl) {
+//        zkopiruje headery
+        $("td", rowEl).each(function (colIdx, colEl) {
+          var header = $(headers[colIdx]).attr("tablesort-popis");
+          if (header === undefined) header = $(headers[colIdx]).text();
+          if ($.trim(header)) $(colEl).attr("data-header", $.trim(header) + ": ");
+        });
+
+      });
+    });
+
+    $(".table-replace-actions").each(function (tableIndex, tableElement) {
+      var headers = $("tr th", tableElement);
+      var actionsCols = [];
+
+      // najdeme sloupecek s akcnimi cleny.
+      if (headers) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsCols = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsCols.push(elm.cellIndex)
+          });
+        }
+      }
+
+
+      $("tr", tableElement).each(function (rowIndex, rowElement) {
+        createActionsDropDown(tableElement, tableIndex, rowElement, rowIndex);
+      });
+    });
+
+    if ($(window).width() <= 768) {
+      $('.footable-simple').footable();
+    }
+
+    if ($(".table-scroll").length > 0) {
+      var timer_id;
+
+      $(window).resize(function () {
+        clearTimeout(timer_id);
+        timer_id = setTimeout(function () {
+          var offset = parseInt($(".table-scroll").offset().left) + 20;
+          $(".table-scroll").width($(window).width() - offset)
+        }, 500);
+      });
+
+      var offset = parseInt($(".table-scroll").offset().left) + 20;
+      $(".table-scroll").width($(window).width() - offset)
+    }
+
+
+    $('#myAffix').affix({
+      offset: {}
+    }).on("affixed.bs.affix", function () {
+
+      $(".app_content").css("margin-top", $(".mobile_header_wrapper").outerHeight(true));
+    }).on("affix.bs.affix", function () {
+
+    });
+
+
+    var mobileHeaderWrapperHeight = $(".mobile_header_wrapper").outerHeight(true);
+
+    $(".app_content").css("margin-top", mobileHeaderWrapperHeight);
+
+
+    $('#mobile_nav_menu').on('show.bs.modal', function (e) {
+      $('#mobile_nav_menu').css("padding-top", $("#myAffix").outerHeight(true) + 5);
+      $("#mobile_menu_display_btn").bootstrapBtn('toggle');
+      $(this).data("oldhash", window.location.hash);
+      window.onhashchange = null;
+      window.location.hash = this.id;
+
+    }).on('shown.bs.modal', function (e) {
+      $("#mobile_nav_menu_accordion").height(windowHeight - $("#mobile_nav_menu_toplinks").outerHeight(true) - $("#myAffix").outerHeight(true) - 10);
+      setTimeout(function () {
+        window.onhashchange = function (ex) {
+          if (ex.oldURL.indexOf("#mobile_nav_menu") > 0 && ex.newURL.indexOf("#mobile_nav_menu") == -1) {
+            var mobileNavMenu = $("#mobile_nav_menu");
+            mobileNavMenu.modal('hide');
+            window.location.hash = mobileNavMenu.data("oldhash");
+          }
+        };
+      }, 500);
+    }).on('hidden.bs.modal', function (e) {
+      $("#mobile_menu_display_btn").bootstrapBtn('toggle');
+      window.onhashchange = null;
+      if (window.location.hash == "#mobile_nav_menu" && $("#mobile_nav_menu").data("oldhash")) {
+        $("#mobile_nav_menu").modal('hide');
+        window.location.hash = $("#mobile_nav_menu").data("oldhash");
+      }
+    });
+
+
+    $("#mobile_nav_menu_accordion .collapse").on("shown.bs.collapse", function (e) {
+      $("#icon_for_" + this.id).removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
+    }).on("hidden.bs.collapse", function (e) {
+      $("#icon_for_" + this.id).addClass("glyphicon-triangle-right").removeClass("glyphicon-triangle-bottom");
+    });
+
+    if (location.hash) {
+      $("a[href='" + location.hash + "']").tab("show");
+    }
+    $(document.body).on("click", "a[data-toggle='tab']", function(event) {
+      if(history.pushState) history.pushState(null, null, this.getAttribute("href"));
+      else location.hash = this.getAttribute("href");
+    });
+    $(window).on("popstate", function() {
+      var anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+      $("a[href='" + anchor + "']").tab("show");
+    });
+
+    // pokus obejit schovany cil anchrou pod affix menu...
+    setTimeout(function () {
+      var hashObject = $(window.location.hash).offset();
+      var affixDiv = $("#myAffix");
+      if (hashObject && hashObject.top < affixDiv.offset().top + affixDiv.height()) {
+        window.scrollBy(0, -affixDiv.height());
+//        console.log("Scrolling by -"+$("#myAffix").height())
+//        console.log("offset:"+window.pageYOffset);
+      }
+    }, 50);
+
+  });
+</script>
+
+</body>
+</html>
+
+
