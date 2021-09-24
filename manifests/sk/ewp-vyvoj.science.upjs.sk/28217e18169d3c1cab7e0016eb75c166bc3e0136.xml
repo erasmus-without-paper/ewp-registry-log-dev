@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns11:manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2">
+    <ns11:host>
+        <ns6:admin-email>peter.slaninka@upjs.sk</ns6:admin-email>
+        <ns6:admin-notes>This is a development EWP Host server.</ns6:admin-notes>
+        <ns12:apis-implemented>
+            <ns7:discovery version="5.0.0">
+                <ns7:url>https://ewp-vyvoj.science.upjs.sk/api/ewp/discovery</ns7:url>
+            </ns7:discovery>
+            <ns9:echo version="2.0.1">
+                <ns9:http-security>
+                    <ns8:client-auth-methods>
+                        <ns3:tlscert allows-self-signed="true"/>
+                        <httpsig/>
+                    </ns8:client-auth-methods>
+                    <ns8:server-auth-methods>
+                        <ns5:tlscert/>
+                        <ns4:httpsig/>
+                    </ns8:server-auth-methods>
+                </ns9:http-security>
+                <ns9:url>https://ewp-vyvoj.science.upjs.sk/api/ewp/echo</ns9:url>
+            </ns9:echo>
+        </ns12:apis-implemented>
+        <ns11:institutions-covered>
+            <ns12:hei id="upjs.sk">
+                <ns12:other-id type="pic">999885992</ns12:other-id>
+                <ns12:other-id type="erasmus">SK KOSICE02</ns12:other-id>
+                <ns12:name xml:lang="en">Pavol Jozef Šafárik University in Košice</ns12:name>
+                <ns12:name xml:lang="sk">Univerzita Pavla Jozefa Šafárika v Košiciach</ns12:name>
+            </ns12:hei>
+        </ns11:institutions-covered>
+        <ns11:client-credentials-in-use>
+            <ns11:certificate>TUlJRk9UQ0NCQ0dnQXdJQkFnSVNCUGo2WlZEbk45bFA0WHROUGN4dFpEaklNQTBHQ1NxR1NJYjNEUUVCQ3dVQU1ESXhDekFKQmdOVkJBWVRBbFZUTVJZd0ZBWURWUVFLRXcxTVpYUW5jeUJGYm1OeWVYQjBNUXN3Q1FZRFZRUURFd0pTTXpBZUZ3MHlNVEE1TWpJd09UTTBORFJhRncweU1URXlNakV3T1RNME5ETmFNQ1F4SWpBZ0JnTlZCQU1UR1dWM2NDMTJlWFp2YWk1elkybGxibU5sTG5Wd2FuTXVjMnN3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzVndmR0VzZyTTZwa0llcm5Pd0ZxckhKcVNGQ0hsZ0ttSG1TaFM2OWgxaVMzZGhiSlZCT1FoaEc2QXJiZC9laFRYVFA4MXJiV3RMN0ZJYXdoSHRyYW9tMXQzTzBnNm5TenF2cGdCNEFycHdaalp5LzNLVEt3NnVYVUdtTjBoalpsK3c5ZE1jR0thL3B2dUNUcXRtN20welV6WXMvMCthbEhibE9Qb0NMakpjTXp1WVErTHdMalhyNWVYT25TZG8xL0Y2MWRFdDBRVkRMN3lCYnRsQ2RqUzRzNVlPOU50VDdxSmxadUVMRnRIRlhXNVpGeTRaZTVZVC8xbWJaVml4alJlMVNKRVNyRlNWbVVFSXNhRHJmMXYyaW5NNCs5QW5ZMUpBei9SWEFkMlVBV1NmbTl0Sk9BZ2tiOUkweUxFVE5QOXhwcm1KR2hJdWR2ZVN5bGgwTnhUQWdNQkFBR2pnZ0pWTUlJQ1VUQU9CZ05WSFE4QkFmOEVCQU1DQmFBd0hRWURWUjBsQkJZd0ZBWUlLd1lCQlFVSEF3RUdDQ3NHQVFVRkJ3TUNNQXdHQTFVZEV3RUIvd1FDTUFBd0hRWURWUjBPQkJZRUZHV2hobGQyZkNXbGNsU1pJMkJjQVRxWk5nbzNNQjhHQTFVZEl3UVlNQmFBRkJRdXN4ZTNXRmJMcmxBSlFPWWZyNTJMRk1MR01GVUdDQ3NHQVFVRkJ3RUJCRWt3UnpBaEJnZ3JCZ0VGQlFjd0FZWVZhSFIwY0RvdkwzSXpMbTh1YkdWdVkzSXViM0puTUNJR0NDc0dBUVVGQnpBQ2hoWm9kSFJ3T2k4dmNqTXVhUzVzWlc1amNpNXZjbWN2TUNRR0ExVWRFUVFkTUJ1Q0dXVjNjQzEyZVhadmFpNXpZMmxsYm1ObExuVndhbk11YzJzd1RBWURWUjBnQkVVd1F6QUlCZ1puZ1F3QkFnRXdOd1lMS3dZQkJBR0MzeE1CQVFFd0tEQW1CZ2dyQmdFRkJRY0NBUllhYUhSMGNEb3ZMMk53Y3k1c1pYUnpaVzVqY25sd2RDNXZjbWN3Z2dFRkJnb3JCZ0VFQWRaNUFnUUNCSUgyQklIekFQRUFkd0J2VTNhc01mQXhHZGlaQUtSUkZmOTNGUndSMlFMQkFDa0dqYklJbWpmWkV3QUFBWHdORW5JMEFBQUVBd0JJTUVZQ0lRRC9waXhYVzdZYUgraER0b1BqRnYvZmtLR2h2Nnd4bEdNK3crNmFxSDFycEFJaEFQME9UdmYzc290TUw4cERBd2xuRm9KMVplVXMrazR4OGVYZUxnUDRvcHU4QUhZQWZUN3krSS8vaUZWb0pNTEF5cDVTaVhrcnhRNTRDWDh1YXBkb21YNGk4TmNBQUFGOERSSnlNZ0FBQkFNQVJ6QkZBaUVBZ2dFdzBMeVU3ZmMvUVlhSzhja2RrdnNoUFF1d2tWY3FUQXduNUZ2ZmJkTUNJQUpVU3NBeitnU24ycVN0dmhWZ3h0OTBFTjBDNGJJdWtrclNCbWhoalZDNE1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ1pmWXIrKzd1RXRidkYzTW11alBnNU94UDgydW52ZVBwUzkwemVuRlA5WUVpOFlWUXowZ2FPOVE1S2pvRytCOVg3QVJNa3RpSW9USXIyNHNKejZmQ2htWGk5WDRjblRwVmN6OUxKUWhsbHRGYnNVQmJkL1JMQnREZ29qSzNIVXN2eTErRURnNDllRmNZQUx1T1JtR011Z2YrWVVMN2U4N2xGcjNIOGtTTTk4L1VIY2tJM1ZFcGhIdk5GZ2k3ZWhCT2orOVJGZ29yQjRFbWZQQzN2c093dGhHSmNzdDBvRnhYbEF6b09pcUU1dUhHNDJPTVVTdFV4UDZ6ZE4vYXFCekV6WmFvOENJUTFtdkZpNUpXbkxSVXFvTWMyRWpFRnJabituUE9iOFRuQ2dJM2QvOS9ZNURlb0VLaHRNVm5jRDJLeTZoVnhGeS9QMG51czNTc3FhZDZZ</ns11:certificate>
+            <ns11:rsa-public-key>TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF1WUwzYlZ1cXpPcVpDSHE1enNCYXF4eWFraFFoNVlDcGg1a29VdXZZZFlrdDNZV3lWUVRrSVlSdWdLMjNmM29VMTB6L05hMjFyUyt4U0dzSVI3YTJxSnRiZHp0SU9wMHM2cjZZQWVBSzZjR1kyY3Y5eWt5c09ybDFCcGpkSVkyWmZzUFhUSEJpbXY2YjdnazZyWnU1dE0xTTJMUDlQbXBSMjVUajZBaTR5WERNN21FUGk4QzQxNitYbHpwMG5hTmZ4ZXRYUkxkRUZReSs4Z1c3WlFuWTB1TE9XRHZUYlUrNmlaV2JoQ3hiUnhWMXVXUmN1R1h1V0UvOVptMlZZc1kwWHRVaVJFcXhVbFpsQkNMR2c2MzliOW9wek9QdlFKMk5TUU0vMFZ3SGRsQUZrbjV2YlNUZ0lKRy9TTk1peEV6VC9jYWE1aVJvU0xuYjNrc3BZZERjVXdJREFRQUI=</ns11:rsa-public-key>
+        </ns11:client-credentials-in-use>
+        <ns11:server-credentials-in-use>
+            <ns11:rsa-public-key>TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF1WUwzYlZ1cXpPcVpDSHE1enNCYXF4eWFraFFoNVlDcGg1a29VdXZZZFlrdDNZV3lWUVRrSVlSdWdLMjNmM29VMTB6L05hMjFyUyt4U0dzSVI3YTJxSnRiZHp0SU9wMHM2cjZZQWVBSzZjR1kyY3Y5eWt5c09ybDFCcGpkSVkyWmZzUFhUSEJpbXY2YjdnazZyWnU1dE0xTTJMUDlQbXBSMjVUajZBaTR5WERNN21FUGk4QzQxNitYbHpwMG5hTmZ4ZXRYUkxkRUZReSs4Z1c3WlFuWTB1TE9XRHZUYlUrNmlaV2JoQ3hiUnhWMXVXUmN1R1h1V0UvOVptMlZZc1kwWHRVaVJFcXhVbFpsQkNMR2c2MzliOW9wek9QdlFKMk5TUU0vMFZ3SGRsQUZrbjV2YlNUZ0lKRy9TTk1peEV6VC9jYWE1aVJvU0xuYjNrc3BZZERjVXdJREFRQUI=</ns11:rsa-public-key>
+        </ns11:server-credentials-in-use>
+    </ns11:host>
+</ns11:manifest>

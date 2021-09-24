@@ -1,0 +1,48 @@
+<ns11:manifest
+    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-echo/tree/stable-v2"
+    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+>
+    <ns11:host>
+        <ns6:admin-email>peter.slaninka@upjs.sk</ns6:admin-email>
+        <ns6:admin-notes>This is a development EWP Host server.</ns6:admin-notes>
+        <ns12:apis-implemented>
+            <ns7:discovery version="5.0.0">
+                <ns7:url>https://ewp-vyvoj.science.upjs.sk/api/ewp/discovery</ns7:url>
+            </ns7:discovery>
+            <ns9:echo version="2.0.1">
+                <ns9:http-security>
+                    <ns8:client-auth-methods>
+                        <ns3:tlscert allows-self-signed="true"/>
+                        <httpsig/>
+                    </ns8:client-auth-methods>
+                    <ns8:server-auth-methods>
+                        <ns5:tlscert/>
+                        <ns4:httpsig/>
+                    </ns8:server-auth-methods>
+                </ns9:http-security>
+                <ns9:url>https://ewp-vyvoj.science.upjs.sk/api/ewp/echo</ns9:url>
+            </ns9:echo>
+        </ns12:apis-implemented>
+        <ns11:institutions-covered>
+            <ns12:hei id="upjs.sk">
+                <ns12:other-id type="pic">999885992</ns12:other-id>
+                <ns12:other-id type="erasmus">SK KOSICE02</ns12:other-id>
+                <ns12:name xml:lang="en">Pavol Jozef Šafárik University in Košice</ns12:name>
+                <ns12:name xml:lang="sk">Univerzita Pavla Jozefa Šafárika v Košiciach</ns12:name>
+            </ns12:hei>
+        </ns11:institutions-covered>
+        <ns11:client-credentials-in-use/>
+        <ns11:server-credentials-in-use/>
+    </ns11:host>
+</ns11:manifest>
