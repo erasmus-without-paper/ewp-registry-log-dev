@@ -5351,6 +5351,98 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>fpeixoto@uporto.pt</ewp:admin-email>
+        <ewp:admin-email>bdpereira@uporto.pt</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for Mobility Tool.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://mt.ewp-dev.up.pt:8433/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://mt.ewp-dev.up.pt:8433/rest/echo</e2:url>
+            </e2:echo>
+            <mti1:mt-institutions
+                xmlns:mti1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-institutions/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <mti1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </mti1:http-security>
+                <mti1:url>https://mt.ewp-dev.up.pt:8433/rest/institutions</mti1:url>
+                <mti1:max-ids>3</mti1:max-ids>
+            </mti1:mt-institutions>
+            <mtd1:mt-dictonaries
+                xmlns:mtd1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <mtd1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </mtd1:http-security>
+                <mtd1:url>https://mt.ewp-dev.up.pt:8433/rest/dictionaries</mtd1:url>
+            </mtd1:mt-dictonaries>
+            <mtp1:mt-projects
+                xmlns:mtp1="https://github.com/erasmus-without-paper/ewp-specs-api-mt-projects/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <mtp1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </mtp1:http-security>
+                <mtp1:url>https://mt.ewp-dev.up.pt:8433/rest/projects</mtp1:url>
+            </mtp1:mt-projects>
+            <mt-mobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-mt-mobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <report-url>https://mt.ewp-dev.up.pt:8433/rest/mobilities</report-url>
+                <status-url>https://mt.ewp-dev.up.pt:8433/rest/mobilities-status-request</status-url>
+            </mt-mobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ec.europa.eu</hei-id>
+        </institutions-covered>
+    </host>
+    <host>
         <ewp:admin-email>matija.puzar@unit.no</ewp:admin-email>
         <ewp:admin-notes>Manifest file for Norway.</ewp:admin-notes>
         <apis-implemented>
@@ -48680,6 +48772,9 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="pic">949630486</other-id>
             <name xml:lang="de">EBS Universität für Wirtschaft und Recht</name>
             <name xml:lang="en">EBS UNIVERSITY FOR BUSINESS AND LAW</name>
+        </hei>
+        <hei id="ec.europa.eu">
+            <name xml:lang="en">Mobility Tool+</name>
         </hei>
         <hei id="ecam-strasbourg.eu">
             <other-id type="erasmus">F  STRASBO50</other-id>
