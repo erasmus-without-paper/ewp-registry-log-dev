@@ -100,6 +100,21 @@
                 <max-iia-codes>10</max-iia-codes>
                 <index-url>https://ewpdev01.osiris-link.nl/iias/index</index-url>
             </iias>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewpdev01.osiris-link.nl/la/cnr</url>
+                <max-omobility-ids>2</max-omobility-ids>
+            </omobility-la-cnr>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="hu-rontw.caci.nl">
@@ -125,6 +140,12 @@
                 <other-id type="eche">S2114T01.caci.nl</other-id>
                 <other-id type="erasmus">S2114T01.caci.nl</other-id>
                 <name xml:lang="en">S2114T01.caci.nl</name>
+            </hei>
+            <hei id="test-osiris.caci.nl">
+                <other-id type="pic">test-osiris.caci.nl</other-id>
+                <other-id type="eche">test-osiris.caci.nl</other-id>
+                <other-id type="erasmus">test-osiris.caci.nl</other-id>
+                <name xml:lang="en">test-osiris.caci.nl</name>
             </hei>
         </mf:institutions-covered>
         <client-credentials-in-use>
