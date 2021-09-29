@@ -36,6 +36,36 @@
                 </ns7:http-security>
                 <ns7:url>https://artemis.ugr.es/ewp/echo</ns7:url>
             </ns7:echo>
+            <ns4:institutions version="2.2.0">
+                <ns4:http-security>
+                    <ns2:client-auth-methods>
+                        <ns12:tlscert allows-self-signed="true"/>
+                        <ns13:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns14:tlscert/>
+                        <ns15:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns4:http-security>
+                <ns4:url>https://artemis.ugr.es/ewp/institutions</ns4:url>
+                <ns4:max-hei-ids>1</ns4:max-hei-ids>
+            </ns4:institutions>
+            <ns3:iias version="6.0.1">
+                <ns3:http-security>
+                    <ns2:client-auth-methods>
+                        <ns12:tlscert allows-self-signed="true"/>
+                        <ns13:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns14:tlscert/>
+                        <ns15:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns3:http-security>
+                <ns3:get-url>https://artemis.ugr.es/ewp/iass</ns3:get-url>
+                <ns3:max-iia-ids>1</ns3:max-iia-ids>
+                <ns3:max-iia-codes>1</ns3:max-iia-codes>
+                <ns3:index-url>https://artemis.ugr.es/ewp/index-iass</ns3:index-url>
+            </ns3:iias>
         </ns8:apis-implemented>
         <ns9:institutions-covered>
             <ns8:hei id="ugr.es">
