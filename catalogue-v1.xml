@@ -47730,6 +47730,45 @@ https://ewp.des.upc.edu/api/echo
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp-cloud-test@proacta.pl</ewp:admin-email>
+        <ewp:admin-notes>This is a test host</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp-cloud.ewp.proacta.pl/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp-cloud.ewp.proacta.pl/api/echo</e2:url>
+            </e2:echo>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:get-url>https://ewp-cloud.ewp.proacta.pl/api/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>20</ia6:max-iia-ids>
+                <ia6:max-iia-codes>20</ia6:max-iia-codes>
+                <ia6:index-url>https://ewp-cloud.ewp.proacta.pl/api/iias/index</ia6:index-url>
+            </ia6:iias>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>wum.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="3dfbdbd73dc78cae3978e3b2d3d3c20d5cf6555caae2c9f603f38419961dd8cc"/>
+            <rsa-public-key sha-256="8de2100ed4174cd3f300cbc6ea4552e81979ac5c9ce6c4474c633db14cbf39b0"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8de2100ed4174cd3f300cbc6ea4552e81979ac5c9ce6c4474c633db14cbf39b0"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -52112,6 +52151,9 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="pic">999616138</other-id>
             <name xml:lang="de">WIRTSCHAFTSUNIVERSITAT WIEN</name>
         </hei>
+        <hei id="wum.edu.pl">
+            <name xml:lang="en">EWP PROACTA</name>
+        </hei>
         <hei id="www.kth.se">
             <other-id type="erasmus">S  STOCKHO04</other-id>
             <other-id type="pic">999990946</other-id>
@@ -52975,6 +53017,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             WW1G4h8J+jaF9V4uiInZ2AtkcgUOR2jrikl560BKzQrOLC3KmD2dUVa/uxdbKY53oEog0KcK8Gpc
             GePkAeiH316OWJwAx4uc5WmeX3NQgZfO29vggqC2vcJOvPQnrlKDcEJc7a22XxW7UKAns/xGKfUU
             PGp6KwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8de2100ed4174cd3f300cbc6ea4552e81979ac5c9ce6c4474c633db14cbf39b0">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsksOdT8dvKyhKuz8gqEzcb5lR9BZDxay
+            +JvDHKs6JHiD4/fMGolm+742u7sUdmtdAt4IGjtIV7NOt9AxOmzlqnO4kvvjfwHJyNMtrFMv4UjV
+            QZK0q4mzIhry2azDmC1vauObqWb0eD+GNwwulwZ69DisNkvDC7nTYreVTbpv65MH0wAiOMEFG7UF
+            U1JHWlqkyXkYUZbO1/xokPVzqed2nIHJ2Ad/gUPlar8TetZQXIOWdz7iqkTarQRcpGkQwPdOnhrH
+            OUibGbRevcv806EdC1eSvKgw3oBIbu/r97y3VosFiRCkDpj3zkeZ9QR21vI43s/nlCsy3lGlLqYm
+            9r2YmwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="93381f413f198a9248bab745cd404e6b9a08ef429b571077fc77163e6524ace2">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6GJyf4azdtyM3sV5/x3R4XawjFXkEHeW
