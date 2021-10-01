@@ -43373,8 +43373,8 @@
                     </sec:server-auth-methods>
                 </ou2:http-security>
                 <ou2:url>https://ewptest.um.es/umEWPWeb/ounits/get</ou2:url>
-                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
@@ -43390,8 +43390,8 @@
                     </sec:server-auth-methods>
                 </ia6:http-security>
                 <ia6:get-url>https://ewptest.um.es/umEWPWeb/iias/get</ia6:get-url>
-                <ia6:max-iia-ids>100</ia6:max-iia-ids>
-                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
                 <ia6:index-url>https://ewptest.um.es/umEWPWeb/iias/index</ia6:index-url>
             </ia6:iias>
             <iac2:iia-cnr version="2.0.3">
@@ -43420,7 +43420,7 @@
                     </sec:server-auth-methods>
                 </iaa1:http-security>
                 <iaa1:url>https://ewptest.um.es/umEWPWeb/iias/approval</iaa1:url>
-                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -43453,6 +43453,73 @@
                 <f1:url>https://ewptest.um.es/umEWPWeb/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewptest.um.es/umEWPWeb/incomingmobilities/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewptest.um.es/umEWPWeb/incomingmobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewptest.um.es/umEWPWeb/outgoingmobilities/get</om1:get-url>
+                <om1:index-url>https://ewptest.um.es/umEWPWeb/outgoingmobilities/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewptest.um.es/umEWPWeb/outgoingmobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.1"
@@ -43493,10 +43560,10 @@
         </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="b7f4fdf72c0e28af8385cc196c5648bf8cfdc38ad5fc3e1a041bcc437c639c53"/>
-            <rsa-public-key sha-256="66bdcc11dcb1255c74caf8aa1abce2ff2561a0b0fe90fdaea4993ec8588dda21"/>
+            <rsa-public-key sha-256="f2e6b4f982490df7df9d3b54757c7512275004210e849fb4995fbca05650982c"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="66bdcc11dcb1255c74caf8aa1abce2ff2561a0b0fe90fdaea4993ec8588dda21"/>
+            <rsa-public-key sha-256="f2e6b4f982490df7df9d3b54757c7512275004210e849fb4995fbca05650982c"/>
         </server-credentials-in-use>
     </host>
     <host>
