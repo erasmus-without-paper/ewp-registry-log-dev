@@ -1,0 +1,165 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>branko.petric@fil.bg.ac.rs</ewp:admin-email>
+        <ewp:admin-notes>Discovery manifest</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://mobion.bg.ac.rs/api/ewpdev/manifest</url>
+            </discovery>
+        </r:apis-implemented>
+
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="bg.ac.rs">
+                <other-id type="pic">999641843</other-id>
+                <other-id type="erasmus">RS BELGRAD02</other-id>
+                <name xml:lang="en">University of Belgrade</name>
+				<name xml:lang="sr">Univerzitet u Beogradu</name>
+            </hei>
+        </mf:institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIIHqTCCBpGgAwIBAgIQAiy5hHlDYomOtLP1C+KBhDANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0yMDA0MTUwMDAwMDBaFw0yMjA0MjAxMjAwMDBaMFsxCzAJBgNVBAYT
+AlJTMREwDwYDVQQHEwhCZWxncmFkZTEfMB0GA1UEChMWVW5pdmVyc2l0eSBvZiBC
+ZWxncmFkZTEYMBYGA1UEAxMPbW9iaW9uLmJnLmFjLnJzMIICIjANBgkqhkiG9w0B
+AQEFAAOCAg8AMIICCgKCAgEAs6obzbrOyqEiaP4fFm3ZWGgr3RI0bmXAvIn7sOlU
+dUL49Xd2Bx34LmWeSHr0f9IXeUT6xppOwEo3kxTeaJ9qow8ipdeR4beOMrku8e/S
+fRSAWiWrfCXvPp2EEyiw9OqZyZmxAjDweRPpf+Q4KyjayEspDGQy5oKgsjVxZM1C
+KwuEYW+dppkl7XVcwN6vLqfFUZeIy6kKoL+J4hpG16/8MecBrJpuTTxrauWKbWcT
+5w0NbshY4X0zbmxPyJEnVPtv53v1GvgKKFvRgbyUPJE21IGZN2H0xHAWbL/7hzL3
+qM8hIaz4FLk96eyw6GzD8NzfXLOAFkIrAFlVwo7/hRfbD79Vb5YnBn1Z8KUok2Gg
+yv9ZnfdZhk4B4JhBD/WCPRtS22SKZR1PDi705T1Yshh5fJdPg3wPETEvSvj/Zw8m
+d365BL7Jc2Q8/oBt1n7xzogMKSTz0wbA7PiZ1Hd/RsFU6oXjpfJV9LWYHkGErT7Q
+kZilc/orw78cqAqXp5BrFNFVjjLd8buFj6wYYMuUQmucu2PqAD+pWKJk2B9rFe2T
+lEAW8m3bcxPxdkF3wTrI5cFUIJndx1heKL0PFsQWkGF0oM/8vBqVNE8re3exTShG
+xrKzUZk7VNdigLdFvp6SPCwwFnAP3Ap8mC/fjrRLcM/ZWgc2RnxSeFKoQAM0lDCe
+coUCAwEAAaOCA14wggNaMB8GA1UdIwQYMBaAFGf9iCAUJ5jHCdIlGbvpURFjdVBi
+MB0GA1UdDgQWBBRKcbzUm0XnDep3Jce5WVZk6FKIHTAvBgNVHREEKDAmgg9tb2Jp
+b24uYmcuYWMucnOCE3d3dy5tb2Jpb24uYmcuYWMucnMwDgYDVR0PAQH/BAQDAgWg
+MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBrBgNVHR8EZDBiMC+gLaAr
+hilodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDAvoC2g
+K4YpaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwTAYD
+VR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cu
+ZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwbgYIKwYBBQUHAQEEYjBgMCQGCCsG
+AQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wOAYIKwYBBQUHMAKGLGh0
+dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3J0MAwGA1Ud
+EwEB/wQCMAAwggF9BgorBgEEAdZ5AgQCBIIBbQSCAWkBZwB1AEalVet1+pEgMLWi
+iWn0830RLEF0vv1JuIWr8vxw/m1HAAABcX1h25kAAAQDAEYwRAIgcTIQwygpUPMk
+Pnh+yh0IzC1vcdtwOhJ8KFKgzgQJJHACIA75v/vrZpVeP1C1Z4oPXDzV1sSAu5G7
+K6p18rjierOLAHYAIkVFB1lVJFaWP6Ev8fdthuAjJmOtwEt/XcaDXG7iDwIAAAFx
+fWHbkAAABAMARzBFAiEAkRVVVk+7Qu5otzQhIOGg5eQIcf4L2+E/6xmc6888Q7gC
+IC2XjrfE+ZQM9EpsYt0f9lmIzvS3s0DJWPWUrwA1z7XAAHYAUaOw9f0BeZxWbbg3
+eI8MpHrMGyfL956IQpoN/tSLBeUAAAFxfWHbrwAABAMARzBFAiEAi4drmznx7hRi
+hok9X9Hi7eMRpAlUVM/HHCUJYh6CqEICIFbjrcFbIN/LYvQFCE3UKRftC1xqRXsW
+xxiW6u69dJ9dMA0GCSqGSIb3DQEBCwUAA4IBAQCP+R6auPQRHSlG1M+Ah2S/3nCc
+MfkBT9oxEky3rRtxXZ07uBxnmqyJ7vpbVtNIN+1iUEcWsVGWXnsOMvENjWBBKABK
++/UzITqQ8qNz0yVxfrYUi0jZ92bQ6tbJeqkeRt5Lp5EPtrRFHD3DUehRfiYmTvNV
+TFRGueNponSFLJNqnAV3/C0A6mcX+lv9PFsQT3tc3ts9ueDDBzIfhBmVqPCRczX+
+/1fr2Cg4l/fy1/6DwZjB/ALuLJwXHqMYmqnM11Q058ysoSTNq2Ct9sZLr6rbMQd8
+mG7QV7hSqwNOfuWwOc5qw5GZCt4Glq0+6nuve44JLLgFz59HXwCegwuahr8h</certificate>
+            <rsa-public-key>MIIEwDCCA6igAwIBAgIQfM7g++wBHGZNDBq81SDHKTANBgkqhkiG9w0BAQsFADBI
+MRswGQYDVQQDExJFU0VUIFNTTCBGaWx0ZXIgQ0ExHDAaBgNVBAoTE0VTRVQsIHNw
+b2wuIHMgci4gby4xCzAJBgNVBAYTAlNLMB4XDTIwMDQxNTAwMDAwMFoXDTIyMDQy
+MDEyMDAwMFowWzELMAkGA1UEBhMCUlMxETAPBgNVBAcTCEJlbGdyYWRlMR8wHQYD
+VQQKExZVbml2ZXJzaXR5IG9mIEJlbGdyYWRlMRgwFgYDVQQDEw9tb2Jpb24uYmcu
+YWMucnMwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCva+CnCCI/uTbh
+AvrcboZ1PZNCBxnbtk6jDOZKpcObIiAdbEw18UP1gelxgQn7/XJuN61QIWfjvJxj
+MAGkWXliHI4XRcARgHiy/oPALiTO0hQoY6bUaw5r+dJjftxahNqZ0DDck33Oh63i
+D3E0pti7Abo4ZMpi5lokhCaRVoc4UDGYOwKwzkFV3/PpYuHxbgt8v8EoFMV0X135
+tRT1AySsh6sKPI+zzKXbgrDqebhYxHGrXGx+I089KHPrfvDViNlr1F//4GXEDUxp
+I49Eijzuidy41Y2wtwp5p785ZEYqHjl2PhiB1wDEBSAYe0mDY3OAs3DQvBs2jbYF
+IZqltpVShSrm99COyF40ZiM/9Ge8dMM+FUDKHN3Kg34Bs/rmhpfhYXa3QsjHBvQX
+0ioWpqA0WcQjedRGDw+EuLtIh8eKVKhT6w96eTCFPD3cJGXQXAcmxL6H0xjZGDYx
+x/uD4OkVxHILGPOBaqpzP8XtKH/9KgUvaSN++luJ/1CzjkUAAOxHkzvYUy+SRf1x
+VXeyR95tg52PihockHQimduO3j1FmKVfK0REhb0Vo1eySRCPBMgJ20cnhgrLCi2t
+6oyzoJGzShhLLvwqn8gxDA4AiNrR0vaeTDxcG6ew1whm7GA6WnmZ0OLHr+jn+blP
+plrzxMPGoNmKLtQwawofKN1W14nt5QIDAQABo4GSMIGPMC8GA1UdEQQoMCaCD21v
+Ymlvbi5iZy5hYy5yc4ITd3d3Lm1vYmlvbi5iZy5hYy5yczAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAOBgNVHQ8BAf8EBAMCBaAw
+HwYDVR0jBBgwFoAUHQVsa5AOtgcexccQz9QemBOFhdIwDQYJKoZIhvcNAQELBQAD
+ggEBAIUfBbNwiTsp4bMfYsQaDmdy0KAFfYCrgvEVJbXMgY/H9hTvLedozuMkGfKn
+eHUk+IQEUhmznU7up5lNQ+osyTqJemujtcHihZ4G5A2nxmBWdHSfVttPX7BvarGY
+x1DlXMloUjg6sDdreY0BWQ94Txk2QFDG/bea0LGeRMcCxsrRZK79/UoI8lL61GrI
+RCya2gf/GAEZr4Pahsl7eRPBy2VCXItnhaXMfbwKoPrv/ZlbdnTWBR9sVZ0qH8HG
+umvlLIOxIZzsontyu4CsS3bu4vocJxYTSbSTwtkmbhi8JUt8MVm9BeWdejirAWpj
+DGu8Ry/TiB496mercGh8f+KCod0=</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIEwDCCA6igAwIBAgIQfM7g++wBHGZNDBq81SDHKTANBgkqhkiG9w0BAQsFADBI
+MRswGQYDVQQDExJFU0VUIFNTTCBGaWx0ZXIgQ0ExHDAaBgNVBAoTE0VTRVQsIHNw
+b2wuIHMgci4gby4xCzAJBgNVBAYTAlNLMB4XDTIwMDQxNTAwMDAwMFoXDTIyMDQy
+MDEyMDAwMFowWzELMAkGA1UEBhMCUlMxETAPBgNVBAcTCEJlbGdyYWRlMR8wHQYD
+VQQKExZVbml2ZXJzaXR5IG9mIEJlbGdyYWRlMRgwFgYDVQQDEw9tb2Jpb24uYmcu
+YWMucnMwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCva+CnCCI/uTbh
+AvrcboZ1PZNCBxnbtk6jDOZKpcObIiAdbEw18UP1gelxgQn7/XJuN61QIWfjvJxj
+MAGkWXliHI4XRcARgHiy/oPALiTO0hQoY6bUaw5r+dJjftxahNqZ0DDck33Oh63i
+D3E0pti7Abo4ZMpi5lokhCaRVoc4UDGYOwKwzkFV3/PpYuHxbgt8v8EoFMV0X135
+tRT1AySsh6sKPI+zzKXbgrDqebhYxHGrXGx+I089KHPrfvDViNlr1F//4GXEDUxp
+I49Eijzuidy41Y2wtwp5p785ZEYqHjl2PhiB1wDEBSAYe0mDY3OAs3DQvBs2jbYF
+IZqltpVShSrm99COyF40ZiM/9Ge8dMM+FUDKHN3Kg34Bs/rmhpfhYXa3QsjHBvQX
+0ioWpqA0WcQjedRGDw+EuLtIh8eKVKhT6w96eTCFPD3cJGXQXAcmxL6H0xjZGDYx
+x/uD4OkVxHILGPOBaqpzP8XtKH/9KgUvaSN++luJ/1CzjkUAAOxHkzvYUy+SRf1x
+VXeyR95tg52PihockHQimduO3j1FmKVfK0REhb0Vo1eySRCPBMgJ20cnhgrLCi2t
+6oyzoJGzShhLLvwqn8gxDA4AiNrR0vaeTDxcG6ew1whm7GA6WnmZ0OLHr+jn+blP
+plrzxMPGoNmKLtQwawofKN1W14nt5QIDAQABo4GSMIGPMC8GA1UdEQQoMCaCD21v
+Ymlvbi5iZy5hYy5yc4ITd3d3Lm1vYmlvbi5iZy5hYy5yczAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAOBgNVHQ8BAf8EBAMCBaAw
+HwYDVR0jBBgwFoAUHQVsa5AOtgcexccQz9QemBOFhdIwDQYJKoZIhvcNAQELBQAD
+ggEBAIUfBbNwiTsp4bMfYsQaDmdy0KAFfYCrgvEVJbXMgY/H9hTvLedozuMkGfKn
+eHUk+IQEUhmznU7up5lNQ+osyTqJemujtcHihZ4G5A2nxmBWdHSfVttPX7BvarGY
+x1DlXMloUjg6sDdreY0BWQ94Txk2QFDG/bea0LGeRMcCxsrRZK79/UoI8lL61GrI
+RCya2gf/GAEZr4Pahsl7eRPBy2VCXItnhaXMfbwKoPrv/ZlbdnTWBR9sVZ0qH8HG
+umvlLIOxIZzsontyu4CsS3bu4vocJxYTSbSTwtkmbhi8JUt8MVm9BeWdejirAWpj
+DGu8Ry/TiB496mercGh8f+KCod0=</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
