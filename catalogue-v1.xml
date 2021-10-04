@@ -25319,6 +25319,24 @@
                 </iaac1:http-security>
                 <iaac1:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval/cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -25356,11 +25374,11 @@
             <hei-id>vsb.cz</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="4ea31365cac36f6d6831a8ca8e37849f231099542da2989e89a0308d2641f5ad"/>
-            <rsa-public-key sha-256="5c30d219d4d2cb54c175d7cdebae30a19caa08e507e7ccd8e7c5a3b566d9daea"/>
+            <certificate sha-256="4296ede72eb75184908a559e43e5c15846d988eb64901fc853a91c9a81d719f8"/>
+            <rsa-public-key sha-256="8fccc4e8a3d98ec8b0f87bcbc127b5228f2d53fc43d0a97da8b684c83ac5db4d"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="5c30d219d4d2cb54c175d7cdebae30a19caa08e507e7ccd8e7c5a3b566d9daea"/>
+            <rsa-public-key sha-256="8fccc4e8a3d98ec8b0f87bcbc127b5228f2d53fc43d0a97da8b684c83ac5db4d"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -53234,14 +53252,6 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             YP86gFJZCcq71fGzR1yCyIcdMMx967LEe2fgPLHxwvMRmWFbbA/uomWhGhxR6wrVTusV15TmjV45
             1I0qzs7cOLePUnBAgV1fFqsfwFpsXLonjnH0ErovGu0CAwEAAQ==
         </rsa-public-key>
-        <rsa-public-key sha-256="5c30d219d4d2cb54c175d7cdebae30a19caa08e507e7ccd8e7c5a3b566d9daea">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAllGcoEaEF5pQRV5l0/qAv7Gstz1h/vt2
-            ZvtbKSLgC2p9Id0uFXwv/5q/71AympCiXjz9Utp139mPXFecWUCPiq7eHvR+mMne0O0/zF20G/eE
-            foYRIHmVDEMSEfN4nDB28GhfeO5tF4/1vt83h7j4klTmgBIVSEDcbVw7OtiFjP4Fev7rxcS588yu
-            1eweAVGSqjOScwOBPkecGwhpm5gsjZPpaOcY6JxTOyRimF4mOtSi+Ov/tMzIbmG/oDY/cSespJua
-            sNq4CsPsSFYwWOalZu2nyIUvLiRrkbXYB0NyfTb6R4/kWZ/+2SdjfJZSIUqPuZc2NHEQRN6noW0/
-            55WCpwIDAQAB
-        </rsa-public-key>
         <rsa-public-key sha-256="5efaec17d6e9595b25532e9dc792decd2bc9f3fa5faa46215a43e63724a89b8a">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwedEcwIPmQZ9I2lMcJ8j/4cLCOZ4/i+P
             ju4jqA6GCBT1aSgTBynIhWXizFKnNdBF6Ddk8BpfIQQx3t4uT6gKn/HJh6o9VMEBvs3jnfq8q6t2
@@ -53545,6 +53555,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             U1JHWlqkyXkYUZbO1/xokPVzqed2nIHJ2Ad/gUPlar8TetZQXIOWdz7iqkTarQRcpGkQwPdOnhrH
             OUibGbRevcv806EdC1eSvKgw3oBIbu/r97y3VosFiRCkDpj3zkeZ9QR21vI43s/nlCsy3lGlLqYm
             9r2YmwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8fccc4e8a3d98ec8b0f87bcbc127b5228f2d53fc43d0a97da8b684c83ac5db4d">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkcSCjwMkpkt+Fj7YXBWsfMBgn15qY/Rf
+            TvrkScVVBU1YZYcD/xKeTQsRU2PIBNntHvf3GOOWzk8Nb3audZgKivS4DswJ/w3jDOkP9Zr23ZVp
+            I8EDJ0L3JD/ukQwLOT0tP0HMl8iPpeqSHCI9M2gEN1IBbM7XSlCmwZbDRDT089eJZiXvpzvC23cV
+            zbrE5nzQsJJtt/vkDU0T+noHZ/9jJ4YiRVJKLK4UWOaRXAP78m/cpK9k5ZaCknHS/cct4P/s5YcW
+            MPk2PZaPujFsgZq9JifJfm20hRJUEmdnfoZBeJmGVgUAK8CqPUHxZ2bwgYAaHInUW5clYpXB0Sh4
+            qTOrCQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="9192a5675eb68d49d2f7a1370fb005e043b32aa3a65e8010fcf0f80b2f86f531">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAs6obzbrOyqEiaP4fFm3ZWGgr3RI0bmXA
