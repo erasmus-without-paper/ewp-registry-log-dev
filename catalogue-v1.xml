@@ -24892,33 +24892,6 @@
         <ewp:admin-email>petr.abrahamczik@vsb.cz</ewp:admin-email>
         <ewp:admin-notes>It's a test manifest.</ewp:admin-notes>
         <apis-implemented>
-            <in2:institutions version="2.1.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://edison.sso.vsb.cz/ewp/test/rest/echo</e2:url>
-            </e2:echo>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -24973,6 +24946,68 @@
                 <iaa1:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval</iaa1:url>
                 <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
             </iaa1:iias-approval>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://edison.sso.vsb.cz/ewp/test/rest/echo</e2:url>
+            </e2:echo>
             <f1:factsheet
                 xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
                 version="0.3.0"
@@ -24990,6 +25025,22 @@
                 <f1:url>https://edison.sso.vsb.cz/ewp/test/rest/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -25009,11 +25060,11 @@
                 <ia6:max-iia-codes>1</ia6:max-iia-codes>
                 <ia6:index-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/index</ia6:index-url>
             </ia6:iias>
-            <im1:imobilities
-                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <im1:http-security>
+                <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -25022,44 +25073,10 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </im1:http-security>
-                <im1:get-url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/get</im1:get-url>
-                <im1:max-omobility-ids>1</im1:max-omobility-ids>
-                <im1:sends-notifications/>
-            </im1:imobilities>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval/cnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <imc1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </imc1:http-security>
-                <imc1:url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/cnr</imc1:url>
-                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
-            </imc1:imobility-cnr>
+                </omc1:http-security>
+                <omc1:url>https://edison.sso.vsb.cz/ewp/test/rest/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
