@@ -9,7 +9,7 @@
         <ns1:admin-notes>SIGMA EWP Dev Manifest</ns1:admin-notes>
         <ns2:apis-implemented>
             <ns25:discovery version="5.0.0">
-                <ns25:url>https://uamci.sigmaaie.org/manifest.xml</ns25:url>
+                <ns25:url>https://uamci.sigmaaie.org/ewp/rest/manifest.xml</ns25:url>
             </ns25:discovery>
             <ns23:echo
                 xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
@@ -19,19 +19,20 @@
                 <ns23:http-security>
                     <ns26:client-auth-methods>
                         <ns3:anonymous xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns4:httpsig xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns4:tlscert xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns5:httpsig xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns5:tlscert xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns6:httpsig xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns6:tls xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns7:tls xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns7:tls xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns8:tls xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns23:http-security>
-                <ns23:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/echo</ns23:url>
+                <ns23:url>https://uamci.sigmaaie.org/ewp/rest/echo</ns23:url>
             </ns23:echo>
             <ns22:institutions
                 xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
@@ -40,20 +41,21 @@
             >
                 <ns22:http-security>
                     <ns26:client-auth-methods>
-                        <ns8:anonymous xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns9:anonymous xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns10:httpsig xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns9:tlscert xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns10:httpsig xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns11:tlscert xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns12:httpsig xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns11:tls xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns13:tls xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns12:tls xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns14:tls xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns22:http-security>
-                <ns22:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/institutions/get</ns22:url>
+                <ns22:url>https://uamci.sigmaaie.org/ewp/rest/institutions/get</ns22:url>
                 <ns22:max-hei-ids>1</ns22:max-hei-ids>
             </ns22:institutions>
             <ns20:organizational-units
@@ -63,20 +65,20 @@
             >
                 <ns20:http-security>
                     <ns26:client-auth-methods>
-                        <ns13:httpsig xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns15:httpsig xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns14:tlscert xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns15:httpsig xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns16:tlscert xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns17:httpsig xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns16:tls xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns18:tls xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns17:tls xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns19:tls xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns20:http-security>
-                <ns20:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/departments/get</ns20:url>
+                <ns20:url>https://uamci.sigmaaie.org/ewp/rest/departments/get</ns20:url>
                 <ns20:max-ounit-ids>5</ns20:max-ounit-ids>
                 <ns20:max-ounit-codes>5</ns20:max-ounit-codes>
             </ns20:organizational-units>
@@ -87,21 +89,21 @@
             >
                 <ns11:http-security>
                     <ns26:client-auth-methods>
-                        <ns18:httpsig xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns20:httpsig xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns19:tlscert xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns20:httpsig xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns21:tlscert xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns22:httpsig xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns21:tls xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns23:tls xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns22:tls xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns24:tls xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns11:http-security>
-                <ns11:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility/get</ns11:get-url>
-                <ns11:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility/index</ns11:index-url>
+                <ns11:get-url>https://uamci.sigmaaie.org/ewp/rest/omobility/get</ns11:get-url>
+                <ns11:index-url>https://uamci.sigmaaie.org/ewp/rest/omobility/index</ns11:index-url>
                 <ns11:max-omobility-ids>5</ns11:max-omobility-ids>
             </ns11:omobilities>
             <ns7:imobilities
@@ -111,20 +113,20 @@
             >
                 <ns7:http-security>
                     <ns26:client-auth-methods>
-                        <ns23:httpsig xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns27:httpsig xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns24:tlscert xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns27:httpsig xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns28:tlscert xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns29:httpsig xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns28:tls xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns30:tls xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns29:tls xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns31:tls xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns7:http-security>
-                <ns7:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/imobility/get</ns7:get-url>
+                <ns7:get-url>https://uamci.sigmaaie.org/ewp/rest/imobility/get</ns7:get-url>
                 <ns7:max-omobility-ids>5</ns7:max-omobility-ids>
             </ns7:imobilities>
             <ns10:omobility-cnr
@@ -134,20 +136,20 @@
             >
                 <ns10:http-security>
                     <ns26:client-auth-methods>
-                        <ns30:httpsig xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns32:httpsig xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns31:tlscert xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns32:httpsig xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns33:tlscert xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns34:httpsig xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns33:tls xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns35:tls xmlns:ns35="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns34:tls xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns36:tls xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns10:http-security>
-                <ns10:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility/cnr</ns10:url>
+                <ns10:url>https://uamci.sigmaaie.org/ewp/rest/omobility/cnr</ns10:url>
                 <ns10:max-omobility-ids>5</ns10:max-omobility-ids>
             </ns10:omobility-cnr>
             <ns8:omobility-la-cnr
@@ -157,20 +159,20 @@
             >
                 <ns8:http-security>
                     <ns26:client-auth-methods>
-                        <ns35:httpsig xmlns:ns35="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns37:httpsig xmlns:ns37="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns36:tlscert xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns37:httpsig xmlns:ns37="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns38:tlscert xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns39:httpsig xmlns:ns39="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns38:tls xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns40:tls xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns39:tls xmlns:ns39="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns41:tls xmlns:ns41="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns8:http-security>
-                <ns8:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/cnr</ns8:url>
+                <ns8:url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/cnr</ns8:url>
                 <ns8:max-omobility-ids>5</ns8:max-omobility-ids>
             </ns8:omobility-la-cnr>
             <ns9:omobility-las
@@ -180,22 +182,23 @@
             >
                 <ns9:http-security>
                     <ns26:client-auth-methods>
-                        <ns40:anonymous xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns42:anonymous xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns43:httpsig xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns41:tlscert xmlns:ns41="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns42:httpsig xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns44:tlscert xmlns:ns44="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns45:httpsig xmlns:ns45="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns43:tls xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns46:tls xmlns:ns46="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns44:tls xmlns:ns44="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns47:tls xmlns:ns47="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns9:http-security>
-                <ns9:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/get</ns9:get-url>
-                <ns9:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/index</ns9:index-url>
-                <ns9:update-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/update</ns9:update-url>
+                <ns9:get-url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/get</ns9:get-url>
+                <ns9:index-url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/index</ns9:index-url>
+                <ns9:update-url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/update</ns9:update-url>
                 <ns9:max-omobility-ids>5</ns9:max-omobility-ids>
             </ns9:omobility-las>
             <ns19:iias
@@ -205,23 +208,24 @@
             >
                 <ns19:http-security>
                     <ns26:client-auth-methods>
-                        <ns45:anonymous xmlns:ns45="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns48:anonymous xmlns:ns48="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <ns49:httpsig xmlns:ns49="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns46:tlscert xmlns:ns46="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns47:httpsig xmlns:ns47="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns50:tlscert xmlns:ns50="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns51:httpsig xmlns:ns51="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns48:tls xmlns:ns48="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns52:tls xmlns:ns52="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns49:tls xmlns:ns49="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns53:tls xmlns:ns53="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns19:http-security>
-                <ns19:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iias/get</ns19:get-url>
+                <ns19:get-url>https://uamci.sigmaaie.org/ewp/rest/iias/get</ns19:get-url>
                 <ns19:max-iia-ids>5</ns19:max-iia-ids>
                 <ns19:max-iia-codes>5</ns19:max-iia-codes>
-                <ns19:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iias/index</ns19:index-url>
+                <ns19:index-url>https://uamci.sigmaaie.org/ewp/rest/iias/index</ns19:index-url>
             </ns19:iias>
             <ns16:iia-cnr
                 xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
@@ -230,20 +234,20 @@
             >
                 <ns16:http-security>
                     <ns26:client-auth-methods>
-                        <ns50:httpsig xmlns:ns50="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns54:httpsig xmlns:ns54="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns51:tlscert xmlns:ns51="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns52:httpsig xmlns:ns52="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns55:tlscert xmlns:ns55="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns56:httpsig xmlns:ns56="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns53:tls xmlns:ns53="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns57:tls xmlns:ns57="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns54:tls xmlns:ns54="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns58:tls xmlns:ns58="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns16:http-security>
-                <ns16:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iias/cnr</ns16:url>
+                <ns16:url>https://uamci.sigmaaie.org/ewp/rest/iias/cnr</ns16:url>
             </ns16:iia-cnr>
             <ns18:iias-approval
                 xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
@@ -252,20 +256,20 @@
             >
                 <ns18:http-security>
                     <ns26:client-auth-methods>
-                        <ns55:httpsig xmlns:ns55="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns59:httpsig xmlns:ns59="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns56:tlscert xmlns:ns56="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns57:httpsig xmlns:ns57="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns60:tlscert xmlns:ns60="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns61:httpsig xmlns:ns61="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns58:tls xmlns:ns58="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns62:tls xmlns:ns62="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns59:tls xmlns:ns59="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns63:tls xmlns:ns63="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns18:http-security>
-                <ns18:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iia/approval</ns18:url>
+                <ns18:url>https://uamci.sigmaaie.org/ewp/rest/iia/approval</ns18:url>
                 <ns18:max-iia-ids>5</ns18:max-iia-ids>
             </ns18:iias-approval>
             <ns17:iia-approval-cnr
@@ -275,20 +279,20 @@
             >
                 <ns17:http-security>
                     <ns26:client-auth-methods>
-                        <ns60:httpsig xmlns:ns60="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns64:httpsig xmlns:ns64="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns61:tlscert xmlns:ns61="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns62:httpsig xmlns:ns62="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns65:tlscert xmlns:ns65="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns66:httpsig xmlns:ns66="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns63:tls xmlns:ns63="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns67:tls xmlns:ns67="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns64:tls xmlns:ns64="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns68:tls xmlns:ns68="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns17:http-security>
-                <ns17:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iia/approval/cnr</ns17:url>
+                <ns17:url>https://uamci.sigmaaie.org/ewp/rest/iia/approval/cnr</ns17:url>
             </ns17:iia-approval-cnr>
             <ns14:courses
                 xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
@@ -297,20 +301,20 @@
             >
                 <ns14:http-security>
                     <ns26:client-auth-methods>
-                        <ns65:httpsig xmlns:ns65="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns69:httpsig xmlns:ns69="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns66:tlscert xmlns:ns66="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns67:httpsig xmlns:ns67="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns70:tlscert xmlns:ns70="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns71:httpsig xmlns:ns71="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns68:tls xmlns:ns68="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns72:tls xmlns:ns72="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns69:tls xmlns:ns69="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns73:tls xmlns:ns73="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns14:http-security>
-                <ns14:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/courses</ns14:url>
+                <ns14:url>https://uamci.sigmaaie.org/ewp/rest/courses</ns14:url>
                 <ns14:max-los-ids>5</ns14:max-los-ids>
                 <ns14:max-los-codes>5</ns14:max-los-codes>
             </ns14:courses>
@@ -321,20 +325,20 @@
             >
                 <ns12:http-security>
                     <ns26:client-auth-methods>
-                        <ns70:httpsig xmlns:ns70="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns74:httpsig xmlns:ns74="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns71:tlscert xmlns:ns71="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns72:httpsig xmlns:ns72="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns75:tlscert xmlns:ns75="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns76:httpsig xmlns:ns76="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns73:tls xmlns:ns73="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns77:tls xmlns:ns77="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns74:tls xmlns:ns74="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns78:tls xmlns:ns78="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns12:http-security>
-                <ns12:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/course-replication</ns12:url>
+                <ns12:url>https://uamci.sigmaaie.org/ewp/rest/course-replication</ns12:url>
                 <ns12:allows-anonymous-access>false</ns12:allows-anonymous-access>
                 <ns12:supports-modified-since>true</ns12:supports-modified-since>
             </ns12:simple-course-replication>
@@ -345,21 +349,21 @@
             >
                 <ns5:http-security>
                     <ns26:client-auth-methods>
-                        <ns75:httpsig xmlns:ns75="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns79:httpsig xmlns:ns79="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns76:tlscert xmlns:ns76="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns77:httpsig xmlns:ns77="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns80:tlscert xmlns:ns80="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns81:httpsig xmlns:ns81="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns78:tls xmlns:ns78="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns82:tls xmlns:ns82="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns79:tls xmlns:ns79="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns83:tls xmlns:ns83="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns5:http-security>
-                <ns5:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/tor/get</ns5:get-url>
-                <ns5:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/tor/index</ns5:index-url>
+                <ns5:get-url>https://uamci.sigmaaie.org/ewp/rest/tor/get</ns5:get-url>
+                <ns5:index-url>https://uamci.sigmaaie.org/ewp/rest/tor/index</ns5:index-url>
                 <ns5:max-omobility-ids>5</ns5:max-omobility-ids>
             </ns5:imobility-tors>
             <ns4:imobility-tor-cnr
@@ -369,20 +373,20 @@
             >
                 <ns4:http-security>
                     <ns26:client-auth-methods>
-                        <ns80:httpsig xmlns:ns80="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <ns84:httpsig xmlns:ns84="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </ns26:client-auth-methods>
                     <ns26:server-auth-methods>
-                        <ns81:tlscert xmlns:ns81="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns82:httpsig xmlns:ns82="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <ns85:tlscert xmlns:ns85="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns86:httpsig xmlns:ns86="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </ns26:server-auth-methods>
                     <ns26:request-encryption-methods>
-                        <ns83:tls xmlns:ns83="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                        <ns87:tls xmlns:ns87="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
                     </ns26:request-encryption-methods>
                     <ns26:response-encryption-methods>
-                        <ns84:tls xmlns:ns84="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                        <ns88:tls xmlns:ns88="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </ns26:response-encryption-methods>
                 </ns4:http-security>
-                <ns4:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/imobility/cnr</ns4:url>
+                <ns4:url>https://uamci.sigmaaie.org/ewp/rest/imobility/cnr</ns4:url>
                 <ns4:max-omobility-ids>5</ns4:max-omobility-ids>
             </ns4:imobility-tor-cnr>
         </ns2:apis-implemented>

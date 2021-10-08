@@ -678,12 +678,13 @@
         <ewp:admin-notes>SIGMA EWP Dev Manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>https://uamci.sigmaaie.org/manifest.xml</d5:url>
+                <d5:url>https://uamci.sigmaaie.org/ewp/rest/manifest.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -696,12 +697,13 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </e2:http-security>
-                <e2:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/echo</e2:url>
+                <e2:url>https://uamci.sigmaaie.org/ewp/rest/echo</e2:url>
             </e2:echo>
             <in2:institutions version="2.1.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -714,7 +716,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </in2:http-security>
-                <in2:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/institutions/get</in2:url>
+                <in2:url>https://uamci.sigmaaie.org/ewp/rest/institutions/get</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
             <ou2:organizational-units version="2.1.1">
@@ -733,7 +735,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </ou2:http-security>
-                <ou2:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/departments/get</ou2:url>
+                <ou2:url>https://uamci.sigmaaie.org/ewp/rest/departments/get</ou2:url>
                 <ou2:max-ounit-ids>5</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>5</ou2:max-ounit-codes>
             </ou2:organizational-units>
@@ -756,8 +758,8 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </om1:http-security>
-                <om1:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility/get</om1:get-url>
-                <om1:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility/index</om1:index-url>
+                <om1:get-url>https://uamci.sigmaaie.org/ewp/rest/omobility/get</om1:get-url>
+                <om1:index-url>https://uamci.sigmaaie.org/ewp/rest/omobility/index</om1:index-url>
                 <om1:max-omobility-ids>5</om1:max-omobility-ids>
             </om1:omobilities>
             <im1:imobilities
@@ -779,7 +781,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </im1:http-security>
-                <im1:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/imobility/get</im1:get-url>
+                <im1:get-url>https://uamci.sigmaaie.org/ewp/rest/imobility/get</im1:get-url>
                 <im1:max-omobility-ids>5</im1:max-omobility-ids>
             </im1:imobilities>
             <omc1:omobility-cnr
@@ -801,7 +803,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </omc1:http-security>
-                <omc1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility/cnr</omc1:url>
+                <omc1:url>https://uamci.sigmaaie.org/ewp/rest/omobility/cnr</omc1:url>
                 <omc1:max-omobility-ids>5</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
             <omlc1:omobility-la-cnr
@@ -823,7 +825,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </omlc1:http-security>
-                <omlc1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/cnr</omlc1:url>
+                <omlc1:url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/cnr</omlc1:url>
                 <omlc1:max-omobility-ids>5</omlc1:max-omobility-ids>
             </omlc1:omobility-la-cnr>
             <oml1:omobility-las
@@ -833,6 +835,7 @@
                 <oml1:http-security>
                     <sec:client-auth-methods>
                         <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -845,9 +848,9 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </oml1:http-security>
-                <oml1:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/get</oml1:get-url>
-                <oml1:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/index</oml1:index-url>
-                <oml1:update-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/omobility-las/update</oml1:update-url>
+                <oml1:get-url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/get</oml1:get-url>
+                <oml1:index-url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/index</oml1:index-url>
+                <oml1:update-url>https://uamci.sigmaaie.org/ewp/rest/omobility-las/update</oml1:update-url>
                 <oml1:max-omobility-ids>5</oml1:max-omobility-ids>
             </oml1:omobility-las>
             <ia6:iias
@@ -857,6 +860,7 @@
                 <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A0:anonymous/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -869,10 +873,10 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </ia6:http-security>
-                <ia6:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iias/get</ia6:get-url>
+                <ia6:get-url>https://uamci.sigmaaie.org/ewp/rest/iias/get</ia6:get-url>
                 <ia6:max-iia-ids>5</ia6:max-iia-ids>
                 <ia6:max-iia-codes>5</ia6:max-iia-codes>
-                <ia6:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iias/index</ia6:index-url>
+                <ia6:index-url>https://uamci.sigmaaie.org/ewp/rest/iias/index</ia6:index-url>
             </ia6:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
@@ -890,7 +894,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </iac2:http-security>
-                <iac2:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iias/cnr</iac2:url>
+                <iac2:url>https://uamci.sigmaaie.org/ewp/rest/iias/cnr</iac2:url>
             </iac2:iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
@@ -911,7 +915,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </iaa1:http-security>
-                <iaa1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iia/approval</iaa1:url>
+                <iaa1:url>https://uamci.sigmaaie.org/ewp/rest/iia/approval</iaa1:url>
                 <iaa1:max-iia-ids>5</iaa1:max-iia-ids>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
@@ -933,7 +937,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </iaac1:http-security>
-                <iaac1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/iia/approval/cnr</iaac1:url>
+                <iaac1:url>https://uamci.sigmaaie.org/ewp/rest/iia/approval/cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
             <co1:courses
                 xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
@@ -954,7 +958,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </co1:http-security>
-                <co1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/courses</co1:url>
+                <co1:url>https://uamci.sigmaaie.org/ewp/rest/courses</co1:url>
                 <co1:max-los-ids>5</co1:max-los-ids>
                 <co1:max-los-codes>5</co1:max-los-codes>
             </co1:courses>
@@ -977,7 +981,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </cr1:http-security>
-                <cr1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/course-replication</cr1:url>
+                <cr1:url>https://uamci.sigmaaie.org/ewp/rest/course-replication</cr1:url>
                 <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
@@ -1000,8 +1004,8 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </imt1:http-security>
-                <imt1:get-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/tor/get</imt1:get-url>
-                <imt1:index-url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/tor/index</imt1:index-url>
+                <imt1:get-url>https://uamci.sigmaaie.org/ewp/rest/tor/get</imt1:get-url>
+                <imt1:index-url>https://uamci.sigmaaie.org/ewp/rest/tor/index</imt1:index-url>
                 <imt1:max-omobility-ids>5</imt1:max-omobility-ids>
             </imt1:imobility-tors>
             <imtc1:imobility-tor-cnr
@@ -1023,7 +1027,7 @@
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
                 </imtc1:http-security>
-                <imtc1:url>https://uamci.sigmaaie.org/ewp/rest/ewp/rest/imobility/cnr</imtc1:url>
+                <imtc1:url>https://uamci.sigmaaie.org/ewp/rest/imobility/cnr</imtc1:url>
                 <imtc1:max-omobility-ids>5</imtc1:max-omobility-ids>
             </imtc1:imobility-tor-cnr>
         </apis-implemented>
