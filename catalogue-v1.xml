@@ -27539,6 +27539,25 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/manifest</d5:url>
             </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://inforestudante.uc.pt/nonio/rest/ewp/echo</e2:url>
+            </e2:echo>
             <in2:institutions version="2.2.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
