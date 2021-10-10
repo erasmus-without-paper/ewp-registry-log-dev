@@ -678,13 +678,13 @@
         <ewp:admin-notes>SIGMA EWP Dev Manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
-                <d5:url>https://uamci.sigmaaie.org/ewp/rest/manifest.xml</d5:url>
+                <d5:url>https://uamci.sigmaaie.org/manifest.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
-                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B1:tlscert/>
@@ -722,6 +722,7 @@
             <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
@@ -859,7 +860,6 @@
             >
                 <ia6:http-security>
                     <sec:client-auth-methods>
-                        <sec-A0:anonymous/>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
