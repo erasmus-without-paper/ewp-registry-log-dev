@@ -33375,6 +33375,33 @@
                 </iaac1:http-security>
                 <iaac1:url>https://dev-ewp.ug.edu.pl/ewp/iia/cnr/approval</iaac1:url>
             </iaac1:iia-approval-cnr>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev-ewp.ug.edu.pl/ewp/institutions/</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev-ewp.ug.edu.pl/ewp/ounits/</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
         </apis-implemented>
         <institutions-covered>
             <hei-id>dev.ug.edu.pl</hei-id>
