@@ -1,55 +1,1821 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><ns3:manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd" xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd" xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"><ns3:host><admin-email>volenova@civ.zcu.cz</admin-email><admin-notes>EWP connector for IS/STAG</admin-notes><ns2:apis-implemented><ns23:echo version="2.0.1"><ns23:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns23:http-security><ns23:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/echo</ns23:url></ns23:echo><ns24:discovery version="5.0.0"><ns24:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/manifest</ns24:url></ns24:discovery><ns22:institutions version="2.2.0"><ns22:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/><ns26:anonymous/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns22:http-security><ns22:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/institutions</ns22:url><ns22:max-hei-ids>1</ns22:max-hei-ids></ns22:institutions><ns21:organizational-units version="2.1.1"><ns21:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/><ns26:anonymous/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns21:http-security><ns21:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/ounits</ns21:url><ns21:max-ounit-ids>10</ns21:max-ounit-ids><ns21:max-ounit-codes>10</ns21:max-ounit-codes></ns21:organizational-units><ns20:iias version="3.0.0"><ns20:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns20:http-security><ns20:get-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/iias/get</ns20:get-url><ns20:max-iia-ids>10</ns20:max-iia-ids><ns20:max-iia-codes>10</ns20:max-iia-codes><ns20:index-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/iias/index</ns20:index-url></ns20:iias><ns18:iias-approval version="0.2.1"><ns18:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns18:http-security><ns18:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/iias/approval</ns18:url><ns18:max-iia-ids>10</ns18:max-iia-ids></ns18:iias-approval><ns12:omobility-las version="1.0.1"><ns12:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns12:http-security><ns12:get-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/las/get</ns12:get-url><ns12:index-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/las/index</ns12:index-url><ns12:update-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/las/update</ns12:update-url><ns12:max-omobility-ids>10</ns12:max-omobility-ids></ns12:omobility-las><ns11:omobility-la-cnr version="1.0.0"><ns11:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns11:http-security><ns11:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/las/cnr</ns11:url><ns11:max-omobility-ids>10</ns11:max-omobility-ids></ns11:omobility-la-cnr></ns2:apis-implemented><ns3:institutions-covered><ns2:hei id="zcu.cz"><ns2:other-id type="pic">999843894</ns2:other-id><ns2:other-id type="erasmus">CZ PLZEN01</ns2:other-id><ns2:other-id type="erasmus-charter">51707-EPP-1-2014-1-CZ-EPPKA3-ECHE</ns2:other-id><ns2:name xml:lang="cs">ZÁPADOČESKÁ UNIVERZITA V PLZNI</ns2:name><ns2:name xml:lang="en">University of West Bohemia</ns2:name></ns2:hei></ns3:institutions-covered><ns3:client-credentials-in-use><ns3:certificate>MIIHUDCCBTigAwIBAgIRAMfJnx4tgLxqcYmRgcdhbCwwDQYJKoZIhvcNAQEMBQAw
-RDELMAkGA1UEBhMCTkwxGTAXBgNVBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNV
-BAMTEUdFQU5UIE9WIFJTQSBDQSA0MB4XDTIxMDIwNzAwMDAwMFoXDTIyMDIwNzIz
-NTk1OVowgcQxCzAJBgNVBAYTAkNaMQ4wDAYDVQQREwUzMDEwMDEYMBYGA1UECAwP
-UGx6ZcWIc2vDvSBrcmFqMScwJQYDVQQHDB5QbHplxYggMywgSmnFvm7DrSBQxZll
-ZG3Em3N0w60xGzAZBgNVBAkTElVuaXZlcnppdG5pIDI3MzIvODEqMCgGA1UECgwh
-WsOhcGFkb8SNZXNrw6EgdW5pdmVyeml0YSB2IFBsem5pMRkwFwYDVQQDExBzdGFn
-LWRlbW8uemN1LmN6MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1eLZ
-AF+k+vKzogVoqFWDrmkl009EIv1bk49o/ksKfLzqY5uT6egv91VtiByfcPq8tMt1
-bbf+Y33h8StEwHqKHGyJ8Cf4lHxQcyn0An58axSnSZwmVgloUXxblLvUrVoDGZvd
-bDulSCYQr9581u7qRWvFc/IvhNvbWnaalVEliDCbUrnz+etCtfToewYp0/vgtAnj
-nq7NSexf4PFH9hxjynf39VxIQVJtUfbQqr1mtLGSc8IRHGNRC9SjZQ42dc6JfIVW
-2w8RI920+546A6iH28Gsybio7xzm96qyguN34nDhO+Zfzy5X183d3io5Wqduiyeh
-YEmFGRIhDlEx/au91QIDAQABo4ICujCCArYwHwYDVR0jBBgwFoAUbx01SRBsMvpZ
-oJ68iugflb5xegwwHQYDVR0OBBYEFMUHTNeRmfRohOI/jfMSHWsFRgpXMA4GA1Ud
-DwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr
-BgEFBQcDAjBJBgNVHSAEQjBAMDQGCysGAQQBsjEBAgJPMCUwIwYIKwYBBQUHAgEW
-F2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgGBmeBDAECAjA/BgNVHR8EODA2MDSg
-MqAwhi5odHRwOi8vR0VBTlQuY3JsLnNlY3RpZ28uY29tL0dFQU5UT1ZSU0FDQTQu
-Y3JsMHUGCCsGAQUFBwEBBGkwZzA6BggrBgEFBQcwAoYuaHR0cDovL0dFQU5ULmNy
-dC5zZWN0aWdvLmNvbS9HRUFOVE9WUlNBQ0E0LmNydDApBggrBgEFBQcwAYYdaHR0
-cDovL0dFQU5ULm9jc3Auc2VjdGlnby5jb20wggECBgorBgEEAdZ5AgQCBIHzBIHw
-AO4AdQBGpVXrdfqRIDC1oolp9PN9ESxBdL79SbiFq/L8cP5tRwAAAXd+H3Y7AAAE
-AwBGMEQCIARtMdza49Mb+FqqVATpco42Dyco71dDu3ijhkAzYA61AiBR3f5FWKhz
-bgZhcmMs7yJ2aPEd5WnnQ56oAR/ZZmRK5AB1AN+lXqtogk8fbK3uuF9OPlrqzaIS
-pGpejjsSwCBEXCpzAAABd34fd3sAAAQDAEYwRAIgLrt6xYJ7L/HYmJjcLsR+dttn
-ynEcECwJW/pDAn8DqEwCICmVSttIo/s92lSXziscIf9N04GlIdhPkwvC1bsResfa
-MC4GA1UdEQQnMCWCEHN0YWctZGVtby56Y3UuY3qCEXN0YWctZGVtbzIuemN1LmN6
-MA0GCSqGSIb3DQEBDAUAA4ICAQARTl7k4cgW018ukTj5ieiciSvh6Rou6yDgExge
-MoERlWMc47MO52evBVwtMwLmg9tthmJqUgPfWDHITxo1CC9Fi507fYI5TAGyJ2rR
-+YOyBi1R20zu6PrWPlVu2tsPimSG/NRsESEvAvRfNuCFQoNeE8dKcN1giVVxkpvG
-A5N/Q0UdlzV8zVzFWwmB/7AbS4QV/TdTii/DQEDNf9DYTWQgMmj2PsWevXsEE6Qg
-ovuH6pkR5Z5QEZ5/euIzllKHYvegufwFak2R2WW81dWjJx4lGflXNBx27bsyP+Bs
-b0p8NzEIv0MkelvAnElzohCTksskJuK7UiX+zvQ5YJQAnuCzOIHLJfNifnx3dXNs
-CUpgepNiXDbihgPMjTtvj+b/U1N6kKs7bIM7Mu41orRC/hbmMCnIJ2nmJ7T4a4Hc
-es3cuGxDEc/Kg0uL1COpwk6HonGHO/WXvM9reTysH/XYznt+WPhCLUbr1LaYv/kq
-8az+1y/CpxFrRc0LXaMBnlpWD5mNoJ0BHLSBEMRjpLOq5qMAcauR6wnx9YIu9N7Z
-lES4rpdARrXmrh6xPeW1q+BJJX/qsDcrjaaH54umgBKcyDr0OejA0/PLegKp7tJK
-3c9vRah5cnqeKNXM3+kM3VqXE9ZQk7FgKVH8wPm2FWJWhku9NwTf8emrfBFPeDHN
-UdRSyA==
-</ns3:certificate><ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1eLZAF+k+vKzogVoqFWD
-rmkl009EIv1bk49o/ksKfLzqY5uT6egv91VtiByfcPq8tMt1bbf+Y33h8StEwHqK
-HGyJ8Cf4lHxQcyn0An58axSnSZwmVgloUXxblLvUrVoDGZvdbDulSCYQr9581u7q
-RWvFc/IvhNvbWnaalVEliDCbUrnz+etCtfToewYp0/vgtAnjnq7NSexf4PFH9hxj
-ynf39VxIQVJtUfbQqr1mtLGSc8IRHGNRC9SjZQ42dc6JfIVW2w8RI920+546A6iH
-28Gsybio7xzm96qyguN34nDhO+Zfzy5X183d3io5WqduiyehYEmFGRIhDlEx/au9
-1QIDAQAB
-</ns3:rsa-public-key></ns3:client-credentials-in-use><ns3:server-credentials-in-use><ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1eLZAF+k+vKzogVoqFWD
-rmkl009EIv1bk49o/ksKfLzqY5uT6egv91VtiByfcPq8tMt1bbf+Y33h8StEwHqK
-HGyJ8Cf4lHxQcyn0An58axSnSZwmVgloUXxblLvUrVoDGZvdbDulSCYQr9581u7q
-RWvFc/IvhNvbWnaalVEliDCbUrnz+etCtfToewYp0/vgtAnjnq7NSexf4PFH9hxj
-ynf39VxIQVJtUfbQqr1mtLGSc8IRHGNRC9SjZQ42dc6JfIVW2w8RI920+546A6iH
-28Gsybio7xzm96qyguN34nDhO+Zfzy5X183d3io5WqduiyehYEmFGRIhDlEx/au9
-1QIDAQAB
-</ns3:rsa-public-key></ns3:server-credentials-in-use></ns3:host></ns3:manifest>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <title>Portál DEMO ZCU
+     - V&iacute;tejte
+  </title>
+
+  
+  <meta http-equiv="x-xrds-location"
+        content="https://stag-demo.zcu.cz/portal/xrds.xml"/>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/zdroje/portal_resources/demo/portal/img/favicon/apple-touch-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="120x120"
+        href="/zdroje/portal_resources/demo/portal/img/favicon/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="152x152"
+        href="/zdroje/portal_resources/demo/portal/img/favicon/apple-touch-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="/zdroje/portal_resources/demo/portal/img/favicon/apple-touch-icon-180x180.png"/>
+
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/demo/portal/img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/demo/portal/img/favicon/android-chrome-192x192.png"
+        sizes="192x192">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/demo/portal/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/demo/portal/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" type="image/png" href="/zdroje/portal_resources/demo/portal/img/favicon/favicon-32x32.png"
+        sizes="32x32">
+
+  <link rel="StyleSheet" type="text/css" href="/zdroje/bootstrap/dist/css/bootstrap.css?REL_211011-1849">
+  <link rel="StyleSheet" type="text/css" href="/zdroje/bootstrap/dist/css/bootstrap-theme.css?REL_211011-1849">
+  <link rel="StyleSheet" media="all" type="text/css" href="/zdroje/portal_resources/common/portal/css/portal.css?REL_211011-1849">
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/portal_resources/common/portal/css/mobile.css?REL_211011-1849">
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/portal_resources/demo/demo_color.css?REL_211011-1849">
+  <link rel="StyleSheet" href="/zdroje/css/xgui/XGui.css?REL_211011-1849">
+  <link rel="StyleSheet" href="/zdroje/css/mgui/MGui.css?REL_211011-1849" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/zdroje/js/jscalendar/calendar-cw.css" title="calendar-cw" media="all"/>
+
+
+  
+
+  <script type="text/javascript" src="/zdroje/js/COMBINED.js?REL_211011-1849"></script>
+  
+
+
+  <script type="text/javascript" src="/zdroje/bootstrap/dist/js/bootstrap.js?REL_211011-1849"></script>
+  <script type="text/javascript">
+    $.fn.bootstrapBtn = $.fn.button.noConflict();
+  </script>
+
+
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/js/footable/css/footable.bootstrap.min.css">
+  <script type="text/javascript" src="/zdroje/js/footable/js/footable.min.js"></script>
+  
+  <script type="text/javascript" charset="UTF-8" src="/zdroje/js/l10n/l10n-cs.js"></script>
+  <script type="text/javascript" src="/zdroje/js/jscalendar/lang/calendar-cs.js"></script>
+
+  <style>
+    #myAffix {
+      z-index: 1099;
+    }
+
+    #myAffix.affix {
+      top: 0;
+      width: 100%;
+      position: fixed;
+    }
+
+    .hamburgerBtn button {
+      margin-top: 0;
+    }
+
+    .mobile_header_wrapper span.app_header_center {
+      color: white;
+    }
+
+    .mobile_menu .panel {
+      border: none;
+      margin: 0;
+    }
+
+    .mobile_nav_menu_service_links {
+      padding: 6px;
+    }
+
+    .mobile_nav_menu_service_links a {
+      padding: 4px;
+      font-size: 14px;
+      white-space: nowrap;
+      line-height: 1.5em;
+    }
+
+    .mobile_nav_menu_service_links a.xg_tooltip {
+      padding-left: 12px;
+    }
+
+    #mobile_nav_menu {
+      padding-top: 50px;
+    }
+
+    #mobile_nav_menu ul.app_menubar li {
+      border-top: 0;
+    }
+
+    #mobile_nav_menu .modal-dialog, #mobile_nav_menu .modal-body {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      div.app_menu, div.app_page_menu {
+        display: none;
+      }
+
+      .mobileNavWrapper {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+<h1 class="a11y_hidden">V&iacute;tejte - 
+  Portál DEMO ZCU
+</h1>
+
+<a class="a11y_hidden a11y_focusable" href="#app_page_content">Přeskočit na obsah stránky</a>
+
+<div
+  class="app_container app_container-modif_lang-cs app_container-modif_single ">
+
+  <div class="app_header_wrapper hideForMobile" role="banner" aria-label="Hlavička stránky">
+    <div class="app_header">
+
+      <div class="app_header_left">
+        <a href="http://is-stag.zcu.cz"
+           title="Webové stránky DEMO ZCU"
+           target="_blank"><span class="a11y_hidden">Webové stránky DEMO ZCU</span></a>
+      </div>
+
+      <div class="app_header_center">
+        <a href="/" title="Vstupní stránka portálu DEMO ZCU"
+        ><span class="a11y_hidden">Vstupní stránka portálu DEMO ZCU</span></a>
+      </div>
+
+      <div class="app_header_right">
+        <div class="upper">
+
+          
+            
+            
+              
+                
+                
+                  <a class="falseLink hideForMobile" href="/portal?pc_originalURL=L3BvcnRhbC8" rel="nofollow"
+                     title="Přihlásit uživatele">Nepřihlášený uživatel </a>
+                  <a href="/portal?pc_originalURL=L3BvcnRhbC8" title="Přihlásit uživatele" rel="nofollow">Přihlásit</a>
+                
+              
+            
+          
+          
+            
+              <a href="/portal/studium/index.html?pc_lang=en" title="Switch to english">English</a>
+            
+            
+          
+        </div>
+        
+        <div class="lower">
+          
+          
+          
+          
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+    
+  </div>
+
+  <div id="myAffix" class="mobile_header_wrapper affix b app_header_wrapper hideForDesktop">
+
+    <div class="app_header_wrapper">
+      <div class="app_header">
+
+
+        <div class="app_header_cell pull-left">
+          <div class="hamburgerBtn btn-group mobileNav " role="group">
+            <button role="button" class=" btn btn-primary" id="mobile_menu_display_btn" data-toggle="modal" data-target="#mobile_nav_menu" aria-label="Zobrazit navigaci">
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+      <span class="app_header_center">
+        <span>
+          V&iacute;tejte
+        </span>
+      </span>
+
+        <div class="app_header_cell  pull-right">
+          <div class="app_header_right">
+
+
+            <div class="upper">
+              
+                
+                
+                  
+                    
+                    
+                      <a href="/portal?pc_originalURL=L3BvcnRhbC8" title="Přihlásit uživatele" rel="nofollow">Přihlásit</a>
+                    
+                  
+                
+              
+              
+                
+                  <a href="/portal/studium/index.html?pc_lang=en" title="Switch to english">English</a>
+                
+                
+              
+            </div>
+            
+
+            <div class="lower">
+              
+              
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="clear"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="b mobile_menu hideForDesktop" role="navigation">
+
+    <div class="modal fade mobile_nav_menu" id="mobile_nav_menu" tabindex="-1" role="dialog" aria-label="Navigace">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+
+            <div class=" hideForDesktop mobile_nav_menu_toplinks" id="mobile_nav_menu_toplinks">
+
+              
+              <ul class=" ">
+                
+                  <li class=""><a id="toplinks_node_61065" data-target="#mobile_nav_menu_node_61065"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_61065"
+                                  class="selected ">Vítejte
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_71424" data-target="#mobile_nav_menu_node_71424"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_71424"
+                                  class="selected collapsed">Prohlížení
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_71458" data-target="#mobile_nav_menu_node_71458"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_71458"
+                                  class="selected collapsed">Uchazeč
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_71463" data-target="#mobile_nav_menu_node_71463"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_71463"
+                                  class="selected collapsed">Absolvent
+                  </a></li>
+                  
+              </ul>
+            </div>
+            <div id="mobile_nav_menu_accordion" class="panel panel-default mobile_nav_menu_accordion" role="tablist">
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_61065" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="true"
+                     class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="toplinks_node_61065">
+                  <a class=" selected page" href="/portal/studium/index.html">Vítejte</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_71424" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_71424">
+                  <a class="page" href="/portal/studium/prohlizeni.html">Prohlížení</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_71458" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_71458">
+                  <a class="page" href="/portal/studium/uchazec/eprihlaska.html">E-Přihláška</a><a class="page" href="/portal/studium/uchazec/prijimaci-rizeni.html">Přijímací řízení</a><a class="page" href="/portal/studium/uchazec/ects-prijezdy.html">ECTS příjezdy</a><a class="page" href="http://ects.zcu.cz">Katalog předmětů<span class="link_out"></span></a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_71463" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_71463">
+                  <a class="page" href="/portal/studium/absolvent/registrace.html">Registrace</a><a class="page" href="/portal/studium/absolvent/prihlaseni.html">Přihlášení absolventa</a><a class="page" href="/portal/studium/absolvent/zmena-hesla.html">Zapomenuté heslo</a><a class="page" href="http://www.absolvent.zcu.cz/">Web Absolvent<span class="link_out"></span></a>
+                </div>
+              </div>
+              
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  
+
+  
+  
+    
+    
+  
+    
+    
+      <h2 class="a11y_hidden hideForMobile" id="navLevel1">Navigace první úrovně</h2>
+      <div class="app_menu" role="navigation" aria-labelledby="navLevel1">
+        <ul class="app_menubar level_1 ">
+          
+            <li class="selected "><a
+              href="/portal/studium/index.html" >Vítejte</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/prohlizeni.html" >Prohlížení</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/uchazec" >Uchazeč</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/absolvent" >Absolvent</a>
+            </li>
+        </ul>
+      </div>
+      
+    
+  
+
+  
+
+
+
+
+
+    
+<script type="application/javascript">
+    jQuery(document).ready(function () {
+        // nastavim podle nastaveni v portalu
+        try {
+            civPortalRenewEvery = 300000;
+            initCivPortalSessionRenew();
+        } catch (e) {
+            console.log.call(console, e.stack || e);
+        }
+    });
+</script>
+<div id="civPortalSessionOverDialog" style="display:none; background-color: #b4b4b4">
+    <div style="padding:10pt; text-align:center; font-size: 14pt;">
+        <strong>Vzhledem k dlouhotrvající nečinnosti došlo k odpojení uživatele z portálu.</strong>
+    </div>
+    <div style="padding:10pt; text-align:center; font-size: 14pt;">
+        Klikněte, prosím, na <a href="/portal/studium/index.html" style="color: blue">tento odkaz pro obnovení připojení k portálu</a>
+    </div>
+    <div style="padding:6pt; text-align:center; font-size: 10pt;">
+        (k odpojení dochází až po 240-ti minutách nečinnosti. Pozor, na mobilních zařízeních k němu může dojít podstatně dříve).
+    </div>
+</div>
+
+
+
+  <div class="app_content" id="app_content">
+    <div class="app_page_single">
+      
+      <div class="app_page_content" id="app_page_content" role="main" aria-label="Obsah stránky, jednotlivé aplikace">
+        <div id="pc_loader_div" style="display:none; position: absolute; padding: 10pt 0pt 5pt 30pt; width: 100px; height: 30px; background: url('/zdroje/images/icons/stag/ajax-loader.gif') no-repeat left center">&nbsp;</div>
+<script type="application/javascript">
+    var pc_countdownTimer = null;
+    pc_countdownTimer = window.setInterval(function () {
+        jQuery('html, body').css('cursor', 'busy');         jQuery('#pc_loader_div').fadeIn(4000);
+        window.clearInterval(pc_countdownTimer);
+    }, 1000);
+
+</script>
+<script type="application/javascript">
+    jQuery('#pc_loader_div').remove();
+    if (typeof pc_countdownTimer != "undefined" && pc_countdownTimer != null) { window.clearInterval(pc_countdownTimer); }
+</script><table class="app_portlet_frame_out" cellpadding="0" cellspacing="0"  role="presentation"><tbody><tr><td valign="top" ><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody class="column" id="l_167822"><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: ROOT##/LoginPortlet-->
+<table id="217354" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-217354">Přihlášení (L001)</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-217354" id="cpa_217354">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='G217354validation_errors' class="xgt_validationErrors"></div>
+<div id='G217354validation_passed' class="xgt_validationPassed"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="b">
+<div class="pull-left" style="margin-right: 30pt;">
+<form method="POST" action="/portal/studium/index.html?pc_phs=-1271733229&pc_windowid=217354&_csrf=0172d35d-ea72-49f1-9a8d-51e3143c3000&pc_phase=action&pc_type=portlet&pc_interactionstate=JBPNS_rO0ABXccAAZhY3Rpb24AAAABAAVsb2dpbgAHX19FT0ZfXw**" name="loginForm" id="loginForm" autocomplete="off" autocapitalize="off">
+    <table class="ng_form_tab" cellpadding="0" cellspacing="0" style="padding-top: 3pt;">
+        <tr>
+            <th class="head" colspan="2">
+                Přihlášení do portálu:
+            </th>
+        </tr>
+        
+            <tr><th class="subhead distanced"  colspan="2">
+                Aktuální počet přihlášených uživatelů: 1
+            </th></tr>
+        
+        
+        
+        <tr>
+            <th>
+              <label for="loginName">
+                
+                
+                    Uživatelské jméno:
+                
+              </label>
+            </th>
+            <td>
+                <input autocomplete="off" autocapitalize="off" type="text" id="loginName" name="loginName" value="">
+            </td>
+        </tr>
+        <tr>
+            <th>
+              <label for="loginPassword">Heslo:</label>
+            </th>
+            <td>
+                <input autocomplete="off" autocapitalize="off" type="password" id="loginPassword" name="password" value="" placeholder="Heslo: demo">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" style="text-align: right;">
+                <input style="font-weight: bolder" type="submit" class="login_submit_button"
+                       
+                       value="Přihlásit se">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+
+    
+    
+
+
+
+
+
+
+
+    
+    
+        <div class="pull-left" style="padding-top: 3pt;">
+        <table class="ng_form_tab" cellpadding="0" cellspacing="0">
+        <tr>
+            <th class="subhead distanced" colspan="2">
+                Přihlášení přes externí autentizační systém
+            </th>
+        </tr>
+        <tr>
+        <td colspan="2">
+    
+
+<a href="/portal/openid?urlid=civportaldefault&servletPath=stag"><img src="/zdroje/images/mojeid/BLACK/155x24.png" alt="Přihlásit přes mojeID"/></a>
+
+    
+    
+        </td></tr></table>
+        </div>
+    
+
+
+
+
+</div>
+<div style="clear:both" ></div>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        if (jQuery('#loginName').val() == "") {
+            jQuery('#loginName').focus();
+        } else {
+            jQuery('#loginPassword').focus();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<br><br>
+<div class="xg_msgFromServerDefault" style="max-width: 750px">
+    <p>Toto je demonstrační portál systému studijní agendy IS/STAG. Pracuje nad DEMO databází, která se každý týden vytváří náhodně z provozních dat. Neobsahuje žádné osobní údaje a veškerá data jsou náhodně přeházena. Zde si můžete cokoliv vyzkoušet, nemusíte se bát nic mazat či měnit.</p><p>Všichni uživatelé mají heslo "demo" (bez uvozovek). Níže je k dispozici náhodný výběr různých existujících uživatelských jmen pro různé uživatelské role. Klikněte na jakékoliv jméno pro přihlášení.</p><p>K dispozici jsou i:<ul><li><a href="/ws" target="_blank" class="xg_stag_a_out">DEMO modul webových služeb nad IS/STAG</a></li><li><a href="http://ects-demo.zcu.cz" target="_blank" class="xg_stag_a_out">DEMO modul ECTS Course Catalog &amp; Information Package</a></li></ul></p>
+</div>
+
+
+
+<br>
+<table class="ng_form_tab rowstyle-zebra" cellpadding="0" cellspacing="0">
+    <thead>
+    <tr class="head">
+        <th class="head" style="background: none" colspan="2">
+            Přihlásit se jako - ukázkové identity
+        </th>
+    </tr>
+    <tr class="head">
+        <th class="head" style="background: none; text-align: right;">Role</th>
+        <th class="head" style="background: none; text-align: left;">Uživatel <span style="font-size: smaller">(fakulta/katedra)</span>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><th>Admin e-learningových systémů</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('BIKEAM','AM');return false;">BIKEAM</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('bike','AM');return false;">bike</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('CHEJLAVA_ES','AM');return false;">CHEJLAVA_ES</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('vchejlav','AM');return false;">vchejlav</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('INDYAM','AM');return false;">INDYAM</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('indy','AM');return false;">indy</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    </td></tr><tr><th>Administrátor</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('CISAR','AD');return false;">CISAR</a>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('JPANGRAC','AD');return false;">JPANGRAC</a>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KVOCH','AD');return false;">KVOCH</a>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    </td></tr><tr><th>Administrátor absolventů</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KMODRA_AA','AA');return false;">KMODRA_AA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('kmodra','AA');return false;">kmodra</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PAVLAM_AA','AA');return false;">PAVLAM_AA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('pavlajan','AA');return false;">pavlajan</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('ZENKOVA_AA','AA');return false;">ZENKOVA_AA</a>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    </td></tr><tr><th>Administrátor evaluace</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('ALIOVAAE','AE');return false;">ALIOVAAE</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('aliova','AE');return false;">aliova</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('JVAVREAE','AE');return false;">JVAVREAE</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('jvavre','AE');return false;">jvavre</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('LOFFELA','AE');return false;">LOFFELA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('loffel','AE');return false;">loffel</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    </td></tr><tr><th>Děkan</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('DEKAN#_FEK','DE');return false;">DEKAN#_FEK</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('mhorova','DE');return false;">mhorova</a>
+            </small>
+        
+    <span style="font-size: smaller">(FEK/FEK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('DEKAN#_FF','DE');return false;">DEKAN#_FF</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('dsanc','DE');return false;">dsanc</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/FF)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('DEKAN#_UJP','DE');return false;">DEKAN#_UJP</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('jcepicko','DE');return false;">jcepicko</a>
+            </small>
+        
+    <span style="font-size: smaller">(UJP/UJP)</span></span>
+    </td></tr><tr><th>ECTS koordinátor instituce</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('LSMUCLER','EI');return false;">LSMUCLER</a>
+        
+    <span style="font-size: smaller">(REK/ZV)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('OVSJAN','EI');return false;">OVSJAN</a>
+        
+    <span style="font-size: smaller">(REK/PR-Z)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('SASEK_ECTS','EI');return false;">SASEK_ECTS</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('sasek','EI');return false;">sasek</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    </td></tr><tr><th>ECTS koordinátor pracoviště</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('IRCING_E','EP');return false;">IRCING_E</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('ircing','EP');return false;">ircing</a>
+            </small>
+        
+    <span style="font-size: smaller">(FAV/KKY)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KORECTS','EP');return false;">KORECTS</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('koreisov','EP');return false;">koreisov</a>
+            </small>
+        
+    <span style="font-size: smaller">(FZS/FZS)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('POSPISIL_J1','EP');return false;">POSPISIL_J1</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('honik','EP');return false;">honik</a>
+            </small>
+        
+    <span style="font-size: smaller">(FAV/FAV)</span></span>
+    </td></tr><tr><th>Editor portálu</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('LOFFELEP','PE');return false;">LOFFELEP</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('loffel','PE');return false;">loffel</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('SASEKEP','PE');return false;">SASEKEP</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('sasek','PE');return false;">sasek</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('ZEDESEP','PE');return false;">ZEDESEP</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('zedes','PE');return false;">zedes</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    </td></tr><tr><th>Evaluace: zastupující děkan</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('JCEPICKO','EZDE');return false;">JCEPICKO</a>
+        
+    <span style="font-size: smaller">(UJP/UJP)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KLAUSOVA','EZDE');return false;">KLAUSOVA</a>
+        
+    <span style="font-size: smaller">(UJP/UJP)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PKOCOURK','EZDE');return false;">PKOCOURK</a>
+        
+    <span style="font-size: smaller">(UJP/UJP)</span></span>
+    </td></tr><tr><th>Evaluace: zastupující vedoucí pracoviště</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('JCEPICKO','EZVK');return false;">JCEPICKO</a>
+        
+    <span style="font-size: smaller">(OAJ/OAJ)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KLAUSOVA','EZVK');return false;">KLAUSOVA</a>
+        
+    <span style="font-size: smaller">(OSJ/OSJ)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PKOCOURK','EZVK');return false;">PKOCOURK</a>
+        
+    <span style="font-size: smaller">(ORJ/ORJ)</span></span>
+    </td></tr><tr><th>Fakultní rozvrhář</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('CHOD','FR');return false;">CHOD</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('jpsutka','FR');return false;">jpsutka</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPR/KCP)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PRUCHA','FR');return false;">PRUCHA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('vprucha','FR');return false;">vprucha</a>
+            </small>
+        
+    <span style="font-size: smaller">(FST/KMM)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('SROUBOVAR','FR');return false;">SROUBOVAR</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('lsroubov','FR');return false;">lsroubov</a>
+            </small>
+        
+    <span style="font-size: smaller">(FEL/KTE)</span></span>
+    </td></tr><tr><th>Fakultní správce absolventů</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FSAJITKALA','SA');return false;">FSAJITKALA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('jitkala','SA');return false;">jitkala</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPE/FPE)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FSAMARTINE3','SA');return false;">FSAMARTINE3</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('martine3','SA');return false;">martine3</a>
+            </small>
+        
+    <span style="font-size: smaller">(FEL/FEL)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FSAZAHORIK','SA');return false;">FSAZAHORIK</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('jzahorik','SA');return false;">jzahorik</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/FF)</span></span>
+    </td></tr><tr><th>Fakultní superrozvrhář</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('DSEDLACR','FS');return false;">DSEDLACR</a>
+        
+    <span style="font-size: smaller">(UJP/UJP)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PPFAUSERRF','FS');return false;">PPFAUSERRF</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('ppfauser','FS');return false;">ppfauser</a>
+            </small>
+        
+    <span style="font-size: smaller">(FDU/FDU)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TTEST','FS');return false;">TTEST</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('toninger','FS');return false;">toninger</a>
+            </small>
+        
+    <span style="font-size: smaller">(FAV/FAV)</span></span>
+    </td></tr><tr><th>Katedra</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KKS4','KA');return false;">KKS4</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('nemecl','KA');return false;">nemecl</a>
+            </small>
+        
+    <span style="font-size: smaller">(FST/KKS)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KUBIKOVA1','KA');return false;">KUBIKOVA1</a>
+        
+    <span style="font-size: smaller">(FF/KAR)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('LEDVINOV','KA');return false;">LEDVINOV</a>
+        
+    <span style="font-size: smaller">(FF/KHV)</span></span>
+    </td></tr><tr><th>Management</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('HOFMANP','MA');return false;">HOFMANP</a>
+        
+    <span style="font-size: smaller">(REK/R)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PECHMANM','MA');return false;">PECHMANM</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('pechmanp','MA');return false;">pechmanp</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/R)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TZIKOVAM','MA');return false;">TZIKOVAM</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('tzikova','MA');return false;">tzikova</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/R)</span></span>
+    </td></tr><tr><th>Prorektor</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('LENKAKA','PR');return false;">LENKAKA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('lenkakan','PR');return false;">lenkakan</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/PR-P)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PECHMANP','PR');return false;">PECHMANP</a>
+        
+    <span style="font-size: smaller">(REK/PR-P)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PPR','PR');return false;">PPR</a>
+        
+    <span style="font-size: smaller">(REK/CIV)</span></span>
+    </td></tr><tr><th>Rektor</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('REKTOR#','RE');return false;">REKTOR#</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('holecek','RE');return false;">holecek</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    </td></tr><tr><th>Spec. referentka</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('LONTSCHAS','SP');return false;">LONTSCHAS</a>
+        
+    <span style="font-size: smaller">(REK/PR-Z)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('MAZINOVAS','SP');return false;">MAZINOVAS</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('mazini','SP');return false;">mazini</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TGORNER','SP');return false;">TGORNER</a>
+        
+    <span style="font-size: smaller">(REK/REK)</span></span>
+    </td></tr><tr><th>Správa praxí</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PARIZ_P','PX');return false;">PARIZ_P</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('parizkov','PX');return false;">parizkov</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/FF)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('REZAC_P','PX');return false;">REZAC_P</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('rezack','PX');return false;">rezack</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/FF)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TVRDA_PRAXE','PX');return false;">TVRDA_PRAXE</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('tvrda','PX');return false;">tvrda</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/FF)</span></span>
+    </td></tr><tr><th>Student s příjezdem</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('K21B8840PI','SS');return false;">K21B8840PI</a>
+        
+    <span style="font-size: smaller">(FEK/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('K21B8847PI','SS');return false;">K21B8847PI</a>
+        
+    <span style="font-size: smaller">(FEK/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('K21B8848PI','SS');return false;">K21B8848PI</a>
+        
+    <span style="font-size: smaller">(FEK/-)</span></span>
+    </td></tr><tr><th>Student s výjezdem</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('A20P8868P','ST');return false;">A20P8868P</a>
+        
+    <span style="font-size: smaller">(FAV/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('D19B8195P','ST');return false;">D19B8195P</a>
+        
+    <span style="font-size: smaller">(FDU/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('E14P8865K','ST');return false;">E14P8865K</a>
+        
+    <span style="font-size: smaller">(FEL/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('F15P8863P','ST');return false;">F15P8863P</a>
+        
+    <span style="font-size: smaller">(FF/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('K18B8784P','ST');return false;">K18B8784P</a>
+        
+    <span style="font-size: smaller">(FEK/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('P16M8843P','ST');return false;">P16M8843P</a>
+        
+    <span style="font-size: smaller">(FPE/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('R16M8840P','ST');return false;">R16M8840P</a>
+        
+    <span style="font-size: smaller">(FPR/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('S20N8869P','ST');return false;">S20N8869P</a>
+        
+    <span style="font-size: smaller">(FST/-)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('Z20B8944P','ST');return false;">Z20B8944P</a>
+        
+    <span style="font-size: smaller">(FZS/-)</span></span>
+    </td></tr><tr><th>Studijní referentka</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('MKSTUD','SR');return false;">MKSTUD</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('mkohoutk','SR');return false;">mkohoutk</a>
+            </small>
+        
+    <span style="font-size: smaller">(UUD/UUD)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PZELENKO','SR');return false;">PZELENKO</a>
+        
+    <span style="font-size: smaller">(FPE/FPE)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TMRAZOVA','SR');return false;">TMRAZOVA</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('mrazovaf','SR');return false;">mrazovaf</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPR/FPR)</span></span>
+    </td></tr><tr><th>Tajemník fakulty</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('PRIBAN_TF','FA');return false;">PRIBAN_TF</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('tpriban','FA');return false;">tpriban</a>
+            </small>
+        
+    <span style="font-size: smaller">(FZS/FZS)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('SLEHOFE','FA');return false;">SLEHOFE</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('tzikova','FA');return false;">tzikova</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/FF)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('VKNOLT','FA');return false;">VKNOLT</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('vknol','FA');return false;">vknol</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPR/FPR)</span></span>
+    </td></tr><tr><th>Univerzitní rozvrhář</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('MARTINEKUSR','UR');return false;">MARTINEKUSR</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('martine3','UR');return false;">martine3</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/PR-P)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TESTUSR','UR');return false;">TESTUSR</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('martine3','UR');return false;">martine3</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/PR-P)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('TONINGERUR','UR');return false;">TONINGERUR</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('toninger','UR');return false;">toninger</a>
+            </small>
+        
+    <span style="font-size: smaller">(REK/FAV)</span></span>
+    </td></tr><tr><th>Úprava Q-rámce oboru</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FILIPIZQ','QR');return false;">FILIPIZQ</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('filipiz','QR');return false;">filipiz</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPE/KVD)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KROTQKPG','QR');return false;">KROTQKPG</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('conor','QR');return false;">conor</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPE/KPG)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KROTQKPS','QR');return false;">KROTQKPS</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('conor','QR');return false;">conor</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPE/KPS)</span></span>
+    </td></tr><tr><th>Vedoucí katedry</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('VEDKAT#_KAR','VK');return false;">VEDKAT#_KAR</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('vareka','VK');return false;">vareka</a>
+            </small>
+        
+    <span style="font-size: smaller">(FF/KAR)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('VEDKAT#_KIV','VK');return false;">VEDKAT#_KIV</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('brada','VK');return false;">brada</a>
+            </small>
+        
+    <span style="font-size: smaller">(FAV/KIV)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('VEDKAT#_KVK','VK');return false;">VEDKAT#_KVK</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('uhl','VK');return false;">uhl</a>
+            </small>
+        
+    <span style="font-size: smaller">(FPE/KVK)</span></span>
+    </td></tr><tr><th>Vyučující</th><td style="max-width: 700px; "><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FADRHONC','VY');return false;">FADRHONC</a>
+        
+    <span style="font-size: smaller">(FPE/KMT)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FRANKF','VY');return false;">FRANKF</a>
+        
+    <span style="font-size: smaller">(FPE/KVD)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FRANOVAD','VY');return false;">FRANOVAD</a>
+        
+    <span style="font-size: smaller">(FZS/KFE)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('JTLUCHOR','VY');return false;">JTLUCHOR</a>
+        
+    <span style="font-size: smaller">(FEK/KMO)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KOTLANV','VY');return false;">KOTLANV</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('vkotlan','VY');return false;">vkotlan</a>
+            </small>
+        
+    <span style="font-size: smaller">(FEL/KEP)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('MENCLOVA','VY');return false;">MENCLOVA</a>
+        
+    <span style="font-size: smaller">(FPE/KNJ)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('SADILEKT','VY');return false;">SADILEKT</a>
+        
+    <span style="font-size: smaller">(FEK/KMO)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('VACEK','VY');return false;">VACEK</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('vacekj','VY');return false;">vacekj</a>
+            </small>
+        
+    <span style="font-size: smaller">(FEK/KPM)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('ZELEZNY','VY');return false;">ZELEZNY</a>
+        
+    <span style="font-size: smaller">(REK/FAV)</span></span>
+    </td></tr><tr><th>Zahraniční referentka</th><td style="max-width: 700px;  background-color: #f5f5f5"><span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('FLAXOVA_Z','ZR');return false;">FLAXOVA_Z</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('trapp','ZR');return false;">trapp</a>
+            </small>
+        
+    <span style="font-size: smaller">(FST/FST)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('KUTACOVA_ZR','ZR');return false;">KUTACOVA_ZR</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('ikutacov','ZR');return false;">ikutacov</a>
+            </small>
+        
+    <span style="font-size: smaller">(FEK/FEK)</span></span>
+    <span class="nowrap">
+    <a href="javascript:void(0);" class="xg_stag_a_det"
+       onclick="login('SATROVA_Z','ZR');return false;">SATROVA_Z</a>
+        
+            <small>/ <a href="javascript:void(0);" class="xg_stag_a_det"
+                 onclick="login('satrova','ZR');return false;">satrova</a>
+            </small>
+        
+    <span style="font-size: smaller">(FST/FST)</span></span>
+    </td></tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    var LOGIN_URL = null;
+    $(document).ready(function () {
+        LOGIN_URL = ($("#loginForm").attr("action"));
+    });
+
+    function login(login, role) {
+        $("#loginName").val(login);
+        
+
+        
+        $("#loginPassword").val("demo");
+        $("#loginForm").submit();
+        
+    }
+</script>
+
+
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: ROOT##/LoginPortlet-->
+</td></tr><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: StagPortletsJSR168##v211012-1302/Rozcestnik-->
+<table id="232631" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-232631">Portálový rozcestník (S087)</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-232631" id="cpa_232631">
+                <!--<form action="/portal/ssoLogin">
+	<input do="" type="submit" value="Přihlášení" />-->
+<p>
+	<strong>Nepřihlášený uživatel</strong> má přístup pouze k omezené funkčnosti Portálu.<br />
+	Přihlášení probíhá prostřednictvím formuláře webauth systému Orion.</p>
+<p style="color: grey; font-size: 10px">
+	Pro správnou funkci stránek portálu je nutný povolený JavaScript a Cookies.</p>
+<!-- konto Orion, nelze se    - tohle tu musi byt kvuli Nagiosu -->
+<div class="HideableStaticBlock"><div class="staticTextHeader"><a href="#nogo" onclick="$(this).parent().next().toggle();" >Nedaří se přihlásit?</a></div><div class="staticTextContent" id="281" style="display:none;"><p>
+	<strong>1)</strong> Zkontrolujte zda v hesle používáte pouze povolené znaky:</p>
+<ul>
+	<li>
+		velká a malá písmena,</li>
+	<li>
+		číslice,</li>
+	<li>
+		interpunkce ._-!@#$%^&amp;*:|\/,()[ ]{};
+		<p>
+			Heslo <em>nesmí</em> obsahovat znaky české abecedy, pokud takové máte <a href="http://support.zcu.cz/index.php/Hesla_v_syst%C3%A9mu_Orion">změnte si jej</a> pomocí služby <a href="http://heslo.zcu.cz/">http://heslo.zcu.cz</a> nebo navštivte některé pracoviště <a href="http://support.zcu.cz/index.php/Kategorie:HelpDesk">HelpDesk</a>.</p>
+	</li>
+</ul>
+<p>
+	<strong>2)</strong> Zkontrolujte platnost hesla pomocí jiné aplikace výpočetního prostředí Orion (např. https://webmail.zcu.cz). Pokud Vám přihlášení nejde ani v&nbsp;ostatních aplikacích ZČU, kontaktujte <a href="http://support.zcu.cz/index.php/Kategorie:HelpDesk">HelpDesk</a>.&nbsp;</p>
+<p>
+	<strong>3)</strong> V ostatních případech kontaktujte <a href="http://support.zcu.cz/index.php/Kategorie:HelpDesk">HelpDesk</a>.</p>
+</div></div><div autor="wpsadmin6" name="content_autor" style="color: rgb(0, 0, 0); font-family: Verdana, 'Arial CE', 'Helvetica CE', Arial, Helvetica, sans-serif; font-size: small;">
+	<h3>
+		Ostatní problémy</h3>
+	<p>
+		Chyby a problémy související s portálem prosím hlašte na&nbsp;<a class="linkemail" href="mailto:operator@service.zcu.cz" style="color: rgb(162, 21, 67);">operator@service.zcu.cz</a>.</p>
+	<p>
+		Při vyplňování hlášení chyby, prosíme, uvádějte:</p>
+	<p>
+		&nbsp;<strong>&nbsp;1)</strong>&nbsp;o co jste se snažili a jak,</p>
+	<p>
+		&nbsp;&nbsp;<strong>2)</strong>&nbsp;jakým výsledkem skončila vaše akce,</p>
+	<p>
+		&nbsp;&nbsp;<strong>3)</strong>&nbsp;v kolik hodin jste akci prováděli,</p>
+	<p>
+		&nbsp;&nbsp;<strong>4)</strong>&nbsp;jméno, příjmení, orion login, studentské číslo.</p>
+</div>
+<p>
+	&nbsp;</p>
+<ul>
+	<li>
+		<a href="http://www.zcu.cz">Oficiální stránky ZČU</a></li>
+	<li>
+		<a href="/portal/uchazec/eprihlaska.html">Elektronická přihláška ke studiu</a></li>
+	<li>
+		<a href="/portal/uchazec/">Informace o příjimacím řízení</a></li>
+	<li>
+		<a href="/portal/uchazec/prijimaci-rizeni.html">Výsledky přijímacího řízení</a></li>
+	<li>
+		<a href="/portal/prohlizeni.html">Prohlížení studijní agendy</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css"  >
+  .rozcestnik-predmetDetail {
+    display:none;
+  }
+  div.staticTextContent {
+    padding: 10px 20px 0 20px;
+  }
+  div.staticTextContent p {
+    margin: 0;
+  }
+  .identitySelect input { vertical-align:bottom; }
+  div.staticTextHeader a {
+    font-weight:bold;
+  }
+  div.HideableStaticBlock div.staticTextContent {
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .rozcestnik a {
+    font-weight:bold;
+  }
+  .nolink {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+  }
+  .rozcestnikPredmetyHeader td {
+    border-bottom: 1px solid #e2e2e2;
+    font-size:10px;
+    margin: 0 0;
+    padding: 3px;
+    color: gray;
+  }
+  .rozcestnik tr {
+    vertical-align:top;
+  }
+
+  .rozcestnik td {
+    padding-top: 3px;
+  }
+
+
+.ls {
+  color: #E5B259 !important;;
+}
+.zs {
+  color: #A0C9FD !important;;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='G232631validation_errors' class="xgt_validationErrors"></div>
+<div id='G232631validation_passed' class="xgt_validationPassed"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="rozcestnik">
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="b">
+        
+        
+    </div>
+    
+  
+</div>
+
+
+<script type="text/javascript">
+$(function() {
+  $("ul.localMenu_blue li a, ul.localMenu_orange li a").each(function (i, obj) {
+    $(obj).qtip({
+      content: {
+        text: $(obj).next().find("div").html(),
+        title: { text: $(obj).next().find("h6").text() }
+      },
+      position: { at: 'right center', my: 'left center' },
+      show: { delay: 200, solo: true },
+      hide: {
+        event: 'mouseleave',
+        delay: 1000,
+        fixed: true
+      },
+      style: {
+        classes: 'ui-tooltip-rozcestnik', tip: true
+      }
+    });
+  });
+});
+</script>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: StagPortletsJSR168##v211012-1302/Rozcestnik-->
+</td></tr></tbody></table></td></tr></tbody></table>
+      </div>
+    </div>
+  </div>
+  
+    
+    
+
+
+    
+  
+
+
+  <!--
+
+
+<a href="/portal/studium/index.html?pc_web_version=desktop">Klasická verze</a>
+<a href="/portal/studium/index.html?pc_web_version=mobile">Responsivní</a>
+
+-->
+
+
+</div>
+<script type="application/javascript">
+  jQuery(document).ready(function () {
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+
+
+    function createActionsDropDown(tableElement, tableIndex, rowElement, rowIndex, actionsColsIdx) {
+      if (actionsColsIdx === undefined || actionsColsIdx == null) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsColsIdx = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsColsIdx.push(elm.cellIndex)
+          });
+        }
+      }
+      var moveActionsToFirstCol = $(tableElement).hasClass("table-reflow");
+
+      var targetElm = moveActionsToFirstCol ? $("td:first", rowElement) : $("td:eq("+actionsColsIdx[0]+")", rowElement);
+
+      targetElm.prepend("<span class=\"dropdown row-actions-dropddown row-actions-ignore hideForDesktop\"><button class=\"btn btn-default\" id=\"dLabel-" + tableIndex + "-" + rowIndex + "\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">... <span class=\"caret\"></span></button><ul class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dLabel-" + tableIndex + "-" + rowIndex + "\" id=\"action-ul-" + tableIndex + "-" + rowIndex + "\">" +
+        "</ul></span>");
+      var isEmpty = true;
+      for (var colIdx in actionsColsIdx) {
+        var actionColumn = $("td:eq(" + actionsColsIdx[colIdx] + ")", rowElement);
+        var menuItems = $("#action-ul-" + tableIndex + "-" + rowIndex).append(actionColumn.children(":not(.row-actions-ignore)").clone()).children().wrap("<li></li>");
+        if (menuItems.length > 0) isEmpty = false;
+        if (moveActionsToFirstCol) actionColumn.addClass("hideForMobile");
+        else actionColumn.children(":not(.row-actions-ignore)").addClass("hideForMobile");
+        $('.dropdown-toggle', rowElement).dropdown();
+      }
+      
+      if (isEmpty) {
+        targetElm.children("span.row-actions-dropddown").hide();
+      }
+    }
+
+// Reflow tabulek...
+    $(".table-reflow").each(function (tableIndex, tableElement) {
+      var headers = $("tr th", tableElement);
+      var actionsCols = [];
+
+      // najdeme sloupecek s akcnimi cleny.
+      if (headers) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsCols = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsCols.push(elm.cellIndex)
+          });
+        }
+      }
+
+      $("tr", tableElement).each(function (rowIdx, rowEl) {
+        var rowElJq = $(rowEl);
+        $(".mainCell", rowEl).each(function (colIdx, colEl) {
+          rowElJq.prepend($("<" + colEl.tagName + ">").append($(colEl).html()).addClass("mainCellClone"));
+        });
+        if (actionsCols != null && actionsCols.length > 0 && !rowElJq.hasClass("hideForMobile")) {
+          createActionsDropDown(tableElement, tableIndex, rowEl, rowIdx, actionsCols);
+        }
+      });
+
+      $("tr", tableElement).each(function (rowIdx, rowEl) {
+//        zkopiruje headery
+        $("td", rowEl).each(function (colIdx, colEl) {
+          var header = $(headers[colIdx]).attr("tablesort-popis");
+          if (header === undefined) header = $(headers[colIdx]).text();
+          if ($.trim(header)) $(colEl).attr("data-header", $.trim(header) + ": ");
+        });
+
+      });
+    });
+
+    $(".table-replace-actions").each(function (tableIndex, tableElement) {
+      var headers = $("tr th", tableElement);
+      var actionsCols = [];
+
+      // najdeme sloupecek s akcnimi cleny.
+      if (headers) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsCols = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsCols.push(elm.cellIndex)
+          });
+        }
+      }
+
+
+      $("tr", tableElement).each(function (rowIndex, rowElement) {
+        createActionsDropDown(tableElement, tableIndex, rowElement, rowIndex);
+      });
+    });
+
+    if ($(window).width() <= 768) {
+      $('.footable-simple').footable();
+    }
+
+    if ($(".table-scroll").length > 0) {
+      var timer_id;
+
+      $(window).resize(function () {
+        clearTimeout(timer_id);
+        timer_id = setTimeout(function () {
+          var offset = parseInt($(".table-scroll").offset().left) + 20;
+          $(".table-scroll").width($(window).width() - offset)
+        }, 500);
+      });
+
+      var offset = parseInt($(".table-scroll").offset().left) + 20;
+      $(".table-scroll").width($(window).width() - offset)
+    }
+
+
+    $('#myAffix').affix({
+      offset: {}
+    }).on("affixed.bs.affix", function () {
+
+      $(".app_content").css("margin-top", $(".mobile_header_wrapper").outerHeight(true));
+    }).on("affix.bs.affix", function () {
+
+    });
+
+
+    var mobileHeaderWrapperHeight = $(".mobile_header_wrapper").outerHeight(true);
+
+    $(".app_content").css("margin-top", mobileHeaderWrapperHeight);
+
+
+    $('#mobile_nav_menu').on('show.bs.modal', function (e) {
+      $('#mobile_nav_menu').css("padding-top", $("#myAffix").outerHeight(true) + 5);
+      $("#mobile_menu_display_btn").bootstrapBtn('toggle');
+      $(this).data("oldhash", window.location.hash);
+      window.onhashchange = null;
+      window.location.hash = this.id;
+
+    }).on('shown.bs.modal', function (e) {
+      $("#mobile_nav_menu_accordion").height(windowHeight - $("#mobile_nav_menu_toplinks").outerHeight(true) - $("#myAffix").outerHeight(true) - 10);
+      setTimeout(function () {
+        window.onhashchange = function (ex) {
+          if (ex.oldURL.indexOf("#mobile_nav_menu") > 0 && ex.newURL.indexOf("#mobile_nav_menu") == -1) {
+            var mobileNavMenu = $("#mobile_nav_menu");
+            mobileNavMenu.modal('hide');
+            window.location.hash = mobileNavMenu.data("oldhash");
+          }
+        };
+      }, 500);
+    }).on('hidden.bs.modal', function (e) {
+      $("#mobile_menu_display_btn").bootstrapBtn('toggle');
+      window.onhashchange = null;
+      if (window.location.hash == "#mobile_nav_menu" && $("#mobile_nav_menu").data("oldhash")) {
+        $("#mobile_nav_menu").modal('hide');
+        window.location.hash = $("#mobile_nav_menu").data("oldhash");
+      }
+    });
+
+
+    $("#mobile_nav_menu_accordion .collapse").on("shown.bs.collapse", function (e) {
+      $("#icon_for_" + this.id).removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
+    }).on("hidden.bs.collapse", function (e) {
+      $("#icon_for_" + this.id).addClass("glyphicon-triangle-right").removeClass("glyphicon-triangle-bottom");
+    });
+
+    if (location.hash) {
+      $("a[href='" + location.hash + "']").tab("show");
+    }
+    $(document.body).on("click", "a[data-toggle='tab']", function(event) {
+      if(history.pushState) history.pushState(null, null, this.getAttribute("href"));
+      else location.hash = this.getAttribute("href");
+    });
+    $(window).on("popstate", function() {
+      var anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+      $("a[href='" + anchor + "']").tab("show");
+    });
+
+    // pokus obejit schovany cil anchrou pod affix menu...
+    setTimeout(function () {
+      var hashObject = $(window.location.hash).offset();
+      var affixDiv = $("#myAffix");
+      if (hashObject && hashObject.top < affixDiv.offset().top + affixDiv.height()) {
+        window.scrollBy(0, -affixDiv.height());
+//        console.log("Scrolling by -"+$("#myAffix").height())
+//        console.log("offset:"+window.pageYOffset);
+      }
+    }, 50);
+
+  });
+</script>
+
+</body>
+</html>
+
+
