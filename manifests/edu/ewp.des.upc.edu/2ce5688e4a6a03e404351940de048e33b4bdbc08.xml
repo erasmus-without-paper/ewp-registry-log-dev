@@ -4,6 +4,7 @@
  xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" 
  xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
  xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+ xmlns:ounits="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
  xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
  xmlns:cliauthsig1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
  xmlns:cliauthtls1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
@@ -41,6 +42,16 @@
   <inst:url>https://ewp.des.upc.edu/api/institutions</inst:url>
   <inst:max-hei-ids>1</inst:max-hei-ids>
  </inst:institutions>
+ <ounits:organizational-units version="2.1.1">
+   <ounits:http-security>
+    <sec:client-auth-methods>
+     <cliauthsig1:httpsig/>
+    </sec:client-auth-methods>
+  </ounits:http-security>
+  <ounits:surl>https://ewp.des.upc.edu/api/ounits</ounits:surl>
+  <ounits:max-ounit-ids>10</ounits:max-ounit-ids>
+  <ounits:max-ounit-codes>10</ounits:max-ounit-codes>
+ </ounits:organizational-units>
 </r:apis-implemented>
 <mf:institutions-covered>
 <hei id="upc.edu" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
