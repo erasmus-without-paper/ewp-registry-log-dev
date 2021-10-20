@@ -5210,24 +5210,6 @@
     <host>
         <ewp:admin-email>oasis-ewp@ugent.be</ewp:admin-email>
         <apis-implemented>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.12.1"
-            >
-                <om1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </om1:http-security>
-                <om1:get-url>https://qas.ewp.ugent.be/secure-api/mobilities/get</om1:get-url>
-                <om1:index-url>https://qas.ewp.ugent.be/secure-api/mobilities/index</om1:index-url>
-                <om1:max-omobility-ids>1</om1:max-omobility-ids>
-                <om1:sends-notifications/>
-            </om1:omobilities>
             <e2:echo version="2.0.0">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -5240,18 +5222,6 @@
                 </e2:http-security>
                 <e2:url>https://qas.ewp.ugent.be/secure-api/echo</e2:url>
             </e2:echo>
-            <iac2:iia-cnr version="2.0.2">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://qas.ewp.ugent.be/secure-api/iias-cnr</iac2:url>
-            </iac2:iia-cnr>
             <in2:institutions version="2.0.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
@@ -5265,55 +5235,6 @@
                 <in2:url>https://qas.ewp.ugent.be/secure-api/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://qas.ewp.ugent.be/secure-api/iia-approval-cnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
-            <ia6:iias
-                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <ia6:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://qas.ewp.ugent.be/secure-api/iias/get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://qas.ewp.ugent.be/secure-api/iias/index</ia6:index-url>
-            </ia6:iias>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://qas.ewp.ugent.be/secure-api/iias-approval</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
             <ou2:organizational-units version="2.0.0">
                 <ou2:http-security>
                     <sec:client-auth-methods>
@@ -5328,22 +5249,6 @@
                 <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.0"
-            >
-                <omc1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </omc1:http-security>
-                <omc1:url>https://qas.ewp.ugent.be/secure-api/mobilities-cnr</omc1:url>
-                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
-            </omc1:omobility-cnr>
             <d5:discovery version="5.0.0">
                 <d5:url>https://qas.ewp.ugent.be/public-api/discovery/manifest.xml</d5:url>
             </d5:discovery>
