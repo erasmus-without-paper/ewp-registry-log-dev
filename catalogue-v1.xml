@@ -50394,6 +50394,69 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>volenova@civ.zcu.cz</ewp:admin-email>
+        <ewp:admin-notes>EWP connector for IS/STAG</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://portal-demo.upce.cz:8843/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://portal-demo.upce.cz:8843/ws/services/ewp/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://portal-demo.upce.cz:8843/ws/services/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://portal-demo.upce.cz:8843/ws/services/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>upce.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="396efc2011f85879f3faad0bb91a614638702307e2b2f4fffd317a7b53068171"/>
+            <rsa-public-key sha-256="6ebefc9376f0203a1791a0434cc666708710a47d088f7420794484e604fe76ba"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="6ebefc9376f0203a1791a0434cc666708710a47d088f7420794484e604fe76ba"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -54611,6 +54674,13 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="pic">999976202</other-id>
             <name xml:lang="en">Universitat Politècnica de Catalunya</name>
         </hei>
+        <hei id="upce.cz">
+            <other-id type="erasmus">CZ PARDUB01</other-id>
+            <other-id type="erasmus-charter">45721 - EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999453663</other-id>
+            <name xml:lang="cs">Univerzita Pardubice</name>
+            <name xml:lang="en">University of Pardubice</name>
+        </hei>
         <hei id="upct.es">
             <other-id type="erasmus">E MURCIA 04</other-id>
             <other-id type="euc"/>
@@ -55491,6 +55561,14 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             sbzEBsvmT1aw8nQvKhlTqk6qj3p00QrILLebzbV7kDSzogmoYRL5eZuXN4e051h7JX9FANKdR971
             X5kHdgtqbvY8FsEdfdZy9cxa9u5H8ttEqCy6JzVqatjrMRKyJK2aZyepxJRW+pUEJIxYichUnZqO
             5F9/uQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="6ebefc9376f0203a1791a0434cc666708710a47d088f7420794484e604fe76ba">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr55w/2TXeGS2tLuYGRZhZftOPlLKpvzU
+            SymjldjaoqQsAHnaMdyNzCbOag5ALWlr/7oNS8OpjSavCz2cKmnc9xfiT1JE/M5M5OJAdPWr5ZA8
+            gdhSVuQD2P8mWodnhMlVWk7pY0oNtMdY3j7JeOAmbTdToYB/QUcdYRCx6T1X7DftYNYgbHB43n15
+            LQCt6HscTTkd3KSIxTJpobxXRcY8rQLA0lrVvoHtkISVWvU5OT0QVO+Dzn5MHL0RDzqMvmQN5kkY
+            53kGcLJOr59wBL95+z2YTbMLp0s/ygPdfwv8fSAbOhho/Wn5nOqY/oKJhKSiVtESbOXM/9UjzlBn
+            s61MrQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="7082c6225b82ca65f2c0c15e1fa3a3fbe35d6749132eec2bfd396e5397e665e2">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwgZRMSnNd4V8PlDfLjSCGOjL2sHdi3Y0
