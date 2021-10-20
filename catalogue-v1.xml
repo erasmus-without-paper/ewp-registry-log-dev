@@ -49442,6 +49442,23 @@
                 <ia6:max-iia-codes>20</ia6:max-iia-codes>
                 <ia6:index-url>https://ewp-cloud.ewp.proacta.pl/api/iias/index</ia6:index-url>
             </ia6:iias>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewp-cloud.ewp.proacta.pl/api/omobility-las/get</oml1:get-url>
+                <oml1:index-url>https://ewp-cloud.ewp.proacta.pl/api/omobility-las/index</oml1:index-url>
+                <oml1:update-url>https://ewp-cloud.ewp.proacta.pl/api/omobility-las/update</oml1:update-url>
+                <oml1:max-omobility-ids>20</oml1:max-omobility-ids>
+            </oml1:omobility-las>
             <omlc1:omobility-la-cnr
                 xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -49482,7 +49499,25 @@
                 </iaac1:http-security>
                 <iaac1:url>https://ewp-cloud.ewp.proacta.pl/api/iia-approval-cnr/notifications</iaac1:url>
             </iaac1:iia-approval-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ewp-cloud.ewp.proacta.pl/api/iias/approval-agreements/get</iaa1:url>
+                <iaa1:max-iia-ids>20</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
         </apis-implemented>
+        <institutions-covered>
+            <hei-id>wum.edu.pl</hei-id>
+        </institutions-covered>
         <client-credentials-in-use>
             <certificate sha-256="3dfbdbd73dc78cae3978e3b2d3d3c20d5cf6555caae2c9f603f38419961dd8cc"/>
             <rsa-public-key sha-256="8de2100ed4174cd3f300cbc6ea4552e81979ac5c9ce6c4474c633db14cbf39b0"/>
@@ -54935,6 +54970,10 @@ iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             <other-id type="erasmus">A WIEN05</other-id>
             <other-id type="pic">999616138</other-id>
             <name xml:lang="de">WIRTSCHAFTSUNIVERSITAT WIEN</name>
+        </hei>
+        <hei id="wum.edu.pl">
+            <other-id type="ERASMUS">PL WARSZAW06</other-id>
+            <name xml:lang="en">EWP PROACTA</name>
         </hei>
         <hei id="www.kth.se">
             <other-id type="erasmus">S  STOCKHO04</other-id>
