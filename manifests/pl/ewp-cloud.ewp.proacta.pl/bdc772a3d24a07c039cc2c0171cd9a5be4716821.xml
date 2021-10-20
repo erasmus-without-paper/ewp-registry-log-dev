@@ -32,13 +32,15 @@
                 <ns7:max-iia-codes>20</ns7:max-iia-codes>
                 <ns7:index-url>https://ewp-cloud.ewp.proacta.pl/api/iias/index</ns7:index-url>
             </ns7:iias>
-            <ns5:omobility-las version="1.0.1">
-                <ns5:get-url>https://ewp-cloud.ewp.proacta.pl/api/omobility-las/get</ns5:get-url>
-                <ns5:index-url>https://ewp-cloud.ewp.proacta.pl/api/omobility-las/index</ns5:index-url>
-                <ns5:update-url>https://ewp-cloud.ewp.proacta.pl/api/omobility-las/update</ns5:update-url>
-                <ns5:max-omobility-ids>20</ns5:max-omobility-ids>
-            </ns5:omobility-las>
             <ns14:omobility-la-cnr version="1.0.0">
+                <ns14:http-security>
+                    <ns2:client-auth-methods>
+                        <ns8:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns9:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns14:http-security>
                 <ns14:url>https://ewp-cloud.ewp.proacta.pl/api/omobility-la-cnr/notifications</ns14:url>
                 <ns14:max-omobility-ids>1</ns14:max-omobility-ids>
             </ns14:omobility-la-cnr>
@@ -54,16 +56,22 @@
                 <ns11:url>https://ewp-cloud.ewp.proacta.pl/api/iia-cnr/notifications</ns11:url>
             </ns11:iia-cnr>
             <ns13:iia-approval-cnr version="1.0.0">
-                <ns13:url>https://ewp-cloud.ewp.proacta.pl/api$%7Bnetwork-mappings.definition.iia-aproval-cnr.v1.endpoints.notify.external.path%7D</ns13:url>
+                <ns13:http-security>
+                    <ns2:client-auth-methods>
+                        <ns8:httpsig/>
+                    </ns2:client-auth-methods>
+                    <ns2:server-auth-methods>
+                        <ns9:httpsig/>
+                    </ns2:server-auth-methods>
+                </ns13:http-security>
+                <ns13:url>https://ewp-cloud.ewp.proacta.pl/api/iia-approval-cnr/notifications</ns13:url>
             </ns13:iia-approval-cnr>
-            <ns3:iias-approval>
-                <ns3:url>https://ewp-cloud.ewp.proacta.pl/api/iias/approval-agreements/get</ns3:url>
-            </ns3:iias-approval>
         </ns4:apis-implemented>
         <ns6:institutions-covered>
-            <ns4:hei id="wum.edu.pl">
-                <ns4:other-id type="ERASMUS">PL WARSZAW06</ns4:other-id>
-                <ns4:name xml:lang="en">EWP PROACTA</ns4:name>
+            <ns4:hei id="uw.proacta.pl">
+                <ns4:other-id type="PIC">1234</ns4:other-id>
+                <ns4:name xml:lang="en">University of Proacta</ns4:name>
+                <ns4:name xml:lang="pl">Uniwersytet Proacta</ns4:name>
             </ns4:hei>
         </ns6:institutions-covered>
         <ns6:client-credentials-in-use>
