@@ -49,7 +49,7 @@
             <ns24:discovery version="5.0.0">
                 <ns24:url>https://stag-demo.utb.cz:8843/ws/services/ewp/manifest</ns24:url>
             </ns24:discovery>
-            <ns22:institutions version="2.1.0">
+            <ns22:institutions version="2.2.0">
                 <ns22:http-security>
                     <ns5:client-auth-methods>
                         <ns25:tlscert allows-self-signed="true"/>
@@ -110,6 +110,36 @@
                 <ns18:url>https://stag-demo.utb.cz:8843/ws/services/ewp/iias/approval</ns18:url>
                 <ns18:max-iia-ids>10</ns18:max-iia-ids>
             </ns18:iias-approval>
+            <ns12:omobility-las version="1.0.1">
+                <ns12:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:tlscert allows-self-signed="true"/>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns12:http-security>
+                <ns12:get-url>https://stag-demo.utb.cz:8843/ws/services/ewp/las/get</ns12:get-url>
+                <ns12:index-url>https://stag-demo.utb.cz:8843/ws/services/ewp/las/index</ns12:index-url>
+                <ns12:update-url>https://stag-demo.utb.cz:8843/ws/services/ewp/las/update</ns12:update-url>
+                <ns12:max-omobility-ids>10</ns12:max-omobility-ids>
+            </ns12:omobility-las>
+            <ns11:omobility-la-cnr version="1.0.0">
+                <ns11:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:tlscert allows-self-signed="true"/>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns11:http-security>
+                <ns11:url>https://stag-demo.utb.cz:8843/ws/services/ewp/las/cnr</ns11:url>
+                <ns11:max-omobility-ids>10</ns11:max-omobility-ids>
+            </ns11:omobility-la-cnr>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="utb.cz">
@@ -121,60 +151,64 @@
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:certificate>MIIGoTCCBYmgAwIBAgIQDiD+eMPRm1iwXAD/H9rXizANBgkqhkiG9w0BAQsFADBk
-MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
-QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
-Q0EgMzAeFw0xOTA1MjcwMDAwMDBaFw0yMTA2MDMxMjAwMDBaMGYxCzAJBgNVBAYT
-AkNaMQ4wDAYDVQQHDAVabMOtbjEsMCoGA1UECgwjVW5pdmVyeml0YSBUb23DocWh
-ZSBCYXRpIHZlIFpsw61uxJsxGTAXBgNVBAMTEHN0YWctZGVtby51dGIuY3owggEi
-MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDqUOP1wNdNLVNMZz4SVthwz/nZ
-VgnGstSqnKV+/wS7lApYxwzXmu5KunDOg0ExFcQxssyR+lw59GEXDaZi/IeTDdoS
-Z2y2NZH3LR9cX6EKgsyMAQIoHpVnlCn/aILHCu1NLQfB+EZnkNlUyitTMFBsuM19
-Qt/4Yh1vFPqbIARsJCrDsoBlJmwt4xnvywYgyC+J6A2zAN1VmDwPA0Yll6R0oW33
-woBaj2wCYrdM6OGX1MIW6VRMnOo6FtYVBAAk3BiB1a7JdQqvKUWeh427drEqUtA5
-vlPPc3ZTqqa+cWrCRnhGk8IaNTWOfN70QBicg2CEDXPnQ1yLj82UKIR1rHuVAgMB
-AAGjggNLMIIDRzAfBgNVHSMEGDAWgBRn/YggFCeYxwnSJRm76VERY3VQYjAdBgNV
-HQ4EFgQUMp3wJC5+G4RapBJageXvC82hsLEwGwYDVR0RBBQwEoIQc3RhZy1kZW1v
-LnV0Yi5jejAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsG
-AQUFBwMCMGsGA1UdHwRkMGIwL6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNv
-bS9URVJFTkFTU0xDQTMuY3JsMC+gLaArhilodHRwOi8vY3JsNC5kaWdpY2VydC5j
-b20vVEVSRU5BU1NMQ0EzLmNybDBMBgNVHSAERTBDMDcGCWCGSAGG/WwBATAqMCgG
-CCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAgGBmeBDAEC
-AjBuBggrBgEFBQcBAQRiMGAwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2lj
-ZXJ0LmNvbTA4BggrBgEFBQcwAoYsaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29t
-L1RFUkVOQVNTTENBMy5jcnQwDAYDVR0TAQH/BAIwADCCAX4GCisGAQQB1nkCBAIE
-ggFuBIIBagFoAHYAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFq
-+YTfUQAABAMARzBFAiAYOpQzkGr/0reBqIvVA5RaMgbTP4ngn+5gKGiIRjx8zQIh
-APhUHUcWyvAC/y8VPJZRvTAjlTYLnS22Ci2XtE07rmgFAHcAh3W/51l8+IxDmV+9
-827/Vo1HVjb/SrVgwbTq/16ggw8AAAFq+YTgPAAABAMASDBGAiEA/W97rIfJS1Sz
-7juJWfwvlCgOFg4ceVjRGetdL7mbt28CIQDDUElWumTcFbqJX0kDnRwjMbVff0CP
-Wh4n7stCstLaLQB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAAB
-avmE3scAAAQDAEYwRAIgKlBDsrW4ks5ykeceuFDZ5xZbqDYSiRn8QwT4M3hp5mIC
-IG9ZZOtHEGKhKn2/J7S35bjWP2R/KVjEmlPSyCZFV6lrMA0GCSqGSIb3DQEBCwUA
-A4IBAQBAbRqJ7ct1yYohYnpGqg14EnF1m1YvfOpUvh/u/Sxo2YGVe3t5FiEqyzvN
-pbrmzuMcJ/f6ak7eKz/fyOkJyTEt7pPqIZiW5dH3pcebpbNvp1/Z/KcrjKct8uuu
-NijlXv2LpqfbvXgD8kmGFOBvcdTFvav6hndxFd6QBL9sJT5ekB/1X2dXrrUoJvLm
-ZlVajHIOPEEQdNNpFPpDm5JHylD3VGys0Cj1OBjUIBlA54VWf1KyzZkzPiuw3zhF
-G7kSSi5ls5rLSCgyXrMYE8lTuZD/fA1SE0x6H6HIKpZphiqXDV4+j2NxZcI586dt
-lWenuzu6tF0WfQaWcwefze8+UknD
+            <ns3:certificate>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
 </ns3:certificate>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6lDj9cDXTS1TTGc+ElbY
-cM/52VYJxrLUqpylfv8Eu5QKWMcM15ruSrpwzoNBMRXEMbLMkfpcOfRhFw2mYvyH
-kw3aEmdstjWR9y0fXF+hCoLMjAECKB6VZ5Qp/2iCxwrtTS0HwfhGZ5DZVMorUzBQ
-bLjNfULf+GIdbxT6myAEbCQqw7KAZSZsLeMZ78sGIMgviegNswDdVZg8DwNGJZek
-dKFt98KAWo9sAmK3TOjhl9TCFulUTJzqOhbWFQQAJNwYgdWuyXUKrylFnoeNu3ax
-KlLQOb5Tz3N2U6qmvnFqwkZ4RpPCGjU1jnze9EAYnINghA1z50Nci4/NlCiEdax7
-lQIDAQAB
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArg80XjZKyAXR71rdVG8Y
+kXIK/g4HRUcVivLYc5dkMKAO8f+zxMcUJA+7Q7CyRaXgvuqJiNBRUtvlHHCF/H7X
+WZSM5sAT/Xq6Ldr37ceREWp+T46Qbc/IZHWeOv1P+vqKueCJVBs5avjVKhVH79kk
+jnJxRToelf+PfogLDEaa/D4IJlTBM6WeHyxg6+VyMPEU/C7GeI5pY0eEtEStqcEH
+kEj1jrPnN2JrrlsFVsMFwjaHOY58X7odDxjI+RqARPqJVDOjcZzfk6c/8zOfL4v/
+cVpSwC1tDdQwDHCaxI4NlRuuoI7atTRwK7CbkEx+dcGVD2Rtyzn3wb4uInoSBSUg
+ewIDAQAB
 </ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6lDj9cDXTS1TTGc+ElbY
-cM/52VYJxrLUqpylfv8Eu5QKWMcM15ruSrpwzoNBMRXEMbLMkfpcOfRhFw2mYvyH
-kw3aEmdstjWR9y0fXF+hCoLMjAECKB6VZ5Qp/2iCxwrtTS0HwfhGZ5DZVMorUzBQ
-bLjNfULf+GIdbxT6myAEbCQqw7KAZSZsLeMZ78sGIMgviegNswDdVZg8DwNGJZek
-dKFt98KAWo9sAmK3TOjhl9TCFulUTJzqOhbWFQQAJNwYgdWuyXUKrylFnoeNu3ax
-KlLQOb5Tz3N2U6qmvnFqwkZ4RpPCGjU1jnze9EAYnINghA1z50Nci4/NlCiEdax7
-lQIDAQAB
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArg80XjZKyAXR71rdVG8Y
+kXIK/g4HRUcVivLYc5dkMKAO8f+zxMcUJA+7Q7CyRaXgvuqJiNBRUtvlHHCF/H7X
+WZSM5sAT/Xq6Ldr37ceREWp+T46Qbc/IZHWeOv1P+vqKueCJVBs5avjVKhVH79kk
+jnJxRToelf+PfogLDEaa/D4IJlTBM6WeHyxg6+VyMPEU/C7GeI5pY0eEtEStqcEH
+kEj1jrPnN2JrrlsFVsMFwjaHOY58X7odDxjI+RqARPqJVDOjcZzfk6c/8zOfL4v/
+cVpSwC1tDdQwDHCaxI4NlRuuoI7atTRwK7CbkEx+dcGVD2Rtyzn3wb4uInoSBSUg
+ewIDAQAB
 </ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
