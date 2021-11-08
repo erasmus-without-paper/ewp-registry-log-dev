@@ -20124,7 +20124,7 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://ewptst.puss.pila.pl/ewp/manifest</d5:url>
             </d5:discovery>
-            <e2:echo version="2.0.0">
+            <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -20220,7 +20220,7 @@
                 <ia6:max-iia-codes>100</ia6:max-iia-codes>
                 <ia6:index-url>https://ewptst.puss.pila.pl/ewp/iia/index</ia6:index-url>
             </ia6:iias>
-            <iac2:iia-cnr version="2.0.2">
+            <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -20235,7 +20235,7 @@
             </iac2:iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -20249,11 +20249,10 @@
                 </iaa1:http-security>
                 <iaa1:url>https://ewptst.puss.pila.pl/ewp/iia/approval</iaa1:url>
                 <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
+                version="1.0.0"
             >
                 <iaac1:http-security>
                     <sec:client-auth-methods>
@@ -20357,6 +20356,25 @@
                 <imtc1:url>https://ewptst.puss.pila.pl/ewp/tors/cnr</imtc1:url>
                 <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
             </imtc1:imobility-tor-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewptst.puss.pila.pl/ewp/la/get</oml1:get-url>
+                <oml1:index-url>https://ewptst.puss.pila.pl/ewp/la/index</oml1:index-url>
+                <oml1:update-url>https://ewptst.puss.pila.pl/ewp/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>puss.pila.pl</hei-id>
