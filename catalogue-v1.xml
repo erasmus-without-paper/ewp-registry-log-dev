@@ -29296,11 +29296,12 @@
                 </e2:http-security>
                 <e2:url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/echo</e2:url>
             </e2:echo>
-            <in2:institutions version="2.1.0">
+            <in2:institutions version="2.2.0">
                 <ewp:admin-email>international@ualg.pt</ewp:admin-email>
                 <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B2:httpsig/>
@@ -29385,54 +29386,12 @@
                 <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>false</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <ia2:iias version="2.1.0">
-                <ewp:admin-email>international@ualg.pt</ewp:admin-email>
-                <ia2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
-                </ia2:http-security>
-                <ia2:get-url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/iias_get</ia2:get-url>
-                <ia2:max-iia-ids>100</ia2:max-iia-ids>
-                <ia2:max-iia-codes>100</ia2:max-iia-codes>
-                <ia2:index-url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/iias_index</ia2:index-url>
-                <ia2:sends-notifications/>
-            </ia2:iias>
-            <iac2:iia-cnr version="2.0.2">
-                <ewp:admin-email>international@ualg.pt</ewp:admin-email>
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
-                </iac2:http-security>
-                <iac2:url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/iias_cnr</iac2:url>
-            </iac2:iia-cnr>
-            <iaac1:iia-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.1.0"
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
             >
                 <ewp:admin-email>international@ualg.pt</ewp:admin-email>
-                <iaac1:http-security>
+                <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -29446,9 +29405,12 @@
                     <sec:response-encryption-methods>
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/iias_approval_cnr</iaac1:url>
-            </iaac1:iia-cnr>
+                </ia6:http-security>
+                <ia6:get-url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/iias_get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://international.ualg.pt/mobilidadenet/ewp/ewpstage/iias_index</ia6:index-url>
+            </ia6:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>ualg.pt</hei-id>
