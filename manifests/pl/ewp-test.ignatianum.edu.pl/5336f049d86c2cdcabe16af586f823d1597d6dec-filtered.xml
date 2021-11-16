@@ -66,7 +66,7 @@
             <ns23:discovery version="5.0.0">
                 <ns23:url>https://ewp-test.ignatianum.edu.pl/ewp/manifest</ns23:url>
             </ns23:discovery>
-            <ns22:echo version="2.0.0">
+            <ns22:echo version="2.0.1">
                 <ns22:http-security>
                     <ns4:client-auth-methods>
                         <ns54:tlscert allows-self-signed="true"/>
@@ -153,7 +153,7 @@
                 <ns18:max-iia-codes>100</ns18:max-iia-codes>
                 <ns18:index-url>https://ewp-test.ignatianum.edu.pl/ewp/iia/index</ns18:index-url>
             </ns18:iias>
-            <ns20:iia-cnr version="2.0.2">
+            <ns20:iia-cnr version="2.0.3">
                 <ns20:http-security>
                     <ns4:client-auth-methods>
                         <ns54:tlscert allows-self-signed="true"/>
@@ -166,7 +166,7 @@
                 </ns20:http-security>
                 <ns20:url>https://ewp-test.ignatianum.edu.pl/ewp/iia/cnr</ns20:url>
             </ns20:iia-cnr>
-            <ns19:iias-approval version="0.2.1">
+            <ns19:iias-approval version="1.0.0">
                 <ns19:http-security>
                     <ns4:client-auth-methods>
                         <ns54:tlscert allows-self-signed="true"/>
@@ -179,9 +179,8 @@
                 </ns19:http-security>
                 <ns19:url>https://ewp-test.ignatianum.edu.pl/ewp/iia/approval</ns19:url>
                 <ns19:max-iia-ids>100</ns19:max-iia-ids>
-                <ns19:sends-notifications/>
             </ns19:iias-approval>
-            <ns21:iia-approval-cnr version="0.2.0">
+            <ns21:iia-approval-cnr version="1.0.0">
                 <ns21:http-security>
                     <ns4:client-auth-methods>
                         <ns54:tlscert allows-self-signed="true"/>
@@ -269,6 +268,22 @@
                 <ns15:url>https://ewp-test.ignatianum.edu.pl/ewp/tors/cnr</ns15:url>
                 <ns15:max-omobility-ids>10</ns15:max-omobility-ids>
             </ns15:imobility-tor-cnr>
+            <ns6:omobility-las version="1.0.1">
+                <ns6:http-security>
+                    <ns4:client-auth-methods>
+                        <ns54:tlscert allows-self-signed="true"/>
+                        <ns53:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns26:tlscert/>
+                        <ns25:httpsig/>
+                    </ns4:server-auth-methods>
+                </ns6:http-security>
+                <ns6:get-url>https://ewp-test.ignatianum.edu.pl/ewp/la/get</ns6:get-url>
+                <ns6:index-url>https://ewp-test.ignatianum.edu.pl/ewp/la/index</ns6:index-url>
+                <ns6:update-url>https://ewp-test.ignatianum.edu.pl/ewp/la/update</ns6:update-url>
+                <ns6:max-omobility-ids>100</ns6:max-omobility-ids>
+            </ns6:omobility-las>
         </ns2:apis-implemented>
         <ns35:institutions-covered>
             <ns2:hei id="ignatianum.edu.pl">
