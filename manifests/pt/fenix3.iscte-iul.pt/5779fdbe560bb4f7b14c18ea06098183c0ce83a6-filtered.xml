@@ -1,12 +1,14 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
 >
     <ns3:host>
         <admin-email>gdsi@iscte-iul.pt</admin-email>
@@ -18,11 +20,11 @@
             <ns6:echo version="2.0.1">
                 <ns6:http-security>
                     <ns5:client-auth-methods>
-                        <ns7:httpsig/>
+                        <ns10:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns8:tlscert allows-self-signed="false"/>
-                        <ns7:httpsig/>
+                        <ns7:tlscert/>
+                        <ns9:httpsig/>
                     </ns5:server-auth-methods>
                 </ns6:http-security>
                 <ns6:url>https://fenix3.iscte-iul.pt/web-hooks/ewp/echo/2.0.1</ns6:url>
@@ -33,8 +35,8 @@
                 <ns2:other-id type="pic">998622567</ns2:other-id>
                 <ns2:other-id type="erasmus">P LISBOA07</ns2:other-id>
                 <ns2:other-id type="erasmus-charter">28701-LA-1-2014-1-PT-EPPKA3-ECHE</ns2:other-id>
-                <ns2:name xml:lang="en">ISCTE - University Institute of Lisbon</ns2:name>
                 <ns2:name xml:lang="pt">ISCTE - Instituto Universitário de Lisboa</ns2:name>
+                <ns2:name xml:lang="en">ISCTE - University Institute of Lisbon</ns2:name>
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
