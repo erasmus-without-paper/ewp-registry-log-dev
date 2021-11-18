@@ -69,6 +69,28 @@
         <max-ounit-ids>15</max-ounit-ids>
         <max-ounit-codes>15</max-ounit-codes>
       </organizational-units>
+      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd" version="6.0.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"></tlscert>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"></tlscert>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"></tls>
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"></tls>
+          </sec:response-encryption-methods>
+        </http-security>
+        <get-url>https://ewp-dev.up.pt:8443/rest/iias/get</get-url>
+        <index-url>https://ewp-dev.up.pt:8443/rest/iias/index</index-url>
+        <max-iia-ids>20</max-iia-ids>
+        <max-iia-codes>20</max-iia-codes>
+      </iias>
       <iia-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" version="2.0.3">
         <http-security>
           <sec:client-auth-methods>
