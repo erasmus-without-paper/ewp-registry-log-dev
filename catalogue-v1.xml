@@ -5329,6 +5329,28 @@
                 <ou2:max-ounit-ids>15</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>15</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <ia2:iias version="6.0.1">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://ewp-dev.up.pt:8443/rest/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>20</ia2:max-iia-ids>
+                <ia2:max-iia-codes>20</ia2:max-iia-codes>
+                <ia2:index-url>https://ewp-dev.up.pt:8443/rest/iias/index</ia2:index-url>
+            </ia2:iias>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -5393,31 +5415,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://ewp-dev.up.pt:8443/rest/iia-approval-cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <om1:omobilities
-                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <om1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
-                </om1:http-security>
-                <om1:get-url>https://ewp-dev.up.pt:8443/rest/omobilities/get</om1:get-url>
-                <om1:index-url>https://ewp-dev.up.pt:8443/rest/omobilities/index</om1:index-url>
-                <om1:max-omobility-ids>20</om1:max-omobility-ids>
-                <om1:sends-notifications/>
-            </om1:omobilities>
             <imc1:imobility-cnr
                 xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.1"
