@@ -1,0 +1,127 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>dany.mahaut@edhec.edu</ewp:admin-email>
+        <ewp:admin-notes>EDHEC EWP Mannifest</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://net.edhec.edu:51980/manifest.xml</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <ewp:admin-email>dany.mahaut@edhec.edu</ewp:admin-email>
+                <ewp:admin-notes>APIs are developed with .NET Core.</ewp:admin-notes>
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://net.edhec.edu:51980/api/echo</url>
+            </echo>
+        </r:apis-implemented>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="edhec.edu">
+                <other-id type="pic">936847244</other-id>
+                <other-id type="erasmus">F LILLE15</other-id>
+                <name xml:lang="en">EDHEC BUSINESS SCHOOL</name>
+                <name xml:lang="fr">Ecole des Hautes Etudes Commerciales du Nord</name>
+            </hei>
+        </mf:institutions-covered>
+        <client-credentials-in-use>
+            <certificate>
+        MIIGfTCCBWWgAwIBAgIQFEvkQ3c/pRFm2HwPisFcCzANBgkqhkiG9w0BAQsFADCB
+        lTELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+        A1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMT0wOwYDVQQD
+        EzRTZWN0aWdvIFJTQSBPcmdhbml6YXRpb24gVmFsaWRhdGlvbiBTZWN1cmUgU2Vy
+        dmVyIENBMB4XDTIxMDQxOTAwMDAwMFoXDTIyMDUyMDIzNTk1OVowejELMAkGA1UE
+        BhMCRlIxEDAOBgNVBAcTB1JvdWJhaXgxKjAoBgNVBAoTIUFTU09DSUFUSU9OIEVE
+        SEVDIEJVU0lORVNTIFNDSE9PTDEXMBUGA1UECxMOMDAwMiA3ODM3MDcwNjAxFDAS
+        BgNVBAMMCyouZWRoZWMuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+        AQEAvRYQfb9hIFDx7LgKW1FRBs4XOsaBfnzODQdq6BcM+1tjJh9s8NiuGUbrqVE5
+        p0jDvUsogodWB4fR274vORoLfBgYQA/Mf++pfcmahf3kSjP9pfIx9CYGjpHlR0Sm
+        5QAMbWrbZUDZO2BNCRTTHKpfPlJJHQcHjQu3zFMhxzBlgtFoxNGC/b4cZMEg1EUb
+        RaLNoAp/z4h1/yR9YnMsBVmrdKp9FB4KEghkrmvwwz5HZVvp2790IPrGYwLfbfJa
+        iuX4dHqfD2HJN2PxjV06tVjU+7p0T2eqOeZpoeOs09lZNC+/MR1NMnXkIp2ZBTYD
+        j9nyZco8d2hYMFYLjUScGoiApwIDAQABo4IC4TCCAt0wHwYDVR0jBBgwFoAUF9nW
+        JSdn+THCSUPZMDZEjGypT+swHQYDVR0OBBYEFAbq3hLhyB1HwQnjFub2w4ZKigPl
+        MA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUF
+        BwMBBggrBgEFBQcDAjBKBgNVHSAEQzBBMDUGDCsGAQQBsjEBAgEDBDAlMCMGCCsG
+        AQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgIwWgYDVR0f
+        BFMwUTBPoE2gS4ZJaHR0cDovL2NybC5zZWN0aWdvLmNvbS9TZWN0aWdvUlNBT3Jn
+        YW5pemF0aW9uVmFsaWRhdGlvblNlY3VyZVNlcnZlckNBLmNybDCBigYIKwYBBQUH
+        AQEEfjB8MFUGCCsGAQUFBzAChklodHRwOi8vY3J0LnNlY3RpZ28uY29tL1NlY3Rp
+        Z29SU0FPcmdhbml6YXRpb25WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3J0MCMG
+        CCsGAQUFBzABhhdodHRwOi8vb2NzcC5zZWN0aWdvLmNvbTAhBgNVHREEGjAYggsq
+        LmVkaGVjLmVkdYIJZWRoZWMuZWR1MIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYA
+        RqVV63X6kSAwtaKJafTzfREsQXS+/Um4havy/HD+bUcAAAF46SRFDAAABAMARzBF
+        AiEA605K21JpJRRXKRLNjKfU4YRf+MP5H1jZPx51MrWK0w8CIBi65GA3asM1FzC4
+        YvNmY1e8yH+7MObvNb9HPEq3G13NAHYA36Veq2iCTx9sre64X04+WurNohKkal6O
+        OxLAIERcKnMAAAF46SRE8QAABAMARzBFAiB61dTRON2k93canWnModrMy3KuPHgl
+        WBl4Z0Ri1wH29AIhAMmNk353TYlcCbYUliSVUEhK8Wkf2JhX0wowg0MABA+uMA0G
+        CSqGSIb3DQEBCwUAA4IBAQARpy4+zZohFCm3djNhnhFNHIXJcMj/5RwxNCk9e/Yn
+        m41bPd5pppehcL84nf5vKEaPKImMj8bd8NZAi3hko3Fx5PPCzZxuX9upbUlZgJrE
+        pcCpueTHO4Z/5Aq7mBg2Uhf7NwKIMnQ5DhPRMUREYg0wSJiULa5AiZ0U2HnHQlpM
+        m7oaj4bu4PKUs2MI26RdA2HKxDLRkthAv9KHA/H2ZtVxGNfG8rPOwNc2XWitO9mi
+        pnWtNDIIgSqZc9qhXxzPQGEPiLHk5ESDC+GCr7wKCUf+notTcUqxMuCC2G5JwNzd
+        zgaQxxOhjWc9kDvaFNRXL0S6gWJeJzo5nMJUmm1O/iTs
+      </certificate>
+        </client-credentials-in-use>
+        <server-credentials-in-use/>
+    </host>
+</manifest>
