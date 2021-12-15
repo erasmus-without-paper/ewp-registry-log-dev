@@ -1,0 +1,155 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+    "
+>
+    <!-- This example doesn't contain many comments, but its XML Schema does! -->
+    <host>
+        <ewp:admin-email>mesutbasaran@iyte.edu.tr</ewp:admin-email>
+        <ewp:admin-notes>It's not a real manifest. Just an example.</ewp:admin-notes>
+
+        <r:apis-implemented>
+            <!-- All API entries are defined in their own separate XML namespaces.
+            You need to use proper `xmlns` in order for them to be matched properly. -->
+
+            <!-- The entry for the Discovery Manifest API (a self-reference). -->
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+                version="5.0.0"
+            >
+                <url>https://test-app.iyte.edu.tr/TestEwp/Discovery/manifest.xml</url>
+            </discovery>
+
+            <!-- Some other API, just for the purpose of example. Each API entry has a
+            different XML namespace and a different structure. These structures are often
+            quite similar to each other, but sometimes they're not. -->
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <!-- Note, that ewp:admin-email and ewp:admin-notes can be defined both on the
+                global level, and on the API level. -->
+                <ewp:admin-email>mesutbasaran@iyte.edu.tr</ewp:admin-email>
+                <ewp:admin-email>gokhansahan@iyte.edu.tr</ewp:admin-email>
+                <ewp:admin-notes>Some notes which might be useful for client developers.</ewp:admin-notes>
+
+                <!-- Many APIs define the security requirements of their implementations with help
+                of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+
+                <!-- The URL at which this Echo API is served. See Echo API's manifest-entry.xsd
+                file for details. -->
+                <url>https://example.com/ewp/echo</url>
+            </echo>
+        </r:apis-implemented>
+
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="iyte.edu.tr">
+                <other-id type="pic">999869308</other-id>
+                <other-id type="erasmus">TR IZMIR03</other-id>
+                <other-id type="erasmus-charter">45834-EPP-1-2014-1-PL-EPPKA3-ECHE</other-id>
+                <name xml:lang="en">Izmir Institute of Technology</name>
+            </hei>
+        </mf:institutions-covered>
+
+        <client-credentials-in-use>
+
+			<certificate>
+                MIIGOTCCBSGgAwIBAgIMEifStMxTskEeRR1rMA0GCSqGSIb3DQEBCwUAMEwxCzAJ
+				BgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMSIwIAYDVQQDExlB
+				bHBoYVNTTCBDQSAtIFNIQTI1NiAtIEcyMB4XDTIxMTExNjA2MjIwMloXDTIyMTEy
+				ODE1NTg0MFowGDEWMBQGA1UEAwwNKi5peXRlLmVkdS50cjCCASIwDQYJKoZIhvcN
+				AQEBBQADggEPADCCAQoCggEBAMJOlc46bRFAftgmn6U+k5uOGpJM+mwN+G2UrkYn
+				hlSpQcRG+gclIIayzOftaWnHZBTyN03jh65Ddh3t77s1qi0Ahyax8XfGpYXd48iU
+				cBaQKsRiONhcxr0BCnyVr3YQyRODy+UmJz2C9RPG3cDIMnDalq9VIDE+3vErYaay
+				P1s7tSIOgbkFKaJ0sxaK0D0kgqCnSw/gWz3Ik8wCShCC8m/8hEjMjqYgOB8LSqF1
+				Mz+5c/EAVE+8M74s20S1dvFn4N2swnJhLgrqU6aLr+E59y0+w0WWU+VuQQ/nKXdL
+				9vGaUdDTwfPXb24NP0jV8h1DtYEB/nHDzdvokeJzWKeTnDkCAwEAAaOCA00wggNJ
+				MA4GA1UdDwEB/wQEAwIFoDCBiQYIKwYBBQUHAQEEfTB7MEIGCCsGAQUFBzAChjZo
+				dHRwOi8vc2VjdXJlMi5hbHBoYXNzbC5jb20vY2FjZXJ0L2dzYWxwaGFzaGEyZzJy
+				MS5jcnQwNQYIKwYBBQUHMAGGKWh0dHA6Ly9vY3NwMi5nbG9iYWxzaWduLmNvbS9n
+				c2FscGhhc2hhMmcyMFcGA1UdIARQME4wQgYKKwYBBAGgMgEKCjA0MDIGCCsGAQUF
+				BwIBFiZodHRwczovL3d3dy5nbG9iYWxzaWduLmNvbS9yZXBvc2l0b3J5LzAIBgZn
+				gQwBAgEwCQYDVR0TBAIwADA+BgNVHR8ENzA1MDOgMaAvhi1odHRwOi8vY3JsMi5h
+				bHBoYXNzbC5jb20vZ3MvZ3NhbHBoYXNoYTJnMi5jcmwwJQYDVR0RBB4wHIINKi5p
+				eXRlLmVkdS50coILaXl0ZS5lZHUudHIwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsG
+				AQUFBwMCMB8GA1UdIwQYMBaAFPXN1TwIUPlqTzq3l9pWg+Zp0mj3MB0GA1UdDgQW
+				BBQF4Dt/BBg4LL0zG+UHo/5/gjqm4zCCAX8GCisGAQQB1nkCBAIEggFvBIIBawFp
+				AHcAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAF9J2jc4gAABAMA
+				SDBGAiEA+pCoQdF6Rua6Tj3cNf6RdC9KRVkbS+KF13Xpspz/mGMCIQCrHP6Ya5RH
+				fRYDAUgIqJLAdnsmNJ583Tl3hAG8+xasfAB2ACl5vvCeOTkh8FZzn2Old+W+V32c
+				YAr4+U1dJlwlXceEAAABfSdo3OMAAAQDAEcwRQIhANoRGfNG4lYP+ujAxb6wViz+
+				JJOZNMmUgUwTRwPOhRTDAiAPUnefRIw0G55Ww9pwpDwhIBwIkYZ1LS6qvd/Q2o+E
+				JAB2AFGjsPX9AXmcVm24N3iPDKR6zBsny/eeiEKaDf7UiwXlAAABfSdo3RIAAAQD
+				AEcwRQIgXUKJH/61BYamhHOiA9viY0o+hR2y3YFDQEwRh6nFmTYCIQC45fLB6/1R
+				iqJpuGVGbXYq400nAjNeCpOG65hFPNywMzANBgkqhkiG9w0BAQsFAAOCAQEAszqm
+				2t1KlU1D0Z/hHpsngAJkgX7PytDNOZBExma5yS41pOFIiSJGvGcxwgaAa+8rX6ho
+				bJZwNOOvsC77KnjMi6mKTA3CIrAfb9BZ0NS8mne9LSKZsO15zYPYzw/N5yUe/Pem
+				wZncUwYMG3inZh3YycK2DrwEodA8mcNscuodpqNhzvCIGx1wWd7qBy2vw1zNvmx6
+				lWJkhkeKO5eDwTzBGarCoKefTzZGAwd4CX9F0cOy9GKUsojVdLMC9YnZpXjNrB5p
+				mRZonrJddxl2ZZ8Bm8r5i33V2/uIaPF+LvLtCh+acg/qyRaYh47brQwTqI+pVEfb
+				3jtbg5wlZJlY3KUtdg==
+            </certificate>
+
+            <!-- And this one is used for HTTP Signature Authentication -->
+            <rsa-public-key>
+                MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgFSiqh/bPKkJ+Ml62SMbSk8Dpm45
+				kNPWxa4mmXGnqUvSobq2y1i7koXOwFKu/mwfDZ/Ie4NH0sva359+8iHRyP9n7NIe
+				yYHInl8fmlkQSfTP/iSKAIKylMbj3qx9/kpc+YOndbiwAKk/MLCriUt2sZfAVj4s
+				jMqqvsK2Xy6lanJ3AgMBAAE=
+            </rsa-public-key>
+        </client-credentials-in-use>
+
+        <server-credentials-in-use>
+            <!-- Used for HTTP Signature Authentication -->
+            <rsa-public-key>
+                MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgFSiqh/bPKkJ+Ml62SMbSk8Dpm45
+				kNPWxa4mmXGnqUvSobq2y1i7koXOwFKu/mwfDZ/Ie4NH0sva359+8iHRyP9n7NIe
+				yYHInl8fmlkQSfTP/iSKAIKylMbj3qx9/kpc+YOndbiwAKk/MLCriUt2sZfAVj4s
+				jMqqvsK2Xy6lanJ3AgMBAAE=
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
