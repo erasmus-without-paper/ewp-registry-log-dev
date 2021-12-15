@@ -57417,6 +57417,141 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>volenova@civ.zcu.cz</ewp:admin-email>
+        <ewp:admin-notes>EWP connector for IS/STAG</ewp:admin-notes>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://portaltest.ujep.cz:8843/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://portaltest.ujep.cz:8843/ws/services/ewp/manifest</d5:url>
+            </d5:discovery>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://portaltest.ujep.cz:8843/ws/services/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://portaltest.ujep.cz:8843/ws/services/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia3:iias
+                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <ia3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia3:http-security>
+                <ia3:get-url>https://portaltest.ujep.cz:8843/ws/services/ewp/iias/get</ia3:get-url>
+                <ia3:max-iia-ids>10</ia3:max-iia-ids>
+                <ia3:max-iia-codes>10</ia3:max-iia-codes>
+                <ia3:index-url>https://portaltest.ujep.cz:8843/ws/services/ewp/iias/index</ia3:index-url>
+            </ia3:iias>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="0.2.1"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://portaltest.ujep.cz:8843/ws/services/ewp/iias/approval</iaa1:url>
+                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://portaltest.ujep.cz:8843/ws/services/ewp/las/get</oml1:get-url>
+                <oml1:index-url>https://portaltest.ujep.cz:8843/ws/services/ewp/las/index</oml1:index-url>
+                <oml1:update-url>https://portaltest.ujep.cz:8843/ws/services/ewp/las/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://portaltest.ujep.cz:8843/ws/services/ewp/las/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ujep.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="3fa07c12bb84145b2eb3dfbbce7463e07a70b59a16eefcc23b0b17cd3b4e3b26"/>
+            <rsa-public-key sha-256="34c44e5bc25fbeeaf66d9d45c717557cb6643ae74c330daf7e983fad7da76245"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="34c44e5bc25fbeeaf66d9d45c717557cb6643ae74c330daf7e983fad7da76245"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -60781,6 +60916,13 @@ a3pwzMMg+ogzPKovKcCRm1HrpnFX+UcKExhk3VFYqX7T9/tGcgLCK+0v+/sGtiaB
             <name xml:lang="en">Jan Długosz University in Częstochowa</name>
             <name xml:lang="pl">Uniwersytet Humanistyczno-Przyrodniczy im. Jana Długosza w Częstochowie</name>
         </hei>
+        <hei id="ujep.cz">
+            <other-id type="erasmus">CZ USTINAD01</other-id>
+            <other-id type="erasmus-charter">101012185</other-id>
+            <other-id type="pic">973510431</other-id>
+            <name xml:lang="cs">UNIVERZITA JANA EVANGELISTY PURKYNĚ V ÚSTÍ NAD LABEM</name>
+            <name xml:lang="en">JAN EVANGELISTA PURKYNĚ UNIVERSITY IN ÚSTÍ NAD LABEM</name>
+        </hei>
         <hei id="uji.es">
             <other-id type="erasmus">E  CASTELL01</other-id>
             <other-id type="pic">999882985</other-id>
@@ -62099,6 +62241,14 @@ a3pwzMMg+ogzPKovKcCRm1HrpnFX+UcKExhk3VFYqX7T9/tGcgLCK+0v+/sGtiaB
             pt50jukS6SF53DdShR9P4nfvp4vSIROgGAyBgmk1kmNW5sPPRVXQ58iHl30SEXZXUW+lJFO2lf/3
             TQKqa48XYbff2IxmXCr2I7elAiNf2H7B6yfhSDObxJ0ioqIfMiHBC82poo2IT2GZu40yqh0Ws7MY
             Gdv/bQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="34c44e5bc25fbeeaf66d9d45c717557cb6643ae74c330daf7e983fad7da76245">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6fMV8Kl7WUvSybbckK2BFzhSRkZek8vv
+            VR272FH+VKeixmyDYiltGWfyibut8Rm59rS+1qGIL6trqy8H0Qi28/xqlH5lgj2Y0eie424wSiAV
+            nRA72PGKxou2TALup8xNDGspYSwD3YoBUMlGM/+fS7DJRja2Vp0nncW6NA3mXBRre4ErKBpjSDG8
+            UYdYoL8TUIAxj/UlTnih0LNlvX/fdvvHROGonazg2gKRF68unxAHMHBwTmqJ7dfAo1h8b5KMojfU
+            TZTPqsu23OiIELhH+mFj40eGjwIMTQNnTfHxXj07ZWnD7NIjr4osIYiT4MvlO/CohduXef/motWS
+            gPB/LQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="36a44e588e5f654767ded4bbc41587bb248e96685b9d07f1fb0fa881bda55290">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0mzsWp2249LnmDyaWEOoZ4JsgC4HL22o
