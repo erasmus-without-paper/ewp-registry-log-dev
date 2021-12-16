@@ -119,8 +119,8 @@
                     </sec:server-auth-methods>
                 </ns6:http-security>
                 <ns6:get-url>https://orinumenti.uca.es/en/ewp/iias/api/get/stable-v6</ns6:get-url>
-                <ns6:max-iia-ids>10</ns6:max-iia-ids>
-                <ns6:max-iia-codes>10</ns6:max-iia-codes>
+                <ns6:max-iia-ids>50</ns6:max-iia-ids>
+                <ns6:max-iia-codes>50</ns6:max-iia-codes>
                 <ns6:index-url>https://orinumenti.uca.es/en/ewp/iias/api/index/stable-v6</ns6:index-url>
             </ns6:iias>
             <ns7:iias
@@ -138,8 +138,8 @@
                     </sec:server-auth-methods>
                 </ns7:http-security>
                 <ns7:get-url>https://orinumenti.uca.es/en/ewp/iias/api/get/stable-v4</ns7:get-url>
-                <ns7:max-iia-ids>10</ns7:max-iia-ids>
-                <ns7:max-iia-codes>10</ns7:max-iia-codes>
+                <ns7:max-iia-ids>50</ns7:max-iia-ids>
+                <ns7:max-iia-codes>50</ns7:max-iia-codes>
                 <ns7:index-url>https://orinumenti.uca.es/en/ewp/iias/api/index/stable-v4</ns7:index-url>
                 <ns7:sends-notifications/>
             </ns7:iias>
@@ -174,7 +174,7 @@
                     </sec:server-auth-methods>
                 </ns9:http-security>
                 <ns9:url>https://orinumenti.uca.es/en/ewp/iias/api/approval/stable-v1</ns9:url>
-                <ns9:max-iia-ids>1</ns9:max-iia-ids>
+                <ns9:max-iia-ids>50</ns9:max-iia-ids>
             </ns9:iias-approval>
             <ns10:iia-approval-cnr
                 xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -207,8 +207,42 @@
                     </sec:server-auth-methods>
                 </ns11:http-security>
                 <ns11:url>https://orinumenti.uca.es/en/ewp/iias/api/factsheet/stable-v1</ns11:url>
-                <ns11:max-hei-ids>1</ns11:max-hei-ids>
+                <ns11:max-hei-ids>50</ns11:max-hei-ids>
             </ns11:factsheet>
+            <ns13:omobility-cnr
+                xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns13:http-security>
+                    <sec:client-auth-methods>
+                        <sec1:tlscert allows-self-signed="true"/>
+                        <sec2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec3:tlscert/>
+                        <sec4:httpsig/>
+                    </sec:server-auth-methods>
+                </ns13:http-security>
+                <ns13:url>https://orinumenti.uca.es/en/ewp/cnr/omobilities</ns13:url>
+                <ns13:max-omobility-ids>1</ns13:max-omobility-ids>
+            </ns13:omobility-cnr>
+            <ns15:imobility-cnr
+                xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns15:http-security>
+                    <sec:client-auth-methods>
+                        <sec1:tlscert allows-self-signed="true"/>
+                        <sec2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec3:tlscert/>
+                        <sec4:httpsig/>
+                    </sec:server-auth-methods>
+                </ns15:http-security>
+                <ns15:url>https://orinumenti.uca.es/en/ewp/cnr/imobilities</ns15:url>
+                <ns15:max-omobility-ids>1</ns15:max-omobility-ids>
+            </ns15:imobility-cnr>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="uca.es">
