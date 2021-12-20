@@ -1,55 +1,1109 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><ns3:manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd" xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd" xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"><ns3:host><admin-email>volenova@civ.zcu.cz</admin-email><admin-notes>EWP connector for IS/STAG</admin-notes><ns2:apis-implemented><ns23:echo version="2.0.1"><ns23:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns23:http-security><ns23:url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/echo</ns23:url></ns23:echo><ns24:discovery version="5.0.0"><ns24:url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/manifest</ns24:url></ns24:discovery><ns22:institutions version="2.2.0"><ns22:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/><ns26:anonymous/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns22:http-security><ns22:url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/institutions</ns22:url><ns22:max-hei-ids>1</ns22:max-hei-ids></ns22:institutions><ns21:organizational-units version="2.1.1"><ns21:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/><ns26:anonymous/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns21:http-security><ns21:url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/ounits</ns21:url><ns21:max-ounit-ids>10</ns21:max-ounit-ids><ns21:max-ounit-codes>10</ns21:max-ounit-codes></ns21:organizational-units><ns20:iias version="3.0.0"><ns20:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns20:http-security><ns20:get-url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/iias/get</ns20:get-url><ns20:max-iia-ids>10</ns20:max-iia-ids><ns20:max-iia-codes>10</ns20:max-iia-codes><ns20:index-url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/iias/index</ns20:index-url></ns20:iias><ns18:iias-approval version="0.2.1"><ns18:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns18:http-security><ns18:url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/iias/approval</ns18:url><ns18:max-iia-ids>10</ns18:max-iia-ids></ns18:iias-approval><ns12:omobility-las version="1.0.1"><ns12:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns12:http-security><ns12:get-url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/las/get</ns12:get-url><ns12:index-url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/las/index</ns12:index-url><ns12:update-url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/las/update</ns12:update-url><ns12:max-omobility-ids>10</ns12:max-omobility-ids></ns12:omobility-las><ns11:omobility-la-cnr version="1.0.0"><ns11:http-security><ns5:client-auth-methods><ns25:tlscert allows-self-signed="true"/><ns27:httpsig/></ns5:client-auth-methods><ns5:server-auth-methods><ns29:tlscert/><ns28:httpsig/></ns5:server-auth-methods></ns11:http-security><ns11:url>https://stag-ws-test.tul.cz:8843/ws/services/ewp/las/cnr</ns11:url><ns11:max-omobility-ids>10</ns11:max-omobility-ids></ns11:omobility-la-cnr></ns2:apis-implemented><ns3:institutions-covered><ns2:hei id="tul.cz"><ns2:other-id type="pic">999856213</ns2:other-id><ns2:other-id type="erasmus">CZ LIBEREC01</ns2:other-id><ns2:other-id type="erasmus-charter">48246-EPP-1-2014-1-CZ-EPPKA3-ECHE</ns2:other-id><ns2:name xml:lang="cs">Technická univerzita v Liberci</ns2:name><ns2:name xml:lang="en">Technical University of Liberec</ns2:name></ns2:hei></ns3:institutions-covered><ns3:client-credentials-in-use><ns3:certificate>MIIHZjCCBU6gAwIBAgIQMVIcqU0UwiJCvgh9KzhxrjANBgkqhkiG9w0BAQwFADBE
-MQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UE
-AxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjEwMTE1MDAwMDAwWhcNMjIwMTE1MjM1
-OTU5WjCBuDELMAkGA1UEBhMCQ1oxDjAMBgNVBBETBTQ2MDAxMRgwFgYDVQQIDA9M
-aWJlcmVja8O9IGtyYWoxIDAeBgNVBAcMF0xpYmVyZWMgSS1TdGFyw6kgTcSbc3Rv
-MRswGQYDVQQJDBJTdHVkZW50c2vDoSAxNDAyLzIxKDAmBgNVBAoMH1RlY2huaWNr
-w6EgdW5pdmVyeml0YSB2IExpYmVyY2kxFjAUBgNVBAMTDXphbmlhaC50dWwuY3ow
-ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+kHUdlA44uu5jCwpWtMex
-DbqcFc3CHeQbEmh0/1c2GNe1mvSU4qJGgi9PmDkUcI0OTX9r8jLYKaszTd2a/0Vo
-N+xBmfup5Qxr45JJVJmxL6WZWB0RRhBx2eRar85xVFXfuEgL3joqg1vwQvSNWTYw
-WX7IGLaFAMApvqBQXhzbOG3ovV742BEe7KG2FHBJgZ5k9JlXsqnRqBlzHX+yfXIm
-9WtcFPRds4+A8xnM6eAj1LGre9MEkgypBmczjvRSV4UMBZzpE/mY9i61Cmg7ym9i
-LMxmpELu9kjy6LMRZ+a22Fk7bCj29tEuIMjjjYeyBQAY9i+b1A6FwYRTbzhhIEYJ
-AgMBAAGjggLdMIIC2TAfBgNVHSMEGDAWgBRvHTVJEGwy+lmgnryK6B+VvnF6DDAd
-BgNVHQ4EFgQUGRwp5lbVSyxUl2oHcmp+m5lvAKYwDgYDVR0PAQH/BAQDAgWgMAwG
-A1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1Ud
-IARCMEAwNAYLKwYBBAGyMQECAk8wJTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0
-aWdvLmNvbS9DUFMwCAYGZ4EMAQICMD8GA1UdHwQ4MDYwNKAyoDCGLmh0dHA6Ly9H
-RUFOVC5jcmwuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcmwwdQYIKwYBBQUH
-AQEEaTBnMDoGCCsGAQUFBzAChi5odHRwOi8vR0VBTlQuY3J0LnNlY3RpZ28uY29t
-L0dFQU5UT1ZSU0FDQTQuY3J0MCkGCCsGAQUFBzABhh1odHRwOi8vR0VBTlQub2Nz
-cC5zZWN0aWdvLmNvbTCCAQIGCisGAQQB1nkCBAIEgfMEgfAA7gB1AEalVet1+pEg
-MLWiiWn0830RLEF0vv1JuIWr8vxw/m1HAAABdwXXDkoAAAQDAEYwRAIgcnm/S6QQ
-wkRUMdy+/ExPJPD8gulDWFuqraYHti6zwK4CIDNlxA2Mgu0KslcNeAjoqqLm+iZh
-juZdNaldgJ1VAIwRAHUA36Veq2iCTx9sre64X04+WurNohKkal6OOxLAIERcKnMA
-AAF3BdcOcgAABAMARjBEAiAa1UEFiUiNS8bdJUI6ESoRt0Caec6lMEkdj4bBS7+P
-GAIgdlLFSEMjkpLMkLLHxpx45fpz+rKNWSfDdyN2TXmdv3YwUQYDVR0RBEowSIIN
-emFuaWFoLnR1bC5jeoIQZWN0cy10ZXN0LnR1bC5jeoIQc3RhZy10ZXN0LnR1bC5j
-eoITc3RhZy13cy10ZXN0LnR1bC5jejANBgkqhkiG9w0BAQwFAAOCAgEATkFGjqqE
-G+1UYjdYPZc5tIusA5kBau/zaMVXjm8fBzq0gngKP6YHu/qUdgIIv6vLVxFRy2he
-zxfPJ0fbgSFTyI/5ko/vs6Ktu96tVe44z1tk0vni/iPz5J0yRIghZJRBi2C3X81g
-fzeHt1GRw48uBE9/gMP0veEHVEeN0BFdxr1mMPvVHYzOrWVBamWwiFQp3Jj+jgM9
-BEtE5IX6D61lOGXT2NBDM0SB6yllRyvEE4+4dkYoUBdTo5vrHYewLKA906kkq9R/
-pTFeWyMZa25xORjq9qQWHu249WnP3oaSKto8hPQsJP7O+cdpA+X2u6tixlejBQrK
-w0+fHTlVlUdgkaFbtl2rUEGUQVX5R0BFsgVF9Vwa88ivAfsrL1D0awQoFJQEQhJZ
-vFUetuGGNwJA2P48BGh5UjoUdoZNyR5yl8L7ySVIDsgA4YfgdxwFDtknK5T3T69z
-jyrz7bN9RZ61XHsLHNEQN/59AZGkGSgsmO9YB34lQ95D3yAv/URm1/k/xdpieXRf
-djxtRWVJINGtAGYsefr4qExD0IU1e9DBXSAnwzJ2NtA48xCYUtpfnrlgok6NJhGy
-rldj7wQ9OdVBjb34GdrBNERha0nnn2khpyLHhGRmZCcAfkfyvqhd0rGX0Ll+sCKB
-StbV1YjkhwjZjB/McNOAqVNA573sHP6fvl8=
-</ns3:certificate><ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpB1HZQOOLruYwsKVrTH
-sQ26nBXNwh3kGxJodP9XNhjXtZr0lOKiRoIvT5g5FHCNDk1/a/Iy2CmrM03dmv9F
-aDfsQZn7qeUMa+OSSVSZsS+lmVgdEUYQcdnkWq/OcVRV37hIC946KoNb8EL0jVk2
-MFl+yBi2hQDAKb6gUF4c2zht6L1e+NgRHuyhthRwSYGeZPSZV7Kp0agZcx1/sn1y
-JvVrXBT0XbOPgPMZzOngI9Sxq3vTBJIMqQZnM470UleFDAWc6RP5mPYutQpoO8pv
-YizMZqRC7vZI8uizEWfmtthZO2wo9vbRLiDI442HsgUAGPYvm9QOhcGEU284YSBG
-CQIDAQAB
-</ns3:rsa-public-key></ns3:client-credentials-in-use><ns3:server-credentials-in-use><ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpB1HZQOOLruYwsKVrTH
-sQ26nBXNwh3kGxJodP9XNhjXtZr0lOKiRoIvT5g5FHCNDk1/a/Iy2CmrM03dmv9F
-aDfsQZn7qeUMa+OSSVSZsS+lmVgdEUYQcdnkWq/OcVRV37hIC946KoNb8EL0jVk2
-MFl+yBi2hQDAKb6gUF4c2zht6L1e+NgRHuyhthRwSYGeZPSZV7Kp0agZcx1/sn1y
-JvVrXBT0XbOPgPMZzOngI9Sxq3vTBJIMqQZnM470UleFDAWc6RP5mPYutQpoO8pv
-YizMZqRC7vZI8uizEWfmtthZO2wo9vbRLiDI442HsgUAGPYvm9QOhcGEU284YSBG
-CQIDAQAB
-</ns3:rsa-public-key></ns3:server-credentials-in-use></ns3:host></ns3:manifest>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <title>Portál TUL-TEST
+     - V&iacute;tejte
+  </title>
+
+  
+  <meta http-equiv="x-xrds-location"
+        content="/xrds.xml"/>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/zdroje/portal_resources/tul_demo/portal/img/favicon/apple-touch-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="120x120"
+        href="/zdroje/portal_resources/tul_demo/portal/img/favicon/apple-touch-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="152x152"
+        href="/zdroje/portal_resources/tul_demo/portal/img/favicon/apple-touch-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="/zdroje/portal_resources/tul_demo/portal/img/favicon/apple-touch-icon-180x180.png"/>
+
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/tul_demo/portal/img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/tul_demo/portal/img/favicon/android-chrome-192x192.png"
+        sizes="192x192">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/tul_demo/portal/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/zdroje/portal_resources/tul_demo/portal/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" type="image/png" href="/zdroje/portal_resources/tul_demo/portal/img/favicon/favicon-32x32.png"
+        sizes="32x32">
+
+  <link rel="StyleSheet" type="text/css" href="/zdroje/bootstrap/dist/css/bootstrap.css?REL_211218-1826">
+  <link rel="StyleSheet" type="text/css" href="/zdroje/bootstrap/dist/css/bootstrap-theme.css?REL_211218-1826">
+  <link rel="StyleSheet" media="all" type="text/css" href="/zdroje/portal_resources/common/portal/css/portal.css?REL_211218-1826">
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/portal_resources/common/portal/css/mobile.css?REL_211218-1826">
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/portal_resources/tul_demo/tul_demo_color.css?REL_211218-1826">
+  <link rel="StyleSheet" href="/zdroje/css/xgui/XGui.css?REL_211218-1826">
+  <link rel="StyleSheet" href="/zdroje/css/mgui/MGui.css?REL_211218-1826" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/zdroje/js/jscalendar/calendar-cw.css" title="calendar-cw" media="all"/>
+
+
+  
+
+  <script type="text/javascript" src="/zdroje/js/COMBINED.js?REL_211218-1826"></script>
+  
+
+
+  <script type="text/javascript" src="/zdroje/bootstrap/dist/js/bootstrap.js?REL_211218-1826"></script>
+  <script type="text/javascript">
+    $.fn.bootstrapBtn = $.fn.button.noConflict();
+  </script>
+
+
+  <link rel="StyleSheet" media="screen" type="text/css" href="/zdroje/js/footable/css/footable.bootstrap.min.css">
+  <script type="text/javascript" src="/zdroje/js/footable/js/footable.min.js"></script>
+  
+  <script type="text/javascript" charset="UTF-8" src="/zdroje/js/l10n/l10n-cs.js"></script>
+  <script type="text/javascript" src="/zdroje/js/jscalendar/lang/calendar-cs.js"></script>
+
+  <style>
+    #myAffix {
+      z-index: 1099;
+    }
+
+    #myAffix.affix {
+      top: 0;
+      width: 100%;
+      position: fixed;
+    }
+
+    .hamburgerBtn button {
+      margin-top: 0;
+    }
+
+    .mobile_header_wrapper span.app_header_center {
+      color: white;
+    }
+
+    .mobile_menu .panel {
+      border: none;
+      margin: 0;
+    }
+
+    .mobile_nav_menu_service_links {
+      padding: 6px;
+    }
+
+    .mobile_nav_menu_service_links a {
+      padding: 4px;
+      font-size: 14px;
+      white-space: nowrap;
+      line-height: 1.5em;
+    }
+
+    .mobile_nav_menu_service_links a.xg_tooltip {
+      padding-left: 12px;
+    }
+
+    #mobile_nav_menu {
+      padding-top: 50px;
+    }
+
+    #mobile_nav_menu ul.app_menubar li {
+      border-top: 0;
+    }
+
+    #mobile_nav_menu .modal-dialog, #mobile_nav_menu .modal-body {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      div.app_menu, div.app_page_menu {
+        display: none;
+      }
+
+      .mobileNavWrapper {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+<h1 class="a11y_hidden">V&iacute;tejte - 
+  Portál TUL-TEST
+</h1>
+
+<a class="a11y_hidden a11y_focusable" href="#app_page_content">Přeskočit na obsah stránky</a>
+
+<div
+  class="app_container app_container-modif_lang-cs app_container-modif_single ">
+
+  <div class="app_header_wrapper hideForMobile" role="banner" aria-label="Hlavička stránky">
+    <div class="app_header">
+
+      <div class="app_header_left">
+        <a href="http://tul.cz"
+           title="Webové stránky TUL-TEST"
+           target="_blank"><span class="a11y_hidden">Webové stránky TUL-TEST</span></a>
+      </div>
+
+      <div class="app_header_center">
+        <a href="/" title="Vstupní stránka portálu TUL-TEST"
+        ><span class="a11y_hidden">Vstupní stránka portálu TUL-TEST</span></a>
+      </div>
+
+      <div class="app_header_right">
+        <div class="upper">
+
+          
+            
+            
+              
+                
+                
+                  <a class="falseLink hideForMobile" href="/saml/login?pc_originalURL=L3BvcnRhbC8" rel="nofollow"
+                     title="Přihlásit uživatele">Nepřihlášený uživatel </a>
+                  <a href="/saml/login?pc_originalURL=L3BvcnRhbC8" title="Přihlásit uživatele" rel="nofollow">Přihlásit</a>
+                
+              
+            
+          
+          
+            
+              <a href="/portal/studium/index.html?pc_lang=en" title="Switch to english">English</a>
+            
+            
+          
+        </div>
+        
+        <div class="lower">
+          
+          
+          
+          
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+    
+  </div>
+
+  <div id="myAffix" class="mobile_header_wrapper affix b app_header_wrapper hideForDesktop">
+
+    <div class="app_header_wrapper">
+      <div class="app_header">
+
+
+        <div class="app_header_cell pull-left">
+          <div class="hamburgerBtn btn-group mobileNav " role="group">
+            <button role="button" class=" btn btn-primary" id="mobile_menu_display_btn" data-toggle="modal" data-target="#mobile_nav_menu" aria-label="Zobrazit navigaci">
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+      <span class="app_header_center">
+        <span>
+          V&iacute;tejte
+        </span>
+      </span>
+
+        <div class="app_header_cell  pull-right">
+          <div class="app_header_right">
+
+
+            <div class="upper">
+              
+                
+                
+                  
+                    
+                    
+                      <a href="/saml/login?pc_originalURL=L3BvcnRhbC8" title="Přihlásit uživatele" rel="nofollow">Přihlásit</a>
+                    
+                  
+                
+              
+              
+                
+                  <a href="/portal/studium/index.html?pc_lang=en" title="Switch to english">English</a>
+                
+                
+              
+            </div>
+            
+
+            <div class="lower">
+              
+              
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="clear"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="b mobile_menu hideForDesktop" role="navigation">
+
+    <div class="modal fade mobile_nav_menu" id="mobile_nav_menu" tabindex="-1" role="dialog" aria-label="Navigace">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+
+            <div class=" hideForDesktop mobile_nav_menu_toplinks" id="mobile_nav_menu_toplinks">
+
+              
+              <ul class=" ">
+                
+                  <li class=""><a id="toplinks_node_3" data-target="#mobile_nav_menu_node_3"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_3"
+                                  class="selected ">Vítejte
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_66747" data-target="#mobile_nav_menu_node_66747"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_66747"
+                                  class="selected collapsed">Prohlížení
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_66777" data-target="#mobile_nav_menu_node_66777"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_66777"
+                                  class="selected collapsed">Uchazeč
+                  </a></li>
+                  
+                  <li class=""><a id="toplinks_node_66783" data-target="#mobile_nav_menu_node_66783"
+                                  data-parent="#mobile_nav_menu_accordion" data-toggle="collapse" href="#mobile_nav_menu_node_66783"
+                                  class="selected collapsed">Absolvent
+                  </a></li>
+                  
+              </ul>
+            </div>
+            <div id="mobile_nav_menu_accordion" class="panel panel-default mobile_nav_menu_accordion" role="tablist">
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_3" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="true"
+                     class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="toplinks_node_3">
+                  <a class=" selected page" href="/portal/studium/index.html">Vítejte</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_66747" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_66747">
+                  <a class="page" href="/portal/studium/prohlizeni.html">Prohlížení</a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_66777" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_66777">
+                  <a class="page" href="/portal/studium/uchazec/informace.html">Informace pro uchazeče</a><a class="page" href="/portal/studium/uchazec/eprihlaska.html">E-Přihláška</a><a class="page" href="/portal/studium/uchazec/prijimaci-rizeni.html">Přijímací řízení</a><a class="page" href="/portal/studium/uchazec/ects-prijezdy.html">ECTS příjezdy</a><a class="page" href="http://ects.tul.cz">Katalog předmětů<span class="link_out"></span></a>
+                </div>
+              </div>
+              
+              <div class="panel panel-default">
+                <div id="mobile_nav_menu_node_66783" data-parent="mobile_nav_menu_accordion"
+                     aria-expanded="false"
+                     class="panel-collapse collapse " role="tabpanel"
+                     aria-labelledby="toplinks_node_66783">
+                  <a class="page" href="/portal/studium/absolvent/informace.html">Úvodní informace</a><a class="page" href="/portal/studium/absolvent/registrace.html">Registrace</a><a class="page" href="/portal/studium/absolvent/prihlaseni.html">Přihlášení absolventa</a><a class="page" href="/portal/studium/absolvent/zmena-hesla.html">Zapomenuté heslo</a>
+                </div>
+              </div>
+              
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  
+
+  
+  
+    
+    
+  
+    
+    
+      <h2 class="a11y_hidden hideForMobile" id="navLevel1">Navigace první úrovně</h2>
+      <div class="app_menu" role="navigation" aria-labelledby="navLevel1">
+        <ul class="app_menubar level_1 ">
+          
+            <li class="selected "><a
+              href="/portal/studium/index.html" >Vítejte</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/prohlizeni.html" >Prohlížení</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/uchazec" >Uchazeč</a>
+            </li>
+            <li class=" "><a
+              href="/portal/studium/absolvent" >Absolvent</a>
+            </li>
+        </ul>
+      </div>
+      
+    
+  
+
+  
+
+
+
+
+
+    
+<script type="application/javascript">
+    jQuery(document).ready(function () {
+        // nastavim podle nastaveni v portalu
+        try {
+            civPortalRenewEvery = 300000;
+            initCivPortalSessionRenew();
+        } catch (e) {
+            console.log.call(console, e.stack || e);
+        }
+    });
+</script>
+<div id="civPortalSessionOverDialog" style="display:none; background-color: #b4b4b4">
+    <div style="padding:10pt; text-align:center; font-size: 14pt;">
+        <strong>Vzhledem k dlouhotrvající nečinnosti došlo k odpojení uživatele z portálu.</strong>
+    </div>
+    <div style="padding:10pt; text-align:center; font-size: 14pt;">
+        Klikněte, prosím, na <a href="/portal/studium/index.html" style="color: blue">tento odkaz pro obnovení připojení k portálu</a>
+    </div>
+    <div style="padding:6pt; text-align:center; font-size: 10pt;">
+        (k odpojení dochází až po 240-ti minutách nečinnosti. Pozor, na mobilních zařízeních k němu může dojít podstatně dříve).
+    </div>
+</div>
+
+
+
+  <div class="app_content" id="app_content">
+    <div class="app_page_single">
+      
+      <div class="app_page_content" id="app_page_content" role="main" aria-label="Obsah stránky, jednotlivé aplikace">
+        <div id="pc_loader_div" style="display:none; position: absolute; padding: 10pt 0pt 5pt 30pt; width: 100px; height: 30px; background: url('/zdroje/images/icons/stag/ajax-loader.gif') no-repeat left center">&nbsp;</div>
+<script type="application/javascript">
+    var pc_countdownTimer = null;
+    pc_countdownTimer = window.setInterval(function () {
+        jQuery('html, body').css('cursor', 'busy');         jQuery('#pc_loader_div').fadeIn(4000);
+        window.clearInterval(pc_countdownTimer);
+    }, 1000);
+
+</script>
+<script type="application/javascript">
+    jQuery('#pc_loader_div').remove();
+    if (typeof pc_countdownTimer != "undefined" && pc_countdownTimer != null) { window.clearInterval(pc_countdownTimer); }
+</script><table class="app_portlet_frame_out" cellpadding="0" cellspacing="0"  role="presentation"><tbody><tr><td valign="top" ><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody id="l_473"><tr><td valign="top"><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody class="column" id="l_475"><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: ROOT##/LoginPortlet-->
+<table id="972" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-972">Přihlášení (L001)</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-972" id="cpa_972">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='G972validation_errors' class="xgt_validationErrors"></div>
+<div id='G972validation_passed' class="xgt_validationPassed"></div>
+
+
+
+
+
+
+
+
+
+
+
+<form method="GET" action="/saml/login" name="loginForm" id="loginForm">
+    
+    <input type="hidden" name="pc_originalURL" value="L3BvcnRhbC8">
+    
+    <table class="ng_form_tab" cellpadding="0" cellspacing="0" style="padding-top: 3pt;">
+        <tr>
+            <th class="head" colspan="2">
+                Přihlášení do portálu:
+            </th>
+        </tr>
+        
+        
+        <tr>
+            <td class="ng_form_noback" colspan="2">
+                <div class="ng_wizard_bubles" style="margin-top: 10px; max-width: 400px; background-color: #dddff8">
+                    <div class="wizard-bubble-arrow-down"></div>
+                    Toto je TEST portal na TUL!
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" style="text-align: right;">
+                <input style="font-weight: bolder" type="submit" class="login_submit_button"
+                    
+                       value="Přihlásit se">
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: ROOT##/LoginPortlet-->
+</td></tr><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: CoursewarePortlets2##/StaticTextJSR168Portlet-->
+<table id="220249" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-220249">Úvodní informace</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+                <span class="mode-button">
+                    <a href="/portal/studium/index.html?pc_phs=-1271718418&amp;pc_mode=help&amp;pc_windowid=220249&amp;pc_publicnavigationalstatechanges=AAAAAA**&amp;pc_phase=render&amp;pc_type=portlet&amp;pc_windowstate=maximized#cpa_220249" rel="nofollow" target="_blank">
+                        <img alt="Nápověda portletu" title="Nápověda portletu" src="/zdroje/portal_resources/tul_demo/portal/img/portlet_icons/icon-title_help.png">
+                    </a>
+                </span>
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-220249" id="cpa_220249">
+                
+
+
+
+
+
+<div class="statictext_portlet">
+
+	
+
+		
+
+		
+
+			
+			
+				
+						<h2 style="margin-top:0px">
+							Úvodní informace
+						</h2>
+
+					<div data-name="content_autor" data-autor="kurtakova_adm">
+						<p>Vítejte v portálu informačního systému studijní agendy Technické univerzity v Liberci.</p>
+
+<p><strong>Ochrana osobních údajů</strong></p>
+
+<p>Technická univerzita v Liberci eviduje a zpracovává osobní údaje v IS STAG za účelem uskutečňování vzdělávací činnosti a s tím souvisejí studijní agendy. Povinnost TUL zpracovávat osobní údaje v souvislosti se vzdělávací činností je stanovena zejména příslušnými právními předpisy v oblasti vysokého školství, resp. je zpracování nezbytné pro plnění povinností a úkolů TUL jako veřejné vysoké školy. Bližší informace o zpracování a ochraně osobních údajů na TUL jsou uvedeny zde.</p>
+
+<p><strong>Jak se přihlásit?</strong></p>
+
+<p>Vyučující má přihlašovací jméno ve tvaru jméno_příjmení, studentovo přihlašovací jméno odpovídá osobnímu číslu a je tvořeno 9 znaky, z nichž pouze první je písmeno, ostatní jsou číslice (např. E07003123).</p>
+
+<p>Heslo je tvořeno řetězcem znaků a platí pro ně tato kritéria:</p>
+
+<ul>
+	<li>je kombinací max. 30 znaků (velká a malá písmena, číslice, znaky #, _, $),</li>
+	<li>prvním znakem je písmeno,</li>
+	<li>nesmí obsahovat znaky české abecedy.</li>
+</ul>
+
+<p>Implicitně je studentovo heslo nastaveno na X+rodné číslo, bez lomítek, pomlček, mezer či jiných oddělovacích znamének (např. X8203121216). Ve vlastním zájmu si jej co nejdříve změňte.</p>
+
+<p>S IS STAG můžete pracovat i pomocí mobilní aplikace TULapp.</p>
+
+<p><strong>Jak řešit problémy?</strong></p>
+
+<p>Pokud se při práci s portálem setkáte s problémy nebo se Vám něco nebude dařit, nezoufejte, rádi Vám pomůžeme.</p>
+
+<p><strong>Potíže související s organizací studia</strong></p>
+
+<p>Vyskytnou-li se v průběhu předzápisu potíže např. &quot;nedostatečná kapacita předmětu&quot;, &quot;předmět nemá rozvrh&quot; apod. obraťte se na katedru, která výuku předmětu zajišťuje. V případě problémů se studijním plánem nebo zapomenutým heslem kontaktujte Vaše studijní oddělení.</p>
+
+<p><strong>Technické problémy</strong></p>
+
+<p>Chyby a problémy související s funkčností portálu adresujte na uis@tul.cz. Při hlášení chyby, prosíme, uvádějte:</p>
+
+<ul>
+	<li>o co jste se snažili a jak,</li>
+	<li>jakým výsledkem Vaše akce skončila,</li>
+	<li>přesný čas kdy jste akci prováděli,</li>
+	<li>osobní číslo, jméno, příjmení.&nbsp;</li>
+</ul>
+
+					</div>
+
+					
+					<div class="stxt_lastUpdatedDateDiv">
+						Poslední změna:
+						09.06.2021
+					</div>
+					
+				
+
+				
+				
+			
+		
+	
+</div>
+<div style="clear: both; font-size: 2px;">&nbsp;</div>
+
+
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: CoursewarePortlets2##/StaticTextJSR168Portlet-->
+</td></tr></tbody></table></td><td valign="top" style="padding-left: 7px;"><table cellpadding="0" cellspacing="0" class="render_container" role="presentation"><tbody class="column" id="l_476"><tr><td valign="top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--portlet: CoursewarePortlets2##/Aktuality-->
+<table id="220248" cellpadding="0" class="app_portlet_frame_in " role="presentation">
+    <tr>
+
+        <td class="app_portlet_head_title"><h2 id="portlet-header-220248">Aktuality (C012)</h2></td>
+        <td class="app_portlet_head_icons">
+            
+            
+                <span class="mode-button">
+                    <a href="/portal/studium/index.html?pc_phs=-1855286583&amp;pc_mode=help&amp;pc_windowid=220248&amp;pc_publicnavigationalstatechanges=AAAAAA**&amp;pc_phase=render&amp;pc_type=portlet&amp;pc_windowstate=maximized#cpa_220248" rel="nofollow" target="_blank">
+                        <img alt="Nápověda portletu" title="Nápověda portletu" src="/zdroje/portal_resources/tul_demo/portal/img/portlet_icons/icon-title_help.png">
+                    </a>
+                </span>
+            
+            
+            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="app_portlet_coat">
+            <div role="region" aria-labelledby="portlet-header-220248" id="cpa_220248">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='G220248validation_errors' class="xgt_validationErrors"></div>
+<div id='G220248validation_passed' class="xgt_validationPassed"></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<table cellspacing="0" cellpadding="0" class="xgt_notable">
+    
+    <tr>
+        <td colspan="2" style="border-bottom: 1px solid black;">
+          <span style="font-size: 15px; font-weight: bold; white-space: nowrap;">
+            Aktuality
+          </span>
+        </td>
+    </tr>
+    
+
+    
+        
+
+        
+        
+            
+
+            
+            <tr id="aktuality4466">
+                
+
+                <td style="border-bottom: 1px dotted #bbbbbb;
+                                                    padding-top: 10px; text-align: left; vertical-align:bottom; white-space: normal;" width="100%;">
+                  <span data-autor="geisler_adm" data-name="content_autor" style="white-space: normal;  font-weight: bold;">
+                    Webové služby nad IS/STAG
+                  </span>
+                </td>
+                <td style="border-bottom: 1px dotted #bbbbbb;
+                                                    padding-top: 10px; text-align: right; vertical-align:bottom;">
+                  <span style="white-space: nowrap; color: #bbbbbb; font-size: 11px;">
+                      09.03.2021, 14:38
+                  </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: left; vertical-align: top;">
+                    <table cellspacing="0" cellpadding="0" class="xgt_notable">
+                        <tr>
+                            
+                            
+                                
+                                    
+                                    <td style="text-align: left; vertical-align: top; padding-top: 2px;">
+                                      <div style="white-space: normal; font-weight: normal;">
+                                        <p>Webové služby (Web services) nad IS/STAG jsou dostupné na <a class="xg_stag_a_out" href="http://stag-ws.tul.cz/ws/web">http://stag-ws.tul.cz/ws/web/</a>, kde jsou také uvedeny základní informace, popis a seznam služeb.</p>
+
+                                      </div>
+                                    </td>
+                                
+                                
+                            
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+      
+            
+
+            
+            <tr id="aktuality4459">
+                
+
+                <td style="border-bottom: 1px dotted #fa6511;
+                                                    padding-top: 10px; text-align: left; vertical-align:bottom; white-space: normal;" width="100%;">
+                  <span data-autor="DERVISH" data-name="content_autor" style="white-space: normal; color: #fa6511; font-weight: bold;">
+                    Information package & Course catalogue
+                  </span>
+                </td>
+                <td style="border-bottom: 1px dotted #fa6511;
+                                                    padding-top: 10px; text-align: right; vertical-align:bottom;">
+                  <span style="white-space: nowrap; color: #bbbbbb; font-size: 11px;">
+                      18.03.2010, 18:53
+                  </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: left; vertical-align: top;">
+                    <table cellspacing="0" cellpadding="0" class="xgt_notable">
+                        <tr>
+                            
+                            
+                                
+                                
+                                    
+                                    <td style="text-align: center; vertical-align: top; padding-right: 2px;">
+                                        
+                                            
+                                            
+                                                <img src="/zdroje/images/icons/akt_warning_view.gif"
+                                                         alt="Zvýrazněná informace..."
+                                                       title="Zvýrazněná informace..."
+                                                       class="xgt_icon_legend">
+                                            
+                                        
+                                    </td>
+                                    <td style="text-align: left; vertical-align: top; padding-top: 2px;">
+                                        <div style="white-space: normal; font-weight: normal;">
+                                            <p>Aplikace Information package &amp; Course catalogue (Studijní programy a katalog předmětů), součást informačního katalogu ECTS, je nyní dostupná na <a class="xg_stag_a_out" href="http://ects.tul.cz/">http://ects.tul.cz/</a>.</p>
+                                        </div>
+                                    </td>
+                                
+                            
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+      
+    
+  <tr><td colspan="2" >
+    <div style="float: right;">
+        <a href="/CoursewarePortlets2/rss?source=aktuality&amp;idAktualit=1846&amp;page=/portal/studium/index.html"><img src="/zdroje/images/icons/rss.png" alt="[RSS]" /></a>
+    </div>
+  </td></tr>
+</table>
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!--portlet-end: CoursewarePortlets2##/Aktuality-->
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!--
+
+
+<a href="/portal/studium/index.html?pc_web_version=desktop">Klasická verze</a>
+<a href="/portal/studium/index.html?pc_web_version=mobile">Responsivní</a>
+
+-->
+
+
+</div>
+<script type="application/javascript">
+  jQuery(document).ready(function () {
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
+
+
+    function createActionsDropDown(tableElement, tableIndex, rowElement, rowIndex, actionsColsIdx) {
+      if (actionsColsIdx === undefined || actionsColsIdx == null) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsColsIdx = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsColsIdx.push(elm.cellIndex)
+          });
+        }
+      }
+      var moveActionsToFirstCol = $(tableElement).hasClass("table-reflow");
+
+      var targetElm = moveActionsToFirstCol ? $("td:first", rowElement) : $("td:eq("+actionsColsIdx[0]+")", rowElement);
+
+      targetElm.prepend("<span class=\"dropdown row-actions-dropddown row-actions-ignore hideForDesktop\"><button class=\"btn btn-default\" id=\"dLabel-" + tableIndex + "-" + rowIndex + "\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">... <span class=\"caret\"></span></button><ul class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dLabel-" + tableIndex + "-" + rowIndex + "\" id=\"action-ul-" + tableIndex + "-" + rowIndex + "\">" +
+        "</ul></span>");
+      var isEmpty = true;
+      for (var colIdx in actionsColsIdx) {
+        var actionColumn = $("td:eq(" + actionsColsIdx[colIdx] + ")", rowElement);
+        var menuItems = $("#action-ul-" + tableIndex + "-" + rowIndex).append(actionColumn.children(":not(.row-actions-ignore)").clone()).children().wrap("<li></li>");
+        if (menuItems.length > 0) isEmpty = false;
+        if (moveActionsToFirstCol) actionColumn.addClass("hideForMobile");
+        else actionColumn.children(":not(.row-actions-ignore)").addClass("hideForMobile");
+        $('.dropdown-toggle', rowElement).dropdown();
+      }
+      
+      if (isEmpty) {
+        targetElm.children("span.row-actions-dropddown").hide();
+      }
+    }
+
+// Reflow tabulek...
+    $(".table-reflow").each(function (tableIndex, tableElement) {
+      var headers = $("tr th", tableElement);
+      var actionsCols = [];
+
+      // najdeme sloupecek s akcnimi cleny.
+      if (headers) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsCols = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsCols.push(elm.cellIndex)
+          });
+        }
+      }
+
+      $("tr", tableElement).each(function (rowIdx, rowEl) {
+        var rowElJq = $(rowEl);
+        $(".mainCell", rowEl).each(function (colIdx, colEl) {
+          rowElJq.prepend($("<" + colEl.tagName + ">").append($(colEl).html()).addClass("mainCellClone"));
+        });
+        if (actionsCols != null && actionsCols.length > 0 && !rowElJq.hasClass("hideForMobile")) {
+          createActionsDropDown(tableElement, tableIndex, rowEl, rowIdx, actionsCols);
+        }
+      });
+
+      $("tr", tableElement).each(function (rowIdx, rowEl) {
+//        zkopiruje headery
+        $("td", rowEl).each(function (colIdx, colEl) {
+          var header = $(headers[colIdx]).attr("tablesort-popis");
+          if (header === undefined) header = $(headers[colIdx]).text();
+          if ($.trim(header)) $(colEl).attr("data-header", $.trim(header) + ": ");
+        });
+
+      });
+    });
+
+    $(".table-replace-actions").each(function (tableIndex, tableElement) {
+      var headers = $("tr th", tableElement);
+      var actionsCols = [];
+
+      // najdeme sloupecek s akcnimi cleny.
+      if (headers) {
+        var rowActionsCell = $("tr th.row-actions", tableElement);
+        if (rowActionsCell) {
+          actionsCols = [];
+          rowActionsCell.each(function (idx, elm) {
+            actionsCols.push(elm.cellIndex)
+          });
+        }
+      }
+
+
+      $("tr", tableElement).each(function (rowIndex, rowElement) {
+        createActionsDropDown(tableElement, tableIndex, rowElement, rowIndex);
+      });
+    });
+
+    if ($(window).width() <= 768) {
+      $('.footable-simple').footable();
+    }
+
+    if ($(".table-scroll").length > 0) {
+      var timer_id;
+
+      $(window).resize(function () {
+        clearTimeout(timer_id);
+        timer_id = setTimeout(function () {
+          var offset = parseInt($(".table-scroll").offset().left) + 20;
+          $(".table-scroll").width($(window).width() - offset)
+        }, 500);
+      });
+
+      var offset = parseInt($(".table-scroll").offset().left) + 20;
+      $(".table-scroll").width($(window).width() - offset)
+    }
+
+
+    $('#myAffix').affix({
+      offset: {}
+    }).on("affixed.bs.affix", function () {
+
+      $(".app_content").css("margin-top", $(".mobile_header_wrapper").outerHeight(true));
+    }).on("affix.bs.affix", function () {
+
+    });
+
+
+    var mobileHeaderWrapperHeight = $(".mobile_header_wrapper").outerHeight(true);
+
+    $(".app_content").css("margin-top", mobileHeaderWrapperHeight);
+
+
+    $('#mobile_nav_menu').on('show.bs.modal', function (e) {
+      $('#mobile_nav_menu').css("padding-top", $("#myAffix").outerHeight(true) + 5);
+      $("#mobile_menu_display_btn").bootstrapBtn('toggle');
+      $(this).data("oldhash", window.location.hash);
+      window.onhashchange = null;
+      window.location.hash = this.id;
+
+    }).on('shown.bs.modal', function (e) {
+      $("#mobile_nav_menu_accordion").height(windowHeight - $("#mobile_nav_menu_toplinks").outerHeight(true) - $("#myAffix").outerHeight(true) - 10);
+      setTimeout(function () {
+        window.onhashchange = function (ex) {
+          if (ex.oldURL.indexOf("#mobile_nav_menu") > 0 && ex.newURL.indexOf("#mobile_nav_menu") == -1) {
+            var mobileNavMenu = $("#mobile_nav_menu");
+            mobileNavMenu.modal('hide');
+            window.location.hash = mobileNavMenu.data("oldhash");
+          }
+        };
+      }, 500);
+    }).on('hidden.bs.modal', function (e) {
+      $("#mobile_menu_display_btn").bootstrapBtn('toggle');
+      window.onhashchange = null;
+      if (window.location.hash == "#mobile_nav_menu" && $("#mobile_nav_menu").data("oldhash")) {
+        $("#mobile_nav_menu").modal('hide');
+        window.location.hash = $("#mobile_nav_menu").data("oldhash");
+      }
+    });
+
+
+    $("#mobile_nav_menu_accordion .collapse").on("shown.bs.collapse", function (e) {
+      $("#icon_for_" + this.id).removeClass("glyphicon-triangle-right").addClass("glyphicon-triangle-bottom");
+    }).on("hidden.bs.collapse", function (e) {
+      $("#icon_for_" + this.id).addClass("glyphicon-triangle-right").removeClass("glyphicon-triangle-bottom");
+    });
+
+    if (location.hash) {
+      $("a[href='" + location.hash + "']").tab("show");
+    }
+    $(document.body).on("click", "a[data-toggle='tab']", function(event) {
+      if(history.pushState) history.pushState(null, null, this.getAttribute("href"));
+      else location.hash = this.getAttribute("href");
+    });
+    $(window).on("popstate", function() {
+      var anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+      $("a[href='" + anchor + "']").tab("show");
+    });
+
+    // pokus obejit schovany cil anchrou pod affix menu...
+    setTimeout(function () {
+      var hashObject = $(window.location.hash).offset();
+      var affixDiv = $("#myAffix");
+      if (hashObject && hashObject.top < affixDiv.offset().top + affixDiv.height()) {
+        window.scrollBy(0, -affixDiv.height());
+//        console.log("Scrolling by -"+$("#myAffix").height())
+//        console.log("offset:"+window.pageYOffset);
+      }
+    }, 50);
+
+  });
+</script>
+
+</body>
+</html>
+
+
