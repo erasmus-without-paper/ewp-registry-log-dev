@@ -58639,6 +58639,23 @@
     <host>
         <ewp:admin-email>uis-support@is4u.cz</ewp:admin-email>
         <apis-implemented>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://vseewp.is4u.cz/ewp/iias/get.pl</ia6:get-url>
+                <ia6:max-iia-ids>20</ia6:max-iia-ids>
+                <ia6:max-iia-codes>20</ia6:max-iia-codes>
+                <ia6:index-url>https://vseewp.is4u.cz/ewp/iias/index.pl</ia6:index-url>
+            </ia6:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
