@@ -1,151 +1,147 @@
-<ns3:manifest
-    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+<disc:manifest
+    xmlns:disc="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-    xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-    xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns35="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:disc-e="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:echo="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:fsheet="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iias="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:iias-appl="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iias-appl-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iias-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ounits="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:reg="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-ctls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-stls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-    "
 >
-    <ns3:host>
+    <disc:host>
         <admin-email>developers@cvut.cz</admin-email>
         <admin-notes>EWP connection API for CTU Mobility application</admin-notes>
-        <ns2:apis-implemented>
-            <ns24:discovery version="5.0.0">
-                <ns24:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</ns24:url>
-            </ns24:discovery>
-            <ns23:echo version="2.0.1">
-                <ns23:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns23:http-security>
-                <ns23:url>https://mobility-test.is.cvut.cz/ewp/api/echo</ns23:url>
-            </ns23:echo>
-            <ns30:institutions version="2.2.0">
-                <ns30:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns30:http-security>
-                <ns30:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</ns30:url>
-                <ns30:max-hei-ids>1</ns30:max-hei-ids>
-            </ns30:institutions>
-            <ns20:iias version="6.0.1">
-                <ns20:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns20:http-security>
-                <ns20:get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</ns20:get-url>
-                <ns20:max-iia-ids>1</ns20:max-iia-ids>
-                <ns20:max-iia-codes>1</ns20:max-iia-codes>
-                <ns20:index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</ns20:index-url>
-            </ns20:iias>
-            <ns31:iia-cnr version="2.0.2">
-                <ns31:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns31:http-security>
-                <ns31:url>https://mobility-test.is.cvut.cz/ewp/api/iias/cnr</ns31:url>
-            </ns31:iia-cnr>
-            <ns32:iias-approval version="1.0.0">
-                <ns32:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns32:http-security>
-                <ns32:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</ns32:url>
-                <ns32:max-iia-ids>1</ns32:max-iia-ids>
-                <ns32:sends-notifications/>
-            </ns32:iias-approval>
-            <ns33:iia-approval-cnr version="1.0.0">
-                <ns33:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns33:http-security>
-                <ns33:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</ns33:url>
-            </ns33:iia-approval-cnr>
-            <ns34:factsheet version="1.0.0">
-                <ns34:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns34:http-security>
-                <ns34:url>https://mobility-test.is.cvut.cz/ewp/api/factsheet</ns34:url>
-                <ns34:max-hei-ids>1</ns34:max-hei-ids>
-            </ns34:factsheet>
-            <ns35:organizational-units version="2.1.1">
-                <ns35:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns29:tlscert/>
-                    </ns5:server-auth-methods>
-                </ns35:http-security>
-                <ns35:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ns35:url>
-                <ns35:max-ounit-ids>11</ns35:max-ounit-ids>
-                <ns35:max-ounit-codes>11</ns35:max-ounit-codes>
-            </ns35:organizational-units>
-        </ns2:apis-implemented>
-        <ns3:institutions-covered>
-            <ns2:hei id="cvut.cz">
-                <ns2:other-id type="pic">999848744</ns2:other-id>
-                <ns2:other-id type="erasmus-charter">51698-EPP-1-2014-1-CZ-EPPKA3-ECHE</ns2:other-id>
-                <ns2:other-id type="erasmus">CZ PRAHA10</ns2:other-id>
-                <ns2:name xml:lang="cs">České vysoké učení technické v Praze</ns2:name>
-                <ns2:name xml:lang="en">Czech Technical University in Prague</ns2:name>
-            </ns2:hei>
-        </ns3:institutions-covered>
-        <ns3:client-credentials-in-use>
-            <ns3:certificate>
+        <reg:apis-implemented>
+            <disc-e:discovery version="5.0.0">
+                <disc-e:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</disc-e:url>
+            </disc-e:discovery>
+            <echo:echo version="2.0.1">
+                <echo:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </echo:http-security>
+                <echo:url>https://mobility-test.is.cvut.cz/ewp/api/echo</echo:url>
+            </echo:echo>
+            <inst:institutions version="2.2.0">
+                <inst:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </inst:http-security>
+                <inst:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</inst:url>
+                <inst:max-hei-ids>1</inst:max-hei-ids>
+            </inst:institutions>
+            <iias:iias version="6.0.1">
+                <iias:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </iias:http-security>
+                <iias:get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</iias:get-url>
+                <iias:max-iia-ids>1</iias:max-iia-ids>
+                <iias:max-iia-codes>1</iias:max-iia-codes>
+                <iias:index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</iias:index-url>
+            </iias:iias>
+            <iias-cnr:iia-cnr version="2.0.2">
+                <iias-cnr:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </iias-cnr:http-security>
+                <iias-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/cnr</iias-cnr:url>
+            </iias-cnr:iia-cnr>
+            <iias-appl:iias-approval version="1.0.0">
+                <iias-appl:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </iias-appl:http-security>
+                <iias-appl:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</iias-appl:url>
+                <iias-appl:max-iia-ids>1</iias-appl:max-iia-ids>
+                <iias-appl:sends-notifications/>
+            </iias-appl:iias-approval>
+            <iias-appl-cnr:iia-approval-cnr version="1.0.0">
+                <iias-appl-cnr:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </iias-appl-cnr:http-security>
+                <iias-appl-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</iias-appl-cnr:url>
+            </iias-appl-cnr:iia-approval-cnr>
+            <fsheet:factsheet version="1.0.0">
+                <fsheet:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </fsheet:http-security>
+                <fsheet:url>https://mobility-test.is.cvut.cz/ewp/api/factsheet</fsheet:url>
+                <fsheet:max-hei-ids>1</fsheet:max-hei-ids>
+            </fsheet:factsheet>
+            <ounits:organizational-units version="2.1.1">
+                <ounits:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </ounits:http-security>
+                <ounits:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ounits:url>
+                <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
+                <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
+            </ounits:organizational-units>
+        </reg:apis-implemented>
+        <disc:institutions-covered>
+            <reg:hei id="cvut.cz">
+                <reg:other-id type="pic">999848744</reg:other-id>
+                <reg:other-id type="erasmus-charter">51698-EPP-1-2014-1-CZ-EPPKA3-ECHE</reg:other-id>
+                <reg:other-id type="erasmus">CZ PRAHA10</reg:other-id>
+                <reg:name xml:lang="cs">České vysoké učení technické v Praze</reg:name>
+                <reg:name xml:lang="en">Czech Technical University in Prague</reg:name>
+            </reg:hei>
+        </disc:institutions-covered>
+        <disc:client-credentials-in-use>
+            <disc:certificate>
                 MIIH2zCCBcOgAwIBAgIQN2PDGy214bpWTeOlUS0EHDANBgkqhkiG9w0BAQwFADBEMQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjAwNzEzMDAwMDAwWhcNMjIwNzEzMjM1OTU5WjCB3jELMAkGA1UEBhMCQ1oxDzANBgNVBBETBjE2MCAwMDEdMBsGA1UECAwUSGxhdm7DrSBtxJtzdG8gUHJhaGExGjAYBgNVBAcTEVByYWhhIDYgLSBEZWp2aWNlMSswKQYDVQQJDCJKdWdvc2zDoXZza8O9Y2ggcGFydHl6w6Fuxa8gMTU4MC8zMTMwMQYDVQQKDCrEjGVza8OpIHZ5c29rw6kgdcSNZW7DrSB0ZWNobmlja8OpIHYgUHJhemUxITAfBgNVBAMTGG1vYmlsaXR5LXRlc3QuaXMuY3Z1dC5jejCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAPjKmrJELIm8pumoKEBeIlAgw89EDHid1As9nG14JGnRhNWvyBPwb0AfzNGf/O09UFnwb/MXjY/5nxT8Wjt9K2C7zE3gZ9GqjEXnRYLcTmmpsBKnFza2hnk1j4jHVUb/5aMF8oLZWB5ggfRzb3HxOe76coyzVNkGt5ieG7d7cO+XLxc65JL1zdvpMs5YpmG1UzFQCEjJi7yd5ldOSVVAS6OSfk39++7FopoSlo21V+FMWuDuGTBI8VyRPIY77ML2roKoHqgBNCMMaXs8q1OEdZvw7IxDKGwRZJY0+6pLbnga4sGpTFwP6JIWmQwzOXMOye5nzbgerDPHgopme4G5bvUCAwEAAaOCAywwggMoMB8GA1UdIwQYMBaAFG8dNUkQbDL6WaCevIroH5W+cXoMMB0GA1UdDgQWBBQCea9FNB13/oUCG3hAlJW49iWIUjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQICTzAlMCMGCCsGAQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgIwPwYDVR0fBDgwNjA0oDKgMIYuaHR0cDovL0dFQU5ULmNybC5zZWN0aWdvLmNvbS9HRUFOVE9WUlNBQ0E0LmNybDB1BggrBgEFBQcBAQRpMGcwOgYIKwYBBQUHMAKGLmh0dHA6Ly9HRUFOVC5jcnQuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcnQwKQYIKwYBBQUHMAGGHWh0dHA6Ly9HRUFOVC5vY3NwLnNlY3RpZ28uY29tMIIBfwYKKwYBBAHWeQIEAgSCAW8EggFrAWkAdgBGpVXrdfqRIDC1oolp9PN9ESxBdL79SbiFq/L8cP5tRwAAAXNHZoylAAAEAwBHMEUCICv8e3fZZCVKA/KWkHNhegtHyStAp6EWvLf4TucvfPrGAiEAq2CH1Z4juoKYIz+xiFDmQ3bwU/joNmM0LrC73wDk64YAdgDfpV6raIJPH2yt7rhfTj5a6s2iEqRqXo47EsAgRFwqcwAAAXNHZo3/AAAEAwBHMEUCIQCMzvfmBlyig2UkN+K7g+um9UPyUGqAbK/wTqZzeM4eMgIgX8UY9Cb0dx0kpEbmhWqtf4VsYmL+wdz9KOwe1zkdAJcAdwBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAXNHZo07AAAEAwBIMEYCIQCQ4IRGquGef12cO24ObWAtsGOUpwLsukEbDhz1CNF+igIhAOhbXyyR1+niOHT0GBV6vMlEX2L7DHKigl8nqfMVW0fNMCMGA1UdEQQcMBqCGG1vYmlsaXR5LXRlc3QuaXMuY3Z1dC5jejANBgkqhkiG9w0BAQwFAAOCAgEAfOaNioOKyM1VzSmwUo+kAO0MBmWuwl1UAQQZrGKqCYDGFKRU+j5kRBTgsb9GEP3SajK86xwvG4yLqU1bW4LIrV/a+jqRgfn+IBmKfq6x9FZNp30E+dApd2Pb+CTeu+spW+F09x1jRmYDpsq8lO6Wt15i8PuvRsNkX9q5Y/pY8w7GbMk90raMQnUzfGvsZbDrnRbraFCNwWPtuoVF5+eSdvo/ECO7XD+cn0kEGxgSU4br3OmwzKhL4dhpNFxsJLU0/OaLowUuHRaNN9Rb5M8T47yMB0P0elHU7WpHnsPqSPFXLGpKrNyCWn+QIV83qtvEv4dwKW2egwKQGgu74eXV7CvjEIJiHSa+EfXs9bmO+XAdPAjXPCWm7uI9sg8OGOy8Y9blTVAbNKEtJbbMr9tDiMrm0LOxBcNusthr4OgA/Ca6dCBdEn0kC5n7A0O/CULHv4nt/CX6cELohtr2Vt4Lp8fnlV2fvDcaAM/RaZbcLnGDQHvROI75gnhPxanKpmtC/0R04Wfj/lpZzmZa6kLScGbh9Mm04QaoMR33ykCliz5fSyNnISHAHkwEWpHOBRgyzmCnJYXtMYlf/G2IFSg838vEQbTtV6qm9s4Ln0OAF9qivFw5StpAsIfpO9WRpj85eydf8ozbCVXUkrcUG+BctQhublQSDSV37gzOtmewa94=
-            </ns3:certificate>
-            <ns3:rsa-public-key>
+            </disc:certificate>
+            <disc:rsa-public-key>
                 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+MqaskQsibym6agoQF4iUCDDz0QMeJ3UCz2cbXgkadGE1a/IE/BvQB/M0Z/87T1QWfBv8xeNj/mfFPxaO30rYLvMTeBn0aqMRedFgtxOaamwEqcXNraGeTWPiMdVRv/lowXygtlYHmCB9HNvcfE57vpyjLNU2Qa3mJ4bt3tw75cvFzrkkvXN2+kyzlimYbVTMVAISMmLvJ3mV05JVUBLo5J+Tf377sWimhKWjbVX4Uxa4O4ZMEjxXJE8hjvswvaugqgeqAE0IwxpezyrU4R1m/DsjEMobBFkljT7qktueBriwalMXA/okhaZDDM5cw7J7mfNuB6sM8eCimZ7gblu9QIDAQAB
-            </ns3:rsa-public-key>
-        </ns3:client-credentials-in-use>
-        <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>
+            </disc:rsa-public-key>
+        </disc:client-credentials-in-use>
+        <disc:server-credentials-in-use>
+            <disc:rsa-public-key>
                 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+MqaskQsibym6agoQF4iUCDDz0QMeJ3UCz2cbXgkadGE1a/IE/BvQB/M0Z/87T1QWfBv8xeNj/mfFPxaO30rYLvMTeBn0aqMRedFgtxOaamwEqcXNraGeTWPiMdVRv/lowXygtlYHmCB9HNvcfE57vpyjLNU2Qa3mJ4bt3tw75cvFzrkkvXN2+kyzlimYbVTMVAISMmLvJ3mV05JVUBLo5J+Tf377sWimhKWjbVX4Uxa4O4ZMEjxXJE8hjvswvaugqgeqAE0IwxpezyrU4R1m/DsjEMobBFkljT7qktueBriwalMXA/okhaZDDM5cw7J7mfNuB6sM8eCimZ7gblu9QIDAQAB
-            </ns3:rsa-public-key>
-        </ns3:server-credentials-in-use>
-    </ns3:host>
-</ns3:manifest>
+            </disc:rsa-public-key>
+        </disc:server-credentials-in-use>
+    </disc:host>
+</disc:manifest>
