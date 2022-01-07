@@ -82,6 +82,20 @@
                 <iaap:max-iia-ids>1</iaap:max-iia-ids>
                 <iaap:sends-notifications/>
             </iaap:iias-approval>
+            <ia2:iias version="6.0.1">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://is-test.czu.cz/ewp/iias/get.pl</ia2:get-url>
+                <ia2:max-iia-ids>20</ia2:max-iia-ids>
+                <ia2:max-iia-codes>20</ia2:max-iia-codes>
+                <ia2:index-url>https://is-test.czu.cz/ewp/iias/index.pl</ia2:index-url>
+            </ia2:iias>
             <iac2:iia-cnr version="2.0.2">
                 <iac2:http-security>
                     <sec:client-auth-methods>
