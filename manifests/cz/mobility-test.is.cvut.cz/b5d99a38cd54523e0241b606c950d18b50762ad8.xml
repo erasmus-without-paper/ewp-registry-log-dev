@@ -9,7 +9,9 @@
         xmlns:disc-e="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
         xmlns:sec-ctls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
         xmlns:sec-csig="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+        xmlns:sec-none="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
         xmlns:sec-stls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+        xmlns:sec-ssig="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
         xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
         xmlns:iias-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
         xmlns:iias-appl="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
@@ -23,11 +25,12 @@
         <common:admin-notes>Erasmus Without Paper API module for Mobility application</common:admin-notes>
         <reg:apis-implemented>
             <disc-e:discovery version="5.0.0">
-                <disc-e:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</disc-e:url>
+                    <disc-e:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</disc-e:url>
             </disc-e:discovery>
             <echo:echo version="2.0.1">
-                <echo:http-security>
+                 <echo:http-security>
                     <sec:client-auth-methods>
+                        
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
@@ -35,24 +38,26 @@
                         <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </echo:http-security>
-                <echo:url>https://mobility-test.is.cvut.cz/ewp/api/echo</echo:url>
+                    <echo:url>https://mobility-test.is.cvut.cz/ewp/api/echo</echo:url>
             </echo:echo>
             <inst:institutions version="2.2.0">
-                <inst:http-security>
+                 <inst:http-security>
                     <sec:client-auth-methods>
+                        <sec-none:anonymous/>
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-stls:tlscert/>
+                        <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </inst:http-security>
-                <inst:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</inst:url>
-                <inst:max-hei-ids>1</inst:max-hei-ids>
+                    <inst:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</inst:url>
+                    <inst:max-hei-ids>1</inst:max-hei-ids>
             </inst:institutions>
             <iias:iias version="6.0.1">
-                <iias:http-security>
+                 <iias:http-security>
                     <sec:client-auth-methods>
+                        
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
@@ -60,14 +65,15 @@
                         <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </iias:http-security>
-                <iias:get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</iias:get-url>
-                <iias:max-iia-ids>1</iias:max-iia-ids>
-                <iias:max-iia-codes>1</iias:max-iia-codes>
-                <iias:index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</iias:index-url>
+                    <iias:get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</iias:get-url>
+                    <iias:max-iia-ids>1</iias:max-iia-ids>
+                    <iias:max-iia-codes>1</iias:max-iia-codes>
+                    <iias:index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</iias:index-url>
             </iias:iias>
             <iias-cnr:iia-cnr version="2.0.2">
-                <iias-cnr:http-security>
+                 <iias-cnr:http-security>
                     <sec:client-auth-methods>
+                        
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
@@ -75,60 +81,64 @@
                         <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </iias-cnr:http-security>
-                <iias-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/cnr</iias-cnr:url>
+                    <iias-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/cnr</iias-cnr:url>
             </iias-cnr:iia-cnr>
             <iias-appl:iias-approval version="1.0.0">
-                <iias-appl:http-security>
+                 <iias-appl:http-security>
                     <sec:client-auth-methods>
+                        
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-stls:tlscert/>
+                        <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </iias-appl:http-security>
-                <iias-appl:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</iias-appl:url>
-                <iias-appl:max-iia-ids>1</iias-appl:max-iia-ids>
-                <iias-appl:sends-notifications/>
+                    <iias-appl:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</iias-appl:url>
+                    <iias-appl:max-iia-ids>1</iias-appl:max-iia-ids>
+                    <iias-appl:sends-notifications></iias-appl:sends-notifications>
             </iias-appl:iias-approval>
             <iias-appl-cnr:iia-approval-cnr version="1.0.0">
-                <iias-appl-cnr:http-security>
+                 <iias-appl-cnr:http-security>
                     <sec:client-auth-methods>
+                        
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-stls:tlscert/>
+                        <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </iias-appl-cnr:http-security>
-                <iias-appl-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval/cnr</iias-appl-cnr:url>
+                    <iias-appl-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval/cnr</iias-appl-cnr:url>
             </iias-appl-cnr:iia-approval-cnr>
             <fsheet:factsheet version="1.0.0">
-                <fsheet:http-security>
+                 <fsheet:http-security>
                     <sec:client-auth-methods>
+                        
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-stls:tlscert/>
+                        <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </fsheet:http-security>
-                <fsheet:url>https://mobility-test.is.cvut.cz/ewp/api/factsheet</fsheet:url>
-                <fsheet:max-hei-ids>1</fsheet:max-hei-ids>
+                    <fsheet:url>https://mobility-test.is.cvut.cz/ewp/api/factsheet</fsheet:url>
+                    <fsheet:max-hei-ids>1</fsheet:max-hei-ids>
             </fsheet:factsheet>
             <ounits:organizational-units version="2.1.1">
-                <ounits:http-security>
+                 <ounits:http-security>
                     <sec:client-auth-methods>
+                        <sec-none:anonymous/>
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-stls:tlscert/>
+                        <sec-stls:tlscert />
                     </sec:server-auth-methods>
                 </ounits:http-security>
-                <ounits:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ounits:url>
-                <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
-                <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
+                    <ounits:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ounits:url>
+                    <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
+                    <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
             </ounits:organizational-units>
         </reg:apis-implemented>
         <disc:institutions-covered>

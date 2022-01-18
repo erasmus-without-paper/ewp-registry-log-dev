@@ -14,6 +14,8 @@
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:sec-csig="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:sec-ctls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-none="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-ssig="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:sec-stls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 >
@@ -39,6 +41,7 @@
             <inst:institutions version="2.2.0">
                 <inst:http-security>
                     <sec:client-auth-methods>
+                        <sec-none:anonymous/>
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig/>
                     </sec:client-auth-methods>
@@ -118,6 +121,7 @@
             <ounits:organizational-units version="2.1.1">
                 <ounits:http-security>
                     <sec:client-auth-methods>
+                        <sec-none:anonymous/>
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig/>
                     </sec:client-auth-methods>
