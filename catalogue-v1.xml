@@ -60251,6 +60251,133 @@
         </institutions-covered>
     </host>
     <host>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://mobility-test.i-med.ac.at/mobility/ewp/manifest?api=all</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://mobility-test.i-med.ac.at/mobility/ewp/echo</e2:url>
+            </e2:echo>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>mobility.i-med.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="0c427b35f46ff6f91d28d9475934232282bb7581f8c2854e6a2718c94e4a3547"/>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://mobility-test.i-med.ac.at/mobility/ewp/institutions</in2:url>
+                <in2:max-hei-ids>3</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>mobility.i-med.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="0c427b35f46ff6f91d28d9475934232282bb7581f8c2854e6a2718c94e4a3547"/>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://mobility-test.i-med.ac.at/mobility/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>mobility.i-med.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="0c427b35f46ff6f91d28d9475934232282bb7581f8c2854e6a2718c94e4a3547"/>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <apis-implemented>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://mobility-test.i-med.ac.at/mobility/ewp/mobility_out_la/get</oml1:get-url>
+                <oml1:index-url>https://mobility-test.i-med.ac.at/mobility/ewp/mobility_out_la/index</oml1:index-url>
+                <oml1:update-url>https://mobility-test.i-med.ac.at/mobility/ewp/mobility_out_la/update</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://mobility-test.i-med.ac.at/mobility/ewp/mobility_out_la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>mobility.i-med.ac.at</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="0c427b35f46ff6f91d28d9475934232282bb7581f8c2854e6a2718c94e4a3547"/>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -62762,6 +62889,13 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">PICTEST01</other-id>
             <name xml:lang="en">SOP EWP Test University</name>
             <name xml:lang="fi">SOP EWP Test University</name>
+        </hei>
+        <hei id="mobility.i-med.ac.at">
+            <other-id type="erasmus">A  INNSBRU21</other-id>
+            <other-id type="euc">220726-IC-1-2010-1-AT-ERASMUS-EUCX-1</other-id>
+            <other-id type="pic">999855437</other-id>
+            <name xml:lang="de">MEDIZINISCHE UNIVERSITAET INNSBRUCK</name>
+            <name xml:lang="en">MEDIZINISCHE UNIVERSITAET INNSBRUCK</name>
         </hei>
         <hei id="moc.demo.02.sop.co.at">
             <other-id type="eche">ECHE_MOC_DEMO02</other-id>
@@ -66287,6 +66421,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             3d020mTg0ZM5gJ9lRmcPCzUXlRcJ3WajDVpV6e09PYf61eaaR8ZAK/TeqKKh3BhMm7/NobcgFpbE
             o3+Y5tNFEvdmGFW/TDA32iiiCVxcQMYBzB6A5zORbsmKKv9Pgo+gOT/HszkPmUXWFQfl2JS7MDFH
             iRP3AQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="fadc8c39fed6e752d129aca47ffdd01cf2390c47a3cb71f11199ee15bce18683">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxoZp7NzzDngrFnp2JDRjG6ahvOFp7MPJ
+            0sOMc7k1QAyhnItFL/HBbfbnCnmli5dR383KamxoXVGkrXXbjwEkR7NTvo3VP6WnbO4EuSvho6/I
+            rGwFHCa3zx1E3U5yi7n6bCYsD7bp6K9pN/WLoD38VtwZTDzf9A/zYii2ikibfJC5h+/MFAvP9Klk
+            Iddl5sof+3nzH8K4N0YGDdN7DCAvxDgK22MJhPP48cGy/q2LfcMQP0/jAu6rbLeXkahcVoA61n7y
+            Ab2oqV8bzYS+btIk8Gj2gMg4oOHq6pixv8BeOktR/dDZYFyBGgB7Yb6Z0vEQwtTaQYHqwy6HRYkn
+            qDx2KQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="fda564e381ece61b1d5fcd17a070b5dbcbb0f4a63901fcb4350c17c8bdcc26c0">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwd//y9coaL4ieWj94CJXNIp/nMFPjVxY
