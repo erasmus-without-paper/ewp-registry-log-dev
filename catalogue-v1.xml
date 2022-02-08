@@ -20928,6 +20928,83 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>edssi@it.auth.gr</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <apis-implemented>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://unizone-ewp.herokuapp.com/rest/omobility/get</om1:get-url>
+                <om1:index-url>https://unizone-ewp.herokuapp.com/rest/omobility/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://unizone-ewp.herokuapp.com/rest/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://unizone-ewp.herokuapp.com/rest/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>1</im1:max-omobility-ids>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://unizone-ewp.herokuapp.com/rest/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>uni-foundation.eu</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="28aee4516204177f6165638f64a2b28eb35792569257a47aeb3838d2d2d7280b"/>
+            <rsa-public-key sha-256="0e40b5f5ab0cc6ca3ce6e91a35d7a199ca9843089f0de9ae5e2bebddfa54d1dd"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="0e40b5f5ab0cc6ca3ce6e91a35d7a199ca9843089f0de9ae5e2bebddfa54d1dd"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>ewp.admin@erasmus-dashboard.eu</ewp:admin-email>
         <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
         <apis-implemented>
