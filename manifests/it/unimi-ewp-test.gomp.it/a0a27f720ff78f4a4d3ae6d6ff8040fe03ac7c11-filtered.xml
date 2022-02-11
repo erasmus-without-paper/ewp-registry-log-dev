@@ -217,6 +217,38 @@
                 </http-security>
                 <url>https://unimi-ewp-test.gomp.it/api/ewp/iiaapprovalcnr</url>
             </iia-approval-cnr>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <get-url>https://unimi-ewp-test.gomp.it/api/ewp/omobilitylasget101</get-url>
+                <index-url>https://unimi-ewp-test.gomp.it/api/ewp/omobilitylasindex</index-url>
+                <update-url>https://unimi-ewp-test.gomp.it/api/ewp/omobilitylasupdate101</update-url>
+                <max-omobility-ids>255</max-omobility-ids>
+            </omobility-las>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <url>https://unimi-ewp-test.gomp.it/api/ewp/omobilitylacnr</url>
+                <max-omobility-ids>255</max-omobility-ids>
+            </omobility-la-cnr>
             <omobilities
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -292,7 +324,7 @@
             </hei>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate>MIIDsDCCApigAwIBAgIJAJzC3tyvIfgjMA0GCSqGSIb3DQEBCwUAMG0xCzAJBgNVBAYTAklUMRIwEAYDVQQIDAlMb21iYXJkaWExDzANBgNVBAcMBk1pbGFubzEcMBoGA1UECgwTU2lzdGVtaSBpbmZvcm1hdGl2aTEbMBkGA1UECwwSc21hcnRlZHVfRVdQX1VOSU1JMB4XDTIwMDkyNDEzNTYyM1oXDTMwMDkyMjEzNTYyM1owbTELMAkGA1UEBhMCSVQxEjAQBgNVBAgMCUxvbWJhcmRpYTEPMA0GA1UEBwwGTWlsYW5vMRwwGgYDVQQKDBNTaXN0ZW1pIGluZm9ybWF0aXZpMRswGQYDVQQLDBJzbWFydGVkdV9FV1BfVU5JTUkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDMRIHGhtVpcE7to5btsnaJc+iD4u0FzjvBVW5sOGrSBjx+1qaBfRRyP00+yojF6miWkwWjUoP/Wzm2OLH9quwqFK0p3T5YkpioeFlVb/BaDOomzSoeQdCMRAZqR+ZJnhV/QlrtTGLYZy4xNgH2sjJ7Xi+VY+WuUpd0bl16smtzza+20W8rNggWuuTnfiY1iL7ZN42ry1s7CLzY3DWYETlQpu/Ecq1jzROeuICe58vJe+afDyoMa+M8dgLsoBMlj+oiV7VX/NT/pAaHUNPUUf9fGjcz6IsqnZfsOx2S8O4lj5ybjRbhbu6/KlwAtxf85QJs68phBMriEZs99O1oiqPPAgMBAAGjUzBRMB0GA1UdDgQWBBQwH2lsaTjK4uVdZ2ObngF3FHWryzAfBgNVHSMEGDAWgBQwH2lsaTjK4uVdZ2ObngF3FHWryzAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB6WaPAtCOefzPIXsiV4VXXJZPJan906ylnrKrQkvPYQ9ba3xxnY/Tj/mszgDZpOcLxRddZW4/7KAy7/bvOSG0bU5O0BqLTZHHC+3aTqLmZXLb6ai5BlVAiAjPV86t+Yec253tqetuSOB0U0geTcVpIkkEbFIzv236GUxDZFrVI5qPHEyoLrSH4X+ESPKDNK9KJZye4BLB2pWASA1TQnXMcty8EGYqJGici2WPLPQrCYXwnQXqIFHQssRp1sQaqoj8QtJoRQTyxALrpfK65pTm4QBsIgyruAXdA0OCYibzoliLuQLzbHMJ+Rcnr8/CpsMTka53NqiuLH3Kgt3KTLnFj</certificate>
+            <certificate>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</certificate>
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzYjFC9scKAZ6DpX04Ps9pWVvfQmHEjwtghjCqbu72LiUxcDxaHGU29AchB/i4wfLFOzU+AbYBjLvyRqyJwNfGGYco+412GfK8TTAB1EetPvoEiu9dWflsxFYqhLRJ6gmA+xQ5MDZJ/xX+GdUPagESwBQf4APRyFP3gXfjCPWCj1pf7/uzHgEeLMItOppAE6oeGLwG8duJt5hyOAkPMQX8uZiYWal2vcMnv+5WtFo1GWO/zE4Dsvs6rSDA28iimBgZmE4BTVJYRCyV/gg2LWj/FKfV/Lb9u0RzJnxh+Bhmmp0taJtKMR1Hp8vklvM44XeEFKweOaOO6l3YtxN5WJIKQIDAQAB</rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
