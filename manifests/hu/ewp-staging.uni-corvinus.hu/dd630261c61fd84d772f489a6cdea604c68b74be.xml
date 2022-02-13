@@ -57,7 +57,8 @@
   xmlns:ns57="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/tree/stable-v1"
   xmlns:ns58="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/tree/stable-v2"
   xmlns:ns59="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/tree/stable-v1"
-  xmlns:ns60="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/tree/stable-v1">
+  xmlns:ns60="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/tree/stable-v1"
+  xmlns:ns61="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd">
   <ns53:host>
     <ns2:admin-email>zsolt@mazan.hu</ns2:admin-email>
     <ns2:admin-notes>This is a dev server.</ns2:admin-notes>
@@ -146,7 +147,20 @@
         </ns21:http-security>
         <ns21:url>https://ewp-staging.uni-corvinus.hu/api/iiaApprovalCnr</ns21:url>
       </ns21:iia-approval-cnr>
-
+      <ns61:factsheet version="1.0.0">
+        <ns61:http-security>
+          <ns3:client-auth-methods>
+            <ns26:tlscert allows-self-signed="true"/>
+            <ns25:httpsig/>
+          </ns3:client-auth-methods>
+          <ns3:server-auth-methods>
+            <ns51:tlscert/>
+            <ns50:httpsig/>
+          </ns3:server-auth-methods>
+        </ns61:http-security>
+        <ns61:url>https://ewp-staging.uni-corvinus.hu/api/factSheet</ns61:url>
+        <ns61:max-hei-ids>1</ns61:max-hei-ids>
+      </ns61:factsheet>
     </ns52:apis-implemented>
 
 
