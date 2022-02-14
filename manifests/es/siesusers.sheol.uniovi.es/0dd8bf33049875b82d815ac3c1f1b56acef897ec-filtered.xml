@@ -138,7 +138,7 @@
                 <index-url>https://siesusers.sheol.uniovi.es/WEBS3/pae/ewp/iias/index</index-url>
             </iias>
             <iia-cnr
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.3"
             >
                 <http-security>
@@ -180,6 +180,27 @@
                 <url>https://siesusers.sheol.uniovi.es/WEBS3/pae/ewp/iiasappr</url>
                 <max-iia-ids>1</max-iia-ids>
             </iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                    </sec:response-encryption-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://siesusers.sheol.uniovi.es/WEBS3/pae/ewp/iiasapprcnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
             <factsheet
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
