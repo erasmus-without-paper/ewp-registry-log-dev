@@ -61,7 +61,7 @@
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
 >
     <ns35:host>
-        <ns3:admin-email>ewp-noreply@usos.agh.edu.pl</ns3:admin-email>
+        <ns3:admin-email>usos@agh.edu.pl</ns3:admin-email>
         <ns2:apis-implemented>
             <ns23:discovery version="5.0.0">
                 <ns23:url>https://ewp.test.usos.agh.edu.pl/manifest</ns23:url>
@@ -78,33 +78,6 @@
                 </ns22:http-security>
                 <ns22:url>https://ewp.test.usos.agh.edu.pl/echo</ns22:url>
             </ns22:echo>
-            <ns17:imobilities version="0.3.0">
-                <ns17:http-security>
-                    <ns4:client-auth-methods>
-                        <ns53:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns26:tlscert/>
-                        <ns25:httpsig/>
-                    </ns4:server-auth-methods>
-                </ns17:http-security>
-                <ns17:get-url>https://ewp.test.usos.agh.edu.pl/imobilities/get</ns17:get-url>
-                <ns17:max-omobility-ids>100</ns17:max-omobility-ids>
-                <ns17:sends-notifications/>
-            </ns17:imobilities>
-            <ns16:imobility-cnr version="0.1.1">
-                <ns16:http-security>
-                    <ns4:client-auth-methods>
-                        <ns53:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns26:tlscert/>
-                        <ns25:httpsig/>
-                    </ns4:server-auth-methods>
-                </ns16:http-security>
-                <ns16:url>https://ewp.test.usos.agh.edu.pl/imobilities/cnr</ns16:url>
-                <ns16:max-omobility-ids>100</ns16:max-omobility-ids>
-            </ns16:imobility-cnr>
             <ns13:institutions version="2.1.0">
                 <ns13:http-security>
                     <ns4:client-auth-methods>
@@ -132,6 +105,20 @@
                 <ns5:max-ounit-ids>100</ns5:max-ounit-ids>
                 <ns5:max-ounit-codes>100</ns5:max-ounit-codes>
             </ns5:organizational-units>
+            <ns24:courses version="0.7.1">
+                <ns24:http-security>
+                    <ns4:client-auth-methods>
+                        <ns53:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns26:tlscert/>
+                        <ns25:httpsig/>
+                    </ns4:server-auth-methods>
+                </ns24:http-security>
+                <ns24:url>https://ewp.test.usos.agh.edu.pl/courses</ns24:url>
+                <ns24:max-los-ids>100</ns24:max-los-ids>
+                <ns24:max-los-codes>100</ns24:max-los-codes>
+            </ns24:courses>
             <ns18:iias version="6.0.1">
                 <ns18:http-security>
                     <ns4:client-auth-methods>
@@ -184,6 +171,33 @@
                 </ns21:http-security>
                 <ns21:url>https://ewp.test.usos.agh.edu.pl/iia/approval/cnr</ns21:url>
             </ns21:iia-approval-cnr>
+            <ns17:imobilities version="0.3.0">
+                <ns17:http-security>
+                    <ns4:client-auth-methods>
+                        <ns53:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns26:tlscert/>
+                        <ns25:httpsig/>
+                    </ns4:server-auth-methods>
+                </ns17:http-security>
+                <ns17:get-url>https://ewp.test.usos.agh.edu.pl/imobilities/get</ns17:get-url>
+                <ns17:max-omobility-ids>100</ns17:max-omobility-ids>
+                <ns17:sends-notifications/>
+            </ns17:imobilities>
+            <ns16:imobility-cnr version="0.1.1">
+                <ns16:http-security>
+                    <ns4:client-auth-methods>
+                        <ns53:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns26:tlscert/>
+                        <ns25:httpsig/>
+                    </ns4:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://ewp.test.usos.agh.edu.pl/imobilities/cnr</ns16:url>
+                <ns16:max-omobility-ids>100</ns16:max-omobility-ids>
+            </ns16:imobility-cnr>
             <ns9:omobilities version="1.0.0">
                 <ns9:http-security>
                     <ns4:client-auth-methods>
@@ -212,8 +226,8 @@
                 <ns8:url>https://ewp.test.usos.agh.edu.pl/omobilities/cnr</ns8:url>
                 <ns8:max-omobility-ids>100</ns8:max-omobility-ids>
             </ns8:omobility-cnr>
-            <ns24:courses version="0.7.1">
-                <ns24:http-security>
+            <ns6:omobility-las version="1.0.1">
+                <ns6:http-security>
                     <ns4:client-auth-methods>
                         <ns53:httpsig/>
                     </ns4:client-auth-methods>
@@ -221,11 +235,12 @@
                         <ns26:tlscert/>
                         <ns25:httpsig/>
                     </ns4:server-auth-methods>
-                </ns24:http-security>
-                <ns24:url>https://ewp.test.usos.agh.edu.pl/courses</ns24:url>
-                <ns24:max-los-ids>100</ns24:max-los-ids>
-                <ns24:max-los-codes>100</ns24:max-los-codes>
-            </ns24:courses>
+                </ns6:http-security>
+                <ns6:get-url>https://ewp.test.usos.agh.edu.pl/la/get</ns6:get-url>
+                <ns6:index-url>https://ewp.test.usos.agh.edu.pl/la/index</ns6:index-url>
+                <ns6:update-url>https://ewp.test.usos.agh.edu.pl/la/update</ns6:update-url>
+                <ns6:max-omobility-ids>100</ns6:max-omobility-ids>
+            </ns6:omobility-las>
             <ns14:imobility-tors version="0.7.0">
                 <ns14:http-security>
                     <ns4:client-auth-methods>
@@ -254,21 +269,6 @@
                 <ns15:url>https://ewp.test.usos.agh.edu.pl/tors/cnr</ns15:url>
                 <ns15:max-omobility-ids>10</ns15:max-omobility-ids>
             </ns15:imobility-tor-cnr>
-            <ns6:omobility-las version="1.0.1">
-                <ns6:http-security>
-                    <ns4:client-auth-methods>
-                        <ns53:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns26:tlscert/>
-                        <ns25:httpsig/>
-                    </ns4:server-auth-methods>
-                </ns6:http-security>
-                <ns6:get-url>https://ewp.test.usos.agh.edu.pl/la/get</ns6:get-url>
-                <ns6:index-url>https://ewp.test.usos.agh.edu.pl/la/index</ns6:index-url>
-                <ns6:update-url>https://ewp.test.usos.agh.edu.pl/la/update</ns6:update-url>
-                <ns6:max-omobility-ids>100</ns6:max-omobility-ids>
-            </ns6:omobility-las>
         </ns2:apis-implemented>
         <ns35:institutions-covered>
             <ns2:hei id="agh.edu.pl">
