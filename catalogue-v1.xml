@@ -61573,6 +61573,36 @@
     <host>
         <ewp:admin-email>ewp@sop.co.at</ewp:admin-email>
         <apis-implemented>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://www.th-koeln.de/thkoeln_test/ewp/factsheets</f1:url>
+                <f1:max-hei-ids>3</f1:max-hei-ids>
+            </f1:factsheet>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>th-koeln.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="df61aa16ddabebc9c5e845477b15e9e4f800f543a905a9136851334dad0e5eed"/>
+            <rsa-public-key sha-256="f74f7afe47adb8794d8bf2b75e6883b93549c41605214a529a3abdadd4468019"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="f74f7afe47adb8794d8bf2b75e6883b93549c41605214a529a3abdadd4468019"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>ewp@sop.co.at</ewp:admin-email>
+        <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://service4mobility.su.se/mobility_test/ewp/manifest?api=all</d5:url>
             </d5:discovery>
