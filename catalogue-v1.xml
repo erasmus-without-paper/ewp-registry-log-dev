@@ -53978,6 +53978,25 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewp.des.upc.edu/api/omobility/get</oml1:get-url>
+                <oml1:index-url>https://ewp.des.upc.edu/api/omobility/index</oml1:index-url>
+                <oml1:update-url>https://ewp.des.upc.edu/api/omobility/update</oml1:update-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>upc.edu</hei-id>
