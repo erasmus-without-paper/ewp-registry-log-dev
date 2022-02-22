@@ -55870,7 +55870,7 @@
                 <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <ou2:organizational-units version="2.1.0">
+            <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -55886,6 +55886,82 @@
                 <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://artemis.ugr.es/ewp/omobilities/get</om1:get-url>
+                <om1:index-url>https://artemis.ugr.es/ewp/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>1</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://artemis.ugr.es/ewp/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://artemis.ugr.es/ewp/omobilities/la/get</oml1:get-url>
+                <oml1:index-url>https://artemis.ugr.es/ewp/omobilities/la/index</oml1:index-url>
+                <oml1:update-url>https://artemis.ugr.es/ewp/omobilities/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://artemis.ugr.es/ewp/omobilities/la/cnr</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>ugr.es</hei-id>
