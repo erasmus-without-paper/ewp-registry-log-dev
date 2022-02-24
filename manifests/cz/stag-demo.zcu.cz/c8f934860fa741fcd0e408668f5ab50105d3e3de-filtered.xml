@@ -12,7 +12,7 @@
     xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
@@ -80,7 +80,7 @@
                 <ns21:max-ounit-ids>10</ns21:max-ounit-ids>
                 <ns21:max-ounit-codes>10</ns21:max-ounit-codes>
             </ns21:organizational-units>
-            <ns20:iias version="3.0.0">
+            <ns20:iias version="6.0.1">
                 <ns20:http-security>
                     <ns5:client-auth-methods>
                         <ns25:tlscert allows-self-signed="true"/>
@@ -96,7 +96,7 @@
                 <ns20:max-iia-codes>10</ns20:max-iia-codes>
                 <ns20:index-url>https://stag-demo.zcu.cz:8843/ws/services/ewp/iias/index</ns20:index-url>
             </ns20:iias>
-            <ns18:iias-approval version="0.2.1">
+            <ns18:iias-approval version="1.0.0">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
                         <ns25:tlscert allows-self-signed="true"/>
@@ -110,6 +110,20 @@
                 <ns18:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/iias/approval</ns18:url>
                 <ns18:max-iia-ids>10</ns18:max-iia-ids>
             </ns18:iias-approval>
+            <ns16:factsheet version="1.0.0">
+                <ns16:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:tlscert allows-self-signed="true"/>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://stag-demo.zcu.cz:8843/ws/services/ewp/factsheet</ns16:url>
+                <ns16:max-hei-ids>1</ns16:max-hei-ids>
+            </ns16:factsheet>
             <ns12:omobility-las version="1.0.1">
                 <ns12:http-security>
                     <ns5:client-auth-methods>
