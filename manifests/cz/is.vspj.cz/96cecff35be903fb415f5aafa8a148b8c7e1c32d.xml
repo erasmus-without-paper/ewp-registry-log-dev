@@ -37,10 +37,6 @@
         <ewp:admin-email>okr@vspj.cz</ewp:admin-email>
 
         <r:apis-implemented>
-            <!-- All API entries are defined in their own separate XML namespaces.
-            You need to use proper `xmlns` in order for them to be matched properly. -->
-
-            <!-- The entry for the Discovery Manifest API (a self-reference). -->
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
                 version="5.0.0"
@@ -48,16 +44,11 @@
                 <url>https://is.vspj.cz/manifest-test.xml</url>
             </discovery>
 
-            <!-- Some other API, just for the purpose of example. Each API entry has a
-            different XML namespace and a different structure. These structures are often
-            quite similar to each other, but sometimes they're not. -->
             <echo
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.1"
             >
 
-                <!-- Many APIs define the security requirements of their implementations with help
-                of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
                 <http-security>
                     <sec:client-auth-methods>
 						<tlscert
@@ -72,8 +63,6 @@
                     </sec:server-auth-methods>
                 </http-security>
 
-                <!-- The URL at which this Echo API is served. See Echo API's manifest-entry.xsd
-                file for details. -->
                 <url>https://auth.vspj.cz/ewp-test/api/echo/</url>
             </echo>
 
@@ -82,8 +71,6 @@
 				version="6.0.1"
 			>
 
-				<!-- Many APIs define the security requirements of their implementations with help
-				of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
 				<http-security>
 					<sec:client-auth-methods>
 						<tlscert
@@ -103,6 +90,29 @@
 				<max-iia-codes>10</max-iia-codes>
 				<index-url>https://auth.vspj.cz/ewp-test/api/iia/</index-url>
 			</iias>
+
+			<iias-approval
+				xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+				version="1.0.0"
+			>
+
+				<http-security>
+					<sec:client-auth-methods>
+						<tlscert
+							xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+							allows-self-signed="true"
+						/>
+						<httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+					</sec:client-auth-methods>
+					<sec:server-auth-methods>
+						<tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+						<httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+					</sec:server-auth-methods>
+				</http-security>
+
+				<max-iia-ids>10</max-iia-ids>
+				<url>https://auth.vspj.cz/ewp-test/api/iia-approval/</url>
+			</iias-approval>
         </r:apis-implemented>
 
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
