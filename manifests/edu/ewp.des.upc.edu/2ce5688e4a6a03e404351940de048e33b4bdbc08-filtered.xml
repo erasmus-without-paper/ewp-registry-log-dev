@@ -6,10 +6,13 @@
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:las="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:olas="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:olascnr="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ounits="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:reqenc="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
+    xmlns:respenc="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:srvauthsig1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:srvauthtls1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
@@ -74,8 +77,8 @@
                 <ounits:max-ounit-ids>10</ounits:max-ounit-ids>
                 <ounits:max-ounit-codes>10</ounits:max-ounit-codes>
             </ounits:organizational-units>
-            <las:omobility-las version="1.0.1">
-                <las:http-security>
+            <olas:omobility-las version="1.0.1">
+                <olas:http-security>
                     <sec:client-auth-methods>
                         <cliauthtls1:tlscert allows-self-signed="true"/>
                         <cliauthsig1:httpsig/>
@@ -84,12 +87,42 @@
                         <srvauthtls1:tlscert/>
                         <srvauthsig1:httpsig/>
                     </sec:server-auth-methods>
-                </las:http-security>
-                <las:get-url>https://ewp.des.upc.edu/api/omobility/get</las:get-url>
-                <las:index-url>https://ewp.des.upc.edu/api/omobility/index</las:index-url>
-                <las:update-url>https://ewp.des.upc.edu/api/omobility/update</las:update-url>
-                <las:max-omobility-ids>10</las:max-omobility-ids>
-            </las:omobility-las>
+                    <sec:request-encryption-methods>
+                        <reqenc:tls/>
+                        <cliauthsig1:httpsig/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <respenc:tls/>
+                        <cliauthsig1:httpsig/>
+                    </sec:response-encryption-methods>
+                </olas:http-security>
+                <olas:get-url>https://ewp.des.upc.edu/api/omobility/get</olas:get-url>
+                <olas:index-url>https://ewp.des.upc.edu/api/omobility/index</olas:index-url>
+                <olas:update-url>https://ewp.des.upc.edu/api/omobility/update</olas:update-url>
+                <olas:max-omobility-ids>10</olas:max-omobility-ids>
+            </olas:omobility-las>
+            <olascnr:omobility-la-cnr version="1.0.0">
+                <olascnr:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthtls1:tlscert allows-self-signed="true"/>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthtls1:tlscert/>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <reqenc:tls/>
+                        <cliauthsig1:httpsig/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <respenc:tls/>
+                        <cliauthsig1:httpsig/>
+                    </sec:response-encryption-methods>
+                </olascnr:http-security>
+                <olascnr:url>https://ewp.des.upc.edu/api/omobility/cnr</olascnr:url>
+                <olascnr:max-omobility-ids>10</olascnr:max-omobility-ids>
+            </olascnr:omobility-la-cnr>
         </r:apis-implemented>
         <mf:institutions-covered>
             <hei

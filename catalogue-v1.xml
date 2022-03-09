@@ -55145,12 +55145,45 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                        <sec-A2:httpsig/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                        <sec-A2:httpsig/>
+                    </sec:response-encryption-methods>
                 </oml1:http-security>
                 <oml1:get-url>https://ewp.des.upc.edu/api/omobility/get</oml1:get-url>
                 <oml1:index-url>https://ewp.des.upc.edu/api/omobility/index</oml1:index-url>
                 <oml1:update-url>https://ewp.des.upc.edu/api/omobility/update</oml1:update-url>
                 <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
             </oml1:omobility-las>
+            <omc1:omobility-la-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                        <sec-A2:httpsig/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                        <sec-A2:httpsig/>
+                    </sec:response-encryption-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp.des.upc.edu/api/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-la-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>upc.edu</hei-id>
