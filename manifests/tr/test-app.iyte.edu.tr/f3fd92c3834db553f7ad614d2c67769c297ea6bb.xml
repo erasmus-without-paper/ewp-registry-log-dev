@@ -61,6 +61,8 @@
                 global level, and on the API level. -->
                 <ewp:admin-email>mesutbasaran@iyte.edu.tr</ewp:admin-email>
                 <ewp:admin-email>gokhansahan@iyte.edu.tr</ewp:admin-email>
+				<ewp:admin-email>bulentyigitalp@iyte.edu.tr</ewp:admin-email>
+				<ewp:admin-email>ezgicaliskan@iyte.edu.tr</ewp:admin-email>
                 <ewp:admin-notes>Some notes which might be useful for client developers.</ewp:admin-notes>
 
                 <!-- Many APIs define the security requirements of their implementations with help
@@ -92,6 +94,19 @@
 				<url>https://test-app.iyte.edu.tr/TestEwpEcho/api/institutions</url>
 				<max-hei-ids>1</max-hei-ids>
 			</institutions>
+			<organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/v2.1.1/manifest-entry.xsd" version="2.1.1">
+				<http-security>
+					<sec:client-auth-methods>
+						<httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+					</sec:client-auth-methods>
+					<sec:server-auth-methods>
+						<httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+					</sec:server-auth-methods>
+				</http-security>
+				<url>https://test-app.iyte.edu.tr/TestEwpEcho/api/organizations</url>
+				<max-ounit-ids>1</max-ounit-ids>
+				<max-ounit-codes>1</max-ounit-codes>
+			</organizational-units>
 			
         </r:apis-implemented>
 
