@@ -48,6 +48,22 @@
                 <url>https://ewp.kalasoft.pl/api/ewp/host/institutions</url>
                 <max-hei-ids>1</max-hei-ids>
             </institutions>
+            <organizational-units
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/v2.1.1/manifest-entry.xsd"
+                version="2.1.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.kalasoft.pl/api/ewp/host/organizational-units</url>
+                <max-ounit-ids>100</max-ounit-ids>
+                <max-ounit-codes>100</max-ounit-codes>
+            </organizational-units>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="kalasoft.pl">
