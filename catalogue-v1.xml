@@ -39890,7 +39890,7 @@
             </iaac1:iia-approval-cnr>
             <f1:factsheet
                 xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
+                version="1.1.0"
             >
                 <f1:http-security>
                     <sec:client-auth-methods>
@@ -39906,6 +39906,25 @@
                 <f1:url>https://test.slu.isois.ois.muni.cz/en/ewp/factsheet/</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</get-url>
+                <index-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</index-url>
+                <max-omobility-ids>1</max-omobility-ids>
+                <sends-notifications/>
+            </omobilities>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -39920,8 +39939,8 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </om1:http-security>
-                <om1:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityGet/</om1:get-url>
-                <om1:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityIndex/</om1:index-url>
+                <om1:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityGet/?version=1</om1:get-url>
+                <om1:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=1</om1:index-url>
                 <om1:max-omobility-ids>1</om1:max-omobility-ids>
                 <om1:sends-notifications/>
             </om1:omobilities>
