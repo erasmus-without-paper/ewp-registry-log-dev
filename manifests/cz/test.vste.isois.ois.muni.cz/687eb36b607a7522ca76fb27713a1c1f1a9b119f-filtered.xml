@@ -261,6 +261,25 @@
                 <scr1:allows-anonymous-access>true</scr1:allows-anonymous-access>
                 <scr1:supports-modified-since>true</scr1:supports-modified-since>
             </scr1:simple-course-replication>
+            <ia7:iias version="7.0.0">
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://test.vste.isois.ois.muni.cz/en/ewp/iiaGet/?version=7</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:max-iia-codes>1</ia7:max-iia-codes>
+                <ia7:index-url>https://test.vste.isois.ois.muni.cz/en/ewp/iiaIndex/?version=7</ia7:index-url>
+            </ia7:iias>
             <ia6:iias version="6.0.1">
                 <ia6:http-security>
                     <sec:client-auth-methods>
