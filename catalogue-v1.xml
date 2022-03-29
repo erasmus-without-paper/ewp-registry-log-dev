@@ -27938,6 +27938,22 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
+            <file
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://test.isois.ois.muni.cz/en/ewp/file/</url>
+            </file>
             <iias
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
                 version="7.0.0"
