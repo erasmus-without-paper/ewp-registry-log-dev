@@ -5,11 +5,11 @@
    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" 
    xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" 
    xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" 
-   xmlns:sec-cs="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" 
    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
    xmlns:sec-cc="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
-   xmlns:sec-ss="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" 
+   xmlns:sec-cs="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" 
    xmlns:sec-sc="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" 
+   xmlns:sec-ss="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" 
    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" 
    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" 
    xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" 
@@ -17,8 +17,6 @@
    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd" 
    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd">
   <ns1:host>
-    <admin-email>musilr@vut.cz</admin-email>
-    <admin-email>sala@vutbr.cz</admin-email>
     <admin-notes>This is the development server.</admin-notes>
     <ns2:apis-implemented>
       <d1:discovery version="5.0.0">
@@ -30,7 +28,7 @@
             <sec-cs:httpsig/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <sec-ss:tlscert allows-self-signed="true"/>
+            <sec-sc:tlscert/>
           </sec:server-auth-methods>
         </ia2:http-security>
         <ia2:get-url>https://sala.ro.vutbr.cz:8443/ewp/api/iias/get</ia2:get-url>
@@ -44,7 +42,7 @@
             <sec-cs:httpsig/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <sec-ss:tlscert allows-self-signed="true"/>
+            <sec-sc:tlscert/>
           </sec:server-auth-methods>
         </iac2:http-security>
         <iac2:url>https://sala.ro.vutbr.cz:8443/ewp/api/iia-cnr</iac2:url>
@@ -52,11 +50,11 @@
       <e1:echo version="2.0.1">
         <e1:http-security>
           <sec:client-auth-methods>
-            <sec-cs:tlscert allows-self-signed="true"/>
+            <sec-cc:tlscert allows-self-signed="true"/>
             <sec-cs:httpsig/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
-            <sec-ss:tlscert allows-self-signed="true"/>
+            <sec-sc:tlscert/>
           </sec:server-auth-methods>
         </e1:http-security>
         <e1:url>https://sala.ro.vutbr.cz:8443/ewp/api/echo</e1:url>
