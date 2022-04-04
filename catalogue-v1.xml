@@ -29960,7 +29960,7 @@
             <d5:discovery version="5.0.0">
                 <d5:url>https://ewptst.upjp2.edu.pl/ewp/manifest</d5:url>
             </d5:discovery>
-            <e2:echo version="2.0.0">
+            <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -30037,11 +30037,11 @@
                 <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia3:iias
-                xmlns:ia3="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
-                version="3.0.0"
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
             >
-                <ia3:http-security>
+                <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -30050,14 +30050,13 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia3:http-security>
-                <ia3:get-url>https://ewptst.upjp2.edu.pl/ewp/iia/get</ia3:get-url>
-                <ia3:max-iia-ids>100</ia3:max-iia-ids>
-                <ia3:max-iia-codes>100</ia3:max-iia-codes>
-                <ia3:index-url>https://ewptst.upjp2.edu.pl/ewp/iia/index</ia3:index-url>
-                <ia3:sends-notifications/>
-            </ia3:iias>
-            <iac2:iia-cnr version="2.0.2">
+                </ia6:http-security>
+                <ia6:get-url>https://ewptst.upjp2.edu.pl/ewp/iia/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://ewptst.upjp2.edu.pl/ewp/iia/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -30072,7 +30071,7 @@
             </iac2:iia-cnr>
             <iaa1:iias-approval
                 xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
+                version="1.0.0"
             >
                 <iaa1:http-security>
                     <sec:client-auth-methods>
@@ -30086,11 +30085,10 @@
                 </iaa1:http-security>
                 <iaa1:url>https://ewptst.upjp2.edu.pl/ewp/iia/approval</iaa1:url>
                 <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
             </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.0"
+                version="1.0.0"
             >
                 <iaac1:http-security>
                     <sec:client-auth-methods>
@@ -30106,7 +30104,7 @@
             </iaac1:iia-approval-cnr>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-                version="0.16.0"
+                version="1.0.0"
             >
                 <om1:http-security>
                     <sec:client-auth-methods>
@@ -30125,7 +30123,7 @@
             </om1:omobilities>
             <omc1:omobility-cnr
                 xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="0.4.1"
+                version="1.0.0"
             >
                 <omc1:http-security>
                     <sec:client-auth-methods>
@@ -30194,16 +30192,35 @@
                 <imtc1:url>https://ewptst.upjp2.edu.pl/ewp/tors/cnr</imtc1:url>
                 <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
             </imtc1:imobility-tor-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewptst.upjp2.edu.pl/ewp/la/get</oml1:get-url>
+                <oml1:index-url>https://ewptst.upjp2.edu.pl/ewp/la/index</oml1:index-url>
+                <oml1:update-url>https://ewptst.upjp2.edu.pl/ewp/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
         </apis-implemented>
         <institutions-covered>
             <hei-id>upjp2.edu.pl</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="bc77fb9a25f1384faa968d06ecfecfdadbfdc5f429be3aefff8e8cb2947ea72f"/>
-            <rsa-public-key sha-256="e95efc84060f66abd6616377f2f35be68d3de22f228e7899bf6d59002e6ccf78"/>
+            <certificate sha-256="71f190ec02591993628bcfc67235fdf39a9d5a1e47de115d698838cde8f43856"/>
+            <rsa-public-key sha-256="8e12b768d886a59a9c9378318ed4c51d922cf86ed326052484e53a3d419a42ac"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="e95efc84060f66abd6616377f2f35be68d3de22f228e7899bf6d59002e6ccf78"/>
+            <rsa-public-key sha-256="8e12b768d886a59a9c9378318ed4c51d922cf86ed326052484e53a3d419a42ac"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -69364,8 +69381,8 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
         <hei id="upjp2.edu.pl">
             <other-id type="erasmus">PL KRAKOW08</other-id>
             <other-id type="pic">949462579</other-id>
-            <name xml:lang="en">The Pontifical University of John Paul II in Krakow</name>
-            <name xml:lang="pl">Uniwersytet Papieski Jana Pawła II w Krakowie</name>
+            <name xml:lang="en">The Pontifical University of John Paul II in Krakow (tst)</name>
+            <name xml:lang="pl">Uniwersytet Papieski Jana Pawła II w Krakowie (tst)</name>
         </hei>
         <hei id="upjs.sk">
             <other-id type="erasmus">SK KOSICE02</other-id>
@@ -70544,6 +70561,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             OUibGbRevcv806EdC1eSvKgw3oBIbu/r97y3VosFiRCkDpj3zkeZ9QR21vI43s/nlCsy3lGlLqYm
             9r2YmwIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="8e12b768d886a59a9c9378318ed4c51d922cf86ed326052484e53a3d419a42ac">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl1KX0dKfA338lgQ8ZTu8zzvNUTFCk0Pr
+            LDW9unyPRk4l3GlMYu+eNRlcErpBiwTQF8c4puybVb7zlfmj1Nq8cS7CCG5n8ShsmzcAGhy0hnRx
+            fpIqvtFsgQ94i+44hZj6SxgwujihOL/MKrWeSInLsLFfHOi8OzqR0pa2/OaAxQ/D8zqzyISiElXF
+            9jbMm11EhaaJxDi5yM6thFWFA9yxeOkiubiDzVAU0Q+mSMb2aQoFjS4WlyeTpL5DOeZzl37uYX71
+            EKHguqQ5l9gqnuQAmYuQo54VDRtGX11cRUVD79l/3DYi+rjpV1FBrhk3UsnPx6PM7/pDKXbgyUVt
+            ybi3BwIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="8e7fec493a45a558ce9c4b94a5181eecd6c7e754a1b98813b2c99b16f22ab0bb">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq5+qyRFRihd52sOyDGPHF+aZeyKv5HkI
             qBPfhR2hWIoWkLjykGbKrONfY4LNWKLl2dKfj3RK8Llcn/OoqzLGGIjf111CI6lnYRTiuU9D1LXs
@@ -71021,14 +71046,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             aRPMnGKX64pfhpW0SUAsZXAksx+cfJtwB5xakWupMPkCP00svDuxpdUAP7o1ZDGw5tI9QUZMKGKM
             QKpPc4+wcculUmoAHcaijGx7osv+YyRp1RQ0bk8Jvs+teJ1BvSsiEw8eUmgXu8UrZ7mdDCWfliWC
             aHAGUGkVwcjTcc284Utpv66mhHOJtEBTyYdqPq2A3EUCAwEAAQ==
-        </rsa-public-key>
-        <rsa-public-key sha-256="e95efc84060f66abd6616377f2f35be68d3de22f228e7899bf6d59002e6ccf78">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo+pnlC9NVZgA7pbdQS5ifBuMqAnQop7h
-            1vHrLFyvJOG435wus/qYdnxgmrPNo+91jLfSfnBx80RkqfLN4U0BxH29oD9Bg4o3RPvMhDaZVs12
-            c45+e/k9Qj8dlaxJFfWMtBvOHg0Y3XAmlkGATcGjY81zckuvYO3UFdAhQOXNfq8ugdrfMiSjf897
-            TRt0xWJq+2QUCeqnsLZIqE3szhgakyRA3krK2c7sP358OUcgo1LcSNdoCX9/j5tdVzdQjTNO8gq1
-            BrK9pa2iDS8YYeQ7BbSPjVE3T2k/TQLJf/J17pDOm1YiJCoTnZfW8SpX3N6ArmmQ59w9S6Z/U5f/
-            liYnDQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="ec89c70201a17d143d0f4e6e7b4559c3b198bb0a15defce2c3f6a668a6aa8f85">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
