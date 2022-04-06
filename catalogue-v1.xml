@@ -64702,6 +64702,276 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>informatycy@kpu.krosno.pl</ewp:admin-email>
+        <ewp:admin-notes>Provider: MUCI (USOS)</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewpclone.kpu.krosno.pl/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewpclone.kpu.krosno.pl/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewpclone.kpu.krosno.pl/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.0">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewpclone.kpu.krosno.pl/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://ewpclone.kpu.krosno.pl/courses</co1:url>
+                <co1:max-los-ids>100</co1:max-los-ids>
+                <co1:max-los-codes>100</co1:max-los-codes>
+            </co1:courses>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ewpclone.kpu.krosno.pl/iia/get</ia6:get-url>
+                <ia6:max-iia-ids>100</ia6:max-iia-ids>
+                <ia6:max-iia-codes>100</ia6:max-iia-codes>
+                <ia6:index-url>https://ewpclone.kpu.krosno.pl/iia/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://ewpclone.kpu.krosno.pl/iia/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://ewpclone.kpu.krosno.pl/iia/approval</iaa1:url>
+                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://ewpclone.kpu.krosno.pl/iia/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewpclone.kpu.krosno.pl/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewpclone.kpu.krosno.pl/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>100</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewpclone.kpu.krosno.pl/omobilities/get</om1:get-url>
+                <om1:index-url>https://ewpclone.kpu.krosno.pl/omobilities/index</om1:index-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewpclone.kpu.krosno.pl/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>100</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewpclone.kpu.krosno.pl/la/get</oml1:get-url>
+                <oml1:index-url>https://ewpclone.kpu.krosno.pl/la/index</oml1:index-url>
+                <oml1:update-url>https://ewpclone.kpu.krosno.pl/la/update</oml1:update-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewpclone.kpu.krosno.pl/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewpclone.kpu.krosno.pl/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="0.1.1"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://ewpclone.kpu.krosno.pl/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>kpu.krosno.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="782f3c855cbee2332f2ea0ff7785ccfd803374f7266de2ca353dada53bbd23cf"/>
+            <rsa-public-key sha-256="2c1d67a2b2b22d43cdb7fe2661457b1151e7b42a39e9402b9d887d4b9b075ab9"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="2c1d67a2b2b22d43cdb7fe2661457b1151e7b42a39e9402b9d887d4b9b075ab9"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -67149,6 +67419,11 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="erasmus">A  WIEN10</other-id>
             <name xml:lang="de">Kirchliche Pädagogische Hochschule Wien/Krems</name>
             <name xml:lang="en">Kirchliche Pädagogische Hochschule Wien/Krems</name>
+        </hei>
+        <hei id="kpu.krosno.pl">
+            <other-id type="erasmus">PL KROSNO01</other-id>
+            <name xml:lang="en">Carpathian State Collage in Krosno</name>
+            <name xml:lang="pl">Karpacka Państwowa Uczelnia w Krośnie</name>
         </hei>
         <hei id="kre.hu">
             <other-id type="erasmus">HU BUDAPES10</other-id>
@@ -69728,6 +70003,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             6srkPpjdq6gvKGSHhv9rw2T0gnDn+ToDGDLHJXrstfmk2l4H4Cl/y2PBpR4OnMJGMW37t1CCe/Mi
             q7tR31UisqIECCPeVNE0lxlFXhl/j30kMqAQHb4b8FpufpGX9vhRuBP+fIxBgt3rXkw8YuYH3wXP
             motVHcjMyM975eon7LM5KRurASwhHVgxhxovPajEX9UCAwEAAQ==
+        </rsa-public-key>
+        <rsa-public-key sha-256="2c1d67a2b2b22d43cdb7fe2661457b1151e7b42a39e9402b9d887d4b9b075ab9">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoGl9W1udZ4jqhv8vXupHOlcCJjHUtnN/
+            D1W9eHAFfss4VutP17PTG1j78fLURftqIdOGzEToK9gjtfcBAAz6YDxhxSQatdRsKQHan2AW1RWF
+            RFNNJw1ZELRGc8uXp9cFeWX5UyrJ8YG4tsNoKCjzcfvaPBZ2+p2D5BmXWq9p0dVZ5X40fmHw7yw1
+            l/956VRFT7rXEIyDejvg+TKgLZlWB4pBLOfN/iD6pcd0/e5du//Xeci/SsByjZcA1WIqiO5cSNga
+            OLiDS/H2XUm29wBdFyqp0Cw5Inyr9vOIyH4NTOwYLgkk5m0VndhNuze45TU+vccMTgNr37ql+ycS
+            hYgo6QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="2d6e559a7055bc56283774ebe90be071d8b869f6da9483643526d836a95a24dc">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9P7XtTx/TSvZ7lhQiwgbxjrEMMIwg6N4
