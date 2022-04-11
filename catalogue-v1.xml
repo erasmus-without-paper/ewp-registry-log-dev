@@ -61923,7 +61923,38 @@
                 <iaa1:url>https://ewp.kalasoft.pl/api/ewp/host/iia/approval</iaa1:url>
                 <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
             </iaa1:iias-approval>
-            <im1:factsheet
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ewp.kalasoft.pl/api/ewp/host/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://ewp.kalasoft.pl/api/ewp/host/omobilites/get</om1:get-url>
+                <om1:index-url>https://ewp.kalasoft.pl/api/ewp/host/omobilites/index</om1:index-url>
+                <om1:max-omobility-ids>100</om1:max-omobility-ids>
+            </om1:omobilities>
+            <im1:imobilities
                 xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
@@ -61937,7 +61968,7 @@
                 </im1:http-security>
                 <im1:get-url>https://ewp.kalasoft.pl/api/ewp/host/imobilites/get</im1:get-url>
                 <im1:max-omobility-ids>100</im1:max-omobility-ids>
-            </im1:factsheet>
+            </im1:imobilities>
         </apis-implemented>
         <institutions-covered>
             <hei-id>kalasoft.pl</hei-id>
