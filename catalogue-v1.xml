@@ -5819,58 +5819,6 @@
         <ewp:admin-email>adapps@it.auth.gr</ewp:admin-email>
         <ewp:admin-notes>This is a EWP reference connector instance for AUTH.</ewp:admin-notes>
         <apis-implemented>
-            <f1:factsheet
-                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <f1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="false"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </f1:http-security>
-                <f1:url>https://authewp.it.auth.gr/ewp/rest/factsheets/get</f1:url>
-                <f1:max-hei-ids>1</f1:max-hei-ids>
-            </f1:factsheet>
-            <co1:courses
-                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-                version="0.7.1"
-            >
-                <co1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="false"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </co1:http-security>
-                <co1:url>https://authewp.it.auth.gr/ewp/rest/courses</co1:url>
-                <co1:max-los-ids>1</co1:max-los-ids>
-                <co1:max-los-codes>1</co1:max-los-codes>
-            </co1:courses>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="false"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://authewp.it.auth.gr/ewp/rest/iias-approval/approval</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
             <cr1:simple-course-replication
                 xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -5904,6 +5852,42 @@
                 <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://authewp.it.auth.gr/ewp/rest/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://authewp.it.auth.gr/ewp/rest/iias/index</ia6:index-url>
+            </ia6:iias>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://authewp.it.auth.gr/ewp/rest/iias-approval/approval</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -5917,6 +5901,24 @@
                 </e2:http-security>
                 <e2:url>https://authewp.it.auth.gr/ewp/rest/echo</e2:url>
             </e2:echo>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://authewp.it.auth.gr/ewp/rest/courses</co1:url>
+                <co1:max-los-ids>1</co1:max-los-ids>
+                <co1:max-los-codes>1</co1:max-los-codes>
+            </co1:courses>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -5963,11 +5965,11 @@
                 <in2:url>https://authewp.it.auth.gr/ewp/rest/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <ia6:iias
-                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.1"
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
             >
-                <ia6:http-security>
+                <f1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="false"/>
                         <sec-A2:httpsig/>
@@ -5976,12 +5978,10 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://authewp.it.auth.gr/ewp/rest/iias/get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://authewp.it.auth.gr/ewp/rest/iias/index</ia6:index-url>
-            </ia6:iias>
+                </f1:http-security>
+                <f1:url>https://authewp.it.auth.gr/ewp/rest/factsheets/get</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
         </apis-implemented>
         <institutions-covered>
             <hei-id>auth.gr</hei-id>
