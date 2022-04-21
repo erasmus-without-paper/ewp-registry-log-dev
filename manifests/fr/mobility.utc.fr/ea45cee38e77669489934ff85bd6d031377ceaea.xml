@@ -1,0 +1,182 @@
+<manifest
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+        xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+        xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+        xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+        xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+        xmlns:xml="http://www.w3.org/XML/1998/namespace"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5 ">
+    <host>
+        <ewp:admin-email>ewpadmin@utc.fr</ewp:admin-email>
+        <ewp:admin-notes>Provider: Universite de Technologie de Compiegne</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" version="5.0.0">
+                <url>https://mobility.utc.fr/api/ewp/v1/discovery/manifest.xml</url>
+            </discovery>
+            <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mobility.utc.fr/api/ewp/v1/echo</url>
+            </echo>
+            <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" version="2.2.0">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mobility.utc.fr/api/ewp/v1/institutions</url>
+                <max-hei-ids>3</max-hei-ids>
+            </institutions>
+            <organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mobility.utc.fr/api/ewp/v1/ounits</url>
+                <max-ounit-ids>3</max-ounit-ids>
+                <max-ounit-codes>3</max-ounit-codes>
+            </organizational-units>
+            <courses xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd" version="0.7.1">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mobility.utc.fr/api/ewp/v1/courses</url>
+                <max-los-ids>3</max-los-ids>
+                <max-los-codes>3</max-los-codes>
+            </courses>
+        </r:apis-implemented>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="utc.fr">
+                <other-id type="pic">E10208827</other-id>
+                <other-id type="erasmus">F  COMPIEG01</other-id>
+                <name xml:lang="fr">Université de Technologie de Compiègne</name>
+                <name xml:lang="en">University of Technology of Compiègne</name>
+            </hei>
+        </mf:institutions-covered>
+        <client-credentials-in-use>
+            <certificate>
+                MIIHpDCCBYygAwIBAgIQFujM6TzdFCtVNFMpQIixnTANBgkqhkiG9w0BAQwFADBE
+                MQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UE
+                AxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjEwNDIwMDAwMDAwWhcNMjIwNDIwMjM1
+                OTU5WjCBmjELMAkGA1UEBhMCRlIxGDAWBgNVBAgTD0hhdXRzLWRlLUZyYW5jZTET
+                MBEGA1UEBwwKQ29tcGnDqGduZTExMC8GA1UECgwoVW5pdmVyc2l0w6kgZGUgVGVj
+                aG5vbG9naWUgZGUgQ29tcGnDqGduZTEPMA0GA1UECxMGRFNJLVNSMRgwFgYDVQQD
+                Ew9tb2JpbGl0eS51dGMuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+                AQDBqoEO5r7EtNTVvZMaMjAmEXfw7P8YrCyc+Mtqyq0xxucX+rY5JCC9UnlMsvVE
+                Zdd80vyibGoe2yRqstggq3bIGqxqA8rJozDV/dAWlga7nM2nyPops4yrVrx9COTP
+                pQg0aPWtF0wZqag+mRhwY3JLEQejAxEYPSjVbTnzg9g1m03/4CSQ8pQLBBbH+eN3
+                g3HCeU8asVlEE0rDhlG33db1XXNqgOBNR3Q1816gMXkdvsbmUcL27q+qjZhNCI7h
+                WK87JavYJCL6b5vW+msYD4gGA1BtTdabrnlofdujamWtcLfJNaYbvycFfMpZnhaW
+                mnYg11avb+RqjFrM0eUZc4tzAgMBAAGjggM5MIIDNTAfBgNVHSMEGDAWgBRvHTVJ
+                EGwy+lmgnryK6B+VvnF6DDAdBgNVHQ4EFgQUQ76sU6iySHOuZg6lUHo8MzfrDYww
+                DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH
+                AwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAk8wJTAjBggrBgEF
+                BQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMD8GA1UdHwQ4
+                MDYwNKAyoDCGLmh0dHA6Ly9HRUFOVC5jcmwuc2VjdGlnby5jb20vR0VBTlRPVlJT
+                QUNBNC5jcmwwdQYIKwYBBQUHAQEEaTBnMDoGCCsGAQUFBzAChi5odHRwOi8vR0VB
+                TlQuY3J0LnNlY3RpZ28uY29tL0dFQU5UT1ZSU0FDQTQuY3J0MCkGCCsGAQUFBzAB
+                hh1odHRwOi8vR0VBTlQub2NzcC5zZWN0aWdvLmNvbTAvBgNVHREEKDAmgg9tb2Jp
+                bGl0eS51dGMuZnKCE3d3dy5tb2JpbGl0eS51dGMuZnIwggGABgorBgEEAdZ5AgQC
+                BIIBcASCAWwBagB3AEalVet1+pEgMLWiiWn0830RLEF0vv1JuIWr8vxw/m1HAAAB
+                eO6P8RoAAAQDAEgwRgIhAL0Lf3E1XTwUqtVRQHTO2Hjl5P3/fUQBlUN8XpWmLwx1
+                AiEAvsYmOA4+B3VH3sQhV+s72r2nJ6hh/hlQmI4pq0f5utsAdwDfpV6raIJPH2yt
+                7rhfTj5a6s2iEqRqXo47EsAgRFwqcwAAAXjuj/CzAAAEAwBIMEYCIQCo7w8/o8uU
+                aQ8sZ4Nx8/wQbAEgNVKpXr+Lir0HHDpK9gIhAMahK0RlVnn2DBMkR5kl+tcEPlCY
+                ujZU4ovgbRredqa8AHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwA
+                AAF47o/wrAAABAMARzBFAiEA/RnY0CHYWIMlsiI8+AgHUcBkZfN9VS6OedBaZV5D
+                19ACIFFu0QxtUqXLOAK/k0Or3H2f1ntvMyjOjXTIlcEwtPOHMA0GCSqGSIb3DQEB
+                DAUAA4ICAQBreTwm7b7AIulXJxyBRzzKJ6hhbbiXom0ObG+W0fK5a9YGs3v/Wc/a
+                dwsIQbPwL6nYGsU5jsjClp3fXzid3oUOFYFwJACgprLQ5NmN1cvowih+Hbs4Mu7t
+                KWjSCWUyOJnKgv6DEVRYfzIk/RrONK5/3or1XNr4z18ZmyZaCgW/9Dtu/PMVZ+SO
+                2wNAcpUV0NY6sbru0sY6VCTaLNpoKZm4n0G7xhb/9wNrCdKE68HrrieLIc8WQGo9
+                dpGCjVgD5FZ7yNbmrBLBzfrUWY3xzyd5xQDrFxT+kRPmpa6Vojc1h2vm182xuLtm
+                zjahi2Z+EEMkSeAnD9UdQuZGE/OkBMFAWbTJzCov+O1xmhg4+Alu8ZTuIDzLi4YS
+                nXfViUZhlsXL3qv/Pc/W9uDJ56f8T5Ut7IELyRbgaDEZnSq3sgNdJMPfoWeMyBRh
+                gaVg7G5fBnGGiXeDLj+h7jbvtP3U4uV0RyIRdCD61j1M+/qBGVFmIzU7CsDXcDUX
+                4WRSOpzcsRWlmb/k6xh6OWHOb598T5ZxUY9K5J9BILhgzQVkklzeaNJd0L9Zy58V
+                QpDXIPWbGmHzmfg5rWDNeANcK8Is2UERMuKyz31rFc8yCKI490UU4tyVfaMTGAqJ
+                +RZJXm78/5q4LYquvbYGqzzRhZTx1USWl/QGcsGda8Dy72Vd5/K0dQ==
+            </certificate>
+            <rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwaqBDua+xLTU1b2TGjIw
+                JhF38Oz/GKwsnPjLasqtMcbnF/q2OSQgvVJ5TLL1RGXXfNL8omxqHtskarLYIKt2
+                yBqsagPKyaMw1f3QFpYGu5zNp8j6KbOMq1a8fQjkz6UINGj1rRdMGamoPpkYcGNy
+                SxEHowMRGD0o1W0584PYNZtN/+AkkPKUCwQWx/njd4NxwnlPGrFZRBNKw4ZRt93W
+                9V1zaoDgTUd0NfNeoDF5Hb7G5lHC9u6vqo2YTQiO4VivOyWr2CQi+m+b1vprGA+I
+                BgNQbU3Wm655aH3bo2plrXC3yTWmG78nBXzKWZ4Wlpp2INdWr2/kaoxazNHlGXOL
+                cwIDAQAB
+            </rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwaqBDua+xLTU1b2TGjIw
+                JhF38Oz/GKwsnPjLasqtMcbnF/q2OSQgvVJ5TLL1RGXXfNL8omxqHtskarLYIKt2
+                yBqsagPKyaMw1f3QFpYGu5zNp8j6KbOMq1a8fQjkz6UINGj1rRdMGamoPpkYcGNy
+                SxEHowMRGD0o1W0584PYNZtN/+AkkPKUCwQWx/njd4NxwnlPGrFZRBNKw4ZRt93W
+                9V1zaoDgTUd0NfNeoDF5Hb7G5lHC9u6vqo2YTQiO4VivOyWr2CQi+m+b1vprGA+I
+                BgNQbU3Wm655aH3bo2plrXC3yTWmG78nBXzKWZ4Wlpp2INdWr2/kaoxazNHlGXOL
+                cwIDAQAB
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
