@@ -65493,6 +65493,81 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewpadmin@utc.fr</ewp:admin-email>
+        <ewp:admin-notes>Provider: Universite de Technologie de Compiegne</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://mobility.utc.fr/api/ewp/v1/discovery/manifest.xml</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://mobility.utc.fr/api/ewp/v1/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://mobility.utc.fr/api/ewp/v1/institutions</in2:url>
+                <in2:max-hei-ids>3</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://mobility.utc.fr/api/ewp/v1/ounits</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <courses
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://mobility.utc.fr/api/ewp/v1/courses</url>
+                <max-los-ids>3</max-los-ids>
+                <max-los-codes>3</max-los-codes>
+            </courses>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>utc.fr</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="c0f30d1e2c2ca251c7e38ee8fd7c28973e1f21dae981ada54a68397b8cf4ccd6"/>
+            <rsa-public-key sha-256="4b48d7c085d171303f36456a0fcb22dfcc79fbd1fa81260684af0e14957c9e52"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="4b48d7c085d171303f36456a0fcb22dfcc79fbd1fa81260684af0e14957c9e52"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -70111,6 +70186,12 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="cs">Univerzita Tomáše Bati ve Zlíně</name>
             <name xml:lang="en">Tomas Bata University in Zlín</name>
         </hei>
+        <hei id="utc.fr">
+            <other-id type="erasmus">F  COMPIEG01</other-id>
+            <other-id type="pic">E10208827</other-id>
+            <name xml:lang="en">University of Technology of Compiègne</name>
+            <name xml:lang="fr">Université de Technologie de Compiègne</name>
+        </hei>
         <hei id="utcluj.ro">
             <other-id type="eche">49969-EPP-1-2014-1-RO-EPPKA3-ECHE</other-id>
             <other-id type="erasmus">RO CLUJNAP05</other-id>
@@ -70792,6 +70873,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             Fx5XwegihmMHWPh9Gn/jbBlA9ig/OLxyAp3OE/SWkZs861IUafuBcyrocXBQ0QlEeCoYGT5gETkE
             sDbc7jvUDiZ3sa6i5bH+gkLrnqTRNvUq0NrjpIUeNYelCyfW9Xbo/c8JapvaU/XXHXYEotn6UfYJ
             +mNQsQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="4b48d7c085d171303f36456a0fcb22dfcc79fbd1fa81260684af0e14957c9e52">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwaqBDua+xLTU1b2TGjIwJhF38Oz/GKws
+            nPjLasqtMcbnF/q2OSQgvVJ5TLL1RGXXfNL8omxqHtskarLYIKt2yBqsagPKyaMw1f3QFpYGu5zN
+            p8j6KbOMq1a8fQjkz6UINGj1rRdMGamoPpkYcGNySxEHowMRGD0o1W0584PYNZtN/+AkkPKUCwQW
+            x/njd4NxwnlPGrFZRBNKw4ZRt93W9V1zaoDgTUd0NfNeoDF5Hb7G5lHC9u6vqo2YTQiO4VivOyWr
+            2CQi+m+b1vprGA+IBgNQbU3Wm655aH3bo2plrXC3yTWmG78nBXzKWZ4Wlpp2INdWr2/kaoxazNHl
+            GXOLcwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="52979cfcfff8230c42331e87e362233e6639fbb2d28ea947dd6b130710d90e9b">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5H0bp+1SCMTWLnBO31VEn8D5cFjd1mm6
