@@ -1,7 +1,7 @@
 <mf:manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="         https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd          https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd          https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd          https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd          https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd     ">
   <!-- This example doesn't contain many comments, but its XML Schema does! -->
   <mf:host>
-    <ewp:admin-email>p.pflimlin@tbs-education.fr</ewp:admin-email>
+    <ewp:admin-email>assistance.dsi@tbs-education.fr</ewp:admin-email>
     <ewp:admin-notes>Toulouse Business School EWP Manifest</ewp:admin-notes>
     <r:apis-implemented>
       <!-- All API entries are defined in their own separate XML namespaces.
@@ -13,7 +13,6 @@
       <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
         <http-security>
           <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false" />
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
           </sec:client-auth-methods>
           <sec:server-auth-methods>
@@ -26,7 +25,6 @@
       <omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" version="1.0.1">
         <http-security>
           <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false" />
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
           </sec:client-auth-methods>
           <sec:server-auth-methods>
@@ -42,7 +40,6 @@
       <omobility-la-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
         <http-security>
           <sec:client-auth-methods>
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="false" />
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
           </sec:client-auth-methods>
           <sec:server-auth-methods>
