@@ -22,6 +22,65 @@
                 <ns19:url>https://ewp.uma.es/rest/institutions</ns19:url>
                 <ns19:max-hei-ids>100</ns19:max-hei-ids>
             </ns19:institutions>
+            <ns15:iias-approval
+                xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ns15:http-security>
+                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns22:tlscert
+                            xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <ns24:httpsig xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns26:tlscert xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns25:httpsig xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </ns5:server-auth-methods>
+                </ns15:http-security>
+                <ns15:url>https://ewp.uma.es/rest/iiasApproval/get</ns15:url>
+                <ns15:max-iia-ids>100</ns15:max-iia-ids>
+            </ns15:iias-approval>
+            <ns13:factsheet
+                xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <ns13:http-security>
+                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns22:tlscert
+                            xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <ns24:httpsig xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns26:tlscert xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns25:httpsig xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </ns5:server-auth-methods>
+                </ns13:http-security>
+                <ns13:url>https://ewp.uma.es/rest/factsheet</ns13:url>
+                <ns13:max-hei-ids>1</ns13:max-hei-ids>
+            </ns13:factsheet>
+            <ns16:iia-cnr
+                xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <ns16:http-security>
+                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns22:tlscert
+                            xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="false"
+                        />
+                        <ns24:httpsig xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns26:tlscert xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <ns25:httpsig xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </ns5:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://ewp.uma.es/rest/iias/cnr</ns16:url>
+            </ns16:iia-cnr>
             <ns14:iia-approval-cnr
                 xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -66,45 +125,6 @@
             >
                 <ns21:url>https://ewp.uma.es/rest/manifest</ns21:url>
             </ns21:discovery>
-            <ns15:iias-approval
-                xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <ns15:http-security>
-                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns22:tlscert
-                            xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        <ns24:httpsig xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns26:tlscert xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns25:httpsig xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </ns5:server-auth-methods>
-                </ns15:http-security>
-                <ns15:url>https://ewp.uma.es/rest/iiasApproval/get</ns15:url>
-                <ns15:max-iia-ids>100</ns15:max-iia-ids>
-            </ns15:iias-approval>
-            <ns16:iia-cnr
-                xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.3"
-            >
-                <ns16:http-security>
-                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns22:tlscert
-                            xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="false"
-                        />
-                        <ns24:httpsig xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns26:tlscert xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns25:httpsig xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </ns5:server-auth-methods>
-                </ns16:http-security>
-                <ns16:url>https://ewp.uma.es/rest/iias/cnr</ns16:url>
-            </ns16:iia-cnr>
             <ns17:iias
                 xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -127,26 +147,6 @@
                 <ns17:max-iia-codes>100</ns17:max-iia-codes>
                 <ns17:index-url>https://ewp.uma.es/rest/iias/index</ns17:index-url>
             </ns17:iias>
-            <ns13:factsheet
-                xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="1.1.0"
-            >
-                <ns13:http-security>
-                    <ns5:client-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns22:tlscert
-                            xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        <ns24:httpsig xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-                        <ns26:tlscert xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <ns25:httpsig xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </ns5:server-auth-methods>
-                </ns13:http-security>
-                <ns13:url>https://ewp.uma.es/rest/factsheet</ns13:url>
-                <ns13:max-hei-ids>1</ns13:max-hei-ids>
-            </ns13:factsheet>
         </ns2:apis-implemented>
         <institutions-covered>
             <ns2:hei
