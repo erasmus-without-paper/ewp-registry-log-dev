@@ -19915,6 +19915,19 @@
                 <f1:url>https://ewp.uma.es/rest/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="false"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.uma.es/rest/echo</e2:url>
+            </e2:echo>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
                     <sec:client-auth-methods>
@@ -19944,19 +19957,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://ewp.uma.es/rest/iiasApproval/cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="false"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://ewp.uma.es/rest/echo</e2:url>
-            </e2:echo>
             <d4:discovery version="4.1.0">
                 <d4:url>https://ewp.uma.es/rest/manifest</d4:url>
             </d4:discovery>
