@@ -65611,6 +65611,64 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>rafal.janisz.500@guest.p.lodz.pl</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for University of politechnika.lodzka.</ewp:admin-notes>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://ewp.ms.dvl.p.lodz.pl/rest/manifest</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-A2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.ms.dvl.p.lodz.pl/rest/echo</e2:url>
+            </e2:echo>
+            <r1:institutions version="2.1.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-A2:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </e2:http-security>
+                <e2:max-hei-ids>1</e2:max-hei-ids>
+                <e2:url>https://ewp.ms.dvl.p.lodz.pl/rest/institutions</e2:url>
+            </r1:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>p.lodz.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="729299658393938726fb616b0c6a5da6b15a729789f014e25c10cd6d66ab0f18"/>
+            <rsa-public-key sha-256="5847c204cdd4b3741650b61d1b240a7f69fa4811ee60c3935dba811fc430aeda"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="5847c204cdd4b3741650b61d1b240a7f69fa4811ee60c3935dba811fc430aeda"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -68440,6 +68498,12 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">998027666</other-id>
             <name xml:lang="en">Özyeğin University</name>
             <name xml:lang="tr">Özyeğin Üniversitesi</name>
+        </hei>
+        <hei id="p.lodz.pl">
+            <other-id type="erasmus">Line one Line two</other-id>
+            <other-id type="euc">euc</other-id>
+            <other-id type="pic">base64</other-id>
+            <name xml:lang="en">University of politechnika.lodzka</name>
         </hei>
         <hei id="partner.comillas.edu">
             <other-id type="erasmus">E MADRID02 PARTNER</other-id>
