@@ -9,6 +9,10 @@
     xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:om="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:oml="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omlc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:sec-cc="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
@@ -24,6 +28,20 @@
             <d1:discovery version="5.0.0">
                 <d1:url>https://sala.ro.vutbr.cz:8443/ewp/manifest.xml</d1:url>
             </d1:discovery>
+            <om:omobilities version="1.0.0">
+                <om:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </om:http-security>
+                <om:get-url>https://sala.ro.vutbr.cz:8443/ewp/api/omobilities/get</om:get-url>
+                <om:index-url>https://sala.ro.vutbr.cz:8443/ewp/api/omobilities/index</om:index-url>
+                <om:max-omobility-ids>10</om:max-omobility-ids>
+                <om:sends-notifications/>
+            </om:omobilities>
             <iapc:iia-approval-cnr version="1.0.0">
                 <iapc:http-security>
                     <sec:client-auth-methods>

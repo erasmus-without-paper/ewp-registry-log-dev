@@ -15,7 +15,11 @@
    xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" 
    xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" 
    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd" 
-   xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd">
+   xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" 
+   xmlns:om="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:omc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:oml="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:omlc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd">
   <ns1:host>
     <admin-email>musilr@vut.cz</admin-email>
     <admin-email>sala@vutbr.cz</admin-email>
@@ -24,6 +28,20 @@
       <d1:discovery version="5.0.0">
         <d1:url>https://sala.ro.vutbr.cz:8443/ewp/manifest.xml</d1:url>
       </d1:discovery>
+      <om:omobilities version="1.0.0">
+        <om:http-security>
+          <sec:client-auth-methods>
+            <sec-cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec-sc:tlscert/>
+          </sec:server-auth-methods>
+        </om:http-security>
+        <om:get-url>https://sala.ro.vutbr.cz:8443/ewp/api/omobilities/get</om:get-url>
+        <om:index-url>https://sala.ro.vutbr.cz:8443/ewp/api/omobilities/index</om:index-url>
+        <om:max-omobility-ids>10</om:max-omobility-ids>
+        <om:sends-notifications/>
+      </om:omobilities>
       <iapc:iia-approval-cnr version="1.0.0">
         <iapc:http-security>
           <sec:client-auth-methods>
