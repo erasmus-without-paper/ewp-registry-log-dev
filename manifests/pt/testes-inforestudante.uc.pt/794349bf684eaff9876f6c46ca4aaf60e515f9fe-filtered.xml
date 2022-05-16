@@ -6,7 +6,7 @@
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -19,10 +19,8 @@
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
-    xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
-    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-    xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
@@ -34,7 +32,7 @@
         <admin-email>nelson@uc.pt</admin-email>
         <admin-notes>Manifest File for University of coimbra.</admin-notes>
         <ns22:apis-implemented>
-            <ns3:discovery version="5.0.0">
+            <ns3:discovery version="5.1.0">
                 <ns3:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/manifest</ns3:url>
             </ns3:discovery>
             <ns5:echo version="2.0.1">
@@ -44,15 +42,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns5:http-security>
                 <ns5:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/echo</ns5:url>
             </ns5:echo>
@@ -63,15 +55,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns15:http-security>
                 <ns15:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/institutions</ns15:url>
                 <ns15:max-hei-ids>5</ns15:max-hei-ids>
@@ -83,15 +69,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns20:http-security>
                 <ns20:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/organizationunits</ns20:url>
                 <ns20:max-ounit-ids>5</ns20:max-ounit-ids>
@@ -104,15 +84,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns2:http-security>
                 <ns2:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/courses</ns2:url>
                 <ns2:max-los-ids>5</ns2:max-los-ids>
@@ -125,15 +99,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns1:http-security>
                 <ns1:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/courses/replication</ns1:url>
                 <ns1:allows-anonymous-access>true</ns1:allows-anonymous-access>
@@ -146,15 +114,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns10:http-security>
                 <ns10:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/interinstitutionalagreements/get</ns10:get-url>
                 <ns10:max-iia-ids>5</ns10:max-iia-ids>
@@ -168,15 +130,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns8:http-security>
                 <ns8:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/interinstitutionalagreements/cnr</ns8:url>
             </ns8:iia-cnr>
@@ -187,15 +143,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns9:http-security>
                 <ns9:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/interinstitutionalagreementsapproval/</ns9:url>
                 <ns9:max-iia-ids>5</ns9:max-iia-ids>
@@ -207,34 +157,22 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns7:http-security>
                 <ns7:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/interinstitutionalagreementsapproval/cnr</ns7:url>
             </ns7:iia-approval-cnr>
-            <ns6:factsheet version="1.0.0">
+            <ns6:factsheet version="1.1.0">
                 <ns6:http-security>
                     <ns25:client-auth-methods>
                         <ns24:tlscert allows-self-signed="true"/>
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns6:http-security>
                 <ns6:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/mobilityfactsheet</ns6:url>
                 <ns6:max-hei-ids>5</ns6:max-hei-ids>
@@ -246,15 +184,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns16:http-security>
                 <ns16:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilities/get</ns16:get-url>
                 <ns16:index-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilities/index</ns16:index-url>
@@ -268,15 +200,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns17:http-security>
                 <ns17:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilities/cnr</ns17:url>
                 <ns17:max-omobility-ids>5</ns17:max-omobility-ids>
@@ -288,15 +214,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns19:http-security>
                 <ns19:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/get</ns19:get-url>
                 <ns19:index-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/index</ns19:index-url>
@@ -310,15 +230,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns18:http-security>
                 <ns18:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/outgoingmobilitylearningagreements/cnr</ns18:url>
                 <ns18:max-omobility-ids>5</ns18:max-omobility-ids>
@@ -330,15 +244,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns11:http-security>
                 <ns11:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/get</ns11:get-url>
                 <ns11:max-omobility-ids>5</ns11:max-omobility-ids>
@@ -351,35 +259,23 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns12:http-security>
                 <ns12:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/cnr</ns12:url>
                 <ns12:max-omobility-ids>5</ns12:max-omobility-ids>
             </ns12:imobility-cnr>
-            <ns14:imobility-tors version="1.0.0">
+            <ns14:imobility-tors version="2.0.0">
                 <ns14:http-security>
                     <ns25:client-auth-methods>
                         <ns24:tlscert allows-self-signed="true"/>
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns14:http-security>
                 <ns14:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/get</ns14:get-url>
                 <ns14:index-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/index</ns14:index-url>
@@ -393,15 +289,9 @@
                         <ns23:httpsig/>
                     </ns25:client-auth-methods>
                     <ns25:server-auth-methods>
-                        <ns29:tlscert/>
-                        <ns28:httpsig/>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
                     </ns25:server-auth-methods>
-                    <ns25:request-encryption-methods>
-                        <ns26:tls/>
-                    </ns25:request-encryption-methods>
-                    <ns25:response-encryption-methods>
-                        <ns27:tls/>
-                    </ns25:response-encryption-methods>
                 </ns13:http-security>
                 <ns13:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/cnr</ns13:url>
                 <ns13:max-omobility-ids>5</ns13:max-omobility-ids>
