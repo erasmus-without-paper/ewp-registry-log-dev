@@ -62664,6 +62664,38 @@
                 <im1:get-url>https://ewp.kalasoft.pl/api/ewp/host/imobilities/get</im1:get-url>
                 <im1:max-omobility-ids>100</im1:max-omobility-ids>
             </im1:imobilities>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://ewp.kalasoft.pl/api/ewp/host/courses</co1:url>
+                <co1:max-los-ids>100</co1:max-los-ids>
+                <co1:max-los-codes>100</co1:max-los-codes>
+            </co1:courses>
+            <oml1:simple-course-replication
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:index-url>https://ewp.kalasoft.pl/api/ewp/host/omobility/las/index</oml1:index-url>
+                <oml1:get-url>https://ewp.kalasoft.pl/api/ewp/host/omobility/las/get</oml1:get-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:simple-course-replication>
         </apis-implemented>
         <institutions-covered>
             <hei-id>kalasoft.pl</hei-id>
