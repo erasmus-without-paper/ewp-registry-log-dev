@@ -35141,6 +35141,23 @@
     </host>
     <host>
         <apis-implemented>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>50</ia6:max-iia-ids>
+                <ia6:max-iia-codes>50</ia6:max-iia-codes>
+                <ia6:index-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/index</ia6:index-url>
+            </ia6:iias>
             <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
@@ -35331,23 +35348,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://ewptest.tiss.tuwien.ac.at/ewp/iia-approval-cnr</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <ia6:iias
-                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.1"
-            >
-                <ia6:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/get</ia6:get-url>
-                <ia6:max-iia-ids>50</ia6:max-iia-ids>
-                <ia6:max-iia-codes>50</ia6:max-iia-codes>
-                <ia6:index-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/index</ia6:index-url>
-            </ia6:iias>
         </apis-implemented>
         <institutions-covered>
             <hei-id>tuwien.ac.at</hei-id>
