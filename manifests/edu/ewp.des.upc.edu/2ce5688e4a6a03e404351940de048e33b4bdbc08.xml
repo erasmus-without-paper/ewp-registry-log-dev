@@ -12,9 +12,12 @@
  xmlns:srvauthtls1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
  xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
  xmlns:olas="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+ xmlns:iia="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
  xmlns:reqenc="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
  xmlns:respenc="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
  xmlns:olascnr="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+
+
  xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1 https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd">
 <host>
 <ewp:admin-email>carlos.espadas@upc.edu</ewp:admin-email>
@@ -56,6 +59,19 @@
   <ounits:max-ounit-ids>10</ounits:max-ounit-ids>
   <ounits:max-ounit-codes>10</ounits:max-ounit-codes>
  </ounits:organizational-units>
+ <iia:iias version="6.0.1">
+   <iia:http-security>
+    <sec:client-auth-methods>
+     <cliauthtls1:tlscert allows-self-signed="true" />
+     <cliauthsig1:httpsig/>
+    </sec:client-auth-methods>
+    <sec:server-auth-methods>
+     <srvauthtls1:tlscert/>
+     <srvauthsig1:httpsig />
+    </sec:server-auth-methods>
+   </iia:http-security>
+  <iia:index-url></iia:index-url>
+ </iia:iias>
  <olas:omobility-las version="1.0.1">
   <olas:http-security>
     <sec:client-auth-methods>
