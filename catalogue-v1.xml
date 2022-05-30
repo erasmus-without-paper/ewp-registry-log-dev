@@ -68094,6 +68094,51 @@
         <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
         <apis-implemented>
             <d5:discovery version="5.0.0">
+                <d5:url>https://usosirktest.amu.edu.pl/ewp/manifest/</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://usosirktest.amu.edu.pl/ewp/echo/</e2:url>
+            </e2:echo>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://usosirktest.amu.edu.pl/ewp/la/cnr/</omlc1:url>
+                <omlc1:max-omobility-ids>100</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>amu.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="8f4444f409d3ab6214f39920a8c6bcf6b8e0e3271db56504ad458fa1b30d4f00"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8f4444f409d3ab6214f39920a8c6bcf6b8e0e3271db56504ad458fa1b30d4f00"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>usosweb@amu.edu.pl</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
                 <d5:url>https://usoswebtest.amu.edu.pl/api/manifest.php</d5:url>
             </d5:discovery>
             <emrex-ncp
@@ -69097,7 +69142,9 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
         <hei id="amu.edu.pl">
             <other-id type="erasmus">PL POZNAN01</other-id>
             <other-id type="pic">999886865</other-id>
+            <name xml:lang="en">Adam Mickiewicz University in Poznań</name>
             <name xml:lang="en">Adam Mickiewicz University, Poznań</name>
+            <name xml:lang="pl">Uniwersytet im. Adama Mickiewicza w Poznaniu</name>
             <name xml:lang="pl">Uniwersytet im. Adama Mickiewicza w Poznaniu TEST</name>
         </hei>
         <hei id="ankara.edu.tr">
@@ -73928,6 +73975,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             jUCpe7/zR8B4k3SSxKA6kA29gBjZ62BWRD0tysSF4CRM6Imvto4XnybkvAbpcZP1vDsRxHsoaXKr
             x468HpVL+IrvmH0TqqQg0DsFC/79Vhq43fRZFn7Kg3m5kZRC1uSKBESEhdRniZINP7k8SYOobR5b
             DhbVnQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8f4444f409d3ab6214f39920a8c6bcf6b8e0e3271db56504ad458fa1b30d4f00">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1QV3gBqT90tCwS9PRZLFIOZ8uj2zGppg
+            99zLo2ctWR6vSlxPztf/yw0ob+zc0lWY3dyeyMbmZEbr6Rd/uNgI1gfRfpmHczCaZUzIfE0xn1oQ
+            Rhu2xMumeHjTivGrHrglqqzi+mmlyKx4fI2Q3hyqKjzU6W+O5IW3u79/bhD3qdUZCNZ1UIPa4Pz2
+            IdAFP3I7iCSxvyaDyt8v9rE5zZFhx158AhSX4YQ+tAaMXHMz2Sm0EjzWG3vJhYYGwx2eKOAzn7cy
+            zpu1PeU6crDhvvxJQquYssSY7XdkxaohKf+xwxbjuYHxzJbl5K+rPhbRxc5UcdoAGuC8jDkSgTiZ
+            FBRwHwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="9192a5675eb68d49d2f7a1370fb005e043b32aa3a65e8010fcf0f80b2f86f531">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAs6obzbrOyqEiaP4fFm3ZWGgr3RI0bmXA
