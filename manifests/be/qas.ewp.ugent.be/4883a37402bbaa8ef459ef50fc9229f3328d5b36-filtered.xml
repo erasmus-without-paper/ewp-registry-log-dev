@@ -9,6 +9,7 @@
     xmlns:iiasappr1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:iiasapprcnr1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:inst2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:omoblacnr1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:omoblas1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:ounits2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:reg1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -83,6 +84,19 @@
                 <iias6:max-iia-codes>1</iias6:max-iia-codes>
                 <iias6:index-url>https://qas.ewp.ugent.be/secure-api/iias/index</iias6:index-url>
             </iias6:iias>
+            <omoblacnr1:omobility-la-cnr version="1.0.0">
+                <omoblacnr1:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </omoblacnr1:http-security>
+                <omoblacnr1:url>https://qas.ewp.ugent.be/secure-api/omobility-la-cnr</omoblacnr1:url>
+                <omoblacnr1:max-omobility-ids>1</omoblacnr1:max-omobility-ids>
+            </omoblacnr1:omobility-la-cnr>
             <iiasappr1:iias-approval version="1.0.0">
                 <iiasappr1:http-security>
                     <sec1:client-auth-methods>
