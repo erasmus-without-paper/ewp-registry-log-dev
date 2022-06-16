@@ -75,6 +75,10 @@
             </iia-approval-cnr>
         </r:apis-implemented>
         <institutions-covered>
+            <r:hei id="1">
+                <r:other-id type="erasmus">1</r:other-id>
+                <r:name/>
+            </r:hei>
             <r:hei id="brussels.uni-foundation.eu">
                 <r:other-id type="erasmus">B  TESTING99</r:other-id>
                 <r:name>European University Foundation - Brussels office</r:name>
@@ -231,6 +235,40 @@
         <ewp:admin-email>ewp.admin@erasmus-dashboard.eu</ewp:admin-email>
         <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
         <r:apis-implemented>
+            <institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+                version="2.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizone-ewp.herokuapp.com/rest/institutions</url>
+                <max-hei-ids>3</max-hei-ids>
+            </institutions>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="1">
+                <r:other-id type="erasmus">1</r:other-id>
+                <r:name/>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIIEDzCCAvegAwIBAgIUPRdcKeeyNd+gKafZrDgh7LcfH78wDQYJKoZIhvcNAQELBQAwgZYxCzAJBgNVBAYTAkJFMREwDwYDVQQIDAhCcnVzc2VsczERMA8GA1UEBwwIQnJ1c3NlbHMxDDAKBgNVBAoMA0VVRjEMMAoGA1UECwwDRVVGMSIwIAYDVQQDDBl1bml6b25lLWV3cC5oZXJva3VhcHAuY29tMSEwHwYJKoZIhvcNAQkBFhJmcGVpeG90b0B1cG9ydG8ucHQwHhcNMjExMTE5MDk1MDA3WhcNMjIxMTE5MDk1MDA3WjCBljELMAkGA1UEBhMCQkUxETAPBgNVBAgMCEJydXNzZWxzMREwDwYDVQQHDAhCcnVzc2VsczEMMAoGA1UECgwDRVVGMQwwCgYDVQQLDANFVUYxIjAgBgNVBAMMGXVuaXpvbmUtZXdwLmhlcm9rdWFwcC5jb20xITAfBgkqhkiG9w0BCQEWEmZwZWl4b3RvQHVwb3J0by5wdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOJrON+t6oIMrwJ8WnGnBt0wSzBOsePUMRUgRIWc4Nrdc6psGzbxwjpquzhNB5kchk5nd1BFMGSwWtw/84i/4MsToUjjkVHvAIVzW8YjLXXcBMU5hIwd9ddLMI/sDKRYrx/xkuuFg2BdPgGdW8ZBu5n9pwlc1Gi4MKNzuhwm7G78W3TjA7mujG1+NMZ1hcQCpRXDltR0WYcPmZ/7ZGzGr0j9CJ7nFaHltQrLNi/dMiZrSd1fiv7Z/vrRqoRsv4rpJIk51jozeMvSsni+//iNG5L1+yIxEoc9sD7tl5uzlRVEACmURKfItGX1+EgqiGscY3V96+bvEhWOSlO2J6Twcu8CAwEAAaNTMFEwHQYDVR0OBBYEFIs6hSSHaPYr5Tijh7D1TO+m/vtFMB8GA1UdIwQYMBaAFIs6hSSHaPYr5Tijh7D1TO+m/vtFMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAC+tgecaFRQ0WLPmyqSvi6MJnF6i0cbe0tIBIJGPsRkhpHAbQqjzP+MlVedDAkAALMv8r7VDAe5ioTHNEeyerx9W5mZdHAZSNQ6ibzJzOyb3ZLR1IAfZX0h1pIz2b/UcnLq5d4Xixj+wAtvIJOUwBHBSIsiEsBUFWD7RX1zwmUk1Dara/W/5O6ffEaIIjSAi5DhX3qKIjcKT2zU9kd7ILTQ60BFhujk1WzRd3eOBqBCTPg/235pzAqH70VZIwUsXYwCCqPWC4qM0AK2YvLaT2xSbrBseO+wSgCDB3KYTRhVsKo9p1PXZVSTiWr5NCuOyNnremoTuuMIoMIEayc4ho10=</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4ms4363qggyvAnxacacG3TBLME6x49QxFSBEhZzg2t1zqmwbNvHCOmq7OE0HmRyGTmd3UEUwZLBa3D/ziL/gyxOhSOORUe8AhXNbxiMtddwExTmEjB3110swj+wMpFivH/GS64WDYF0+AZ1bxkG7mf2nCVzUaLgwo3O6HCbsbvxbdOMDua6MbX40xnWFxAKlFcOW1HRZhw+Zn/tkbMavSP0InucVoeW1Css2L90yJmtJ3V+K/tn++tGqhGy/iukkiTnWOjN4y9KyeL7/+I0bkvX7IjEShz2wPu2Xm7OVFUQAKZREp8i0ZfX4SCqIaxxjdX3r5u8SFY5KU7YnpPBy7wIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4ms4363qggyvAnxacacG3TBLME6x49QxFSBEhZzg2t1zqmwbNvHCOmq7OE0HmRyGTmd3UEUwZLBa3D/ziL/gyxOhSOORUe8AhXNbxiMtddwExTmEjB3110swj+wMpFivH/GS64WDYF0+AZ1bxkG7mf2nCVzUaLgwo3O6HCbsbvxbdOMDua6MbX40xnWFxAKlFcOW1HRZhw+Zn/tkbMavSP0InucVoeW1Css2L90yJmtJ3V+K/tn++tGqhGy/iukkiTnWOjN4y9KyeL7/+I0bkvX7IjEShz2wPu2Xm7OVFUQAKZREp8i0ZfX4SCqIaxxjdX3r5u8SFY5KU7YnpPBy7wIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>ewp.admin@erasmus-dashboard.eu</ewp:admin-email>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <r:apis-implemented>
             <organizational-units
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
                 version="2.1.0"
@@ -249,6 +287,10 @@
             </organizational-units>
         </r:apis-implemented>
         <institutions-covered>
+            <r:hei id="1">
+                <r:other-id type="erasmus">1</r:other-id>
+                <r:name/>
+            </r:hei>
             <r:hei id="brussels.uni-foundation.eu">
                 <r:other-id type="erasmus">B  TESTING99</r:other-id>
                 <r:name>European University Foundation - Brussels office</r:name>
@@ -439,6 +481,10 @@
             </omobility-la-cnr>
         </r:apis-implemented>
         <institutions-covered>
+            <r:hei id="1">
+                <r:other-id type="erasmus">1</r:other-id>
+                <r:name/>
+            </r:hei>
             <r:hei id="brussels.uni-foundation.eu">
                 <r:other-id type="erasmus">B  TESTING99</r:other-id>
                 <r:name>European University Foundation - Brussels office</r:name>
@@ -638,6 +684,10 @@
             </imobility-cnr>
         </r:apis-implemented>
         <institutions-covered>
+            <r:hei id="1">
+                <r:other-id type="erasmus">1</r:other-id>
+                <r:name/>
+            </r:hei>
             <r:hei id="brussels.uni-foundation.eu">
                 <r:other-id type="erasmus">B  TESTING99</r:other-id>
                 <r:name>European University Foundation - Brussels office</r:name>
@@ -676,6 +726,10 @@
             </factsheet>
         </r:apis-implemented>
         <institutions-covered>
+            <r:hei id="1">
+                <r:other-id type="erasmus">1</r:other-id>
+                <r:name/>
+            </r:hei>
             <r:hei id="brussels.uni-foundation.eu">
                 <r:other-id type="erasmus">B  TESTING99</r:other-id>
                 <r:name>European University Foundation - Brussels office</r:name>
