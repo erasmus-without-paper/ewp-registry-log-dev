@@ -61,9 +61,7 @@
         <url>https://uri.unipg.it/ewp_test/manifest.xml</url>
       </discovery>
 
-      <institutions 
-        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"  
-        version="2.0.0">
+      <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"  version="2.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -82,7 +80,20 @@
         <max-hei-ids>1</max-hei-ids>
       </institutions>
 
-      <organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
+      <iia-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" version="2.0.3">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://uri.unipg.it/ewp_test/api/IIA_CNR.aspx</url>
+      </iia-cnr>
+
+	  <organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -102,46 +113,20 @@
         <max-ounit-codes>10</max-ounit-codes>
       </organizational-units>
 
-    
-    <iia-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"  version="2.0.2">
+      <iias-approval xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
           </sec:server-auth-methods>
-          <sec:request-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" />
-          </sec:request-encryption-methods>
-          <sec:response-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" />
-          </sec:response-encryption-methods>
-        </http-security>
-        <url>https://uri.unipg.it/ewp_test/api/iia_cnr.aspx</url>
-      </iia-cnr>
-    
-    
-      <iias-approval xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"  version="0.2.1">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-          <sec:request-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" />
-          </sec:request-encryption-methods>
-          <sec:response-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" />
-          </sec:response-encryption-methods>
         </http-security>
         <url>https://uri.unipg.it/ewp_test/api/iia_approval.aspx</url>
         <max-iia-ids>10</max-iia-ids>
-        <sends-notifications/>
       </iias-approval>
-
+      
       <iia-approval-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"  version="0.2.0">
         <http-security>
           <sec:client-auth-methods>
@@ -160,30 +145,21 @@
         <url>https://uri.unipg.it/ewp_test/api/iia_approval_cnr.aspx</url>
       </iia-approval-cnr>
 
-      
-
-      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"  version="4.0.0">
+      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd" version="6.0.1">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
           </sec:client-auth-methods>
           <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
           </sec:server-auth-methods>
-          <sec:request-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" />
-          </sec:request-encryption-methods>
-          <sec:response-encryption-methods>
-            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" />
-          </sec:response-encryption-methods>
         </http-security>
         <get-url>https://uri.unipg.it/ewp_test/api/iia.aspx</get-url>
         <max-iia-ids>10</max-iia-ids>
         <max-iia-codes>10</max-iia-codes>
-        <index-url>https://uri.unipg.it/ewp_test/api/iia_index.aspx</index-url>
-        <sends-notifications/>
-      </iias>
-      
+        <index-url>https://uri.unipg.it/ewp_test/api/iia.aspx</index-url>
+      </iias>      
     
      <omobility-las version="1.0.1" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd">
         <http-security>
