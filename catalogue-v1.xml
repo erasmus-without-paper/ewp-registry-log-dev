@@ -55509,6 +55509,9 @@
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
                 </in2:http-security>
                 <in2:url>https://ewp.des.upc.edu/api/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
@@ -55518,11 +55521,33 @@
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
                 </ou2:http-security>
                 <ou2:url>https://ewp.des.upc.edu/api/ounits</ou2:url>
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.1.0"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://ewp.des.upc.edu/api/iia/get</ia6:get-url>
+                <ia6:max-iia-ids>10</ia6:max-iia-ids>
+                <ia6:max-iia-codes>10</ia6:max-iia-codes>
+                <ia6:index-url>https://ewp.des.upc.edu/api/iia/index</ia6:index-url>
+            </ia6:iias>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.1"
@@ -55564,8 +55589,6 @@
             <hei-id>upc.edu</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="e33e50828cfe4f08a86bcdb1f0716397ad729a01572a51e6eb71544b9fef790e"/>
-            <certificate sha-256="e06534852e374ceb67fa290caaaed0d8e997316eba5dcb1160ccc15afedaf3e7"/>
             <rsa-public-key sha-256="14203235110f35c7c61145ca253f129cddb2aa32aeff507d1404f9274ea601d0"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
