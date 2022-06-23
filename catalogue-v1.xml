@@ -1,7 +1,7 @@
 <catalogue
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:d4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
     xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v2/manifest-entry.xsd"
@@ -25,11 +25,11 @@
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
 
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v4/manifest-entry.xsd
-
         https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest-entry.xsd
 
         https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
@@ -97,11 +97,11 @@
             <hei-id>validator-hei02.developers.erasmuswithoutpaper.eu</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="e532c60af7d975b63341f8e6d8fa9c8f26538e573cda06f1259203e87dc58ce4"/>
-            <rsa-public-key sha-256="1635a4196f7477d6383c98f613b607eebaa89b3828efd96eff7859f2de099689"/>
+            <certificate sha-256="54f35e3ac7d47586f905b0ae438cb842531e815f6669060f62b71b4366950cff"/>
+            <rsa-public-key sha-256="77c227902687b572c522ccc3636e457ffccff39c59b662bfdd2e4253c3768553"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="bb447047cd73a0630c4f8f81e78a1f258228200401357dcb14393be2827f2cda"/>
+            <rsa-public-key sha-256="3ff361466e10abdcf9f48b61ea07bf29a845c977af6ca79ae43997be6bbb4768"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -111,11 +111,11 @@
             <fake-api-without-a-version xmlns="https://github.com/erasmus-without-paper/ewp-registry-service/issues/8"/>
         </apis-implemented>
         <client-credentials-in-use>
-            <certificate sha-256="5898473cce392750df2b414b65acdf5af93464584affee926270745eb9c9bd12"/>
-            <rsa-public-key sha-256="3a21f933305a472b03b6c84c4387af5c58f4e664ed8cbc54381505fb34351523"/>
+            <certificate sha-256="770d653f6f8cd05464c7762aad04f57f3c8c1154803d2735d0be17a36b3b3886"/>
+            <rsa-public-key sha-256="b8d634c80f526013aafd5422839065f69046232dcdea0967100818dc4320044a"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="c2044e9608681fcb3d79200858965074d1b9c2f9875826c7e5c240d4c5936ff9"/>
+            <rsa-public-key sha-256="b6422213624622e89f723a675fac49e812aaabf2fc538bfa2567c763c2db7ebb"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -5105,9 +5105,12 @@
                 <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://ewp.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
-            </d4:discovery>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+                version="4.1.0"
+            >
+                <url>https://ewp.its.umu.se/ewp-reference-connector/rest/manifest</url>
+            </discovery>
             <imc1:imobility-cnr
                 xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.1.0"
@@ -5232,9 +5235,12 @@
                 <co1:max-los-ids>1</co1:max-los-ids>
                 <co1:max-los-codes>1</co1:max-los-codes>
             </co1:courses>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</d4:url>
-            </d4:discovery>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+                version="4.1.0"
+            >
+                <url>https://ewp-test.its.umu.se/ewp-reference-connector/rest/manifest</url>
+            </discovery>
             <im1:imobilities
                 xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
                 version="0.1.0"
@@ -19449,9 +19455,12 @@
                 <f1:url>https://ewp.uma.es/rest/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <d4:discovery version="4.1.0">
-                <d4:url>https://ewp.uma.es/rest/manifest</d4:url>
-            </d4:discovery>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+                version="4.1.0"
+            >
+                <url>https://ewp.uma.es/rest/manifest</url>
+            </discovery>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -26416,10 +26425,13 @@
                 <co1:max-los-ids>1</co1:max-los-ids>
                 <co1:max-los-codes>1</co1:max-los-codes>
             </co1:courses>
-            <d4:discovery version="4.1.1">
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v4/manifest-entry.xsd"
+                version="4.1.1"
+            >
                 <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
-                <d4:url>https://ewp.playdev.ulusofona.pt/discovery-4.1.1</d4:url>
-            </d4:discovery>
+                <url>https://ewp.playdev.ulusofona.pt/discovery-4.1.1</url>
+            </discovery>
             <d5:discovery version="5.0.0">
                 <ewp:admin-email>manuel.pereira@ulusofona.pt</ewp:admin-email>
                 <d5:url>https://ewp.playdev.ulusofona.pt/discovery</d5:url>
@@ -53996,140 +54008,6 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-email>berlage@caci.nl</ewp:admin-email>
-        <apis-implemented>
-            <d5:discovery version="5.0.0">
-                <d5:url>https://ewpota1.osiris-link.nl/manifest.xml</d5:url>
-            </d5:discovery>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://ewpota1.osiris-link.nl/echo</e2:url>
-            </e2:echo>
-            <iac2:iia-cnr version="2.0.1">
-                <iac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://ewpota1.osiris-link.nl/iia/cnr</iac2:url>
-            </iac2:iia-cnr>
-            <ia6:iias
-                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.1"
-            >
-                <ia6:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://ewpota1.osiris-link.nl/iia/get</ia6:get-url>
-                <ia6:max-iia-ids>10</ia6:max-iia-ids>
-                <ia6:max-iia-codes>10</ia6:max-iia-codes>
-                <ia6:index-url>https://ewpota1.osiris-link.nl/iia/index</ia6:index-url>
-            </ia6:iias>
-            <omlc1:omobility-la-cnr
-                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.1"
-            >
-                <omlc1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </omlc1:http-security>
-                <omlc1:url>https://ewpota1.osiris-link.nl/la/cnr</omlc1:url>
-                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
-            </omlc1:omobility-la-cnr>
-            <oml1:omobility-las
-                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.1"
-            >
-                <oml1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </oml1:http-security>
-                <oml1:get-url>https://ewpota1.osiris-link.nl/la/get</oml1:get-url>
-                <oml1:index-url>https://ewpota1.osiris-link.nl/la/index</oml1:index-url>
-                <oml1:update-url>https://ewpota1.osiris-link.nl/la/update</oml1:update-url>
-                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
-            </oml1:omobility-las>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://ewpota1.osiris-link.nl/iia/approval</iaa1:url>
-                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
-            <iaac1:iia-approval-cnr
-                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaac1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://ewpota1.osiris-link.nl/iia/approval-cnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
-        </apis-implemented>
-        <institutions-covered>
-            <hei-id>ru.nl</hei-id>
-            <hei-id>uu.nl</hei-id>
-            <hei-id>hhs.nl</hei-id>
-            <hei-id>avans.nl</hei-id>
-            <hei-id>eur.nl</hei-id>
-            <hei-id>zuyd.nl</hei-id>
-            <hei-id>tud.nl</hei-id>
-            <hei-id>hku.nl</hei-id>
-            <hei-id>hdk.nl</hei-id>
-            <hei-id>hdk.nl</hei-id>
-            <hei-id>hanze.nl</hei-id>
-            <hei-id>marnixacademie.nl</hei-id>
-            <hei-id>artez.nl</hei-id>
-            <hei-id>wur.nl</hei-id>
-        </institutions-covered>
-        <client-credentials-in-use>
-            <certificate sha-256="e29f840466ab68f73f1e558a0203e8ba50de95d5a900dd1a24b7f580647740f2"/>
-            <certificate sha-256="2298cb813015402f3baa70e5a51c6c13d7a7677ab85c190fb4156006aa6a89be"/>
-            <rsa-public-key sha-256="5859a960108da193e4b880fa29136baf61620548a4d8b865c7a57e76b0cfa26e"/>
-            <rsa-public-key sha-256="7c9fde1d877c7a5caaa7cdb0d0c7cb7d3900eeb6e90e0ac5964e7e25af15beb5"/>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key sha-256="5859a960108da193e4b880fa29136baf61620548a4d8b865c7a57e76b0cfa26e"/>
-            <rsa-public-key sha-256="7c9fde1d877c7a5caaa7cdb0d0c7cb7d3900eeb6e90e0ac5964e7e25af15beb5"/>
-        </server-credentials-in-use>
-    </host>
-    <host>
         <ewp:admin-email>glemon@hmu.gr</ewp:admin-email>
         <ewp:admin-email>vfasoulas@hmu.gr</ewp:admin-email>
         <ewp:admin-notes>HMU EWP manifest file.</ewp:admin-notes>
@@ -69716,12 +69594,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">986308514</other-id>
             <name xml:lang="en">Artevelde University of Applied Sciences</name>
         </hei>
-        <hei id="artez.nl">
-            <other-id type="eche">artez.nl</other-id>
-            <other-id type="erasmus">artez.nl</other-id>
-            <other-id type="pic">artez.nl</other-id>
-            <name xml:lang="en">artez.nl</name>
-        </hei>
         <hei id="ase.ro">
             <other-id type="erasmus">RO BUCURES04</other-id>
             <other-id type="pic">949652796</other-id>
@@ -69752,12 +69624,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">999895692</other-id>
             <name>Aristotelio Panepistimio Thessalonikis</name>
             <name xml:lang="en">Aristotle University of Thessaloniki</name>
-        </hei>
-        <hei id="avans.nl">
-            <other-id type="eche">avans.nl</other-id>
-            <other-id type="erasmus">avans.nl</other-id>
-            <other-id type="pic">avans.nl</other-id>
-            <name xml:lang="en">avans.nl</name>
         </hei>
         <hei id="bachelor.inseec.com">
             <other-id type="erasmus">F LE-BOUR01</other-id>
@@ -70204,12 +70070,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="en">ESSEC Business School</name>
             <name xml:lang="fr">ESSEC Business School</name>
         </hei>
-        <hei id="eur.nl">
-            <other-id type="eche">eur.nl</other-id>
-            <other-id type="erasmus">eur.nl</other-id>
-            <other-id type="pic">eur.nl</other-id>
-            <name xml:lang="en">eur.nl</name>
-        </hei>
         <hei id="ewp100-bo.staging.moveon4.com">
             <other-id type="erasmus">DK ALBORG01</other-id>
             <name xml:lang="en">Aalborg Universitet</name>
@@ -70485,12 +70345,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="en">HANKEN SVENSKA HANDELSHÖGSKOLAN</name>
             <name xml:lang="fi">HANKEN SVENSKA HANDELSHÖGSKOLAN</name>
         </hei>
-        <hei id="hanze.nl">
-            <other-id type="eche">hanze.nl</other-id>
-            <other-id type="erasmus">hanze.nl</other-id>
-            <other-id type="pic">hanze.nl</other-id>
-            <name xml:lang="en">hanze.nl</name>
-        </hei>
         <hei id="haw-hamburg.de">
             <other-id type="erasmus">D  HAMBURG06</other-id>
             <other-id type="euc">29782-IC-1-2007-1-DE-ERASMUS-EUCX-1</other-id>
@@ -70511,12 +70365,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">998143193</other-id>
             <name xml:lang="DE">HafenCity Universität Hamburg</name>
             <name xml:lang="en">HafenCity Universität Hamburg</name>
-        </hei>
-        <hei id="hdk.nl">
-            <other-id type="eche">hdk.nl</other-id>
-            <other-id type="erasmus">hdk.nl</other-id>
-            <other-id type="pic">hdk.nl</other-id>
-            <name xml:lang="en">hdk.nl</name>
         </hei>
         <hei id="he-ichec-ecam-isfsc.be">
             <other-id type="erasmus">B BRUXEL86</other-id>
@@ -70586,12 +70434,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">998196931</other-id>
             <name xml:lang="en">Halmstad University</name>
         </hei>
-        <hei id="hhs.nl">
-            <other-id type="eche">hhs.nl</other-id>
-            <other-id type="erasmus">hhs.nl</other-id>
-            <other-id type="pic">hhs.nl</other-id>
-            <name xml:lang="en">hhs.nl</name>
-        </hei>
         <hei id="hj.se">
             <other-id type="erasmus">S JONKOPI01</other-id>
             <name xml:lang="en">Jönköping University</name>
@@ -70609,12 +70451,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">949635433</other-id>
             <name xml:lang="en">HASAN KALYONCU UNIVERSITY</name>
             <name xml:lang="tr">Hasan Kalyoncu Üniversitesi</name>
-        </hei>
-        <hei id="hku.nl">
-            <other-id type="eche">hku.nl</other-id>
-            <other-id type="erasmus">hku.nl</other-id>
-            <other-id type="pic">hku.nl</other-id>
-            <name xml:lang="en">hku.nl</name>
         </hei>
         <hei id="hmdk-stuttgart.de">
             <other-id type="eche">210533-LA-1-2014-1-DE-E4AKA1-ECHE</other-id>
@@ -71350,12 +71186,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="en">Maltepe University</name>
             <name xml:lang="tr">Maltepe Üniversitesi</name>
         </hei>
-        <hei id="marnixacademie.nl">
-            <other-id type="eche">marnixacademie.nl</other-id>
-            <other-id type="erasmus">marnixacademie.nl</other-id>
-            <other-id type="pic">marnixacademie.nl</other-id>
-            <name xml:lang="en">marnixacademie.nl</name>
-        </hei>
         <hei id="massey.edu.si">
             <other-id type="eche">100001-EPP-1-2014-1-TR-EPPKA3-ECHE</other-id>
             <other-id type="erasmus">SI MASSEY08</other-id>
@@ -71787,12 +71617,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="en">Reykjavik University</name>
             <name xml:lang="is">HASKÓLINN Í REYKJAVIK</name>
         </hei>
-        <hei id="ru.nl">
-            <other-id type="eche">28958-EPP-1-2014-1-NL-EPPKA3-ECHE</other-id>
-            <other-id type="erasmus">NL NIJMEGE01</other-id>
-            <other-id type="pic">999992110</other-id>
-            <name xml:lang="en">STICHTING RADBOUD UNIVERSITEIT</name>
-        </hei>
         <hei id="rug.nl">
             <other-id type="erasmus">NL GRONING01</other-id>
             <other-id type="pic">999989782</other-id>
@@ -72099,12 +71923,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">999583934</other-id>
             <name xml:lang="de">TU BERGAKADEMIE FREIBERG</name>
             <name xml:lang="en">TU BERGAKADEMIE FREIBERG</name>
-        </hei>
-        <hei id="tud.nl">
-            <other-id type="eche">tud.nl</other-id>
-            <other-id type="erasmus">tud.nl</other-id>
-            <other-id type="pic">tud.nl</other-id>
-            <name xml:lang="en">tud.nl</name>
         </hei>
         <hei id="tue.nl">
             <other-id type="erasmus">NL EINDHOV17</other-id>
@@ -73445,12 +73263,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">0</other-id>
             <name xml:lang="en">University of Turku</name>
         </hei>
-        <hei id="uu.nl">
-            <other-id type="eche">uu.nl</other-id>
-            <other-id type="erasmus">uu.nl</other-id>
-            <other-id type="pic">uu.nl</other-id>
-            <name xml:lang="en">uu.nl</name>
-        </hei>
         <hei id="uv.es">
             <other-id type="erasmus">E  VALENCI01</other-id>
             <other-id type="pic">999953019</other-id>
@@ -73600,12 +73412,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="en">University of Proacta</name>
             <name xml:lang="pl">Uniwersytet Proacta</name>
         </hei>
-        <hei id="wur.nl">
-            <other-id type="eche">wur.nl</other-id>
-            <other-id type="erasmus">wur.nl</other-id>
-            <other-id type="pic">wur.nl</other-id>
-            <name xml:lang="en">wur.nl</name>
-        </hei>
         <hei id="xamk.fi">
             <other-id type="erasmus">SF MIKKELI07</other-id>
             <other-id type="pic">0</other-id>
@@ -73654,12 +73460,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">998210220</other-id>
             <name xml:lang="de">Zeppelin Universität</name>
             <name xml:lang="en">Zeppelin Universität</name>
-        </hei>
-        <hei id="zuyd.nl">
-            <other-id type="eche">zuyd.nl</other-id>
-            <other-id type="erasmus">zuyd.nl</other-id>
-            <other-id type="pic">zuyd.nl</other-id>
-            <name xml:lang="en">zuyd.nl</name>
         </hei>
     </institutions>
     <binaries>
@@ -73824,14 +73624,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             AjatTE2+fcYkD1RLNNoWJdwTHVrsQiLfb/A3bjLHQ5lugUub3OUDTxERP6P6hTfjidA+p1hIx0TU
             x/vsFvP5y249MCHYTvth/wUeaAz66SNvAQ5ee2pyYgSgQ+f9BknO4VpUouS7+3n9k8rF5V9ansQY
             kNdY8QIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="1635a4196f7477d6383c98f613b607eebaa89b3828efd96eff7859f2de099689">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5vOs88x4G1GwBAbv9jn+Xng/1PaHO/FN
-            jnh80r2bNGb8XfJHzvbr9PlM+/tMsNYw1+IGVBirk50d5TVnthqpKmIbG/elKc1/af4VWXnXNfDI
-            khKTyf3/shaGDzOShQoQKklJIj9+96+oZrmeB1lHNYOnR1N5ruUw9yJLlNoGPM6pjc53hnyth689
-            9ilRoRdNWDuvu9C01wOIVutyHs+WtBrjLYw0rJ2QPzMi0rg07SZRrplDGoIHdGvFCSopVAzWZj++
-            Ely4EZpFCJfhP9J+5uOHJtvizRz5+1EP/Xdi6zs5muR8DCWl1hwrTBT84zuWtfiaq9sFb82cycPR
-            RmIKawIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="167b7e88114af110fab906a94e57ac8e08832aa2f6556a758185fcb13e4bb5d5">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3aIrZ0DkID3oCxcbpXr7zWfAIaTPxr8g
@@ -74099,14 +73891,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             6nMA6t0ZNVW8Y/l+zzjZwFCmqp5edH61x6agF5jOLwqfVw/Qz5eVvm9cvEMj7Y8DlEhMQ2AFFoCP
             l5JbawIDAQAB
         </rsa-public-key>
-        <rsa-public-key sha-256="3a21f933305a472b03b6c84c4387af5c58f4e664ed8cbc54381505fb34351523">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAls12FkIe7/oV87QqKaPgD2AzN7xeRmWH
-            UnRwMfbYWQOww1eCjFY6JjU4c2ZH5LR3ik8S4SJv7tgferf4ARQvmbWxVJP42kC/DP3VF0HmBMj1
-            7Qr1xdpu3jMEN5h2wzHV1T11Yy0EnaL9m/Nh7ZnRByG3IKtLrxuW1V4OSzftltsXrCzFy69fuevP
-            l/xfOqoWozLS9LyOits+e0fWkAhNY9x0zdRF7MxX6KiPDjrBKGArE8DNOiAAAzFAOaeciM0HdnL2
-            BgWfDS48yS/As03gDQ1Og8XDnFXTOomBkWsK6dN5WcyPCAN3OYSZNwD0R9O1CqTsEkYwdTuKeV9t
-            v6SCpwIDAQAB
-        </rsa-public-key>
         <rsa-public-key sha-256="3b249cd7bc0fd1a17cd7f121ca66ac92fd2b466e100aa73f240445fdbe461b86">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk4dA+E7nu81XbZhw/8ZlKbJQjGi6ccIu
             LBhdqw1R4zgw0zIIsJ+so6PDETkniCePobflWTHfuRVutPolS0U9CMxwph0gL52ubx3Lew2/COIK
@@ -74138,6 +73922,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             5ckzIPvUHPDlu3r9a5a9veHYspwbCe7ypdAfiJTqgFm6A6JsDFhqnnZSnF/bBF7uqFOEFrXI1bSW
             RUeYOKK078r09+NCSyU21dbgRRy0OilsU8XaCfsVN+O9j+ete6HZcL61jTctbF9umekbciatZZjp
             YXINjQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="3ff361466e10abdcf9f48b61ea07bf29a845c977af6ca79ae43997be6bbb4768">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhR62htmyxx7r+JI6Qd+/GyRzTXIwA3VP
+            EPABtjFSbzvEBXbK0jkY38Op8A1JcpNVw1EqswX2pq2MRkI9NAYEYa7iewffVvz8plpE73jcPCs/
+            Q89u6+Wk0QnYjLw/JEkemA4/NmUwsdP+d+HZ7VWQr1DGnG2/cjc3STjZP93FKVtCWzh102UqGMJy
+            lEW3vpgppt+k3EuwDIHz4L7A1CMN6GxR2jP1AsrQernNl6P9fxgG398azqAFRlIuOIIwv5Hnx87i
+            xfkOrNiL9Sb1ck0rAMXiox7KQ586D4PKIiWKyMFsFf/8Q4B4lqtQ5jaxd6hqP3OqtarWk2JJ/0Vo
+            Rteh9QIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="4249f6df3aa3fbb07754956b7053a9265af417d4bb34368570c21303256d953c">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl8a82iIIi9QaUGjZ55ccWEpUZLPHwIjU
@@ -74326,14 +74118,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             Yu1oSCsJhou/ewgSv4Rdpnih78uAh8Fo1+C5OMKphhTWJyrYgschPeO5NDHoFIEKtFGN9ET6D/PA
             KC1Dxmy4Y54NfT3XldF6gZVWKR1EzBBGblLbMJ0y9H6JaHfD2Qt+bFEJYMNqcLdx2FidVKxG2OTd
             y6OcS7dp2HWE1Dg508Ye2F5PhF/Hx6PXIWUzcveF0jECAwEAAQ==
-        </rsa-public-key>
-        <rsa-public-key sha-256="5859a960108da193e4b880fa29136baf61620548a4d8b865c7a57e76b0cfa26e">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiARYdG0TnoOZFgLMvI74GtHNKqMOkg/p
-            uaPCOHpeXfGHrmueWQ/lvHnk2RdCStwH5pc3aUXS9X0oAE7HP2kvnf4YQ50wgfmKkPW/mLocu5Iw
-            GMHBEzxP7o+NS6wkUq+veQdj483c7bbvafVVARRC7RaYuS5QacR2v8C7VyKdIu7CDdrdEw8rjeLl
-            pH8bP4pZVFkjVSoLTWM/0m0Hk5O8oif2ukHWM3Vyrk5/jqBu24K81mFlEoIy/yVk8txcADbm3Or2
-            9b72RgKXV+5CTGUkGlou6CFWiaBqnm/4lWG6Lqq/SjAxpGbiDJsWBOE/PboeM+mhO7Q0g5e7n3n+
-            31JvVQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="591befea95c88ef86539d795f18891847517e66666b9a3a509501e6f0b345f88">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiqmHlciA+DI27D/E1kDJfzNh3blTBywK
@@ -74590,6 +74374,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             VI7KEfxjhP73ptceJErZtYLQhz+IxGe8e9yMifaGRFtTQ+0+QLop41GesoIK9eZSbOOvQk3fAupm
             LryyVAzv9K5aWZ8Q5/Y6fYBk5LJ+PP/dBeSqYHfhQtZ4Bz5IBhIE7Ttuo92cRmlTTClOtdWv73pX
             XiiAtQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="77c227902687b572c522ccc3636e457ffccff39c59b662bfdd2e4253c3768553">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQ6g9kyJcUtp4rNhnYRbbjvZEITyi9LN
+            7ED3o6jZhE6CNTkI1ViE7C+Wq/CKYohaNtWeJ9mUsTymqslPN77fG3tVzI1bENwB/3IV1k/bfzuQ
+            aZftbdVaMFkP/af4Fc7S0C0sz2piTn93tOcjR0hYK7Dv730IuzOb/6eH3i+f3E2nTni3PveuVAac
+            NKrzH3vI/ccY21anMwdH5WtWkmr/44t3oMtoLtt8yOf+6IeIB5lghDV64lLZytxL9V3dn2gnXkNB
+            qMeQC0onbJl/berxbTnJgO60KMVrbc7fx/p3vE6ZpdXfc/jB7h8Hezs3bHXoovmuhgNsTSMuy/Xl
+            IxaKdQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="77f3d8005094e193ce946aed4c22beeec9959c5413b42c30725a223d81ae41e6">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5+omNlbbcRwmrPY6ohmcmse6+NDLs1DT
@@ -75047,6 +74839,22 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             oR5fCyrZGSpfrDMkBukGccGwNv6iy8ShGRObAtWf+DbeKLQqIzlHtnRSKmTfXDgXsPimuUceCgFE
             YHWgqQIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="b6422213624622e89f723a675fac49e812aaabf2fc538bfa2567c763c2db7ebb">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA32HR5Xrpe0QtIhpjTzLwmxF7wM8MPFZE
+            05f77lA0mxRWPtMLHmb8UaxYTcwSuf2LfrUp5OIC6wB4h09qMVWlAo1z0q8vAWhhc3lBRdJqNAlM
+            i5L3bQSxcELzspdGzRblgBxZmiERXrTT/wLBQmdS9qo+rdXJ8/Pp9JEOPXIwK1wryB1cxMWEJ/ZL
+            dziV5+ur6GIJtz0e3nJTZ39LvjbGhQasLJ5l3iaaNLZrQmcogpKGTZ+OG8smAwDuxkWcUs/ahK0a
+            Czw0Fp/81dAufvz86K5Evb7tIErGXEGFjLHGUkZYICp2vWOyut8x3nm4DpjC2LJc9e8638DDiVhb
+            pI8L1wIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="b8d634c80f526013aafd5422839065f69046232dcdea0967100818dc4320044a">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq3E4FByfaxNheJV1//nRmppQ20xbbEQh
+            llzM6fAECwZedIA1qt+mpZlyY3iCWqXemIvOlecPdO8d2U6mKC8nXMRXDC7nNYm/2DuPsyjWV9jO
+            hvl1a2gzPYthI0SXqnS/27ocwXfa+9MDk7UJ47sFWdJ5KRA1W14g85jNTBd8yT/p3LwgCFS5btuL
+            C5xntQ1kZHgLPJoH/04rdgt9JwCm7ySblf3iXNuz6l3UCK+wNkukPZ32/iKw1pee+O6p8gtUmALL
+            51Zw53tv6Z/JpgfcBcLXZ94zeIoDNdyGO3eF9L4r6tfeJtoqhBYRfiM8Ut/lKzsnrQXCVvZ3YK+F
+            /0jEmwIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="bafe81336e77886c0a5c7c9b66357dd1f01fc557216d7959f57e5c117b114fb1">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkK2tDt7DXtkmbrDM0d0IRWiLtnZ5EepO
             akXBEIqK44EfHltITICsrL3m5VcGzNnnl2hAFphwN5AHhKw7eZ2cX+Il13elx9W3hmpt6rZuJb1O
@@ -75054,14 +74862,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             Utk+K/WJ27XbWnm//OMKRiTEMVPs/E680D6GlzDCRvPK8pzHv0Uviqaf0aw6HNdSGAWtlmtB/Axe
             grMhaEba3LdKUbJ5cxjmubgF3Wjp+vlaR8RmWqu1gOLb6i6/TY/UlcSbwhV2Wkh/JmEF/yFqM1+Q
             recmnQIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="bb447047cd73a0630c4f8f81e78a1f258228200401357dcb14393be2827f2cda">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnllXODgPa+BAw7gIqkvyfvIClU6c0RvL
-            BwwOLMTenaJEhl5ElFKw+SJnFW/O+3HYS5jwLaVRQeRr4vgYZBhb4nS5EIw5R7TrSYU9MU+rJR2G
-            Vy2hjO8DPaHNI4JxUz6x4vymNrlDnVfSlVEdYfRChNx48J14paK1Cnz9ecxg7UfqW69cUqwytG6L
-            jH+F/RTTmLB6AzLJe4Otkspj3+uVHHiIbK2yCBaIhwRl7CHoGL4HHf9ZqvANOTrskm0RkDfHvsNB
-            9UQBb9yz1vHbJqmEVle1XwnZHQr1iRa7XY1DhwDG91uGLYPLt8lhp7w+spRy+SEmLPu1RQjLdENt
-            Sn/ZfwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="bc0dd4ad2e36bd7dffec58e930f589ab241033ef8fafbfb6e2a8cb51f2eea5dc">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgZUxYuX/fkKZQujFrIxdfTP4cDZKfW5i
@@ -75152,14 +74952,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             5D03uBzVlYAUidJiT30BPMydU5vXo5YjZyIak/scjpLl4m2d9XSeeMs4CNJV6Hs0PM3jyxdQtCpe
             aDNcKgv9wJNL6gpXiazUeIBRNq0AiP53HNIwYXiBF6wxps1W6q6CKgfixQdLhqXl+SGdRv0tzoqs
             SSdpTwIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="c2044e9608681fcb3d79200858965074d1b9c2f9875826c7e5c240d4c5936ff9">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjXCi5PQnA2Mg0IjPTjmagP9vB6oU6lqw
-            8+ub6lyGKiCXeXCXJ1fx+41glq2ciS4cjW/uE09tn5j6q2FOri/iufIma1AnyaOEWNKejRhWMril
-            xbe3ICEUDYHBmrgRuhC/OtH1rU5FNYuvM8Q/ub9/oR//bNel3fH6gF4oFVBdLqPv7RkkmNj0FUYf
-            1G85PPWblKdK1iePw9zfWiZVHpb7lAhGXLWQWE2mY/bJaWyKQCaMaUalFo+qiegCRGKIWmy73wcS
-            8oD/wBCHWH5ZlTIvv7mxHtytLOkuLErrLRvA1PaKYzjuYMgx8ImHrzSvwwxds+6X18ZNxazsTgJo
-            1kGmlwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="c428f181296f404aaad8b6e0c579da33975041a3f227d4a895e81cfe612b48bc">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk2UYsNTzCqLmffJ8zDbehbNfeJQbr8Qm
