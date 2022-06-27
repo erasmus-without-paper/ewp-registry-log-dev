@@ -24602,14 +24602,14 @@
         </server-credentials-in-use>
     </host>
     <host>
-        <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
-        <ewp:admin-notes>Project manager of UPV/EHU integration with EWP Network</ewp:admin-notes>
+        <ewp:admin-email>ewp@ehu.es</ewp:admin-email>
+        <ewp:admin-notes>Provider: University of The Basque Country</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
                 <d5:url>https://app-demo.ehu.eus/ewp/manifest.xml</d5:url>
             </d5:discovery>
             <e2:echo version="2.0.0">
-                <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
+                <ewp:admin-email>ewp@ehu.es</ewp:admin-email>
                 <ewp:admin-notes/>
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -24649,11 +24649,89 @@
                 <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://app-demo.ehu.eus/ewpcv/iias/get</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://app-demo.ehu.eus/ewpcv/iias/index</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://app-demo.ehu.eus/ewpcv/iias/cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://app-demo.ehu.eus/ewpcv/iias/approval/get</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+                <iaa1:sends-notifications/>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://app-demo.ehu.eus/ewpcv/iias/approval/cnr</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://app-demo.ehu.eus/ewpcv/factsheet/get</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
+                <ewp:admin-email>ewp@ehu.es</ewp:admin-email>
                 <ewp:admin-notes/>
                 <om1:http-security>
                     <sec:client-auth-methods>
@@ -24673,7 +24751,7 @@
                 xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
+                <ewp:admin-email>ewp@ehu.es</ewp:admin-email>
                 <ewp:admin-notes/>
                 <omc1:http-security>
                     <sec:client-auth-methods>
@@ -24691,7 +24769,7 @@
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.1"
             >
-                <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
+                <ewp:admin-email>ewp@ehu.es</ewp:admin-email>
                 <ewp:admin-notes/>
                 <oml1:http-security>
                     <sec:client-auth-methods>
@@ -24711,7 +24789,7 @@
                 xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <ewp:admin-email>inaki.sastre@ehu.eus</ewp:admin-email>
+                <ewp:admin-email>ewp@ehu.es</ewp:admin-email>
                 <ewp:admin-notes/>
                 <omlc1:http-security>
                     <sec:client-auth-methods>
