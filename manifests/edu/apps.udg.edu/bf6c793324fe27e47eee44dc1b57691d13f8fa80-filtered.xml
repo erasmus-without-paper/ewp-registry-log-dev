@@ -32,24 +32,45 @@
                 <ns25:url>https://apps.udg.edu:1443/ewpapitest/discovery</ns25:url>
             </ns25:discovery>
             <ns24:echo version="2.0.1">
+                <admin-notes>Echo service covered by tls or httpSig security</admin-notes>
                 <ns24:http-security>
                     <ns5:client-auth-methods>
-                        <httpsig
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+                        <cli-sec2:httpsig
+                            xmlns:cli-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                            xmlns:cli-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
                             xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
                             xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
                             xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
                             xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+                            xmlns:srv-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+                            xmlns:srv-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         />
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+                        <srv-sec:tlscert
+                            xmlns:srv-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                            xmlns:cli-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            xmlns:cli-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
                             xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
                             xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
                             xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
                             xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+                            xmlns:srv-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        />
+                        <srv-sec2:httpsig
+                            xmlns:srv-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                            xmlns:cli-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            xmlns:cli-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+                            xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+                            xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+                            xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                            xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+                            xmlns:srv-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         />
                     </ns5:server-auth-methods>
@@ -67,7 +88,7 @@
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
             <ns3:certificate>
-        MIIHZTCCBU2gAwIBAgIRAO8Mg2kaaVzMx/pL46ENPKgwDQYJKoZIhvcNAQEMBQAw
+  MIIHZTCCBU2gAwIBAgIRAO8Mg2kaaVzMx/pL46ENPKgwDQYJKoZIhvcNAQEMBQAw
         RDELMAkGA1UEBhMCTkwxGTAXBgNVBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNV
         BAMTEUdFQU5UIE9WIFJTQSBDQSA0MB4XDTIxMDYxNzAwMDAwMFoXDTIyMDYxNzIz
         NTk1OVowZTELMAkGA1UEBhMCRVMxDzANBgNVBAgTBkdpcm9uYTEPMA0GA1UEBxMG
@@ -107,7 +128,7 @@
         cVN5jOcalVUp27IemYmR3mP+ZZCQRhYCwv6H/NXp9zKy0/VveUjrVniA6oPxJxqi
         L0PMGHe8IDLnyBSR514NkduywzrTKPtawm80pUE5+bD4hbUhzMQg+Fb5cLrboSiC
         pgkF5acaPeohTaSbRMJrx9C5t4Cq66DZeA==
-      </ns3:certificate>
+                </ns3:certificate>
             <ns3:rsa-public-key>
         MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp7Ln6xSxxdsYX0R/UHC8
         azlQIV64PHz/kh2u4tIB0nMURUCPUYb045l5ck8ZI4BiLGw7Qpo6rmWI99K0dje0
@@ -116,7 +137,7 @@
         VAR0Fi3fmFYk7GzjsAjklK1XXeWu5bxxZrYhC25a7ZKJFe22biy+ussehAGLd8Hn
         i38mlGCDwsj082AV83urSAIu5O7tf18cfD9ISIx05ZbS6Zog9x5bUTWmr9Yz521p
         fQIDAQAB
-      </ns3:rsa-public-key>
+                </ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
             <ns3:rsa-public-key>
@@ -127,7 +148,7 @@
         VAR0Fi3fmFYk7GzjsAjklK1XXeWu5bxxZrYhC25a7ZKJFe22biy+ussehAGLd8Hn
         i38mlGCDwsj082AV83urSAIu5O7tf18cfD9ISIx05ZbS6Zog9x5bUTWmr9Yz521p
         fQIDAQAB
-      </ns3:rsa-public-key>
+                </ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
