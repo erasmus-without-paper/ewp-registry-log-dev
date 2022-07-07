@@ -1,0 +1,295 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
+    xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
+>
+    <host>
+        <ewp:admin-email>ewp@kion.com.tr</ewp:admin-email>
+        <ewp:admin-notes/>
+        <r:apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://dev.ewp.kion.com.tr/api/manifest/mgu</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev.ewp.kion.com.tr/api/echo/mgu</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev.ewp.kion.com.tr/api/institutions/mgu</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev.ewp.kion.com.tr/api/organizationalunits/mgu</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia6:iias version="6.0.1">
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get/mgu</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index/mgu</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/cnr/mgu</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval version="1.0.0">
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/mgu</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr version="1.0.0">
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/cnr/mgu</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet version="1.0.0">
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/factsheet/mgu</f1:url>
+                <f1:max-hei-ids>25</f1:max-hei-ids>
+            </f1:factsheet>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/get/mgu</get-url>
+                <index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/index/mgu</index-url>
+                <max-omobility-ids>25</max-omobility-ids>
+                <sends-notifications/>
+            </omobilities>
+            <omobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/cnr/mgu</url>
+                <max-omobility-ids>25</max-omobility-ids>
+            </omobility-cnr>
+            <imobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/incomingmobilities/get/mgu</get-url>
+                <max-omobility-ids>25</max-omobility-ids>
+                <sends-notifications/>
+            </imobilities>
+            <imobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/incomingmobilities/cnr/mgu</url>
+                <max-omobility-ids>25</max-omobility-ids>
+            </imobility-cnr>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/get/mgu</get-url>
+                <index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/index/mgu</index-url>
+                <update-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/update/mgu</update-url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-las>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/cnr/mgu</url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-la-cnr>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="mgu.edu.tr">
+                <r:other-id type="pic">900575258</r:other-id>
+                <r:other-id type="erasmus">TR ANKARA26</r:other-id>
+                <r:name xml:lang="tr">Ankara Müzik ve Güzel Sanatlar Üniversitesi</r:name>
+                <r:name xml:lang="en">Ankara Music and Fine Arts University</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIID9TCCAt2gAwIBAgIUQEpzdAmCU9GWPRSxogQA2lyNOfswDQYJKoZIhvcNAQELBQAwgYgxCzAJ
+BgNVBAYTAnRyMQ8wDQYDVQQIDAZ0dXJrZXkxETAPBgNVBAcMCGlzdGFuYnVsMQ0wCwYDVQQKDARr
+aW9uMRIwEAYDVQQLDAlleGNobmFnZXIxEjAQBgNVBAMMCWV4Y2hhbmdlcjEeMBwGCSqGSIb3DQEJ
+ARYPZXdwQGtpb24uY29tLnRyMCAXDTIyMDcwNjEzMzQwMloYDzIxMjIwNjEyMTMzNDAyWjCBiDEL
+MAkGA1UEBhMCdHIxDzANBgNVBAgMBnR1cmtleTERMA8GA1UEBwwIaXN0YW5idWwxDTALBgNVBAoM
+BGtpb24xEjAQBgNVBAsMCWV4Y2huYWdlcjESMBAGA1UEAwwJZXhjaGFuZ2VyMR4wHAYJKoZIhvcN
+AQkBFg9ld3BAa2lvbi5jb20udHIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4HGKB
+dmophxfS5oBHaaQJiEv81ajN7CJsipHoI3JKqZNabqiXWRy65SDwc+LsLGfBAZp53b2s0P5Uc7f9
+tew4S5MyY1iKOoOb1IdTqx5XSpjowsLaaIArvbCTvshTkv8m9Z3pqX/07WWtEpCLPum1INzF0ASf
+fHkZwvFWpNtlkS8gVE80W+fbbxGXtNhZ9LaJbXjuvKYWSPStKVx98ECkQRgvnIt/AHughdtqlpgT
+DdpXnEQzmXf0tIQw/D6DkRdGbL6NouEM9CMD78ihTi24qYG0f4TjLZllMpdbLIYmXJENqat6b7H2
+RCzmELUV26KoqZhFzGL+3fjX0YRJ9aKVAgMBAAGjUzBRMB0GA1UdDgQWBBTsivsCTi+sQ+SMry0i
+obLmlmkTNzAfBgNVHSMEGDAWgBTsivsCTi+sQ+SMry0iobLmlmkTNzAPBgNVHRMBAf8EBTADAQH/
+MA0GCSqGSIb3DQEBCwUAA4IBAQCs7icnoPZjuqjw2g5x4Nfk7FgXz7DB3ClY2QhOvlzWHpqALxnZ
+a7B/sThT+O/ztLWma9RpEvPFW80KgoFi+XuG6miRrvqC6Q+2XockYYsn5U1j3v9FMd92aoTBwKWc
+TPn0Yd7XYeHNKZZ4kT3Itga/LAWJkAVRVE1JMTc0bNyJmREH19k7TaoFqs4Ae25RSgzGcz4eXHb7
+U7MkJmlxnwQjy1/1B8ERmll+bkAACATBLqWAPBqfKUgQSZXxI0qukktr92Vjz10fSbJqBKFJxYT7
+IkpMIdQ8HTQ+QLC5/fFqzO9PTeDy5KeiOnxXbSU5VE9WIefSI8pbfrbJHHFYpCYb</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuBxigXZqKYcX0uaAR2mk
+CYhL/NWozewibIqR6CNySqmTWm6ol1kcuuUg8HPi7CxnwQGaed29rND+VHO3/bXs
+OEuTMmNYijqDm9SHU6seV0qY6MLC2miAK72wk77IU5L/JvWd6al/9O1lrRKQiz7p
+tSDcxdAEn3x5GcLxVqTbZZEvIFRPNFvn228Rl7TYWfS2iW147rymFkj0rSlcffBA
+pEEYL5yLfwB7oIXbapaYEw3aV5xEM5l39LSEMPw+g5EXRmy+jaLhDPQjA+/IoU4t
+uKmBtH+E4y2ZZTKXWyyGJlyRDamrem+x9kQs5hC1FduiqKmYRcxi/t3419GESfWi
+lQIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuBxigXZqKYcX0uaAR2mk
+CYhL/NWozewibIqR6CNySqmTWm6ol1kcuuUg8HPi7CxnwQGaed29rND+VHO3/bXs
+OEuTMmNYijqDm9SHU6seV0qY6MLC2miAK72wk77IU5L/JvWd6al/9O1lrRKQiz7p
+tSDcxdAEn3x5GcLxVqTbZZEvIFRPNFvn228Rl7TYWfS2iW147rymFkj0rSlcffBA
+pEEYL5yLfwB7oIXbapaYEw3aV5xEM5l39LSEMPw+g5EXRmy+jaLhDPQjA+/IoU4t
+uKmBtH+E4y2ZZTKXWyyGJlyRDamrem+x9kQs5hC1FduiqKmYRcxi/t3419GESfWi
+lQIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
