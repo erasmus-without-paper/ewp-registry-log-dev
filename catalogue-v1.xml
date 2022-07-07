@@ -24432,6 +24432,255 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp@kion.com.tr</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://dev.ewp.kion.com.tr/api/manifest/ihu</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev.ewp.kion.com.tr/api/echo/ihu</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev.ewp.kion.com.tr/api/institutions/ihu</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev.ewp.kion.com.tr/api/organizationalunits/ihu</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get/ihu</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index/ihu</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/cnr/ihu</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/ihu</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/cnr/ihu</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/factsheet/ihu</f1:url>
+                <f1:max-hei-ids>25</f1:max-hei-ids>
+            </f1:factsheet>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/get/ihu</om1:get-url>
+                <om1:index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/index/ihu</om1:index-url>
+                <om1:max-omobility-ids>25</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/cnr/ihu</omc1:url>
+                <omc1:max-omobility-ids>25</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://dev.ewp.kion.com.tr/api/incomingmobilities/get/ihu</im1:get-url>
+                <im1:max-omobility-ids>25</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://dev.ewp.kion.com.tr/api/incomingmobilities/cnr/ihu</imc1:url>
+                <imc1:max-omobility-ids>25</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/get/ihu</oml1:get-url>
+                <oml1:index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/index/ihu</oml1:index-url>
+                <oml1:update-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/update/ihu</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/cnr/ihu</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ihu.edu.tr</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="aff7655143034605072039936b7d2d7371e49f34930923e0cbb4ec387b58e086"/>
+            <rsa-public-key sha-256="8eafbd514e3a940673a5e5ad643fc3057776e10c5abd9b8e7f4af7ec32fd1c3b"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="8eafbd514e3a940673a5e5ad643fc3057776e10c5abd9b8e7f4af7ec32fd1c3b"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>cesia.assistenzaalmarm@unibo.it</ewp:admin-email>
         <ewp:admin-provider>ALMA MATER STUDIORUM - Università di Bologna (AlmaRM)</ewp:admin-provider>
         <ewp:admin-notes>Provider: ALMA MATER STUDIORUM - Università di Bologna (AlmaRM)</ewp:admin-notes>
@@ -75492,6 +75741,12 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="en">Jesuit University Ignatianum in Krakow</name>
             <name xml:lang="pl">Akademia Ignatianum w Krakowie</name>
         </hei>
+        <hei id="ihu.edu.tr">
+            <other-id type="erasmus">TR ISTANBU66</other-id>
+            <other-id type="pic">899885976</other-id>
+            <name xml:lang="en">IBN HALDUN UNIVERSITY</name>
+            <name xml:lang="tr">IBN HALDUN ÜNİVERSİTESİ</name>
+        </hei>
         <hei id="ikea.university.se">
             <other-id type="erasmus">S Ikea01</other-id>
             <other-id type="local">IK1234</other-id>
@@ -79347,6 +79602,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             jUCpe7/zR8B4k3SSxKA6kA29gBjZ62BWRD0tysSF4CRM6Imvto4XnybkvAbpcZP1vDsRxHsoaXKr
             x468HpVL+IrvmH0TqqQg0DsFC/79Vhq43fRZFn7Kg3m5kZRC1uSKBESEhdRniZINP7k8SYOobR5b
             DhbVnQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="8eafbd514e3a940673a5e5ad643fc3057776e10c5abd9b8e7f4af7ec32fd1c3b">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3C+GfrXNOtqSFOzRNZqU3hpdvHIgmyvh
+            eAMPd8dxouhCkFMWk/kKc4AZ1azjRpVAsG7x7tvvLqRKCont8oyg+KjSA8H5aqbjN3hg3DJk5ooO
+            WEOA8eZa8sk7muA4xgiMg3fwb78EjLHwx5E12q638p8ElZY4CpBJ+MK5qI7jqiMEhqdb9PGeeb7o
+            J2INmi4z2pzdI9Yn9NpVatvLPcNIyElM2itFLA+g/NI6uUR1BlyTD2Ogts7/NQOP718QFOVIcqA4
+            D0XPgMyq0eRotbBtlD4lPqHDV0G3DPp2zNVHKXQXKoXyZTj3gOBiFvcOgry8O8SoZm4DJmPGnENH
+            D+VsuQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="8f38066bcaf7c642a005bf9b44c92e3c9dd085489ffd854880799b9cae9b6f28">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2aXp1oDhMW4luid1n8kPedFnXUixfbNK
