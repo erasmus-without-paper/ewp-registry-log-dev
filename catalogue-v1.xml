@@ -22191,6 +22191,255 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp@kion.com.tr</ewp:admin-email>
+        <apis-implemented>
+            <d5:discovery version="5.0.0">
+                <d5:url>https://dev.ewp.kion.com.tr/api/manifest/ebyu</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev.ewp.kion.com.tr/api/echo/ebyu</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev.ewp.kion.com.tr/api/institutions/ebyu</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev.ewp.kion.com.tr/api/organizationalunits/ebyu</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia6:iias
+                xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get/ebyu</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index/ebyu</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/cnr/ebyu</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval
+                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/ebyu</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr
+                xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/cnr/ebyu</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/factsheet/ebyu</f1:url>
+                <f1:max-hei-ids>25</f1:max-hei-ids>
+            </f1:factsheet>
+            <om1:omobilities
+                xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/get/ebyu</om1:get-url>
+                <om1:index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/index/ebyu</om1:index-url>
+                <om1:max-omobility-ids>25</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/cnr/ebyu</omc1:url>
+                <omc1:max-omobility-ids>25</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://dev.ewp.kion.com.tr/api/incomingmobilities/get/ebyu</im1:get-url>
+                <im1:max-omobility-ids>25</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://dev.ewp.kion.com.tr/api/incomingmobilities/cnr/ebyu</imc1:url>
+                <imc1:max-omobility-ids>25</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/get/ebyu</oml1:get-url>
+                <oml1:index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/index/ebyu</oml1:index-url>
+                <oml1:update-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/update/ebyu</oml1:update-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/cnr/ebyu</omlc1:url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>ebyu.edu.tr</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="2a072805106292da280bf01deb300be44d9027ed64445420345b12482c4c0146"/>
+            <rsa-public-key sha-256="c8e41bcb9c2b199d0c71a9673ec6760b60977e2b4e80236df64c7b1ed24389e8"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="c8e41bcb9c2b199d0c71a9673ec6760b60977e2b4e80236df64c7b1ed24389e8"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>cesia.assistenzaalmarm@unibo.it</ewp:admin-email>
         <ewp:admin-provider>ALMA MATER STUDIORUM - Università di Bologna (AlmaRM)</ewp:admin-provider>
         <ewp:admin-notes>Provider: ALMA MATER STUDIORUM - Università di Bologna (AlmaRM)</ewp:admin-notes>
@@ -72409,6 +72658,12 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <name xml:lang="de">EBS Universität für Wirtschaft und Recht</name>
             <name xml:lang="en">EBS UNIVERSITY FOR BUSINESS AND LAW</name>
         </hei>
+        <hei id="ebyu.edu.tr">
+            <other-id type="erasmus">TR ERZINCA01</other-id>
+            <other-id type="pic">941937707</other-id>
+            <name xml:lang="en">Erzincan Binali Yildirim University</name>
+            <name xml:lang="tr">Erzincan Binali Yildirim Üniversitesi</name>
+        </hei>
         <hei id="ec.europa.eu">
             <name xml:lang="en">Mobility Tool+</name>
         </hei>
@@ -77438,6 +77693,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             ZxRB9tKJAQeNjcQWXsxTEJlxDIJbrcTe4ck1twBjCNvXE2cL+RUHXU/1G5kHqVe8iLFVZxDvv2KZ
             syjwJAqRhr9TuJSbB5qb1bzS38C6JY40rFZb4C2FJpszbizAEHHPKoKRNNmer9jJHsmMIxIh526B
             b4n/bQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="c8e41bcb9c2b199d0c71a9673ec6760b60977e2b4e80236df64c7b1ed24389e8">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0HdLeqJQ56n/aj8W3+R381VfFZtCBTTx
+            ZbKIj3ey9SqAwz7YX8kA0JJ2N634EHo9l4kVGypT0ekaDUe8Xd3zAa17oM0n4uEpv+5fdKlwm0X0
+            Px6o6pIZaF0DMbrRdvK1VZcqWKJCX9T9dXvHRCA/dQZeJruJzBkOPeoXWid5N2o7lfHio/SBZi8z
+            O3xdwwFOEVtz9pzEn2BGR7dA23AefS385sTr4fQC83PzfHHyU3fUiCcBmCnxQQ6x/DMdXDUr4ZYb
+            9VOEoAh+tI0m+rn5muEUtfRgjfCXVFui0DrxQihHI5Yg3cJ+mKuhFAsrFGR5oGEinCNuAbWanR82
+            rWYgFwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="c8e5d7e16a87ff8f0091078823a35b3d82d0f7f354c9344153d1338faa86d97a">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA8quGM4qLGt9c4a3m3tEkaZWP2d+TojiM
