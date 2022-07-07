@@ -97,11 +97,11 @@
             <hei-id>validator-hei02.developers.erasmuswithoutpaper.eu</hei-id>
         </institutions-covered>
         <client-credentials-in-use>
-            <certificate sha-256="44cee9b5a0b41bad8d72aa7b14f3d02d52ed7fc872a4a16e81b903e96837f303"/>
-            <rsa-public-key sha-256="24646e827df4ef6a94ed2be1cbc1d3c38f6e43b8d786b2c04854bee417face26"/>
+            <certificate sha-256="846fdcd3dd1ef4fafe7543ce2de33a34c82eaddfc676224584c12641534f18e1"/>
+            <rsa-public-key sha-256="1fb1511115d0f3b28eed7c1c78ed56705cd7ae17cc862fcff0305664c76afe72"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="8113ebac3e5c3d50075eb3e486ad6131ce34174dbd4ec916fff2e5a7d685295a"/>
+            <rsa-public-key sha-256="d11d976069cdf6976c458c8117b32bfca936ab05f7ab7a179409e911b496dc66"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -111,11 +111,11 @@
             <fake-api-without-a-version xmlns="https://github.com/erasmus-without-paper/ewp-registry-service/issues/8"/>
         </apis-implemented>
         <client-credentials-in-use>
-            <certificate sha-256="a47f40ef496ca5ec64efb1d464b27c00101a93d373278095aeab6d91bd0f7b8f"/>
-            <rsa-public-key sha-256="6ec2864860b48dde0905e7b813ee7a18ba189f7ff7b941abf57fce818c382b57"/>
+            <certificate sha-256="08d46a3b679cca9620ad95c763bd5f310eea9a04a0f2d7cb6e1f86a90baaff3d"/>
+            <rsa-public-key sha-256="29df1803ebfa2a47c6cca8cbaf56eb96152931901683095a5892ac0e8cd470ef"/>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key sha-256="2bfbd6a2ea07b25a3442f137b9c45b017fd24bd16064b6bb636b7874c9fb2e75"/>
+            <rsa-public-key sha-256="7b678eddbb8f414f556ae97b545611bf362c4d81d9d59e27bfbe606d80977db1"/>
         </server-credentials-in-use>
     </host>
     <host>
@@ -20158,22 +20158,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://is-test.czu.cz/ewp/iias/approval-cnr.pl</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://is-test.czu.cz/ewp/iias/approval.pl</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -21680,22 +21664,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://czuewp.is4u.cz/ewp/iias/approval-cnr.pl</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://czuewp.is4u.cz/ewp/iias/approval.pl</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -22010,11 +21978,11 @@
                 <imc1:url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/cnr</imc1:url>
                 <imc1:max-omobility-ids>5</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -22023,12 +21991,12 @@
                         <sec-B2:httpsig/>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/get</get-url>
-                <index-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/index</index-url>
-                <max-omobility-ids>5</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/get</imt2:get-url>
+                <imt2:index-url>https://testes-inforestudante.uc.pt/nonio/rest/ewp/incomingmobilities/tors/index</imt2:index-url>
+                <imt2:max-omobility-ids>5</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imtc1:imobility-tor-cnr
                 xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -22853,11 +22821,11 @@
                 <co1:max-los-ids>50</co1:max-los-ids>
                 <co1:max-los-codes>50</co1:max-los-codes>
             </co1:courses>
-            <file
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+            <file1:file
+                xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <http-security>
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -22866,9 +22834,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://orinumenti.uca.es/en/ewp/general/api/courses/stable-v1</url>
-            </file>
+                </file1:http-security>
+                <file1:url>https://orinumenti.uca.es/en/ewp/general/api/courses/stable-v1</file1:url>
+            </file1:file>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.1"
@@ -22951,11 +22919,11 @@
                 <f1:url>https://orinumenti.uca.es/en/ewp/iias/api/factsheet/stable-v1</f1:url>
                 <f1:max-hei-ids>50</f1:max-hei-ids>
             </f1:factsheet>
-            <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+            <om2:omobilities
+                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A1:tlscert allows-self-signed="true"/>
                         <sec-A2:httpsig/>
@@ -22964,12 +22932,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://orinumenti.uca.es/en/ewp/omobilities/api/get/stable-v2/</get-url>
-                <index-url>https://orinumenti.uca.es/en/ewp/omobilities/api/index/stable-v2/</index-url>
-                <max-omobility-ids>50</max-omobility-ids>
-                <sends-notifications/>
-            </omobilities>
+                </om2:http-security>
+                <om2:get-url>https://orinumenti.uca.es/en/ewp/omobilities/api/get/stable-v2/</om2:get-url>
+                <om2:index-url>https://orinumenti.uca.es/en/ewp/omobilities/api/index/stable-v2/</om2:index-url>
+                <om2:max-omobility-ids>50</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <omc1:omobility-cnr
                 xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -24310,24 +24278,6 @@
                 </iac2:http-security>
                 <iac2:url>https://app-demo.ehu.eus/ewpcv/iias/cnr</iac2:url>
             </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://app-demo.ehu.eus/ewpcv/iias/approval/get</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -25379,24 +25329,6 @@
                 </iac2:http-security>
                 <iac2:url>https://ewp.test.uksw.edu.pl/ewp/iia/cnr</iac2:url>
             </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A1:tlscert allows-self-signed="true"/>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://ewp.test.uksw.edu.pl/ewp/iia/approval</iaa1:url>
-                <iaa1:max-iia-ids>100</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.0"
@@ -26951,23 +26883,6 @@
                 </iac2:http-security>
                 <iac2:url>https://esse3test.iulm.it/ewp/connector/IIACnr.do</iac2:url>
             </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://esse3test.iulm.it/ewp/connector/IIAAppr.do</iaa1:url>
-                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.0"
@@ -27079,11 +26994,11 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <file
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+            <file1:file
+                xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <http-security>
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -27091,9 +27006,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://test.isois.ois.muni.cz/en/ewp/file/</url>
-            </file>
+                </file1:http-security>
+                <file1:url>https://test.isois.ois.muni.cz/en/ewp/file/</file1:url>
+            </file1:file>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.1.0"
@@ -27172,11 +27087,11 @@
                 <f1:url>https://test.isois.ois.muni.cz/en/ewp/factsheet/</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+            <om2:omobilities
+                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -27184,12 +27099,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</get-url>
-                <index-url>https://test.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </omobilities>
+                </om2:http-security>
+                <om2:get-url>https://test.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</om2:get-url>
+                <om2:index-url>https://test.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</om2:index-url>
+                <om2:max-omobility-ids>1</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -27291,11 +27206,11 @@
                 <imc1:url>https://test.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -27303,12 +27218,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</get-url>
-                <index-url>https://test.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://test.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</imt2:get-url>
+                <imt2:index-url>https://test.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</imt2:index-url>
+                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imt1:imobility-tors
                 xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -27439,11 +27354,11 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <file
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+            <file1:file
+                xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <http-security>
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -27451,9 +27366,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://demo.isois.ois.muni.cz/en/ewp/file/</url>
-            </file>
+                </file1:http-security>
+                <file1:url>https://demo.isois.ois.muni.cz/en/ewp/file/</file1:url>
+            </file1:file>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.1.0"
@@ -27532,11 +27447,11 @@
                 <f1:url>https://demo.isois.ois.muni.cz/en/ewp/factsheet/</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+            <om2:omobilities
+                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -27544,12 +27459,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://demo.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</get-url>
-                <index-url>https://demo.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </omobilities>
+                </om2:http-security>
+                <om2:get-url>https://demo.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</om2:get-url>
+                <om2:index-url>https://demo.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</om2:index-url>
+                <om2:max-omobility-ids>1</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -27651,11 +27566,11 @@
                 <imc1:url>https://demo.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -27663,12 +27578,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</get-url>
-                <index-url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</imt2:get-url>
+                <imt2:index-url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</imt2:index-url>
+                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imt1:imobility-tors
                 xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -33527,11 +33442,11 @@
                 <imc1:url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/cnr</imc1:url>
                 <imc1:max-omobility-ids>5</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                         <sec-A1:tlscert allows-self-signed="true"/>
@@ -33540,12 +33455,12 @@
                         <sec-B2:httpsig/>
                         <sec-B1:tlscert/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/get</get-url>
-                <index-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/index</index-url>
-                <max-omobility-ids>5</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/get</imt2:get-url>
+                <imt2:index-url>https://testes-inforestudante.ipc.pt/nonio/rest/ewp/incomingmobilities/tors/index</imt2:index-url>
+                <imt2:max-omobility-ids>5</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imtc1:imobility-tor-cnr
                 xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -34814,23 +34729,6 @@
                 </iac2:http-security>
                 <iac2:url>https://esse3test.unimarconi.it/ewp/connector/IIACnr.do</iac2:url>
             </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://esse3test.unimarconi.it/ewp/connector/IIAAppr.do</iaa1:url>
-                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.0"
@@ -35545,23 +35443,6 @@
                 </iac2:http-security>
                 <iac2:url>https://didatticatest.unistrasi.it/ewp/connector/IIACnr.do</iac2:url>
             </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://didatticatest.unistrasi.it/ewp/connector/IIAAppr.do</iaa1:url>
-                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.0"
@@ -38611,11 +38492,11 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <file
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+            <file1:file
+                xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <http-security>
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -38623,9 +38504,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://test.slu.isois.ois.muni.cz/en/ewp/file/</url>
-            </file>
+                </file1:http-security>
+                <file1:url>https://test.slu.isois.ois.muni.cz/en/ewp/file/</file1:url>
+            </file1:file>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.1.0"
@@ -38704,11 +38585,11 @@
                 <f1:url>https://test.slu.isois.ois.muni.cz/en/ewp/factsheet/</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+            <om2:omobilities
+                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -38716,12 +38597,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</get-url>
-                <index-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </omobilities>
+                </om2:http-security>
+                <om2:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</om2:get-url>
+                <om2:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</om2:index-url>
+                <om2:max-omobility-ids>1</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -38823,11 +38704,11 @@
                 <imc1:url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -38835,12 +38716,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</get-url>
-                <index-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</imt2:get-url>
+                <imt2:index-url>https://test.slu.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</imt2:index-url>
+                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imt1:imobility-tors
                 xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -38971,11 +38852,11 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <file
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+            <file1:file
+                xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <http-security>
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -38983,9 +38864,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://test.vste.isois.ois.muni.cz/en/ewp/file/</url>
-            </file>
+                </file1:http-security>
+                <file1:url>https://test.vste.isois.ois.muni.cz/en/ewp/file/</file1:url>
+            </file1:file>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.1.0"
@@ -39064,11 +38945,11 @@
                 <f1:url>https://test.vste.isois.ois.muni.cz/en/ewp/factsheet/</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+            <om2:omobilities
+                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -39076,12 +38957,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</get-url>
-                <index-url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </omobilities>
+                </om2:http-security>
+                <om2:get-url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</om2:get-url>
+                <om2:index-url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</om2:index-url>
+                <om2:max-omobility-ids>1</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -39183,11 +39064,11 @@
                 <imc1:url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -39195,12 +39076,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</get-url>
-                <index-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</imt2:get-url>
+                <imt2:index-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</imt2:index-url>
+                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imt1:imobility-tors
                 xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -39613,28 +39494,6 @@
                 </iac2:http-security>
                 <iac2:url>https://apps.uniroma3.it/public/erasmus/ewp-test/api/iia_cnr.aspx</iac2:url>
             </iac2:iia-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="0.2.1"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                    <sec:request-encryption-methods>
-                        <sec-C1:tls/>
-                    </sec:request-encryption-methods>
-                    <sec:response-encryption-methods>
-                        <sec-D1:tls/>
-                    </sec:response-encryption-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://apps.uniroma3.it/public/erasmus/ewp-test/api/iia_approval.aspx</iaa1:url>
-                <iaa1:max-iia-ids>10</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <iaac1:iia-approval-cnr
                 xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="0.2.0"
@@ -56629,22 +56488,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://vseewp.is4u.cz/ewp/iias/approval-cnr.pl</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://vseewp.is4u.cz/ewp/iias/approval.pl</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
         </apis-implemented>
         <institutions-covered>
             <hei-id>dev.vse.cz</hei-id>
@@ -59963,11 +59806,11 @@
                 <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
                 <cr1:supports-modified-since>true</cr1:supports-modified-since>
             </cr1:simple-course-replication>
-            <file
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+            <file1:file
+                xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <http-security>
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -59975,9 +59818,9 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://test.jamu.isois.ois.muni.cz/en/ewp/file/</url>
-            </file>
+                </file1:http-security>
+                <file1:url>https://test.jamu.isois.ois.muni.cz/en/ewp/file/</file1:url>
+            </file1:file>
             <ia6:iias
                 xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
                 version="6.1.0"
@@ -60056,11 +59899,11 @@
                 <f1:url>https://test.jamu.isois.ois.muni.cz/en/ewp/factsheet/</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+            <om2:omobilities
+                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -60068,12 +59911,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.jamu.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</get-url>
-                <index-url>https://test.jamu.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </omobilities>
+                </om2:http-security>
+                <om2:get-url>https://test.jamu.isois.ois.muni.cz/en/ewp/omobilityGet/?version=2</om2:get-url>
+                <om2:index-url>https://test.jamu.isois.ois.muni.cz/en/ewp/omobilityIndex/?version=2</om2:index-url>
+                <om2:max-omobility-ids>1</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <om1:omobilities
                 xmlns:om1="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -60175,11 +60018,11 @@
                 <imc1:url>https://test.jamu.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
                 <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <imobility-tors
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
+            <imt2:imobility-tors
+                xmlns:imt2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
-                <http-security>
+                <imt2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -60187,12 +60030,12 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://test.jamu.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</get-url>
-                <index-url>https://test.jamu.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</index-url>
-                <max-omobility-ids>1</max-omobility-ids>
-                <sends-notifications/>
-            </imobility-tors>
+                </imt2:http-security>
+                <imt2:get-url>https://test.jamu.isois.ois.muni.cz/en/ewp/imobilityTorGet/?version=2</imt2:get-url>
+                <imt2:index-url>https://test.jamu.isois.ois.muni.cz/en/ewp/imobilityTorIndex/?version=2</imt2:index-url>
+                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imt1:imobility-tors
                 xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -66135,22 +65978,6 @@
                 </iaac1:http-security>
                 <iaac1:url>https://spuewp.is4u.cz/ewp/iias/approval-cnr.pl</iaac1:url>
             </iaac1:iia-approval-cnr>
-            <iaa1:iias-approval
-                xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <iaa1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                    </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://spuewp.is4u.cz/ewp/iias/approval.pl</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-                <iaa1:sends-notifications/>
-            </iaa1:iias-approval>
             <d5:discovery version="5.1.0">
                 <d5:url>https://spuewp.is4u.cz/ewp/manifest.pl</d5:url>
             </d5:discovery>
@@ -74210,6 +74037,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             Udz8CAflkwKZr0lClflIubfzZkeX2y1zLpZq6vI2Qn/haUDjorS93tFmqs8oxxbDa9bsDM+DCo9t
             Lh8lmQIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="1fb1511115d0f3b28eed7c1c78ed56705cd7ae17cc862fcff0305664c76afe72">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnACZ175k0nJomB501U7ZIzrzJguCiDPz
+            KNh6VCnfpHWJs1FgnIEyztp2fnjqD6HwiQAILixp8h6WygcGIMDURPvKKsq/Pnfl2/p5DqnZVrgY
+            0u4boMgciSgj++r9iZt8Y5TvSnQ3b2DTeQNX6f+zwB8ULqVHe/0nQNcv3iGLeu5/SLfxAFB2VvsM
+            ggrTBglbtJt7fLS2dd7AZW4F5edVpWCoEer7/fKQNx99orbzwUQbjvZ9tgSlKbfIPyh4dsYOHbMl
+            tV+BH/QogzVlQMx+Y0o9xc5lQmcNFFDDQmkAkWA0szFyZJL6NvfMRjyytRIBTci2CQeiznVB19sQ
+            AzDJNQIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="2012292741e313b1ffadfc173066770e55624d0dd6463719583d2d366858d593">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+MqaskQsibym6agoQF4iUCDDz0QMeJ3U
             Cz2cbXgkadGE1a/IE/BvQB/M0Z/87T1QWfBv8xeNj/mfFPxaO30rYLvMTeBn0aqMRedFgtxOaamw
@@ -74233,14 +74068,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             vtNwQ+pKUjJ4GiaRzBM6XRei9yPpiVuOpmLSXYzUCTmxcbGSriEpuA9IscKONXKqiBhDrlwl7voS
             uKB3VonR6yD8v9hQ+B3KRf3mZzdRQ0OCbidUI6RJ3AS1zftvUyUidShBeYXBPR7Buz3ZGOu5NKbl
             deHp3QIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="24646e827df4ef6a94ed2be1cbc1d3c38f6e43b8d786b2c04854bee417face26">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlUS7MPTlrtUAfvJqWOB2O4n3T/6CKPay
-            x4xc991xaGP9enpki8EXVkQR+C3CA77L1mDcDV4rGUrmic9VOchEU+r1nCHbHFPut8lEJVkwtVi6
-            bRZntEl3pDwijf+X1gnHM7mR4XndqwDEaarbwokVnGcAle5EqH3bE50fLQ5b2BB6EExrdVzbKjaz
-            r4z9Uk7Ts7zDVk52+XbuHGmN8VHLUlxinxehr7x2mc0d83lFCmRztI0NcHTzWD9FAZla8FhsMc8k
-            nkPlTNQOvdwEN5MriUvja0ic5BB4KK7GVUypgSsb22DEm2oSMQsNOj+mm5gldJ2UVZkTI4ypRWBr
-            USImmwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="2727c09cfc96f2592001e93279cb35fb00efe0d4709496b84379aa393ec36952">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAhZ3ZKz3nfB+yZhNGeV/ucgf6UnvwdbOA
@@ -74270,6 +74097,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             EK4jimeVI0pCjyqgnPT7GIVnAnj/NXi06NnpaObmB7K32sbp1fGVv569sfdfGRxezG8diTeCz1is
             fLOLDQIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="29df1803ebfa2a47c6cca8cbaf56eb96152931901683095a5892ac0e8cd470ef">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlBHjdS27wHc/qYIthPoUTf+3XLIbfQlY
+            7ZhK2mw2LkaS1w9WEJrqUruZGFcx4tu/10LcEW3eCgN6JBy7QuEX54xJa6cdilJuaetQjpk6JXxR
+            FVsMgDOSHmfQoNmV6mvNpz2ZzDUl7xPuCZ9X1Q3e/ofM3PBAMgU1rja7vpsX6p0W8ef9razC/6BN
+            e3cHQU9t4sULOIwKqNS6QuJV/+arLVjGq1WjPmPqu7bC8YQYzU+8X1y9OM9KbqNAUb7c+KsClwmf
+            b2W7bflKa+tUk6fMJs2n5mzaSX+dCucpKkoTvLoS2rZD3KZOjZaVm+5OSnTe/NSIwjdBPv3+pfuW
+            v9m9ewIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="2acfce13f524ec8e4682b236ba439754afe7ff0b2e76f0d9a017018a1a274ce7">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr2ZTnCWVLgzlVBdHpc2r+kDbNOj6Q0qs
             TT2LyHUBM1OO0JpZ2kwwx7t4WAUEbXr5EfIiLCnym672cIQXIkIsLudUcikm3KjKtFu/+3FxW3Zg
@@ -74293,14 +74128,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             ALwJM01ocgb5ia1gs89waOLnjSZc2PkGTsrPN+qKjSxC2cYn92BWWziHmyyXgvitmDalvzdAi85Y
             wuk+OzTK0x1jEHSSYI4+miYdtuCyF+O0UbveLrDETycZLyhGEYFL4N3V5rvuQqnimBPTfqDvceBi
             sJO6qQIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="2bfbd6a2ea07b25a3442f137b9c45b017fd24bd16064b6bb636b7874c9fb2e75">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjDnTN47gt0LR/350G0OdpOaz/G5SSFdW
-            BJgfkPg1cemY/Ll8EyR8ENSmDZNZxb7Kz9Gnvup6HQasC+4sIN9sbIWEhgre34swSsygu8hUINGF
-            p2+g7bJ+ZDjZdeRYBnEMFX3zIilYl0bBllYFRcufnYcMl1ZyfI4Xjl11hztzirl/JwiA8A0TLb5J
-            eaS1Sc9oUBVleyXjeC1MryGwq+e/vLP/dD+m2o3IdnQoVvsiFVsM5HUArljHKlsrNVOLzmmEvYFU
-            r28HAmrFnvZZbmueXnuvomCg9/V6APWiKOft/qdpPMsJcA90LOyquZAEy9iG7vC7PzNXqlQJhz7C
-            UxsQmwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="2c0153393a76b6f76aadfdfe44528054ffd783cc9dd40f40799df5d327d96a08">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA3Qhc25PErHOLsiZ1xXhUMHgurqBBjwQy
@@ -74850,14 +74677,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             0cW6vUUUGhNIitABBbDCT6UWfi3I5U6aZ0RA3o5ey9kqbmVKGisPctHXz/grebZa3DnYfebkevBp
             oDRerQYgsBs+Ka6ZaqbIlf3uCVoWbTmFiOgdGWL6nN0CAwEAAQ==
         </rsa-public-key>
-        <rsa-public-key sha-256="6ec2864860b48dde0905e7b813ee7a18ba189f7ff7b941abf57fce818c382b57">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAioI9G8psGvqALuDjJ7VV+oSzuFnvojGs
-            tX+/+UMy3qJnf59uTUt3jCoDFlSRzUE88OMPbTvUy44PHpk2lXg+u0b7ED+FgDZ65gLmxPRRNlSu
-            Sb2BSoYXEG43A+oChT16WvkIoNaTC5Kl1RRa+o/bdMhV1DEZkfABo1Jxfkv9q/FKxLNI7NEANeZj
-            AkLg21j8Wr9FGSTpERHx1ClBaZMZwdTzySF+wcCBvlH3L5Te7yyGPPPaGaWYqj8qobDupYcPIrXm
-            i+3PDNZK/XKkBMARVXF4VkK6uQo9ScLtgnF9o2mEWgIMLaY/zWDoc6YpFgpYbuCakakg+T3OmKR/
-            +pqU6wIDAQAB
-        </rsa-public-key>
         <rsa-public-key sha-256="7082c6225b82ca65f2c0c15e1fa3a3fbe35d6749132eec2bfd396e5397e665e2">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwgZRMSnNd4V8PlDfLjSCGOjL2sHdi3Y0
             6QzGBFaGn+/769dFHG0gd8M8ZGM6LXFKOrQSPMC8DIOSB2b1YCqGAngQURv9L7FLHf2uz9L7wrio
@@ -74978,6 +74797,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             zjCOnBbkRCieLxqa4xvmx9pyun7bzSeNscb9qF/TS9vW+WPQztLqy2rJV8IeLjoQJHFh8W5szqMX
             lsen1wIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="7b678eddbb8f414f556ae97b545611bf362c4d81d9d59e27bfbe606d80977db1">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArfYQ7pu14hM0XWPHIlI3uzhZJURknEGe
+            HROho5pFRQ8WZMwjjJIoosZFlvWrXMZsKApgpS86z0pnQ6iPdINDo4+TR9dJFxPXQtvYIItMsKl0
+            Id0PtCIjCvHGF9vbqXm5P3Piap3OfJxdshWEZM4tRaT5LM5x26yBc3QcdSBrpvbhAeT6Q64Qgb4f
+            hY/wvdGtN/E/ZqYn250U39AG63eYpfrmKCTbqPqX1Dzd7hHWV/MjjzPbJ8jVJqWHOy79wDmZjPvM
+            61WDm0SPu1YKz9Kr7q7YRSblLGAyooj2QyKGTOfbjbIRdBQNAeURX/kmGfr8YcyKLASLyO57yXku
+            hsHvLQIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="7c9fde1d877c7a5caaa7cdb0d0c7cb7d3900eeb6e90e0ac5964e7e25af15beb5">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAieMki5hkqvdD0H9hTH6+yDZ8TWxOJjYo
             v5xipi12040D1MwtYaoenv8UjrymU1T+0u+VcCfYhV4sIsDslxwWrclicass3OiTNUtCUSPQjLzh
@@ -75025,14 +74852,6 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             wi4Jg5XhJm5auVKmznyAMyJjyJ0ICnLSafgtmQ+THXIJY2yPTKIkIwpZOtY/rsFXL3VoU7+oY/iS
             L/fDojs1a0R49jV5DKiELq74ZumDVv7XDDOIo1ualaX6ISvSm+Qvyg15pE7MmDdivsin1gSpxZWu
             eCZ4XwIDAQAB
-        </rsa-public-key>
-        <rsa-public-key sha-256="8113ebac3e5c3d50075eb3e486ad6131ce34174dbd4ec916fff2e5a7d685295a">
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi3Q5Nc+zS4okTiOTewzubcFDuBUD/0Py
-            zfSOIs3W/j4f2Z9j40R6A07MfJnI3SMjwJSCZk+kg4BwdzFZ5E/OAP0ktlXSlHmB/pC/5LATZ57m
-            L5pmcRJ926+lZGvKAII2plaXBB8+NePTiI0YtlbNWiXa3sXh1iR2qqhp/aGTbnQ9z3WVOCbPpnGT
-            V8HFM6Oj8DQ4SHMypzINHZeiscXjPShenhgsILgu2OUMFzQ443KuwDL4L+m8TPRKtD4gGhU/TUxD
-            v8UCbkNXNWI00RhsPziQc963Ggb30IUe9DxgtiRCL/kFqLvzoLXFsJkQwRcI9mWjCEARLnvLKs7/
-            JUZuPwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="837f800e3bad1e1e5192ee1fa8d2e4b1af3820d4c76b7c4a73dab01d4dc48aca">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArIhQ+/4CVHuoNr06Zg+26i6oWbRIUxK5
@@ -75627,6 +75446,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             q3CfwcpOa34sb9cT0AYbytqgYTMXZORDhsnyp0fYqmHYPkXWG2k7C/RYKX28fbWEtIHyvS03EeJB
             AZXybXibSuwiNMkFP9BwfbANQCfG0+E6r7nBy5Xe8yhbcdAvZ6+wR/Um+5c+v8Fbg4SBHjibuIpU
             7U0bnQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="d11d976069cdf6976c458c8117b32bfca936ab05f7ab7a179409e911b496dc66">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjmniIEWoZLl9shwWGpbvjQRVe1TrH5kL
+            FXPvHtHhMng9n8gNSEHV05Yr3/ey6rZJl9/OfM9jTimtW6aB+MRh51HpS6+ZIbF8WVayrnE+vDZE
+            DI9mijWYKIUBVVpjeKseKRMd5LmDsHOrKMv9DeZK9F9B6+TOQ00gWcpUsG02xMBmQCOWL00KQMiT
+            3Nj/yga8XtKHFHPhOvSxv1Y9rMbp8N37eONz+MJdEtiQxUYkNHiE7NrKz/kyu9IyqLIy7+vm65+F
+            JVLIj2qClPX1c1PGRpiaoqyycbl6b6vV9lrONzwE0KYw0cMa8xp/0KNdmG2MJyuAeMxosePLODOE
+            sRUpAwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="d205a43cc41c2efbab7ca2734fab616acdabadf9a30d8459a66cd67cb036a933">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjLqHBzKSzVlERDODNl0axWSyB7IWfrIc
