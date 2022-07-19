@@ -17,6 +17,8 @@
     xmlns:sec-none="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:sec-ssig="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:sec-stls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:tors="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+    xmlns:tors-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 >
     <disc:host>
@@ -52,6 +54,21 @@
                 <inst:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</inst:url>
                 <inst:max-hei-ids>1</inst:max-hei-ids>
             </inst:institutions>
+            <ounits:organizational-units version="2.1.1">
+                <ounits:http-security>
+                    <sec:client-auth-methods>
+                        <sec-none:anonymous/>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </ounits:http-security>
+                <ounits:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ounits:url>
+                <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
+                <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
+            </ounits:organizational-units>
             <iias:iias version="6.0.1">
                 <iias:http-security>
                     <sec:client-auth-methods>
@@ -117,21 +134,34 @@
                 <fsheet:url>https://mobility-test.is.cvut.cz/ewp/api/factsheet</fsheet:url>
                 <fsheet:max-hei-ids>1</fsheet:max-hei-ids>
             </fsheet:factsheet>
-            <ounits:organizational-units version="2.1.1">
-                <ounits:http-security>
+            <tors:imobility-tors version="1.0.0">
+                <tors:http-security>
                     <sec:client-auth-methods>
-                        <sec-none:anonymous/>
                         <sec-ctls:tlscert allows-self-signed="true"/>
                         <sec-csig:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-stls:tlscert/>
                     </sec:server-auth-methods>
-                </ounits:http-security>
-                <ounits:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ounits:url>
-                <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
-                <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
-            </ounits:organizational-units>
+                </tors:http-security>
+                <tors:get-url>https://mobility-test.is.cvut.cz/ewp/api/imob/tors/get</tors:get-url>
+                <tors:index-url>https://mobility-test.is.cvut.cz/ewp/api/imob/tors/index</tors:index-url>
+                <tors:max-omobility-ids>1</tors:max-omobility-ids>
+                <tors:sends-notifications/>
+            </tors:imobility-tors>
+            <tors-cnr:imobility-tor-cnr version="1.0.0">
+                <tors-cnr:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </tors-cnr:http-security>
+                <tors-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/imob/tors/cnr</tors-cnr:url>
+                <tors-cnr:max-omobility-ids>1</tors-cnr:max-omobility-ids>
+            </tors-cnr:imobility-tor-cnr>
         </reg:apis-implemented>
         <disc:institutions-covered>
             <reg:hei id="cvut.cz">
