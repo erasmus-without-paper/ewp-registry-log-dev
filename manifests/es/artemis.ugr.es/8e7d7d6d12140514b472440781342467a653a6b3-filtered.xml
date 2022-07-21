@@ -1,5 +1,5 @@
 <ns50:manifest
-    xmlns:ns50="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns50="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
@@ -18,7 +18,7 @@
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/tree/stable-v1"
@@ -66,9 +66,10 @@
     <ns50:host>
         <ns6:admin-email>intlerasmus@ugr.es</ns6:admin-email>
         <ns6:admin-email>galumnos@ugr.es</ns6:admin-email>
+        <ns6:admin-provider>Granada University (EWP-Servicios)</ns6:admin-provider>
         <ns6:admin-notes>Manifest File for University of Granada</ns6:admin-notes>
         <ns37:apis-implemented>
-            <ns26:discovery version="5.1.0">
+            <ns26:discovery version="6.0.0">
                 <ns26:url>https://artemis.ugr.es/ewp/manifest</ns26:url>
             </ns26:discovery>
             <ns28:echo version="2.0.1">
@@ -158,8 +159,7 @@
                 <ns24:get-url>https://artemis.ugr.es/ewp/iias/get</ns24:get-url>
                 <ns24:max-iia-ids>1</ns24:max-iia-ids>
                 <ns24:max-iia-codes>1</ns24:max-iia-codes>
-                <ns24:index-url>https://artemis.ugr.es/ewp/iias/index
-				</ns24:index-url>
+                <ns24:index-url>https://artemis.ugr.es/ewp/iias/index</ns24:index-url>
             </ns24:iias>
             <ns8:iia-cnr version="2.0.3">
                 <ns8:http-security>
@@ -227,10 +227,8 @@
                         <ns55:httpsig/>
                     </ns7:server-auth-methods>
                 </ns17:http-security>
-                <ns17:get-url>https://artemis.ugr.es/ewp/omobilities/get
-				</ns17:get-url>
-                <ns17:index-url>https://artemis.ugr.es/ewp/omobilities/index
-				</ns17:index-url>
+                <ns17:get-url>https://artemis.ugr.es/ewp/omobilities/get</ns17:get-url>
+                <ns17:index-url>https://artemis.ugr.es/ewp/omobilities/index</ns17:index-url>
                 <ns17:max-omobility-ids>1</ns17:max-omobility-ids>
                 <ns17:sends-notifications/>
             </ns17:omobilities>
@@ -245,12 +243,9 @@
                         <ns55:httpsig/>
                     </ns7:server-auth-methods>
                 </ns16:http-security>
-                <ns16:get-url>https://artemis.ugr.es/ewp/omobilities/la/get
-				</ns16:get-url>
-                <ns16:index-url>https://artemis.ugr.es/ewp/omobilities/la/index
-				</ns16:index-url>
-                <ns16:update-url>https://artemis.ugr.es/ewp/omobilities/la/update
-				</ns16:update-url>
+                <ns16:get-url>https://artemis.ugr.es/ewp/omobilities/la/get</ns16:get-url>
+                <ns16:index-url>https://artemis.ugr.es/ewp/omobilities/la/index</ns16:index-url>
+                <ns16:update-url>https://artemis.ugr.es/ewp/omobilities/la/update</ns16:update-url>
                 <ns16:max-omobility-ids>1</ns16:max-omobility-ids>
             </ns16:omobility-las>
             <ns15:omobility-cnr version="1.0.0">
@@ -281,6 +276,22 @@
                 <ns14:url>https://artemis.ugr.es/ewp/omobilities/la/cnr</ns14:url>
                 <ns14:max-omobility-ids>1</ns14:max-omobility-ids>
             </ns14:omobility-la-cnr>
+            <ns11:imobility-tors version="1.0.0">
+                <ns11:http-security>
+                    <ns7:client-auth-methods>
+                        <ns53:tlscert allows-self-signed="true"/>
+                        <ns52:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns56:tlscert/>
+                        <ns55:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns11:http-security>
+                <ns11:get-url>https://artemis.ugr.es/ewp/imobilities/tors/v1/get</ns11:get-url>
+                <ns11:index-url>https://artemis.ugr.es/ewp/imobilities/tors/v1/index</ns11:index-url>
+                <ns11:max-omobility-ids>1</ns11:max-omobility-ids>
+                <ns11:sends-notifications/>
+            </ns11:imobility-tors>
             <ns13:imobilities version="1.0.0">
                 <ns13:http-security>
                     <ns7:client-auth-methods>
@@ -292,8 +303,7 @@
                         <ns55:httpsig/>
                     </ns7:server-auth-methods>
                 </ns13:http-security>
-                <ns13:get-url>https://artemis.ugr.es/ewp/imobilities/get
-				</ns13:get-url>
+                <ns13:get-url>https://artemis.ugr.es/ewp/imobilities/get</ns13:get-url>
                 <ns13:max-omobility-ids>1</ns13:max-omobility-ids>
             </ns13:imobilities>
             <ns12:imobility-cnr version="1.0.0">
@@ -310,8 +320,8 @@
                 <ns12:url>https://artemis.ugr.es/ewp/imobilities/cnr</ns12:url>
                 <ns12:max-omobility-ids>1</ns12:max-omobility-ids>
             </ns12:imobility-cnr>
-            <ns11:imobility-tors version="1.0.0">
-                <ns11:http-security>
+            <ns10:imobility-tors version="2.0.0">
+                <ns10:http-security>
                     <ns7:client-auth-methods>
                         <ns53:tlscert allows-self-signed="true"/>
                         <ns52:httpsig/>
@@ -320,14 +330,12 @@
                         <ns56:tlscert/>
                         <ns55:httpsig/>
                     </ns7:server-auth-methods>
-                </ns11:http-security>
-                <ns11:get-url>https://artemis.ugr.es/ewp/imobilities/tors/get
-				</ns11:get-url>
-                <ns11:index-url>https://artemis.ugr.es/ewp/imobilities/tors/index
-				</ns11:index-url>
-                <ns11:max-omobility-ids>1</ns11:max-omobility-ids>
-                <ns11:sends-notifications/>
-            </ns11:imobility-tors>
+                </ns10:http-security>
+                <ns10:get-url>https://artemis.ugr.es/ewp/imobilities/tors/v2/get</ns10:get-url>
+                <ns10:index-url>https://artemis.ugr.es/ewp/imobilities/tors/v2/index</ns10:index-url>
+                <ns10:max-omobility-ids>1</ns10:max-omobility-ids>
+                <ns10:sends-notifications/>
+            </ns10:imobility-tors>
             <ns9:imobility-tor-cnr version="1.0.0">
                 <ns9:http-security>
                     <ns7:client-auth-methods>
@@ -345,9 +353,8 @@
         </ns37:apis-implemented>
         <ns50:institutions-covered>
             <ns37:hei id="ugr.es">
-                <ns37:other-id type="erasmus">E GRANADA01</ns37:other-id>
-                <ns37:other-id type="erasmus-charter">28575-EPP-1-2014-1-ES-EPPKA3-ECHE
-				</ns37:other-id>
+                <ns37:other-id type="erasmus">E  GRANADA01</ns37:other-id>
+                <ns37:other-id type="erasmus-charter">28575-EPP-1-2014-1-ES-EPPKA3-ECHE</ns37:other-id>
                 <ns37:other-id type="pic">999882015</ns37:other-id>
                 <ns37:name xml:lang="es">Universidad de Granada</ns37:name>
                 <ns37:name xml:lang="en">University of Granada</ns37:name>
