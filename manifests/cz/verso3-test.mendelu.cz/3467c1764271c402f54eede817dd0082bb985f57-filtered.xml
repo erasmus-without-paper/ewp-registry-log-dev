@@ -1,8 +1,8 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
@@ -16,89 +16,89 @@
     xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
-    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
-    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v4/manifest-entry.xsd"
+    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
-    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
 >
     <ns3:host>
         <admin-email>dodo@ders.cz</admin-email>
         <admin-notes/>
         <ns2:apis-implemented>
             <ns31:discovery version="5.0.0">
-                <ns31:url>https://verso3-test.mendelu.cz/ewp/manifest</ns31:url>
+                <ns31:url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/manifest</ns31:url>
             </ns31:discovery>
             <ns30:echo version="2.0.1">
                 <ns30:http-security>
-                    <ns4:client-auth-methods>
-                        <ns8:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns9:tlscert/>
-                        <ns10:httpsig/>
-                    </ns4:server-auth-methods>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns10:tlscert/>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
                 </ns30:http-security>
                 <ns30:url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/echo</ns30:url>
             </ns30:echo>
-            <ns5:iias version="6.0.1">
-                <ns5:http-security>
-                    <ns4:client-auth-methods>
-                        <ns8:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns9:tlscert/>
-                        <ns10:httpsig/>
-                    </ns4:server-auth-methods>
-                </ns5:http-security>
-                <ns5:get-url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iias-get-v6</ns5:get-url>
-                <ns5:max-iia-ids>1</ns5:max-iia-ids>
-                <ns5:max-iia-codes>1</ns5:max-iia-codes>
-                <ns5:index-url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iias-index-v6</ns5:index-url>
-            </ns5:iias>
+            <ns24:iias version="6.0.1">
+                <ns24:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns10:tlscert/>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns24:http-security>
+                <ns24:get-url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iias-get-v6</ns24:get-url>
+                <ns24:max-iia-ids>1</ns24:max-iia-ids>
+                <ns24:max-iia-codes>1</ns24:max-iia-codes>
+                <ns24:index-url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iias-index-v6</ns24:index-url>
+            </ns24:iias>
             <ns21:iia-cnr version="2.0.3">
                 <ns21:http-security>
-                    <ns4:client-auth-methods>
-                        <ns8:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns9:tlscert/>
-                        <ns10:httpsig/>
-                    </ns4:server-auth-methods>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns10:tlscert/>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
                 </ns21:http-security>
                 <ns21:url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iia-cnr</ns21:url>
             </ns21:iia-cnr>
             <ns23:iias-approval version="1.0.0">
                 <ns23:http-security>
-                    <ns4:client-auth-methods>
-                        <ns8:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns9:tlscert/>
-                        <ns10:httpsig/>
-                    </ns4:server-auth-methods>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns10:tlscert/>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
                 </ns23:http-security>
                 <ns23:url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iias-approval</ns23:url>
                 <ns23:max-iia-ids>1</ns23:max-iia-ids>
             </ns23:iias-approval>
             <ns22:iia-approval-cnr version="1.0.0">
                 <ns22:http-security>
-                    <ns4:client-auth-methods>
-                        <ns8:httpsig/>
-                    </ns4:client-auth-methods>
-                    <ns4:server-auth-methods>
-                        <ns9:tlscert/>
-                        <ns10:httpsig/>
-                    </ns4:server-auth-methods>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns10:tlscert/>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
                 </ns22:http-security>
                 <ns22:url>https://verso3-test.mendelu.cz/simplifyworks/public/ewp/iia-approval-cnr</ns22:url>
             </ns22:iia-approval-cnr>
@@ -109,7 +109,7 @@
                 <ns2:other-id type="erasmus">CZ BRNO02</ns2:other-id>
                 <ns2:other-id type="erasmus-charter">101011920</ns2:other-id>
                 <ns2:name xml:lang="cs">Mendelova univerzita v Brně</ns2:name>
-                <ns2:name xml:lang="en">Mendel University in Brno</ns2:name>
+                <ns2:name xml:lang="en">University in Brno</ns2:name>
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
