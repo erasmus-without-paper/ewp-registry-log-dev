@@ -54244,6 +54244,65 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp_support@cineca.it</ewp:admin-email>
+        <ewp:admin-provider>CINECA Consorzio Universitario</ewp:admin-provider>
+        <ewp:admin-notes>UNIGE test environment</ewp:admin-notes>
+        <apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://ewp.pp.cineca.it/api/v1/primary/manifest/unige.it</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.pp.cineca.it/api/v1/primary/echo/unige.it</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.pp.cineca.it/api/incoming/unige.it/gp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp.pp.cineca.it/api/incoming/unige.it/gp/orgunits</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>unige.it</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate sha-256="8a77cec47bf8f6624251220f1152fe386176654d97908743a252ff3330ff1172"/>
+            <rsa-public-key sha-256="d10dc67bb9a2a2401ea1cf6901aa666a4df4986a7c15fbfb9e28408154aa5b4a"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="d10dc67bb9a2a2401ea1cf6901aa666a4df4986a7c15fbfb9e28408154aa5b4a"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-notes>Version 01.03.00 of EWPCV manifest</ewp:admin-notes>
         <apis-implemented>
             <d5:discovery version="5.0.0">
@@ -77127,6 +77186,11 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             <other-id type="pic">999895789</other-id>
             <name xml:lang="it">Università degli Studi di Firenze</name>
         </hei>
+        <hei id="unige.it">
+            <other-id type="erasmus">I  GENOVA01</other-id>
+            <other-id type="pic">999976687</other-id>
+            <name xml:lang="it">Università degli studi di Genova</name>
+        </hei>
         <hei id="unileoben.ac.at">
             <other-id type="erasmus">A  LEOBEN01</other-id>
             <other-id type="euc">29325-IC-1-2007-1-AT-ERASMUS-EUCX-1</other-id>
@@ -79685,6 +79749,14 @@ Ci/m6XQC1+I1I9lBsMO0WzGJ7aiQidPCANLi3mCwTbHz
             ebZ3eA7ezMO8/Kp9jHQHjU9rJ4pWXcUNIVYpcFYTdrSLeYyxS7zP7CxPL+EwhEu61qAGujhdNcvS
             xl6tDpufGl6y38AmFstnawrz9lFfd6cZN74QuOFHltEUNXD+knaRIiTplxiq2FJ7bBs/+BeD+J9n
             hs8SqwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="d10dc67bb9a2a2401ea1cf6901aa666a4df4986a7c15fbfb9e28408154aa5b4a">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0Bs8imgKSDLWTJ5ADvdi+8xTbtfn8efb
+            jR5ifcXCwxM+xvqs0fOXgg9W2PnKKetX7ENJc+MT2KX3iGcZ71lv2Cshf0gSX4dScDZXMd/riro9
+            Xq8kwhSBX1aSk+8FU88KKCVQo1gPcVwaURXIBPglHBmQRE2qvUl1BZa3sWj43r+1jVhKW975za3N
+            MTQ0w9NXqdD2t5YTMkZfko8ucHd4FmFpNZRoq50RtHpxBShrcGoPVVjjnDRiYHiokXCKFg8/b+rE
+            yI5VOTtApSz0e1z1KaihOSenhU/IA1wHZffsYxcrlsl3qGkFn+gEw8Em06csRqtZtzX3QkQUYrIf
+            pwudUwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="d205a43cc41c2efbab7ca2734fab616acdabadf9a30d8459a66cd67cb036a933">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjLqHBzKSzVlERDODNl0axWSyB7IWfrIc
