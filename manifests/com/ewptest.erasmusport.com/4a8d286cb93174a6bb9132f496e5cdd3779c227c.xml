@@ -45,6 +45,26 @@
         <url>https://ewptest.erasmusport.com/strato.edu.si/institutions</url>
         <max-hei-ids>1</max-hei-ids>
       </institutions>
+      <organizational-units xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" version="2.1.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"></tlscert>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"></httpsig>
+          </sec:server-auth-methods>
+          <sec:request-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"></tls>
+          </sec:request-encryption-methods>
+          <sec:response-encryption-methods>
+            <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"></tls>
+          </sec:response-encryption-methods>
+        </http-security>
+        <url>https://ewptest.erasmusport.com/strato.edu.si/ounits</url>
+        <max-ounit-ids>5</max-ounit-ids>
+        <max-ounit-codes>1</max-ounit-codes>
+      </organizational-units>
       <courses xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" version="0.7.1">
         <http-security>
           <sec:client-auth-methods>
