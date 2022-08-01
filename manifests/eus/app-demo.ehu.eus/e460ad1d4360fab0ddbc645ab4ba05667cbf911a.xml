@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest
-	xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-	xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+	xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+	xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
 	xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 	xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
 	xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 	xmlns:xml="http://www.w3.org/XML/1998/namespace"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
         https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
         https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
@@ -48,14 +48,15 @@
 
 	<host>
 		<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
+		<ewp:admin-provider>University of The Basque Country</ewp:admin-provider>
 		<ewp:admin-notes>Provider: University of The Basque Country</ewp:admin-notes>
 
 		<r:apis-implemented>
 
 			<!-- The entry for the Discovery Manifest API (a self-reference). -->
 			<discovery
-				xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-				version="5.0.0">
+				xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+				version="6.0.0">
 				<url>https://app-demo.ehu.eus/ewp/manifest.xml</url>
 			</discovery>
 
@@ -65,7 +66,7 @@
 
 				<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
 				<ewp:admin-notes></ewp:admin-notes>
-
+				
 				<http-security>
 					<sec:client-auth-methods>
 						<!-- <tlscert -->
@@ -196,7 +197,6 @@
 				</http-security>
 				<url>https://app-demo.ehu.eus/ewpcv/iias/approval/get</url>
 				<max-iia-ids>1</max-iia-ids>
-				<sends-notifications />
 			</iias-approval>
 			<iia-approval-cnr
 				xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -246,6 +246,7 @@
 				version="1.0.0">
 				<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
 				<ewp:admin-notes></ewp:admin-notes>
+				
 				<http-security>
 					<sec:client-auth-methods>
 						<!-- <tlscert -->
@@ -272,6 +273,7 @@
 
 				<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
 				<ewp:admin-notes></ewp:admin-notes>
+				
 				<http-security>
 					<sec:client-auth-methods>
 						<!-- <tlscert -->
@@ -295,6 +297,7 @@
 				version="1.0.1">
 				<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
 				<ewp:admin-notes></ewp:admin-notes>
+				
 				<http-security>
 					<sec:client-auth-methods>
 						<!-- <tlscert -->
@@ -321,6 +324,8 @@
 
 				<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
 				<ewp:admin-notes></ewp:admin-notes>
+
+				
 				<http-security>
 					<sec:client-auth-methods>
 						<!-- <tlscert -->
