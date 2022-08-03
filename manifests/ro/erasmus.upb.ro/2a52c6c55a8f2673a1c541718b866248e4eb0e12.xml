@@ -1,0 +1,113 @@
+<manifest
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+        xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+        xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+        xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+        xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+        xmlns:xml="http://www.w3.org/XML/1998/namespace"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd"
+>
+    <!-- This example doesn't contain many comments, but its XML Schema does! -->
+    <host>
+        <ewp:admin-email>erasmus.admin@upb.ro</ewp:admin-email>
+        <ewp:admin-provider>University POLITEHNICA of Bucharest (UPB)</ewp:admin-provider>
+        <ewp:admin-notes>developer and admin</ewp:admin-notes>
+
+        <r:apis-implemented>
+            <!-- All API entries are defined in their own separate XML namespaces.
+            You need to use proper `xmlns` in order for them to be matched properly. -->
+
+            <!-- The entry for the Discovery Manifest API (a self-reference). -->
+            <discovery
+                    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                    version="6.0.0"
+            >
+                <url>https://erasmus.upb.ro/manifest.xml</url>
+            </discovery>
+
+            <!-- Some other API, just for the purpose of example. Each API entry has a
+            different XML namespace and a different structure. These structures are often
+            quite similar to each other, but sometimes they're not. -->
+            <echo
+                    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                    version="2.0.0"
+            >
+                <!-- Note, that ewp:admin-email and ewp:admin-notes can be defined both on the
+                global level, and on the API level. -->
+                <ewp:admin-email>erasmus.admin@upb.ro</ewp:admin-email>
+                <ewp:admin-provider>University POLITEHNICA of Bucharest (UPB)</ewp:admin-provider>
+                <ewp:admin-notes>developer and admin</ewp:admin-notes>
+
+                <!-- Many APIs define the security requirements of their implementations with help
+                of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                                xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                                allows-self-signed="true"
+                        />
+                        <httpsig
+                                xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert
+                                xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig
+                                xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+
+                <!-- The URL at which this Echo API is served. See Echo API's manifest-entry.xsd
+                file for details. -->
+                <url>https://erasmus.upb.ro/ewp/echo</url>
+            </echo>
+        </r:apis-implemented>
+
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="upb.ro">
+                <other-id type="pic">999842342</other-id>
+                <other-id type="erasmus">RO BUCURES11</other-id>
+                <other-id type="erasmus-charter">101012171</other-id>
+                <name xml:lang="en">University Politehnica of Bucharest</name>
+            </hei>
+        </mf:institutions-covered>
+
+        <client-credentials-in-use>
+
+            <!-- This one is used for TLS Client Authentication (optional) -->
+            <certificate>
+                todo
+            </certificate>
+
+            <!-- And this one is used for HTTP Signature Authentication -->
+            <rsa-public-key>
+                AAAAB3NzaC1yc2EAAAADAQABAAACAQDij4bXJ1eUlzZ/vClLe7DBC8VUIjt6XKR8FG8BCcMXxdMlBseQVBg/TDhhxQpdxm5lmrX21VvAOr1VV7UjnQ1KN1298FugSyhmU6QN2FkRIUKqnGAVGvA1cO+I0iSuB8CeiSJzA/MrbDwJMsIy1peRE4zedcvf4hk5OtEOYyTRwJj5CnpliPQk0c4hPZcPuWkqiLY4soQqVLmj9ttqHrNcZTe15Zbb2oCFKYuGVznHamO/2SiPsuzDB0cqvt6soKlJZTkm/MpNf25yHQloPRLkkUFN7fLZMf5eDT2ZOe2zn+XpL9etZndLSQCDzPEC+AGEwJY1Hyl6koKTpq6Zth2qYPlOi5Sq3ik0bhY8Sb4oxMHSjeLEve/m3nKm5z+hcwhBwLHnDXtOe9dywrED0x6dAcu8WD8fbeiF6BD38hzlBUEIkn7qja0em09paUyC3gWBPIvB0sLiKx6YKipxK9T2d8NwPD18Vu0Nnhi0SDqrzj3xHX5t/cAxE9pOwyi3xM0b7Y1uSzmBXqnpctXXw1zhYa45SgVuOD1eWDv2s6dld4iGNhk4KUZf5GHh9f9bmOMxl8ApXTBIZfj9CVUrsiIwlHE/98y1xE9ashs9uKosA3QsBtLraCAh1oiB9RQepiNW45XYtdmRP3acvxCbQqychgcAau8nljp6SnwPYNxLIw==
+            </rsa-public-key>
+        </client-credentials-in-use>
+
+        <server-credentials-in-use>
+            <!-- Used for HTTP Signature Authentication -->
+            <rsa-public-key>
+                AAAAB3NzaC1yc2EAAAADAQABAAACAQDij4bXJ1eUlzZ/vClLe7DBC8VUIjt6XKR8FG8BCcMXxdMlBseQVBg/TDhhxQpdxm5lmrX21VvAOr1VV7UjnQ1KN1298FugSyhmU6QN2FkRIUKqnGAVGvA1cO+I0iSuB8CeiSJzA/MrbDwJMsIy1peRE4zedcvf4hk5OtEOYyTRwJj5CnpliPQk0c4hPZcPuWkqiLY4soQqVLmj9ttqHrNcZTe15Zbb2oCFKYuGVznHamO/2SiPsuzDB0cqvt6soKlJZTkm/MpNf25yHQloPRLkkUFN7fLZMf5eDT2ZOe2zn+XpL9etZndLSQCDzPEC+AGEwJY1Hyl6koKTpq6Zth2qYPlOi5Sq3ik0bhY8Sb4oxMHSjeLEve/m3nKm5z+hcwhBwLHnDXtOe9dywrED0x6dAcu8WD8fbeiF6BD38hzlBUEIkn7qja0em09paUyC3gWBPIvB0sLiKx6YKipxK9T2d8NwPD18Vu0Nnhi0SDqrzj3xHX5t/cAxE9pOwyi3xM0b7Y1uSzmBXqnpctXXw1zhYa45SgVuOD1eWDv2s6dld4iGNhk4KUZf5GHh9f9bmOMxl8ApXTBIZfj9CVUrsiIwlHE/98y1xE9ashs9uKosA3QsBtLraCAh1oiB9RQepiNW45XYtdmRP3acvxCbQqychgcAau8nljp6SnwPYNxLIw==
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
