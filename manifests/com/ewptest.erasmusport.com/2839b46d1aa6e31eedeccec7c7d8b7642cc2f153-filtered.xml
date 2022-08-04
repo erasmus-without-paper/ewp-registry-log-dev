@@ -11,9 +11,9 @@
 >
     <host>
         <ewp:admin-email>support@erasmusjet.com</ewp:admin-email>
-        <ewp:admin-email>abulbul@gmail.com</ewp:admin-email>
+        <ewp:admin-email>info@erasmusport.com</ewp:admin-email>
         <ewp:admin-provider>ErasmusJET (Spetron IT)</ewp:admin-provider>
-        <ewp:admin-notes>Manifest File for Ars University</ewp:admin-notes>
+        <ewp:admin-notes>Manifest File for Erasmus University</ewp:admin-notes>
         <r:apis-implemented>
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
@@ -21,13 +21,37 @@
             >
                 <url>https://ewptest.erasmusport.com/ars.edu.eu/manifest.xml</url>
             </discovery>
+            <courses
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://ewptest.erasmusport.com/ars.edu.eu/courses/info</url>
+                <max-los-ids>1</max-los-ids>
+                <max-los-codes>1</max-los-codes>
+            </courses>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="ars.edu.eu">
                 <r:other-id type="pic">2001</r:other-id>
                 <r:other-id type="erasmus">DV ARS01</r:other-id>
                 <r:other-id type="eche">987033-EPP-1-2014-1-TR-EPPKA3-ECHE</r:other-id>
-                <r:name xml:lang="en">Ars University</r:name>
+                <r:name xml:lang="en">Erasmus University</r:name>
+                <r:name xml:lang="tr">Erasmus Üniversitesi</r:name>
             </r:hei>
         </institutions-covered>
         <client-credentials-in-use>
