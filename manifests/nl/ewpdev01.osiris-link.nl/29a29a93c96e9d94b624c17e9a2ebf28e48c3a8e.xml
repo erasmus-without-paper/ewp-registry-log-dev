@@ -31,7 +31,7 @@
 
         <r:apis-implemented>
             <!-- The entry for the Discovery Manifest API (a self-reference). -->
-            <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" version="6.0.0">
+            <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd" version="5.0.0">
                 <url>https://ewpdev01.osiris-link.nl/S2138T01.caci.nl/manifest.xml</url>
             </discovery>
 
@@ -140,11 +140,16 @@
                 MIICpDCCAYygAwIBAgIEYsVL+zANBgkqhkiG9w0BAQsFADAUMRIwEAYDVQQDDAlsb2NhbGhvc3QwHhcNMjIwNzA2MDg0NjUxWhcNMzIwNzA2MDg0NjUxWjAUMRIwEAYDVQQDDAlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCqCKfzBJrzNUgO9elgRmYeIl+sJ3qlznyg6qqAsz27kTukIN7XHyr3gYBp8iQRUDws37oRlrGoJI1kTmQOEdFsrFVSQOzmMa2CM9jFrKqSEjMp3kuf04KJL/Fpe8av1xuuZza0lHnnr11SiUkISTPrjUAXFrRQgCTYFPc7gXKvxIkocp8VAFO6tLy7CrmpwO7ewNYIsvxUZGZrh5sScUxD2lHoqQgACICwADTa/I8COXofRk8WTh1KFOoIuU9beDigUQ7R/fiT7l4KbQdwNDKLQv6joXetwsDKX74y4kfNxqpP1JiH8P99dY5Ssoyu6+s66quOaUTPFaYyhf5YTvk/AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAGkh56a7fCWJnDKwDoybf/lYNM4IbqyzpZbA311frDy2TC5um7sMzCYZzqpuCRpP4SCxry9LHZKA6SmxYq5lIPYyKm92aw3SBUMK0KrehR1w6pRSCwVmmfoT0czX9UDSid/RBx8VtVD3nOF4BQI1iBPehuCQSOyVt0ClKzjPAKgEhPsGDBvmZhKHGOU8wq4of52sH0HbGeHuD4wSy4IWrXTrZtaFOh151OAYxInuZZSnLGsTSHa6FgufptCPEJ5J1CY8fFT0NPBVOm37gVRjKIWCJK9cGT2hF1xFHpGSfWARMFQHc2SHmwycG1arzl/k0+OJwSbn6KjOaWqmdSnnSEo=
             </certificate>
 
+            <!-- we use this certifate to be able to connect to the EWP network from our local machines  -->
+            <certificate> MIIDAzCCAeugAwIBAgIIcV08HkbqNcMwDQYJKoZIhvcNAQELBQAwFDESMBAGA1UEAxMJbG9jYWxob3N0MB4XDTIxMDYwMTExMTIwMloXDTMxMDUzMDExMTIwMlowFDESMBAGA1UEAxMJbG9jYWxob3N0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAieMki5hkqvdD0H9hTH6+yDZ8TWxOJjYov5xipi12040D1MwtYaoenv8UjrymU1T+0u+VcCfYhV4sIsDslxwWrclicass3OiTNUtCUSPQjLzhkiqYU1DWjVRYbbvOWVhFgMmTl/ku5EPSLEIPSIt8wweL3/yVdi3Im4iFwMjWpYhyRohwa/LdDGKFcaXvPi7V+mlhzc6D59osAlbY6PVJyf73LSS7Mbcwq1Sdk5sdRt9kFnTsG03wVamFeS8ObCLp6oXBjIMw2et5uTyAZ/Va6Z8CyhpWxNEC4bxwIwti8pSMwXhlsPlhxwQ9Aw4wVNBasA1M71yn9uwagxVstWPZtwIDAQABo1kwVzAdBgNVHQ4EFgQUTPlMdJ5FkzMQ2Y8PMmwr9CpXVf8wNgYDVR0RBC8wLYIUaG9zdC5kb2NrZXIuaW50ZXJuYWyCCmV3cC1icm9rZXKCCWxvY2FsaG9zdDANBgkqhkiG9w0BAQsFAAOCAQEABZZDGqZqvO3XJkqYd93Iqs4JaMdemucvnx+8KxiFT14hLl3OzYlJVFp8f2XyuIXhHtqxwvE79ysXdPoabKlyKdQJi57DYySKyWVI1Qbok1n9lRBUL32mlY+Rv2or25F7o64pnAVUsVi+yN6p2+fM1HmHgFEc/9MBBNS5sz3Ivv4xG4Mxn8+GS3dGVid6jtj/OpH9/TqsJHqvoRkAUZhvYzWEJrHdu2f14ZDWm0kXpcqYKXdkxMKzL/1P7DRjekHgZgfDVeesZeKC4Qd8gXz89qDKlBit81zuDFWmJyWk9zSn4iPwH7Tuqh74ZXeOhmTTYiQCfzt0Frc1LZFchYopKg== </certificate>
+
             <!-- And this one is used for HTTP Signature Authentication -->
             <rsa-public-key>
                 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqgin8wSa8zVIDvXpYEZmHiJfrCd6pc58oOqqgLM9u5E7pCDe1x8q94GAafIkEVA8LN+6EZaxqCSNZE5kDhHRbKxVUkDs5jGtgjPYxayqkhIzKd5Ln9OCiS/xaXvGr9cbrmc2tJR5569dUolJCEkz641AFxa0UIAk2BT3O4Fyr8SJKHKfFQBTurS8uwq5qcDu3sDWCLL8VGRma4ebEnFMQ9pR6KkIAAiAsAA02vyPAjl6H0ZPFk4dShTqCLlPW3g4oFEO0f34k+5eCm0HcDQyi0L+o6F3rcLAyl++MuJHzcaqT9SYh/D/fXWOUrKMruvrOuqrjmlEzxWmMoX+WE75PwIDAQAB
             </rsa-public-key>
 
+            <!-- we use this publick key to be able to connect to the EWP network from our local machines  -->
+            <rsa-public-key> MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAieMki5hkqvdD0H9hTH6+yDZ8TWxOJjYov5xipi12040D1MwtYaoenv8UjrymU1T+0u+VcCfYhV4sIsDslxwWrclicass3OiTNUtCUSPQjLzhkiqYU1DWjVRYbbvOWVhFgMmTl/ku5EPSLEIPSIt8wweL3/yVdi3Im4iFwMjWpYhyRohwa/LdDGKFcaXvPi7V+mlhzc6D59osAlbY6PVJyf73LSS7Mbcwq1Sdk5sdRt9kFnTsG03wVamFeS8ObCLp6oXBjIMw2et5uTyAZ/Va6Z8CyhpWxNEC4bxwIwti8pSMwXhlsPlhxwQ9Aw4wVNBasA1M71yn9uwagxVstWPZtwIDAQAB </rsa-public-key>
         </client-credentials-in-use>
 
         <server-credentials-in-use>
@@ -152,6 +157,9 @@
             <rsa-public-key>
                 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqgin8wSa8zVIDvXpYEZmHiJfrCd6pc58oOqqgLM9u5E7pCDe1x8q94GAafIkEVA8LN+6EZaxqCSNZE5kDhHRbKxVUkDs5jGtgjPYxayqkhIzKd5Ln9OCiS/xaXvGr9cbrmc2tJR5569dUolJCEkz641AFxa0UIAk2BT3O4Fyr8SJKHKfFQBTurS8uwq5qcDu3sDWCLL8VGRma4ebEnFMQ9pR6KkIAAiAsAA02vyPAjl6H0ZPFk4dShTqCLlPW3g4oFEO0f34k+5eCm0HcDQyi0L+o6F3rcLAyl++MuJHzcaqT9SYh/D/fXWOUrKMruvrOuqrjmlEzxWmMoX+WE75PwIDAQAB
             </rsa-public-key>
+
+            <!-- we use this public key to be able to connect to the EWP network from our local machines  -->
+            <rsa-public-key> MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAieMki5hkqvdD0H9hTH6+yDZ8TWxOJjYov5xipi12040D1MwtYaoenv8UjrymU1T+0u+VcCfYhV4sIsDslxwWrclicass3OiTNUtCUSPQjLzhkiqYU1DWjVRYbbvOWVhFgMmTl/ku5EPSLEIPSIt8wweL3/yVdi3Im4iFwMjWpYhyRohwa/LdDGKFcaXvPi7V+mlhzc6D59osAlbY6PVJyf73LSS7Mbcwq1Sdk5sdRt9kFnTsG03wVamFeS8ObCLp6oXBjIMw2et5uTyAZ/Va6Z8CyhpWxNEC4bxwIwti8pSMwXhlsPlhxwQ9Aw4wVNBasA1M71yn9uwagxVstWPZtwIDAQAB </rsa-public-key>
 
         </server-credentials-in-use>
     </host>
