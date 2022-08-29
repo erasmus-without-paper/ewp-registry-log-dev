@@ -40,7 +40,7 @@
                     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
                     version="6.0.0"
             >
-	    	<url>https://erasmus.upb.ro/manifest.xml</url>
+                <url>https://erasmus.upb.ro/manifest.xml</url>
             </discovery>
 
             <!-- Some other API, just for the purpose of example. Each API entry has a
@@ -59,11 +59,11 @@
                 of elements like this one. See Echo API's manifest-entry.xsd file for details. -->
                 <http-security>
                     <sec:client-auth-methods>
-                        <!-- This is not mandatory as the documentation says
-                            <tlscert
-                                xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                                allows-self-signed="true"
-                        />-->
+<!--                        This is not mandatory as the documentation says-->
+<!--                        <tlscert-->
+<!--                                xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"-->
+<!--                                allows-self-signed="true"-->
+<!--                        />-->
                         <httpsig
                                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
@@ -77,8 +77,22 @@
 
                 <!-- The URL at which this Echo API is served. See Echo API's manifest-entry.xsd
                 file for details. -->
-		<url>https://erasmus.upb.ro/dev/ewp/echo</url>
+                <url>https://erasmus.upb.ro/dev/ewp/echo</url>
             </echo>
+
+            <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" version="2.2.0">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://erasmus.upb.ro/dev/ewp/iia</url>
+                <max-hei-ids>1</max-hei-ids>
+            </institutions>
         </r:apis-implemented>
 
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
