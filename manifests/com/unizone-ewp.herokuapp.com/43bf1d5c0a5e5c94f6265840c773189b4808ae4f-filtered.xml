@@ -1,0 +1,109 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+>
+    <host>
+        <ewp:admin-email>ewp.admin@erasmus-dashboard.eu</ewp:admin-email>
+        <ewp:admin-email>ewp.admin@erasmus-dashboard.eu</ewp:admin-email>
+        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <r:apis-implemented>
+            <organizational-units
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+                version="2.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizone-ewp.herokuapp.com/rest/ounits/unirioja.es</url>
+                <max-ounit-ids>1</max-ounit-ids>
+                <max-ounit-codes>1</max-ounit-codes>
+            </organizational-units>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://unizone-ewp.herokuapp.com/rest/iias/get/unirioja.es</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <max-iia-codes>1</max-iia-codes>
+                <index-url>https://unizone-ewp.herokuapp.com/rest/iias/index/unirioja.es</index-url>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizone-ewp.herokuapp.com/rest/iias/cnr/unirioja.es</url>
+            </iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizone-ewp.herokuapp.com/rest/iias/app/index/unirioja.es</url>
+                <max-iia-ids>1</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizone-ewp.herokuapp.com/rest/iias/app/cnr/unirioja.es</url>
+            </iia-approval-cnr>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="unirioja.es">
+                <r:other-id type="erasmus">E  LOGRONO01</r:other-id>
+                <r:other-id type="pic">999471414</r:other-id>
+                <r:name>Universidad de la Rioja</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAu8z2FUXwsWPvRX7bSblv0Cp4/ofQA5zdoueupDTYFDJTvBTEfrEjZNjri6LNATS75puMupN2X+xQ2OzUq8P7SB0U0KfoZYB1zXQl8WJJ3cGZAP0LMkXuEcWlcsg2Yz18WOQXOikftzCQxwkBpU9C3EzcviXyS31T5wvgi790D27shKSFJi+8pIbzSklV3C8Hk9zIZoxEb2b1rvl609/qMqfEg5dEppNzKEb60BqD2fDB/0FIwQQyinuMl/c8Z2w7GDhx5XPykbceBNAzImQ31S48hI6EGSjIGtX/A7hqrJV/VJzzE+It28vfEQ1yq8pMGcdY/P2XbV3qI+owYoeF70aom2jAuHPMbbLhVzi4/5j3VFshB4MJR3Hn78S+hCXZGDECVHm6lyBIvtgSb34GBIc57E/CHl2sFfjbKTCP78aF1tvIS5mJjUfuMedZKWWnh+eyTIX8rRnXeXiCiH94p3jMOwPKNZSrif36+P0govzvc9oOG1XIzMr2TN+e+lrKNwfnWEy+eHbVl2PeAOG5iw07UzT5tO3JvKBKM9Z042axoAkKuajzSGphNQatbTVU5JBr+3vBydv8YAT/qwPQEPMBinQP366nHf9u/HP3mRBLlkDQkYcMftfyYMItWT2r/8miVQCTy3OMDgo5s9IpQzQIpemNHbL2/S9aI+CK2HECAwEAAQ==</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAu8z2FUXwsWPvRX7bSblv0Cp4/ofQA5zdoueupDTYFDJTvBTEfrEjZNjri6LNATS75puMupN2X+xQ2OzUq8P7SB0U0KfoZYB1zXQl8WJJ3cGZAP0LMkXuEcWlcsg2Yz18WOQXOikftzCQxwkBpU9C3EzcviXyS31T5wvgi790D27shKSFJi+8pIbzSklV3C8Hk9zIZoxEb2b1rvl609/qMqfEg5dEppNzKEb60BqD2fDB/0FIwQQyinuMl/c8Z2w7GDhx5XPykbceBNAzImQ31S48hI6EGSjIGtX/A7hqrJV/VJzzE+It28vfEQ1yq8pMGcdY/P2XbV3qI+owYoeF70aom2jAuHPMbbLhVzi4/5j3VFshB4MJR3Hn78S+hCXZGDECVHm6lyBIvtgSb34GBIc57E/CHl2sFfjbKTCP78aF1tvIS5mJjUfuMedZKWWnh+eyTIX8rRnXeXiCiH94p3jMOwPKNZSrif36+P0govzvc9oOG1XIzMr2TN+e+lrKNwfnWEy+eHbVl2PeAOG5iw07UzT5tO3JvKBKM9Z042axoAkKuajzSGphNQatbTVU5JBr+3vBydv8YAT/qwPQEPMBinQP366nHf9u/HP3mRBLlkDQkYcMftfyYMItWT2r/8miVQCTy3OMDgo5s9IpQzQIpemNHbL2/S9aI+CK2HECAwEAAQ==</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
