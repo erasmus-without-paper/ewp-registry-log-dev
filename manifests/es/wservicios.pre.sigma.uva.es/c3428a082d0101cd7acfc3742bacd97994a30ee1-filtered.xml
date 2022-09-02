@@ -1,5 +1,5 @@
 <ns12:manifest
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -24,7 +24,7 @@
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
@@ -34,9 +34,10 @@
 >
     <ns12:host>
         <ns10:admin-email>tecnico.sigma.stic@uva.es</ns10:admin-email>
+        <ns10:admin-provider>SIGMA Gestión Universitaria, AIE (MP)</ns10:admin-provider>
         <ns10:admin-notes>manifest UVA PRE</ns10:admin-notes>
         <ns11:apis-implemented>
-            <ns32:discovery version="5.0.0">
+            <ns32:discovery version="6.0.0">
                 <ns32:url>https://wservicios.pre.sigma.uva.es:5555/ewp/rest/manifest.xml</ns32:url>
             </ns32:discovery>
             <ns31:echo version="2.0.1">
@@ -290,14 +291,7 @@
                 <ns17:max-omobility-ids>5</ns17:max-omobility-ids>
             </ns17:imobility-cnr>
         </ns11:apis-implemented>
-        <ns12:institutions-covered>
-            <ns11:hei id="uva.es">
-                <ns11:other-id type="erasmus">E VALLADO01</ns11:other-id>
-                <ns11:other-id type="pic">999862809</ns11:other-id>
-                <ns11:name xml:lang="en">UNIVERSITY OF VALLADOLID</ns11:name>
-                <ns11:name xml:lang="es">UNIVERSIDAD DE VALLADOLID</ns11:name>
-            </ns11:hei>
-        </ns12:institutions-covered>
+        <ns12:institutions-covered/>
         <ns12:client-credentials-in-use>
             <ns12:certificate>MIIExzCCA6+gAwIBAgIJAONZa+7YHz/bMA0GCSqGSIb3DQEBBQUAMIGdMQswCQYDVQQGEwJFUzEYMBYGA1UECBMPQ2FzdGlsbGEgeSBMZW9uMRMwEQYDVQQHEwpWYWxsYWRvbGlkMSIwIAYDVQQKExlVbml2ZXJzaWRhZCBkZSBWYWxsYWRvbGlkMQ0wCwYDVQQLEwRTVElDMSwwKgYDVQQDEyNFcmFzbXVzIFdpdGhvdXQgUGFwZXJzIFVWQSBpZGVudGl0eTAeFw0yMTAzMDMwODAyMDdaFw0zMTAzMDEwODAyMDdaMIGdMQswCQYDVQQGEwJFUzEYMBYGA1UECBMPQ2FzdGlsbGEgeSBMZW9uMRMwEQYDVQQHEwpWYWxsYWRvbGlkMSIwIAYDVQQKExlVbml2ZXJzaWRhZCBkZSBWYWxsYWRvbGlkMQ0wCwYDVQQLEwRTVElDMSwwKgYDVQQDEyNFcmFzbXVzIFdpdGhvdXQgUGFwZXJzIFVWQSBpZGVudGl0eTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO57Nf5Z5eAebwFtixrNi+AMOzQyKe6d8YM7ThiEYDBN7zN35JbA5qpN+4cqNjAXQjtFBrfa6FsOWFSrEwtCYskSJR8Bz9Hv4vsmTrC5gOHcVLOPD1mpRHexQ4m+3nwL1bsBRRSXMOq0j5b+t8NCo5XIDER0asuzZYw19OuvXDbIKtJGyiSiSK1t7bhhOE5Rdk/5DUevhY79mdvhZqUgnS5C5DG0moSeL3Ig+G93BpU5KR3QPUnGJHsB/7Zxzsd/givHiYaQ6gWdu4yauScxwrsBsBKBDAzsc9BtB8NG0ULq0gErJCXcEytAZkLb5FlauB6mXnM9+WXRYv/fw212XIkCAwEAAaOCAQYwggECMB0GA1UdDgQWBBS/GETYBT8CvJF4+fmif2mozTVppTCB0gYDVR0jBIHKMIHHgBS/GETYBT8CvJF4+fmif2mozTVppaGBo6SBoDCBnTELMAkGA1UEBhMCRVMxGDAWBgNVBAgTD0Nhc3RpbGxhIHkgTGVvbjETMBEGA1UEBxMKVmFsbGFkb2xpZDEiMCAGA1UEChMZVW5pdmVyc2lkYWQgZGUgVmFsbGFkb2xpZDENMAsGA1UECxMEU1RJQzEsMCoGA1UEAxMjRXJhc211cyBXaXRob3V0IFBhcGVycyBVVkEgaWRlbnRpdHmCCQDjWWvu2B8/2zAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB+GJOk6Hpu5gPak3TFtcE5XZ4dXow5PxuLCiHnUZnVR/sfbPqouH1r946U//bOHVVIGOir4r9WikNT1daaZj184MESDxqTeoWMQ9IPkj0D2bdR71cIRgK1Mt+LfH+qv2qnhEwfq3Gv1+I8TCcIkNMDB7wao+cmKOqCszg6wxSHBvfnOJAneA1ccf98o8Qr2zzDvMfSQLkoQ18OAGZ5KocCHQ1TkZ4q0Ytp/Y4Z6vESxbQlXyB9Q/+a3fPWFMqOd52HXD0kWyAlkG37ghpvjO/+/R4yhbRkFsfa181Lb2nQPHQ7VJAtdAXLh7ddG/TKyHzIrQI9olccTtBz8Hvyx8oG</ns12:certificate>
             <ns12:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7ns1/lnl4B5vAW2LGs2L4Aw7NDIp7p3xgztOGIRgME3vM3fklsDmqk37hyo2MBdCO0UGt9roWw5YVKsTC0JiyRIlHwHP0e/i+yZOsLmA4dxUs48PWalEd7FDib7efAvVuwFFFJcw6rSPlv63w0KjlcgMRHRqy7NljDX0669cNsgq0kbKJKJIrW3tuGE4TlF2T/kNR6+Fjv2Z2+FmpSCdLkLkMbSahJ4vciD4b3cGlTkpHdA9ScYkewH/tnHOx3+CK8eJhpDqBZ27jJq5JzHCuwGwEoEMDOxz0G0Hw0bRQurSASskJdwTK0BmQtvkWVq4HqZecz35ZdFi/9/DbXZciQIDAQAB</ns12:rsa-public-key>
