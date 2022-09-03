@@ -1,7 +1,7 @@
 <ns9:manifest
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:iias="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
@@ -36,8 +36,8 @@
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1"
     xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-request.xsd"
     xmlns:ns41="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/get-response.xsd"
-    xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-response.xsd"
-    xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-response.xsd"
     xmlns:ns44="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/get-response.xsd"
     xmlns:ns45="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/index-response.xsd"
     xmlns:ns46="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/endpoints/get-response.xsd"
@@ -64,15 +64,14 @@
 >
     <ns9:host>
         <ns8:admin-email>ewp@sgsp.edu.pl</ns8:admin-email>
-        <ns8:admin-notes>Provider: MUCI (USOS)</ns8:admin-notes>
+        <ns8:admin-provider>MUCI (USOS)</ns8:admin-provider>
         <ns7:apis-implemented>
-            <ns10:discovery version="5.0.0">
+            <ns10:discovery version="6.0.0">
                 <ns10:url>https://ewptst.sgsp.edu.pl/ewp/manifest</ns10:url>
             </ns10:discovery>
             <ns30:echo version="2.0.1">
                 <ns30:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -85,7 +84,6 @@
             <ns20:institutions version="2.2.0">
                 <ns20:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -99,7 +97,6 @@
             <ns12:organizational-units version="2.1.1">
                 <ns12:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -114,7 +111,6 @@
             <ns31:courses version="0.7.1">
                 <ns31:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -129,7 +125,6 @@
             <ns25:iias version="6.0.1">
                 <ns25:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -145,7 +140,6 @@
             <ns27:iia-cnr version="2.0.3">
                 <ns27:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -158,7 +152,6 @@
             <ns26:iias-approval version="1.0.0">
                 <ns26:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -172,7 +165,6 @@
             <ns28:iia-approval-cnr version="1.0.0">
                 <ns28:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -182,10 +174,22 @@
                 </ns28:http-security>
                 <ns28:url>https://ewptst.sgsp.edu.pl/ewp/iia/approval/cnr</ns28:url>
             </ns28:iia-approval-cnr>
-            <ns24:imobilities version="0.3.0">
+            <ns29:factsheet version="1.1.0">
+                <ns29:http-security>
+                    <ns11:client-auth-methods>
+                        <ns47:httpsig/>
+                    </ns11:client-auth-methods>
+                    <ns11:server-auth-methods>
+                        <ns56:tlscert/>
+                        <ns55:httpsig/>
+                    </ns11:server-auth-methods>
+                </ns29:http-security>
+                <ns29:url>https://ewptst.sgsp.edu.pl/ewp/factsheet</ns29:url>
+                <ns29:max-hei-ids>1</ns29:max-hei-ids>
+            </ns29:factsheet>
+            <ns24:imobilities version="1.0.0">
                 <ns24:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -197,10 +201,9 @@
                 <ns24:max-omobility-ids>100</ns24:max-omobility-ids>
                 <ns24:sends-notifications/>
             </ns24:imobilities>
-            <ns23:imobility-cnr version="0.1.1">
+            <ns23:imobility-cnr version="1.0.0">
                 <ns23:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -214,7 +217,6 @@
             <ns16:omobilities version="1.0.0">
                 <ns16:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -230,7 +232,6 @@
             <ns15:omobility-cnr version="1.0.0">
                 <ns15:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -244,7 +245,6 @@
             <ns13:omobility-las version="1.0.1">
                 <ns13:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -257,10 +257,9 @@
                 <ns13:update-url>https://ewptst.sgsp.edu.pl/ewp/la/update</ns13:update-url>
                 <ns13:max-omobility-ids>100</ns13:max-omobility-ids>
             </ns13:omobility-las>
-            <ns21:imobility-tors version="0.7.0">
+            <ns21:imobility-tors version="1.0.0">
                 <ns21:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -273,10 +272,9 @@
                 <ns21:max-omobility-ids>10</ns21:max-omobility-ids>
                 <ns21:sends-notifications/>
             </ns21:imobility-tors>
-            <ns22:imobility-tor-cnr version="0.1.1">
+            <ns22:imobility-tor-cnr version="1.0.0">
                 <ns22:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -296,27 +294,6 @@
             </ns7:hei>
         </ns9:institutions-covered>
         <ns9:client-credentials-in-use>
-            <ns9:certificate>MIID0zCCArugAwIBAgIEAusG6TANBgkqhkiG9w0BAQsFADCBmTELMAkGA1UEBhMC
-UEwxFDASBgNVBAgTC01hem93aWVja2llMQ8wDQYDVQQHEwZXYXJzYXcxKTAnBgNV
-BAoTIFN6a29sYSBHbG93bmEgU2x1emJ5IFBvemFybmljemVqMSkwJwYDVQQLEyBT
-emtvbGEgR2xvd25hIFNsdXpieSBQb3phcm5pY3plajENMAsGA1UEAxMEU0dTUDAe
-Fw0yMjA1MTIxMTM3MTFaFw0yMjA4MTAxMTM3MTFaMIGZMQswCQYDVQQGEwJQTDEU
-MBIGA1UECBMLTWF6b3dpZWNraWUxDzANBgNVBAcTBldhcnNhdzEpMCcGA1UEChMg
-U3prb2xhIEdsb3duYSBTbHV6YnkgUG96YXJuaWN6ZWoxKTAnBgNVBAsTIFN6a29s
-YSBHbG93bmEgU2x1emJ5IFBvemFybmljemVqMQ0wCwYDVQQDEwRTR1NQMIIBIjAN
-BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmG6l9TJb/gPKYQ0/D7Pd9+GOqnGN
-ql8sfKV55+rWlyQdrpXHjXFaBYHar+jPT4molpdyNokYDBOLKziLGCUtvXUMi9pA
-uAelHinyfac2pw9qu9T/TYnhVwb1A5aKwBg2vXlTuDKTrKvSAraMImzcd6A1oISv
-gW/iePsOCoP/owJk06O/rVOP+9WbrATtl4YKSnFcf60KLOz/lmdCduPXWcUS/WKQ
-legZT9XjaOuAXvafvPZgpfoUc76ybswPg2cfJPxq+w9MRfafBHHviiqgSBduSbfq
-v/aCk6g13XwK1tjBRCk+s1W1CoeOggd2fgo/RMSSUGgyZNJ1d2xwd9YiLwIDAQAB
-oyEwHzAdBgNVHQ4EFgQUvvG5tE2F3rg6U7MeOoOsvQGgOswwDQYJKoZIhvcNAQEL
-BQADggEBAIB2YLKGOTP1Q9t5wUU7QOwJ82JA63BWQ9qN+3z/XTUyctUCGq+So4I3
-L4r9a1z37EXV2QpcfehHWGZhqIPG5Cc5VkdOecrye6pzPRoZEGHlg5HzNR9vwF6V
-CNAioAgw60RVdv1J4LcUdCGiY+qgh0TwUb7dnqIS/cjcfXnrrlzPFtkpc9kdivid
-RoemoO3YtqyPmTvo21NJ15I14tKJlM686tAigj2AHl79fOv0PJiM+ZeqMBDQzW5r
-WsbBIUKafg+94R+sBtgEt0QgU9LllK6IcBF2Z9iv/GNQ4syVE8B1PfAOmNh5la85
-RJhfEr9SFH1vn8CvcPBPTnS49hMTlAw=</ns9:certificate>
             <ns9:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmG6l9TJb/gPKYQ0/D7Pd
 9+GOqnGNql8sfKV55+rWlyQdrpXHjXFaBYHar+jPT4molpdyNokYDBOLKziLGCUt
 vXUMi9pAuAelHinyfac2pw9qu9T/TYnhVwb1A5aKwBg2vXlTuDKTrKvSAraMImzc
