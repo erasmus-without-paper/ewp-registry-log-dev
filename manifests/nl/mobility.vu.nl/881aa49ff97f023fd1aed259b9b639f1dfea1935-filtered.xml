@@ -37,7 +37,82 @@
         <admin-email>ewp@sop.co.at</admin-email>
         <admin-provider>Mobility-Online</admin-provider>
         <admin-notes>Mobility-Online</admin-notes>
-        <ns2:apis-implemented/>
+        <ns2:apis-implemented>
+            <ns28:discovery version="6.0.0">
+                <ns28:url>https://mobility.vu.nl/mobility_test/ewp/manifest?api=all</ns28:url>
+            </ns28:discovery>
+            <ns27:echo version="2.0.0">
+                <ns27:http-security>
+                    <ns5:client-auth-methods>
+                        <ns31:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns32:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns27:http-security>
+                <ns27:url>https://mobility.vu.nl/mobility_test/ewp/echo</ns27:url>
+            </ns27:echo>
+            <ns24:iias version="6.1.0">
+                <ns24:http-security>
+                    <ns5:client-auth-methods>
+                        <ns31:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns32:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns24:http-security>
+                <ns24:get-url>https://mobility.vu.nl/mobility_test/ewp/iias-v6/get/vu.nl</ns24:get-url>
+                <ns24:max-iia-ids>3</ns24:max-iia-ids>
+                <ns24:max-iia-codes>3</ns24:max-iia-codes>
+                <ns24:index-url>https://mobility.vu.nl/mobility_test/ewp/iias-v6/index/vu.nl</ns24:index-url>
+            </ns24:iias>
+            <ns23:iia-cnr version="2.0.3">
+                <ns23:http-security>
+                    <ns5:client-auth-methods>
+                        <ns31:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns32:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns23:http-security>
+                <ns23:url>https://mobility.vu.nl/mobility_test/ewp/iias/cnr/vu.nl</ns23:url>
+            </ns23:iia-cnr>
+            <ns22:iias-approval version="1.1.0">
+                <ns22:http-security>
+                    <ns5:client-auth-methods>
+                        <ns31:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns32:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns22:http-security>
+                <ns22:url>https://mobility.vu.nl/mobility_test/ewp/iias-approval-v1/get/vu.nl</ns22:url>
+                <ns22:max-iia-ids>3</ns22:max-iia-ids>
+            </ns22:iias-approval>
+            <ns21:iia-approval-cnr version="1.1.0">
+                <ns21:http-security>
+                    <ns5:client-auth-methods>
+                        <ns31:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns32:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns21:http-security>
+                <ns21:url>https://mobility.vu.nl/mobility_test/ewp/iias-approval-cnr-v1/cnr/vu.nl</ns21:url>
+            </ns21:iia-approval-cnr>
+            <ns6:factsheet version="1.1.0">
+                <ns6:http-security>
+                    <ns5:client-auth-methods>
+                        <ns31:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns32:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns6:http-security>
+                <ns6:url>https://mobility.vu.nl/mobility_test/ewp/factsheets/vu.nl</ns6:url>
+                <ns6:max-hei-ids>3</ns6:max-hei-ids>
+            </ns6:factsheet>
+        </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="vu.nl">
                 <ns2:other-id type="pic">954530344</ns2:other-id>
