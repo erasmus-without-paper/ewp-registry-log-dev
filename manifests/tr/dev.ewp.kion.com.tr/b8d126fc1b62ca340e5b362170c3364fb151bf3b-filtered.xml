@@ -19,4 +19,278 @@
     xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
     xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
-/>
+>
+    <host>
+        <ewp:admin-email>ewp@kion.com.tr</ewp:admin-email>
+        <ewp:admin-provider>KION (EXCHANGER)</ewp:admin-provider>
+        <ewp:admin-notes/>
+        <r:apis-implemented>
+            <d5:discovery version="6.0.0">
+                <d5:url>https://dev.ewp.kion.com.tr/api/manifest/yildiz</d5:url>
+            </d5:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://dev.ewp.kion.com.tr/api/echo/yildiz</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.1.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://dev.ewp.kion.com.tr/api/institutions/yildiz</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://dev.ewp.kion.com.tr/api/organizationalunits/yildiz</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia6:iias version="6.0.1">
+                <ia6:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia6:http-security>
+                <ia6:get-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/get/yildiz</ia6:get-url>
+                <ia6:max-iia-ids>1</ia6:max-iia-ids>
+                <ia6:max-iia-codes>1</ia6:max-iia-codes>
+                <ia6:index-url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/index/yildiz</ia6:index-url>
+            </ia6:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/cnr/yildiz</iac2:url>
+            </iac2:iia-cnr>
+            <iaa1:iias-approval version="1.0.0">
+                <iaa1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa1:http-security>
+                <iaa1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/yildiz</iaa1:url>
+                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
+            </iaa1:iias-approval>
+            <iaac1:iia-approval-cnr version="1.0.0">
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/approval/cnr/yildiz</iaac1:url>
+            </iaac1:iia-approval-cnr>
+            <f1:factsheet version="1.0.0">
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://dev.ewp.kion.com.tr/api/interinstitutionalagreements/factsheet/yildiz</f1:url>
+                <f1:max-hei-ids>25</f1:max-hei-ids>
+            </f1:factsheet>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/get/yildiz</get-url>
+                <index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/index/yildiz</index-url>
+                <max-omobility-ids>25</max-omobility-ids>
+                <sends-notifications/>
+            </omobilities>
+            <omobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/cnr/yildiz</url>
+                <max-omobility-ids>25</max-omobility-ids>
+            </omobility-cnr>
+            <imobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/incomingmobilities/get/yildiz</get-url>
+                <max-omobility-ids>25</max-omobility-ids>
+                <sends-notifications/>
+            </imobilities>
+            <imobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/incomingmobilities/cnr/yildiz</url>
+                <max-omobility-ids>25</max-omobility-ids>
+            </imobility-cnr>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/get/yildiz</get-url>
+                <index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/index/yildiz</index-url>
+                <update-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/update/yildiz</update-url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-las>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A1:tlscert allows-self-signed="true"/>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/cnr/yildiz</url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-la-cnr>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="yildiz.edu.tr">
+                <r:other-id type="pic">997203651</r:other-id>
+                <r:other-id type="erasmus">TR ISTANBU07</r:other-id>
+                <r:name xml:lang="tr">Yıldız Teknik Üniversitesi</r:name>
+                <r:name xml:lang="en">Yıldız Technical University</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>MIID9TCCAt2gAwIBAgIUVTOrkb+VvKxLg3tTTt6NQI4veVUwDQYJKoZIhvcNAQELBQAwgYgxCzAJ
+BgNVBAYTAnRyMQ8wDQYDVQQIDAZ0dXJrZXkxETAPBgNVBAcMCGlzdGFuYnVsMQ0wCwYDVQQKDARr
+aW9uMRIwEAYDVQQLDAlleGNoYW5nZXIxEjAQBgNVBAMMCWV4Y2hhbmdlcjEeMBwGCSqGSIb3DQEJ
+ARYPZXdwQGtpb24uY29tLnRyMCAXDTIyMDcwNjEzMDM0N1oYDzIxMjIwNjEyMTMwMzQ3WjCBiDEL
+MAkGA1UEBhMCdHIxDzANBgNVBAgMBnR1cmtleTERMA8GA1UEBwwIaXN0YW5idWwxDTALBgNVBAoM
+BGtpb24xEjAQBgNVBAsMCWV4Y2hhbmdlcjESMBAGA1UEAwwJZXhjaGFuZ2VyMR4wHAYJKoZIhvcN
+AQkBFg9ld3BAa2lvbi5jb20udHIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8Smtf
+2gmrrovfZAy6kyZNna4yriCTDP6y9LgbxIzwWgVWFAotWjUEyh2xFvT3gqxFIU1q/dVMXfR2svPn
+Y+teDhJn3RGEh79BGSndbCmKWTFPYhDvDx7bCv2e789sYEsKEn56GcS8bpQ17/V2u8fZfR6cHJXs
+fqHqOOXThKfRz9uSdR2wZRNsPRn7899Z9L0/+HRqmS2+c5ZDxK+C55i3Hbgn/t/GR8d4AOobNcBr
+GxvhGsxchhm2CW8IR5VRd0bwHDnNTfHENAgR6iJGfLXuBNtf5+f2/rA/p4mRsyYP3DacvvjJcsp4
+xS43UF92xgnv6m5oJDsHXh+WbwVHLZFHAgMBAAGjUzBRMB0GA1UdDgQWBBSaerWwnXsEHivjN8uM
+xhxZGMvN+zAfBgNVHSMEGDAWgBSaerWwnXsEHivjN8uMxhxZGMvN+zAPBgNVHRMBAf8EBTADAQH/
+MA0GCSqGSIb3DQEBCwUAA4IBAQAFjoFn32iuJj0K1o3nWd1jgbGOQK9VG9g+8OgBsFID0kWnHBhq
+9TfWh5cRpoh87bcSedl5pObLCVhkudTsWxDvAwsGKCnXSflOk338R6vh2d/HGOx3HKWkp+Rza65N
+yQLaOgy3/r9uUkNIGTfoLVzDbLju0vLtk73yMVCY8lUQjYRg99AosI96ZGqi7MO4Bg8nZ6WgJvdz
+VzCUdsY9D6vYN/GvygVRtU1y7pPCqR+u920IPa7kuuuIAXQTX7PcJTMjJDIpqO2FTVonrckCJq30
+UJcR9PoUw4BoW0EU1MEybWvS1v+Vp9tGoilJU5aq0P2mrdLjTaTJmNdQsH/B/UDU</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvEprX9oJq66L32QMupMm
+TZ2uMq4gkwz+svS4G8SM8FoFVhQKLVo1BModsRb094KsRSFNav3VTF30drLz52Pr
+Xg4SZ90RhIe/QRkp3WwpilkxT2IQ7w8e2wr9nu/PbGBLChJ+ehnEvG6UNe/1drvH
+2X0enByV7H6h6jjl04Sn0c/bknUdsGUTbD0Z+/PfWfS9P/h0apktvnOWQ8SvgueY
+tx24J/7fxkfHeADqGzXAaxsb4RrMXIYZtglvCEeVUXdG8Bw5zU3xxDQIEeoiRny1
+7gTbX+fn9v6wP6eJkbMmD9w2nL74yXLKeMUuN1BfdsYJ7+puaCQ7B14flm8FRy2R
+RwIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvEprX9oJq66L32QMupMm
+TZ2uMq4gkwz+svS4G8SM8FoFVhQKLVo1BModsRb094KsRSFNav3VTF30drLz52Pr
+Xg4SZ90RhIe/QRkp3WwpilkxT2IQ7w8e2wr9nu/PbGBLChJ+ehnEvG6UNe/1drvH
+2X0enByV7H6h6jjl04Sn0c/bknUdsGUTbD0Z+/PfWfS9P/h0apktvnOWQ8SvgueY
+tx24J/7fxkfHeADqGzXAaxsb4RrMXIYZtglvCEeVUXdG8Bw5zU3xxDQIEeoiRny1
+7gTbX+fn9v6wP6eJkbMmD9w2nL74yXLKeMUuN1BfdsYJ7+puaCQ7B14flm8FRy2R
+RwIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
