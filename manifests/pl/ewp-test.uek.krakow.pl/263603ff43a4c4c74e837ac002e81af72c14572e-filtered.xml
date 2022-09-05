@@ -1,7 +1,7 @@
 <ns9:manifest
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:iias="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
@@ -36,8 +36,8 @@
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1"
     xmlns:ns40="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-request.xsd"
     xmlns:ns41="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/get-response.xsd"
-    xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index-response.xsd"
-    xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-response.xsd"
+    xmlns:ns42="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/update-response.xsd"
+    xmlns:ns43="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/endpoints/index-response.xsd"
     xmlns:ns44="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/get-response.xsd"
     xmlns:ns45="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/endpoints/index-response.xsd"
     xmlns:ns46="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/endpoints/get-response.xsd"
@@ -64,15 +64,14 @@
 >
     <ns9:host>
         <ns8:admin-email>ewp-test@uek.krakow.pl</ns8:admin-email>
-        <ns8:admin-notes>Provider: MUCI (USOS)</ns8:admin-notes>
+        <ns8:admin-provider>MUCI (USOS)</ns8:admin-provider>
         <ns7:apis-implemented>
-            <ns10:discovery version="5.0.0">
+            <ns10:discovery version="6.0.0">
                 <ns10:url>https://ewp-test.uek.krakow.pl/ewp/manifest</ns10:url>
             </ns10:discovery>
             <ns30:echo version="2.0.1">
                 <ns30:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -85,7 +84,6 @@
             <ns20:institutions version="2.2.0">
                 <ns20:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -99,7 +97,6 @@
             <ns12:organizational-units version="2.1.1">
                 <ns12:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -114,7 +111,6 @@
             <ns31:courses version="0.7.1">
                 <ns31:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -136,26 +132,6 @@
             </ns7:hei>
         </ns9:institutions-covered>
         <ns9:client-credentials-in-use>
-            <ns9:certificate>MIIDlzCCAn+gAwIBAgIEPBVvujANBgkqhkiG9w0BAQsFADB8MQswCQYDVQQGEwJQ
-TDETMBEGA1UECBMKTWFsb3BvbHNrYTEPMA0GA1UEBxMGS3Jha293MQwwCgYDVQQK
-EwNVRUsxDDAKBgNVBAsTA1VFSzErMCkGA1UEAxMiVW5pd2Vyc3l0ZXQgRWtvbm9t
-aWN6bnkgVyBLcmFrb3dpZTAeFw0yMTA3MjYxMjIxMTdaFw00ODEyMTAxMjIxMTda
-MHwxCzAJBgNVBAYTAlBMMRMwEQYDVQQIEwpNYWxvcG9sc2thMQ8wDQYDVQQHEwZL
-cmFrb3cxDDAKBgNVBAoTA1VFSzEMMAoGA1UECxMDVUVLMSswKQYDVQQDEyJVbml3
-ZXJzeXRldCBFa29ub21pY3pueSBXIEtyYWtvd2llMIIBIjANBgkqhkiG9w0BAQEF
-AAOCAQ8AMIIBCgKCAQEArc46C/6sQcBu7FLyzg18Xv+XF5xWmpmXN/b0T1DTY0TG
-JHgDLy7CrKTlKEek19SRwN6CX0cgOyeEoZRa9Iomo1+T2+TxcRUktKYGTrPSLUhE
-fU9CI+BTre2DSq4ePHeU2vYo62a5HnujicpqGqSQCRxIK+jx7oKE+RqeayGcmFJa
-X5t5c1W6M0SduG4V77UZgOKq//MvUBNWCT+jIv13azpWIZmYk9aYElt2QvUff3UM
-iNgtBb+u2PUGy1fqxjFaIUNKY5N8+1uz3VZIWgkhFYxJdgeUhEoKKVqyk8aEIX2O
-EK5V0SNCfuYRcdjTQXtoA0BUsbiKcOZ8NPKcoFLr3QIDAQABoyEwHzAdBgNVHQ4E
-FgQUBJlrgnebphSPx19P93D9geCtqJYwDQYJKoZIhvcNAQELBQADggEBAIcM0SWv
-4phq2K5LUFheLpUgvWxlvArngjQU4DKiJeJ5j0jG78i/9mmC0+T2PEuEWNc/3wBL
-T1X0qfhaJNLYrMdBaRoBm1tt8v5bN9ISnG3NvtN0o52EG0UhBG8Xq5df0ly7O7ht
-a4Hp7TXD7f2cXXfJBamgj6TKJryyy3vs1GtZw7LVEzrxErIMlzau4qLyjRLSQi/o
-ipMd2RCFg5hrJPq7qpUd2VzbtJ/zST30dsqAhR0/AseXyt+YtknS9aKyV8RVPvp1
-CGxOECZJSiTX412W4U3gE5tdGVQY0ZBWXmc2eFZMfuwMN9jA0oYFdBbOBvEGUhCW
-lXZVZ/lOkl6ZxnU=</ns9:certificate>
             <ns9:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArc46C/6sQcBu7FLyzg18
 Xv+XF5xWmpmXN/b0T1DTY0TGJHgDLy7CrKTlKEek19SRwN6CX0cgOyeEoZRa9Iom
 o1+T2+TxcRUktKYGTrPSLUhEfU9CI+BTre2DSq4ePHeU2vYo62a5HnujicpqGqSQ
