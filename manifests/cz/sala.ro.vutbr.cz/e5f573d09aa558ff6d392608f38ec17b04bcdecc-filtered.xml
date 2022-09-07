@@ -72,6 +72,26 @@
                 </http-security>
                 <url>https://sala.ro.vutbr.cz:8443/ewp/api/iia-cnr</url>
             </iia-cnr>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.1.0"
+            >
+                <ewp:admin-email>musilr@vut.cz</ewp:admin-email>
+                <ewp:admin-email>sala@vutbr.cz</ewp:admin-email>
+                <ewp:admin-notes>This is the development server.</ewp:admin-notes>
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <ia2:get-url>https://sala.ro.vutbr.cz:8443/ewp/api/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>20</ia2:max-iia-ids>
+                <ia2:max-iia-codes>20</ia2:max-iia-codes>
+                <ia2:index-url>https://sala.ro.vutbr.cz:8443/ewp/api/iias/index</ia2:index-url>
+            </iias>
             <institutions
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
                 version="2.2.0"
