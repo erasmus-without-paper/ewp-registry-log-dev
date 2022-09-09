@@ -1,5 +1,5 @@
 <ns12:manifest
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -24,7 +24,7 @@
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
@@ -34,9 +34,10 @@
 >
     <ns12:host>
         <ns10:admin-email>mobility@uchceu.es</ns10:admin-email>
+        <ns10:admin-provider>SIGMA Gestión Universitaria, AIE (MP)</ns10:admin-provider>
         <ns10:admin-notes>Provider : SIGMA GestiÃ³n Universitaria, A.I.E (SIGMA)</ns10:admin-notes>
         <ns11:apis-implemented>
-            <ns32:discovery version="5.0.0">
+            <ns32:discovery version="6.0.0">
                 <ns32:url>https://gestionacademicavirtual.uchceu.es:2443/ewp/rest/manifest.xml</ns32:url>
             </ns32:discovery>
             <ns31:echo version="2.0.1">
@@ -290,7 +291,14 @@
                 <ns17:max-omobility-ids>5</ns17:max-omobility-ids>
             </ns17:imobility-cnr>
         </ns11:apis-implemented>
-        <ns12:institutions-covered/>
+        <ns12:institutions-covered>
+            <ns11:hei id="uniuchceu.es">
+                <ns11:other-id type="erasmus">E  VALENCI 08</ns11:other-id>
+                <ns11:other-id type="pic">938175562</ns11:other-id>
+                <ns11:name xml:lang="en">University CEU Cardenal Herrera</ns11:name>
+                <ns11:name xml:lang="es">Universidad CEU Cardenal Herrera</ns11:name>
+            </ns11:hei>
+        </ns12:institutions-covered>
         <ns12:client-credentials-in-use>
             <ns12:rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA5yCNUP45oCKVtlRlrkXMQFeiCOt3kOTXQ9v5wHggchJhsGUnniCltEpcit0gZfxAK2k3JMkkwsKGpyTH6nxbpm/kwt6g81rxxrUEE+VHLjDU18ok7zPyyzkPiE/8Hm9YQ7Vpva+3P2AaHEcorBawpm3p4dp6S+A/H+Q2NlQ1+OWBNn+X8aSOJQnn3xnSXfWbXCSsehU94FAqsftezrTzO5O5NQ4fstOfVSzvX5xMuxAaDKA9ZbVFCdaIPmIXJ1MM/1TAR4T1iKk0jWCnngKE6CF+5Bw9Y43vzHvCNy8Jmu7tx8d8iPW3o8uKXUhiq0FRJqnRhFYNa5OHlnzZhijsD1AfuWF1jaTd7plmKBp2/ji4RbtPVDUYne0q8+8E/Gm5U+/IB5NdNTSCuzMdvBmaAJdC83wOXKR9/mwt0ECwBcuHBKxX193P4g60GJDW09m8s3FRaKr2apmb/280tyvAxQ6+7KywszM8AJu/mwuJ3yh4o3yQFQ2Tg5yYviGFKL4hr8203iqhmkZGQIMO1s38XXOh+WbO3gG6U1G90zCNPK/l8FzFwiiK0CWjioGi8veEEy67BH6Uur2O/3Aa15EFs9ucnYyJGdp7cf0cM5XMS+keYxFbmHIuehJgEw2DwOUaUxCdXK7G+r3zmlMv/IbsUTyRNBBg/ytzjUSaxuN5fkcCAwEAAQ==</ns12:rsa-public-key>
         </ns12:client-credentials-in-use>
