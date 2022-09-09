@@ -1,5 +1,5 @@
 <ns12:manifest
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -24,7 +24,7 @@
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
@@ -34,9 +34,10 @@
 >
     <ns12:host>
         <ns10:admin-email>international.office@ceu.es</ns10:admin-email>
+        <ns10:admin-provider>SIGMA Gestión Universitaria, AIE (MP)</ns10:admin-provider>
         <ns10:admin-notes>Provider : SIGMA GestiÃ³n Universitaria, A.I.E (SIGMA)</ns10:admin-notes>
         <ns11:apis-implemented>
-            <ns32:discovery version="5.0.0">
+            <ns32:discovery version="6.0.0">
                 <ns32:url>https://gestionacademicavirtual.uspceu.es:2443/ewp/rest/manifest.xml</ns32:url>
             </ns32:discovery>
             <ns31:echo version="2.0.1">
@@ -290,7 +291,14 @@
                 <ns17:max-omobility-ids>5</ns17:max-omobility-ids>
             </ns17:imobility-cnr>
         </ns11:apis-implemented>
-        <ns12:institutions-covered/>
+        <ns12:institutions-covered>
+            <ns11:hei id="uspceu.com">
+                <ns11:other-id type="erasmus">E  MADRID21</ns11:other-id>
+                <ns11:other-id type="pic">E10198513</ns11:other-id>
+                <ns11:name xml:lang="en">CEU San Pablo University</ns11:name>
+                <ns11:name xml:lang="es">Universidad San Pablo CEU</ns11:name>
+            </ns11:hei>
+        </ns12:institutions-covered>
         <ns12:client-credentials-in-use>
             <ns12:rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxUmcEnh+GpxbtPsRLIAWmLZhe4MobUc83X1ebatRTX9lLvGKCtebBq231KZhot+pH0BzjM0VWp4MLuIqMrMnvCkJ40CURdRbdDJD+Go+2wtYwMsjLykcD7T52xwkGHQkGtWMDheNXz/AjsyptUVY66zVpQJWW56WQnmNZaz92WMmHdl8lSVjJzuncXqlN1k0nPEa5RkfUDRAjdP0ZFV801ssuPinMLKuW9sWdK9lD4yO0o2VQk6AKKTUVwtK5su0oMwN/2FmuwZt82eD8tdvjppsHi2KjJIpntbQ8DMKl68ubO0pS80LQX7hxvZHDYp/C3+whRdy7nmBHNUKgh9iZ+9hKBMssurtXUpw8RiE1lXUlNnTj+8MRdgM7xab40sghkTPwcQHd5dPPnp3sl1cmUPHRBpWQEonSmkdui5Hv6r47SVXRoSJhYgN/klAoiNfMQ3f6ydxBy6dXEZuaAdlvxVlbAMVNbf9wa3vMiZwQC41Sh7yTSWHTUo7kci7eZO8+HXKpJlsex/ks7EnQ0KOuyQRblmrPUHPTb2h0tyAlhG6ei9tGwZ4+XgLHOOg1+skcgSymcUguR03yvFgXTZ5CKzO1/DaFEjlMt+xwPR6sqnDu4khypBVBg2TgFKD7RRqgGv8Ppp3UDMPDNe1JtMsDjwGkKbBoodTgk8yM1Uxp1cCAwEAAQ==</ns12:rsa-public-key>
         </ns12:client-credentials-in-use>
