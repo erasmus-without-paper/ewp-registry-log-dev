@@ -1,5 +1,5 @@
 <ns12:manifest
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -24,7 +24,7 @@
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
@@ -34,9 +34,10 @@
 >
     <ns12:host>
         <ns10:admin-email>rrii@tecnocampus.cat</ns10:admin-email>
+        <ns10:admin-provider>SIGMA Gestión Universitaria, AIE (MP)</ns10:admin-provider>
         <ns10:admin-notes>Provider : SIGMA GestiÃ³n Universitaria, A.I.E (SIGMA)</ns10:admin-notes>
         <ns11:apis-implemented>
-            <ns32:discovery version="5.0.0">
+            <ns32:discovery version="6.0.0">
                 <ns32:url>https://gestioacademicavirtual.tecnocampus.cat:2443/ewp/rest/manifest.xml</ns32:url>
             </ns32:discovery>
             <ns31:echo version="2.0.1">
@@ -290,7 +291,13 @@
                 <ns17:max-omobility-ids>5</ns17:max-omobility-ids>
             </ns17:imobility-cnr>
         </ns11:apis-implemented>
-        <ns12:institutions-covered/>
+        <ns12:institutions-covered>
+            <ns11:hei id="tecnocampus.cat">
+                <ns11:other-id type="erasmus">E  MATARO01</ns11:other-id>
+                <ns11:other-id type="pic">966144445</ns11:other-id>
+                <ns11:name xml:lang="es">FUNDACIO TECNOCAMPUS MATARO-MARESME</ns11:name>
+            </ns11:hei>
+        </ns12:institutions-covered>
         <ns12:client-credentials-in-use>
             <ns12:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtWh65Gi4Emes8CdYW/1ogxqaqO9dmlTGZXJTizBeRQyp4be7dtRJKx0YtCT7vW1lgQPBnLG2CQ3saisl4NrjcAv5As1EmmNHhY4/1pSOuRDFQbMItwaa/PHiF4KzEYLukFXYY9QV9u0i/UFlrAPD5gJUxqdA7Zgq9xpANYFZ7UwE1oD5QbE05MXJuRZmQXIJfjG1UPqO+brFsgMdJ/86y2dQc2sX8pYpQmm5oOCmt5/LkzWIa3wcwxt9+TGy4h9Tt0MZ9XirKu6tTbG6B4izzZZ9/ngFsDMghG7ayO82QTYTUZSD/PxyPf2wxeIwZpYpfj0n/SriicZhEWqrdZAERQIDAQAB</ns12:rsa-public-key>
         </ns12:client-credentials-in-use>
