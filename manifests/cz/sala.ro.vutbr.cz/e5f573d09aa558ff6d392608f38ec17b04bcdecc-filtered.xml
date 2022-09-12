@@ -1,34 +1,56 @@
-<manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
-    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+<ns1:manifest
+    xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+    xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:om="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
-    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:omc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:oml="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omlc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:out2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec_cc="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec_cs="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec_ss="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
 >
-    <host>
-        <ewp:admin-email>musilr@vut.cz</ewp:admin-email>
-        <ewp:admin-email>sala@vutbr.cz</ewp:admin-email>
-        <ewp:admin-notes>This is the development server.</ewp:admin-notes>
-        <r:apis-implemented/>
-        <mf:institutions-covered>
-            <hei
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-                id="vutbr.cz"
-            >
-                <other-id type="pic">999873091</other-id>
-                <other-id type="erasmus">CZ BRNO01</other-id>
-                <other-id type="erasmus-charter">49565-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
-                <name xml:lang="cs-CS">VYSOKÉ UČENÍ TECHNICKÉ V BRNĚ</name>
-                <name xml:lang="en-US">BRNO UNIVERSITY OF TECHNOLOGY</name>
-            </hei>
-        </mf:institutions-covered>
-        <client-credentials-in-use>
-            <certificate>
-MIIHZTCCBU2gAwIBAgIRAOkqeHH/wDOg3a7evtVrNjswDQYJKoZIhvcNAQEMBQAw
+    <ns1:host>
+        <admin-email>admin-ewp@vut.cz</admin-email>
+        <admin-provider>Brno University of Technology (APOLLO)</admin-provider>
+        <admin-notes>This is the development server.</admin-notes>
+        <ns2:apis-implemented>
+            <d1:discovery version="6.0.0">
+                <d1:url>https://sala.ro.vutbr.cz:8443/ewp/manifest.xml</d1:url>
+            </d1:discovery>
+            <e1:echo version="2.0.1">
+                <e1:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cc:tlscert allows-self-signed="true"/>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </e1:http-security>
+                <e1:url>https://sala.ro.vutbr.cz:8443/ewp/api/echo</e1:url>
+            </e1:echo>
+        </ns2:apis-implemented>
+        <ns1:institutions-covered>
+            <ns2:hei id="vutbr.cz">
+                <ns2:other-id type="pic">999873091</ns2:other-id>
+                <ns2:other-id type="erasmus">CZ BRNO01</ns2:other-id>
+                <ns2:other-id type="erasmus-charter">49565-EPP-1-2014-1-CZ-EPPKA3-ECHE</ns2:other-id>
+                <ns2:name xml:lang="cz">VYSOKÉ UČENÍ TECHNICKÉ V BRNĚ</ns2:name>
+                <ns2:name xml:lang="en">BRNO UNIVERSITY OF TECHNOLOGY</ns2:name>
+            </ns2:hei>
+        </ns1:institutions-covered>
+        <ns1:client-credentials-in-use>
+            <ns1:certificate>MIIHZTCCBU2gAwIBAgIRAOkqeHH/wDOg3a7evtVrNjswDQYJKoZIhvcNAQEMBQAw
 RDELMAkGA1UEBhMCTkwxGTAXBgNVBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNV
 BAMTEUdFQU5UIE9WIFJTQSBDQSA0MB4XDTIyMDgyOTAwMDAwMFoXDTIzMDgyOTIz
 NTk1OVowcjELMAkGA1UEBhMCQ1oxGzAZBgNVBAgMEkppaG9tb3JhdnNrw70ga3Jh
@@ -67,13 +89,17 @@ UFiji6drzQmW+VDy8ejYwI38ulDz3avd7aL+JkvgYXcakG2oBs3NXBNtfB0d1A6o
 e/BPNhqgNEqTiDVr5GOJS3uEJ2vBs7pHEG/ab4odWJ+6H2ev1+Lfj2jGPH0z/Owr
 n2lana/qor+A2nrrVrczwa4Fp9zTBslFDSJgYPQkSxEOuZxuQchr57aV3P7ocvmL
 ceWgmTjsIF9d3LWckfrHpEtcukAQQ+zLyB4qIkUHXeXazPqJ4557vFjglzaEqIVA
-4mMu2dG153hByiKFrIyJ8XGEeiRnQE2Wcg==
-
-</certificate>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5VW5bnjF3YdlzS8yQyLRtqBVZgsJdfB7QiDYCWHkyEMySUlfbyfO7vtvITFsUMe8lmNXHBW1GPqARmBUdX8LqPPXP9R0E7nvkhNxhXE7mVtEBD2UxPy7Bl6DLJsXz++jGFe4WtQDULpjzl5gVrCN5b+eggPpGMl3/FEKy4UWIpaE/lFh1UKuQiFFc5sx8O8BrP2Za+Cefdacrax1sx/ah3y+6K9fz5t8YB+Nhn15gyNSvlAPpSl7mnZyPG4NNdWopXnwLGTrAiNVCfaPZkt49S0d+EChC2adgHgRTlWQ8NrS9WUCvQRegbdPY1F9MM/fXTu/Twe7J7HDRccPqSJKaQIDAQAB</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5VW5bnjF3YdlzS8yQyLRtqBVZgsJdfB7QiDYCWHkyEMySUlfbyfO7vtvITFsUMe8lmNXHBW1GPqARmBUdX8LqPPXP9R0E7nvkhNxhXE7mVtEBD2UxPy7Bl6DLJsXz++jGFe4WtQDULpjzl5gVrCN5b+eggPpGMl3/FEKy4UWIpaE/lFh1UKuQiFFc5sx8O8BrP2Za+Cefdacrax1sx/ah3y+6K9fz5t8YB+Nhn15gyNSvlAPpSl7mnZyPG4NNdWopXnwLGTrAiNVCfaPZkt49S0d+EChC2adgHgRTlWQ8NrS9WUCvQRegbdPY1F9MM/fXTu/Twe7J7HDRccPqSJKaQIDAQAB</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+4mMu2dG153hByiKFrIyJ8XGEeiRnQE2Wcg==</ns1:certificate>
+            <ns1:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5VW5bnjF3YdlzS8yQyLRtqBVZgsJdfB7QiDYCWHkyEMySUlfbyfO7vtv
+ITFsUMe8lmNXHBW1GPqARmBUdX8LqPPXP9R0E7nvkhNxhXE7mVtEBD2UxPy7Bl6DLJsXz++jGFe4WtQDULpjzl5gVrCN5b+eggPp
+GMl3/FEKy4UWIpaE/lFh1UKuQiFFc5sx8O8BrP2Za+Cefdacrax1sx/ah3y+6K9fz5t8YB+Nhn15gyNSvlAPpSl7mnZyPG4NNdWo
+pXnwLGTrAiNVCfaPZkt49S0d+EChC2adgHgRTlWQ8NrS9WUCvQRegbdPY1F9MM/fXTu/Twe7J7HDRccPqSJKaQIDAQAB</ns1:rsa-public-key>
+        </ns1:client-credentials-in-use>
+        <ns1:server-credentials-in-use>
+            <ns1:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5VW5bnjF3YdlzS8yQyLRtqBVZgsJdfB7QiDYCWHkyEMySUlfbyfO7vtv
+ITFsUMe8lmNXHBW1GPqARmBUdX8LqPPXP9R0E7nvkhNxhXE7mVtEBD2UxPy7Bl6DLJsXz++jGFe4WtQDULpjzl5gVrCN5b+eggPp
+GMl3/FEKy4UWIpaE/lFh1UKuQiFFc5sx8O8BrP2Za+Cefdacrax1sx/ah3y+6K9fz5t8YB+Nhn15gyNSvlAPpSl7mnZyPG4NNdWo
+pXnwLGTrAiNVCfaPZkt49S0d+EChC2adgHgRTlWQ8NrS9WUCvQRegbdPY1F9MM/fXTu/Twe7J7HDRccPqSJKaQIDAQAB</ns1:rsa-public-key>
+        </ns1:server-credentials-in-use>
+    </ns1:host>
+</ns1:manifest>
