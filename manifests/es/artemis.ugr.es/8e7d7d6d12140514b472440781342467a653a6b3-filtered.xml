@@ -101,6 +101,20 @@
                 <ns26:url>https://artemis.ugr.es/ewp/institutions</ns26:url>
                 <ns26:max-hei-ids>1</ns26:max-hei-ids>
             </ns26:institutions>
+            <ns24:factsheet version="1.0.0">
+                <ns24:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                        <ns57:anonymous/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns24:http-security>
+                <ns24:url>https://artemis.ugr.es/ewp/iias/factsheet</ns24:url>
+                <ns24:max-hei-ids>1</ns24:max-hei-ids>
+            </ns24:factsheet>
             <ns20:courses version="0.7.1">
                 <ns20:http-security>
                     <ns7:client-auth-methods>
@@ -145,6 +159,18 @@
                 <ns25:index-url>https://artemis.ugr.es/ewp/iias/index
 				</ns25:index-url>
             </ns25:iias>
+            <ns8:iia-cnr version="2.0.3">
+                <ns8:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns8:http-security>
+                <ns8:url>https://artemis.ugr.es/ewp/iias/cnr</ns8:url>
+            </ns8:iia-cnr>
             <ns23:iias-approval version="1.0.0">
                 <ns23:http-security>
                     <ns7:client-auth-methods>
@@ -158,6 +184,18 @@
                 <ns23:url>https://artemis.ugr.es/ewp/iias/approval</ns23:url>
                 <ns23:max-iia-ids>1</ns23:max-iia-ids>
             </ns23:iias-approval>
+            <ns22:iia-approval-cnr version="1.0.0">
+                <ns22:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns22:http-security>
+                <ns22:url>https://artemis.ugr.es/ewp/iias/approval/cnr</ns22:url>
+            </ns22:iia-approval-cnr>
             <ns19:simple-course-replication version="1.0.0">
                 <ns19:http-security>
                     <ns7:client-auth-methods>
@@ -172,6 +210,41 @@
                 <ns19:allows-anonymous-access>false</ns19:allows-anonymous-access>
                 <ns19:supports-modified-since>true</ns19:supports-modified-since>
             </ns19:simple-course-replication>
+            <ns18:omobilities version="1.0.0">
+                <ns18:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns18:http-security>
+                <ns18:get-url>https://artemis.ugr.es/ewp/omobilities/v1/get
+				</ns18:get-url>
+                <ns18:index-url>https://artemis.ugr.es/ewp/omobilities/v1/index
+				</ns18:index-url>
+                <ns18:max-omobility-ids>1</ns18:max-omobility-ids>
+                <ns18:sends-notifications/>
+            </ns18:omobilities>
+            <ns16:omobility-las version="1.0.1">
+                <ns16:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns16:http-security>
+                <ns16:get-url>https://artemis.ugr.es/ewp/omobilities/las/get
+				</ns16:get-url>
+                <ns16:index-url>https://artemis.ugr.es/ewp/omobilities/las/index
+				</ns16:index-url>
+                <ns16:update-url>https://artemis.ugr.es/ewp/omobilities/las/update
+				</ns16:update-url>
+                <ns16:max-omobility-ids>1</ns16:max-omobility-ids>
+            </ns16:omobility-las>
             <ns12:imobility-cnr version="1.0.0">
                 <ns12:http-security>
                     <ns7:client-auth-methods>
@@ -185,6 +258,19 @@
                 <ns12:url>https://artemis.ugr.es/ewp/imobilities/cnr</ns12:url>
                 <ns12:max-omobility-ids>1</ns12:max-omobility-ids>
             </ns12:imobility-cnr>
+            <ns14:omobility-la-cnr version="1.0.0">
+                <ns14:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns14:http-security>
+                <ns14:url>https://artemis.ugr.es/ewp/omobilities/las/cnr</ns14:url>
+                <ns14:max-omobility-ids>1</ns14:max-omobility-ids>
+            </ns14:omobility-la-cnr>
             <ns15:omobility-cnr version="1.0.0">
                 <ns15:http-security>
                     <ns7:client-auth-methods>
@@ -198,6 +284,68 @@
                 <ns15:url>https://artemis.ugr.es/ewp/omobilities/cnr</ns15:url>
                 <ns15:max-omobility-ids>1</ns15:max-omobility-ids>
             </ns15:omobility-cnr>
+            <ns11:imobility-tors version="1.0.0">
+                <ns11:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns11:http-security>
+                <ns11:get-url>https://artemis.ugr.es/ewp/imobilities/tors/v1/get
+				</ns11:get-url>
+                <ns11:index-url>https://artemis.ugr.es/ewp/imobilities/tors/v1/index
+				</ns11:index-url>
+                <ns11:max-omobility-ids>1</ns11:max-omobility-ids>
+                <ns11:sends-notifications/>
+            </ns11:imobility-tors>
+            <ns10:imobility-tors version="2.0.0">
+                <ns10:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns10:http-security>
+                <ns10:get-url>https://artemis.ugr.es/ewp/imobilities/tors/v2/get
+				</ns10:get-url>
+                <ns10:index-url>https://artemis.ugr.es/ewp/imobilities/tors/v2/index
+				</ns10:index-url>
+                <ns10:max-omobility-ids>1</ns10:max-omobility-ids>
+                <ns10:sends-notifications/>
+            </ns10:imobility-tors>
+            <ns9:imobility-tor-cnr version="1.0.0">
+                <ns9:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns9:http-security>
+                <ns9:url>https://artemis.ugr.es/ewp/imobilities/tors/cnr</ns9:url>
+                <ns9:max-omobility-ids>1</ns9:max-omobility-ids>
+            </ns9:imobility-tor-cnr>
+            <ns13:imobilities version="1.0.0">
+                <ns13:http-security>
+                    <ns7:client-auth-methods>
+                        <ns55:httpsig/>
+                    </ns7:client-auth-methods>
+                    <ns7:server-auth-methods>
+                        <ns59:tlscert/>
+                        <ns58:httpsig/>
+                    </ns7:server-auth-methods>
+                </ns13:http-security>
+                <ns13:get-url>https://artemis.ugr.es/ewp/imobilities/get
+				</ns13:get-url>
+                <ns13:max-omobility-ids>1</ns13:max-omobility-ids>
+                <ns13:sends-notifications/>
+            </ns13:imobilities>
             <ns17:omobilities version="2.0.0">
                 <ns17:http-security>
                     <ns7:client-auth-methods>
