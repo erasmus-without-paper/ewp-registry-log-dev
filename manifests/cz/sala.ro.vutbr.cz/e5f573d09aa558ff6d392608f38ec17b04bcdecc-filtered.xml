@@ -23,7 +23,83 @@
         <admin-email>admin-ewp@vut.cz</admin-email>
         <admin-provider>Brno University of Technology (APOLLO)</admin-provider>
         <admin-notes>This is the development server.</admin-notes>
-        <ns2:apis-implemented/>
+        <ns2:apis-implemented>
+            <d1:discovery version="6.0.0">
+                <d1:url>https://sala.ro.vutbr.cz:8443/ewp/manifest.xml</d1:url>
+            </d1:discovery>
+            <e1:echo version="2.0.1">
+                <e1:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cc:tlscert allows-self-signed="true"/>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </e1:http-security>
+                <e1:url>https://sala.ro.vutbr.cz:8443/ewp/api/echo</e1:url>
+            </e1:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://sala.ro.vutbr.cz:8443/ewp/api/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ia2:iias version="6.1.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://sala.ro.vutbr.cz:8443/ewp/api/iias/get</ia2:get-url>
+                <ia2:max-iia-ids>20</ia2:max-iia-ids>
+                <ia2:max-iia-codes>20</ia2:max-iia-codes>
+                <ia2:index-url>https://sala.ro.vutbr.cz:8443/ewp/api/iias/index</ia2:index-url>
+            </ia2:iias>
+            <iac2:iia-cnr version="2.0.3">
+                <iac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </iac2:http-security>
+                <iac2:url>https://sala.ro.vutbr.cz:8443/ewp/api/iia-cnr</iac2:url>
+            </iac2:iia-cnr>
+            <iaap:iias-approval version="1.0.0">
+                <iaap:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </iaap:http-security>
+                <iaap:url>https://sala.ro.vutbr.cz:8443/ewp/api/iias-approval</iaap:url>
+                <iaap:max-iia-ids>20</iaap:max-iia-ids>
+            </iaap:iias-approval>
+            <iapc:iia-approval-cnr version="1.0.0">
+                <iapc:http-security>
+                    <sec:client-auth-methods>
+                        <sec_cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec_ss:tlscert/>
+                    </sec:server-auth-methods>
+                </iapc:http-security>
+                <iapc:url>https://sala.ro.vutbr.cz:8443/ewp/api/iia-approval-cnr</iapc:url>
+            </iapc:iia-approval-cnr>
+        </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="vutbr.cz">
                 <ns2:other-id type="pic">999873091</ns2:other-id>
