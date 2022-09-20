@@ -1,7 +1,7 @@
 <ns9:manifest
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:iias="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/endpoints/get-response.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
@@ -64,19 +64,14 @@
 >
     <ns9:host>
         <ns8:admin-email>admin@ath.bielsko.pl</ns8:admin-email>
-        <ns8:admin-notes
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xml:lang="en"
-            xsi:type="ns8:MultilineStringWithOptionalLang"
-        >Provider: MUCI (USOS)</ns8:admin-notes>
+        <ns8:admin-provider>MUCI (USOS)</ns8:admin-provider>
         <ns7:apis-implemented>
-            <ns10:discovery version="5.0.0">
+            <ns10:discovery version="6.0.0">
                 <ns10:url>https://ewp-test.ath.bielsko.pl/ewp/manifest</ns10:url>
             </ns10:discovery>
             <ns30:echo version="2.0.1">
                 <ns30:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -89,7 +84,6 @@
             <ns20:institutions version="2.2.0">
                 <ns20:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -103,7 +97,6 @@
             <ns12:organizational-units version="2.1.1">
                 <ns12:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -118,7 +111,6 @@
             <ns31:courses version="0.7.1">
                 <ns31:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -133,7 +125,6 @@
             <ns25:iias version="6.0.1">
                 <ns25:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -149,7 +140,6 @@
             <ns27:iia-cnr version="2.0.3">
                 <ns27:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -162,7 +152,6 @@
             <ns26:iias-approval version="1.0.0">
                 <ns26:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -176,7 +165,6 @@
             <ns28:iia-approval-cnr version="1.0.0">
                 <ns28:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -186,10 +174,22 @@
                 </ns28:http-security>
                 <ns28:url>https://ewp-test.ath.bielsko.pl/ewp/iia/approval/cnr</ns28:url>
             </ns28:iia-approval-cnr>
-            <ns24:imobilities version="0.3.0">
+            <ns29:factsheet version="1.1.0">
+                <ns29:http-security>
+                    <ns11:client-auth-methods>
+                        <ns47:httpsig/>
+                    </ns11:client-auth-methods>
+                    <ns11:server-auth-methods>
+                        <ns56:tlscert/>
+                        <ns55:httpsig/>
+                    </ns11:server-auth-methods>
+                </ns29:http-security>
+                <ns29:url>https://ewp-test.ath.bielsko.pl/ewp/factsheet</ns29:url>
+                <ns29:max-hei-ids>1</ns29:max-hei-ids>
+            </ns29:factsheet>
+            <ns24:imobilities version="1.0.0">
                 <ns24:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -201,10 +201,9 @@
                 <ns24:max-omobility-ids>100</ns24:max-omobility-ids>
                 <ns24:sends-notifications/>
             </ns24:imobilities>
-            <ns23:imobility-cnr version="0.1.1">
+            <ns23:imobility-cnr version="1.0.0">
                 <ns23:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -218,7 +217,6 @@
             <ns16:omobilities version="1.0.0">
                 <ns16:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -234,7 +232,6 @@
             <ns15:omobility-cnr version="1.0.0">
                 <ns15:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -248,7 +245,6 @@
             <ns13:omobility-las version="1.0.1">
                 <ns13:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -261,10 +257,9 @@
                 <ns13:update-url>https://ewp-test.ath.bielsko.pl/ewp/la/update</ns13:update-url>
                 <ns13:max-omobility-ids>100</ns13:max-omobility-ids>
             </ns13:omobility-las>
-            <ns21:imobility-tors version="0.7.0">
+            <ns21:imobility-tors version="1.0.0">
                 <ns21:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -277,10 +272,9 @@
                 <ns21:max-omobility-ids>10</ns21:max-omobility-ids>
                 <ns21:sends-notifications/>
             </ns21:imobility-tors>
-            <ns22:imobility-tor-cnr version="0.1.1">
+            <ns22:imobility-tor-cnr version="1.0.0">
                 <ns22:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -301,25 +295,6 @@
             </ns7:hei>
         </ns9:institutions-covered>
         <ns9:client-credentials-in-use>
-            <ns9:certificate>MIIDYzCCAkugAwIBAgIEHv6FCDANBgkqhkiG9w0BAQsFADBiMQswCQYDVQQGEwJQ
-TDEQMA4GA1UECAwHxZtsxIVzazEXMBUGA1UEBwwOQmllbHNrby1CaWHFgmExDDAK
-BgNVBAoTA0FUSDEMMAoGA1UECxMDQVRIMQwwCgYDVQQDEwNBVEgwHhcNMjIwMzA4
-MTIzNDMzWhcNMzIwMzA1MTIzNDMzWjBiMQswCQYDVQQGEwJQTDEQMA4GA1UECAwH
-xZtsxIVzazEXMBUGA1UEBwwOQmllbHNrby1CaWHFgmExDDAKBgNVBAoTA0FUSDEM
-MAoGA1UECxMDQVRIMQwwCgYDVQQDEwNBVEgwggEiMA0GCSqGSIb3DQEBAQUAA4IB
-DwAwggEKAoIBAQCyJO03CI56qwgygHGJuxUS6bZaG73duw0F5vnJMM55bA1MT2QN
-Pch8i8WNHpzlcgHQsfTOEYFm+UK6qtJt8YCicGuwlQf7Mc3SdsyY3dkZNCN9a3Kp
-+SvvvKErSK4VUXl6LikPfq66VYDxuA5IUSOnKNphkcBykt//+NSZPcKPT13OMIpg
-hYZ2ElsdSWEN7Nw7snQW+19eXH1AlM/H0zeogMReDLKD2XrF6SkUf1la42j59s51
-eg42hh/4xotOQwY5x7Gi1dMdNH/NCxwUo+98II3YQCWcAt1Vt77dhCINmOPfrk5r
-HQL7hrIq9VTMb/Uby8RsfVJapzCaOB+PsuldAgMBAAGjITAfMB0GA1UdDgQWBBSn
-i2tHwc9ccq2X+bzDLlWBcc79KTANBgkqhkiG9w0BAQsFAAOCAQEASbqjoZGip+N7
-jps7MOnHQXoFwqnyokXfW6fZyF7aBDicXvceepZbYL6XxEFTc65hxlikxbWeYqx1
-qZVRfJgxOKjyQmKHXhKAkQXcmYJ2Pw2TPvLJyhT4xqyUXGPLMOE29eJ9ijuSR0kw
-rsik0INzYyl9gcbb9KAJM4IxKkFrMNs7b1aFVQjcyqBgv/Z/0SlcczN3Mdgf1DKa
-EM0ew8rASOl5ximy/tLuZpz3m83wj8wYU1cEqLvxcdo2qUOSYRIViRyRcn0DeFhB
-zR5C7k69G6lRWKlflrYF89Aa4AQBAkw7gZSm6KE2XNWOSNXfGi9Q8vED3GkT7sZ7
-Lb+ULWdgrw==</ns9:certificate>
             <ns9:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsiTtNwiOeqsIMoBxibsV
 Eum2Whu93bsNBeb5yTDOeWwNTE9kDT3IfIvFjR6c5XIB0LH0zhGBZvlCuqrSbfGA
 onBrsJUH+zHN0nbMmN3ZGTQjfWtyqfkr77yhK0iuFVF5ei4pD36uulWA8bgOSFEj
