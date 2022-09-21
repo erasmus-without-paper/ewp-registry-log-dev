@@ -4,7 +4,13 @@
     xmlns:common1="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iiacnr2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iias6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:iiasappr1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iiasapprcnr1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:inst2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:omoblacnr1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omoblas1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:ounits2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:reg1="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec1="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -27,6 +33,18 @@
                 </e2:http-security>
                 <e2:url>https://qas.ewp.ugent.be/secure-api/echo</e2:url>
             </e2:echo>
+            <iiacnr2:iia-cnr version="2.0.2">
+                <iiacnr2:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </iiacnr2:http-security>
+                <iiacnr2:url>https://qas.ewp.ugent.be/secure-api/iias-cnr</iiacnr2:url>
+            </iiacnr2:iia-cnr>
             <inst2:institutions version="2.0.0">
                 <inst2:http-security>
                     <sec1:client-auth-methods>
@@ -40,6 +58,59 @@
                 <inst2:url>https://qas.ewp.ugent.be/secure-api/institutions</inst2:url>
                 <inst2:max-hei-ids>1</inst2:max-hei-ids>
             </inst2:institutions>
+            <iiasapprcnr1:iia-approval-cnr version="1.0.0">
+                <iiasapprcnr1:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </iiasapprcnr1:http-security>
+                <iiasapprcnr1:url>https://qas.ewp.ugent.be/secure-api/iia-approval-cnr</iiasapprcnr1:url>
+            </iiasapprcnr1:iia-approval-cnr>
+            <iias6:iias version="6.0.1">
+                <iias6:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </iias6:http-security>
+                <iias6:get-url>https://qas.ewp.ugent.be/secure-api/iias/get</iias6:get-url>
+                <iias6:max-iia-ids>1</iias6:max-iia-ids>
+                <iias6:max-iia-codes>1</iias6:max-iia-codes>
+                <iias6:index-url>https://qas.ewp.ugent.be/secure-api/iias/index</iias6:index-url>
+            </iias6:iias>
+            <omoblacnr1:omobility-la-cnr version="1.0.0">
+                <omoblacnr1:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </omoblacnr1:http-security>
+                <omoblacnr1:url>https://qas.ewp.ugent.be/secure-api/omobility-la-cnr</omoblacnr1:url>
+                <omoblacnr1:max-omobility-ids>1</omoblacnr1:max-omobility-ids>
+            </omoblacnr1:omobility-la-cnr>
+            <iiasappr1:iias-approval version="1.0.0">
+                <iiasappr1:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </iiasappr1:http-security>
+                <iiasappr1:url>https://qas.ewp.ugent.be/secure-api/iias-approval</iiasappr1:url>
+                <iiasappr1:max-iia-ids>1</iiasappr1:max-iia-ids>
+            </iiasappr1:iias-approval>
             <ounits2:organizational-units version="2.0.0">
                 <ounits2:http-security>
                     <sec1:client-auth-methods>
@@ -54,6 +125,21 @@
                 <ounits2:max-ounit-ids>1</ounits2:max-ounit-ids>
                 <ounits2:max-ounit-codes>1</ounits2:max-ounit-codes>
             </ounits2:organizational-units>
+            <omoblas1:omobility-las version="1.0.1">
+                <omoblas1:http-security>
+                    <sec1:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec1:client-auth-methods>
+                    <sec1:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                        <srvauthtls1:tlscert/>
+                    </sec1:server-auth-methods>
+                </omoblas1:http-security>
+                <omoblas1:get-url>https://qas.ewp.ugent.be/secure-api/omobility-las/get</omoblas1:get-url>
+                <omoblas1:index-url>https://qas.ewp.ugent.be/secure-api/omobility-las/index</omoblas1:index-url>
+                <omoblas1:update-url>https://qas.ewp.ugent.be/secure-api/omobility-las/update</omoblas1:update-url>
+                <omoblas1:max-omobility-ids>1</omoblas1:max-omobility-ids>
+            </omoblas1:omobility-las>
             <d6:discovery version="6.0.0">
                 <d6:url>https://qas.ewp.ugent.be/public-api/discovery/manifest.xml</d6:url>
             </d6:discovery>
