@@ -72,7 +72,6 @@
             <ns30:echo version="2.0.1">
                 <ns30:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -85,7 +84,6 @@
             <ns20:institutions version="2.2.0">
                 <ns20:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -99,7 +97,6 @@
             <ns12:organizational-units version="2.1.1">
                 <ns12:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -114,7 +111,6 @@
             <ns31:courses version="0.7.1">
                 <ns31:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -129,7 +125,6 @@
             <ns25:iias version="6.0.1">
                 <ns25:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -145,7 +140,6 @@
             <ns27:iia-cnr version="2.0.3">
                 <ns27:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -158,7 +152,6 @@
             <ns26:iias-approval version="1.0.0">
                 <ns26:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -172,7 +165,6 @@
             <ns28:iia-approval-cnr version="1.0.0">
                 <ns28:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -182,10 +174,22 @@
                 </ns28:http-security>
                 <ns28:url>https://ewp-dev.ujd.edu.pl/ewp/iia/approval/cnr</ns28:url>
             </ns28:iia-approval-cnr>
-            <ns24:imobilities version="0.3.0">
+            <ns29:factsheet version="1.1.0">
+                <ns29:http-security>
+                    <ns11:client-auth-methods>
+                        <ns47:httpsig/>
+                    </ns11:client-auth-methods>
+                    <ns11:server-auth-methods>
+                        <ns56:tlscert/>
+                        <ns55:httpsig/>
+                    </ns11:server-auth-methods>
+                </ns29:http-security>
+                <ns29:url>https://ewp-dev.ujd.edu.pl/ewp/factsheet</ns29:url>
+                <ns29:max-hei-ids>1</ns29:max-hei-ids>
+            </ns29:factsheet>
+            <ns24:imobilities version="1.0.0">
                 <ns24:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -197,10 +201,9 @@
                 <ns24:max-omobility-ids>100</ns24:max-omobility-ids>
                 <ns24:sends-notifications/>
             </ns24:imobilities>
-            <ns23:imobility-cnr version="0.1.1">
+            <ns23:imobility-cnr version="1.0.0">
                 <ns23:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -214,7 +217,6 @@
             <ns16:omobilities version="1.0.0">
                 <ns16:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -230,7 +232,6 @@
             <ns15:omobility-cnr version="1.0.0">
                 <ns15:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -244,7 +245,6 @@
             <ns13:omobility-las version="1.0.1">
                 <ns13:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -257,24 +257,9 @@
                 <ns13:update-url>https://ewp-dev.ujd.edu.pl/ewp/la/update</ns13:update-url>
                 <ns13:max-omobility-ids>100</ns13:max-omobility-ids>
             </ns13:omobility-las>
-            <ns14:omobility-la-cnr version="1.0.0">
-                <ns14:http-security>
-                    <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
-                        <ns47:httpsig/>
-                    </ns11:client-auth-methods>
-                    <ns11:server-auth-methods>
-                        <ns56:tlscert/>
-                        <ns55:httpsig/>
-                    </ns11:server-auth-methods>
-                </ns14:http-security>
-                <ns14:url>https://ewp-dev.ujd.edu.pl/ewp/la/cnr</ns14:url>
-                <ns14:max-omobility-ids>100</ns14:max-omobility-ids>
-            </ns14:omobility-la-cnr>
-            <ns21:imobility-tors version="0.7.0">
+            <ns21:imobility-tors version="1.0.0">
                 <ns21:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -287,10 +272,9 @@
                 <ns21:max-omobility-ids>10</ns21:max-omobility-ids>
                 <ns21:sends-notifications/>
             </ns21:imobility-tors>
-            <ns22:imobility-tor-cnr version="0.1.1">
+            <ns22:imobility-tor-cnr version="1.0.0">
                 <ns22:http-security>
                     <ns11:client-auth-methods>
-                        <ns48:tlscert allows-self-signed="true"/>
                         <ns47:httpsig/>
                     </ns11:client-auth-methods>
                     <ns11:server-auth-methods>
@@ -307,34 +291,10 @@
                 <ns7:other-id type="erasmus">PL CZESTOC02</ns7:other-id>
                 <ns7:other-id type="pic">949524562</ns7:other-id>
                 <ns7:name xml:lang="pl">Uniwersytet Humanistyczno-Przyrodniczy im. Jana Długosza w Częstochowie</ns7:name>
-                <ns7:name xml:lang="en">Jan Długosz University in Częstochowa</ns7:name>
+                <ns7:name xml:lang="en">Jan Dlugosz University in Czestochowa</ns7:name>
             </ns7:hei>
         </ns9:institutions-covered>
         <ns9:client-credentials-in-use>
-            <ns9:certificate>MIIEXTCCA0WgAwIBAgIEKKZwaTANBgkqhkiG9w0BAQsFADCB3jELMAkGA1UEBhMC
-UEwxEjAQBgNVBAgMCcWbbMSFc2tpZTEVMBMGA1UEBwwMQ3rEmXN0b2Nob3dhMVIw
-UAYDVQQKDElVbml3ZXJzeXRldCBIdW1hbmlzdHljem5vLVByenlyb2RuaWN6eSBp
-bS4gSmFuYSBExYJ1Z29zemEgdyBDesSZc3RvY2hvd2llMUAwPgYDVQQLDDdaZXNw
-w7PFgiBTeXN0ZW3Ds3cgSW5mb3JtYXR5Y3pueWNoIGkgT2JzxYJ1Z2kgRHlkYWt0
-eWtpMQ4wDAYDVQQDEwVaU0lPRDAeFw0yMjA0MTExMDUxMzRaFw00OTA4MjYxMDUx
-MzRaMIHeMQswCQYDVQQGEwJQTDESMBAGA1UECAwJxZtsxIVza2llMRUwEwYDVQQH
-DAxDesSZc3RvY2hvd2ExUjBQBgNVBAoMSVVuaXdlcnN5dGV0IEh1bWFuaXN0eWN6
-bm8tUHJ6eXJvZG5pY3p5IGltLiBKYW5hIETFgnVnb3N6YSB3IEN6xJlzdG9jaG93
-aWUxQDA+BgNVBAsMN1plc3DDs8WCIFN5c3RlbcOzdyBJbmZvcm1hdHljem55Y2gg
-aSBPYnPFgnVnaSBEeWRha3R5a2kxDjAMBgNVBAMTBVpTSU9EMIIBIjANBgkqhkiG
-9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgN+Y3vJDyBDIVfX2tZc0MrcEe85k5s2JWmqb
-olFbIa/KPBEKY3jHGqoo6DIGw2hJ6d5aEFelCBbtgDGtdH1d6xK8aUgjFIGcHMyK
-2RJ6N8RXaLnwihp2QdD7lQ8ofxiizR7vKP7iGkjC8ow/WKMoOq76seAoYZYqExgG
-SYOkMGpSy4tg9+8OGcvOs1mLAd9eEHBX3HCYC7TSh+YZ1ldnXmz62mRNybA0OIhQ
-+s4fnx9zDf1vx3TA0+ZT4R/DTmyOjVDsAY0iwnzEZJlnyPni1F0EmODpTBVWrQ+1
-LeH4ilXRZiWBaAh1Zfnsdz2LG+CpuiGEqPaNgTItbNLCbdwZxQIDAQABoyEwHzAd
-BgNVHQ4EFgQUFYe9YYWZhw9OAklttTgc98LlApYwDQYJKoZIhvcNAQELBQADggEB
-AGE6uqN7VciGio/d4repRh0K0y6XAlL+LX0DtUsYUx74521t42y0Uz2haaOoiooz
-HlgO7BBU/3v89+POXgbsctS4PMFvmSSieXFgMD1ghRNwu37Ia0YoUQQqr1MjD1Lf
-dcGas5fL0VSGd1ZO7saNr7MKfYG62qbvrFy7ZgwshLtHepjES435iRQFF3nQ3adp
-Lgh6c7iy8P2zmDMKdPclbcowYbIEeGSFF4HXT8ftkGf4s3Pr8rmUzGJrEmL4khpF
-kb8UcO3hEuhYx0Fob83FebT8AaG+PVRPtDA6O47yRQ40//Mw87XKAui33ejXNmU7
-GMBnJ75juXmCJPHDuMHN2I4=</ns9:certificate>
             <ns9:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgN+Y3vJDyBDIVfX2tZc0
 MrcEe85k5s2JWmqbolFbIa/KPBEKY3jHGqoo6DIGw2hJ6d5aEFelCBbtgDGtdH1d
 6xK8aUgjFIGcHMyK2RJ6N8RXaLnwihp2QdD7lQ8ofxiizR7vKP7iGkjC8ow/WKMo
