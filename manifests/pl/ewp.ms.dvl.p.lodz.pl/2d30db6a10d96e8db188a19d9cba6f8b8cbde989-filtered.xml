@@ -1,7 +1,7 @@
 <ns12:manifest
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
@@ -39,26 +39,6 @@
                 </ns2:http-security>
                 <ns2:url>https://ewp.ms.dvl.p.lodz.pl/echo</ns2:url>
             </ns2:echo>
-            <ns10:institutions version="1.0.0">
-                <ns2:http-security>
-                    <ns5:client-auth-methods>
-                        <ns3:httpsig/>
-                        <ns4:tlscert allows-self-signed="true"/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns6:tlscert/>
-                        <ns3:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
-                        <ns7:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
-                        <ns8:tls/>
-                    </ns5:response-encryption-methods>
-                </ns2:http-security>
-                <ns2:max-hei-ids>1</ns2:max-hei-ids>
-                <ns2:url>https://ewp.ms.dvl.p.lodz.pl/institutions</ns2:url>
-            </ns10:institutions>
         </ns11:apis-implemented>
         <ns12:institutions-covered>
             <ns11:hei id="p.lodz.pl">
