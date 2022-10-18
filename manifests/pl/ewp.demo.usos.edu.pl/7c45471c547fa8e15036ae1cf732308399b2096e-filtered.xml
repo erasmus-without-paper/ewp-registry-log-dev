@@ -1,14 +1,12 @@
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
 >
     <host>
         <ewp:admin-email>ewp-tech@lists.erasmuswithoutpaper.eu</ewp:admin-email>
-        <ewp:admin-provider>ESCI consortium</ewp:admin-provider>
-        <ewp:admin-notes>It's a manifest of EWP Stats Portal</ewp:admin-notes>
+        <ewp:admin-provider>ESCI consortium (EWP Stats Portal)</ewp:admin-provider>
         <r:apis-implemented>
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
@@ -16,12 +14,30 @@
             >
                 <url>https://ewp.demo.usos.edu.pl/stats/ewp/manifest/</url>
             </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <url>https://ewp.demo.usos.edu.pl/stats/ewp/echo/</url>
+            </echo>
         </r:apis-implemented>
-        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-            <hei id="stats.erasmuswithoutpaper.eu">
+        <institutions-covered>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="stats.erasmuswithoutpaper.eu"
+            >
                 <name xml:lang="en">EWP Stats Portal</name>
             </hei>
-        </mf:institutions-covered>
+        </institutions-covered>
         <client-credentials-in-use>
             <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuwddJFYMWZngJ3SBW1he
 Xa8ZUhcnCVhK29zlY0wt5vhYGH9/gfJmvZS30pmLEkiMYHRQNbXcnUez9V0mur/F
