@@ -39,6 +39,26 @@
                 </ns2:http-security>
                 <ns2:url>https://ewp.ms.dvl.p.lodz.pl/echo</ns2:url>
             </ns2:echo>
+            <ns10:institutions version="2.2.0">
+                <ns10:http-security>
+                    <ns5:client-auth-methods>
+                        <ns3:httpsig/>
+                        <ns4:tlscert allows-self-signed="true"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns6:tlscert/>
+                        <ns3:httpsig/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns7:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns8:tls/>
+                    </ns5:response-encryption-methods>
+                </ns10:http-security>
+                <ns10:url>https://ewp.ms.dvl.p.lodz.pl/institutions</ns10:url>
+                <ns10:max-hei-ids>1</ns10:max-hei-ids>
+            </ns10:institutions>
         </ns11:apis-implemented>
         <ns12:institutions-covered>
             <ns11:hei id="p.lodz.pl">
