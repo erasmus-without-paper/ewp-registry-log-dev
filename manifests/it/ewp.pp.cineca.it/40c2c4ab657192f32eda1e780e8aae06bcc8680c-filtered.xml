@@ -276,7 +276,23 @@
                 <max-omobility-ids>10</max-omobility-ids>
                 <sends-notifications/>
             </imobilities>
-            <imobilities-tors
+            <imobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.pp.cineca.it/api/incoming/unical.it/incmob/cnr</url>
+                <max-omobility-ids>10</max-omobility-ids>
+            </imobility-cnr>
+            <imobility-tors
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
@@ -293,7 +309,7 @@
                 <index-url>https://ewp.pp.cineca.it/api/incoming/unical.it/incmob/tor/index</index-url>
                 <max-omobility-ids>10</max-omobility-ids>
                 <sends-notifications/>
-            </imobilities-tors>
+            </imobility-tors>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="unical.it">
