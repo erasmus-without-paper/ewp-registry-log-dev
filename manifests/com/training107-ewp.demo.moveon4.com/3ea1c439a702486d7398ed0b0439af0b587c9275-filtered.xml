@@ -22,4 +22,117 @@
     xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-/>
+>
+    <ns3:host>
+        <ewp:admin-email>moveon-ewp@qs.com</ewp:admin-email>
+        <ewp:admin-provider>QS MoveON</ewp:admin-provider>
+        <r:apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://training107-ewp.demo.moveon4.com/v1/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://training107-ewp.demo.moveon4.com/v1/echo</e2:url>
+            </e2:echo>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://training107-ewp.demo.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <om1:omobilities version="1.0.0">
+                <om1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om1:http-security>
+                <om1:get-url>https://training107-ewp.demo.moveon4.com/v1/omobility/get</om1:get-url>
+                <om1:index-url>https://training107-ewp.demo.moveon4.com/v1/omobility/index</om1:index-url>
+                <om1:max-omobility-ids>10</om1:max-omobility-ids>
+                <om1:sends-notifications/>
+            </om1:omobilities>
+            <omc1:omobility-cnr version="1.0.0">
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://training107-ewp.demo.moveon4.com/v1/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities version="1.0.0">
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://training107-ewp.demo.moveon4.com/v1/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>10</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr version="1.0.0">
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://training107-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+        </r:apis-implemented>
+        <ns3:institutions-covered>
+            <r:hei id="howest.be">
+                <r:other-id type="erasmus">B  KORTRIJ03</r:other-id>
+                <r:other-id type="erasmus-charter">27931</r:other-id>
+                <r:other-id type="pic">998686684</r:other-id>
+                <r:name xml:lang="en">Howest, de Hogeschool West-Vlaanderen</r:name>
+            </r:hei>
+        </ns3:institutions-covered>
+        <ns3:client-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApB8al/JOnWseIzKFs+10
+0xFT8dnOEY18sWbi38U9MTC7WG7Y8QcVj3F36b128GPOYwEAGqNG3CuMBJ1yCUb6
+ElmBD3z/Z4PhwINTE38jagS2XzvLRps2tKXGTb/X3D+ma2HXLNfH6Q0RHooxxwUa
+hgMNCqlh/HYpPiV/gpSmvSiV0ATocDiJ/IaYwgAaCyq2RAPGfszMRwZ6plCqYPfX
+YrSfOIzDCYqnsxgTLk0TuhDFVaRoPwc7zwYjiSG59qyd+xPL6YiPqRncQYTkVzpz
+k8/p2u63OVBE0Yqwp2Ghzz3CxaoNBMqO3pbH5I2kqqt+JACr5dbLvur1vDnI6NES
+kQIDAQAB
+</ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+        <ns3:server-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApB8al/JOnWseIzKFs+10
+0xFT8dnOEY18sWbi38U9MTC7WG7Y8QcVj3F36b128GPOYwEAGqNG3CuMBJ1yCUb6
+ElmBD3z/Z4PhwINTE38jagS2XzvLRps2tKXGTb/X3D+ma2HXLNfH6Q0RHooxxwUa
+hgMNCqlh/HYpPiV/gpSmvSiV0ATocDiJ/IaYwgAaCyq2RAPGfszMRwZ6plCqYPfX
+YrSfOIzDCYqnsxgTLk0TuhDFVaRoPwc7zwYjiSG59qyd+xPL6YiPqRncQYTkVzpz
+k8/p2u63OVBE0Yqwp2Ghzz3CxaoNBMqO3pbH5I2kqqt+JACr5dbLvur1vDnI6NES
+kQIDAQAB
+</ns3:rsa-public-key>
+        </ns3:server-credentials-in-use>
+    </ns3:host>
+</ns3:manifest>
