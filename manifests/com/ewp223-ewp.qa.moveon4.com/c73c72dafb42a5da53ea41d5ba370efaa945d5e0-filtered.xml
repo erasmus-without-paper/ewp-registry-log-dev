@@ -67,7 +67,7 @@
                 <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia6:iias version="6.0.1">
+            <ia6:iias version="6.2.0">
                 <ia6:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -80,6 +80,7 @@
                 <ia6:max-iia-ids>10</ia6:max-iia-ids>
                 <ia6:max-iia-codes>10</ia6:max-iia-codes>
                 <ia6:index-url>https://ewp223-ewp.qa.moveon4.com/v1/iia/index</ia6:index-url>
+                <ia6:stats-url>https://ewp223-ewp.qa.moveon4.com/v1/iia/stats</ia6:stats-url>
             </ia6:iias>
             <iac2:iia-cnr version="2.0.3">
                 <iac2:http-security>
@@ -204,6 +205,17 @@
                 <f1:url>https://ewp223-ewp.qa.moveon4.com/v1/factsheet/get</f1:url>
                 <f1:max-hei-ids>10</f1:max-hei-ids>
             </f1:factsheet>
+            <file1:file version="1.0.0">
+                <file1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </file1:http-security>
+                <file1:url>https://ewp223-ewp.qa.moveon4.com/v1/file/get</file1:url>
+            </file1:file>
         </r:apis-implemented>
         <ns3:institutions-covered>
             <r:hei id="ewp223-bo.qa.moveon4.com">
