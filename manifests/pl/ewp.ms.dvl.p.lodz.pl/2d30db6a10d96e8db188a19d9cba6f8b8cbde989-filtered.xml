@@ -19,6 +19,26 @@
         <admin-provider>Lodz University of Technology</admin-provider>
         <admin-notes>Manifest File for Lodz University of Technology. This host is a DEMO server. We plan to keep it online for testing.</admin-notes>
         <ns13:apis-implemented>
+            <ns2:courses version="0.7.1">
+                <ns2:http-security>
+                    <ns5:client-auth-methods>
+                        <ns3:httpsig/>
+                        <ns4:tlscert allows-self-signed="false"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns6:tlscert/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns8:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns9:tls/>
+                    </ns5:response-encryption-methods>
+                </ns2:http-security>
+                <ns2:max-los-codes>3</ns2:max-los-codes>
+                <ns2:max-los-ids>3</ns2:max-los-ids>
+                <ns10:url>https://ewp.ms.dvl.p.lodz.pl/courses</ns10:url>
+            </ns2:courses>
             <ns10:discovery version="6.0.0">
                 <ns10:url>https://ewp.ms.dvl.p.lodz.pl/manifest</ns10:url>
             </ns10:discovery>
