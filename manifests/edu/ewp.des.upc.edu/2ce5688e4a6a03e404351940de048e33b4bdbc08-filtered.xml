@@ -6,7 +6,10 @@
     xmlns:d="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:iaasa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:iia="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:iiacnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:olas="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
@@ -96,6 +99,40 @@
                 <iia:max-iia-codes>10</iia:max-iia-codes>
                 <iia:index-url>https://ewp.des.upc.edu/api/iia/index</iia:index-url>
             </iia:iias>
+            <iiacnr:iia-cnr version="2.0.3">
+                <iiacnr:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                </iiacnr:http-security>
+                <iiacnr:url>https://ewp.des.upc.edu/api/iia/cnr</iiacnr:url>
+            </iiacnr:iia-cnr>
+            <iaasa1:iias-approval version="1.1.0">
+                <iaasa1:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                </iaasa1:http-security>
+                <iaasa1:url>https://ewp.des.upc.edu/api/iia/approval</iaasa1:url>
+                <iaasa1:max-iia-ids>10</iaasa1:max-iia-ids>
+            </iaasa1:iias-approval>
+            <iaac1:iia-approval-cnr version="1.1.0">
+                <iaac1:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac1:http-security>
+                <iaac1:url>https://ewp.des.upc.edu/api/iia/cnrapproval</iaac1:url>
+            </iaac1:iia-approval-cnr>
             <olas:omobility-las version="1.2.0">
                 <olas:http-security>
                     <sec:client-auth-methods>
