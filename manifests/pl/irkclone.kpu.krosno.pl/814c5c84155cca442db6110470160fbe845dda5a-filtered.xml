@@ -1,15 +1,16 @@
 <manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
 >
     <host>
         <ewp:admin-email>informatycy@kpu.krosno.pl</ewp:admin-email>
+        <ewp:admin-provider>MUCI (USOS IRK)</ewp:admin-provider>
         <r:apis-implemented>
             <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-                version="5.0.0"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
             >
                 <url>https://irkclone.kpu.krosno.pl/ewp/manifest/</url>
             </discovery>
@@ -30,7 +31,7 @@
             </echo>
             <omobility-la-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
+                version="1.1.0"
             >
                 <http-security>
                     <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
@@ -42,6 +43,7 @@
                     </server-auth-methods>
                 </http-security>
                 <url>https://irkclone.kpu.krosno.pl/ewp/la/cnr/</url>
+                <stats-url>https://irkclone.kpu.krosno.pl/ewp/la/cnr/stats/</stats-url>
                 <max-omobility-ids>100</max-omobility-ids>
             </omobility-la-cnr>
         </r:apis-implemented>
