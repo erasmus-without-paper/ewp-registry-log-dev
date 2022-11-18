@@ -20,6 +20,27 @@
             >
                 <url>https://ewptest.erasmusport.com/alx.edu.eu/manifest.xml</url>
             </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
+                    </sec:response-encryption-methods>
+                </http-security>
+                <url>https://ewptest.erasmusport.com/alx.edu.eu/echo</url>
+            </echo>
             <institutions
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
                 version="2.1.0"
@@ -362,7 +383,7 @@
             <r:hei id="alx.edu.eu">
                 <r:other-id type="pic">2002</r:other-id>
                 <r:other-id type="erasmus">DV ALX01</r:other-id>
-                <r:other-id type="eche">224011-EPP-1-2014-1-TR-EPPKA3-ECHE</r:other-id>
+                <r:other-id type="eche">220856-EPP-1-2014-1-TR-EPPKA3-ECHE</r:other-id>
                 <r:name xml:lang="en">Alx Univ</r:name>
                 <r:name xml:lang="tr">Alx Univ</r:name>
             </r:hei>
