@@ -19,6 +19,7 @@
         xmlns:iias-appl-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
         xmlns:fsheet="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
         xmlns:omobs="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+        xmlns:omobility-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
         xmlns:imobs="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
         xmlns:imobs-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
         xmlns:tors="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
@@ -160,6 +161,21 @@
                     <omobs:index-url>https://mobility-test.is.cvut.cz/ewp/api/omobs/index</omobs:index-url>
                     <omobs:max-omobility-ids>1</omobs:max-omobility-ids>
             </omobs:omobilities>
+            <omobility-cnr:omobility-cnr version="1.0.0">
+                 <omobility-cnr:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </omobility-cnr:http-security>
+                    <omobility-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/omobs/cnr</omobility-cnr:url>
+                    <omobility-cnr:max-omobility-ids>1</omobility-cnr:max-omobility-ids>
+                    <omobility-cnr:sends-notifications></omobility-cnr:sends-notifications>
+            </omobility-cnr:omobility-cnr>
             <imobs:imobilities version="1.0.0">
                  <imobs:http-security>
                     <sec:client-auth-methods>
@@ -187,6 +203,7 @@
                 </imobs-cnr:http-security>
                     <imobs-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/imobs/cnr</imobs-cnr:url>
                     <imobs-cnr:max-omobility-ids>1</imobs-cnr:max-omobility-ids>
+                    <imobs-cnr:sends-notifications></imobs-cnr:sends-notifications>
             </imobs-cnr:imobility-cnr>
             <tors:imobility-tors version="2.0.0">
                  <tors:http-security>

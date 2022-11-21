@@ -11,6 +11,7 @@
     xmlns:imobs="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:imobs-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:omobility-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:omobs="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:ounits="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:reg="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -165,19 +166,6 @@
                 <imobs:get-url>https://mobility-test.is.cvut.cz/ewp/api/imobs/get</imobs:get-url>
                 <imobs:max-omobility-ids>1</imobs:max-omobility-ids>
             </imobs:imobilities>
-            <imobs-cnr:imobility-cnr version="1.0.0">
-                <imobs-cnr:http-security>
-                    <sec:client-auth-methods>
-                        <sec-ctls:tlscert allows-self-signed="true"/>
-                        <sec-csig:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-stls:tlscert/>
-                    </sec:server-auth-methods>
-                </imobs-cnr:http-security>
-                <imobs-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/imobs/cnr</imobs-cnr:url>
-                <imobs-cnr:max-omobility-ids>1</imobs-cnr:max-omobility-ids>
-            </imobs-cnr:imobility-cnr>
             <tors:imobility-tors version="2.0.0">
                 <tors:http-security>
                     <sec:client-auth-methods>
