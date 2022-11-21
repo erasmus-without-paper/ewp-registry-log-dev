@@ -152,7 +152,21 @@
                 <omobs:get-url>https://mobility-test.is.cvut.cz/ewp/api/omobs/get</omobs:get-url>
                 <omobs:index-url>https://mobility-test.is.cvut.cz/ewp/api/omobs/index</omobs:index-url>
                 <omobs:max-omobility-ids>1</omobs:max-omobility-ids>
+                <omobs:sends-notifications/>
             </omobs:omobilities>
+            <omobility-cnr:omobility-cnr version="1.0.0">
+                <omobility-cnr:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </omobility-cnr:http-security>
+                <omobility-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/omobs/cnr</omobility-cnr:url>
+                <omobility-cnr:max-omobility-ids>1</omobility-cnr:max-omobility-ids>
+            </omobility-cnr:omobility-cnr>
             <imobs:imobilities version="1.0.0">
                 <imobs:http-security>
                     <sec:client-auth-methods>
@@ -165,7 +179,21 @@
                 </imobs:http-security>
                 <imobs:get-url>https://mobility-test.is.cvut.cz/ewp/api/imobs/get</imobs:get-url>
                 <imobs:max-omobility-ids>1</imobs:max-omobility-ids>
+                <imobs:sends-notifications/>
             </imobs:imobilities>
+            <imobs-cnr:imobility-cnr version="1.0.0">
+                <imobs-cnr:http-security>
+                    <sec:client-auth-methods>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </imobs-cnr:http-security>
+                <imobs-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/imobs/cnr</imobs-cnr:url>
+                <imobs-cnr:max-omobility-ids>1</imobs-cnr:max-omobility-ids>
+            </imobs-cnr:imobility-cnr>
             <tors:imobility-tors version="2.0.0">
                 <tors:http-security>
                     <sec:client-auth-methods>
