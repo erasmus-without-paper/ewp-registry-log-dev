@@ -1,0 +1,115 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+>
+    <host>
+        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
+        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
+        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/boscdelacoma.cat</url>
+            </discovery>
+            <organizational-units
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+                version="2.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/ounits/boscdelacoma.cat</url>
+                <max-ounit-ids>1</max-ounit-ids>
+                <max-ounit-codes>1</max-ounit-codes>
+            </organizational-units>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://unizoneewp-stg01.it.auth.gr/rest/iias/get/boscdelacoma.cat</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <max-iia-codes>1</max-iia-codes>
+                <index-url>https://unizoneewp-stg01.it.auth.gr/rest/iias/index/boscdelacoma.cat</index-url>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/cnr/boscdelacoma.cat</url>
+            </iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/app/index/boscdelacoma.cat</url>
+                <max-iia-ids>1</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/app/cnr/boscdelacoma.cat</url>
+            </iia-approval-cnr>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="boscdelacoma.cat">
+                <r:other-id type="erasmus">E  GIRONA04</r:other-id>
+                <r:other-id type="pic">949215326</r:other-id>
+                <r:name>Institut Bosc de la Coma</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAlJsbUaEzdCMMQcvtaQFpc6bmNVG5+CMOqP6+JsqRON0bK3F0vEkInEyJkKdiybuIi9WlPCn52tYwbQBTF5euxoB9RDObQk21U1CO9w4QTUqSZ67EbT43ncHG1WPsnZZliK1pTYe0iGS6PP26NxTyoXTHNoivnm1eVNp9r7++ikWg+0PwsTBwsYTqHhXlmveTOfzK5uXj9Wsi9mc3hBhypoCLB+otpUDh+I1qJz3S4PVtKPwRzjjZkZNT9XOI79MbDLyY5v0xiDNa1/+h8zKh/tzXYRcVgvzWSTg2oVrpQTolg6brL6ce0v9oclvcj3+Q8QzKNRw0Nd3A5RaBQBzYtDcBwCfsyloHqLRZ3I9bibfpjQzPWLXMS83RZ54d1RZpeelVAk0dI+FLzF9Vi4g7Xc36DLZTFP4wdhYXv8ELrzfb2po4CeAIC4X6gu2X9NiraVZP3Si7VGL8q1rBNCPEAZhISxbvX5R7A8Tx1Hs4Zt9tBtvSbXReGLTc0INuRDZGVrZpoTA1NSj6eYqM378bHohb2ZfT6GmL+AsWAAkMhYD6gL9v/Q/tgslyAd649mQ3Mw/q3zdxQ/N3WbmwJ447cDLuf64F5CTz1NGDKDdPqKyleup6FMDWXadaaDvJdGi0dhX7RwXWLmuA/CpnBV2acl1aaO3YW6roPkAP2gQvE48CAwEAAQ==</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAlJsbUaEzdCMMQcvtaQFpc6bmNVG5+CMOqP6+JsqRON0bK3F0vEkInEyJkKdiybuIi9WlPCn52tYwbQBTF5euxoB9RDObQk21U1CO9w4QTUqSZ67EbT43ncHG1WPsnZZliK1pTYe0iGS6PP26NxTyoXTHNoivnm1eVNp9r7++ikWg+0PwsTBwsYTqHhXlmveTOfzK5uXj9Wsi9mc3hBhypoCLB+otpUDh+I1qJz3S4PVtKPwRzjjZkZNT9XOI79MbDLyY5v0xiDNa1/+h8zKh/tzXYRcVgvzWSTg2oVrpQTolg6brL6ce0v9oclvcj3+Q8QzKNRw0Nd3A5RaBQBzYtDcBwCfsyloHqLRZ3I9bibfpjQzPWLXMS83RZ54d1RZpeelVAk0dI+FLzF9Vi4g7Xc36DLZTFP4wdhYXv8ELrzfb2po4CeAIC4X6gu2X9NiraVZP3Si7VGL8q1rBNCPEAZhISxbvX5R7A8Tx1Hs4Zt9tBtvSbXReGLTc0INuRDZGVrZpoTA1NSj6eYqM378bHohb2ZfT6GmL+AsWAAkMhYD6gL9v/Q/tgslyAd649mQ3Mw/q3zdxQ/N3WbmwJ447cDLuf64F5CTz1NGDKDdPqKyleup6FMDWXadaaDvJdGi0dhX7RwXWLmuA/CpnBV2acl1aaO3YW6roPkAP2gQvE48CAwEAAQ==</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
