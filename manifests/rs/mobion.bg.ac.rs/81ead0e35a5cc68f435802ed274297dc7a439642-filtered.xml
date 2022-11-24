@@ -38,33 +38,7 @@
         <ewp:admin-email>branko.petric@fil.bg.ac.rs</ewp:admin-email>
         <ewp:admin-provider>University of Belgrade (MobiON)</ewp:admin-provider>
         <ewp:admin-notes>Discovery manifest</ewp:admin-notes>
-        <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <url>https://mobion.bg.ac.rs/api/ewpdev/manifest</url>
-            </discovery>
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.1"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <tlscert
-                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                            allows-self-signed="true"
-                        />
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://mobion.bg.ac.rs/api/ewpdev/echo</url>
-            </echo>
-        </r:apis-implemented>
+        <r:apis-implemented/>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="bg.ac.rs">
                 <other-id type="erasmus">RS BELGRAD02</other-id>
@@ -75,73 +49,50 @@
             </hei>
         </mf:institutions-covered>
         <client-credentials-in-use>
-            <certificate>MIIHqTCCBpGgAwIBAgIQAiy5hHlDYomOtLP1C+KBhDANBgkqhkiG9w0BAQsFADBk
-MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
-QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
-Q0EgMzAeFw0yMDA0MTUwMDAwMDBaFw0yMjA0MjAxMjAwMDBaMFsxCzAJBgNVBAYT
-AlJTMREwDwYDVQQHEwhCZWxncmFkZTEfMB0GA1UEChMWVW5pdmVyc2l0eSBvZiBC
-ZWxncmFkZTEYMBYGA1UEAxMPbW9iaW9uLmJnLmFjLnJzMIICIjANBgkqhkiG9w0B
-AQEFAAOCAg8AMIICCgKCAgEAs6obzbrOyqEiaP4fFm3ZWGgr3RI0bmXAvIn7sOlU
-dUL49Xd2Bx34LmWeSHr0f9IXeUT6xppOwEo3kxTeaJ9qow8ipdeR4beOMrku8e/S
-fRSAWiWrfCXvPp2EEyiw9OqZyZmxAjDweRPpf+Q4KyjayEspDGQy5oKgsjVxZM1C
-KwuEYW+dppkl7XVcwN6vLqfFUZeIy6kKoL+J4hpG16/8MecBrJpuTTxrauWKbWcT
-5w0NbshY4X0zbmxPyJEnVPtv53v1GvgKKFvRgbyUPJE21IGZN2H0xHAWbL/7hzL3
-qM8hIaz4FLk96eyw6GzD8NzfXLOAFkIrAFlVwo7/hRfbD79Vb5YnBn1Z8KUok2Gg
-yv9ZnfdZhk4B4JhBD/WCPRtS22SKZR1PDi705T1Yshh5fJdPg3wPETEvSvj/Zw8m
-d365BL7Jc2Q8/oBt1n7xzogMKSTz0wbA7PiZ1Hd/RsFU6oXjpfJV9LWYHkGErT7Q
-kZilc/orw78cqAqXp5BrFNFVjjLd8buFj6wYYMuUQmucu2PqAD+pWKJk2B9rFe2T
-lEAW8m3bcxPxdkF3wTrI5cFUIJndx1heKL0PFsQWkGF0oM/8vBqVNE8re3exTShG
-xrKzUZk7VNdigLdFvp6SPCwwFnAP3Ap8mC/fjrRLcM/ZWgc2RnxSeFKoQAM0lDCe
-coUCAwEAAaOCA14wggNaMB8GA1UdIwQYMBaAFGf9iCAUJ5jHCdIlGbvpURFjdVBi
-MB0GA1UdDgQWBBRKcbzUm0XnDep3Jce5WVZk6FKIHTAvBgNVHREEKDAmgg9tb2Jp
-b24uYmcuYWMucnOCE3d3dy5tb2Jpb24uYmcuYWMucnMwDgYDVR0PAQH/BAQDAgWg
-MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBrBgNVHR8EZDBiMC+gLaAr
-hilodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDAvoC2g
-K4YpaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwTAYD
-VR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cu
-ZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwbgYIKwYBBQUHAQEEYjBgMCQGCCsG
-AQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wOAYIKwYBBQUHMAKGLGh0
-dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3J0MAwGA1Ud
-EwEB/wQCMAAwggF9BgorBgEEAdZ5AgQCBIIBbQSCAWkBZwB1AEalVet1+pEgMLWi
-iWn0830RLEF0vv1JuIWr8vxw/m1HAAABcX1h25kAAAQDAEYwRAIgcTIQwygpUPMk
-Pnh+yh0IzC1vcdtwOhJ8KFKgzgQJJHACIA75v/vrZpVeP1C1Z4oPXDzV1sSAu5G7
-K6p18rjierOLAHYAIkVFB1lVJFaWP6Ev8fdthuAjJmOtwEt/XcaDXG7iDwIAAAFx
-fWHbkAAABAMARzBFAiEAkRVVVk+7Qu5otzQhIOGg5eQIcf4L2+E/6xmc6888Q7gC
-IC2XjrfE+ZQM9EpsYt0f9lmIzvS3s0DJWPWUrwA1z7XAAHYAUaOw9f0BeZxWbbg3
-eI8MpHrMGyfL956IQpoN/tSLBeUAAAFxfWHbrwAABAMARzBFAiEAi4drmznx7hRi
-hok9X9Hi7eMRpAlUVM/HHCUJYh6CqEICIFbjrcFbIN/LYvQFCE3UKRftC1xqRXsW
-xxiW6u69dJ9dMA0GCSqGSIb3DQEBCwUAA4IBAQCP+R6auPQRHSlG1M+Ah2S/3nCc
-MfkBT9oxEky3rRtxXZ07uBxnmqyJ7vpbVtNIN+1iUEcWsVGWXnsOMvENjWBBKABK
-+/UzITqQ8qNz0yVxfrYUi0jZ92bQ6tbJeqkeRt5Lp5EPtrRFHD3DUehRfiYmTvNV
-TFRGueNponSFLJNqnAV3/C0A6mcX+lv9PFsQT3tc3ts9ueDDBzIfhBmVqPCRczX+
-/1fr2Cg4l/fy1/6DwZjB/ALuLJwXHqMYmqnM11Q058ysoSTNq2Ct9sZLr6rbMQd8
-mG7QV7hSqwNOfuWwOc5qw5GZCt4Glq0+6nuve44JLLgFz59HXwCegwuahr8h</certificate>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAs6obzbrOyqEiaP4fFm3Z
-    WGgr3RI0bmXAvIn7sOlUdUL49Xd2Bx34LmWeSHr0f9IXeUT6xppOwEo3kxTeaJ9q
-    ow8ipdeR4beOMrku8e/SfRSAWiWrfCXvPp2EEyiw9OqZyZmxAjDweRPpf+Q4Kyja
-    yEspDGQy5oKgsjVxZM1CKwuEYW+dppkl7XVcwN6vLqfFUZeIy6kKoL+J4hpG16/8
-    MecBrJpuTTxrauWKbWcT5w0NbshY4X0zbmxPyJEnVPtv53v1GvgKKFvRgbyUPJE2
-    1IGZN2H0xHAWbL/7hzL3qM8hIaz4FLk96eyw6GzD8NzfXLOAFkIrAFlVwo7/hRfb
-    D79Vb5YnBn1Z8KUok2Ggyv9ZnfdZhk4B4JhBD/WCPRtS22SKZR1PDi705T1Yshh5
-    fJdPg3wPETEvSvj/Zw8md365BL7Jc2Q8/oBt1n7xzogMKSTz0wbA7PiZ1Hd/RsFU
-    6oXjpfJV9LWYHkGErT7QkZilc/orw78cqAqXp5BrFNFVjjLd8buFj6wYYMuUQmuc
-    u2PqAD+pWKJk2B9rFe2TlEAW8m3bcxPxdkF3wTrI5cFUIJndx1heKL0PFsQWkGF0
-    oM/8vBqVNE8re3exTShGxrKzUZk7VNdigLdFvp6SPCwwFnAP3Ap8mC/fjrRLcM/Z
-    Wgc2RnxSeFKoQAM0lDCecoUCAwEAAQ==</rsa-public-key>
+            <certificate>MIIFJDCCBAygAwIBAgISBK2nWALyA4GIHUdBpTQ1I7udMA0GCSqGSIb3DQEBCwUA
+                MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+                EwJSMzAeFw0yMjA0MTgxMzIxNTRaFw0yMjA3MTcxMzIxNTNaMBoxGDAWBgNVBAMT
+                D21vYmlvbi5iZy5hYy5yczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+                AK9RTtB5+UjneUgph/MAcHVZiAPXIVn2JsYWJNDZHKPEuHQ4Fo958njz2VYsbbSX
+                L+21JHBwu95LfPk5+rVN+zyp1LAQc2m4nEINYs8Qs5wjo/SghcaOnpvRbSBabqpE
+                kCknbYUbhmR3pKkiw2taYyU2fL6xtY2alx8t49N6duihAqsD6ZfdtDkPtaBv7zKW
+                J3aydOZI9+Qc/xznY+/owqAFPcFgYuhE7pjdEMCmx9bO2lHXZ+tsw74YQp9NrXNX
+                Y7IctNHkaQNBjcZplHogeX7RIIir+TYsl7JC3dg1pmsCCYexi7SCiT6Z5p7GBki6
+                eyk/MINTKvsC2Jc0etZnUtkCAwEAAaOCAkowggJGMA4GA1UdDwEB/wQEAwIFoDAd
+                BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNV
+                HQ4EFgQUtq+r+sV3TnXtqqe1Q5rVSvpw3JAwHwYDVR0jBBgwFoAUFC6zF7dYVsuu
+                UAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8v
+                cjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9y
+                Zy8wGgYDVR0RBBMwEYIPbW9iaW9uLmJnLmFjLnJzMEwGA1UdIARFMEMwCAYGZ4EM
+                AQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0
+                c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcAKXm+8J45OSHw
+                VnOfY6V35b5XfZxgCvj5TV0mXCVdx4QAAAGAPQ0qxgAABAMASDBGAiEAh7OVK/3K
+                U/V4AweR+qBE7YC9PtsJ6AP/jn8nZyhks3ECIQCFzirVqgh5Lu3TpC6WHEWlYpXs
+                +3nbB+vxTWKNp655ZQB1AEHIyrHfIkZKEMahOglCh15OMYsbA+vrS8do8JBilgb2
+                AAABgD0NLZIAAAQDAEYwRAIgIz/ps9zbjlOvg2k8p1VxnXRISADaOG+8rN+8EQqn
+                wMwCIH5rq5zLLDMK5ESwAotSc5AIVC03ttoI+StpvpKQsVS3MA0GCSqGSIb3DQEB
+                CwUAA4IBAQAL+h83FNbm6QwPi7c/lqb3xeYuUkVJp2XgSoqyjikDH1cqsbTLyAXp
+                u2I8FtVNiX1pSgttb7Muk0D9zsYqwN2ujooog98pUPoto0+vQnapeqSsu7BM+x3K
+                gd/kZf/WYbD0gQiIgTnjGp6ApYnQVpJq8cTBjf76qR5A678e7JNXEUu1C0mBhjC0
+                rjY65+SvLtG9R2yQdtEfLiFGOtoPAVi9iEgOQ92UZdXwvBIpoJDGzynBsP1bmf3j
+                zD++eRtoPF6MYaaj50u/dxmjEmj+I9+jI8riaCan3PWhsCYfaSwR4gO58J7gSebo
+                S6ZCDIZI1ZYpPIjvykUj8mkKC62eUMG4</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1FO0Hn5SOd5SCmH8wBw
+    dVmIA9chWfYmxhYk0Nkco8S4dDgWj3nyePPZVixttJcv7bUkcHC73kt8+Tn6tU37
+    PKnUsBBzabicQg1izxCznCOj9KCFxo6em9FtIFpuqkSQKSdthRuGZHekqSLDa1pj
+    JTZ8vrG1jZqXHy3j03p26KECqwPpl920OQ+1oG/vMpYndrJ05kj35Bz/HOdj7+jC
+    oAU9wWBi6ETumN0QwKbH1s7aUddn62zDvhhCn02tc1djshy00eRpA0GNxmmUeiB5
+    ftEgiKv5NiyXskLd2DWmawIJh7GLtIKJPpnmnsYGSLp7KT8wg1Mq+wLYlzR61mdS
+    2QIDAQAB</rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAs6obzbrOyqEiaP4fFm3Z
-            WGgr3RI0bmXAvIn7sOlUdUL49Xd2Bx34LmWeSHr0f9IXeUT6xppOwEo3kxTeaJ9q
-            ow8ipdeR4beOMrku8e/SfRSAWiWrfCXvPp2EEyiw9OqZyZmxAjDweRPpf+Q4Kyja
-            yEspDGQy5oKgsjVxZM1CKwuEYW+dppkl7XVcwN6vLqfFUZeIy6kKoL+J4hpG16/8
-            MecBrJpuTTxrauWKbWcT5w0NbshY4X0zbmxPyJEnVPtv53v1GvgKKFvRgbyUPJE2
-            1IGZN2H0xHAWbL/7hzL3qM8hIaz4FLk96eyw6GzD8NzfXLOAFkIrAFlVwo7/hRfb
-            D79Vb5YnBn1Z8KUok2Ggyv9ZnfdZhk4B4JhBD/WCPRtS22SKZR1PDi705T1Yshh5
-            fJdPg3wPETEvSvj/Zw8md365BL7Jc2Q8/oBt1n7xzogMKSTz0wbA7PiZ1Hd/RsFU
-            6oXjpfJV9LWYHkGErT7QkZilc/orw78cqAqXp5BrFNFVjjLd8buFj6wYYMuUQmuc
-            u2PqAD+pWKJk2B9rFe2TlEAW8m3bcxPxdkF3wTrI5cFUIJndx1heKL0PFsQWkGF0
-            oM/8vBqVNE8re3exTShGxrKzUZk7VNdigLdFvp6SPCwwFnAP3Ap8mC/fjrRLcM/Z
-            Wgc2RnxSeFKoQAM0lDCecoUCAwEAAQ==</rsa-public-key>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1FO0Hn5SOd5SCmH8wBw
+            dVmIA9chWfYmxhYk0Nkco8S4dDgWj3nyePPZVixttJcv7bUkcHC73kt8+Tn6tU37
+            PKnUsBBzabicQg1izxCznCOj9KCFxo6em9FtIFpuqkSQKSdthRuGZHekqSLDa1pj
+            JTZ8vrG1jZqXHy3j03p26KECqwPpl920OQ+1oG/vMpYndrJ05kj35Bz/HOdj7+jC
+            oAU9wWBi6ETumN0QwKbH1s7aUddn62zDvhhCn02tc1djshy00eRpA0GNxmmUeiB5
+            ftEgiKv5NiyXskLd2DWmawIJh7GLtIKJPpnmnsYGSLp7KT8wg1Mq+wLYlzR61mdS
+            2QIDAQAB</rsa-public-key>
         </server-credentials-in-use>
     </host>
 </manifest>
