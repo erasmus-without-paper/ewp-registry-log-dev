@@ -1,0 +1,115 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+>
+    <host>
+        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
+        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
+        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/hesam.eu</url>
+            </discovery>
+            <organizational-units
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+                version="2.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/ounits/hesam.eu</url>
+                <max-ounit-ids>1</max-ounit-ids>
+                <max-ounit-codes>1</max-ounit-codes>
+            </organizational-units>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://unizoneewp-stg01.it.auth.gr/rest/iias/get/hesam.eu</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <max-iia-codes>1</max-iia-codes>
+                <index-url>https://unizoneewp-stg01.it.auth.gr/rest/iias/index/hesam.eu</index-url>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/cnr/hesam.eu</url>
+            </iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/app/index/hesam.eu</url>
+                <max-iia-ids>1</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/app/cnr/hesam.eu</url>
+            </iia-approval-cnr>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="hesam.eu">
+                <r:other-id type="erasmus">F  PARIS458</r:other-id>
+                <r:other-id type="pic">952469676</r:other-id>
+                <r:name>Communauté d&amp;#39;Universités et Établissements &amp;#34;Hesam Universite&amp;#34;</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA4edNMkz+38C3aZ2zdjLeY8wWMYtfblSiIHSDmu3sedEo4WHYE+TxwJ1zTDZ+b3ubcqEOd+O7obquYuwkvdj0YjSlpTUat5KvWyJ3yl+88ZY1pE4iq5RTa3IcuaILp9WYFwVBBodRMdTccWygz6n2ZTqMatCFlXu9o74M6gHJqwtOP27GZzguGUN+sXQ123Il92ylPxd1HHF8pp/+egYS/aFTEN0eD9BaA3PJ/1r3q8Aa2PD4ZF+iVPItsuz+ipqpmv0HkQ+Zu4PAsXRSzfdHnSDW5S1ehvY2uuQiXvNRmT2d69CeB/79cmp9XjVv8xJ0+HGu8cqzr5+qOC6uh/yRoioF1h0gyaJC9RogztvesR5PDRz2MQjeWoHGPPRsM4usv26trvj1E8vFaxrsGvfwKVTCPsfgOFfQGXnhk25w7q24oT8XN4lvhHGN8oMXX65QF58tHl8dS2pkwsw/ZHAj8HrIPFp0fdTkV56/akgpZGUMt7jdpCfliL4xG418r1oJ44naRKXGI/SJAywn+WRIpXrm9xFFEuBZGldglo1AcJqZbWTQItFLrgfT5CzC3u8m/JeP6O7/FKBEPMGnb3AiaxeDnjAyORgMpW/Yg92Su7CYGqWbtj3dYdtil+43WL5jcZKtHE1sp095y9lHT843/FBHasjs277EcfZouALTaTUCAwEAAQ==</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA4edNMkz+38C3aZ2zdjLeY8wWMYtfblSiIHSDmu3sedEo4WHYE+TxwJ1zTDZ+b3ubcqEOd+O7obquYuwkvdj0YjSlpTUat5KvWyJ3yl+88ZY1pE4iq5RTa3IcuaILp9WYFwVBBodRMdTccWygz6n2ZTqMatCFlXu9o74M6gHJqwtOP27GZzguGUN+sXQ123Il92ylPxd1HHF8pp/+egYS/aFTEN0eD9BaA3PJ/1r3q8Aa2PD4ZF+iVPItsuz+ipqpmv0HkQ+Zu4PAsXRSzfdHnSDW5S1ehvY2uuQiXvNRmT2d69CeB/79cmp9XjVv8xJ0+HGu8cqzr5+qOC6uh/yRoioF1h0gyaJC9RogztvesR5PDRz2MQjeWoHGPPRsM4usv26trvj1E8vFaxrsGvfwKVTCPsfgOFfQGXnhk25w7q24oT8XN4lvhHGN8oMXX65QF58tHl8dS2pkwsw/ZHAj8HrIPFp0fdTkV56/akgpZGUMt7jdpCfliL4xG418r1oJ44naRKXGI/SJAywn+WRIpXrm9xFFEuBZGldglo1AcJqZbWTQItFLrgfT5CzC3u8m/JeP6O7/FKBEPMGnb3AiaxeDnjAyORgMpW/Yg92Su7CYGqWbtj3dYdtil+43WL5jcZKtHE1sp095y9lHT843/FBHasjs277EcfZouALTaTUCAwEAAQ==</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
