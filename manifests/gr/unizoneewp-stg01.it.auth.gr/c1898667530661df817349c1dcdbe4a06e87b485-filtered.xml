@@ -1,0 +1,130 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+>
+    <host>
+        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
+        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
+        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/esci-paris.eu</url>
+            </discovery>
+            <organizational-units
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+                version="2.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/ounits/esci-paris.eu</url>
+                <max-ounit-ids>1</max-ounit-ids>
+                <max-ounit-codes>1</max-ounit-codes>
+            </organizational-units>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://unizoneewp-stg01.it.auth.gr/rest/iias/get/esci-paris.eu</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <max-iia-codes>1</max-iia-codes>
+                <index-url>https://unizoneewp-stg01.it.auth.gr/rest/iias/index/esci-paris.eu</index-url>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.3"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/cnr/esci-paris.eu</url>
+            </iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/app/index/esci-paris.eu</url>
+                <max-iia-ids>1</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/iias/app/cnr/esci-paris.eu</url>
+            </iia-approval-cnr>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/static-data/esci-paris.eu</url>
+                <max-hei-ids>1</max-hei-ids>
+            </factsheet>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="esci-paris.eu">
+                <r:other-id type="erasmus">F  AV-FONT01</r:other-id>
+                <r:other-id type="pic">943140022</r:other-id>
+                <r:name>Ecole Superieure de Commerce International</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxEp+bx2o6UzmnliAXoKieAFMosLmc/aAgDwFKee0N0B4PYZ+IMDskvDa69DC3wtgqNSh3lBzGmUTNYtYPin7Wxr/sOGqEe9SvovVfLcXpgulucfZpOxOvXM40OCoDaKukR81oDRHc0D0H71JdktFjFIZtO6baQudFRBLCik6bReI4KPf6O1qD9NRyDLYOHgKJA4rxSGOkMmL87806b9ICe1sJyl3HBWxbRLICArYaFHiSWQ0zbjZVEXighfreWnmwzJr+65byRoF4jTFJBXYmiDxTUEGqoR+EV5fHYcqBldtqg5KW+7XQJ3MPbA4yVzN2ff0oz1vfXY/IMeV0Y9+hMFgfHLqRRjZf9aB4VjHh91P9Y03+cLU+p/Za0PyuReJ+lVaPdbao6zIB/S3o//Vrh/cOUiRwB9p+NToGtsFKQGHC/vqtTvaE/kE2LSeyJpGen43pf8BmAXN4M+AsXr3a6Rhke+STgTYg3GHPCtkInGVWYzznH3XCP3McMTPofsYbyZE+i0LgQJNN8Zwj8MJ3BqsQ4k3cNxoxbOTfmpc3KLDUdGtKlbl/bL2BW4ovk5CqfOEq+5dmszW2q7WfrrTlvv/IgzgQM8DL168tz3aXRaLRURQkx7e9u2YKq/J7a+vct7UZ+Q8zlqYQwuVbuqbgObneiLeNGVpowQ99Cp46x8CAwEAAQ==</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxEp+bx2o6UzmnliAXoKieAFMosLmc/aAgDwFKee0N0B4PYZ+IMDskvDa69DC3wtgqNSh3lBzGmUTNYtYPin7Wxr/sOGqEe9SvovVfLcXpgulucfZpOxOvXM40OCoDaKukR81oDRHc0D0H71JdktFjFIZtO6baQudFRBLCik6bReI4KPf6O1qD9NRyDLYOHgKJA4rxSGOkMmL87806b9ICe1sJyl3HBWxbRLICArYaFHiSWQ0zbjZVEXighfreWnmwzJr+65byRoF4jTFJBXYmiDxTUEGqoR+EV5fHYcqBldtqg5KW+7XQJ3MPbA4yVzN2ff0oz1vfXY/IMeV0Y9+hMFgfHLqRRjZf9aB4VjHh91P9Y03+cLU+p/Za0PyuReJ+lVaPdbao6zIB/S3o//Vrh/cOUiRwB9p+NToGtsFKQGHC/vqtTvaE/kE2LSeyJpGen43pf8BmAXN4M+AsXr3a6Rhke+STgTYg3GHPCtkInGVWYzznH3XCP3McMTPofsYbyZE+i0LgQJNN8Zwj8MJ3BqsQ4k3cNxoxbOTfmpc3KLDUdGtKlbl/bL2BW4ovk5CqfOEq+5dmszW2q7WfrrTlvv/IgzgQM8DL168tz3aXRaLRURQkx7e9u2YKq/J7a+vct7UZ+Q8zlqYQwuVbuqbgObneiLeNGVpowQ99Cp46x8CAwEAAQ==</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
