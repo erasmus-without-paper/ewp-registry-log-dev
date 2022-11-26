@@ -1,0 +1,54 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+>
+    <host>
+        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
+        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
+        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
+        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/vfu.cz</url>
+            </discovery>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="0.3.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://unizoneewp-stg01.it.auth.gr/rest/static-data/vfu.cz</url>
+                <max-hei-ids>1</max-hei-ids>
+            </factsheet>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="vfu.cz">
+                <r:other-id type="erasmus">CZ BRNO06</r:other-id>
+                <r:other-id type="pic">949203395</r:other-id>
+                <r:name>Veterinarni Univerzita Brno</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAnQbmt7a9ejeLTVJDEvTcTZDPyy5iJ/3HtKDO9gKfeVudNp94henRvKJXI2sFy7FZDd9OjhQMW7dNyd05iujwb6YJmSwUBW8WnW1bvqa2U1HwaDFRW7NrwsvUCdEmxb26EWd584rcKizbMSo7XgiNOvaB5APt1Q0akCFk1vlNm1waYJMfedzvJdAmUIdUu6mD/Iqz0Bv98uREmrsXoWoP25wNKEnf6EUNXM8ZswZOOp/jvPM7IH6ZbJgcbBEqSKAHY7aUe9+Ol+GNw/bHhWifxQA/50od3j8I1tGrX3tV/7YQrk1KZMXRAL95PadDXxqN8THeZtPDWTmzaGcqgUDJ2xlNNnoQWI9S/15d9pDo/irc0uNTIVY+nO9eQQchbzwKbD9bHy7DQ5KSC7ofleVasNTt59AYaLadf3dPN96M8lk0VExZM1QkQI27xcff6Bxpm+//bLMl7gOPdrv8cgqPdHQ+aX6y1Id3h8wzEZ7YSDGBmTvAOz7qU2RhDtw5Lux3GN6OHiz/+en5iPggWtD8g7X5hEl+xB7dD+5WGLvPSE0jwgJgmTxIJ4ckZNgQr2OZJDeP8iCx7nnaL3yRAxKMGxgNo2PJ6eqtV1/Ck7FlNL2lTSiBDSoXFttqpt2xARyvCGKkhuOH7lGuVXhg4+6RAaU6+jJJ9MrAy88YCiMBVD0CAwEAAQ==</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAnQbmt7a9ejeLTVJDEvTcTZDPyy5iJ/3HtKDO9gKfeVudNp94henRvKJXI2sFy7FZDd9OjhQMW7dNyd05iujwb6YJmSwUBW8WnW1bvqa2U1HwaDFRW7NrwsvUCdEmxb26EWd584rcKizbMSo7XgiNOvaB5APt1Q0akCFk1vlNm1waYJMfedzvJdAmUIdUu6mD/Iqz0Bv98uREmrsXoWoP25wNKEnf6EUNXM8ZswZOOp/jvPM7IH6ZbJgcbBEqSKAHY7aUe9+Ol+GNw/bHhWifxQA/50od3j8I1tGrX3tV/7YQrk1KZMXRAL95PadDXxqN8THeZtPDWTmzaGcqgUDJ2xlNNnoQWI9S/15d9pDo/irc0uNTIVY+nO9eQQchbzwKbD9bHy7DQ5KSC7ofleVasNTt59AYaLadf3dPN96M8lk0VExZM1QkQI27xcff6Bxpm+//bLMl7gOPdrv8cgqPdHQ+aX6y1Id3h8wzEZ7YSDGBmTvAOz7qU2RhDtw5Lux3GN6OHiz/+en5iPggWtD8g7X5hEl+xB7dD+5WGLvPSE0jwgJgmTxIJ4ckZNgQr2OZJDeP8iCx7nnaL3yRAxKMGxgNo2PJ6eqtV1/Ck7FlNL2lTSiBDSoXFttqpt2xARyvCGKkhuOH7lGuVXhg4+6RAaU6+jJJ9MrAy88YCiMBVD0CAwEAAQ==</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
