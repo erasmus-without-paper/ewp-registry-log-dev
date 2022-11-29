@@ -11,7 +11,7 @@
 >
     <host>
         <ewp:admin-email>ewp-admin@kalasoft.pl</ewp:admin-email>
-        <ewp:admin-provider>KALASOFT</ewp:admin-provider>
+        <ewp:admin-provider>%EWP_API_MANIFEST_ADMIN_PROVIDER%</ewp:admin-provider>
         <ewp:admin-notes>Provider: Kalasoft</ewp:admin-notes>
         <r:apis-implemented>
             <discovery
@@ -141,7 +141,7 @@
                 <max-hei-ids>1</max-hei-ids>
             </factsheet>
             <omobilities
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
                 version="1.0.0"
             >
                 <http-security>
@@ -156,6 +156,20 @@
                 <index-url>https://ewp.hmsdevelopment.pl/api/ewp/host/omobilities/index</index-url>
                 <max-omobility-ids>100</max-omobility-ids>
             </omobilities>
+            <omobilitiy-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.hmsdevelopment.pl/api/ewp/host/omobilities/cnr</url>
+            </omobilitiy-cnr>
             <imobilities
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -171,6 +185,20 @@
                 <get-url>https://ewp.hmsdevelopment.pl/api/ewp/host/imobilities/get</get-url>
                 <max-omobility-ids>100</max-omobility-ids>
             </imobilities>
+            <imobilitiy-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.hmsdevelopment.pl/api/ewp/host/imobilities/cnr</url>
+            </imobilitiy-cnr>
             <courses
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
                 version="0.7.1"
@@ -255,6 +283,19 @@ JKyC45nSkeTzByiikz+braib/sThNXmj3VwIuxuEf6X2yWwOHVWFCQ7TK3SvuktB
 Z+wuGCOKztrE38g4/u7lFJ6NTa9W/bZ4KvMeVx42NOpMsSTZ7e0LZRGsTIJZgzQW
 IykUN/pxIplzg1YUVJ41cYcskiLPMQz1SBMl+XRe2F+xcFbWtk11F8plK2VU0WVE
 d6WJsWZgp6Yz6Q==</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyVjVcG0hnwK48RQetal/
+&#xD;
+/ARZ4xVyRz7a958kiuIZ3AME7Fvx1aojGr62rYMaxTKb20Q1Uz+B82Co2948t+eF
+&#xD;
+aD0iJvI+xhf8jJ+baIgr3mDC9Zh8cDDmbaHLWjD3eqpsWhRApZ7bGVt98KG/slTp
+&#xD;
+RA5Ytw0AmhnbMPPs4Ab2bewy9bIp4pVNxHptHv0yXN06RCLKPCpl5+1afqyjUOXs
+&#xD;
+oQcX2GuJLvAy5r1ESuT9E4l66/EqSoltpEpXGuqodvO8SaT8jAO0ocRyFNzi4ZWj
+&#xD;
+LXGphZztjkXhLUW2g5yGdfmb2czElPJmEYqZCQH4Ia9nENBxhM5VoI6s3Gl8WZU/
+&#xD;
+EwIDAQAB</rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyVjVcG0hnwK48RQetal/
