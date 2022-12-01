@@ -8,48 +8,4 @@
     xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
->
-    <host>
-        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
-        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
-        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
-        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
-        <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/univ-lyon3.fr</url>
-            </discovery>
-            <organizational-units
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-                version="2.1.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://unizoneewp-stg01.it.auth.gr/rest/ounits/univ-lyon3.fr</url>
-                <max-ounit-ids>1</max-ounit-ids>
-                <max-ounit-codes>1</max-ounit-codes>
-            </organizational-units>
-        </r:apis-implemented>
-        <institutions-covered>
-            <r:hei id="univ-lyon3.fr">
-                <r:other-id type="erasmus">F  LYON03</r:other-id>
-                <r:other-id type="pic">986217625</r:other-id>
-                <r:name>Universite Lyon 3 Jean Moulin</r:name>
-            </r:hei>
-        </institutions-covered>
-        <client-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAp9V1P1Eg5LUAT1mKrAoAUdTV2EiWx17k++DKC9I220vcIJR/V2fcn1wBqHQ86BF3ZWKzHBLpXYFxaRRfadnf/LjK2Wfd7UiQBJgYZNQWetC1eQZW0QK/HcKoxwx4K+Zd3Equ3QpQnRzg60qSnho+jktcyDU71c4fz0oK5RfnFUDiYCMzd0I+BBI65RneOPvngk5R20nf43JW5utcOm3Y2NNYj5XGzxBWoPPHuZitn8sUQ51gTOLL8Xxew180p691g8RBRPJ1f6h36i0aeNuJV5+etreGiVNih+ZAhn1Iqy+PUW4ZBWpVn5OZ4S2vBm1ttv6jDLArzHenl5BtE2iL+Cev+uGqd5Anfz7Ug+Bhu137MxccA0FP2lQnw/Fuy3hmhqZ5ErEsGr9od6UhdzBzGdqNgA8buWU6qxy2mGX1DuJfglEo6suQY27P8Ih8+Wi2pCRxOPsgMka5KwZajlPvGuoeICeYtnUYQodDvK+emXAlsu7hH7JTjogA1oElwMQ/G4fMVaXZDwaEeyGYxT1RNUKUJps1vM57dDYFXLGcxH93TFDqAtLmL/AjL/Tth9fgjyMk2bjRsPklkl7G6QEmNxFnQtGvBSjnCplAVb2mH/UbCaaWtNxk0Tj3GzpLo/0BvGu7LY9Vftv57kD6uXpnakdlgnha6YmKPLpg7RSQLCMCAwEAAQ==</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAp9V1P1Eg5LUAT1mKrAoAUdTV2EiWx17k++DKC9I220vcIJR/V2fcn1wBqHQ86BF3ZWKzHBLpXYFxaRRfadnf/LjK2Wfd7UiQBJgYZNQWetC1eQZW0QK/HcKoxwx4K+Zd3Equ3QpQnRzg60qSnho+jktcyDU71c4fz0oK5RfnFUDiYCMzd0I+BBI65RneOPvngk5R20nf43JW5utcOm3Y2NNYj5XGzxBWoPPHuZitn8sUQ51gTOLL8Xxew180p691g8RBRPJ1f6h36i0aeNuJV5+etreGiVNih+ZAhn1Iqy+PUW4ZBWpVn5OZ4S2vBm1ttv6jDLArzHenl5BtE2iL+Cev+uGqd5Anfz7Ug+Bhu137MxccA0FP2lQnw/Fuy3hmhqZ5ErEsGr9od6UhdzBzGdqNgA8buWU6qxy2mGX1DuJfglEo6suQY27P8Ih8+Wi2pCRxOPsgMka5KwZajlPvGuoeICeYtnUYQodDvK+emXAlsu7hH7JTjogA1oElwMQ/G4fMVaXZDwaEeyGYxT1RNUKUJps1vM57dDYFXLGcxH93TFDqAtLmL/AjL/Tth9fgjyMk2bjRsPklkl7G6QEmNxFnQtGvBSjnCplAVb2mH/UbCaaWtNxk0Tj3GzpLo/0BvGu7LY9Vftv57kD6uXpnakdlgnha6YmKPLpg7RSQLCMCAwEAAQ==</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+/>
