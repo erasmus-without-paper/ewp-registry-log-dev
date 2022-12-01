@@ -8,47 +8,4 @@
     xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
->
-    <host>
-        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
-        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
-        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
-        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
-        <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/uninsubria.it</url>
-            </discovery>
-            <factsheet
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="0.3.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://unizoneewp-stg01.it.auth.gr/rest/static-data/uninsubria.it</url>
-                <max-hei-ids>1</max-hei-ids>
-            </factsheet>
-        </r:apis-implemented>
-        <institutions-covered>
-            <r:hei id="uninsubria.it">
-                <r:other-id type="erasmus">I  VARESE02</r:other-id>
-                <r:other-id type="pic">999855243</r:other-id>
-                <r:name>Universita degli Studi dell&amp;#39;Insubria</r:name>
-            </r:hei>
-        </institutions-covered>
-        <client-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAz7HPTG3OT/oImxRRb5lhxZ4ktGUE+fvL1EFWun1oyFtbiM8W/jMBPTQZVd/Sd6zavWiCQkgKYeHGCGh+dAwyfnj8gy4vWOx2pb0aUiCxMD6uJzu6mbQkVR/LroS80bl/fB+18SKc2rUbMJpcW7ble0IjvD5z3EbmbuEAO6pL31Gr5n/46NWUGHZkfqyrXXK7FsgSLPGxnF7t5sEyPwdaGeZJidqTZZioWN27oX/RaUT0PQn//7+8+tFH4k+U5LeLLUaHLN/0pWA/EmwybP3SlnRgcpesRAHVk3rkNNHQsPsfOxH5WzRO2ObJWUbR1zTWY2CZA1lh1gwogNAnpOdvqhlsBOfIYT2i76mOQgBEHMDZ/G3eiMg4IWYxlUnGF2jjxUZKbKaliy5Fh9DgUIRzyvRwnBwcM5lzwKfw+f5KBkM45Yr4o03N6e37cZ9TtOjJrW86vL4GViUR9cACArn9QEDcYALzX1tp1lMJtYjYCz6Tm2HS89Svtlaro1OzMa0YH9m+t13hhY0n6uXrLDlAzNjOq4yQAnGJ6T47cTCKvTBRy8rs/EPEaACXlHBXOhPEQdpMS1azGdzXkQK2VImnXREWwdmEZRZATKgIoHvNIxTo5UEKBEEgqC06BBCbtAW6ZnIRoGMnWazcN+6PKQ70Vk/8MLuph/nPGr/7lCfUQg0CAwEAAQ==</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAz7HPTG3OT/oImxRRb5lhxZ4ktGUE+fvL1EFWun1oyFtbiM8W/jMBPTQZVd/Sd6zavWiCQkgKYeHGCGh+dAwyfnj8gy4vWOx2pb0aUiCxMD6uJzu6mbQkVR/LroS80bl/fB+18SKc2rUbMJpcW7ble0IjvD5z3EbmbuEAO6pL31Gr5n/46NWUGHZkfqyrXXK7FsgSLPGxnF7t5sEyPwdaGeZJidqTZZioWN27oX/RaUT0PQn//7+8+tFH4k+U5LeLLUaHLN/0pWA/EmwybP3SlnRgcpesRAHVk3rkNNHQsPsfOxH5WzRO2ObJWUbR1zTWY2CZA1lh1gwogNAnpOdvqhlsBOfIYT2i76mOQgBEHMDZ/G3eiMg4IWYxlUnGF2jjxUZKbKaliy5Fh9DgUIRzyvRwnBwcM5lzwKfw+f5KBkM45Yr4o03N6e37cZ9TtOjJrW86vL4GViUR9cACArn9QEDcYALzX1tp1lMJtYjYCz6Tm2HS89Svtlaro1OzMa0YH9m+t13hhY0n6uXrLDlAzNjOq4yQAnGJ6T47cTCKvTBRy8rs/EPEaACXlHBXOhPEQdpMS1azGdzXkQK2VImnXREWwdmEZRZATKgIoHvNIxTo5UEKBEEgqC06BBCbtAW6ZnIRoGMnWazcN+6PKQ70Vk/8MLuph/nPGr/7lCfUQg0CAwEAAQ==</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+/>
