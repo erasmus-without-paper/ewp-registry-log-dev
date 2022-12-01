@@ -8,47 +8,4 @@
     xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
->
-    <host>
-        <ewp:admin-email>ewp-plus@it.auth.gr</ewp:admin-email>
-        <ewp:admin-email>ewp-monitor@it.auth.gr</ewp:admin-email>
-        <ewp:admin-provider>Dashboard (Erasmus-Dashboard)</ewp:admin-provider>
-        <ewp:admin-notes>Manifest File for general endpoints Erasmus Dashboard.</ewp:admin-notes>
-        <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <url>https://unizoneewp-stg01.it.auth.gr/rest/manifest/unitn.it</url>
-            </discovery>
-            <factsheet
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="0.3.0"
-            >
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
-                <url>https://unizoneewp-stg01.it.auth.gr/rest/static-data/unitn.it</url>
-                <max-hei-ids>1</max-hei-ids>
-            </factsheet>
-        </r:apis-implemented>
-        <institutions-covered>
-            <r:hei id="unitn.it">
-                <r:other-id type="erasmus">I  TRENTO01</r:other-id>
-                <r:other-id type="pic">999841954</r:other-id>
-                <r:name>Universita degli Studi di Trento</r:name>
-            </r:hei>
-        </institutions-covered>
-        <client-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2TLQ9ttz0XFwgoA7P0tb0E57LchE8pIiqt19E7Pbc1J5RxmAKO6hdTixL7Y06c8Htqn9zQ+xZ/bk0n7QkyZtV5lh+42WK5DshqULLi0TPbolF1AzBToGWzBWecE0m2BlghENZ6ztSXLDcoXwqXXXg9IhwAtjccmBBA/BGCoRSddPNp8IyJbAZn8lXwLkbQa0eoSf+pPQZa2mJNgfhT+zvawtAtfx9i5k6pM47/fgBURcyThvsNlhV8enX4IuHPYytwVRx6Us8XFR3n7RoRsPx7u2NxqjZP8ggsrfqu2vZnFcMZc8KMdd4JP7/0rAH2NjfWXpwphZRRR4TMA6Lcq/sb7lmrjl6izci19zIMOzpjc3ZZS6I0R+t5NfRyn9s0JqrvvE3yb5r4udGj1kSGu4ELvz+WYIacR7WqUELjy1RxDFtRtsSCAx5nMzAJJMeSTpLFpwFJNefBzR7KGWJUiL5K4en8fuFqVAL9Qp/wAK8kZ0ta8S1ldn4BVeaOnIHcSGkEWYjYM3y/VieSg9hjz+NxRPdIrPEwC/vH/UNkRS09dZZRv8Z4dkYquSdK0UrcaGno0Pt8O6TCplCp6/sQnkKNxxGfjQhNkdpRzyi7q4k1U8JN+6pKZUdcVl1r5TzBZqajDiS84aaJvBzdYpgPPIOtmsmph7GdiKPtQrTsc7FA0CAwEAAQ==</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2TLQ9ttz0XFwgoA7P0tb0E57LchE8pIiqt19E7Pbc1J5RxmAKO6hdTixL7Y06c8Htqn9zQ+xZ/bk0n7QkyZtV5lh+42WK5DshqULLi0TPbolF1AzBToGWzBWecE0m2BlghENZ6ztSXLDcoXwqXXXg9IhwAtjccmBBA/BGCoRSddPNp8IyJbAZn8lXwLkbQa0eoSf+pPQZa2mJNgfhT+zvawtAtfx9i5k6pM47/fgBURcyThvsNlhV8enX4IuHPYytwVRx6Us8XFR3n7RoRsPx7u2NxqjZP8ggsrfqu2vZnFcMZc8KMdd4JP7/0rAH2NjfWXpwphZRRR4TMA6Lcq/sb7lmrjl6izci19zIMOzpjc3ZZS6I0R+t5NfRyn9s0JqrvvE3yb5r4udGj1kSGu4ELvz+WYIacR7WqUELjy1RxDFtRtsSCAx5nMzAJJMeSTpLFpwFJNefBzR7KGWJUiL5K4en8fuFqVAL9Qp/wAK8kZ0ta8S1ldn4BVeaOnIHcSGkEWYjYM3y/VieSg9hjz+NxRPdIrPEwC/vH/UNkRS09dZZRv8Z4dkYquSdK0UrcaGno0Pt8O6TCplCp6/sQnkKNxxGfjQhNkdpRzyi7q4k1U8JN+6pKZUdcVl1r5TzBZqajDiS84aaJvBzdYpgPPIOtmsmph7GdiKPtQrTsc7FA0CAwEAAQ==</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
-</manifest>
+/>
