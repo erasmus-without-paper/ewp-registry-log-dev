@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<ns1:manifest 
+   xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" 
+   xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" 
+   xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" 
+   xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" 
+   xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" 
+   xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
+   xmlns:sec_cc="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
+   xmlns:sec_cs="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" 
+   xmlns:sec_sc="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" 
+   xmlns:sec_ss="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" 
+   xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" 
+   xmlns:out2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" 
+   xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd" 
+   xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" 
+   xmlns:iafs="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:om="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:omc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:oml="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" 
+   xmlns:omlc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd">
+  <ns1:host>
+    <admin-email>admin-ewp@vut.cz</admin-email>
+    <admin-provider>VYSOKÉ UČENÍ TECHNICKÉ V BRNĚ</admin-provider>
+    <admin-notes>This is the development server.</admin-notes>
+    <ns2:apis-implemented>
+      <d1:discovery version="6.0.0">
+        <d1:url>https://dev-ewp-api.vut.cz/ewp/manifest.xml</d1:url>
+      </d1:discovery>
+      <e1:echo version="2.0.1">
+        <e1:http-security>
+          <sec:client-auth-methods>
+            <sec_cc:tlscert allows-self-signed="true"/>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+          </sec:server-auth-methods>
+        </e1:http-security>
+        <e1:url>https://dev-ewp-api.vut.cz/ewp/api/echo</e1:url>
+      </e1:echo>
+      <in2:institutions version="2.2.0">
+        <in2:http-security>
+          <sec:client-auth-methods>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+          </sec:server-auth-methods>
+        </in2:http-security>
+        <in2:url>https://dev-ewp-api.vut.cz/ewp/api/institutions</in2:url>
+        <in2:max-hei-ids>1</in2:max-hei-ids>
+      </in2:institutions>
+      <ia2:iias version="6.2.0">
+        <ia2:http-security>
+          <sec:client-auth-methods>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+          </sec:server-auth-methods>
+        </ia2:http-security>
+        <ia2:get-url>https://dev-ewp-api.vut.cz/ewp/api/iias/get</ia2:get-url>
+        <ia2:max-iia-ids>20</ia2:max-iia-ids>
+        <ia2:max-iia-codes>20</ia2:max-iia-codes>
+        <ia2:index-url>https://dev-ewp-api.vut.cz/ewp/api/iias/index</ia2:index-url>
+        <ia2:stats-url>https://dev-ewp-api.vut.cz/ewp/api/iias/stats</ia2:stats-url>
+      </ia2:iias>
+      <iac2:iia-cnr version="2.0.3">
+        <iac2:http-security>
+          <sec:client-auth-methods>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+          </sec:server-auth-methods>
+        </iac2:http-security>
+        <iac2:url>https://dev-ewp-api.vut.cz/ewp/api/iia-cnr</iac2:url>
+      </iac2:iia-cnr>
+      <iaap:iias-approval version="1.1.0">
+        <iaap:http-security>
+          <sec:client-auth-methods>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+          </sec:server-auth-methods>
+        </iaap:http-security>
+        <iaap:url>https://dev-ewp-api.vut.cz/ewp/api/iias-approval</iaap:url>
+        <iaap:max-iia-ids>20</iaap:max-iia-ids>
+      </iaap:iias-approval>
+      <iapc:iia-approval-cnr version="1.1.0">
+        <iapc:http-security>
+          <sec:client-auth-methods>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+          </sec:server-auth-methods>
+        </iapc:http-security>
+        <iapc:url>https://dev-ewp-api.vut.cz/ewp/api/iia-approval-cnr</iapc:url>
+      </iapc:iia-approval-cnr>
+    </ns2:apis-implemented>
+    <ns1:institutions-covered>
+      <ns2:hei id="vutbr.cz">
+        <ns2:other-id type="pic">999873091</ns2:other-id>
+        <ns2:other-id type="erasmus">CZ BRNO01</ns2:other-id>
+        <ns2:other-id type="erasmus-charter">49565-EPP-1-2014-1-CZ-EPPKA3-ECHE</ns2:other-id>
+        <ns2:name xml:lang="cz">VYSOKÉ UČENÍ TECHNICKÉ V BRNĚ</ns2:name>
+        <ns2:name xml:lang="en">BRNO UNIVERSITY OF TECHNOLOGY</ns2:name>
+      </ns2:hei>
+    </ns1:institutions-covered>
+    <ns1:client-credentials-in-use>
+      <ns1:certificate>MIIHaDCCBVCgAwIBAgIRAN94s+aTHOc6Rxx9P/ymjdIwDQYJKoZIhvcNAQEMBQAw
+RDELMAkGA1UEBhMCTkwxGTAXBgNVBAoTEEdFQU5UIFZlcmVuaWdpbmcxGjAYBgNV
+BAMTEUdFQU5UIE9WIFJTQSBDQSA0MB4XDTIyMTEwOTAwMDAwMFoXDTIzMTEwOTIz
+NTk1OVowczELMAkGA1UEBhMCQ1oxGzAZBgNVBAgMEkppaG9tb3JhdnNrw70ga3Jh
+ajErMCkGA1UECgwiVnlzb2vDqSB1xI1lbsOtIHRlY2huaWNrw6kgdiBCcm7EmzEa
+MBgGA1UEAxMRcGVydW4yMi5yby52dXQuY3owggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDNhdlS1EMz+CU/gJbXjGvbjqeEevc1ByZhNZKDXW5ZsCPlQvHI
+qlBw5sAN0M91JhFKB4OpPiSygLV3W3w+rd+57S+EDMzR2sUjXKM/wlpJIvS3v2zc
+Qat3LHbMw770g+nn3uQ4xolKPXeFw1ZstUrfA312Uqvwnnsop5wK1POiHeVRW4BD
+FCaaRVFQrLbbAw+8SfnLUaUQ0lIro24b3sFf6PSmMaLwZ6OXQpOlSD3alwW3NLSK
+OZxg5mwbfvlwazXpvm3t0FE9XNKElat/QSMmBn9nlmtDePre7qvHEU5ZKMZ++QR4
+8Ce6Ub+uQbbqfN1jVY9VeuX0EXDq/4AciLM9AgMBAAGjggMkMIIDIDAfBgNVHSME
+GDAWgBRvHTVJEGwy+lmgnryK6B+VvnF6DDAdBgNVHQ4EFgQUK80Xw17Ub/5qu5+6
+8eDtdj++PUQwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYw
+FAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAk8w
+JTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQIC
+MD8GA1UdHwQ4MDYwNKAyoDCGLmh0dHA6Ly9HRUFOVC5jcmwuc2VjdGlnby5jb20v
+R0VBTlRPVlJTQUNBNC5jcmwwdQYIKwYBBQUHAQEEaTBnMDoGCCsGAQUFBzAChi5o
+dHRwOi8vR0VBTlQuY3J0LnNlY3RpZ28uY29tL0dFQU5UT1ZSU0FDQTQuY3J0MCkG
+CCsGAQUFBzABhh1odHRwOi8vR0VBTlQub2NzcC5zZWN0aWdvLmNvbTCCAX4GCisG
+AQQB1nkCBAIEggFuBIIBagFoAHYArfe++nz/EMiLnT2cHj4YarRnKV3PsQwkyoWG
+NOvcgooAAAGEW8H23gAABAMARzBFAiEA2kTgV6ElHCTRB7nsMq/qw052CrYMHv3H
+ushls7SfDPgCIEnlJoFYN647V+MYgekmhF/f0RrwYIHac+rshbJ0zSLSAHYAejKM
+VNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGEW8H2qAAABAMARzBFAiEA
+4pCn7n/RgRYIiAtk1/H5ZShFjUecZodHwBqFughDcrkCIEigk5+XFodcVLz/XlGZ
+ihoWNIDR8twj2eFLUs6PG5inAHYA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3
+fW0GvW4AAAGEW8H2eAAABAMARzBFAiEA1oKNQIyzzxY+8wqPkrqJltiDniVFGErK
+87IXFDhSl+QCIH1laU7PuRz2FPj7mBepdgbtWjsM9l2wC/YaOg0kAwh2MBwGA1Ud
+EQQVMBOCEXBlcnVuMjIucm8udnV0LmN6MA0GCSqGSIb3DQEBDAUAA4ICAQAmyr0G
+L5k5xe5AMl/85DruqZDJdTjE3bHog8TcPS2cEh5STNTh/fnH8LncMuKnf/cdV4mi
+EdNcUTE82yQej/D1uA2lJCgAeMy9lqzq5W13tk8yAaIQ8LYxEHZpxaPVg3Nd10CQ
+LTF0eFy67jAI7ToNnLiyfE0vNqCPGftAFbdcGXE4suZS0XlQ6i+tLNdCpOsLj4NQ
+rk2AJ9dMEAki5WmnNjduLMEoFxzrPNFu2wCgqY7NcwwccStb7/gmggNGvB3vSagW
+o1T2hRytZ1+CoezOCmjPYFjDgZlgC+ErL2XLHqGKJ3Mqgt8ofa3Ri1vXZe/m+BBJ
+5kcI+m4lSacHIduRRAm7wxORXcsS8OgQ9uRzqdBQ0rKSJ/c+5Y4tHStRTkdfqmO4
+DCyRyKWNkcwtwUYzbrUDAg3QD4UztbMnT0pnY+hR9cTF4biLGmNKcX2sXfgi2SVf
+wHdxnewzZCzYRSfwz+x8yVdaJei2ogdqbPuX5m7kSzy8K2cLJRt0/qdHxbTeadM1
+TN1AWzxL8zFiUhjl3D0X+XrBjzSCHmuKaohriukx4z/WvsSYWMB5bpQpQ38NZ7+5
+dtEUrHWVjXPbUYoyUpznPhQbPfoGh1GQqZbVhDR8M38+bdLnPq7PpVqepHgbTxWd
+pM4i9KLo+6Fg+o37cPf0ksuSuKGfqqZ3KSt7DQ==</ns1:certificate>
+      <ns1:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzYXZUtRDM/glP4CW14xr246nhHr3NQcmYTWSg11uWbAj5ULxyKpQcObA
+DdDPdSYRSgeDqT4ksoC1d1t8Pq3fue0vhAzM0drFI1yjP8JaSSL0t79s3EGrdyx2zMO+9IPp597kOMaJSj13hcNWbLVK3wN9dlKr
+8J57KKecCtTzoh3lUVuAQxQmmkVRUKy22wMPvEn5y1GlENJSK6NuG97BX+j0pjGi8Gejl0KTpUg92pcFtzS0ijmcYOZsG375cGs1
+6b5t7dBRPVzShJWrf0EjJgZ/Z5ZrQ3j63u6rxxFOWSjGfvkEePAnulG/rkG26nzdY1WPVXrl9BFw6v+AHIizPQIDAQAB</ns1:rsa-public-key>
+    </ns1:client-credentials-in-use>
+    <ns1:server-credentials-in-use>
+      <ns1:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzYXZUtRDM/glP4CW14xr246nhHr3NQcmYTWSg11uWbAj5ULxyKpQcObA
+DdDPdSYRSgeDqT4ksoC1d1t8Pq3fue0vhAzM0drFI1yjP8JaSSL0t79s3EGrdyx2zMO+9IPp597kOMaJSj13hcNWbLVK3wN9dlKr
+8J57KKecCtTzoh3lUVuAQxQmmkVRUKy22wMPvEn5y1GlENJSK6NuG97BX+j0pjGi8Gejl0KTpUg92pcFtzS0ijmcYOZsG375cGs1
+6b5t7dBRPVzShJWrf0EjJgZ/Z5ZrQ3j63u6rxxFOWSjGfvkEePAnulG/rkG26nzdY1WPVXrl9BFw6v+AHIizPQIDAQAB</ns1:rsa-public-key>
+    </ns1:server-credentials-in-use>
+  </ns1:host>
+</ns1:manifest>
