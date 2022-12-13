@@ -10,6 +10,7 @@
     xmlns:iaasa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:iia="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:iiacnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:imob="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:olas="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
@@ -165,6 +166,19 @@
                 <olascnr:url>https://ewp.des.upc.edu/api/omobility-las/cnr</olascnr:url>
                 <olascnr:max-omobility-ids>10</olascnr:max-omobility-ids>
             </olascnr:omobility-la-cnr>
+            <imob:imobilities version="1.0.0">
+                <imob:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                </imob:http-security>
+                <imob:get-url>https://ewp.des.upc.edu/api/incomings/get</imob:get-url>
+                <imob:max-omobility-ids>10</imob:max-omobility-ids>
+                <imob:sends-notifications/>
+            </imob:imobilities>
         </r:apis-implemented>
         <mf:institutions-covered>
             <hei
