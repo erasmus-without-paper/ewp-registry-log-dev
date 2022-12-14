@@ -2,7 +2,7 @@
 <manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" 
-  xmlns:ns-auth="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+  xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
   xmlns:ns-httpsig="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
   xmlns:ns-tlscert="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
   >
@@ -17,10 +17,10 @@
       <echo version="2.0.1"
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd">
         <http-security>
-          <ns-auth:client-auth-methods >
+          <sec:client-auth-methods >
             <ns-httpsig:httpsig  />
           </client-auth-methods>
-          <ns-auth:server-auth-methods >
+          <sec:server-auth-methods >
             <ns-tlscert:tlscert allows-self-signed="true" />
             <ns-httpsig:httpsig />
           </server-auth-methods>
@@ -30,11 +30,11 @@
       <institutions version="2.2.0"
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd">
         <http-security>
-          <ns-auth:client-auth-methods >
+          <sec:client-auth-methods >
             <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
             <ns-httpsig:httpsig />
           </client-auth-methods>
-          <ns-auth:server-auth-methods >
+          <sec:server-auth-methods >
             <ns-tlscert:tlscert  allows-self-signed="true"  />
           </server-auth-methods>
         </http-security>
@@ -44,11 +44,11 @@
       <organizational-units version="2.2.1"
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd">
         <http-security>
-          <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+          <sec:client-auth-methods >
             <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
             <ns-httpsig:httpsig />
           </client-auth-methods>
-          <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+          <sec:server-auth-methods >
             <ns-tlscert:tlscert allows-self-signed="true" />
           </server-auth-methods>
         </http-security>
