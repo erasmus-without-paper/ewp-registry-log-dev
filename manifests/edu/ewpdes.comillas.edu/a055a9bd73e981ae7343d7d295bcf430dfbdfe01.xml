@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1">
+  xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:ns-httpsig="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1">
   <host>
     <admin-email xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">hvaler@comillas.edu</admin-email>
     <admin-provider xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">In-house app</admin-provider>
@@ -14,11 +14,11 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
-            <ns1:httpsig />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true" />
+            <ns-httpsig:httpsig />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/echo</url>
@@ -28,10 +28,10 @@
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
             <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true"  />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/institution</url>
@@ -42,10 +42,10 @@
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
             <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true" />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/organizationalunit</url>
@@ -56,11 +56,11 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
-            <ns1:httpsig/>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true"  />
+            <ns-httpsig:httpsig/>
           </server-auth-methods>
         </http-security>
         <get-url>https://ewpdes.comillas.edu/comillas/api/IiasGet</get-url>
@@ -72,11 +72,11 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
-            <ns1:httpsig  />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true"  />
+            <ns-httpsig:httpsig  />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/IiaCNR</url>
@@ -85,11 +85,11 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
-            <ns1:httpsig />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true"  />
+            <ns-httpsig:httpsig />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/IiaAprovalCNR</url>
@@ -98,11 +98,11 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
-            <ns1:httpsig  />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true"  />
+            <ns-httpsig:httpsig  />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/IiaAproval</url>
@@ -112,11 +112,11 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" />
-            <ns1:httpsig />
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"  allows-self-signed="true"  />
+            <ns-httpsig:httpsig />
           </server-auth-methods>
         </http-security>
         <get-url>https://ewpdes.comillas.edu/comillas/api/OMobilityLas</get-url>
@@ -128,10 +128,10 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/OMobilityLas</url>
@@ -141,10 +141,10 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/OMobilityCNR</url>
@@ -154,10 +154,10 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </server-auth-methods>
         </http-security>
         <get-url>https://ewpdes.comillas.edu/comillas/api/OMobility</get-url>
@@ -168,10 +168,10 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </server-auth-methods>
         </http-security>
         <get-url>https://ewpdes.comillas.edu/comillas/api/IMobility</get-url>
@@ -182,10 +182,10 @@
         xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd">
         <http-security>
           <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig />
+            <ns-httpsig:httpsig />
           </client-auth-methods>
           <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
-            <ns1:httpsig  />
+            <ns-httpsig:httpsig  />
           </server-auth-methods>
         </http-security>
         <url>https://ewpdes.comillas.edu/comillas/api/IMobilityCNR</url>
