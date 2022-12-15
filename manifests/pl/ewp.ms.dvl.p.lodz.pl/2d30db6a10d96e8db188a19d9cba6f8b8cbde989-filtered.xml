@@ -61,6 +61,28 @@
                 </ns2:http-security>
                 <ns2:url>https://ewp.ms.dvl.p.lodz.pl/echo</ns2:url>
             </ns2:echo>
+            <ns2:iias version="0.7.1">
+                <ns10:get-url>https://ewp.ms.dvl.p.lodz.pl/iias</ns10:get-url>
+                <ns2:http-security>
+                    <ns5:client-auth-methods>
+                        <ns3:httpsig/>
+                        <ns4:tlscert allows-self-signed="false"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns6:tlscert/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns8:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns9:tls/>
+                    </ns5:response-encryption-methods>
+                </ns2:http-security>
+                <ns10:index-url>https://ewp.ms.dvl.p.lodz.pl/iias/index</ns10:index-url>
+                <ns2:max-iia-codes>2</ns2:max-iia-codes>
+                <ns2:max-iia-ids>2</ns2:max-iia-ids>
+                <ns10:sends-notifications>rafal.janisz.500@guest.p.lodz.pl</ns10:sends-notifications>
+            </ns2:iias>
             <ns12:institutions version="2.2.0">
                 <ns12:http-security>
                     <ns5:client-auth-methods>
