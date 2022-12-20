@@ -29,9 +29,21 @@
         <admin-email>tic.desarrollo@urjc.es</admin-email>
         <admin-notes>Provider: URJC</admin-notes>
         <ns2:apis-implemented>
-            <ns25:discovery version="5.0.0">
-                <ns25:url>https://ewp-pruebas.urjc.es/ewpcv/discovery</ns25:url>
-            </ns25:discovery>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                xmlns:cli-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                xmlns:cli-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+                xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+                xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+                xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+                xmlns:srv-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+                xmlns:srv-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                version="6.0.0"
+            >
+                <url>https://ewp-pruebas.urjc.es/ewpcv/discovery</url>
+            </discovery>
             <ns24:echo version="2.0.1">
                 <admin-notes>Echo service covered by tls or httpSig security</admin-notes>
                 <ns24:http-security>
