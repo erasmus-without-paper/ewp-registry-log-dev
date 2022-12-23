@@ -1,0 +1,70 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec3="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:sec4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <host>
+        <ewp:admin-email>gestion.ori@uca.es</ewp:admin-email>
+        <ewp:admin-provider>University of Cadiz (ORI2)</ewp:admin-provider>
+        <r:apis-implemented>
+            <ns0:discovery
+                xmlns:ns0="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <ns0:url>https://orinumenti.uca.es/es/ewp/manifest</ns0:url>
+            </ns0:discovery>
+            <ns1:echo
+                xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <ns1:http-security>
+                    <sec:client-auth-methods>
+                        <sec1:tlscert allows-self-signed="true"/>
+                        <sec2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec3:tlscert/>
+                        <sec4:httpsig/>
+                    </sec:server-auth-methods>
+                </ns1:http-security>
+                <ns1:url>https://orinumenti.uca.es/es/ewp/api/echo</ns1:url>
+            </ns1:echo>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="uca.es">
+                <r:other-id type="pic">999855340</r:other-id>
+                <r:other-id type="erasmus">E  CADIZ01</r:other-id>
+                <r:other-id type="erasmus-charter">28564-EPP-1-2014-1-ES-EPPKA3-ECHE</r:other-id>
+                <r:name xml:lang="en">University of Cadiz</r:name>
+                <r:name xml:lang="es">Universidad de Cádiz</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <certificate>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</certificate>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA39QdwaJYtzKjkH4uLCDz
+nokuAlopXtxtqI9ohyg0J0nBPfTgUJqJAbSnwidpuijOrb5xLO1q70DT2BlFQIfx
+Tp52NcQLAkQEntklwGm5l3OX8kDRYoG/Gd2BKTJ/42ar6g9mZVQPeJ/ZPGscddHy
++uJwRh37bsb9zbZT5Pbi2Va0GaK2fQ+1yMUh9uXVh3lTX4/3EjoHkfrs4x4NJ+Od
+Y/x5zJs/dCV5oC6MhKR8Gmnm2ojAEFN84avGn3+89L9YhCl2EK4jimeVI0pCjyqg
+nPT7GIVnAnj/NXi06NnpaObmB7K32sbp1fGVv569sfdfGRxezG8diTeCz1isfLOL
+DQIDAQAB
+</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA39QdwaJYtzKjkH4uLCDz
+nokuAlopXtxtqI9ohyg0J0nBPfTgUJqJAbSnwidpuijOrb5xLO1q70DT2BlFQIfx
+Tp52NcQLAkQEntklwGm5l3OX8kDRYoG/Gd2BKTJ/42ar6g9mZVQPeJ/ZPGscddHy
++uJwRh37bsb9zbZT5Pbi2Va0GaK2fQ+1yMUh9uXVh3lTX4/3EjoHkfrs4x4NJ+Od
+Y/x5zJs/dCV5oC6MhKR8Gmnm2ojAEFN84avGn3+89L9YhCl2EK4jimeVI0pCjyqg
+nPT7GIVnAnj/NXi06NnpaObmB7K32sbp1fGVv569sfdfGRxezG8diTeCz1isfLOL
+DQIDAQAB
+</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
