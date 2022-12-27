@@ -166,6 +166,23 @@
                 </http-security>
                 <url>https://erasmus.upb.ro/dev/ewp/iia/cnr</url>
             </iia-cnr>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/tree/stable-v2"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://erasmus.upb.ro/dev/ewp/omobilities/get</get-url>
+                <max-omobility-ids>1</max-omobility-ids>
+                <index-url>https://erasmus.upb.ro/dev/ewp/omobilities/index</index-url>
+            </omobilities>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="upb.ro">
