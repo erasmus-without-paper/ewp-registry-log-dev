@@ -3,6 +3,7 @@
     xmlns:ds="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:iias="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
@@ -64,6 +65,22 @@
                 <ou2:max-ounit-ids>50</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>50</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <iias:iias version="6.2.0">
+                <iias:http-security>
+                    <sec:client-auth-methods>
+                        <ns1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns3:tlscert/>
+                        <ns2:httpsig/>
+                    </sec:server-auth-methods>
+                </iias:http-security>
+                <iias:get-url>https://mobion.bg.ac.rs/api/ewpdev/iias-get</iias:get-url>
+                <iias:max-iia-ids>1</iias:max-iia-ids>
+                <iias:max-iia-codes>1</iias:max-iia-codes>
+                <iias:index-url>https://mobion.bg.ac.rs/api/ewpdev/iias-index</iias:index-url>
+                <iias:stats-url>https://mobion.bg.ac.rs/api/ewpdev/iias-stats</iias:stats-url>
+            </iias:iias>
         </r:apis-implemented>
         <mf:institutions-covered>
             <r:hei id="bg.ac.rs">
