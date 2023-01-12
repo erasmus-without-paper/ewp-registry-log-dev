@@ -1,136 +1,104 @@
-<manifest
-        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
-        xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
-        xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-        xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-        xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-        xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-        xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-        xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-        xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-        xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-        xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-        xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-        xmlns:xml="http://www.w3.org/XML/1998/namespace"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-        https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd"
->
-    <host>
-        <ewp:admin-email>branko.petric@fil.bg.ac.rs</ewp:admin-email>
-        <ewp:admin-provider>University of Belgrade (MobiON)</ewp:admin-provider>
-        <ewp:admin-notes>Discovery manifest</ewp:admin-notes>
-        <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <url>https://mobion.bg.ac.rs/api/ewpdev/manifest</url>
-            </discovery>
-            <e2:echo version="2.0.1">
-                <e2:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:tlscert allows-self-signed="true"/>
-                        <ns2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns4:httpsig/>
-                    </sec:server-auth-methods>
-                </e2:http-security>
-                <e2:url>https://mobion.bg.ac.rs/api/ewpdev/echo</e2:url>
-            </e2:echo>
-            <in2:institutions version="2.2.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:tlscert allows-self-signed="true"/>
-                        <ns2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns4:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://mobion.bg.ac.rs/api/ewpdev/institution</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:tlscert allows-self-signed="true"/>
-                        <ns2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns4:httpsig/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://mobion.bg.ac.rs/api/ewpdev/ounit</ou2:url>
-                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
-            </ou2:organizational-units>
-        </r:apis-implemented>
-        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
-            <hei id="bg.ac.rs">
-                <other-id type="erasmus">RS BELGRAD02</other-id>                <other-id type="oid">E10208240</other-id>                <other-id type="pic">999641843</other-id>                <name xml:lang="en">University of Belgrade</name>                <name xml:lang="sr">Univerzitet u Beogradu</name>            </hei>
-        </mf:institutions-covered>
-        <client-credentials-in-use>
-            <certificate>MIIFJDCCBAygAwIBAgISBK2nWALyA4GIHUdBpTQ1I7udMA0GCSqGSIb3DQEBCwUA
-MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
-EwJSMzAeFw0yMjA0MTgxMzIxNTRaFw0yMjA3MTcxMzIxNTNaMBoxGDAWBgNVBAMT
-D21vYmlvbi5iZy5hYy5yczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
-AK9RTtB5+UjneUgph/MAcHVZiAPXIVn2JsYWJNDZHKPEuHQ4Fo958njz2VYsbbSX
-L+21JHBwu95LfPk5+rVN+zyp1LAQc2m4nEINYs8Qs5wjo/SghcaOnpvRbSBabqpE
-kCknbYUbhmR3pKkiw2taYyU2fL6xtY2alx8t49N6duihAqsD6ZfdtDkPtaBv7zKW
-J3aydOZI9+Qc/xznY+/owqAFPcFgYuhE7pjdEMCmx9bO2lHXZ+tsw74YQp9NrXNX
-Y7IctNHkaQNBjcZplHogeX7RIIir+TYsl7JC3dg1pmsCCYexi7SCiT6Z5p7GBki6
-eyk/MINTKvsC2Jc0etZnUtkCAwEAAaOCAkowggJGMA4GA1UdDwEB/wQEAwIFoDAd
-BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNV
-HQ4EFgQUtq+r+sV3TnXtqqe1Q5rVSvpw3JAwHwYDVR0jBBgwFoAUFC6zF7dYVsuu
-UAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8v
-cjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9y
-Zy8wGgYDVR0RBBMwEYIPbW9iaW9uLmJnLmFjLnJzMEwGA1UdIARFMEMwCAYGZ4EM
-AQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0
-c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcAKXm+8J45OSHw
-VnOfY6V35b5XfZxgCvj5TV0mXCVdx4QAAAGAPQ0qxgAABAMASDBGAiEAh7OVK/3K
-U/V4AweR+qBE7YC9PtsJ6AP/jn8nZyhks3ECIQCFzirVqgh5Lu3TpC6WHEWlYpXs
-+3nbB+vxTWKNp655ZQB1AEHIyrHfIkZKEMahOglCh15OMYsbA+vrS8do8JBilgb2
-AAABgD0NLZIAAAQDAEYwRAIgIz/ps9zbjlOvg2k8p1VxnXRISADaOG+8rN+8EQqn
-wMwCIH5rq5zLLDMK5ESwAotSc5AIVC03ttoI+StpvpKQsVS3MA0GCSqGSIb3DQEB
-CwUAA4IBAQAL+h83FNbm6QwPi7c/lqb3xeYuUkVJp2XgSoqyjikDH1cqsbTLyAXp
-u2I8FtVNiX1pSgttb7Muk0D9zsYqwN2ujooog98pUPoto0+vQnapeqSsu7BM+x3K
-gd/kZf/WYbD0gQiIgTnjGp6ApYnQVpJq8cTBjf76qR5A678e7JNXEUu1C0mBhjC0
-rjY65+SvLtG9R2yQdtEfLiFGOtoPAVi9iEgOQ92UZdXwvBIpoJDGzynBsP1bmf3j
-zD++eRtoPF6MYaaj50u/dxmjEmj+I9+jI8riaCan3PWhsCYfaSwR4gO58J7gSebo
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ds="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd">
+  <host>
+    <ewp:admin-email>branko.petric@fil.bg.ac.rs</ewp:admin-email>
+    <ewp:admin-provider>University of Belgrade (MobiON)</ewp:admin-provider>
+    <ewp:admin-notes>Discovery manifest</ewp:admin-notes>
+    <r:apis-implemented>
+      <ds:discovery version="6.0.0">
+        <ds:url>https://mobion.bg.ac.rs/api/ewpdev/manifest</ds:url>
+      </ds:discovery>
+      <e2:echo version="2.0.1">
+        <e2:http-security>
+          <sec:client-auth-methods>
+            <ns1:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <ns2:httpsig/>
+          </sec:server-auth-methods>
+        </e2:http-security>
+        <e2:url>https://mobion.bg.ac.rs/api/ewpdev/echo</e2:url>
+      </e2:echo>
+      <in2:institutions version="2.2.0">
+        <in2:http-security>
+          <sec:client-auth-methods>
+            <ns1:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <ns2:httpsig/>
+          </sec:server-auth-methods>
+        </in2:http-security>
+        <in2:url>https://mobion.bg.ac.rs/api/ewpdev/institution</in2:url>
+        <in2:max-hei-ids>1</in2:max-hei-ids>
+      </in2:institutions>
+      <ou2:organizational-units version="2.1.1">
+        <ou2:http-security>
+          <sec:client-auth-methods>
+            <ns1:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <ns2:httpsig/>
+          </sec:server-auth-methods>
+        </ou2:http-security>
+        <ou2:url>https://mobion.bg.ac.rs/api/ewpdev/institution</ou2:url>
+        <ou2:max-ounit-ids>50</ou2:max-ounit-ids>
+        <ou2:max-ounit-codes>50</ou2:max-ounit-codes>
+      </ou2:organizational-units>
+    </r:apis-implemented>
+    <mf:institutions-covered>
+      <r:hei id="bg.ac.rs">
+        <r:other-id type="erasmus">RS BELGRAD02</r:other-id>
+        <r:other-id type="oid">E10208240</r:other-id>
+        <r:other-id type="pic">999641843</r:other-id>
+        <r:name xml:lang="en">University of Belgrade</r:name>
+        <r:name xml:lang="sr">Univerzitet u Beogradu</r:name>
+      </r:hei>
+    </mf:institutions-covered>
+    <client-credentials-in-use>
+      <certificate>MIIFJDCCBAygAwIBAgISBK2nWALyA4GIHUdBpTQ1I7udMA0GCSqGSIb3DQEBCwUA&#13;
+MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD&#13;
+EwJSMzAeFw0yMjA0MTgxMzIxNTRaFw0yMjA3MTcxMzIxNTNaMBoxGDAWBgNVBAMT&#13;
+D21vYmlvbi5iZy5hYy5yczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB&#13;
+AK9RTtB5+UjneUgph/MAcHVZiAPXIVn2JsYWJNDZHKPEuHQ4Fo958njz2VYsbbSX&#13;
+L+21JHBwu95LfPk5+rVN+zyp1LAQc2m4nEINYs8Qs5wjo/SghcaOnpvRbSBabqpE&#13;
+kCknbYUbhmR3pKkiw2taYyU2fL6xtY2alx8t49N6duihAqsD6ZfdtDkPtaBv7zKW&#13;
+J3aydOZI9+Qc/xznY+/owqAFPcFgYuhE7pjdEMCmx9bO2lHXZ+tsw74YQp9NrXNX&#13;
+Y7IctNHkaQNBjcZplHogeX7RIIir+TYsl7JC3dg1pmsCCYexi7SCiT6Z5p7GBki6&#13;
+eyk/MINTKvsC2Jc0etZnUtkCAwEAAaOCAkowggJGMA4GA1UdDwEB/wQEAwIFoDAd&#13;
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNV&#13;
+HQ4EFgQUtq+r+sV3TnXtqqe1Q5rVSvpw3JAwHwYDVR0jBBgwFoAUFC6zF7dYVsuu&#13;
+UAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8v&#13;
+cjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9y&#13;
+Zy8wGgYDVR0RBBMwEYIPbW9iaW9uLmJnLmFjLnJzMEwGA1UdIARFMEMwCAYGZ4EM&#13;
+AQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0&#13;
+c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcAKXm+8J45OSHw&#13;
+VnOfY6V35b5XfZxgCvj5TV0mXCVdx4QAAAGAPQ0qxgAABAMASDBGAiEAh7OVK/3K&#13;
+U/V4AweR+qBE7YC9PtsJ6AP/jn8nZyhks3ECIQCFzirVqgh5Lu3TpC6WHEWlYpXs&#13;
++3nbB+vxTWKNp655ZQB1AEHIyrHfIkZKEMahOglCh15OMYsbA+vrS8do8JBilgb2&#13;
+AAABgD0NLZIAAAQDAEYwRAIgIz/ps9zbjlOvg2k8p1VxnXRISADaOG+8rN+8EQqn&#13;
+wMwCIH5rq5zLLDMK5ESwAotSc5AIVC03ttoI+StpvpKQsVS3MA0GCSqGSIb3DQEB&#13;
+CwUAA4IBAQAL+h83FNbm6QwPi7c/lqb3xeYuUkVJp2XgSoqyjikDH1cqsbTLyAXp&#13;
+u2I8FtVNiX1pSgttb7Muk0D9zsYqwN2ujooog98pUPoto0+vQnapeqSsu7BM+x3K&#13;
+gd/kZf/WYbD0gQiIgTnjGp6ApYnQVpJq8cTBjf76qR5A678e7JNXEUu1C0mBhjC0&#13;
+rjY65+SvLtG9R2yQdtEfLiFGOtoPAVi9iEgOQ92UZdXwvBIpoJDGzynBsP1bmf3j&#13;
+zD++eRtoPF6MYaaj50u/dxmjEmj+I9+jI8riaCan3PWhsCYfaSwR4gO58J7gSebo&#13;
 S6ZCDIZI1ZYpPIjvykUj8mkKC62eUMG4</certificate>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1FO0Hn5SOd5SCmH8wBw
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1FO0Hn5SOd5SCmH8wBw
 dVmIA9chWfYmxhYk0Nkco8S4dDgWj3nyePPZVixttJcv7bUkcHC73kt8+Tn6tU37
 PKnUsBBzabicQg1izxCznCOj9KCFxo6em9FtIFpuqkSQKSdthRuGZHekqSLDa1pj
 JTZ8vrG1jZqXHy3j03p26KECqwPpl920OQ+1oG/vMpYndrJ05kj35Bz/HOdj7+jC
 oAU9wWBi6ETumN0QwKbH1s7aUddn62zDvhhCn02tc1djshy00eRpA0GNxmmUeiB5
 ftEgiKv5NiyXskLd2DWmawIJh7GLtIKJPpnmnsYGSLp7KT8wg1Mq+wLYlzR61mdS
 2QIDAQAB</rsa-public-key>
-        </client-credentials-in-use>
-        <server-credentials-in-use>
-            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1FO0Hn5SOd5SCmH8wBw
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1FO0Hn5SOd5SCmH8wBw
 dVmIA9chWfYmxhYk0Nkco8S4dDgWj3nyePPZVixttJcv7bUkcHC73kt8+Tn6tU37
 PKnUsBBzabicQg1izxCznCOj9KCFxo6em9FtIFpuqkSQKSdthRuGZHekqSLDa1pj
 JTZ8vrG1jZqXHy3j03p26KECqwPpl920OQ+1oG/vMpYndrJ05kj35Bz/HOdj7+jC
 oAU9wWBi6ETumN0QwKbH1s7aUddn62zDvhhCn02tc1djshy00eRpA0GNxmmUeiB5
 ftEgiKv5NiyXskLd2DWmawIJh7GLtIKJPpnmnsYGSLp7KT8wg1Mq+wLYlzR61mdS
 2QIDAQAB</rsa-public-key>
-        </server-credentials-in-use>
-    </host>
+    </server-credentials-in-use>
+  </host>
 </manifest>
