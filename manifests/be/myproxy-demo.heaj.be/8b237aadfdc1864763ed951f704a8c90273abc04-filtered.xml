@@ -34,6 +34,31 @@
                 </f:http-security>
                 <f:url>https://myproxy-demo.heaj.be/ws_penelope/EWP/echo</f:url>
             </f:echo>
+            <k:institutions version="2.2.0">
+                <k:http-security>
+                    <i:client-auth-methods>
+                        <b:httpsig/>
+                    </i:client-auth-methods>
+                    <i:server-auth-methods>
+                        <d:tlscert/>
+                    </i:server-auth-methods>
+                </k:http-security>
+                <k:url>https://myproxy-demo.heaj.be/ws_penelope/EWP/institutions</k:url>
+                <k:max-hei-ids>10</k:max-hei-ids>
+            </k:institutions>
+            <l:organizational-units version="2.1.1">
+                <l:http-security>
+                    <i:client-auth-methods>
+                        <b:httpsig/>
+                    </i:client-auth-methods>
+                    <i:server-auth-methods>
+                        <d:tlscert/>
+                    </i:server-auth-methods>
+                </l:http-security>
+                <l:url>https://myproxy-demo.heaj.be/ws_penelope/EWP/ounits</l:url>
+                <l:max-ounit-ids>10</l:max-ounit-ids>
+                <l:max-ounit-codes>10</l:max-ounit-codes>
+            </l:organizational-units>
             <n:iias version="6.2.0">
                 <n:http-security>
                     <i:client-auth-methods>
