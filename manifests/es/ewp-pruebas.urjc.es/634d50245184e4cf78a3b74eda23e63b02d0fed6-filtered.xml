@@ -1,5 +1,5 @@
 <ns3:manifest
-    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -17,7 +17,7 @@
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-mt-dictionaries/blob/stable-v1/manifest-entry.xsd"
@@ -27,23 +27,12 @@
 >
     <ns3:host>
         <admin-email>tic.desarrollo@urjc.es</admin-email>
-        <admin-notes>Universidad Rey Juan Carlos (URJC)</admin-notes>
+        <admin-provider>Universidad Rey Juan Carlos (URJC)</admin-provider>
+        <admin-notes>Version 01.05.00 of EWPCV manifest</admin-notes>
         <ns2:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                xmlns:cli-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-                xmlns:cli-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-                xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-                xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
-                xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-                xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-                xmlns:srv-sec="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-                xmlns:srv-sec2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                version="6.0.0"
-            >
-                <url>https://ewp-pruebas.urjc.es/ewpcv/discovery</url>
-            </discovery>
+            <ns25:discovery version="6.0.0">
+                <ns25:url>https://ewp-pruebas.urjc.es/ewpcv/discovery</ns25:url>
+            </ns25:discovery>
             <ns24:echo version="2.0.1">
                 <admin-notes>Echo service covered by tls or httpSig security</admin-notes>
                 <ns24:http-security>
@@ -768,46 +757,20 @@
                 <ns9:max-omobility-ids>1</ns9:max-omobility-ids>
             </ns9:imobility-tor-cnr>
         </ns2:apis-implemented>
+        <ns3:institutions-covered>
+            <ns2:hei id="urjc.es">
+                <ns2:other-id type="pic">999886283</ns2:other-id>
+                <ns2:other-id type="erasmus">E MADRID26</ns2:other-id>
+                <ns2:name xml:lang="en">REY JUAN CARLOS UNIVERSITY</ns2:name>
+                <ns2:name xml:lang="es">UNIVERSIDAD REY JUAN CARLOS</ns2:name>
+            </ns2:hei>
+        </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:certificate>
-					MIIDDjCCAfagAwIBAgIEYQFAhTANBgkqhkiG9w0BAQsFADBJMQswCQYDVQQGEwJF
-					UzEKMAgGA1UECAwBYTEKMAgGA1UEBwwBYTEKMAgGA1UECgwBYTEKMAgGA1UECwwB
-					YTEKMAgGA1UEAwwBYTAeFw0yMTA3MjgxMTMzMjVaFw0yMjA3MjgxMTMzMjVaMEkx
-					CzAJBgNVBAYTAkVTMQowCAYDVQQIDAFhMQowCAYDVQQHDAFhMQowCAYDVQQKDAFh
-					MQowCAYDVQQLDAFhMQowCAYDVQQDDAFhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
-					MIIBCgKCAQEAxVrGMFjZtaINKYVn+cT1eQzvDLVtW8Mi+8DMKnPIRZNKbgeyyS49
-					atzcuvSAGKKwR7uHCQ1X9IQDjxD8bJxJcFK00Qdmnd5FixjXiqeZRnJIY+6GE/qV
-					EfNXwAG2bhG9spGK/cZw4DvRz/8JbcFOOfIQvgD7wF/Jr15xtfaqniIRCIzNLE9X
-					BJ9/rJvZOOc4bdvnPGNr1BMgdPBsLNz6ocKrldiiGHMj0/LeF1ozYo9r13SMrEAs
-					9MQja9aY4/C3Q6e4/VJq//WuF24ZFUqOeBgxNZEgJVqKlNvUmGz2w4qn8ENGOIZ2
-					q6O+wadSJIbBJtBxAAUNElKQi9V3VJB9IQIDAQABMA0GCSqGSIb3DQEBCwUAA4IB
-					AQCrIFLm2hKqS/Iuc5/zx8VctsY4VtetTEJIzRE0uP1Utkfc5Q0hiWGgjKV5Jqxe
-					XvJbOp5ywhiUBbl1dR7P3Ff26E57cbij61sCTFh/eUP37Qaoc8eCA+gyiqrD3ZlC
-					qcEYYCzVmgCHitdtrA3TbkEZi1dCbtf9Am8mMsm3EJBAK+VdcSe4X88IvUQz+OUs
-					g4+7mPj4hTcvCB1IG5xAB8pcyqeskV4Qr/u9pRc0qTkGBHmOCwBABV2beYT0mdTc
-					WlTIEmmJ/yyUm69xMwo3USUJAE0L51CsOXomdvs2wze+ZJR+t52mXPuohKEtNXXh
-					0OnBUhtHuoX9ax1h2uAVF4mH
-                </ns3:certificate>
-            <ns3:rsa-public-key>
-                    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVrGMFjZtaINKYVn+cT1
-					eQzvDLVtW8Mi+8DMKnPIRZNKbgeyyS49atzcuvSAGKKwR7uHCQ1X9IQDjxD8bJxJ
-					cFK00Qdmnd5FixjXiqeZRnJIY+6GE/qVEfNXwAG2bhG9spGK/cZw4DvRz/8JbcFO
-					OfIQvgD7wF/Jr15xtfaqniIRCIzNLE9XBJ9/rJvZOOc4bdvnPGNr1BMgdPBsLNz6
-					ocKrldiiGHMj0/LeF1ozYo9r13SMrEAs9MQja9aY4/C3Q6e4/VJq//WuF24ZFUqO
-					eBgxNZEgJVqKlNvUmGz2w4qn8ENGOIZ2q6O+wadSJIbBJtBxAAUNElKQi9V3VJB9
-					IQIDAQAB
-                </ns3:rsa-public-key>
+            <ns3:certificate>MIIDDjCCAfagAwIBAgIEYQFAhTANBgkqhkiG9w0BAQsFADBJMQswCQYDVQQGEwJFUzEKMAgGA1UECAwBYTEKMAgGA1UEBwwBYTEKMAgGA1UECgwBYTEKMAgGA1UECwwBYTEKMAgGA1UEAwwBYTAeFw0yMTA3MjgxMTMzMjVaFw0yMjA3MjgxMTMzMjVaMEkxCzAJBgNVBAYTAkVTMQowCAYDVQQIDAFhMQowCAYDVQQHDAFhMQowCAYDVQQKDAFhMQowCAYDVQQLDAFhMQowCAYDVQQDDAFhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVrGMFjZtaINKYVn+cT1eQzvDLVtW8Mi+8DMKnPIRZNKbgeyyS49atzcuvSAGKKwR7uHCQ1X9IQDjxD8bJxJcFK00Qdmnd5FixjXiqeZRnJIY+6GE/qVEfNXwAG2bhG9spGK/cZw4DvRz/8JbcFOOfIQvgD7wF/Jr15xtfaqniIRCIzNLE9XBJ9/rJvZOOc4bdvnPGNr1BMgdPBsLNz6ocKrldiiGHMj0/LeF1ozYo9r13SMrEAs9MQja9aY4/C3Q6e4/VJq//WuF24ZFUqOeBgxNZEgJVqKlNvUmGz2w4qn8ENGOIZ2q6O+wadSJIbBJtBxAAUNElKQi9V3VJB9IQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCrIFLm2hKqS/Iuc5/zx8VctsY4VtetTEJIzRE0uP1Utkfc5Q0hiWGgjKV5JqxeXvJbOp5ywhiUBbl1dR7P3Ff26E57cbij61sCTFh/eUP37Qaoc8eCA+gyiqrD3ZlCqcEYYCzVmgCHitdtrA3TbkEZi1dCbtf9Am8mMsm3EJBAK+VdcSe4X88IvUQz+OUsg4+7mPj4hTcvCB1IG5xAB8pcyqeskV4Qr/u9pRc0qTkGBHmOCwBABV2beYT0mdTcWlTIEmmJ/yyUm69xMwo3USUJAE0L51CsOXomdvs2wze+ZJR+t52mXPuohKEtNXXh0OnBUhtHuoX9ax1h2uAVF4mH</ns3:certificate>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVrGMFjZtaINKYVn+cT1eQzvDLVtW8Mi+8DMKnPIRZNKbgeyyS49atzcuvSAGKKwR7uHCQ1X9IQDjxD8bJxJcFK00Qdmnd5FixjXiqeZRnJIY+6GE/qVEfNXwAG2bhG9spGK/cZw4DvRz/8JbcFOOfIQvgD7wF/Jr15xtfaqniIRCIzNLE9XBJ9/rJvZOOc4bdvnPGNr1BMgdPBsLNz6ocKrldiiGHMj0/LeF1ozYo9r13SMrEAs9MQja9aY4/C3Q6e4/VJq//WuF24ZFUqOeBgxNZEgJVqKlNvUmGz2w4qn8ENGOIZ2q6O+wadSJIbBJtBxAAUNElKQi9V3VJB9IQIDAQAB</ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>
-                    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVrGMFjZtaINKYVn+cT1
-					eQzvDLVtW8Mi+8DMKnPIRZNKbgeyyS49atzcuvSAGKKwR7uHCQ1X9IQDjxD8bJxJ
-					cFK00Qdmnd5FixjXiqeZRnJIY+6GE/qVEfNXwAG2bhG9spGK/cZw4DvRz/8JbcFO
-					OfIQvgD7wF/Jr15xtfaqniIRCIzNLE9XBJ9/rJvZOOc4bdvnPGNr1BMgdPBsLNz6
-					ocKrldiiGHMj0/LeF1ozYo9r13SMrEAs9MQja9aY4/C3Q6e4/VJq//WuF24ZFUqO
-					eBgxNZEgJVqKlNvUmGz2w4qn8ENGOIZ2q6O+wadSJIbBJtBxAAUNElKQi9V3VJB9
-					IQIDAQAB
-                </ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxVrGMFjZtaINKYVn+cT1eQzvDLVtW8Mi+8DMKnPIRZNKbgeyyS49atzcuvSAGKKwR7uHCQ1X9IQDjxD8bJxJcFK00Qdmnd5FixjXiqeZRnJIY+6GE/qVEfNXwAG2bhG9spGK/cZw4DvRz/8JbcFOOfIQvgD7wF/Jr15xtfaqniIRCIzNLE9XBJ9/rJvZOOc4bdvnPGNr1BMgdPBsLNz6ocKrldiiGHMj0/LeF1ozYo9r13SMrEAs9MQja9aY4/C3Q6e4/VJq//WuF24ZFUqOeBgxNZEgJVqKlNvUmGz2w4qn8ENGOIZ2q6O+wadSJIbBJtBxAAUNElKQi9V3VJB9IQIDAQAB</ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
