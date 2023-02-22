@@ -1,38 +1,7 @@
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
-    "
 >
     <host>
         <ewp:admin-email>ediplomas@gunet.gr</ewp:admin-email>
@@ -44,23 +13,48 @@
             >
                 <url>https://emrex-test.ediplomas.gr/manifest.xml</url>
             </discovery>
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
+            <emrex-data-access-point
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-emrex-data-access-point/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
             >
-                <ewp:admin-email>ediplomas@gunet.gr</ewp:admin-email>
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </http-security>
                 <url>https://emrex-test.ediplomas.gr/init</url>
-            </echo>
+                <name>eDiplomas EMREX Test</name>
+                <country-code>GR</country-code>
+                <certificate>MIIHjTCCBXWgAwIBAgIQWKaLgkgFxtjhpE6HDlL/kDANBgkqhkiG9w0BAQsFADBtMQswCQYDVQQG
+                EwJHUjE3MDUGA1UECgwuSGVsbGVuaWMgQWNhZGVtaWMgYW5kIFJlc2VhcmNoIEluc3RpdHV0aW9u
+                cyBDQTElMCMGA1UEAwwcSEFSSUNBIEluc3RpdHV0aW9uYWwgVExTIFJTQTAeFw0yMzAyMTUxNTM1
+                MzlaFw0yNDAyMTUxNTM1MzlaMGUxCzAJBgNVBAYTAkdSMQ8wDQYDVQQHDAZBdGhlbnMxIzAhBgNV
+                BAoMGkdyZWVrIFVuaXZlcnNpdGllcyBOZXR3b3JrMSAwHgYDVQQDDBdlbXJleC10ZXN0LmVkaXBs
+                b21hcy5ncjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOxv3XiX8KDjU/4cKbVCV08t
+                wBfSHukNuE13GC8n8cyO0A8UK9koKAOYRSJhlfKZoR0I+rmPVx78spz1dH4DDactaBak5Nfi6hDo
+                xNRUb5BEP/DzHMmybce/2+E62oRH7lKIiwZM1babzuVKSDfQlKd17bTdDoVg6TFTkCIfNGtMhjDt
+                1a05PLBWqycAHJALl5iBuUqDTHZLNsRFy1agLdsZkYcRaGhwrgr20mXfE0NKCUegXkVe+zn0Lw5B
+                flu3QQ7FQjEkN8ATv2zi/Zbf7Sh/i/MIY+zklSongLG7hF5BQvpo/yk3ElZ+jKVIfh9GuuF6gH35
+                Y5QE2F+MT9TVzIMCAwEAAaOCAy8wggMrMB8GA1UdIwQYMBaAFLu6bcCx/d8V+0PM5M0uvft4O+t2
+                MG4GCCsGAQUFBwEBBGIwYDA7BggrBgEFBQcwAoYvaHR0cDovL2NydC5oYXJpY2EuZ3IvSEFSSUNB
+                LUluc3QtVExTLVN1Yi1SMS5jZXIwIQYIKwYBBQUHMAGGFWh0dHA6Ly9vY3NwLmhhcmljYS5ncjAi
+                BgNVHREEGzAZghdlbXJleC10ZXN0LmVkaXBsb21hcy5ncjBhBgNVHSAEWjBYMAgGBmeBDAECAjAI
+                BgYEAI96AQcwQgYMKwYBBAGBzxEBAQECMDIwMAYIKwYBBQUHAgEWJGh0dHBzOi8vcmVwby5oYXJp
+                Y2EuZ3IvZG9jdW1lbnRzL0NQUzAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwQAYDVR0f
+                BDkwNzA1oDOgMYYvaHR0cDovL2NybC5oYXJpY2EuZ3IvSEFSSUNBLUluc3QtVExTLVN1Yi1SMS5j
+                cmwwHQYDVR0OBBYEFAfWCAcniDzpgKhqgwNT9jhWYOcqMA4GA1UdDwEB/wQEAwIFoDCCAX8GCisG
+                AQQB1nkCBAIEggFvBIIBawFpAHcAdv+IPwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGG
+                VcDKFwAABAMASDBGAiEA0INFn8H60xy/GWKMkX87B/wwopyJzkQojtdno9W0QAkCIQCYT9agdjFj
+                2C9GSRa3sJwJUEMmO9euXdew7Zz5UdRv6AB1ANq2v2s/tbYin5vCu1xr6HCRcWy7UYSFNL2kPTBI
+                1/urAAABhlXAyuwAAAQDAEYwRAIgEiRhNW4sjvodNtBPU2Dcg4lrIqhVWDL8nCDLQITcl6cCIEy5
+                iw8zBtoQih3VaEGBwfmH70esyYrVHE6H+6p3nvPfAHcAO1N3dT4tuYBOizBbBv5AO2fYT8P0x70A
+                DS1yb+H61BcAAAGGVcDKzgAABAMASDBGAiEA3v1HNLsz8NX112iTdfVgtBgN+7g+mEb+OG8eoKh7
+                nlgCIQCHWcRf5rGx9Z2Y5/ZGSg0Y9QKv6+t3SJv5a14srSOclzANBgkqhkiG9w0BAQsFAAOCAgEA
+                NTzSam0pY8Ujd8lQ5ITW+l9ydgv9s7+BZH5bUNJf8vU5y78J1PkQ7Q4e/VJpNBwJgmkLxhOTCAVO
+                gtl4W3BhzyrjIGliXM2nENjBKzrG9XBmzRrXY1+IeBgchqOzjwCFwa4qoIcCYj0KA1hosUPb6jeF
+                xPbnVnIMEKkEixTYW1DIpOv5QDEVjWZkQPIionr0DeOmoiEbkiMilUjrhIxjmRAmLEDl5sLg4JRU
+                ovRsKg29M+KkTdO4Wb9Y90TtMqNvQN1KzaTrzzC0pv+ijY/NpfzS/CqaRDyEeXqH5yoJEAv+OWhk
+                QIeJjdNW1Ze3dhOzixUkdcSootEyv97oG9dq8r6vNHLmIjqI5+2Y4qJF1GUkASuM/Zm9kW9SC+v4
+                KDGraUfWi9O6wODQARYes0VaxgKAuHrV13HCBC6UyvBi692p5ulPe5VKKALsd+NIZs3r9T7bXF94
+                seoZM9Vn0qRJBF+97fgeBUyWfQa5d7p3l2BqJrEUDMbyqQu4m3zoBskaiaG7nd2BJbELOI7/9QI7
+                NahXzv2Jq5AHjD7NNrLNr3lj4Irc1NYuMNdHS3KzcJXNKcXU0hmFdwDENIDxO+nGrGPqi2Tdntol
+                e/1na1Xgnf2K0VFUQcWjGmr7SmpesR7iOM8MKfaM53lpPJTkGLc0N9poQtUT+c81fZ/i0rOBpK8=</certificate>
+            </emrex-data-access-point>
         </r:apis-implemented>
-        <client-credentials-in-use/>
-        <server-credentials-in-use/>
     </host>
 </manifest>
