@@ -222,6 +222,19 @@
                 <stats-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/incoming-stats/ku</stats-url>
                 <max-omobility-ids>1</max-omobility-ids>
             </omobility-la-cnr>
+            <simple-courses-replication xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd">
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/courses/get-simple-course-replication/ku</url>
+                <allows-anonymous-access>false</allows-anonymous-access>
+                <supports-modified-since>true</supports-modified-since>
+            </simple-courses-replication>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="ku.edu.tr">
