@@ -222,6 +222,38 @@
                 <stats-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/learning-agreement/incoming-stats/izmirekonomi</stats-url>
                 <max-omobility-ids>1</max-omobility-ids>
             </omobility-la-cnr>
+            <courses
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/courses/get-courses/izmirekonomi</url>
+                <max-los-ids>10</max-los-ids>
+                <max-los-codes>10</max-los-codes>
+            </courses>
+            <simple-course-replication
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://dev.ewp.kion.com.tr/api/courses/get-simple-course-replication/izmirekonomi</url>
+                <allows-anonymous-access>false</allows-anonymous-access>
+                <supports-modified-since>true</supports-modified-since>
+            </simple-course-replication>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="izmirekonomi.edu.tr">
