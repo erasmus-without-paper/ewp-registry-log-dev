@@ -1,0 +1,258 @@
+<ns3:manifest
+    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+    xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+    xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+>
+    <ns3:host>
+        <admin-email>ewpualmove@ual.es</admin-email>
+        <admin-provider>University of Almería (UMove)</admin-provider>
+        <admin-notes>Provider: University of Almería (UMove)</admin-notes>
+        <ns2:apis-implemented>
+            <ns25:discovery version="6.0.0">
+                <ns25:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/manifest</ns25:url>
+            </ns25:discovery>
+            <ns24:echo version="2.0.1">
+                <ns24:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns24:http-security>
+                <ns24:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/echo</ns24:url>
+            </ns24:echo>
+            <ns23:institutions version="2.2.0">
+                <ns23:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns23:http-security>
+                <ns23:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/institutions</ns23:url>
+                <ns23:max-hei-ids>1</ns23:max-hei-ids>
+            </ns23:institutions>
+            <ns20:iias version="6.2.0">
+                <ns20:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns20:http-security>
+                <ns20:get-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/iia/get</ns20:get-url>
+                <ns20:max-iia-ids>1</ns20:max-iia-ids>
+                <ns20:max-iia-codes>1</ns20:max-iia-codes>
+                <ns20:index-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/iia/index</ns20:index-url>
+                <ns20:stats-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/iia/stats</ns20:stats-url>
+            </ns20:iias>
+            <ns19:iia-cnr version="2.0.3">
+                <ns19:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns19:http-security>
+                <ns19:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/iia/cnr</ns19:url>
+            </ns19:iia-cnr>
+            <ns18:iias-approval version="1.0.0">
+                <ns18:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns18:http-security>
+                <ns18:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/iia/approval</ns18:url>
+                <ns18:max-iia-ids>1</ns18:max-iia-ids>
+            </ns18:iias-approval>
+            <ns17:iia-approval-cnr version="1.0.0">
+                <ns17:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns17:http-security>
+                <ns17:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/iia/approval/cnr</ns17:url>
+            </ns17:iia-approval-cnr>
+            <ns6:factsheet version="1.0.0">
+                <ns6:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns6:http-security>
+                <ns6:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/factsheet</ns6:url>
+                <ns6:max-hei-ids>1</ns6:max-hei-ids>
+            </ns6:factsheet>
+            <ns22:organizational-units version="2.1.1">
+                <ns22:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns22:http-security>
+                <ns22:url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/ounits</ns22:url>
+                <ns22:max-ounit-ids>1</ns22:max-ounit-ids>
+                <ns22:max-ounit-codes>1</ns22:max-ounit-codes>
+            </ns22:organizational-units>
+            <ns14:omobility-las version="1.2.0">
+                <ns14:http-security>
+                    <ns5:client-auth-methods>
+                        <ns28:tlscert allows-self-signed="true"/>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns14:http-security>
+                <ns14:get-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/omobility/get</ns14:get-url>
+                <ns14:index-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/omobility/index</ns14:index-url>
+                <ns14:update-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/omobility/update</ns14:update-url>
+                <ns14:stats-url>https://umovedes.ual.es/mobilityUCA/seam/resource/rest/ewp/omobility/stats</ns14:stats-url>
+                <ns14:max-omobility-ids>1</ns14:max-omobility-ids>
+            </ns14:omobility-las>
+        </ns2:apis-implemented>
+        <ns3:institutions-covered>
+            <ns2:hei id="uca.es">
+                <ns2:other-id type="euc"/>
+                <ns2:other-id type="pic">999855340</ns2:other-id>
+                <ns2:other-id type="erasmus">E  CADIZ01</ns2:other-id>
+                <ns2:name xml:lang="en">University of Cádiz</ns2:name>
+                <ns2:name xml:lang="es">UNIVERSIDAD DE CÁDIZ</ns2:name>
+            </ns2:hei>
+        </ns3:institutions-covered>
+        <ns3:client-credentials-in-use>
+            <ns3:certificate>MIIIUDCCBjigAwIBAgIQd9rRefmbtb7e+4nDGJinSDANBgkqhkiG9w0BAQwFADBE
+MQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UE
+AxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjMwMzA5MDAwMDAwWhcNMjQwMzA4MjM1
+OTU5WjBdMQswCQYDVQQGEwJFUzERMA8GA1UECAwIQWxtZXLDrWExIDAeBgNVBAoM
+F1VuaXZlcnNpZGFkIGRlIEFsbWVyw61hMRkwFwYDVQQDExB1Y2EudW1vdmUudWFs
+LmVzMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0t7B1Co80nymwM/1
+VejRN+6OmbKw9XLHDad4EuVV1fSH3vZOIoRLJcdVTl9sStzgrPzxEhDBhSVAaCk+
+YuB6zwl1j91gjm7YTYIAKefKmDYmTeLNhX7K/8SBZD4A/YEpYiBMjPRAcvnv9oLm
+mr5+ljvHZuvDxG8F7vJs95+o/dnaI0gIS+pe0rclT2w+Nit7lr1URLiopCFDYxqw
+ijpglTiKIJEOKdXROKyxye6gsk7rS8dPaKbmftQ64Ca7kSRqZZ6Nam6Dr2En/jth
+xfiR/Nwct4/H1hmXopIeerN1PR16lkEXUqbG+OY+w87HCCzUjSeIkLbD5aAEIgXC
+3vfDJqgVaux+fI6IxIC3PauBGt7V8kzA4UVkkppveQhXYGNiPZCSXxrVB7cTovuR
+V4WMqCVfnazLChjrR/G8w67XPkbcsnysvXcoKN4zE8vbkcKy7P8de0+hvuiBOl77
+er5mrS8XR88ixvi+iaO4OtHROXoKJNf/TbIyO1lcEf5AFIGk8cAj129pvs/CWYrf
+OKFXgQGo0kcFwkiXlTurLfeeio9qBKFookMAqo1Z4UDwpOZRSJwAri29/s2yL4K+
+sqi6za/Azo2wkWD5EzU3NqWt1H7S5J1SQzAormb4OHS+CiSUU4B3JcPJdmpj4HlN
+XcCIrz2hlNz+uodcYNDtCZtE8DUCAwEAAaOCAyMwggMfMB8GA1UdIwQYMBaAFG8d
+NUkQbDL6WaCevIroH5W+cXoMMB0GA1UdDgQWBBQDjqqJJ8hOHyLCeVbvEfLIDZLi
+iTAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEF
+BQcDAQYIKwYBBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQICTzAlMCMGCCsG
+AQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgIwPwYDVR0f
+BDgwNjA0oDKgMIYuaHR0cDovL0dFQU5ULmNybC5zZWN0aWdvLmNvbS9HRUFOVE9W
+UlNBQ0E0LmNybDB1BggrBgEFBQcBAQRpMGcwOgYIKwYBBQUHMAKGLmh0dHA6Ly9H
+RUFOVC5jcnQuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcnQwKQYIKwYBBQUH
+MAGGHWh0dHA6Ly9HRUFOVC5vY3NwLnNlY3RpZ28uY29tMIIBfgYKKwYBBAHWeQIE
+AgSCAW4EggFqAWgAdQB2/4g/Crb7lVHCYcz1h7o0tKTNuyncaEIKn+ZnTFo6dAAA
+AYbGkCFNAAAEAwBGMEQCIFwnuVTnXOffskSC1lF8S9UmWsMDJY8fzYpy8K2RrvME
+AiAlVzCpDjO4A0hPP/2NHf40pkrEaP5FE4ZNy4rBR5OoPQB2ANq2v2s/tbYin5vC
+u1xr6HCRcWy7UYSFNL2kPTBI1/urAAABhsaQIZ0AAAQDAEcwRQIgZTNgVqIWG3CE
+dQ/S7njDLkeFy5ycHqWvyulF11PhhRUCIQCul8K8ospnUCh/goxC+UEE56XgsiRb
+hncQ+ZRqrTNLtgB3AO7N0GTV2xrOxVy3nbTNE6Iyh0Z8vOzew1FIWUZxH7WbAAAB
+hsaQIXQAAAQDAEgwRgIhANPw7WC6mzBB8OsrUH3AZ4r42NZ6Gn7fm/dbdD5v1m8d
+AiEAwb9FINdfdZhAZ9gHv1PYDO5oCvhQVxQjaqeMqD7kaOQwGwYDVR0RBBQwEoIQ
+dWNhLnVtb3ZlLnVhbC5lczANBgkqhkiG9w0BAQwFAAOCAgEAHjO6sKQwddhYAdaY
+cJSw7i0sOFbsw/wnbiRW5DnD22xIpnnNkKaCfjfIDLJ55MTP7SO5C2PtTImgGlj7
+DmD6ZJ/pD4hbzuRmYlzJnoAy40Kqwb6XBQJ382l2BBGcoZ2MQe76sBOPNJ8Jf+Tf
+RkiYVJKnIp4Pfkc8q5Dp5pluVYS/S/eWG3icnTgxAcjCwP47CdcLarpGhJIihkE/
+0bRD7sIgxs1d6cQ3x2TeP7yWcfS83sMSy1zKhX3qE0cOHMChp2/BuGpEneoXVs/6
+N8HN/DM+6pGVFNY85atnmTRYpAaqvyH18QDFVMcGoTWf6JehS22WQmyfHCKqqIhd
+meKzMQ6VUq52ZOtaxFmgTG5ZvS4m40YwMi2ySKgDFuyUXM5iLc2KnwONwdPSg1/z
+d15Yb2NRRBJ/YZhOLh3oc9YL0qikAB70+PqP6ky8cnG45NjsT9/FDlDzwCokBhi6
+LNIoNIyV2ot2/USJfWFUrbsHjFzshhNBHEBMAd+vBpCoVerv/l+lwITQbl2kYVZQ
+Ix5+gVbIP6KYA330qnKmXAGVaxaem4RSmZszyri7UjKAMiRcxCswMjqhtCPBDcyc
++nJ4+L8ArpaEzEMxJVHFXlsRhDAWpPubR8ZhcMeRa+nqN9p59WI1VE4CFByf4KoX
+UF7WkUQRScaxnVDTGcOLi285+QI=
+</ns3:certificate>
+            <ns3:rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0t7B1Co80nymwM/1VejR
+N+6OmbKw9XLHDad4EuVV1fSH3vZOIoRLJcdVTl9sStzgrPzxEhDBhSVAaCk+YuB6
+zwl1j91gjm7YTYIAKefKmDYmTeLNhX7K/8SBZD4A/YEpYiBMjPRAcvnv9oLmmr5+
+ljvHZuvDxG8F7vJs95+o/dnaI0gIS+pe0rclT2w+Nit7lr1URLiopCFDYxqwijpg
+lTiKIJEOKdXROKyxye6gsk7rS8dPaKbmftQ64Ca7kSRqZZ6Nam6Dr2En/jthxfiR
+/Nwct4/H1hmXopIeerN1PR16lkEXUqbG+OY+w87HCCzUjSeIkLbD5aAEIgXC3vfD
+JqgVaux+fI6IxIC3PauBGt7V8kzA4UVkkppveQhXYGNiPZCSXxrVB7cTovuRV4WM
+qCVfnazLChjrR/G8w67XPkbcsnysvXcoKN4zE8vbkcKy7P8de0+hvuiBOl77er5m
+rS8XR88ixvi+iaO4OtHROXoKJNf/TbIyO1lcEf5AFIGk8cAj129pvs/CWYrfOKFX
+gQGo0kcFwkiXlTurLfeeio9qBKFookMAqo1Z4UDwpOZRSJwAri29/s2yL4K+sqi6
+za/Azo2wkWD5EzU3NqWt1H7S5J1SQzAormb4OHS+CiSUU4B3JcPJdmpj4HlNXcCI
+rz2hlNz+uodcYNDtCZtE8DUCAwEAAQ==
+</ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+        <ns3:server-credentials-in-use>
+            <ns3:rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0t7B1Co80nymwM/1VejR
+N+6OmbKw9XLHDad4EuVV1fSH3vZOIoRLJcdVTl9sStzgrPzxEhDBhSVAaCk+YuB6
+zwl1j91gjm7YTYIAKefKmDYmTeLNhX7K/8SBZD4A/YEpYiBMjPRAcvnv9oLmmr5+
+ljvHZuvDxG8F7vJs95+o/dnaI0gIS+pe0rclT2w+Nit7lr1URLiopCFDYxqwijpg
+lTiKIJEOKdXROKyxye6gsk7rS8dPaKbmftQ64Ca7kSRqZZ6Nam6Dr2En/jthxfiR
+/Nwct4/H1hmXopIeerN1PR16lkEXUqbG+OY+w87HCCzUjSeIkLbD5aAEIgXC3vfD
+JqgVaux+fI6IxIC3PauBGt7V8kzA4UVkkppveQhXYGNiPZCSXxrVB7cTovuRV4WM
+qCVfnazLChjrR/G8w67XPkbcsnysvXcoKN4zE8vbkcKy7P8de0+hvuiBOl77er5m
+rS8XR88ixvi+iaO4OtHROXoKJNf/TbIyO1lcEf5AFIGk8cAj129pvs/CWYrfOKFX
+gQGo0kcFwkiXlTurLfeeio9qBKFookMAqo1Z4UDwpOZRSJwAri29/s2yL4K+sqi6
+za/Azo2wkWD5EzU3NqWt1H7S5J1SQzAormb4OHS+CiSUU4B3JcPJdmpj4HlNXcCI
+rz2hlNz+uodcYNDtCZtE8DUCAwEAAQ==
+</ns3:rsa-public-key>
+        </ns3:server-credentials-in-use>
+    </ns3:host>
+</ns3:manifest>
