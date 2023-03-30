@@ -34,56 +34,17 @@
         <admin-provider>Aristotelio Panepistimio Thessalonikis (MobiSIS)</admin-provider>
         <admin-notes>This is the EWP connector instance for AUTh.</admin-notes>
         <ns2:apis-implemented>
-            <ns14:simple-course-replication version="1.0.0">
-                <ns14:http-security>
+            <ns19:iia-cnr version="2.0.3">
+                <ns19:http-security>
                     <ns5:client-auth-methods>
                         <ns27:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
-                </ns14:http-security>
-                <ns14:url>https://authewp.it.auth.gr/ewp/rest/courses/replication</ns14:url>
-                <ns14:allows-anonymous-access>true</ns14:allows-anonymous-access>
-                <ns14:supports-modified-since>true</ns14:supports-modified-since>
-            </ns14:simple-course-replication>
-            <ns24:discovery version="6.0.0">
-                <ns24:url>https://authewp.it.auth.gr/ewp/rest/manifest</ns24:url>
-            </ns24:discovery>
-            <ns23:echo version="2.0.1">
-                <ns23:http-security>
-                    <ns5:client-auth-methods>
-                        <ns27:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns28:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns23:http-security>
-                <ns23:url>https://authewp.it.auth.gr/ewp/rest/echo</ns23:url>
-            </ns23:echo>
-            <ns16:iia-approval-cnr version="1.1.0">
-                <ns16:http-security>
-                    <ns5:client-auth-methods>
-                        <ns27:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns28:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns16:http-security>
-                <ns16:url>https://authewp.it.auth.gr/ewp/rest/iias-approval/cnr</ns16:url>
-            </ns16:iia-approval-cnr>
-            <ns17:iias-approval version="1.1.0">
-                <ns17:http-security>
-                    <ns5:client-auth-methods>
-                        <ns27:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns28:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns17:http-security>
-                <ns17:url>https://authewp.it.auth.gr/ewp/rest/iias-approval/approval</ns17:url>
-                <ns17:max-iia-ids>1</ns17:max-iia-ids>
-            </ns17:iias-approval>
+                </ns19:http-security>
+                <ns19:url>https://authewp.it.auth.gr/ewp/rest/iias/cnr</ns19:url>
+            </ns19:iia-cnr>
             <ns20:iias version="6.2.0">
                 <ns20:http-security>
                     <ns5:client-auth-methods>
@@ -112,29 +73,17 @@
                 <ns15:max-los-ids>1</ns15:max-los-ids>
                 <ns15:max-los-codes>1</ns15:max-los-codes>
             </ns15:courses>
-            <ns18:factsheet version="1.1.0">
-                <ns18:http-security>
+            <ns16:iia-approval-cnr version="1.1.0">
+                <ns16:http-security>
                     <ns5:client-auth-methods>
                         <ns27:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
-                </ns18:http-security>
-                <ns18:url>https://authewp.it.auth.gr/ewp/rest/factsheets/get</ns18:url>
-                <ns18:max-hei-ids>1</ns18:max-hei-ids>
-            </ns18:factsheet>
-            <ns19:iia-cnr version="2.0.3">
-                <ns19:http-security>
-                    <ns5:client-auth-methods>
-                        <ns27:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns28:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns19:http-security>
-                <ns19:url>https://authewp.it.auth.gr/ewp/rest/iias/cnr</ns19:url>
-            </ns19:iia-cnr>
+                </ns16:http-security>
+                <ns16:url>https://authewp.it.auth.gr/ewp/rest/iias-approval/cnr</ns16:url>
+            </ns16:iia-approval-cnr>
             <ns22:institutions version="2.2.0">
                 <ns22:http-security>
                     <ns5:client-auth-methods>
@@ -147,6 +96,57 @@
                 <ns22:url>https://authewp.it.auth.gr/ewp/rest/institutions</ns22:url>
                 <ns22:max-hei-ids>1</ns22:max-hei-ids>
             </ns22:institutions>
+            <ns18:factsheet version="1.1.0">
+                <ns18:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns18:http-security>
+                <ns18:url>https://authewp.it.auth.gr/ewp/rest/factsheets/get</ns18:url>
+                <ns18:max-hei-ids>1</ns18:max-hei-ids>
+            </ns18:factsheet>
+            <ns14:simple-course-replication version="1.0.0">
+                <ns14:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns14:http-security>
+                <ns14:url>https://authewp.it.auth.gr/ewp/rest/courses/replication</ns14:url>
+                <ns14:allows-anonymous-access>true</ns14:allows-anonymous-access>
+                <ns14:supports-modified-since>true</ns14:supports-modified-since>
+            </ns14:simple-course-replication>
+            <ns24:discovery version="6.0.0">
+                <ns24:url>https://authewp.it.auth.gr/ewp/rest/manifest</ns24:url>
+            </ns24:discovery>
+            <ns23:echo version="2.0.1">
+                <ns23:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns23:http-security>
+                <ns23:url>https://authewp.it.auth.gr/ewp/rest/echo</ns23:url>
+            </ns23:echo>
+            <ns17:iias-approval version="1.1.0">
+                <ns17:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns17:http-security>
+                <ns17:url>https://authewp.it.auth.gr/ewp/rest/iias-approval/approval</ns17:url>
+                <ns17:max-iia-ids>1</ns17:max-iia-ids>
+            </ns17:iias-approval>
             <ns21:organizational-units version="2.1.1">
                 <ns21:http-security>
                     <ns5:client-auth-methods>
