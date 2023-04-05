@@ -1,7 +1,7 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -11,7 +11,7 @@
     xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
@@ -21,35 +21,48 @@
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
 >
     <ns3:host>
-        <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
-        <ns2:admin-provider>TECHNISCHE UNIVERSITÄT WIEN</ns2:admin-provider>
-        <apis-implemented>
-            <ns19:imobilities version="1.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
-                <ns19:http-security>
+        <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
+        <admin-provider>TECHNISCHE UNIVERSITÄT WIEN</admin-provider>
+        <ns2:apis-implemented>
+            <ns12:omobility-la-cnr version="1.0.0">
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
+                <ns12:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
+                        <ns8:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns12:http-security>
+                <ns12:url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-la-cnr</ns12:url>
+                <ns12:max-omobility-ids>50</ns12:max-omobility-ids>
+            </ns12:omobility-la-cnr>
+            <ns19:imobilities version="1.0.0">
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
+                <ns19:http-security>
+                    <ns5:client-auth-methods>
                         <ns7:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns19:http-security>
                 <ns19:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/imobility/get</ns19:get-url>
                 <ns19:max-omobility-ids>50</ns19:max-omobility-ids>
             </ns19:imobilities>
             <ns14:omobilities version="2.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns14:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns14:http-security>
                 <ns14:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility/get</ns14:get-url>
@@ -57,13 +70,13 @@
                 <ns14:max-omobility-ids>50</ns14:max-omobility-ids>
             </ns14:omobilities>
             <ns11:omobility-las version="1.0.1">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns11:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns11:http-security>
                 <ns11:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-las/get</ns11:get-url>
@@ -72,76 +85,76 @@
                 <ns11:max-omobility-ids>50</ns11:max-omobility-ids>
             </ns11:omobility-las>
             <ns25:echo version="2.0.1">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns25:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns25:http-security>
                 <ns25:url>https://ewptest.tiss.tuwien.ac.at/ewp/echo</ns25:url>
             </ns25:echo>
             <ns18:imobility-cnr version="1.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns18:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns18:http-security>
                 <ns18:url>https://ewptest.tiss.tuwien.ac.at/ewp/imobility-cnr</ns18:url>
                 <ns18:max-omobility-ids>50</ns18:max-omobility-ids>
             </ns18:imobility-cnr>
             <ns24:factsheet version="1.1.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns24:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns24:http-security>
                 <ns24:url>https://ewptest.tiss.tuwien.ac.at/ewp/factsheet</ns24:url>
                 <ns24:max-hei-ids>1</ns24:max-hei-ids>
             </ns24:factsheet>
             <ns21:iias-approval version="1.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns21:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns21:http-security>
                 <ns21:url>https://ewptest.tiss.tuwien.ac.at/ewp/iias-approval</ns21:url>
                 <ns21:max-iia-ids>50</ns21:max-iia-ids>
             </ns21:iias-approval>
             <ns23:iia-approval-cnr version="1.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns23:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns23:http-security>
                 <ns23:url>https://ewptest.tiss.tuwien.ac.at/ewp/iia-approval-cnr</ns23:url>
             </ns23:iia-approval-cnr>
             <ns20:iias version="6.2.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns20:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns20:http-security>
                 <ns20:get-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/get</ns20:get-url>
@@ -151,13 +164,13 @@
                 <ns20:stats-url>https://ewptest.tiss.tuwien.ac.at/ewp/iias/stats</ns20:stats-url>
             </ns20:iias>
             <ns6:organizational-units version="2.1.1">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns6:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns6:http-security>
                 <ns6:url>https://ewptest.tiss.tuwien.ac.at/ewp/ounit</ns6:url>
@@ -165,68 +178,55 @@
                 <ns6:max-ounit-codes>50</ns6:max-ounit-codes>
             </ns6:organizational-units>
             <ns4:discovery version="6.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns4:url>https://ewptest.tiss.tuwien.ac.at/manifest</ns4:url>
             </ns4:discovery>
             <ns15:institutions version="2.2.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns15:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns15:http-security>
                 <ns15:url>https://ewptest.tiss.tuwien.ac.at/ewp/inst</ns15:url>
                 <ns15:max-hei-ids>1</ns15:max-hei-ids>
             </ns15:institutions>
             <ns22:iia-cnr version="2.0.3">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns22:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns22:http-security>
                 <ns22:url>https://ewptest.tiss.tuwien.ac.at/ewp/iia-cnr</ns22:url>
             </ns22:iia-cnr>
             <ns13:omobility-cnr version="1.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <admin-email>ewp@tiss.tuwien.ac.at</admin-email>
                 <ns13:http-security>
                     <ns5:client-auth-methods>
-                        <ns10:httpsig/>
+                        <ns7:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
-                        <ns7:httpsig/>
+                        <ns8:httpsig/>
                     </ns5:server-auth-methods>
                 </ns13:http-security>
                 <ns13:url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-cnr</ns13:url>
                 <ns13:max-omobility-ids>50</ns13:max-omobility-ids>
             </ns13:omobility-cnr>
-            <ns12:omobility-la-cnr version="1.0.0">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
-                <ns12:http-security>
-                    <ns5:client-auth-methods>
-                        <ns10:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns7:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns12:http-security>
-                <ns12:url>https://ewptest.tiss.tuwien.ac.at/ewp/omobility-la-cnr</ns12:url>
-                <ns12:max-omobility-ids>50</ns12:max-omobility-ids>
-            </ns12:omobility-la-cnr>
-        </apis-implemented>
+        </ns2:apis-implemented>
         <ns3:institutions-covered>
-            <hei id="tuwien.ac.at">
-                <other-id type="pic">999979888</other-id>
-                <other-id type="erasmus">A  WIEN02</other-id>
-                <name xml:lang="de">Technische Universität Wien</name>
-                <name xml:lang="en">Technische Universität Wien</name>
-            </hei>
+            <ns2:hei id="tuwien.ac.at">
+                <ns2:other-id type="pic">999979888</ns2:other-id>
+                <ns2:other-id type="erasmus">A  WIEN02</ns2:other-id>
+                <ns2:name xml:lang="de">Technische Universität Wien</ns2:name>
+                <ns2:name xml:lang="en">Technische Universität Wien</ns2:name>
+            </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
             <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlokC2whhSKDe5aAKmvbG3yqSzxr45FvG6QdKds0tlzSMsSSUj7ldJAywyoqaP10mN/BuN+RWMm3JCBoZtfkpeRU+zOEy64UT6SU7duURL/PyetITDYjdwQ6R96AFFmWBLUPiuFSbNi4Bh42NlAYja3m5TvOirmywKyG0+NBnwVh9mefd+KdeFba7//koSP4PxV7WJXkDWxftj2TVdlr8a6sNfxuIEAM2JdHIe2At5H6wjVGeoM/vS9kJmEjAcmI/isgjRPvwdQEvHf6c/i/I9IFnKT2wSuEMyyUXeVMUvoFcAkwWy8/aA15OEHTmhE5s4+Nefl9VXj7p8poNFvG31wIDAQAB</ns3:rsa-public-key>
