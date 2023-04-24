@@ -1,0 +1,63 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+>
+    <host>
+        <ewp:admin-email>diots@us.edu.pl</ewp:admin-email>
+        <ewp:admin-provider>MUCI (USOS IRK)</ewp:admin-provider>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://test2-irk2.us.edu.pl/ewp/manifest/</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <url>https://test2-irk2.us.edu.pl/ewp/echo/</url>
+            </echo>
+        </r:apis-implemented>
+        <institutions-covered>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="us.edu.pl"
+            >
+                <other-id type="erasmus">PL KATOWIC01</other-id>
+                <other-id type="pic"> 999917614</other-id>
+                <name xml:lang="pl">Uniwersytet Śląski w Katowicach</name>
+                <name xml:lang="en">University of Silesia in Katowice</name>
+            </hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0YP1zUXIb7IoA/hpXVPC
+Z3MFLvawGf1uqPVLXg/rR8MuopuyOZB4HcH50AEUe8y+xiwHvuWv1wk5q962NZmO
+sI0zyHAZObr14OTg10fRUD5jr51pGrXTbSgYcYxqOIq/qXUQDUqrEBUY+b71XkTm
+D/jpDJyouW+XTEf8bXRZuTG6hhR/cyB7XNDGwKfG0asNB3LlRpuDsodqvnlBUNov
+z+ZRI5+tqANjIYeiMvClXTCfM84c6+3srcKX/DMvUANCf/xkuMtzsUIeZBk76dU8
+cgFBHR+2a+38gH9Ud0fIwtFvzSrIy/5swk0D12K67Ogwjd5mjBNLvN1baAGGjrYG
+FQIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0YP1zUXIb7IoA/hpXVPC
+Z3MFLvawGf1uqPVLXg/rR8MuopuyOZB4HcH50AEUe8y+xiwHvuWv1wk5q962NZmO
+sI0zyHAZObr14OTg10fRUD5jr51pGrXTbSgYcYxqOIq/qXUQDUqrEBUY+b71XkTm
+D/jpDJyouW+XTEf8bXRZuTG6hhR/cyB7XNDGwKfG0asNB3LlRpuDsodqvnlBUNov
+z+ZRI5+tqANjIYeiMvClXTCfM84c6+3srcKX/DMvUANCf/xkuMtzsUIeZBk76dU8
+cgFBHR+2a+38gH9Ud0fIwtFvzSrIy/5swk0D12K67Ogwjd5mjBNLvN1baAGGjrYG
+FQIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
