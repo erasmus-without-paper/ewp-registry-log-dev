@@ -80,7 +80,7 @@
             </institutions>
             <omobility-las
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-                version="1.2.0"
+                version="1.0.1"
             >
                 <ewp:admin-email>bach-info@wu.ac.at</ewp:admin-email>
                 <http-security>
@@ -97,6 +97,22 @@
                 <update-url>https://bach.wu.ac.at/zopevc/test/ewp/omobility-las-update</update-url>
                 <max-omobility-ids>10</max-omobility-ids>
             </omobility-las>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://bach.wu.ac.at/zopevc/test/ewp/omobility-la-cnr</url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-la-cnr>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="wu.ac.at">
