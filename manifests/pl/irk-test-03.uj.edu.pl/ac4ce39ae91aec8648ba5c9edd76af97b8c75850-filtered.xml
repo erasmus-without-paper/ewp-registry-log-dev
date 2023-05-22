@@ -1,0 +1,80 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+>
+    <host>
+        <ewp:admin-email>irk@uj.edu.pl</ewp:admin-email>
+        <ewp:admin-provider>MUCI (USOS IRK)</ewp:admin-provider>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://irk-test-03.uj.edu.pl/ewp/manifest/</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <url>https://irk-test-03.uj.edu.pl/ewp/echo/</url>
+            </echo>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <url>https://irk-test-03.uj.edu.pl/ewp/la/cnr/</url>
+                <stats-url>https://irk-test-03.uj.edu.pl/ewp/la/cnr/stats/</stats-url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </omobility-la-cnr>
+        </r:apis-implemented>
+        <institutions-covered>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="uj.edu.pl"
+            >
+                <other-id type="erasmus">PL KRAKOW01</other-id>
+                <other-id type="pic">999642716</other-id>
+                <name xml:lang="pl">Uniwersytet Jagielloński</name>
+                <name xml:lang="en">Jagiellonian University</name>
+            </hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtKDuDo/cUllO3/iFUX9I
+qt3cR4HqYhGW4HHEZewQNzvW9rRQVSgZxZpRyTOFVLWUTy06yqKircot1E5Q7KwC
+kEZxJHhoPO9GnSqwOxeJhrkNtz9K/ariVdXampApTqNcrDtcrMxfOIpSHb86vrQt
+dfpry6voTE3QQRGvbZQP74oERlDmEe7PyybX3WH/F3wGARNEgbVXeiy/EsZZZBDV
+rRvKFl31ufgrVlKcuSxkNff3M1RGuldqkIk9jrQi7zhARB+cnLteLoZhOyxhNMtp
+Ijy0a18EOg3WCYdXIIZUx9urWFH1mKh8xDbWrr9cSNUAKmdmRs1rpt4WU9mVOtJJ
+MQIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtKDuDo/cUllO3/iFUX9I
+qt3cR4HqYhGW4HHEZewQNzvW9rRQVSgZxZpRyTOFVLWUTy06yqKircot1E5Q7KwC
+kEZxJHhoPO9GnSqwOxeJhrkNtz9K/ariVdXampApTqNcrDtcrMxfOIpSHb86vrQt
+dfpry6voTE3QQRGvbZQP74oERlDmEe7PyybX3WH/F3wGARNEgbVXeiy/EsZZZBDV
+rRvKFl31ufgrVlKcuSxkNff3M1RGuldqkIk9jrQi7zhARB+cnLteLoZhOyxhNMtp
+Ijy0a18EOg3WCYdXIIZUx9urWFH1mKh8xDbWrr9cSNUAKmdmRs1rpt4WU9mVOtJJ
+MQIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
