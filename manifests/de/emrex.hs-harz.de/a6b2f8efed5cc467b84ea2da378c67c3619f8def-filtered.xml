@@ -1,55 +1,15 @@
 <manifest
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v5/manifest.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/stable-v1/security-entries.xsd
-    "
 >
     <host>
         <ewp:admin-email>netlab@hs-harz.de</ewp:admin-email>
-        <ewp:admin-notes>Anmerkung bitte hier</ewp:admin-notes>
+        <ewp:admin-provider>Netlab Hochschule Harz</ewp:admin-provider>
         <r:apis-implemented>
             <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
-                version="5.0.0"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
             >
                 <url>https://emrex.hs-harz.de/manifest.xml</url>
             </discovery>
@@ -57,55 +17,39 @@
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-emrex-data-access-point/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
             >
-                <url>https://emrex.hs-harz.de/</url>
-                <name>Hochschule Harz</name>
+                <url>https://emrex.hs-harz.de/ncp</url>
+                <name>DEMO NCP (Neltab)</name>
                 <country-code>DE</country-code>
-                <institution>Hochschule Harz</institution>
-                <certificate>
-                    MIIIAzCCBuugAwIBAgIMJZ9d90+h+397DulvMA0GCSqGSIb3DQEBCwUAMIGNMQsw
-                    CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
-                    IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
-                    UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTIx
-                    MTEwMTEyNDExN1oXDTIyMTIwMjEyNDExN1owgZwxCzAJBgNVBAYTAkRFMRcwFQYD
-                    VQQIDA5TYWNoc2VuLUFuaGFsdDEUMBIGA1UEBwwLV2VybmlnZXJvZGUxQzBBBgNV
-                    BAoMOkhvY2hzY2h1bGUgSGFyeiwgSG9jaHNjaHVsZSBmdWVyIGFuZ2V3YW5kdGUg
-                    V2lzc2Vuc2NoYWZ0ZW4xGTAXBgNVBAMMEGVtcmV4LmhzLWhhcnouZGUwggEiMA0G
-                    CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDQZQMefvaJvJkPmWgbe+J9mZzWm8kQ
-                    Vdj690pu12SnUzAyXe56+yXPhrqu4LnIuxzCbwv3ql2nJPbnVcBHuX74SJsBCXO2
-                    psBnL5xpcZnBHasjfiMOIrYUV8e8YhTscnWK2fh6GAFaKNo8IOKirkEay4m1cT3N
-                    YC6ap6Pgz17R8SU41kELZ1J04kxx/3er8UgF18HAu8j5SwAsS2QXkbGmjCAMDcXD
-                    X9BnkWxKpz3jmVr6K/90WgvDLN1e7RXjXsxLglDEoE+LyljALNHDpE7QCTtHPw7W
-                    f+NcviKbZwbGxiXi/u5MQtzQeIHgqpJTnh5SvV+LfxpTzSVubt26y1lVAgMBAAGj
-                    ggRQMIIETDBXBgNVHSAEUDBOMAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0r
-                    BgEEAYGtIYIsAQEEMBAGDisGAQQBga0hgiwBAQQKMBAGDisGAQQBga0hgiwCAQQK
-                    MAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQMMAoGCCsGAQUFBwMB
-                    MB0GA1UdDgQWBBSkAAbnyT/3lJCupb6imUn+nKqcojAfBgNVHSMEGDAWgBRrOpiL
-                    +fJTidrgrbIyHgkf6Ko7dDAbBgNVHREEFDASghBlbXJleC5ocy1oYXJ6LmRlMIGN
-                    BgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNh
-                    LWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIu
-                    cGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHb
-                    BggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRm
-                    bi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5w
-                    Y2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0
-                    MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9i
-                    YWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIB9AYKKwYBBAHWeQIEAgSCAeQE
-                    ggHgAd4AdABGpVXrdfqRIDC1oolp9PN9ESxBdL79SbiFq/L8cP5tRwAAAXzbhL+2
-                    AAAEAwBFMEMCH2pOsr+GUQKTr0mYAl9WrhF1N7tS5+42jGMfK6CvlnMCIDqScxSw
-                    ZhWCDTFJb3bxRs27fS/zRlZDcggKZrzlXaJ6AHYAKXm+8J45OSHwVnOfY6V35b5X
-                    fZxgCvj5TV0mXCVdx4QAAAF824TE9QAABAMARzBFAiB5vx7jrU6Pyz+qyZlMWvak
-                    mXcaWQbBLmi/fbdYWMxYtAIhAMRtr/Su2wJt6o2pgvnOz0oVb/PO843y4IaO7akr
-                    n7XSAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAF824S/7QAA
-                    BAMARzBFAiEA1W7RA0rrSxijxXSJFmIDxW1woZn334VMx/ARH4pwZHECIDythJAb
-                    7W9V1991V9uJgPDtXMd1uYbKQCPttsINV4RVAHYAVYHUwhaQNgFK6gubVzxT8MDk
-                    OHhwJQgXL6OqHQcT0wwAAAF824TA/QAABAMARzBFAiEAnIJhP8Rr3MlWEug6IaJp
-                    U+aRK6YENGIwRkxwBQwNgBYCIB/ECDGDj7NL7UtHOCkJaPDP1oPrdOB21bc5zplW
-                    m97xMA0GCSqGSIb3DQEBCwUAA4IBAQABQavdXp7eeVcf+vqrybhI3C9x/ZhNP24E
-                    NEAfUGEn0efgnCGRglM/rYczVI0A1hhyC+TRas2O8jg87toj+2Q0oBIM516QRCZ4
-                    w8vv3PEbxv2FSyo2nFDlTGaG+M/oNDzSLQijSe6t9CQmHd3xfyduqnTlnOngTEbE
-                    ilYq7TkjDDeTxYTwquNpM5PZb3IivzBN1+6IOXknw4u39gLYNbHzifX9dS4mtCfN
-                    nyalmIZ1xg9oxxW2HWJnB6x05Fqi6lNv7uFDxk0g4VMAt7MGEC1xoMUAVMy4gvGz
-                    LxLW/xKQiKaKIO8G0MDsLo7sCTv6NCVPSB8ga11aE7qe7razPW8r
-                </certificate>
+                <institution>Netlab HS-Harz</institution>
+                <certificate>MIIFWjCCBEKgAwIBAgIQCPi+I8JH1zA1Pgqc77w4YzANBgkqhkiG9w0BAQsFADBk
+                MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+                QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+                Q0EgMzAeFw0xNzAyMTMwMDAwMDBaFw0yMDAyMTgxMjAwMDBaMIGbMQswCQYDVQQG
+                EwJQTDEUMBIGA1UECBMLTWF6b3dpZWNraWUxETAPBgNVBAcTCFdhcnN6YXdhMR8w
+                HQYDVQQKExZVbml3ZXJzeXRldCBXYXJzemF3c2tpMSIwIAYDVQQLExlEemlhbCBT
+                aWVjaSBLb21wdXRlcm93eWNoMR4wHAYDVQQDExV1c29zd2VidGVzdC51dy5lZHUu
+                cGwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/lPps9lLbv+vYccrq
+                DSgTNaR6GnF+0JKhZ3OrsRt93demAz68cGNJthVDPP+zRBWFJzjE2IFBBZ+b+A6K
+                vTQo+AqszKbE4S3nEMmqVkOoQ0zsDIW7B7Xi1Lfrax76cefdPnKLWXp54PpbTbet
+                md8qWcbVpm025DnNj0nTGO8/JksSa0wbtA6SaBurpusF1tNA0g8i73SXuU0Se1+x
+                DGv4KLRyZyYQTmzYFJV2FtP/to5TIDhz7TlTK/JkGaBQta7zf/3zBAl1kJeCpRXY
+                e05x5eohSCewV/QkwuyUOtadt2+9RL/M1jnHAoNVdqZFRZ/i9YdwLj4s8C5WMrTu
+                OhYjAgMBAAGjggHOMIIByjAfBgNVHSMEGDAWgBRn/YggFCeYxwnSJRm76VERY3VQ
+                YjAdBgNVHQ4EFgQUFxOKEuInqOW0j/wE1IDJr9rh2pUwIAYDVR0RBBkwF4IVdXNv
+                c3dlYnRlc3QudXcuZWR1LnBsMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
+                BgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4YpaHR0cDovL2NybDMu
+                ZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwL6AtoCuGKWh0dHA6Ly9jcmw0
+                LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMEwGA1UdIARFMEMwNwYJYIZI
+                AYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9D
+                UFMwCAYGZ4EMAQICMG4GCCsGAQUFBwEBBGIwYDAkBggrBgEFBQcwAYYYaHR0cDov
+                L29jc3AuZGlnaWNlcnQuY29tMDgGCCsGAQUFBzAChixodHRwOi8vY2FjZXJ0cy5k
+                aWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqG
+                SIb3DQEBCwUAA4IBAQB44xfpFJJ0LPmg1VQtIVVs/pMSy+X1OalLQYOa/NpmN0WA
+                Fv0FCIUyZsnGSdqZb57sGFWRJoXrayY7L0oM6jFk0zRSwwN/RSAb96Evha91iGVT
+                aAwABYYUEkfBEkdmY2k0MsDZEHBmqLjmtfNu0HS/RVa46kIaKdDoFz8NNWyLHD3k
+                KLmERZm76XV/kEJ/0QcKb8feb0ITLTnJe2A2gbHPG+cMqSSz4p/zhN8pxmwlbAUI
+                2X36oi1jnLft3T6inuoCn6L6l/ZI8IX0EsBZA4/cyyqwWiWAzyWkgOusnSsCQ/oF
+                iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
             </emrex-data-access-point>
         </r:apis-implemented>
     </host>
