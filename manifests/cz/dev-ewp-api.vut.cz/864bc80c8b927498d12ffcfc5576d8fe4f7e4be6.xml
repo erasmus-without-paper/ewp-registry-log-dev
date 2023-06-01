@@ -107,6 +107,19 @@
         </iapc:http-security>
         <iapc:url>https://dev-ewp-api.vut.cz/ewp/api/iia-approval-cnr</iapc:url>
       </iapc:iia-approval-cnr>
+      <iafs:factsheet version="1.1.0">
+        <iafs:http-security>
+          <sec:client-auth-methods>
+            <sec_cs:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec_sc:tlscert/>
+            <sec_ss:httpsig/>
+          </sec:server-auth-methods>
+        </iafs:http-security>
+        <iafs:url>https://dev-ewp-api.vut.cz/ewp/api/iia-factsheet</iafs:url>
+        <iafs:max-hei-ids>10</iafs:max-hei-ids>
+      </iafs:factsheet>
     </ns2:apis-implemented>
     <ns1:institutions-covered>
       <ns2:hei id="vutbr.cz">
