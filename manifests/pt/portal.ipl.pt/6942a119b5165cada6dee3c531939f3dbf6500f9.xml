@@ -164,7 +164,7 @@
 		}
     var tdate = new Date();
     var datehour_netpaheader = document.getElementById('datehour_netpaheader');
-    if(datehour_netpaheader) datehour_netpaheader.innerHTML = tdate.toLocaleDateString(/pt/.test(window.navigator.language) ? "pt-PT" : "en-US", { day: 'numeric', month: 'long', year: 'numeric'}) + ' | ' + tdate.getHours() + ':' + tdate.getMinutes();
+    if(datehour_netpaheader) datehour_netpaheader.innerHTML = tdate.toLocaleDateString(/pt/.test(window.navigator.language) ? "pt-PT" : "en-US", { day: 'numeric', month: 'long', year: 'numeric'}) + ' | ' + tdate.getHours() + ':' + ("0" + tdate.getMinutes()).slice(-2);
     document.getElementById('top').style.backgroundColor = schools[school].colortop || '#2f3033';
     document.getElementById('top').style.color = schools[school].colortoptext || '#ffffff';
     document.getElementById('logo').src = document.getElementById('logo').src.replace(/\/static.*/,schools[school].logopath) || schools[school].logopath || '/static/ipl/mobilidade/img/logotipo.png';
