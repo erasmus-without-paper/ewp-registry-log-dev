@@ -125,7 +125,7 @@
      <div id="welcome">
         <h2>A instância do portal académico encontra-se temporáriamente indisponível por falha ou manutenção do fornecedor do software ou dos serviços DSIC/IPL<br>
                         Tente o acesso mais tarde por favor ...</h2>
-        <h3>Caso o erro persista, alerte os nossos <a id="report" href="mailto:helpdesk@net.ipl.pt?subject=Instancia de portal academico #schoolname indisponivel">serviços de suporte/Helpdesk</a></h3>
+        <h3>Caso o erro persista, alerte os nossos <a id="report" href="mailto:helpdesk@net.ipl.pt?subject=Inst%E2ncia%20de%20portal%20acad%E9mico%20schoolname%20insdispon%EDvel&body=Escreva%20uma%20breve%20desci%E7%E3o%20sobre%20como%20obteve%20o%20a%20p%E1gina%20de%20erro.#techDetails">serviços de suporte/Helpdesk</a></h3>
         <p class="subtitle">Nota: Os serviços do DSIC/IPL funcionam em dias uteis entre as 9:30 e as 17:00</p>
     </div>
 </div>
@@ -173,6 +173,7 @@
     document.getElementById('navigation').style.borderTop = schools[school].navborder || '0';
     document.getElementById('schoolname').innerText = schoolname || 'ipl';
 		document.getElementById('report').href = document.getElementById('report').href.replace('#schoolname', (schoolname || 'ipl').toUpperCase() );
+		document.getElementById('report').href = document.getElementById('report').href.replace('#techDetails', escape("\r\n\r\nOrigem: "+document.referrer+"\r\n"+"Browser: "+navigator.userAgent+"\r\n") || '' );
 </script>
 
 </body>
