@@ -1,5 +1,5 @@
 <ns3:manifest
-    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
@@ -12,11 +12,11 @@
     xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns24="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns25="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns27="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
@@ -30,13 +30,12 @@
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
 >
     <ns3:host>
-        <admin-email>volenova@civ.zcu.cz</admin-email>
-        <admin-notes>EWP connector for IS/STAG</admin-notes>
+        <admin-email>ewpstag@civ.zcu.cz</admin-email>
+        <admin-provider>University of West Bohemia (IS/STAG)</admin-provider>
         <ns2:apis-implemented>
             <ns23:echo version="2.0.1">
                 <ns23:http-security>
                     <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
                         <ns27:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
@@ -44,15 +43,14 @@
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
                 </ns23:http-security>
-                <ns23:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/echo</ns23:url>
+                <ns23:url>https://wstag-test.jcu.cz/ws/services/ewp/echo</ns23:url>
             </ns23:echo>
-            <ns24:discovery version="5.0.0">
+            <ns24:discovery version="6.0.0">
                 <ns24:url>https://wstag-test.jcu.cz/ws/services/ewp/manifest</ns24:url>
             </ns24:discovery>
-            <ns22:institutions version="2.1.0">
+            <ns22:institutions version="2.2.0">
                 <ns22:http-security>
                     <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
                         <ns27:httpsig/>
                         <ns26:anonymous/>
                     </ns5:client-auth-methods>
@@ -61,13 +59,12 @@
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
                 </ns22:http-security>
-                <ns22:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/institutions</ns22:url>
+                <ns22:url>https://wstag-test.jcu.cz/ws/services/ewp/institutions</ns22:url>
                 <ns22:max-hei-ids>1</ns22:max-hei-ids>
             </ns22:institutions>
             <ns21:organizational-units version="2.1.1">
                 <ns21:http-security>
                     <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
                         <ns27:httpsig/>
                         <ns26:anonymous/>
                     </ns5:client-auth-methods>
@@ -76,14 +73,13 @@
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
                 </ns21:http-security>
-                <ns21:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/ounits</ns21:url>
+                <ns21:url>https://wstag-test.jcu.cz/ws/services/ewp/ounits</ns21:url>
                 <ns21:max-ounit-ids>10</ns21:max-ounit-ids>
                 <ns21:max-ounit-codes>10</ns21:max-ounit-codes>
             </ns21:organizational-units>
-            <ns20:iias version="3.0.0">
+            <ns20:iias version="6.2.0">
                 <ns20:http-security>
                     <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
                         <ns27:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
@@ -91,15 +87,27 @@
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
                 </ns20:http-security>
-                <ns20:get-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/iias/get</ns20:get-url>
+                <ns20:get-url>https://wstag-test.jcu.cz/ws/services/ewp/iias/get</ns20:get-url>
                 <ns20:max-iia-ids>10</ns20:max-iia-ids>
                 <ns20:max-iia-codes>10</ns20:max-iia-codes>
-                <ns20:index-url>https://wstag-test.jcu.cz:8843/ws/services/ewp/iias/index</ns20:index-url>
+                <ns20:index-url>https://wstag-test.jcu.cz/ws/services/ewp/iias/index</ns20:index-url>
+                <ns20:stats-url>https://wstag-test.jcu.cz/ws/services/ewp/iias/stats</ns20:stats-url>
             </ns20:iias>
-            <ns18:iias-approval version="0.2.1">
+            <ns19:iia-cnr version="2.0.3">
+                <ns19:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns19:http-security>
+                <ns19:url>https://wstag-test.jcu.cz/ws/services/ewp/iias/cnr</ns19:url>
+            </ns19:iia-cnr>
+            <ns18:iias-approval version="1.1.0">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
-                        <ns25:tlscert allows-self-signed="true"/>
                         <ns27:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
@@ -107,77 +115,92 @@
                         <ns28:httpsig/>
                     </ns5:server-auth-methods>
                 </ns18:http-security>
-                <ns18:url>https://wstag-test.jcu.cz:8843/ws/services/ewp/iias/approval</ns18:url>
+                <ns18:url>https://wstag-test.jcu.cz/ws/services/ewp/iias/approval</ns18:url>
                 <ns18:max-iia-ids>10</ns18:max-iia-ids>
             </ns18:iias-approval>
+            <ns17:iia-approval-cnr version="1.1.0">
+                <ns17:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns17:http-security>
+                <ns17:url>https://wstag-test.jcu.cz/ws/services/ewp/iias/approval/cnr</ns17:url>
+            </ns17:iia-approval-cnr>
+            <ns16:factsheet version="1.1.0">
+                <ns16:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns16:http-security>
+                <ns16:url>https://wstag-test.jcu.cz/ws/services/ewp/factsheet</ns16:url>
+                <ns16:max-hei-ids>1</ns16:max-hei-ids>
+            </ns16:factsheet>
+            <ns12:omobility-las version="1.2.0">
+                <ns12:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns12:http-security>
+                <ns12:get-url>https://wstag-test.jcu.cz/ws/services/ewp/las/get</ns12:get-url>
+                <ns12:index-url>https://wstag-test.jcu.cz/ws/services/ewp/las/index</ns12:index-url>
+                <ns12:update-url>https://wstag-test.jcu.cz/ws/services/ewp/las/update</ns12:update-url>
+                <ns12:stats-url>https://wstag-test.jcu.cz/ws/services/ewp/las/stats</ns12:stats-url>
+                <ns12:max-omobility-ids>10</ns12:max-omobility-ids>
+            </ns12:omobility-las>
+            <ns11:omobility-la-cnr version="1.1.0">
+                <ns11:http-security>
+                    <ns5:client-auth-methods>
+                        <ns27:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns29:tlscert/>
+                        <ns28:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns11:http-security>
+                <ns11:url>https://wstag-test.jcu.cz/ws/services/ewp/las/cnr</ns11:url>
+                <ns11:stats-url>https://wstag-test.jcu.cz/ws/services/ewp/las/cnr/stats</ns11:stats-url>
+                <ns11:max-omobility-ids>10</ns11:max-omobility-ids>
+            </ns11:omobility-la-cnr>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="jcu.cz">
                 <ns2:other-id type="pic">999876292</ns2:other-id>
                 <ns2:other-id type="erasmus">CZ CESKE01</ns2:other-id>
-                <ns2:other-id type="erasmus-charter">264581-LA-1-2014- CZ-E4AKA1-ECHE</ns2:other-id>
+                <ns2:other-id type="erasmus-charter">48844-EPP-1-2014-1-CZ-EPPKA3-ECHE</ns2:other-id>
                 <ns2:name xml:lang="cs">JIHOČESKÁ UNIVERZITA V ČESKÝCH BUDĚJOVICÍCH</ns2:name>
                 <ns2:name xml:lang="en">UNIVERSITY OF SOUTH BOHEMIA IN ČESKÉ BUDĚJOVICE</ns2:name>
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:certificate>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
-NlZptUTpPf2QQWqTEOGM1mFI39FxcA==
-</ns3:certificate>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWx0pB/2NUaPJpo85VAh
-ovWOhHN1A2CXS38fI4qVtir3V2dWg95A0SOATASdLVbaxuwLpfF+/YlBgFHk6ZZk
-rYqXB1dtq0oE8zrKv+m8ip8vTGEs0La6BU6PMLnTIZVsd0Jpv4JB8F7AEvjnmtBa
-d1rYUNa38TMShf86T9dqo1XmRHaTR2ZzbL+X7ZXenHguwvXWXv59JfWi+UswsrsH
-CZJwedUilg/jFjmPz8aeWozoNATl41eaM/8AHdVr8mjQwOtHNMSQ8YDouhW++amd
-vyix1CLt7kSFxLDcAXlJcDUZ641SonAs++9S0GI25xMp4v5pCwXRPaQOfdJUbSR2
-LwIDAQAB
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAypQ5RA+ShFD0dp2Ceu9l
+cmkOaGy2YDPXo/mYDZwAoIZ+OKr6x4axhhz6tKFsnYp2CS1Gq//ncN6JJPvaY16R
+tPSi3kYZjKjMGJBFrMuStemcw/aK1tuF1x9OtAcov9Mx/EKtaAejOWy6ytkLQj6q
+vypaqAX0+Kl9cOUfw1XUrUMMhrJLtRtchXWG+FbbDlBN/PrWDd+10LMyOehPLxbQ
+4ayy0o9KZh2CKkqESjcgX2bpjL/8yfAvVnl6vYVpRgkY6i0q6myGNGQpKgVgFcZf
+xxs5TpDWMHsygTHc9som/nXNF3V9GpsQmMHI/kC+YDMExY08aARGorsFQXuKcqOl
+wQIDAQAB
 </ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApWx0pB/2NUaPJpo85VAh
-ovWOhHN1A2CXS38fI4qVtir3V2dWg95A0SOATASdLVbaxuwLpfF+/YlBgFHk6ZZk
-rYqXB1dtq0oE8zrKv+m8ip8vTGEs0La6BU6PMLnTIZVsd0Jpv4JB8F7AEvjnmtBa
-d1rYUNa38TMShf86T9dqo1XmRHaTR2ZzbL+X7ZXenHguwvXWXv59JfWi+UswsrsH
-CZJwedUilg/jFjmPz8aeWozoNATl41eaM/8AHdVr8mjQwOtHNMSQ8YDouhW++amd
-vyix1CLt7kSFxLDcAXlJcDUZ641SonAs++9S0GI25xMp4v5pCwXRPaQOfdJUbSR2
-LwIDAQAB
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAypQ5RA+ShFD0dp2Ceu9l
+cmkOaGy2YDPXo/mYDZwAoIZ+OKr6x4axhhz6tKFsnYp2CS1Gq//ncN6JJPvaY16R
+tPSi3kYZjKjMGJBFrMuStemcw/aK1tuF1x9OtAcov9Mx/EKtaAejOWy6ytkLQj6q
+vypaqAX0+Kl9cOUfw1XUrUMMhrJLtRtchXWG+FbbDlBN/PrWDd+10LMyOehPLxbQ
+4ayy0o9KZh2CKkqESjcgX2bpjL/8yfAvVnl6vYVpRgkY6i0q6myGNGQpKgVgFcZf
+xxs5TpDWMHsygTHc9som/nXNF3V9GpsQmMHI/kC+YDMExY08aARGorsFQXuKcqOl
+wQIDAQAB
 </ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
