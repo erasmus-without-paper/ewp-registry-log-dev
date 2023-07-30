@@ -1,157 +1,125 @@
-
-
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
-<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
-<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
-<!--[if IE 9]>    <html lang="en-us" class="no-js ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en-us" class="no-js">
-<!--<![endif]-->
-
-<head><meta http-equiv="cache-control" content="max-age=0" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="1" /><meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" /><meta http-equiv="pragma" content="no-cache" /><meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <!-- CSS Files -->
-    <link href="/BUIS/App_Themes/bsboun/css/adminica/reset.css" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/adminica/main.css?doRefresh=3" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/adminica/mobile.css?doRefresh=1" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/plugins/bootstrap/bootstrap-2.3.1.css?doRefresh=1" rel="stylesheet" /><link media="screen" href="/BUIS/App_Themes/bsboun/css/themes/skin_light.css?doRefresh=1" rel="stylesheet" /><link media="screen" href="/BUIS/App_Themes/bsboun/css/themes/theme_blue.css" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/themes/bg_white_wood.css" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/adminica/colours.css?doRefresh=2" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/adminica/grid.css" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" /><link href="/BUIS/App_Themes/bsboun/css/fontawsome/css/all.min.css" rel="stylesheet" />
-
-    <!-- End of CSS Files-->
-
-    <!-- Plugin CSS Files-->
-
-    <!-- Plugin CSS Files-->
-
-    <!-- JS Files -->
-    <script src="/BUIS/App_Themes/bsboun/js/jquery/jquery-min.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/prefixfree/prefixfree.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/adminica/adminica_ui.js?doRefresh=2"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/adminica/adminica_mobile.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/adminica/adminica_load.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/plugins-min.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/bootstrap/bootstrap.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/bootbox.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/ModalMessage.js?doRefresh=2"></script>
-    <script src="/BUIS/App_Themes/bsboun/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js"></script>
-    <script src="/BUIS/js/jquery.maskedinput.js"></script>
-    <script src="/BUIS/App_Themes/bsboun/js/Validation.js"></script>
-
-    <script type="text/javascript">
-
-   
-
-        $(document).ready(function () {
-
-            var isInIFrame = false;
-
-            // BUIS Deki Generic IFrmeise
-            try {
-                if (parent.location.pathname != location.pathname && parent.location.pathname.toLowerCase() == "/buis/manage/ObikasASPFrame.aspx".toLowerCase()) {
-                    isInIFrame = true;
-                }
-            } catch (e) {
-
-            }
-
-            // OBIKAS daki Frame içinde ise
-            try {
-                if (parent.rmain !== undefined) {
-                    $(parent.rmain.document).length;
-                    isInIFrame = true;
-                }
-            }
-            catch (e) {
-
-            }
-
-            if (isInIFrame) {
-                $('#sidebar').hide();
-                $('.navbar-fixed-top').hide();
-                $('#wrapper').css('padding-top', '3px');
-                $('div.main_container').css('margin', '10px 0px 10px 0px');
-            }
-
-            
-
-
-        });
-
-         
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-65314-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-
-    </script>
-    <!-- End of JS Files-->
-
-    <title>
-	BOĞAZİÇİ UNIVERSITY | STUDENT INFORMATION REGISTRATION SYSTEM (OBIKAS)
-</title>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            try {
-                debugger;
-                $(parent.rmain.document).length;
-
-                $("#divErrorButtons").html('<br /> <br /> <br />' +
-                    '<button class="btn btn-primary btn-large" style=" clear: none;" onclick="location.href =\'/return_home_from_buis.asp\'; return false;" type="button">' +
-                 '<span>Ana Sayfa / Home Page</span></button>'
-                    );
-
-
-            } catch (e) {
-
-            }
-        });
-
-    </script>
-</head>
-<body>
-    <form method="post" action="./GenericError.aspx" id="aspnetForm">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="OV/Jim7C9Q+Jmti7Htjr0hckVjfNjINJhdlCH/toEKFmAlFDb++pFlYk5vCW7DHoC4VjFgIdZUPuvHDeR7CP5d8IFGfncNZ97DGCfWLtmdbdh5g9O+A06RA9LaiZnG/p8LBPiT/GGHKOM7B4JqZszz7Bub8Hu2ZIIrJjhL7aTuhKUPG6wCVAG6MV6+7r3IHhPPkNzmrMcfEbWU6cLBkey+ua8fNPcUVrVdtsk7xX78k=" />
-
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="37BD741F" />
-        <div id="wrapper" data-adminica-nav-top="3" data-adminica-nav-inner="4" data-adminica-side-top="3" data-adminica-side-inner="4" class="has_fixed_bar">
-
-            
-    <div class="isolate" style="max-height: 300px">
-        <div class="center narrow" style="top: 35%; max-width: 98%">
-            <div class="main_container full_size container_12 clearfix">
-                <div class="alert alert-warning dismissible"><button type="button" class="close" data-dismiss="alert">&times;</button><h4>Warning!</h4><ul>
-<li>Belirlenemeyen bir hata oldu.</li>
-</ul></div>
-
-
-                <div id="divErrorButtons" style="margin: 8px">
-                    
-
-                    <br />
-                    <br />
-                    <br />
-
-                    <button id="ctl00_cphMainContent_btnToHome" type="button" class="btn btn-primary btn-large" style="clear: none; " onclick="javascript:window.location=&#39;/buis/BuisDashboard.aspx&#39;;">
-                        <span>Ana Sayfa / Home Page</span>
-                    </button>
-
-                    
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-            
-
-        </div>
-    </form>
-</body>
-</html>
+<mf:manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6 https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-ounits/stable-v2/manifest-entry.xsd https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-courses/master/manifest-entry.xsd https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-course-replication/master/manifest-entry.xsd https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsdhttps://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-iias/stable-v6/manifest-entry.xsd" xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6">
+  <mf:host>
+    <ewp:admin-email>support@skteknoloji.com.tr</ewp:admin-email>
+    <ewp:admin-provider>SK Teknoloji Support</ewp:admin-provider>
+    <ewp:admin-notes>Manifest File for Boğaziçi University</ewp:admin-notes>
+    <r:apis-implemented>
+      <discovery version="6.0.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd">
+        <url>https://registration.boun.edu.tr/buis/ewp/manifest</url>
+      </discovery>
+      <echo version="2.0.1" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://registration.boun.edu.tr/buis/ewp/echo</url>
+      </echo>
+      <institutions version="2.2.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd">
+        <http-security>
+          <sec:client-auth-methods>
+            <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://registration.boun.edu.tr/buis/ewp/institutions</url>
+        <max-hei-ids>5</max-hei-ids>
+      </institutions>
+      <organizational-units version="2.1.1" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd">
+        <http-security>
+          <sec:client-auth-methods>
+            <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://registration.boun.edu.tr/buis/ewp/ounits</url>
+        <max-ounit-ids>5</max-ounit-ids>
+        <max-ounit-codes>5</max-ounit-codes>
+      </organizational-units>
+      <courses version="0.7.1" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd">
+        <http-security>
+          <sec:client-auth-methods>
+            <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://registration.boun.edu.tr/buis/ewp/courses</url>
+        <max-los-ids>5</max-los-ids>
+        <max-los-codes>5</max-los-codes>
+      </courses>
+      <simple-course-replication version="1.0.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd">
+        <http-security>
+          <sec:client-auth-methods>
+            <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://registration.boun.edu.tr/buis/ewp/coursereplication</url>
+        <allows-anonymous-access>true</allows-anonymous-access>
+        <supports-modified-since>false</supports-modified-since>
+      </simple-course-replication>
+      <iias version="6.2.0" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://registration.boun.edu.tr/buis/ewp/iias/get</get-url>
+        <max-iia-ids>5</max-iia-ids>
+        <max-iia-codes>5</max-iia-codes>
+        <index-url>https://registration.boun.edu.tr/buis/ewp/iias/index</index-url>
+        <stats-url>https://registration.boun.edu.tr/buis/ewp/iias/stats</stats-url>
+      </iias>
+    </r:apis-implemented>
+    <mf:institutions-covered>
+      <r:hei id="boun.edu.tr">
+        <r:other-id type="erasmus">TR ISTANBU01</r:other-id>
+        <r:other-id type="pic">999882500</r:other-id>
+        <r:name xml:lang="tr">Boğaziçi Üniversitesi</r:name>
+        <r:name xml:lang="en">Boğaziçi University</r:name>
+      </r:hei>
+    </mf:institutions-covered>
+    <mf:client-credentials-in-use>
+      <mf:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgwJxphvw1V8hR2xcK+K6
+kcugraVd8aXWRIPTA+q5xpdRVo6P/06fH2JHAxTo+nrRDNPMsnm9t6QnpZrii9Di
+lvleh2Y0xG6+ZEHgj0K6DTpRFM1ewjXCjqaEF/MAgz7ymyYN87CWD446qQs0aLiQ
+yRp2I9sBiV8xk42xLYF6Zh4ZABcDafxsCfvnKh/EFQsa7L61VdVacbGGFhFs4xBB
++zJbNK38lfO4q+3CnkN3xAU41awpjGo4qS1726GxXD3VjLgbOWEXOA2Wti690aFx
+VpuHxc2qehVVPSfUL0W/ZLwRpruG00Y31+k62NbDldkwgT2LcTSavfvKO98JxnMy
++wIDAQAB</mf:rsa-public-key>
+    </mf:client-credentials-in-use>
+    <mf:server-credentials-in-use>
+      <mf:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgwJxphvw1V8hR2xcK+K6
+kcugraVd8aXWRIPTA+q5xpdRVo6P/06fH2JHAxTo+nrRDNPMsnm9t6QnpZrii9Di
+lvleh2Y0xG6+ZEHgj0K6DTpRFM1ewjXCjqaEF/MAgz7ymyYN87CWD446qQs0aLiQ
+yRp2I9sBiV8xk42xLYF6Zh4ZABcDafxsCfvnKh/EFQsa7L61VdVacbGGFhFs4xBB
++zJbNK38lfO4q+3CnkN3xAU41awpjGo4qS1726GxXD3VjLgbOWEXOA2Wti690aFx
+VpuHxc2qehVVPSfUL0W/ZLwRpruG00Y31+k62NbDldkwgT2LcTSavfvKO98JxnMy
++wIDAQAB</mf:rsa-public-key>
+    </mf:server-credentials-in-use>
+  </mf:host>
+</mf:manifest>
