@@ -30,7 +30,226 @@
     <z:host>
         <A:admin-email>ard01@vsb.cz</A:admin-email>
         <A:admin-provider>VSB - Technical University of Ostrava (EDISON)</A:admin-provider>
-        <x:apis-implemented/>
+        <x:apis-implemented>
+            <r:omobility-la-cnr version="1.0.0">
+                <r:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </r:http-security>
+                <r:url>https://edison.sso.vsb.cz/ewp/test/rest/las/cnr</r:url>
+                <r:max-omobility-ids>1</r:max-omobility-ids>
+            </r:omobility-la-cnr>
+            <u:organizational-units version="2.1.1">
+                <u:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </u:http-security>
+                <u:url>https://edison.sso.vsb.cz/ewp/test/rest/ounits</u:url>
+                <u:max-ounit-ids>10</u:max-ounit-ids>
+                <u:max-ounit-codes>10</u:max-ounit-codes>
+            </u:organizational-units>
+            <j:file version="1.0.0">
+                <j:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </j:http-security>
+                <j:url>https://edison.sso.vsb.cz/ewp/test/rest/file</j:url>
+            </j:file>
+            <y:iias version="6.2.0">
+                <y:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </y:http-security>
+                <y:get-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/get</y:get-url>
+                <y:max-iia-ids>10</y:max-iia-ids>
+                <y:max-iia-codes>10</y:max-iia-codes>
+                <y:index-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/index</y:index-url>
+                <y:stats-url>https://edison.sso.vsb.cz/ewp/test/rest/iias/stats</y:stats-url>
+            </y:iias>
+            <g:discovery version="6.0.0">
+                <g:url>https://edison.sso.vsb.cz/ewp/test/manifest.xml</g:url>
+            </g:discovery>
+            <q:omobility-cnr version="1.0.0">
+                <q:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </q:http-security>
+                <q:url>https://edison.sso.vsb.cz/ewp/test/rest/omobilities/cnr</q:url>
+                <q:max-omobility-ids>1</q:max-omobility-ids>
+            </q:omobility-cnr>
+            <p:institutions version="2.2.0">
+                <p:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </p:http-security>
+                <p:url>https://edison.sso.vsb.cz/ewp/test/rest/institutions</p:url>
+                <p:max-hei-ids>1</p:max-hei-ids>
+            </p:institutions>
+            <i:echo version="2.0.1">
+                <i:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </i:http-security>
+                <i:url>https://edison.sso.vsb.cz/ewp/test/rest/echo</i:url>
+            </i:echo>
+            <n:iias-approval version="1.0.0">
+                <n:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </n:http-security>
+                <n:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval</n:url>
+                <n:max-iia-ids>10</n:max-iia-ids>
+            </n:iias-approval>
+            <o:imobility-cnr version="1.0.0">
+                <o:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </o:http-security>
+                <o:url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/cnr</o:url>
+                <o:max-omobility-ids>1</o:max-omobility-ids>
+            </o:imobility-cnr>
+            <m:factsheet version="1.1.0">
+                <m:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </m:http-security>
+                <m:url>https://edison.sso.vsb.cz/ewp/test/rest/factsheet</m:url>
+                <m:max-hei-ids>1</m:max-hei-ids>
+            </m:factsheet>
+            <w:omobility-las version="1.0.1">
+                <w:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </w:http-security>
+                <w:get-url>https://edison.sso.vsb.cz/ewp/test/rest/las/get</w:get-url>
+                <w:index-url>https://edison.sso.vsb.cz/ewp/test/rest/las/index</w:index-url>
+                <w:update-url>https://edison.sso.vsb.cz/ewp/test/rest/las/update</w:update-url>
+                <w:max-omobility-ids>1</w:max-omobility-ids>
+            </w:omobility-las>
+            <k:iia-approval-cnr version="1.0.0">
+                <k:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </k:http-security>
+                <k:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/approval/cnr</k:url>
+            </k:iia-approval-cnr>
+            <v:omobilities version="2.0.0">
+                <v:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </v:http-security>
+                <v:get-url>https://edison.sso.vsb.cz/ewp/test/rest/omobilities/get</v:get-url>
+                <v:index-url>https://edison.sso.vsb.cz/ewp/test/rest/omobilities/index</v:index-url>
+                <v:max-omobility-ids>1</v:max-omobility-ids>
+                <v:sends-notifications/>
+            </v:omobilities>
+            <t:imobilities version="1.0.0">
+                <t:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </t:http-security>
+                <t:get-url>https://edison.sso.vsb.cz/ewp/test/rest/imobilities/get</t:get-url>
+                <t:max-omobility-ids>1</t:max-omobility-ids>
+                <t:sends-notifications/>
+            </t:imobilities>
+            <l:iia-cnr version="2.0.3">
+                <l:http-security>
+                    <s:client-auth-methods>
+                        <c:tlscert allows-self-signed="true"/>
+                        <a:httpsig/>
+                    </s:client-auth-methods>
+                    <s:server-auth-methods>
+                        <e:tlscert/>
+                        <d:httpsig/>
+                    </s:server-auth-methods>
+                </l:http-security>
+                <l:url>https://edison.sso.vsb.cz/ewp/test/rest/iias/cnr</l:url>
+            </l:iia-cnr>
+        </x:apis-implemented>
         <z:institutions-covered>
             <x:hei id="vsb.cz">
                 <x:other-id type="pic">999868144</x:other-id>
