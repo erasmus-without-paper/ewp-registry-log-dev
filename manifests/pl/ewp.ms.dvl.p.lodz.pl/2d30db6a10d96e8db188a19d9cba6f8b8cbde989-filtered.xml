@@ -1,5 +1,5 @@
-<ns21:manifest
-    xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+<ns23:manifest
+    xmlns:ns23="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
@@ -9,10 +9,12 @@
     xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -21,11 +23,11 @@
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
     xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
 >
-    <ns21:host>
+    <ns23:host>
         <admin-email>ewp@info.p.lodz.pl</admin-email>
         <admin-provider>Lodz University of Technology</admin-provider>
         <admin-notes>Manifest File for Lodz University of Technology. This host is a DEMO server. We plan to keep it online for testing.</admin-notes>
-        <ns20:apis-implemented>
+        <ns22:apis-implemented>
             <ns11:courses version="0.7.1">
                 <ns11:http-security>
                     <ns5:client-auth-methods>
@@ -185,7 +187,7 @@
                 <ns17:stats-url>https://ewp.ms.dvl.p.lodz.pl/las/omobilities/stats</ns17:stats-url>
                 <ns17:max-omobility-ids>3</ns17:max-omobility-ids>
             </ns17:omobility-las>
-            <ns18:omobilities version="2.0.0">
+            <ns18:omobility-la-cnr version="1.1.0">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
                         <ns3:httpsig/>
@@ -201,12 +203,10 @@
                         <ns9:tls/>
                     </ns5:response-encryption-methods>
                 </ns18:http-security>
-                <ns18:get-url>https://ewp.ms.dvl.p.lodz.pl/omobilities</ns18:get-url>
-                <ns18:index-url>https://ewp.ms.dvl.p.lodz.pl/omobilities/index</ns18:index-url>
+                <ns18:url>https://ewp.ms.dvl.p.lodz.pl/las/omobilities/cnr</ns18:url>
                 <ns18:max-omobility-ids>3</ns18:max-omobility-ids>
-                <ns18:sends-notifications/>
-            </ns18:omobilities>
-            <ns19:organizational-units version="2.1.1">
+            </ns18:omobility-la-cnr>
+            <ns19:omobilities version="2.0.0">
                 <ns19:http-security>
                     <ns5:client-auth-methods>
                         <ns3:httpsig/>
@@ -222,26 +222,66 @@
                         <ns9:tls/>
                     </ns5:response-encryption-methods>
                 </ns19:http-security>
-                <ns19:url>https://ewp.ms.dvl.p.lodz.pl/ounits</ns19:url>
-                <ns19:max-ounit-ids>3</ns19:max-ounit-ids>
-                <ns19:max-ounit-codes>3</ns19:max-ounit-codes>
-            </ns19:organizational-units>
-        </ns20:apis-implemented>
-        <ns21:institutions-covered>
-            <ns20:hei id="p.lodz.pl">
-                <ns20:other-id type="pic">999886671</ns20:other-id>
-                <ns20:other-id type="erasmus">PL LODZ02</ns20:other-id>
-                <ns20:other-id type="euc">1527546</ns20:other-id>
-                <ns20:name xml:lang="en">Lodz University of Technology</ns20:name>
-                <ns20:name xml:lang="pl">Politechnika Łódzka</ns20:name>
-            </ns20:hei>
-        </ns21:institutions-covered>
-        <ns21:client-credentials-in-use>
-            <ns21:certificate>MIID/TCCAuUCFEbqFqloIiM+KrjVFHwzczpvncuvMA0GCSqGSIb3DQEBCwUAMIG6 MQswCQYDVQQGEwJQTDEWMBQGA1UECAwNw4XCgsODwrNkemtpZTEWMBQGA1UEBwwN w4XCgcODwrNkw4XCujEiMCAGA1UECgwZUG9saXRlY2huaWthIMOFwoHDg8KzZHpr YTEMMAoGA1UECwwDVUNJMRgwFgYDVQQDDA9SYWZhw4XCgiBKYW5pc3oxLzAtBgkq hkiG9w0BCQEWIHJhZmFsLmphbmlzei41MDBAZ3Vlc3QucC5sb2R6LnBsMB4XDTIy MDkzMDA4MjUzNVoXDTMyMDkyNzA4MjUzNVowgboxCzAJBgNVBAYTAlBMMRYwFAYD VQQIDA3DhcKCw4PCs2R6a2llMRYwFAYDVQQHDA3DhcKBw4PCs2TDhcK6MSIwIAYD VQQKDBlQb2xpdGVjaG5pa2Egw4XCgcODwrNkemthMQwwCgYDVQQLDANVQ0kxGDAW BgNVBAMMD1JhZmHDhcKCIEphbmlzejEvMC0GCSqGSIb3DQEJARYgcmFmYWwuamFu aXN6LjUwMEBndWVzdC5wLmxvZHoucGwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw ggEKAoIBAQDf8Vqq1zWSRsU+sjVBoCDiRSrZbqpqiMGS7IkHt/MFize0S/z+85WA 4LOA4EWHYRcJ0XanQMZousdcRZs9LDKP3ORc8UEoKbI6ERteW/WsJxUu1jS2ogTF mqeBHKS19ljWD7mUvQvExuJKX0mmSLjvt0+XuM++2MAKhrSQhZOvypLw5UGpcwmS anmZQz++RSdfUUXtLQWjMSUKfZTs/micHeSagR0w50ESVzrfx2p+fTnHHWc5zXum P95WG2UVxwGFraluilbSNAdxCntR0sEklcjoYxamNh1LRQEPXjsYLyGUbdplQNPg rlx+jWPZgzXzFX1efA0EN7Sok4M330UDAgMBAAEwDQYJKoZIhvcNAQELBQADggEB AHddbHfNgI0zo23kehez2tXtk8fUYbA3duNcorl4YDv3k5SQj1qS4Q36wTyJSCyS oJQfqYfjI7BFURam1MgQI2Mmrd/F6YZlSt2uulcsDm4l3dY6Kkym2ykKmjovCvQn YDyqkeiYHiOCZCWt75I2UWpDwCE1rlumGOAW4BPHBKYYN3eE0w6g8yVCOO6nHhU0 PtlW5UOslqV0TjpVm4l0y1cEeTp1Z6mNDakOCBm8R0eHs834PLUzllKAsowSJx8F /sqmRM5ZbiPzLhzviF3nXRC/QXyBa4VwiP5qZXDp8mO9uoQdmSwQocZ/jWeotPgo KstcZSx/Qb1jIBTL46T4VFc=</ns21:certificate>
-            <ns21:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqrTYAOpdcWPc9CLWNVFK Sl6/jfbEgAZsW2htxrZRjwImhnsVq695K7LKtofAlK11wgVVt1+7iMZbqWHxwdYm rNFCD/ms4sv9Fp4EqqRTwPhqpB3inLojoCjs8U0F33rH/mna5VMtn8YKFBZWzu/e PkZG+wZ4T2LAxN6Apgn5vWDJ8BnKFCySWGFjJ6y2cBw4wJm6b0GQyFJmLIIfkiW4 73PIB/mEzTAslR+WeFItoHjZiur2Zp9mrNzVL9vBhZcsdDophYiY+eM2p+X6Vnqv q7xlOsArkFU0/CM3rCYQlFC6FcTr/6xob0wCezRjeNOxEQ5sTMlhsLO9ZX6+QRZV QQIDAQAB</ns21:rsa-public-key>
-        </ns21:client-credentials-in-use>
-        <ns21:server-credentials-in-use>
-            <ns21:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqrTYAOpdcWPc9CLWNVFK Sl6/jfbEgAZsW2htxrZRjwImhnsVq695K7LKtofAlK11wgVVt1+7iMZbqWHxwdYm rNFCD/ms4sv9Fp4EqqRTwPhqpB3inLojoCjs8U0F33rH/mna5VMtn8YKFBZWzu/e PkZG+wZ4T2LAxN6Apgn5vWDJ8BnKFCySWGFjJ6y2cBw4wJm6b0GQyFJmLIIfkiW4 73PIB/mEzTAslR+WeFItoHjZiur2Zp9mrNzVL9vBhZcsdDophYiY+eM2p+X6Vnqv q7xlOsArkFU0/CM3rCYQlFC6FcTr/6xob0wCezRjeNOxEQ5sTMlhsLO9ZX6+QRZV QQIDAQAB</ns21:rsa-public-key>
-        </ns21:server-credentials-in-use>
-    </ns21:host>
-</ns21:manifest>
+                <ns19:get-url>https://ewp.ms.dvl.p.lodz.pl/omobilities</ns19:get-url>
+                <ns19:index-url>https://ewp.ms.dvl.p.lodz.pl/omobilities/index</ns19:index-url>
+                <ns19:max-omobility-ids>3</ns19:max-omobility-ids>
+                <ns19:sends-notifications/>
+            </ns19:omobilities>
+            <ns20:omobility-cnr version="1.0.0">
+                <ns20:http-security>
+                    <ns5:client-auth-methods>
+                        <ns3:httpsig/>
+                        <ns4:tlscert allows-self-signed="false"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns6:tlscert/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns8:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns9:tls/>
+                    </ns5:response-encryption-methods>
+                </ns20:http-security>
+                <ns20:url>https://ewp.ms.dvl.p.lodz.pl/omobilities/cnr</ns20:url>
+                <ns20:max-omobility-ids>3</ns20:max-omobility-ids>
+            </ns20:omobility-cnr>
+            <ns21:organizational-units version="2.1.1">
+                <ns21:http-security>
+                    <ns5:client-auth-methods>
+                        <ns3:httpsig/>
+                        <ns4:tlscert allows-self-signed="false"/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns6:tlscert/>
+                    </ns5:server-auth-methods>
+                    <ns5:request-encryption-methods>
+                        <ns8:tls/>
+                    </ns5:request-encryption-methods>
+                    <ns5:response-encryption-methods>
+                        <ns9:tls/>
+                    </ns5:response-encryption-methods>
+                </ns21:http-security>
+                <ns21:url>https://ewp.ms.dvl.p.lodz.pl/ounits</ns21:url>
+                <ns21:max-ounit-ids>3</ns21:max-ounit-ids>
+                <ns21:max-ounit-codes>3</ns21:max-ounit-codes>
+            </ns21:organizational-units>
+        </ns22:apis-implemented>
+        <ns23:institutions-covered>
+            <ns22:hei id="p.lodz.pl">
+                <ns22:other-id type="pic">999886671</ns22:other-id>
+                <ns22:other-id type="erasmus">PL LODZ02</ns22:other-id>
+                <ns22:other-id type="euc">1527546</ns22:other-id>
+                <ns22:name xml:lang="en">Lodz University of Technology</ns22:name>
+                <ns22:name xml:lang="pl">Politechnika Łódzka</ns22:name>
+            </ns22:hei>
+        </ns23:institutions-covered>
+        <ns23:client-credentials-in-use>
+            <ns23:certificate>MIID/TCCAuUCFEbqFqloIiM+KrjVFHwzczpvncuvMA0GCSqGSIb3DQEBCwUAMIG6 MQswCQYDVQQGEwJQTDEWMBQGA1UECAwNw4XCgsODwrNkemtpZTEWMBQGA1UEBwwN w4XCgcODwrNkw4XCujEiMCAGA1UECgwZUG9saXRlY2huaWthIMOFwoHDg8KzZHpr YTEMMAoGA1UECwwDVUNJMRgwFgYDVQQDDA9SYWZhw4XCgiBKYW5pc3oxLzAtBgkq hkiG9w0BCQEWIHJhZmFsLmphbmlzei41MDBAZ3Vlc3QucC5sb2R6LnBsMB4XDTIy MDkzMDA4MjUzNVoXDTMyMDkyNzA4MjUzNVowgboxCzAJBgNVBAYTAlBMMRYwFAYD VQQIDA3DhcKCw4PCs2R6a2llMRYwFAYDVQQHDA3DhcKBw4PCs2TDhcK6MSIwIAYD VQQKDBlQb2xpdGVjaG5pa2Egw4XCgcODwrNkemthMQwwCgYDVQQLDANVQ0kxGDAW BgNVBAMMD1JhZmHDhcKCIEphbmlzejEvMC0GCSqGSIb3DQEJARYgcmFmYWwuamFu aXN6LjUwMEBndWVzdC5wLmxvZHoucGwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw ggEKAoIBAQDf8Vqq1zWSRsU+sjVBoCDiRSrZbqpqiMGS7IkHt/MFize0S/z+85WA 4LOA4EWHYRcJ0XanQMZousdcRZs9LDKP3ORc8UEoKbI6ERteW/WsJxUu1jS2ogTF mqeBHKS19ljWD7mUvQvExuJKX0mmSLjvt0+XuM++2MAKhrSQhZOvypLw5UGpcwmS anmZQz++RSdfUUXtLQWjMSUKfZTs/micHeSagR0w50ESVzrfx2p+fTnHHWc5zXum P95WG2UVxwGFraluilbSNAdxCntR0sEklcjoYxamNh1LRQEPXjsYLyGUbdplQNPg rlx+jWPZgzXzFX1efA0EN7Sok4M330UDAgMBAAEwDQYJKoZIhvcNAQELBQADggEB AHddbHfNgI0zo23kehez2tXtk8fUYbA3duNcorl4YDv3k5SQj1qS4Q36wTyJSCyS oJQfqYfjI7BFURam1MgQI2Mmrd/F6YZlSt2uulcsDm4l3dY6Kkym2ykKmjovCvQn YDyqkeiYHiOCZCWt75I2UWpDwCE1rlumGOAW4BPHBKYYN3eE0w6g8yVCOO6nHhU0 PtlW5UOslqV0TjpVm4l0y1cEeTp1Z6mNDakOCBm8R0eHs834PLUzllKAsowSJx8F /sqmRM5ZbiPzLhzviF3nXRC/QXyBa4VwiP5qZXDp8mO9uoQdmSwQocZ/jWeotPgo KstcZSx/Qb1jIBTL46T4VFc=</ns23:certificate>
+            <ns23:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqrTYAOpdcWPc9CLWNVFK Sl6/jfbEgAZsW2htxrZRjwImhnsVq695K7LKtofAlK11wgVVt1+7iMZbqWHxwdYm rNFCD/ms4sv9Fp4EqqRTwPhqpB3inLojoCjs8U0F33rH/mna5VMtn8YKFBZWzu/e PkZG+wZ4T2LAxN6Apgn5vWDJ8BnKFCySWGFjJ6y2cBw4wJm6b0GQyFJmLIIfkiW4 73PIB/mEzTAslR+WeFItoHjZiur2Zp9mrNzVL9vBhZcsdDophYiY+eM2p+X6Vnqv q7xlOsArkFU0/CM3rCYQlFC6FcTr/6xob0wCezRjeNOxEQ5sTMlhsLO9ZX6+QRZV QQIDAQAB</ns23:rsa-public-key>
+        </ns23:client-credentials-in-use>
+        <ns23:server-credentials-in-use>
+            <ns23:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqrTYAOpdcWPc9CLWNVFK Sl6/jfbEgAZsW2htxrZRjwImhnsVq695K7LKtofAlK11wgVVt1+7iMZbqWHxwdYm rNFCD/ms4sv9Fp4EqqRTwPhqpB3inLojoCjs8U0F33rH/mna5VMtn8YKFBZWzu/e PkZG+wZ4T2LAxN6Apgn5vWDJ8BnKFCySWGFjJ6y2cBw4wJm6b0GQyFJmLIIfkiW4 73PIB/mEzTAslR+WeFItoHjZiur2Zp9mrNzVL9vBhZcsdDophYiY+eM2p+X6Vnqv q7xlOsArkFU0/CM3rCYQlFC6FcTr/6xob0wCezRjeNOxEQ5sTMlhsLO9ZX6+QRZV QQIDAQAB</ns23:rsa-public-key>
+        </ns23:server-credentials-in-use>
+    </ns23:host>
+</ns23:manifest>
