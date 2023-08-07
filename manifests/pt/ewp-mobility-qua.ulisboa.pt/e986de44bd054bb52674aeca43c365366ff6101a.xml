@@ -1,9 +1,47 @@
-<ns3:manifest xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" xmlns:ns35="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ns37="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd">
+<ns3:manifest xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" xmlns:ns26="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd" xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd" xmlns:ns35="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" xmlns:ns36="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" xmlns:ns37="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ns38="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd">
     <ns3:host>
         <ns0:admin-email xmlns:ns0="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">proj.fenixedu-nds@reitoria.ulisboa.pt</ns0:admin-email>
         <ns1:admin-provider xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">University of Lisbon (EWP Node)</ns1:admin-provider>
         <ns2:admin-notes xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">ULisboa EWP node used for tests</ns2:admin-notes>
         <ns2:apis-implemented>
+            <ns26:iia-approval-cnr version="1.1.0">
+                <ns26:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns26:http-security>
+                <ns26:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/approvals/cnr/v1</ns26:url>
+            </ns26:iia-approval-cnr>
+            <ns28:iias-approval version="1.1.0">
+                <ns28:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns28:http-security>
+                <ns28:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/approval/v1</ns28:url>
+                <ns28:max-iia-ids>1</ns28:max-iia-ids>
+            </ns28:iias-approval>
+            <ns30:iias version="6.2.0">
+                <ns30:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns30:http-security>
+                <ns30:get-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v6/get</ns30:get-url>
+                <ns30:max-iia-ids>1</ns30:max-iia-ids>
+                <ns30:max-iia-codes>1</ns30:max-iia-codes>
+                <ns30:index-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v6/index</ns30:index-url>
+                <ns30:stats-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v6/stats?hei_id=ulisboa.pt</ns30:stats-url>
+            </ns30:iias>
             <ns22:courses version="0.7.1">
                 <ns22:http-security>
                     <ns5:client-auth-methods>
