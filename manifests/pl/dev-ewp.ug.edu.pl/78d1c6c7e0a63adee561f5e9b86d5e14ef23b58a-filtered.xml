@@ -49,6 +49,25 @@
                 <ns2:index-url>https://dev-ewp.ug.edu.pl/ewp/iia/index</ns2:index-url>
                 <ns2:stats-url>https://dev-ewp.ug.edu.pl/ewp/iia/stats</ns2:stats-url>
             </ns2:iias>
+            <ns2:factsheet
+                xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <ns2:http-security>
+                    <ns3:client-auth-methods xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns4:tlscert
+                            xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <ns4:httpsig xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </ns3:client-auth-methods>
+                    <ns3:server-auth-methods xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <ns4:tlscert xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </ns3:server-auth-methods>
+                </ns2:http-security>
+                <ns2:url>https://dev-ewp.ug.edu.pl/ewp/iia/factsheet/</ns2:url>
+                <ns2:max-hei-ids>1</ns2:max-hei-ids>
+            </ns2:factsheet>
             <ns2:iias-approval
                 xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
