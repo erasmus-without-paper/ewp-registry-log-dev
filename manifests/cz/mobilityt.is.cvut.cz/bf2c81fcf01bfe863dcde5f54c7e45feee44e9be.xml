@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8;"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/idp/assets/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/idp/assets-cvut/css/base.css?2018-10-05" type="text/css"/>
+    <script src="/idp/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/idp/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/idp/assets-cvut/js/base.js?2018-10-05" type="text/javascript"></script>
+    <title>User login - SSO gate - CTU in Prague</title>
+</head>
+<body>
+<div id="fixed-header" class="container-fluid">
+    <div id="cvut-header" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="https://www.cvut.cz">
+                            <img src="/idp/assets-cvut/images/logo-cvut.png"
+                                 alt="CTU logo"
+                                 title="Czech technical university in Prague"/>
+                        </a>
+                        <a class="navbar-apptitle inactive" href="#" tabindex="-1">SSO gate</a>
+                    </div>
+                    <ul class="language-switcher nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="switchLanguage(event);" title="Česky/English">
+                                <span>CS/EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="sys-message" class="row">
+            <div class="col-md-12">
+                <!-- Service name -->
+                                                    <p>
+                        Application                        <strong>mobilityt.is.cvut.cz</strong>
+                        is using SSO for login and redirected you here.                     </p>
+                
+                <!-- Error name -->
+                <p class="error-message">
+</p>
+
+                <!-- Expiration message -->
+                <p>Expired password could be reset                    <a href="https://usermap.cvut.cz/resetPassword" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="cvut-content">
+    <div class="row" id="cvut-main-content">
+        <div class="col col-md-6 col-lg-8 fixed-height" id="cvut-login-form">
+            <form method="post" action="/idp/profile/SAML2/Redirect/SSO;jsessionid=B8C5DF473008819BEF6297D8A37527C2?execution=e1s1" role="form" class="form valign-middle">
+                <fieldset>
+                    <div class="col col-lg-offset-2 col-lg-8">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <div class="col col-xs-12">
+                                    <h1>Login details</h1>
+                                </div>
+                                <div class="col col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Username:</span>
+                                        <input id="username"
+                                               name="j_username"
+                                               type="text"
+                                               value=""
+                                               autocomplete="off"
+                                               autocapitalize="off"
+                                               autofocus
+                                               class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">CTU password :</span>
+                                        <input id="password"
+                                               name="j_password"
+                                               type="password"
+                                               autocomplete="off"
+                                               class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col checkbox-col col-xs-12 col-sm-7">
+                                    <div class="checkbox">
+                                        <input id="donotcache"
+                                               type="checkbox"
+                                               name="donotcache"
+                                               value="1">
+                                        <label for="donotcache">Don't remember login.</label>
+                                    </div>
+                                </div>
+                                <div class="col col-xs-12 col-sm-5">
+                                    <button type="submit" class="btn" name="_eventId_proceed">SSO login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col col-md-6 col-lg-4 fixed-height" id="cvut-login-info">
+            <div class="valign-middle">
+                <h1>Rules to protect your password</h1>
+                <ol>
+                    <li>Never disclose your password to anyone.</li>
+                    <li>Protect your password for picking it by watching.</li>
+                    <li>Do not type in your password on untrusted devices.</li>
+                    <li>Do not type in your password in untrusted applications.</li>
+                    <li>Do not leave your password in accessible places.</li>
+                </ol>
+                <div class="motto">
+                    <p>&bdquo;Your password is your key,</p>
+                    <p>keep it secured!&ldquo;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="basic-info">
+        <div class="col col-xs-12 col-md-4">
+            <h2>What is SSO?</h2>
+            <p>It means Single Sign-On. You can get access to all participant applications by onetime entering your username and password.</p>
+            <p class="more-info"><a href="https://ist.cvut.cz/pojmy/federace-cvutid/">I want to know more</a></p>
+            <img class="icon" src="/idp/assets-cvut/images/icon-what.png" alt="Icon: What is SSO?"/>
+        </div>
+        <div class="col col-xs-12 col-md-4">
+            <h2>How does it work?</h2>
+            <p>Automatic login works until browser is closed. Expiration time of session is 10 hours.</p>
+            <p class="more-info"><a href="https://ist.cvut.cz/nase-sluzby/single-sign-on/">I want to know more</a></p>
+            <img class="icon" src="/idp/assets-cvut/images/icon-how.png" alt="Icon: How does it work?"/>
+        </div>
+        <div class="col col-xs-12 col-md-4">
+            <h2>What about security?</h2>
+            <p>To get maximum security use trusted devices only.</p>
+            <p class="more-info"><a href="https://ist.cvut.cz/pojmy/vyhody-a-nevyhody-prihlaseni-sso/">I want to know more</a></p>
+            <img class="icon" src="/idp/assets-cvut/images/icon-secure.png" alt="Icon: What about security?"/>
+        </div>
+    </div>
+</div>
+<div class="container" id="cvut-footer">
+    <div class="row">
+        <div class="col col-xs-12 col-md-6 pull-right">
+            <nav id="cvut-service-nav">
+                <a href="https://usermap.cvut.cz/profile/tolarvla/" target="_blank">Report problem</a>
+            </nav>
+        </div>
+        <div class="col col-xs-12 col-md-6">
+            <div id="cvut-copyright">©&nbsp;2014 Czech&nbsp;technical&nbsp;university&nbsp;in&nbsp;Prague<br/>Powered&nbsp;by Computing&nbsp;and&nbsp;informations&nbsp;centre</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
