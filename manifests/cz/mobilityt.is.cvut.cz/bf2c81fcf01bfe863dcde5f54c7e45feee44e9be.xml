@@ -1,161 +1,167 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8;"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/idp/assets/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="/idp/assets-cvut/css/base.css?2018-10-05" type="text/css"/>
-    <script src="/idp/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/idp/assets/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/idp/assets-cvut/js/base.js?2018-10-05" type="text/javascript"></script>
-    <title>User login - SSO gate - CTU in Prague</title>
-</head>
-<body>
-<div id="fixed-header" class="container-fluid">
-    <div id="cvut-header" class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col col-md-12">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="https://www.cvut.cz">
-                            <img src="/idp/assets-cvut/images/logo-cvut.png"
-                                 alt="CTU logo"
-                                 title="Czech technical university in Prague"/>
-                        </a>
-                        <a class="navbar-apptitle inactive" href="#" tabindex="-1">SSO gate</a>
-                    </div>
-                    <ul class="language-switcher nav navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="switchLanguage(event);" title="Česky/English">
-                                <span>CS/EN</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div id="sys-message" class="row">
-            <div class="col-md-12">
-                <!-- Service name -->
-                                                    <p>
-                        Application                        <strong>mobilityt.is.cvut.cz</strong>
-                        is using SSO for login and redirected you here.                     </p>
-                
-                <!-- Error name -->
-                <p class="error-message">
-</p>
-
-                <!-- Expiration message -->
-                <p>Expired password could be reset                    <a href="https://usermap.cvut.cz/resetPassword" target="_blank">here</a>.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container" id="cvut-content">
-    <div class="row" id="cvut-main-content">
-        <div class="col col-md-6 col-lg-8 fixed-height" id="cvut-login-form">
-            <form method="post" action="/idp/profile/SAML2/Redirect/SSO;jsessionid=6DB0230CB67BFE2379C589BB83797E61?execution=e1s1" role="form" class="form valign-middle">
-                <fieldset>
-                    <div class="col col-lg-offset-2 col-lg-8">
-                        <div class="panel">
-                            <div class="panel-body">
-                                <div class="col col-xs-12">
-                                    <h1>Login details</h1>
-                                </div>
-                                <div class="col col-xs-12">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Username:</span>
-                                        <input id="username"
-                                               name="j_username"
-                                               type="text"
-                                               value=""
-                                               autocomplete="off"
-                                               autocapitalize="off"
-                                               autofocus
-                                               class="form-control"/>
-                                    </div>
-                                </div>
-                                <div class="col col-xs-12">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">CTU password :</span>
-                                        <input id="password"
-                                               name="j_password"
-                                               type="password"
-                                               autocomplete="off"
-                                               class="form-control"/>
-                                    </div>
-                                </div>
-                                <div class="col checkbox-col col-xs-12 col-sm-7">
-                                    <div class="checkbox">
-                                        <input id="donotcache"
-                                               type="checkbox"
-                                               name="donotcache"
-                                               value="1">
-                                        <label for="donotcache">Don't remember login.</label>
-                                    </div>
-                                </div>
-                                <div class="col col-xs-12 col-sm-5">
-                                    <button type="submit" class="btn" name="_eventId_proceed">SSO login</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-        <div class="col col-md-6 col-lg-4 fixed-height" id="cvut-login-info">
-            <div class="valign-middle">
-                <h1>Rules to protect your password</h1>
-                <ol>
-                    <li>Never disclose your password to anyone.</li>
-                    <li>Protect your password for picking it by watching.</li>
-                    <li>Do not type in your password on untrusted devices.</li>
-                    <li>Do not type in your password in untrusted applications.</li>
-                    <li>Do not leave your password in accessible places.</li>
-                </ol>
-                <div class="motto">
-                    <p>&bdquo;Your password is your key,</p>
-                    <p>keep it secured!&ldquo;</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" id="basic-info">
-        <div class="col col-xs-12 col-md-4">
-            <h2>What is SSO?</h2>
-            <p>It means Single Sign-On. You can get access to all participant applications by onetime entering your username and password.</p>
-            <p class="more-info"><a href="https://ist.cvut.cz/pojmy/federace-cvutid/">I want to know more</a></p>
-            <img class="icon" src="/idp/assets-cvut/images/icon-what.png" alt="Icon: What is SSO?"/>
-        </div>
-        <div class="col col-xs-12 col-md-4">
-            <h2>How does it work?</h2>
-            <p>Automatic login works until browser is closed. Expiration time of session is 10 hours.</p>
-            <p class="more-info"><a href="https://ist.cvut.cz/nase-sluzby/single-sign-on/">I want to know more</a></p>
-            <img class="icon" src="/idp/assets-cvut/images/icon-how.png" alt="Icon: How does it work?"/>
-        </div>
-        <div class="col col-xs-12 col-md-4">
-            <h2>What about security?</h2>
-            <p>To get maximum security use trusted devices only.</p>
-            <p class="more-info"><a href="https://ist.cvut.cz/pojmy/vyhody-a-nevyhody-prihlaseni-sso/">I want to know more</a></p>
-            <img class="icon" src="/idp/assets-cvut/images/icon-secure.png" alt="Icon: What about security?"/>
-        </div>
-    </div>
-</div>
-<div class="container" id="cvut-footer">
-    <div class="row">
-        <div class="col col-xs-12 col-md-6 pull-right">
-            <nav id="cvut-service-nav">
-                <a href="https://usermap.cvut.cz/profile/tolarvla/" target="_blank">Report problem</a>
-            </nav>
-        </div>
-        <div class="col col-xs-12 col-md-6">
-            <div id="cvut-copyright">©&nbsp;2014 Czech&nbsp;technical&nbsp;university&nbsp;in&nbsp;Prague<br/>Powered&nbsp;by Computing&nbsp;and&nbsp;informations&nbsp;centre</div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+<?xml version='1.0' encoding='utf-8'?>
+<disc:manifest
+        xmlns:common="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+        xmlns:reg="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+        xmlns:disc="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+        xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+        xmlns:iias="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+        xmlns:echo="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+        xmlns:disc-e="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+        xmlns:sec-ctls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+        xmlns:sec-csig="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+        xmlns:sec-none="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
+        xmlns:sec-stls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+        xmlns:sec-ssig="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+        xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+        xmlns:iias-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+        xmlns:iias-appl="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+        xmlns:iias-appl-cnr="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+        xmlns:fsheet="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+        xmlns:ounits="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <disc:host>
+        <common:admin-email>developers@cvut.cz</common:admin-email>
+        <common:admin-provider>CTU (Mobility)</common:admin-provider>
+        <common:admin-notes>Erasmus Without Paper API module for Mobility application</common:admin-notes>
+        <reg:apis-implemented>
+            <disc-e:discovery version="6.0.0">
+                    <disc-e:url>https://mobility-test.is.cvut.cz/ewp/api/manifest</disc-e:url>
+            </disc-e:discovery>
+            <echo:echo version="2.0.1">
+                 <echo:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </echo:http-security>
+                    <echo:url>https://mobility-test.is.cvut.cz/ewp/api/echo</echo:url>
+            </echo:echo>
+            <inst:institutions version="2.2.0">
+                 <inst:http-security>
+                    <sec:client-auth-methods>
+                        <sec-none:anonymous/>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </inst:http-security>
+                    <inst:url>https://mobility-test.is.cvut.cz/ewp/api/institutions</inst:url>
+                    <inst:max-hei-ids>1</inst:max-hei-ids>
+            </inst:institutions>
+            <iias:iias version="6.0.1">
+                 <iias:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </iias:http-security>
+                    <iias:get-url>https://mobility-test.is.cvut.cz/ewp/api/iias/get</iias:get-url>
+                    <iias:max-iia-ids>1</iias:max-iia-ids>
+                    <iias:max-iia-codes>1</iias:max-iia-codes>
+                    <iias:index-url>https://mobility-test.is.cvut.cz/ewp/api/iias/index</iias:index-url>
+            </iias:iias>
+            <iias-cnr:iia-cnr version="2.0.2">
+                 <iias-cnr:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </iias-cnr:http-security>
+                    <iias-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/cnr</iias-cnr:url>
+            </iias-cnr:iia-cnr>
+            <iias-appl:iias-approval version="1.0.0">
+                 <iias-appl:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </iias-appl:http-security>
+                    <iias-appl:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval</iias-appl:url>
+                    <iias-appl:max-iia-ids>1</iias-appl:max-iia-ids>
+            </iias-appl:iias-approval>
+            <iias-appl-cnr:iia-approval-cnr version="1.0.0">
+                 <iias-appl-cnr:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </iias-appl-cnr:http-security>
+                    <iias-appl-cnr:url>https://mobility-test.is.cvut.cz/ewp/api/iias/approval/cnr</iias-appl-cnr:url>
+            </iias-appl-cnr:iia-approval-cnr>
+            <fsheet:factsheet version="1.0.0">
+                 <fsheet:http-security>
+                    <sec:client-auth-methods>
+                        
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </fsheet:http-security>
+                    <fsheet:url>https://mobility-test.is.cvut.cz/ewp/api/factsheet</fsheet:url>
+                    <fsheet:max-hei-ids>1</fsheet:max-hei-ids>
+            </fsheet:factsheet>
+            <ounits:organizational-units version="2.1.1">
+                 <ounits:http-security>
+                    <sec:client-auth-methods>
+                        <sec-none:anonymous/>
+                        <sec-ctls:tlscert allows-self-signed="true"/>
+                        <sec-csig:httpsig />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert />
+                    </sec:server-auth-methods>
+                </ounits:http-security>
+                    <ounits:url>https://mobility-test.is.cvut.cz/ewp/api/organization-units</ounits:url>
+                    <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
+                    <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
+            </ounits:organizational-units>
+        </reg:apis-implemented>
+        <disc:institutions-covered>
+            <reg:hei id="cvut.cz">
+                <reg:other-id type="pic">999848744</reg:other-id>
+                <reg:other-id type="erasmus-charter">51698-EPP-1-2014-1-CZ-EPPKA3-ECHE</reg:other-id>
+                <reg:other-id type="erasmus">CZ PRAHA10</reg:other-id>
+                <reg:name xml:lang="cs">České vysoké učení technické v Praze</reg:name>
+                <reg:name xml:lang="en">Czech Technical University in Prague</reg:name>
+            </reg:hei>
+        </disc:institutions-covered>
+        <disc:client-credentials-in-use>
+            <disc:certificate>
+                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
+            </disc:certificate>
+            <disc:rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvEvWnPSgcPhdSDVHmeNh7rDUt7VEmPj0a1F224Q1Njsf9NuBZtbaQlzOX38Rp5XSBSQywk0pfL3ec4q9OBKI4+7SN5l6oypR/ktFJGsXis0S7dc+qBSmUvBqvusTlalS0ilckY6Jx2Q0tDCrT+Jrzp0hKvPdDybFZjPhehANjPMaS99fBY+Hk0NDLy6buqlUzH4YTQ0evAcfbsjVq3Zb/U49poPrsMp71Y9hdD1sYsGEdb747Qfc32yJ/XxHzBxfnmALMWPU80gNsJnWJpTuuO96aUjyqM+HYh0AJjIETro6GYmYwDRFUy/dPHQFiAJAf4Dw0rIaLpqx/zPqeTkn3wIDAQAB
+            </disc:rsa-public-key>
+        </disc:client-credentials-in-use>
+        <disc:server-credentials-in-use>
+            <disc:rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvEvWnPSgcPhdSDVHmeNh7rDUt7VEmPj0a1F224Q1Njsf9NuBZtbaQlzOX38Rp5XSBSQywk0pfL3ec4q9OBKI4+7SN5l6oypR/ktFJGsXis0S7dc+qBSmUvBqvusTlalS0ilckY6Jx2Q0tDCrT+Jrzp0hKvPdDybFZjPhehANjPMaS99fBY+Hk0NDLy6buqlUzH4YTQ0evAcfbsjVq3Zb/U49poPrsMp71Y9hdD1sYsGEdb747Qfc32yJ/XxHzBxfnmALMWPU80gNsJnWJpTuuO96aUjyqM+HYh0AJjIETro6GYmYwDRFUy/dPHQFiAJAf4Dw0rIaLpqx/zPqeTkn3wIDAQAB
+            </disc:rsa-public-key>
+        </disc:server-credentials-in-use>
+    </disc:host>
+</disc:manifest>
