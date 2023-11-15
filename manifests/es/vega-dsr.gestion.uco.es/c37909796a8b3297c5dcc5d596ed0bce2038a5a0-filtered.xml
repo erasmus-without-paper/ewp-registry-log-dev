@@ -1,5 +1,5 @@
 <ns12:manifest
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -23,8 +23,9 @@
     xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v5/manifest-entry.xsd"
+    xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-monitoring/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
@@ -34,13 +35,14 @@
 >
     <ns12:host>
         <ns10:admin-email>erasmus.estudios@uco.es</ns10:admin-email>
+        <ns10:admin-provider>SIGMA Gestión Universitaria, AIE (MP)</ns10:admin-provider>
         <ns10:admin-notes>UCO EWP Dev Manifest</ns10:admin-notes>
         <ns11:apis-implemented>
-            <ns32:discovery version="5.0.0">
-                <ns32:url>https://vega-dsr.gestion.uco.es/ewp/rest/manifest.xml</ns32:url>
-            </ns32:discovery>
-            <ns31:echo version="2.0.1">
-                <ns31:http-security>
+            <ns33:discovery version="6.0.0">
+                <ns33:url>https://vega-dsr.gestion.uco.es/ewp/rest/manifest.xml</ns33:url>
+            </ns33:discovery>
+            <ns32:echo version="2.0.1">
+                <ns32:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
                     </ns14:client-auth-methods>
@@ -54,10 +56,10 @@
                     <ns14:response-encryption-methods>
                         <ns8:tls/>
                     </ns14:response-encryption-methods>
-                </ns31:http-security>
-                <ns31:url>https://vega-dsr.gestion.uco.es/ewp/rest/echo</ns31:url>
-            </ns31:echo>
-            <ns30:institutions version="2.1.0">
+                </ns32:http-security>
+                <ns32:url>https://vega-dsr.gestion.uco.es/ewp/rest/echo</ns32:url>
+            </ns32:echo>
+            <ns30:institutions version="2.2.0">
                 <ns30:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -96,7 +98,7 @@
                 <ns29:max-ounit-ids>5</ns29:max-ounit-ids>
                 <ns29:max-ounit-codes>5</ns29:max-ounit-codes>
             </ns29:organizational-units>
-            <ns22:omobilities version="0.16.0">
+            <ns22:omobilities version="1.0.0">
                 <ns22:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -135,7 +137,7 @@
                 <ns18:get-url>https://vega-dsr.gestion.uco.es/ewp/rest/imobility/get</ns18:get-url>
                 <ns18:max-omobility-ids>5</ns18:max-omobility-ids>
             </ns18:imobilities>
-            <ns21:omobility-cnr version="0.4.1">
+            <ns21:omobility-cnr version="1.0.0">
                 <ns21:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -154,7 +156,7 @@
                 <ns21:url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility/cnr</ns21:url>
                 <ns21:max-omobility-ids>5</ns21:max-omobility-ids>
             </ns21:omobility-cnr>
-            <ns19:omobility-la-cnr version="1.0.0">
+            <ns19:omobility-la-cnr version="1.1.0">
                 <ns19:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -171,9 +173,10 @@
                     </ns14:response-encryption-methods>
                 </ns19:http-security>
                 <ns19:url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility-las/cnr</ns19:url>
+                <ns19:stats-url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility-las/cnr/stats</ns19:stats-url>
                 <ns19:max-omobility-ids>5</ns19:max-omobility-ids>
             </ns19:omobility-la-cnr>
-            <ns20:omobility-las version="1.0.0">
+            <ns20:omobility-las version="1.2.0">
                 <ns20:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -192,9 +195,10 @@
                 <ns20:get-url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility-las/get</ns20:get-url>
                 <ns20:index-url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility-las/index</ns20:index-url>
                 <ns20:update-url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility-las/update</ns20:update-url>
+                <ns20:stats-url>https://vega-dsr.gestion.uco.es/ewp/rest/omobility-las/stats</ns20:stats-url>
                 <ns20:max-omobility-ids>5</ns20:max-omobility-ids>
             </ns20:omobility-las>
-            <ns28:iias version="6.0.1">
+            <ns28:iias version="6.2.0">
                 <ns28:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -214,8 +218,9 @@
                 <ns28:max-iia-ids>5</ns28:max-iia-ids>
                 <ns28:max-iia-codes>5</ns28:max-iia-codes>
                 <ns28:index-url>https://vega-dsr.gestion.uco.es/ewp/rest/iias/index</ns28:index-url>
+                <ns28:stats-url>https://vega-dsr.gestion.uco.es/ewp/rest/iias/stats</ns28:stats-url>
             </ns28:iias>
-            <ns25:iia-cnr version="2.0.2">
+            <ns25:iia-cnr version="2.0.3">
                 <ns25:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -233,7 +238,7 @@
                 </ns25:http-security>
                 <ns25:url>https://vega-dsr.gestion.uco.es/ewp/rest/iias/cnr</ns25:url>
             </ns25:iia-cnr>
-            <ns27:iias-approval version="1.0.0">
+            <ns27:iias-approval version="1.1.0">
                 <ns27:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -252,7 +257,7 @@
                 <ns27:url>https://vega-dsr.gestion.uco.es/ewp/rest/iias/approval</ns27:url>
                 <ns27:max-iia-ids>5</ns27:max-iia-ids>
             </ns27:iias-approval>
-            <ns26:iia-approval-cnr version="1.0.0">
+            <ns26:iia-approval-cnr version="1.1.0">
                 <ns26:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -270,7 +275,7 @@
                 </ns26:http-security>
                 <ns26:url>https://vega-dsr.gestion.uco.es/ewp/rest/iias/approval/cnr</ns26:url>
             </ns26:iia-approval-cnr>
-            <ns17:imobility-cnr version="0.1.1">
+            <ns17:imobility-cnr version="1.0.0">
                 <ns17:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
