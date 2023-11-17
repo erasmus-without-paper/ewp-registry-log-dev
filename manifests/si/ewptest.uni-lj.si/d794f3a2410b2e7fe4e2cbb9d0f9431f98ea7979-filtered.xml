@@ -25,7 +25,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/echo</url>
@@ -40,7 +39,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/institutions</url>
@@ -56,7 +54,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/ounits</url>
@@ -73,7 +70,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/iiaApproval</url>
@@ -89,7 +85,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <get-url>https://ewptest.uni-lj.si/ewp/communication/iia/get</get-url>
@@ -108,7 +103,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/iiaCnr</url>
@@ -123,7 +117,6 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/iiaaCnr</url>
@@ -138,12 +131,29 @@
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewptest.uni-lj.si/ewp/communication/factsheet</url>
                 <max-hei-ids>1</max-hei-ids>
             </factsheet>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://ewptest.uni-lj.si/ewp/communication/ola/get</get-url>
+                <index-url>https://ewptest.uni-lj.si/ewp/communication/ola/index</index-url>
+                <update-url>https://ewptest.uni-lj.si/ewp/communication/ola/update</update-url>
+                <stats-url>https://ewptest.uni-lj.si/ewp/communication/ola/stats</stats-url>
+                <max-omobility-ids>1</max-omobility-ids>
+            </omobility-las>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uni-lj.si">
