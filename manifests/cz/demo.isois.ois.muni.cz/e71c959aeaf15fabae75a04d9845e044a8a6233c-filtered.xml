@@ -253,6 +253,58 @@
                 </f1:http-security>
                 <f1:url>https://demo.isois.ois.muni.cz/en/ewp/file/</f1:url>
             </f1:file>
+            <ia7:iias version="7.0.0">
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://demo.isois.ois.muni.cz/en/ewp/iiaGet/</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:index-url>https://demo.isois.ois.muni.cz/en/ewp/iiaIndex/</ia7:index-url>
+                <ia7:stats-url>https://demo.isois.ois.muni.cz/en/ewp/iiaStats/</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://demo.isois.ois.muni.cz/en/ewp/iiaCnr/</iac3:url>
+            </iac3:iia-cnr>
+            <iaasa2:iias-approval version="2.0.0">
+                <iaasa2:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </iaasa2:http-security>
+                <iaasa2:url>https://demo.isois.ois.muni.cz/en/ewp/iiaApproval/</iaasa2:url>
+                <iaasa2:max-iia-ids>1</iaasa2:max-iia-ids>
+            </iaasa2:iias-approval>
+            <iaac2:iia-approval-cnr version="2.0.0">
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://demo.isois.ois.muni.cz/en/ewp/iiaApprovalCnr/</iaac2:url>
+            </iaac2:iia-approval-cnr>
             <mf1:factsheet version="1.2.0">
                 <mf1:http-security>
                     <sec:client-auth-methods>
@@ -267,6 +319,21 @@
                 <mf1:url>https://demo.isois.ois.muni.cz/en/ewp/factsheet/</mf1:url>
                 <mf1:max-hei-ids>1</mf1:max-hei-ids>
             </mf1:factsheet>
+            <om2:omobilities version="2.0.0">
+                <om2:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </om2:http-security>
+                <om2:get-url>https://demo.isois.ois.muni.cz/en/ewp/omobilityGet/</om2:get-url>
+                <om2:index-url>https://demo.isois.ois.muni.cz/en/ewp/omobilityIndex/</om2:index-url>
+                <om2:max-omobility-ids>1</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
             <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
@@ -337,6 +404,21 @@
                 <imc1:url>https://demo.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc1:url>
                 <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
+            <imt2:imobility-tors version="2.0.0">
+                <imt2:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </imt2:http-security>
+                <imt2:get-url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorGet/</imt2:get-url>
+                <imt2:index-url>https://demo.isois.ois.muni.cz/en/ewp/imobilityTorIndex/</imt2:index-url>
+                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
+                <imt2:sends-notifications/>
+            </imt2:imobility-tors>
             <imtc1:imobility-tor-cnr version="1.0.0">
                 <imtc1:http-security>
                     <sec:client-auth-methods>
