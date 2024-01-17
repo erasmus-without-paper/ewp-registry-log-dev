@@ -29,6 +29,18 @@
         <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
         <ns2:admin-provider>TECHNISCHE UNIVERSITÄT WIEN</ns2:admin-provider>
         <apis-implemented>
+            <ns25:echo version="2.0.1">
+                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
+                <ns25:http-security>
+                    <ns5:client-auth-methods>
+                        <ns7:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns8:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns25:http-security>
+                <ns25:url>https://ewptest.tiss.tuwien.ac.at/ewp/echo</ns25:url>
+            </ns25:echo>
             <ns23:iia-approval-cnr version="1.0.0">
                 <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
                 <ns23:http-security>
@@ -179,18 +191,6 @@
                 <ns24:url>https://ewptest.tiss.tuwien.ac.at/ewp/factsheet</ns24:url>
                 <ns24:max-hei-ids>1</ns24:max-hei-ids>
             </ns24:factsheet>
-            <ns25:echo version="2.0.1">
-                <ns2:admin-email>ewp@tiss.tuwien.ac.at</ns2:admin-email>
-                <ns25:http-security>
-                    <ns5:client-auth-methods>
-                        <ns7:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns8:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns25:http-security>
-                <ns25:url>https://ewptest.tiss.tuwien.ac.at/ewp/echo</ns25:url>
-            </ns25:echo>
         </apis-implemented>
         <ns3:institutions-covered>
             <hei id="tuwien.ac.at">
