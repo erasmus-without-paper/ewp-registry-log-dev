@@ -3,6 +3,7 @@
     xmlns:ds="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
     xmlns:fs="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
     xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
     xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
@@ -134,6 +135,18 @@
                 <fs:url>https://devmobion.fil.bg.ac.rs/api/ewpdev/factsheet</fs:url>
                 <fs:max-hei-ids>1</fs:max-hei-ids>
             </fs:factsheet>
+            <file1:file version="1.0.0">
+                <file1:http-security>
+                    <sec:client-auth-methods>
+                        <ns1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <ns3:tlscert/>
+                        <ns2:httpsig/>
+                    </sec:server-auth-methods>
+                </file1:http-security>
+                <file1:url>https://devmobion.fil.bg.ac.rs/api/ewpdev/file-api</file1:url>
+            </file1:file>
         </r:apis-implemented>
         <mf:institutions-covered>
             <r:hei id="dev.bg.ac.rs">
