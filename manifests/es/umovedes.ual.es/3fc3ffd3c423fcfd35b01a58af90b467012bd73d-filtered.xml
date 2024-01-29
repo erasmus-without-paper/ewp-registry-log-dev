@@ -35,6 +35,21 @@
         <admin-provider>University of Almería (UMove)</admin-provider>
         <admin-notes>Provider: University of Almería (UMove)</admin-notes>
         <ns2:apis-implemented>
+            <ns25:discovery version="6.0.0">
+                <ns25:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/manifest</ns25:url>
+            </ns25:discovery>
+            <ns24:echo version="2.0.1">
+                <ns24:http-security>
+                    <ns5:client-auth-methods>
+                        <ns26:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns30:tlscert/>
+                        <ns29:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns24:http-security>
+                <ns24:url>https://umovedes.ual.es/mobility/seam/resource/rest/ewp/echo</ns24:url>
+            </ns24:echo>
             <ns23:institutions version="2.2.0">
                 <ns23:http-security>
                     <ns5:client-auth-methods>
