@@ -62,6 +62,21 @@
         <ns8:admin-email>hostmaster@usos.edu.pl</ns8:admin-email>
         <ns8:admin-provider>MUCI (USOS)</ns8:admin-provider>
         <ns7:apis-implemented>
+            <ns10:discovery version="6.0.0">
+                <ns10:url>https://ewp.demo.usos.edu.pl/ewp/manifest</ns10:url>
+            </ns10:discovery>
+            <ns27:echo version="2.0.1">
+                <ns27:http-security>
+                    <ns11:client-auth-methods>
+                        <ns43:httpsig/>
+                    </ns11:client-auth-methods>
+                    <ns11:server-auth-methods>
+                        <ns52:tlscert/>
+                        <ns51:httpsig/>
+                    </ns11:server-auth-methods>
+                </ns27:http-security>
+                <ns27:url>https://ewp.demo.usos.edu.pl/ewp/echo</ns27:url>
+            </ns27:echo>
             <ns17:institutions version="2.2.0">
                 <ns17:http-security>
                     <ns11:client-auth-methods>
