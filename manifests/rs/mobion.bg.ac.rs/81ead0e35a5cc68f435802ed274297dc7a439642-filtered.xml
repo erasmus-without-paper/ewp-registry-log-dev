@@ -5,10 +5,10 @@
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
     xmlns:fs="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
@@ -70,8 +70,8 @@
                 <ou2:max-ounit-ids>50</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>50</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <ia6:iias version="6.2.0">
-                <ia6:http-security>
+            <ia7:iias version="7.0.0">
+                <ia7:http-security>
                     <sec:client-auth-methods>
                         <ns1:httpsig/>
                     </sec:client-auth-methods>
@@ -79,15 +79,14 @@
                         <ns3:tlscert/>
                         <ns2:httpsig/>
                     </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://mobion.bg.ac.rs/api/ewpdev/iias-get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://mobion.bg.ac.rs/api/ewpdev/iias-index</ia6:index-url>
-                <ia6:stats-url>https://mobion.bg.ac.rs/api/ewpdev/iias-stats</ia6:stats-url>
-            </ia6:iias>
-            <iac2:iia-cnr version="2.0.3">
-                <iac2:http-security>
+                </ia7:http-security>
+                <ia7:get-url>https://mobion.bg.ac.rs/api/ewpdev/iias-get</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:index-url>https://mobion.bg.ac.rs/api/ewpdev/iias-index</ia7:index-url>
+                <ia7:stats-url>https://mobion.bg.ac.rs/api/ewpdev/iias-stats</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
                     <sec:client-auth-methods>
                         <ns1:httpsig/>
                     </sec:client-auth-methods>
@@ -95,11 +94,11 @@
                         <ns3:tlscert/>
                         <ns2:httpsig/>
                     </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://mobion.bg.ac.rs/api/ewpdev/iia-cnr</iac2:url>
-            </iac2:iia-cnr>
-            <iaa1:iias-approval version="1.1.0">
-                <iaa1:http-security>
+                </iac3:http-security>
+                <iac3:url>https://mobion.bg.ac.rs/api/ewpdev/iia-cnr</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval version="2.0.0">
+                <iaa2:http-security>
                     <sec:client-auth-methods>
                         <ns1:httpsig/>
                     </sec:client-auth-methods>
@@ -107,12 +106,12 @@
                         <ns3:tlscert/>
                         <ns2:httpsig/>
                     </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://mobion.bg.ac.rs/api/ewpdev/iias-approval</iaa1:url>
-                <iaa1:max-iia-ids>5</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
-            <iaac1:iia-approval-cnr version="1.1.0">
-                <iaac1:http-security>
+                </iaa2:http-security>
+                <iaa2:url>https://mobion.bg.ac.rs/api/ewpdev/iias-approval</iaa2:url>
+                <iaa2:max-iia-ids>5</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr version="2.0.0">
+                <iaac2:http-security>
                     <sec:client-auth-methods>
                         <ns1:httpsig/>
                     </sec:client-auth-methods>
@@ -120,9 +119,9 @@
                         <ns3:tlscert/>
                         <ns2:httpsig/>
                     </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://mobion.bg.ac.rs/api/ewpdev/iia-approval-cnr</iaac1:url>
-            </iaac1:iia-approval-cnr>
+                </iaac2:http-security>
+                <iaac2:url>https://mobion.bg.ac.rs/api/ewpdev/iia-approval-cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
             <fs:factsheet version="1.1.0">
                 <fs:http-security>
                     <sec:client-auth-methods>
