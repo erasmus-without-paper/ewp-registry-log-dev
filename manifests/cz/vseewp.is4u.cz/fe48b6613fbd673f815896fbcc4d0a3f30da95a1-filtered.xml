@@ -21,6 +21,20 @@
         <admin-email>uis-ewp@akat.is4u.cz</admin-email>
         <admin-provider>IS4U</admin-provider>
         <ns2:apis-implemented>
+            <ia2:iias version="7.0.0">
+                <ia2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </ia2:http-security>
+                <ia2:get-url>https://vseewp.is4u.cz/ewp/iias/get.pl</ia2:get-url>
+                <ia2:max-iia-ids>1</ia2:max-iia-ids>
+                <ia2:index-url>https://vseewp.is4u.cz/ewp/iias/index.pl</ia2:index-url>
+                <ia2:stats-url>https://vseewp.is4u.cz/ewp/iias/stats.pl</ia2:stats-url>
+            </ia2:iias>
             <iac2:iia-cnr version="3.0.0">
                 <iac2:http-security>
                     <sec:client-auth-methods>
