@@ -167,6 +167,26 @@
                 <olas:stats-url>https://ewp.des.upc.edu/api/omobility-las/stats</olas:stats-url>
                 <olas:max-omobility-ids>10</olas:max-omobility-ids>
             </olas:omobility-las>
+            <olascnr:omobility-la-cnr version="1.1.0">
+                <olascnr:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthtls1:tlscert/>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <reqenc:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <respenc:tls/>
+                    </sec:response-encryption-methods>
+                </olascnr:http-security>
+                <olascnr:url>https://ewp.des.upc.edu/api/omobility-las/cnr</olascnr:url>
+                <olascnr:stats-url>https://ewp.des.upc.edu/api/omobility-las-cnr/stats</olascnr:stats-url>
+                <olascnr:max-omobility-ids>10</olascnr:max-omobility-ids>
+            </olascnr:omobility-la-cnr>
             <imob:imobilities version="1.0.0">
                 <imob:http-security>
                     <sec:client-auth-methods>
@@ -181,6 +201,18 @@
                 <imob:max-omobility-ids>10</imob:max-omobility-ids>
                 <imob:sends-notifications/>
             </imob:imobilities>
+            <file1:file version="1.0.0">
+                <file1:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthtls1:tlscert/>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                </file1:http-security>
+                <file1:url>https://ewp.des.upc.edu/api/file</file1:url>
+            </file1:file>
         </r:apis-implemented>
         <mf:institutions-covered>
             <hei
