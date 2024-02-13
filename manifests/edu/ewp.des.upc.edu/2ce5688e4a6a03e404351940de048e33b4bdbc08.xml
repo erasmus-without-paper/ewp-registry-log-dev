@@ -23,9 +23,9 @@
  xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
  xmlns:imob="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
  xmlns:fact="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+ xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
 
-          xsi:schemaLocation ="
-   https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+          xsi:schemaLocation ="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
    https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
 
    https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
@@ -35,8 +35,7 @@
    https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
 
    https://github.com/erasmus-without-paper/ewp-specs-api-registry/blob/stable-v1/manifest-entry.xsd
-   https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/manifest-entry.xsd"
->
+   https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/manifest-entry.xsd">
 <host>
 <ewp:admin-email>prisma.admin.ewp@mylist.upc.edu</ewp:admin-email>
 <ewp:admin-provider>UNIVERSITAT POLITÈCNICA DE CATALUNYA</ewp:admin-provider>
@@ -171,7 +170,7 @@
     <cliauthsig1:httpsig/>
    </sec:client-auth-methods>
    <sec:server-auth-methods>
-    <srvauthtls1:tlscert/>
+    <srvauthtls1:tlscert/>xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
     <srvauthsig1:httpsig/>
    </sec:server-auth-methods>
    <sec:request-encryption-methods>
@@ -199,6 +198,18 @@
   <imob:max-omobility-ids>10</imob:max-omobility-ids>
   <imob:sends-notifications/>
  </imob:imobilities>
+ <file1:file version="1.0.0">
+  <file1:http-security>
+   <sec:client-auth-methods>
+    <cliauthsig1:httpsig/>
+   </sec:client-auth-methods>
+   <sec:server-auth-methods>
+    <srvauthtls1:tlscert/>
+    <srvauthsig1:httpsig/>
+   </sec:server-auth-methods>
+  </file1:http-security>
+  <file1:url>https://demo1-ewp.demo.moveon4.com/v1/file/get</file1:url>
+ </file1:file>
 </r:apis-implemented>
 <mf:institutions-covered>
 <hei id="upc.edu" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
