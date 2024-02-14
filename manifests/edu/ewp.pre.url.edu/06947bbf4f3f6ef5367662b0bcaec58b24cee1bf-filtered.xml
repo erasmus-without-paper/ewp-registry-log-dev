@@ -2,10 +2,10 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ia6="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:iaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:iaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
     xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
@@ -56,7 +56,7 @@
     <host>
         <ewp:admin-email>ewp@url.edu</ewp:admin-email>
         <ewp:admin-provider>Universitat Ramon Llull</ewp:admin-provider>
-        <ewp:admin-notes>DEV Manifest 15.05.2023</ewp:admin-notes>
+        <ewp:admin-notes>DEV Manifest 24.01.2024</ewp:admin-notes>
         <r:apis-implemented>
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
@@ -184,55 +184,54 @@
                 <omlc1:stats-url>https://ewp.pre.url.edu/api/stats/omla/in</omlc1:stats-url>
                 <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
             </omlc1:omobility-la-cnr>
-            <ia6:iias version="6.2.0">
-                <ia6:http-security>
+            <ia7:iias version="7.0.0">
+                <ia7:http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </ia6:http-security>
-                <ia6:get-url>https://ewp.pre.url.edu/api/iia601/get</ia6:get-url>
-                <ia6:max-iia-ids>1</ia6:max-iia-ids>
-                <ia6:max-iia-codes>1</ia6:max-iia-codes>
-                <ia6:index-url>https://ewp.pre.url.edu/api/iia601/index</ia6:index-url>
-                <ia6:stats-url>https://ewp.pre.url.edu/api/stats/iia</ia6:stats-url>
-            </ia6:iias>
-            <iac2:iia-cnr version="2.0.3">
-                <iac2:http-security>
+                </ia7:http-security>
+                <ia7:get-url>https://ewp.pre.url.edu/api/iia700/get</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:index-url>https://ewp.pre.url.edu/api/iia700/index</ia7:index-url>
+                <ia7:stats-url>https://ewp.pre.url.edu/api/stats/iia</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </iac2:http-security>
-                <iac2:url>https://ewp.pre.url.edu/api/iia/cnr203</iac2:url>
-            </iac2:iia-cnr>
-            <iaa1:iias-approval version="1.1.0">
-                <iaa1:http-security>
+                </iac3:http-security>
+                <iac3:url>https://ewp.pre.url.edu/api/iia/cnr300</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval version="2.0.0">
+                <iaa2:http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </iaa1:http-security>
-                <iaa1:url>https://ewp.pre.url.edu/api/iia/approval100</iaa1:url>
-                <iaa1:max-iia-ids>1</iaa1:max-iia-ids>
-            </iaa1:iias-approval>
-            <iaac1:iia-approval-cnr version="1.1.0">
-                <iaac1:http-security>
+                </iaa2:http-security>
+                <iaa2:url>https://ewp.pre.url.edu/api/iia/approval200</iaa2:url>
+                <iaa2:max-iia-ids>1</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr version="2.0.0">
+                <iaac2:http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </iaac1:http-security>
-                <iaac1:url>https://ewp.pre.url.edu/api/iia/approval/cnr100</iaac1:url>
-            </iaac1:iia-approval-cnr>
+                </iaac2:http-security>
+                <iaac2:url>https://ewp.pre.url.edu/api/iia/approval/cnr200</iaac2:url>
+            </iaac2:iia-approval-cnr>
             <file1:file version="1.0.0">
                 <file1:http-security>
                     <sec:client-auth-methods>
