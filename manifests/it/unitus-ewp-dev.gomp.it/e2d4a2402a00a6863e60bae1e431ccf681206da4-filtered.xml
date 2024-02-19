@@ -91,8 +91,8 @@
                 <supports-modified-since>false</supports-modified-since>
             </simple-course-replication>
             <iias
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-                version="6.2.0"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
             >
                 <http-security>
                     <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
@@ -102,11 +102,10 @@
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </server-auth-methods>
                 </http-security>
-                <get-url>https://unitus-ewp-dev.gomp.it/api/ewp/iaasget620</get-url>
+                <get-url>https://unitus-ewp-dev.gomp.it/api/ewp/iaasget700</get-url>
                 <max-iia-ids>255</max-iia-ids>
-                <max-iia-codes>255</max-iia-codes>
-                <index-url>https://unitus-ewp-dev.gomp.it/api/ewp/iaasindex620</index-url>
-                <stats-url>https://unitus-ewp-dev.gomp.it/api/ewp/iaasstats620</stats-url>
+                <index-url>https://unitus-ewp-dev.gomp.it/api/ewp/iaasindex700</index-url>
+                <stats-url>https://unitus-ewp-dev.gomp.it/api/ewp/iaasstats700</stats-url>
             </iias>
             <iia-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
@@ -123,8 +122,8 @@
                 <url>https://unitus-ewp-dev.gomp.it/api/ewp/iiacnr</url>
             </iia-cnr>
             <iias-approval
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-                version="1.1.0"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
             >
                 <http-security>
                     <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
@@ -134,7 +133,7 @@
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </server-auth-methods>
                 </http-security>
-                <url>https://unitus-ewp-dev.gomp.it/api/ewp/iiasappr110</url>
+                <url>https://unitus-ewp-dev.gomp.it/api/ewp/iiasappr200</url>
                 <max-iia-ids>255</max-iia-ids>
             </iias-approval>
             <iia-approval-cnr
@@ -248,6 +247,20 @@
                 <url>https://unitus-ewp-dev.gomp.it/api/ewp/imobilitycnr</url>
                 <max-omobility-ids>255</max-omobility-ids>
             </imobility-cnr>
+            <file
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </client-auth-methods>
+                    <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </server-auth-methods>
+                </http-security>
+                <url>https://unitus-ewp-dev.gomp.it/api/ewp/fileGet</url>
+            </file>
         </apis-implemented>
         <institutions-covered>
             <hei
