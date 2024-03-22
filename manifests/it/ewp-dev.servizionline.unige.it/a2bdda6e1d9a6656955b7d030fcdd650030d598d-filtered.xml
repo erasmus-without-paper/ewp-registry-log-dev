@@ -1,27 +1,26 @@
 <ns3:manifest
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-    xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
-    xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
-    xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+    xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns18="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns21="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
     xmlns:ns22="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"
-    xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
-    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-rsa-aes128gcm/tree/stable-v1"
-    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-rsa-aes128gcm/tree/stable-v1"
+    xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
+    xmlns:ns9="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
 >
     <ns3:host>
         <admin-email>ewp@yesido.it</admin-email>
@@ -31,153 +30,152 @@
             xsi:type="MultilineStringWithOptionalLang"
         >Provider: University of Genoa</admin-notes>
         <ns2:apis-implemented>
-            <ns4:discovery version="6.0.0">
-                <ns4:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/manifest.xml</ns4:url>
-            </ns4:discovery>
-            <ns12:echo version="2.0.1">
-                <ns12:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns28:tlscert/>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
-                        <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
-                        <ns22:tls/>
-                    </ns5:response-encryption-methods>
-                </ns12:http-security>
-                <ns12:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/primary/echo</ns12:url>
-            </ns12:echo>
-            <ns19:institutions version="2.2.0">
-                <ns19:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
-                        <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
-                        <ns22:tls/>
-                    </ns5:response-encryption-methods>
-                </ns19:http-security>
-                <ns19:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/gp/institutions</ns19:url>
-                <ns19:max-hei-ids>1</ns19:max-hei-ids>
-            </ns19:institutions>
-            <ns6:organizational-units version="2.1.1">
-                <ns6:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
-                        <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
-                        <ns22:tls/>
-                    </ns5:response-encryption-methods>
-                </ns6:http-security>
-                <ns6:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/gp/orgunits</ns6:url>
-                <ns6:max-ounit-ids>1</ns6:max-ounit-ids>
-                <ns6:max-ounit-codes>1</ns6:max-ounit-codes>
-            </ns6:organizational-units>
-            <ns13:factsheet version="1.2.0">
+            <ns14:Discovery version="6.0.0">
+                <ns14:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/manifest.xml</ns14:url>
+            </ns14:Discovery>
+            <ns13:Echo version="2.0.1">
                 <ns13:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
                         <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
                         <ns22:tls/>
-                    </ns5:response-encryption-methods>
+                    </ns4:response-encryption-methods>
                 </ns13:http-security>
-                <ns13:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/factsheet</ns13:url>
-                <ns13:max-hei-ids>1</ns13:max-hei-ids>
-            </ns13:factsheet>
-            <ns18:iias version="7.0.0">
-                <ns18:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
+                <ns13:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/primary/echo</ns13:url>
+            </ns13:Echo>
+            <ns7:Institutions version="2.2.0">
+                <ns7:http-security>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
                         <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
                         <ns22:tls/>
-                    </ns5:response-encryption-methods>
-                </ns18:http-security>
-                <ns18:get-url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/get</ns18:get-url>
-                <ns18:max-iia-ids>1</ns18:max-iia-ids>
-                <ns18:index-url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/index</ns18:index-url>
-            </ns18:iias>
-            <ns16:iia-cnr version="3.0.0">
-                <ns16:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
+                    </ns4:response-encryption-methods>
+                </ns7:http-security>
+                <ns7:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/gp/institutions</ns7:url>
+                <ns7:max-hei-ids>1</ns7:max-hei-ids>
+            </ns7:Institutions>
+            <ns5:OrganizationalUnits version="2.1.1">
+                <ns5:http-security>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
                         <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
                         <ns22:tls/>
-                    </ns5:response-encryption-methods>
-                </ns16:http-security>
-                <ns16:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/cnr</ns16:url>
-            </ns16:iia-cnr>
-            <ns11:iias-approval version="2.0.0">
-                <ns11:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
+                    </ns4:response-encryption-methods>
+                </ns5:http-security>
+                <ns5:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/gp/orgunits</ns5:url>
+                <ns5:max-ounit-ids>1</ns5:max-ounit-ids>
+                <ns5:max-ounit-codes>1</ns5:max-ounit-codes>
+            </ns5:OrganizationalUnits>
+            <ns12:Factsheet version="1.2.0">
+                <ns12:http-security>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
                         <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
                         <ns22:tls/>
-                    </ns5:response-encryption-methods>
-                </ns11:http-security>
-                <ns11:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/approval</ns11:url>
-                <ns11:max-iia-ids>1</ns11:max-iia-ids>
-            </ns11:iias-approval>
-            <ns9:iia-approval-cnr version="2.0.0">
+                    </ns4:response-encryption-methods>
+                </ns12:http-security>
+                <ns12:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/factsheet</ns12:url>
+                <ns12:max-hei-ids>1</ns12:max-hei-ids>
+            </ns12:Factsheet>
+            <ns9:Iias7 version="7.0.0">
                 <ns9:http-security>
-                    <ns5:client-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns14:httpsig/>
-                    </ns5:server-auth-methods>
-                    <ns5:request-encryption-methods>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
                         <ns22:tls/>
-                    </ns5:request-encryption-methods>
-                    <ns5:response-encryption-methods>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
                         <ns22:tls/>
-                    </ns5:response-encryption-methods>
+                    </ns4:response-encryption-methods>
                 </ns9:http-security>
-                <ns9:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/approvalCnr</ns9:url>
-            </ns9:iia-approval-cnr>
+                <ns9:get-url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/get</ns9:get-url>
+                <ns9:max-iia-ids>1</ns9:max-iia-ids>
+                <ns9:index-url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/index</ns9:index-url>
+            </ns9:Iias7>
+            <ns11:IiaCnr3 version="3.0.0">
+                <ns11:http-security>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
+                        <ns22:tls/>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
+                        <ns22:tls/>
+                    </ns4:response-encryption-methods>
+                </ns11:http-security>
+                <ns11:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/cnr</ns11:url>
+            </ns11:IiaCnr3>
+            <ns16:IiasApproval2 version="2.0.0">
+                <ns16:http-security>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
+                        <ns22:tls/>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
+                        <ns22:tls/>
+                    </ns4:response-encryption-methods>
+                </ns16:http-security>
+                <ns16:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/approval</ns16:url>
+                <ns16:max-iia-ids>1</ns16:max-iia-ids>
+            </ns16:IiasApproval2>
+            <ns18:IiaApprovalCnr2 version="2.0.0">
+                <ns18:http-security>
+                    <ns4:client-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:client-auth-methods>
+                    <ns4:server-auth-methods>
+                        <ns19:httpsig/>
+                    </ns4:server-auth-methods>
+                    <ns4:request-encryption-methods>
+                        <ns22:tls/>
+                    </ns4:request-encryption-methods>
+                    <ns4:response-encryption-methods>
+                        <ns22:tls/>
+                    </ns4:response-encryption-methods>
+                </ns18:http-security>
+                <ns18:url>https://ewp-dev.servizionline.unige.it/erasmus/publics/api/iia/v7/approvalCnr</ns18:url>
+            </ns18:IiaApprovalCnr2>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="unige.it">
@@ -188,11 +186,10 @@
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:certificate>MIIHczCCBVugAwIBAgIQWNZ3LF8N4GrH9Pp6GnLWWzANBgkqhkiG9w0BAQwFADBEMQswCQYDVQQGEwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENBIDQwHhcNMjQwMjA3MDAwMDAwWhcNMjUwMjA2MjM1OTU5WjBzMQswCQYDVQQGEwJJVDEPMA0GA1UECBMGR2Vub3ZhMSowKAYDVQQKEyFVbml2ZXJzaXRhJyBEZWdsaSBTdHVkaSBEaSBHZW5vdmExJzAlBgNVBAMTHmV3cC1kZXYuc2Vydml6aW9ubGluZS51bmlnZS5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKKD4Y6wiA5NgG4p5jYzEoJ9mdW0YcNG045uU3eCOST60ejz51QD7sGKXWh5MHdWR09+NAzDV2vYaAn7puVJNaCq44g9VLC76hZyXdEsFWKTk4WxcEvMKeb0bYOSl+EpJrSKhpjgw0hdQwzc5hbcnIyOsUpgPob4PzJbdtnB7/dK92/712rRxOqLlyCA/uHBsZgRmIzgOiBgkMlJQUOTtz4/aZgAv9ssghzycghjs79mQ7xavAeheO9s6pf8ZFm9kEjIBbOq9keWGjBemTE38C6Wi85kDIF4GhDemuFWCyX7sgmFaXcihmS9ZcUNmQe48QGZ9Xx/9FYnKDTGbX/VXrUCAwEAAaOCAzAwggMsMB8GA1UdIwQYMBaAFG8dNUkQbDL6WaCevIroH5W+cXoMMB0GA1UdDgQWBBSP0kgolNJ4OUcu31sQhbudNy/dVzAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQICTzAlMCMGCCsGAQUFBwIBFhdodHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgIwPwYDVR0fBDgwNjA0oDKgMIYuaHR0cDovL0dFQU5ULmNybC5zZWN0aWdvLmNvbS9HRUFOVE9WUlNBQ0E0LmNybDB1BggrBgEFBQcBAQRpMGcwOgYIKwYBBQUHMAKGLmh0dHA6Ly9HRUFOVC5jcnQuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcnQwKQYIKwYBBQUHMAGGHWh0dHA6Ly9HRUFOVC5vY3NwLnNlY3RpZ28uY29tMIIBfQYKKwYBBAHWeQIEAgSCAW0EggFpAWcAdQDPEVbu1S58r/OHW9lpLpvpGnFnSrAX7KwB0lt3zsw7CAAAAY2BAvtgAAAEAwBGMEQCIDSlI0xm3wtvLv5PvBeAgZRCPD3Oesn/I3mpA2hOf/FFAiAD8eeirR+yCtezCQIhna8Jc4/WOjtOQZqJozIGL03cPgB2AKLjCuRF772tm3447Udnd1PXgluElNcrXhssxLlQpEfnAAABjYEC+4QAAAQDAEcwRQIhAOTsm3ATJvT9ecRryIevY46rnYMZqe4RmI9rgJj+4pghAiBPWjrbfZeHGbyAYY23MJyou8d6AH7YnseAZ1rLLFWHGgB2AE51oydcmhDDOFts1N8/Uusd8OCOG41pwLH6ZLFimjnfAAABjYEC+4gAAAQDAEcwRQIgI2XLzu3nEP9G68lwgYVFWVisuEBOMR8U62r4WYHdeYwCIQDx2dfflt7NabfO52m2L0jhQmMEJ/W/CiOYeP7CUdnDBDApBgNVHREEIjAggh5ld3AtZGV2LnNlcnZpemlvbmxpbmUudW5pZ2UuaXQwDQYJKoZIhvcNAQEMBQADggIBAJq6idFi2StvfRPRjnYfEj3ihwQW/o+TQEtiK4CFSoeJa8uSKbXkfqsy8cw7FpJmHRLoQEXJYRzYOkZNBhGh72B15i/IbMweayXnGsH7Job9fs1Jxd5WPkwSWAwKFcsbqt55WuPmkUVeAWY7WlRlhBGSGkucYlzSWMhN/7BA54F88StvdWp+rZnabrdhkYKqRkHFJ+thbzaYwjtCpufpxYp/kN/KnXX/SEH19z8U6sPPgnSnGK4QJrjb83F/yGaod/ttu3RSwGVhCbh5HIivWWs8c8jJ0xuOLOpZ8divXnkACibcMwxCYB95C/A5KulS2a3A7miGK5QAL/vOjCovDtSPOZlx7yuixKZJyGqo0vvfJhFurVSFCdXwuBuUEXwbmbOQhPQlaxqHHAo0Wh+lzuF8uMDAGGNTk8EWny9CwjFdquGCPD8tMrQFM/xU08xmMSskBH7q60DI3ncS0w+gvTc+D3W6sEGeV/of3vDHC9GwJTrfTwSkZYvNn21UIyxBclJpr1h+Ng2ndvojDYD/f24I3uKOgH5r+xu+2+9c/ip9lPHBnBwMoIOOucqsGYx29LCOpW06ZVkniObmjtSwtnAGY4IxlyhenXTYNvGh4wqDJyw3qKZIMtmzasNdp8Gi8l/snheytnvu3JdnleZs5GHRRiFry6h8m0S7YRl+D0n9</ns3:certificate>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAug2njTLHQwp6HdX5L7/BbODMyEJc05Wx0uDzMRqGAdiozg+sB4fNoaBrxXSo/Hi6yz0cRf9Bj6rc9FWaa4y+eiFD6rzx4B5sSnGP9tE0Ofv7bzNRUnw3yoqZxf3+FFUTGTycOzgMw8gPKRzCR4PYA96aof3lQL12AgwTGsAH/iUMayF/EKFZaUsMOTtRWc9zT0j+hXORuHQ7ZK+2fDMADnsfAuI0mpll31/mJPPIoKlxwU9XpsB9vK8aMH+QuOINq4/65O7063videmw8JcaI/5eieBmtkQFqLMvMWjOTxYFXgNBrz+28KZWItTZv2g//4dMpZEs/4QKzg4kQPdGFQIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtn0BvKFh1p9TArDehEZBwKAGy8ivnkHhwABkWCGz/SdcVkQGeNvklzB4QjXbyzHqVc9U6nSwlpoCK5jmiXCRCyrhXIEb8qgr0bmWse2o5Xkjef3zjg6KjzGfei7NHc3bz9HsC6CAI777XqOxytJbnM7WKLTycrdIP4Q9m6528Q7E1SHRKAQiJ7AkAjxkY/RkPR4cqszvVsA5saE+m1A3z/gU+efuf6ElSgVArn9JqN0xfkXManiXC53rxGsj36F3WGU0Z4xFuTVg0gW82vUyLRG+nHEp8Tv8tVNfKTtLmjfi8bcIQFDsbdGXDS8zEA14mGgzZfkKsVstffYAl9NMsQIDAQAB</ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAug2njTLHQwp6HdX5L7/BbODMyEJc05Wx0uDzMRqGAdiozg+sB4fNoaBrxXSo/Hi6yz0cRf9Bj6rc9FWaa4y+eiFD6rzx4B5sSnGP9tE0Ofv7bzNRUnw3yoqZxf3+FFUTGTycOzgMw8gPKRzCR4PYA96aof3lQL12AgwTGsAH/iUMayF/EKFZaUsMOTtRWc9zT0j+hXORuHQ7ZK+2fDMADnsfAuI0mpll31/mJPPIoKlxwU9XpsB9vK8aMH+QuOINq4/65O7063videmw8JcaI/5eieBmtkQFqLMvMWjOTxYFXgNBrz+28KZWItTZv2g//4dMpZEs/4QKzg4kQPdGFQIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtn0BvKFh1p9TArDehEZBwKAGy8ivnkHhwABkWCGz/SdcVkQGeNvklzB4QjXbyzHqVc9U6nSwlpoCK5jmiXCRCyrhXIEb8qgr0bmWse2o5Xkjef3zjg6KjzGfei7NHc3bz9HsC6CAI777XqOxytJbnM7WKLTycrdIP4Q9m6528Q7E1SHRKAQiJ7AkAjxkY/RkPR4cqszvVsA5saE+m1A3z/gU+efuf6ElSgVArn9JqN0xfkXManiXC53rxGsj36F3WGU0Z4xFuTVg0gW82vUyLRG+nHEp8Tv8tVNfKTtLmjfi8bcIQFDsbdGXDS8zEA14mGgzZfkKsVstffYAl9NMsQIDAQAB</ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
