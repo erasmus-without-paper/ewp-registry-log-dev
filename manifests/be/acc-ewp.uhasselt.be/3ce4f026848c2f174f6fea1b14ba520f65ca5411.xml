@@ -81,7 +81,7 @@
 			<max-ounit-ids>10</max-ounit-ids>
 			<max-ounit-codes>10</max-ounit-codes>
 		</organizational-units>
-		<!--<iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd" version="6.2.0">
+		<iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd" version="6.2.0">
 			<http-security> 
 				<sec:client-auth-methods>
 					<httpsig
@@ -119,7 +119,7 @@
 			</http-security>
 			<url>https://acc-ewp.uhasselt.be/api/tul.edu/interinstitutionalagreementscnr</url>
 		</iia-cnr>
-		<iias-approval xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
+		<iias-approval xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd" version="1.0.0">
 			<http-security>
 				<sec:client-auth-methods>
 					<httpsig
@@ -153,7 +153,42 @@
 				</sec:server-auth-methods>
 			</http-security>
 			<url>https://acc-ewp.uhasselt.be/api/tul.edu/interinstitutionalagreementsapprovalcnr</url>
-		</iia-approval-cnr>-->
+		</iia-approval-cnr>
+		<factsheet xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/tree/stable-v1/manifest-entry.xsd">
+			<http-security>
+				<sec:client-auth-methods>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:client-auth-methods>
+				<sec:server-auth-methods>
+					<tlscert
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:server-auth-methods>
+			</http-security>
+			<url>https://acc-ewp.uhasselt.be/api/tul.edu/mobilityfactsheet</url>
+			<max-hei-ids>1</max-hei-ids>
+		</factsheet>
+		<file xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/tree/stable-v1/manifest-entry.xsd">
+			<http-security>
+				<sec:client-auth-methods>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:client-auth-methods>
+				<sec:server-auth-methods>
+					<tlscert
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+					<httpsig
+						xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+    	    	/>
+				</sec:server-auth-methods>
+			</http-security>
+			<url>https://acc-ewp.uhasselt.be/api/tul.edu/file</url>
+		</file>
 		<omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" version="1.0.1">
 			<http-security>
 				<sec:client-auth-methods>
