@@ -82,9 +82,27 @@
                 <max-ounit-ids>10</max-ounit-ids>
                 <max-ounit-codes>10</max-ounit-codes>
             </organizational-units>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://acc-ewp.uhasselt.be/api/uhasselt.be/interinstitutionalagreementsget</get-url>
+                <max-iia-ids>10</max-iia-ids>
+                <index-url>https://acc-ewp.uhasselt.be/api/uhasselt.be/interinstitutionalagreementsindex</index-url>
+                <stats-url>https://acc-ewp.uhasselt.be/api/uhasselt.be/interinstitutionalagreementsstats</stats-url>
+            </iias>
             <iia-cnr
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.3"
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
             >
                 <http-security>
                     <sec:client-auth-methods>
@@ -99,7 +117,7 @@
             </iia-cnr>
             <iias-approval
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
-                version="1.0.0"
+                version="2.0.0"
             >
                 <http-security>
                     <sec:client-auth-methods>
@@ -128,7 +146,10 @@
                 </http-security>
                 <url>https://acc-ewp.uhasselt.be/api/uhasselt.be/interinstitutionalagreementsapprovalcnr</url>
             </iia-approval-cnr>
-            <factsheet xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/tree/stable-v1/manifest-entry.xsd">
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/tree/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
                 <http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -141,7 +162,10 @@
                 <url>https://acc-ewp.uhasselt.be/api/uhasselt.be/mobilityfactsheet</url>
                 <max-hei-ids>1</max-hei-ids>
             </factsheet>
-            <file xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/tree/stable-v1/manifest-entry.xsd">
+            <file
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/tree/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
                 <http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
