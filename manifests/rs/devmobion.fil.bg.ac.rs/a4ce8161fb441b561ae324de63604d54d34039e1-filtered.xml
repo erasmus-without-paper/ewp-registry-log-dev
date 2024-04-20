@@ -25,7 +25,7 @@
         <ewp:admin-notes>Discovery manifest</ewp:admin-notes>
         <r:apis-implemented>
             <ds:discovery version="6.0.0">
-                <ds:url>https://devmobion.fil.bg.ac.rs/api/ewp/manifest</ds:url>
+                <ds:url>https://devmobion.fil.bg.ac.rs/api/ewpdev/manifest</ds:url>
             </ds:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
@@ -37,10 +37,10 @@
                         <ns2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
-                <e2:url>https://devmobion.fil.bg.ac.rs/api/ewp/echo</e2:url>
+                <e2:url>https://devmobion.fil.bg.ac.rs/api/ewpdev/echo</e2:url>
             </e2:echo>
-            <in2:institutions version="2.2.0">
-                <in2:http-security>
+            <file1:file version="1.0.0">
+                <file1:http-security>
                     <sec:client-auth-methods>
                         <ns1:httpsig/>
                     </sec:client-auth-methods>
@@ -48,89 +48,9 @@
                         <ns3:tlscert/>
                         <ns2:httpsig/>
                     </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://devmobion.fil.bg.ac.rs/api/ewp/institution</in2:url>
-                <in2:max-hei-ids>1</in2:max-hei-ids>
-            </in2:institutions>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns2:httpsig/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://devmobion.fil.bg.ac.rs/api/ewp/ounit</ou2:url>
-                <ou2:max-ounit-ids>50</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>50</ou2:max-ounit-codes>
-            </ou2:organizational-units>
-            <ia7:iias version="7.0.0">
-                <ia7:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns2:httpsig/>
-                    </sec:server-auth-methods>
-                </ia7:http-security>
-                <ia7:get-url>https://devmobion.fil.bg.ac.rs/api/ewp/iias-get</ia7:get-url>
-                <ia7:max-iia-ids>1</ia7:max-iia-ids>
-                <ia7:index-url>https://devmobion.fil.bg.ac.rs/api/ewp/iias-index</ia7:index-url>
-                <ia7:stats-url>https://devmobion.fil.bg.ac.rs/api/ewp/iias-stats</ia7:stats-url>
-            </ia7:iias>
-            <iac3:iia-cnr version="3.0.0">
-                <iac3:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac3:http-security>
-                <iac3:url>https://devmobion.fil.bg.ac.rs/api/ewp/iia-cnr</iac3:url>
-            </iac3:iia-cnr>
-            <iaa2:iias-approval version="2.0.0">
-                <iaa2:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa2:http-security>
-                <iaa2:url>https://devmobion.fil.bg.ac.rs/api/ewp/iias-approval</iaa2:url>
-                <iaa2:max-iia-ids>5</iaa2:max-iia-ids>
-            </iaa2:iias-approval>
-            <iaac2:iia-approval-cnr version="2.0.0">
-                <iaac2:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac2:http-security>
-                <iaac2:url>https://devmobion.fil.bg.ac.rs/api/ewp/iia-approval-cnr</iaac2:url>
-            </iaac2:iia-approval-cnr>
-            <fs:factsheet version="1.1.0">
-                <fs:http-security>
-                    <sec:client-auth-methods>
-                        <ns1:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <ns3:tlscert/>
-                        <ns2:httpsig/>
-                    </sec:server-auth-methods>
-                </fs:http-security>
-                <fs:url>https://devmobion.fil.bg.ac.rs/api/ewp/factsheet</fs:url>
-                <fs:max-hei-ids>1</fs:max-hei-ids>
-            </fs:factsheet>
+                </file1:http-security>
+                <file1:url>https://devmobion.fil.bg.ac.rs/api/ewpdev/file-api</file1:url>
+            </file1:file>
         </r:apis-implemented>
         <mf:institutions-covered>
             <r:hei id="dev.bg.ac.rs">
