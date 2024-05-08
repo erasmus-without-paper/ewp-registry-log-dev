@@ -6,7 +6,6 @@
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:discovery="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-    xmlns:echo="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:client-sig="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:server-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:server-sig="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
@@ -21,9 +20,6 @@
 
         https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
 
         https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
@@ -56,21 +52,6 @@
             >
                 <discovery:url>https://irc-ewp-dev.uwr.edu.pl/manifest.xml</discovery:url>
             </discovery:discovery>
-            <echo:echo
-                version="2.0.1"
-            >
-                <ewp:admin-email>international@uwr.edu.pl</ewp:admin-email>
-                <echo:http-security>
-                    <sec:client-auth-methods>
-                        <client-sig:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <server-tls:tlscert/>
-                        <server-sig:httpsig/>
-                    </sec:server-auth-methods>
-                </echo:http-security>
-                <echo:url>https://irc-ewp-dev.uwr.edu.pl/ewp/echo</echo:url>
-            </echo:echo>
 
                             <omobility-la-cnr:omobility-la-cnr
     version="1.1.0"
