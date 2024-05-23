@@ -166,31 +166,6 @@
                 <url>https://ewp-pre.us.es/factsheet</url>
                 <max-hei-ids>1</max-hei-ids>
             </factsheet>
-            <omobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd" version="2.0.0">
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
-                    </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://ewp-pre.us.es/o-mobility/get</get-url>
-                <index-url>https://ewp-pre.us.es/o-mobility/index</index-url>
-                <max-omobility-ids>10</max-omobility-ids>
-            </omobilities>
-            <imobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
-                <http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
-                    </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://ewp-pre.us.es/i-mobility/get</get-url>
-                <max-omobility-ids>10</max-omobility-ids>
-            </imobilities>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="us.es">
@@ -203,21 +178,21 @@
         </mf:institutions-covered>
         <client-credentials-in-use>
             <certificate>
-                MIIGzDCCBbSgAwIBAgIQV6y904IiEY1IzwtzyicJSjANBgkqhkiG9w0BAQsFADCB
+                MIIGyjCCBbKgAwIBAgIQF9QNHf5L1dgVsyCPES/kgDANBgkqhkiG9w0BAQsFADCB
 				lTELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
 				A1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMT0wOwYDVQQD
 				EzRTZWN0aWdvIFJTQSBPcmdhbml6YXRpb24gVmFsaWRhdGlvbiBTZWN1cmUgU2Vy
-				dmVyIENBMB4XDTIzMDUyOTAwMDAwMFoXDTI0MDUyODIzNTk1OVowWDELMAkGA1UE
+				dmVyIENBMB4XDTI0MDUyMTAwMDAwMFoXDTI1MDUyMTIzNTk1OVowWDELMAkGA1UE
 				BhMCRVMxEDAOBgNVBAgTB1NldmlsbGExHzAdBgNVBAoTFlVuaXZlcnNpZGFkIGRl
 				IFNldmlsbGExFjAUBgNVBAMTDWV3cC1wcmUudXMuZXMwggEiMA0GCSqGSIb3DQEB
-				AQUAA4IBDwAwggEKAoIBAQCqv9bU08962v0kYxvO4btrIXB808fMqp2ytkh3iAtp
-				INFDTRZYk8mwnOf22KUPzWucK9u4a+6IKq6ylHXlLGUaoVxR55YXP6GYBJT11Rks
-				WHEidL44weXBSpxYt17typFhsUxmAhgw4wEYtCB889hBrRsTm+OyGp2NTEuTEVDK
-				U/DrtbRUlgm3lCEdM+fRSQEezq+4qzhyk5Jlu3ret2J03jOxC0Z2KabWjbxk3kId
-				sHdCBQJYIiCCxk8kRW8sA6iM08+CfLSOU0kjihHw2/HB9GPMJ8BBwTNYQ8rdV1WE
-				rwM9EsmWbZTMxGm3fA42OliD/QYyyrvygHsj++n0LDf/AgMBAAGjggNSMIIDTjAf
-				BgNVHSMEGDAWgBQX2dYlJ2f5McJJQ9kwNkSMbKlP6zAdBgNVHQ4EFgQUBUyDYYUx
-				2qJqldnnNxQGJKdTjX4wDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYD
+				AQUAA4IBDwAwggEKAoIBAQDKIE/m0QXan7O7rcYxT7cMpb51WpP32S3HUWyrQ8sY
+				ux3pJlzxZR/oqi4iGdrgjiaMARnm3xkycrcRUsnuPTP09DFhVt4g7qaIf/mc2Vwc
+				GtEvl3KTU9KvGqncoH9O4KEagFUDNyMUh6A7eu9kQpHp/DtP6w8trLQu4h6TKeqR
+				srF8GjZ4bDZ0dHDpbRHP3jQ5cpU2DyVlcgPOiKzgivoLm7Pk9DnfA6BGc0GgUg9s
+				nEz7j/y23rwrSAhLgYWNeXbxTdQ9nnY9FO/Suk+Hzgd/UFIlUr7diDfxAxGhY6GI
+				GIjakiO/KBqvxEPtoic/o6WeDlgVKPeVyU0bTEUlbsAtAgMBAAGjggNQMIIDTDAf
+				BgNVHSMEGDAWgBQX2dYlJ2f5McJJQ9kwNkSMbKlP6zAdBgNVHQ4EFgQUJyYYM2Fo
+				vQzLYy/Z9nB1c6J4OmkwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYD
 				VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdIARDMEEwNQYMKwYBBAGy
 				MQECAQMEMCUwIwYIKwYBBQUHAgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgG
 				BmeBDAECAjBaBgNVHR8EUzBRME+gTaBLhklodHRwOi8vY3JsLnNlY3RpZ28uY29t
@@ -225,41 +200,41 @@
 				Y3JsMIGKBggrBgEFBQcBAQR+MHwwVQYIKwYBBQUHMAKGSWh0dHA6Ly9jcnQuc2Vj
 				dGlnby5jb20vU2VjdGlnb1JTQU9yZ2FuaXphdGlvblZhbGlkYXRpb25TZWN1cmVT
 				ZXJ2ZXJDQS5jcnQwIwYIKwYBBQUHMAGGF2h0dHA6Ly9vY3NwLnNlY3RpZ28uY29t
-				MBgGA1UdEQQRMA+CDWV3cC1wcmUudXMuZXMwggF+BgorBgEEAdZ5AgQCBIIBbgSC
-				AWoBaAB2AHb/iD8KtvuVUcJhzPWHujS0pM27KdxoQgqf5mdMWjp0AAABiGYtSSQA
-				AAQDAEcwRQIhALcvWg+B8JB2mT3AG6cCCya8855/CNUAEPqL2Agrr+DIAiBu0F6X
-				TaGyZz4OgRrD8fP8B3d2DiH1JiYDMRW1WxeZ4QB2ANq2v2s/tbYin5vCu1xr6HCR
-				cWy7UYSFNL2kPTBI1/urAAABiGYtSycAAAQDAEcwRQIhAL7Ev+4cgvBe1Fevfcdq
-				BC81c2jSw5GyAGaSWeYQtsPJAiAn33FVeZoTbaZrZz7E6s4WHajP9yytbF7qJBDu
-				VNyqcQB2AO7N0GTV2xrOxVy3nbTNE6Iyh0Z8vOzew1FIWUZxH7WbAAABiGYtSZQA
-				AAQDAEcwRQIgOKR/Xzn5r+uqXNVs0oMLKPZcUdmPEFlOwBeBVLRHy7sCIQDKyCR1
-				XAeIqGA9rQ9/aulPJjHL6CqLzy7zvN1T3RhMlzANBgkqhkiG9w0BAQsFAAOCAQEA
-				hZETAusBlvXFknNAOs3KzTd1cm57ZdVJsKkDUBIqUWXvbTv+mKwrN4Eqz3UFZXb6
-				TWqHu/264pd6tfhts50W0piWiRZqO0ESFcpBocft9Gryn2rycX590crgkTK4dymE
-				rqXVaRgpVFPKX/PopnTX9kPlyq8VClijH9/jOS/3Xiom8Sy2RHTUQwailIsIaKxF
-				dHnLi1cgkBUqhQmDYJBwF8/1EzCsbPqcEFHumjsw/9aUTWnTWEPjNjnlltH8OUJ4
-				eA7zL2YAd4OYiBo39pzOcW0/dGZjmDfdGZ+FNNJnXulJUh/N+MDV4hZRFBkUSuVA
-				w3z8d3WN2VU7UbOhoLyVIQ==
+				MBgGA1UdEQQRMA+CDWV3cC1wcmUudXMuZXMwggF8BgorBgEEAdZ5AgQCBIIBbASC
+				AWgBZgB2AM8RVu7VLnyv84db2Wkum+kacWdKsBfsrAHSW3fOzDsIAAABj5qLx1MA
+				AAQDAEcwRQIhAOkvLBcjQVlBFvnhx4Xc0wlem4sxgqc9L47psDnyc/6AAiAMzZ5b
+				IhkUfqsEY00M3Q/4RBB07AOfRMZIGfn7MA476AB1AKLjCuRF772tm3447Udnd1PX
+				gluElNcrXhssxLlQpEfnAAABj5qLxzkAAAQDAEYwRAIgca3lp2aXyI9BXmCudteF
+				S1+yVdA5fdS++ouMeh2LXjYCICGjT/Qx0Q3TXjGqZO8MJOQCUWaqpIDfSNt6yuzY
+				VZXHAHUATnWjJ1yaEMM4W2zU3z9S6x3w4I4bjWnAsfpksWKaOd8AAAGPmovHMgAA
+				BAMARjBEAiAhc2wJGTJnqaS21r1PUgWwHFYxppWOyMeyDrbLxulNDAIgEaTpEy+x
+				vuOZcrQHso6ze9jmsxalEQPTzzGacEr1ugUwDQYJKoZIhvcNAQELBQADggEBAHa7
+				fMedxPRwFIMxB6yQGK4y4JvtgYXBRCjhIUthXfEcvIIfddSChS7O82LqSvhRc5bG
+				UG3CP3vRRxBV6zH34azPruKlF5cjRLsI8DmxUOG68P4+TsDJQ8m3xtwC/BLfTqYB
+				S0JK9zFtdCuG5jVjGA7MdYQbMn68eeFrMHfqTCoxcSTv4R0tgpJQN7DMQGZtHwjW
+				BMyN7DRBz052licF2s2l40kLv0IH1SLP/iWR82nzjxobX33sPWThsMkGS88zgzmJ
+				Nu/8ve6YlSLA73CjdrRjyoJd47ChN5Z8Zv6o1ZVdz8q8PDHJep7OsQe8/FKi22Xs
+				Id2qvmF6VcaIL1fMNVc=
             </certificate>
             <rsa-public-key>
-                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqr/W1NPPetr9JGMbzuG7
-				ayFwfNPHzKqdsrZId4gLaSDRQ00WWJPJsJzn9tilD81rnCvbuGvuiCquspR15Sxl
-				GqFcUeeWFz+hmASU9dUZLFhxInS+OMHlwUqcWLde7cqRYbFMZgIYMOMBGLQgfPPY
-				Qa0bE5vjshqdjUxLkxFQylPw67W0VJYJt5QhHTPn0UkBHs6vuKs4cpOSZbt63rdi
-				dN4zsQtGdimm1o28ZN5CHbB3QgUCWCIggsZPJEVvLAOojNPPgny0jlNJI4oR8Nvx
-				wfRjzCfAQcEzWEPK3VdVhK8DPRLJlm2UzMRpt3wONjpYg/0GMsq78oB7I/vp9Cw3
-				/wIDAQAB
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyiBP5tEF2p+zu63GMU+3
+				DKW+dVqT99ktx1Fsq0PLGLsd6SZc8WUf6KouIhna4I4mjAEZ5t8ZMnK3EVLJ7j0z
+				9PQxYVbeIO6miH/5nNlcHBrRL5dyk1PSrxqp3KB/TuChGoBVAzcjFIegO3rvZEKR
+				6fw7T+sPLay0LuIekynqkbKxfBo2eGw2dHRw6W0Rz940OXKVNg8lZXIDzois4Ir6
+				C5uz5PQ53wOgRnNBoFIPbJxM+4/8tt68K0gIS4GFjXl28U3UPZ52PRTv0rpPh84H
+				f1BSJVK+3Yg38QMRoWOhiBiI2pIjvygar8RD7aInP6Olng5YFSj3lclNG0xFJW7A
+				LQIDAQAB
             </rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
             <rsa-public-key>
-                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqr/W1NPPetr9JGMbzuG7
-				ayFwfNPHzKqdsrZId4gLaSDRQ00WWJPJsJzn9tilD81rnCvbuGvuiCquspR15Sxl
-				GqFcUeeWFz+hmASU9dUZLFhxInS+OMHlwUqcWLde7cqRYbFMZgIYMOMBGLQgfPPY
-				Qa0bE5vjshqdjUxLkxFQylPw67W0VJYJt5QhHTPn0UkBHs6vuKs4cpOSZbt63rdi
-				dN4zsQtGdimm1o28ZN5CHbB3QgUCWCIggsZPJEVvLAOojNPPgny0jlNJI4oR8Nvx
-				wfRjzCfAQcEzWEPK3VdVhK8DPRLJlm2UzMRpt3wONjpYg/0GMsq78oB7I/vp9Cw3
-				/wIDAQAB
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyiBP5tEF2p+zu63GMU+3
+				DKW+dVqT99ktx1Fsq0PLGLsd6SZc8WUf6KouIhna4I4mjAEZ5t8ZMnK3EVLJ7j0z
+				9PQxYVbeIO6miH/5nNlcHBrRL5dyk1PSrxqp3KB/TuChGoBVAzcjFIegO3rvZEKR
+				6fw7T+sPLay0LuIekynqkbKxfBo2eGw2dHRw6W0Rz940OXKVNg8lZXIDzois4Ir6
+				C5uz5PQ53wOgRnNBoFIPbJxM+4/8tt68K0gIS4GFjXl28U3UPZ52PRTv0rpPh84H
+				f1BSJVK+3Yg38QMRoWOhiBiI2pIjvygar8RD7aInP6Olng5YFSj3lclNG0xFJW7A
+				LQIDAQAB
             </rsa-public-key>
         </server-credentials-in-use>
     </host>
