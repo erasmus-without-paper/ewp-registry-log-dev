@@ -3,11 +3,15 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v6/manifest-entry.xsd"
-    xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd"
-    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
-    xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:f2="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+    xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:la="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:lac="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -59,7 +63,7 @@
                 <ou2:max-ounit-ids>20</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>20</ou2:max-ounit-codes>
             </ou2:organizational-units>
-            <iapc:iia-approval-cnr version="1.1.0">
+            <iapc:iia-approval-cnr version="2.0.0">
                 <iapc:http-security>
                     <sec:client-auth-methods>
                         <sec-cs:httpsig/>
@@ -70,7 +74,7 @@
                 </iapc:http-security>
                 <iapc:url>https://is-test.czu.cz/ewp/iias/approval-cnr.pl</iapc:url>
             </iapc:iia-approval-cnr>
-            <iaap:iias-approval version="1.0.0">
+            <iaap:iias-approval version="2.0.0">
                 <iaap:http-security>
                     <sec:client-auth-methods>
                         <sec-cs:httpsig/>
@@ -82,7 +86,7 @@
                 <iaap:url>https://is-test.czu.cz/ewp/iias/approval.pl</iaap:url>
                 <iaap:max-iia-ids>1</iaap:max-iia-ids>
             </iaap:iias-approval>
-            <ia2:iias version="6.0.1">
+            <ia2:iias version="7.0.0">
                 <ia2:http-security>
                     <sec:client-auth-methods>
                         <sec-cs:httpsig/>
@@ -93,10 +97,10 @@
                 </ia2:http-security>
                 <ia2:get-url>https://is-test.czu.cz/ewp/iias/get.pl</ia2:get-url>
                 <ia2:max-iia-ids>20</ia2:max-iia-ids>
-                <ia2:max-iia-codes>20</ia2:max-iia-codes>
                 <ia2:index-url>https://is-test.czu.cz/ewp/iias/index.pl</ia2:index-url>
+                <ia2:stats-url>https://is-test.czu.cz/ewp/iias/stats.pl</ia2:stats-url>
             </ia2:iias>
-            <iac2:iia-cnr version="2.0.3">
+            <iac2:iia-cnr version="3.0.0">
                 <iac2:http-security>
                     <sec:client-auth-methods>
                         <sec-cs:httpsig/>
@@ -107,10 +111,61 @@
                 </iac2:http-security>
                 <iac2:url>https://is-test.czu.cz/ewp/iias/cnr.pl</iac2:url>
             </iac2:iia-cnr>
+            <f1:factsheet version="1.2.0">
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://is-test.czu.cz/ewp/factsheet_api.pl</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <f2:file version="1.0.0">
+                <f2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </f2:http-security>
+                <f2:url>https://is-test.czu.cz/ewp/file.pl</f2:url>
+            </f2:file>
+            <la:omobility-las version="1.2.0">
+                <la:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </la:http-security>
+                <la:get-url>https://is-test.czu.cz/ewp/las/get.pl</la:get-url>
+                <la:index-url>https://is-test.czu.cz/ewp/las/index.pl</la:index-url>
+                <la:update-url>https://is-test.czu.cz/ewp/las/update.pl</la:update-url>
+                <la:stats-url>https://is-test.czu.cz/ewp/las/stats.pl</la:stats-url>
+                <la:max-omobility-ids>1</la:max-omobility-ids>
+            </la:omobility-las>
+            <lac:omobility-la-cnr version="1.1.0">
+                <lac:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                    </sec:server-auth-methods>
+                </lac:http-security>
+                <lac:url>https://is-test.czu.cz/ewp/las/cnr.pl</lac:url>
+                <lac:max-omobility-ids>1</lac:max-omobility-ids>
+            </lac:omobility-la-cnr>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="test.czu.cz">
                 <ns2:other-id type="erasmus">CZ PRAHA02</ns2:other-id>
+                <ns2:other-id type="pic">999912570</ns2:other-id>
                 <ns2:name xml:lang="cz">Česká zemědělská univerzita v Praze</ns2:name>
                 <ns2:name xml:lang="sk">Česká poľnohospodárska univerzita v Prahe</ns2:name>
                 <ns2:name xml:lang="en">Czech University of Life Sciences Prague</ns2:name>
