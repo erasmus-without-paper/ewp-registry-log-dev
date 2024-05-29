@@ -1,0 +1,101 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd"
+>
+    <!-- This example doesn't contain many comments, but its XML Schema does! -->
+    <host>
+        <ewp:admin-email>mauro.vanetti@in4matic.it</ewp:admin-email>
+        <ewp:admin-provider>IN4MATIC Srl</ewp:admin-provider>
+        <ewp:admin-notes>It's not a real manifest. Just a test.</ewp:admin-notes>
+
+        <r:apis-implemented>
+            <!-- All API entries are defined in their own separate XML namespaces.
+            You need to use proper `xmlns` in order for them to be matched properly. -->
+
+            <!-- The entry for the Discovery Manifest API (a self-reference). -->
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://ewp-test-gw.dirittoallostudio.it/be6e336481a08de1d4a8a2e7c913b65a/ewp/discovery/manifest.xml</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp-test-gw.dirittoallostudio.it/be6e336481a08de1d4a8a2e7c913b65a/ewp/echo</url>
+            </echo>
+        </r:apis-implemented>
+
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="test.uni-foundation.eu">                
+                <name xml:lang="en">Test Uni</name>
+            </hei>
+        </mf:institutions-covered>
+
+        <client-credentials-in-use>
+            <!-- Used for HTTP Signature Authentication -->
+            <rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqDoWXwO1jvPAciu2up5X
+                iWd3mmbnO1JgR36+pkLTO4vJLjT0rNAWKz1tFAYceuof530VFhMt+/kFseXJQgAW
+                4Wcd9nDvqoY8g31bZHPrH/VdF1OAoJiKDSorDnX9GcTEOvcGurpYoJj+TvDdrT1j
+                qxxkxkN0k2sGSkDhHmV4KECvoK51P9T4jlGC6vlBOkpcmxYhhgGl6Tn7KdUuB87m
+                0mscartUQl7uyF1YqtzOWIvLKV/pyj4CqnrmNT21znnAeuG86cnqYIiEYsoUtUSX
+                BSez5plNXgYtS1t6zG7oKu3KZZvocWDgbuX6QdNMf9+jogYOlnPydCnJNEf2/yud
+                bwIDAQAB
+            </rsa-public-key>
+        </client-credentials-in-use>
+
+        <server-credentials-in-use>
+            <!-- Used for HTTP Signature Authentication -->
+            <rsa-public-key>
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqDoWXwO1jvPAciu2up5X
+                iWd3mmbnO1JgR36+pkLTO4vJLjT0rNAWKz1tFAYceuof530VFhMt+/kFseXJQgAW
+                4Wcd9nDvqoY8g31bZHPrH/VdF1OAoJiKDSorDnX9GcTEOvcGurpYoJj+TvDdrT1j
+                qxxkxkN0k2sGSkDhHmV4KECvoK51P9T4jlGC6vlBOkpcmxYhhgGl6Tn7KdUuB87m
+                0mscartUQl7uyF1YqtzOWIvLKV/pyj4CqnrmNT21znnAeuG86cnqYIiEYsoUtUSX
+                BSez5plNXgYtS1t6zG7oKu3KZZvocWDgbuX6QdNMf9+jogYOlnPydCnJNEf2/yud
+                bwIDAQAB
+            </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
