@@ -38,6 +38,18 @@
                 </echo:http-security>
                 <echo:url>https://mobilityt.is.cvut.cz/ewp/api/ewp/api/echo</echo:url>
             </echo:echo>
+            <inst:institutions version="2.2.0">
+                <inst:http-security>
+                    <sec:client-auth-methods>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </inst:http-security>
+                <inst:url>https://mobilityt.is.cvut.cz/ewp/api/ewp/api/institutions</inst:url>
+                <inst:max-hei-ids>1</inst:max-hei-ids>
+            </inst:institutions>
             <iias:iias version="7.0.0">
                 <iias:http-security>
                     <sec:client-auth-methods>
@@ -85,6 +97,31 @@
                 </iias-appl-cnr:http-security>
                 <iias-appl-cnr:url>https://mobilityt.is.cvut.cz/ewp/api/ewp/api/iias/approval/cnr</iias-appl-cnr:url>
             </iias-appl-cnr:iia-approval-cnr>
+            <fsheet:factsheet version="1.2.0">
+                <fsheet:http-security>
+                    <sec:client-auth-methods>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </fsheet:http-security>
+                <fsheet:url>https://mobilityt.is.cvut.cz/ewp/api/ewp/api/factsheet</fsheet:url>
+                <fsheet:max-hei-ids>1</fsheet:max-hei-ids>
+            </fsheet:factsheet>
+            <ounits:organizational-units version="2.1.1">
+                <ounits:http-security>
+                    <sec:client-auth-methods>
+                        <sec-csig:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-stls:tlscert/>
+                    </sec:server-auth-methods>
+                </ounits:http-security>
+                <ounits:url>https://mobilityt.is.cvut.cz/ewp/api/ewp/api/organization-units</ounits:url>
+                <ounits:max-ounit-ids>11</ounits:max-ounit-ids>
+                <ounits:max-ounit-codes>11</ounits:max-ounit-codes>
+            </ounits:organizational-units>
         </reg:apis-implemented>
         <disc:institutions-covered>
             <reg:hei id="cvut.cz">
