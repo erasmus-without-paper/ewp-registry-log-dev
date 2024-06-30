@@ -10,8 +10,6 @@
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:la="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-    xmlns:lac="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -118,34 +116,6 @@
                 </f2:http-security>
                 <f2:url>https://test.is.mendelu.cz/ewp/file.pl</f2:url>
             </f2:file>
-            <la:omobility-las version="1.2.0">
-                <la:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </la:http-security>
-                <la:get-url>https://test.is.mendelu.cz/ewp/las/get.pl</la:get-url>
-                <la:index-url>https://test.is.mendelu.cz/ewp/las/index.pl</la:index-url>
-                <la:update-url>https://test.is.mendelu.cz/ewp/las/update.pl</la:update-url>
-                <la:max-omobility-ids>1</la:max-omobility-ids>
-            </la:omobility-las>
-            <lac:omobility-la-cnr version="1.1.0">
-                <lac:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </lac:http-security>
-                <lac:url>https://test.is.mendelu.cz/ewp/las/cnr.pl</lac:url>
-                <lac:max-omobility-ids>1</lac:max-omobility-ids>
-            </lac:omobility-la-cnr>
             <iapc:iia-approval-cnr version="2.0.0">
                 <iapc:http-security>
                     <sec:client-auth-methods>
@@ -181,55 +151,7 @@
                 <ns2:name xml:lang="en">Mendel University in Brno</ns2:name>
             </ns2:hei>
         </ns1:institutions-covered>
-        <ns1:client-credentials-in-use>
-            <ns1:certificate>MIIECTCCAvGgAwIBAgICAIowDQYJKoZIhvcNAQELBQAwLjELMAkGA1UEBhMCQ1ox
-DTALBgNVBAoTBElTNFUxEDAOBgNVBAMTB0lTNFUgQ0EwHhcNMjQwNjAzMTI0MTA2
-WhcNMzQwNjAxMTI0MTA2WjBIMQswCQYDVQQGEwJDWjENMAsGA1UEChMESVM0VTEM
-MAoGA1UECxMDVUlTMRwwGgYDVQQDExN0ZXN0MS5pcy5tZW5kZWx1LmN6MIICIjAN
-BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwel5OMdFGzyuu7cv7aquyZZtqNkV
-Qfw74Ygy67wjr2nmvJBmvCeg/T/ljNk+r0wobaOBXQDCYOOwyMpLfF+plWQ3ah3d
-wUQDDvGEU1efWeYI/RhofaAcftljJNcnUYelsbjr5pHNa7FTI0TdAKQfdd1mu9iy
-B3ueF11RTgRnr9HTQ5qoOxnvpo/0vxwgizIHF8lTnCH3qF1fegzm238J2b8tjUn8
-rHFXxgQiYXNTzWxZ/q9HImf9yHciPmSnE0XhWuaHpXzu+AZPlm398Vz0Y/T1jJqK
-XU2aw9G9T0+hhwIgqK6lnmNikT7CRgWaNMHfBE1grC2hcmxFiq963nTs7mAm7Pq/
-kC+arfy4v+OZT44CfCnvRBkufxpCp8q0UNye3MqObTgrPR9aigtz4EUrJbxFF8Aw
-hnikiL4k93J8MxFRNicaQ/9cYawcWV7bsVoXyGNK1vYi4hmXW2o8Odw3D5973eSf
-XdYUBNNYYIIqLSGZBUdD3UuIbMGDwlPLY5HGFQD5FrB8/+jy0SUxOhBjsGd5jWT5
-+Vf76Si+8n1ssgklGYoQwPSKIc4j45LS7t5CofcryB07zD3+Yj17UfBQZoC0LwLC
-hIx3PLYsRodmZ4nnhCtFiEEi4zIH1sqXMqX+Qw/sH3j3se3toGHHYT/ejJmBqQTe
-7VsGkCZF60Xv3Y8CAwEAAaMXMBUwEwYDVR0lBAwwCgYIKwYBBQUHAwIwDQYJKoZI
-hvcNAQELBQADggEBALTk/6lvBYRKToi09Lp1nlrFRC5XtoQOV34QvcfvLGIKdD9l
-cjpblsfqpyzSs/WB9/vOGWUlRAkh9uo5BHgJ4MirVscuWGXuQrboV3mLJkhFqkYx
-79dK1b6T7wcGPETWx5forH48Cg6okJLniLvSQrQkcFYJgiYdB81uq45g1JRiU8HU
-wrvTk6FOUf1295Fubr2VfwUslp7Y29XmEtZQRK2vY7fOi+EYL5IVqxnbsHCo0nt5
-AFrhZboQ/Im4+dNnnaJT+2CJ8pZGUY4fWITAMM8dkT2cvxy+IyUCimK6Lng3cin/
-GVdsSruPe91LR65aCPHJbxejCUsQ4fQbBjYI43A=</ns1:certificate>
-            <ns1:rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwel5OMdFGzyuu7cv7aqu
-yZZtqNkVQfw74Ygy67wjr2nmvJBmvCeg/T/ljNk+r0wobaOBXQDCYOOwyMpLfF+p
-lWQ3ah3dwUQDDvGEU1efWeYI/RhofaAcftljJNcnUYelsbjr5pHNa7FTI0TdAKQf
-dd1mu9iyB3ueF11RTgRnr9HTQ5qoOxnvpo/0vxwgizIHF8lTnCH3qF1fegzm238J
-2b8tjUn8rHFXxgQiYXNTzWxZ/q9HImf9yHciPmSnE0XhWuaHpXzu+AZPlm398Vz0
-Y/T1jJqKXU2aw9G9T0+hhwIgqK6lnmNikT7CRgWaNMHfBE1grC2hcmxFiq963nTs
-7mAm7Pq/kC+arfy4v+OZT44CfCnvRBkufxpCp8q0UNye3MqObTgrPR9aigtz4EUr
-JbxFF8AwhnikiL4k93J8MxFRNicaQ/9cYawcWV7bsVoXyGNK1vYi4hmXW2o8Odw3
-D5973eSfXdYUBNNYYIIqLSGZBUdD3UuIbMGDwlPLY5HGFQD5FrB8/+jy0SUxOhBj
-sGd5jWT5+Vf76Si+8n1ssgklGYoQwPSKIc4j45LS7t5CofcryB07zD3+Yj17UfBQ
-ZoC0LwLChIx3PLYsRodmZ4nnhCtFiEEi4zIH1sqXMqX+Qw/sH3j3se3toGHHYT/e
-jJmBqQTe7VsGkCZF60Xv3Y8CAwEAAQ==</ns1:rsa-public-key>
-        </ns1:client-credentials-in-use>
-        <ns1:server-credentials-in-use>
-            <ns1:rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAwel5OMdFGzyuu7cv7aqu
-yZZtqNkVQfw74Ygy67wjr2nmvJBmvCeg/T/ljNk+r0wobaOBXQDCYOOwyMpLfF+p
-lWQ3ah3dwUQDDvGEU1efWeYI/RhofaAcftljJNcnUYelsbjr5pHNa7FTI0TdAKQf
-dd1mu9iyB3ueF11RTgRnr9HTQ5qoOxnvpo/0vxwgizIHF8lTnCH3qF1fegzm238J
-2b8tjUn8rHFXxgQiYXNTzWxZ/q9HImf9yHciPmSnE0XhWuaHpXzu+AZPlm398Vz0
-Y/T1jJqKXU2aw9G9T0+hhwIgqK6lnmNikT7CRgWaNMHfBE1grC2hcmxFiq963nTs
-7mAm7Pq/kC+arfy4v+OZT44CfCnvRBkufxpCp8q0UNye3MqObTgrPR9aigtz4EUr
-JbxFF8AwhnikiL4k93J8MxFRNicaQ/9cYawcWV7bsVoXyGNK1vYi4hmXW2o8Odw3
-D5973eSfXdYUBNNYYIIqLSGZBUdD3UuIbMGDwlPLY5HGFQD5FrB8/+jy0SUxOhBj
-sGd5jWT5+Vf76Si+8n1ssgklGYoQwPSKIc4j45LS7t5CofcryB07zD3+Yj17UfBQ
-ZoC0LwLChIx3PLYsRodmZ4nnhCtFiEEi4zIH1sqXMqX+Qw/sH3j3se3toGHHYT/e
-jJmBqQTe7VsGkCZF60Xv3Y8CAwEAAQ==</ns1:rsa-public-key>
-        </ns1:server-credentials-in-use>
+        <ns1:client-credentials-in-use/>
+        <ns1:server-credentials-in-use/>
     </ns1:host>
 </ns1:manifest>
