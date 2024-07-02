@@ -23,4 +23,228 @@
     xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-/>
+>
+    <ns3:host>
+        <ewp:admin-email>moveon-ewp@qs.com</ewp:admin-email>
+        <ewp:admin-provider>QS MoveON</ewp:admin-provider>
+        <r:apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://ewp2021-ewp.demo.moveon4.com/v1/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp2021-ewp.demo.moveon4.com/v1/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp2021-ewp.demo.moveon4.com/v1/institution</in2:url>
+                <in2:max-hei-ids>10</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp2021-ewp.demo.moveon4.com/v1/ounit</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia7:iias version="7.0.0">
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/get</ia7:get-url>
+                <ia7:max-iia-ids>10</ia7:max-iia-ids>
+                <ia7:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/index</ia7:index-url>
+                <ia7:stats-url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/stats</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/cnr</iac3:url>
+            </iac3:iia-cnr>
+            <om2:omobilities version="2.0.0">
+                <om2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om2:http-security>
+                <om2:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/omobility/get</om2:get-url>
+                <om2:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/omobility/index</om2:index-url>
+                <om2:max-omobility-ids>10</om2:max-omobility-ids>
+                <om2:sends-notifications/>
+            </om2:omobilities>
+            <omc1:omobility-cnr version="1.0.0">
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/omobility/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <im1:imobilities version="1.0.0">
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/imobility/get</im1:get-url>
+                <im1:max-omobility-ids>10</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr version="1.0.0">
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/imobility/cnr</imc1:url>
+                <imc1:max-omobility-ids>10</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <iaa2:iias-approval version="2.0.0">
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/approval/get</iaa2:url>
+                <iaa2:max-iia-ids>10</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr version="2.0.0">
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://ewp2021-ewp.demo.moveon4.com/v1/iia/approval/cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <oml1:omobility-las version="1.2.0">
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewp2021-ewp.demo.moveon4.com/v1/la/get</oml1:get-url>
+                <oml1:index-url>https://ewp2021-ewp.demo.moveon4.com/v1/la/index</oml1:index-url>
+                <oml1:update-url>https://ewp2021-ewp.demo.moveon4.com/v1/la/update</oml1:update-url>
+                <oml1:stats-url>https://ewp2021-ewp.demo.moveon4.com/v1/la/stats</oml1:stats-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr version="1.1.0">
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ewp2021-ewp.demo.moveon4.com/v1/la/cnr</omlc1:url>
+                <omlc1:stats-url>https://ewp2021-ewp.demo.moveon4.com/v1/incoming-la/stats</omlc1:stats-url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <f1:factsheet version="1.1.0">
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ewp2021-ewp.demo.moveon4.com/v1/factsheet/get</f1:url>
+                <f1:max-hei-ids>10</f1:max-hei-ids>
+            </f1:factsheet>
+            <file1:file version="1.0.0">
+                <file1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </file1:http-security>
+                <file1:url>https://ewp2021-ewp.demo.moveon4.com/v1/file/get</file1:url>
+            </file1:file>
+        </r:apis-implemented>
+        <ns3:institutions-covered>
+            <r:hei id="ewp2021-bo.demo.moveon4.com">
+                <r:other-id type="erasmus">DK KOBENHA52</r:other-id>
+                <r:other-id type="erasmus-charter">221666</r:other-id>
+                <r:other-id type="pic">998273464</r:other-id>
+                <r:name xml:lang="en">IT-Universitetet i København</r:name>
+            </r:hei>
+        </ns3:institutions-covered>
+        <ns3:client-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyuoHXvfMAjwkpkDpjUx8
+W30VhSj+cH4nVBW7VvvYGQkfcu2q3Oyr2kW4jjg0xsva4CtPPCwOR+FjMKaqJ1J8
+ng6xelc3/MAfTnvkB4MoCT+cKRBxYeQuyVqn6wJbIFTejqDPpACUSOL+tuC5xP63
+vD3qersE/i0PpiEwniSHMG0j8O7yIhe+Vn6TCbMA5Vj7eKd3pS6JQK1ihCptZ9zv
+qKFJJOAKSL3kR9DpwX1NU/BcqPrVAKzffm6X9AdPqnqNxYV5UXkJ5bSZ3ktQo4Z8
+jFQaDe9FSgwZpW7TAD9gtY6m7Bo1ObC7lukyHNsLMET/HcQnmTqG7NH6Co9vMB5x
++QIDAQAB
+</ns3:rsa-public-key>
+        </ns3:client-credentials-in-use>
+        <ns3:server-credentials-in-use>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyuoHXvfMAjwkpkDpjUx8
+W30VhSj+cH4nVBW7VvvYGQkfcu2q3Oyr2kW4jjg0xsva4CtPPCwOR+FjMKaqJ1J8
+ng6xelc3/MAfTnvkB4MoCT+cKRBxYeQuyVqn6wJbIFTejqDPpACUSOL+tuC5xP63
+vD3qersE/i0PpiEwniSHMG0j8O7yIhe+Vn6TCbMA5Vj7eKd3pS6JQK1ihCptZ9zv
+qKFJJOAKSL3kR9DpwX1NU/BcqPrVAKzffm6X9AdPqnqNxYV5UXkJ5bSZ3ktQo4Z8
+jFQaDe9FSgwZpW7TAD9gtY6m7Bo1ObC7lukyHNsLMET/HcQnmTqG7NH6Co9vMB5x
++QIDAQAB
+</ns3:rsa-public-key>
+        </ns3:server-credentials-in-use>
+    </ns3:host>
+</ns3:manifest>
