@@ -95,6 +95,20 @@
         <max-ounit-ids>1</max-ounit-ids>
         <max-ounit-codes>1</max-ounit-codes>
       </organizational-units>
+	  
+	  <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd" version="7.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://relint.uniroma1.it/ewp/api/iia.aspx</get-url>
+        <max-iia-ids>10</max-iia-ids>
+      </iias>
 
 <!--
       <iia-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd" version="2.0.3">
