@@ -58,18 +58,6 @@
                 </ns33:http-security>
                 <ns33:url>https://www.service4mobility.com/mobility_connect_test/ewp/echo/metropolitan.hu</ns33:url>
             </ns33:echo>
-            <ns32:institutions version="2.2.0">
-                <ns32:http-security>
-                    <ns5:client-auth-methods>
-                        <ns37:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns38:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns32:http-security>
-                <ns32:url>https://www.service4mobility.com/mobility_connect_test/ewp/institutions/metropolitan.hu</ns32:url>
-                <ns32:max-hei-ids>3</ns32:max-hei-ids>
-            </ns32:institutions>
             <ns31:organizational-units version="2.1.1">
                 <ns31:http-security>
                     <ns5:client-auth-methods>
@@ -83,54 +71,6 @@
                 <ns31:max-ounit-ids>3</ns31:max-ounit-ids>
                 <ns31:max-ounit-codes>3</ns31:max-ounit-codes>
             </ns31:organizational-units>
-            <ns29:iias version="7.0.0">
-                <ns29:http-security>
-                    <ns5:client-auth-methods>
-                        <ns37:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns38:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns29:http-security>
-                <ns29:get-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/get/metropolitan.hu</ns29:get-url>
-                <ns29:max-iia-ids>3</ns29:max-iia-ids>
-                <ns29:index-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/index/metropolitan.hu</ns29:index-url>
-                <ns29:stats-url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/stats/metropolitan.hu</ns29:stats-url>
-            </ns29:iias>
-            <ns27:iia-cnr version="3.0.0">
-                <ns27:http-security>
-                    <ns5:client-auth-methods>
-                        <ns37:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns38:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns27:http-security>
-                <ns27:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias/cnr/metropolitan.hu</ns27:url>
-            </ns27:iia-cnr>
-            <ns25:iias-approval version="2.0.0">
-                <ns25:http-security>
-                    <ns5:client-auth-methods>
-                        <ns37:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns38:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns25:http-security>
-                <ns25:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-approval/get/metropolitan.hu</ns25:url>
-                <ns25:max-iia-ids>3</ns25:max-iia-ids>
-            </ns25:iias-approval>
-            <ns23:iia-approval-cnr version="2.0.0">
-                <ns23:http-security>
-                    <ns5:client-auth-methods>
-                        <ns37:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns38:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns23:http-security>
-                <ns23:url>https://www.service4mobility.com/mobility_connect_test/ewp/iias-approval-cnr/cnr/metropolitan.hu</ns23:url>
-            </ns23:iia-approval-cnr>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="metropolitan.hu">
@@ -142,10 +82,10 @@
             </ns2:hei>
         </ns3:institutions-covered>
         <ns3:client-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkYW3RnHRVIAVrz+CSEByTvBXWdYgTFJ1FCqjg6qdZUTNy9wz/uyj/JDTixRToDdNxoaPTG5pbRNx7fIccR+rvR1eiMlSal7USUgWgrFl4F9V8LvYOqaGifTCTnXpI1Be2+aoTkZ+998NYeOe1s9RSjF8oB8VZOSDOtICLTS8OIYzhl+MF0zTqbpZT75LafyyBprImSy05R9bNxXYxL7dpk8k4BlmBMguL8LEjMvVlS6y3N2ClzbMycDysk1yEAK07zW2nLuJAMNm7yNl+RrL5YXTR/RJUSVGCJb+fCDxdmTjOKnSMovusDX5q7pJn0Zr2XxV0yxLMnH1HvwXFyGmeQIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiDBYvMXe0Urpt+z/U50oMHsU8Vd2sKTcI3mPFxmVta5jakWxRmP31p/5kcACfeZqzmz26OnJMxSAZZjOPxmog/8ip1KDRzeCTqXXQnLq8mXY8YLeJYxifSrb+U8QPjTNs5itBHQFu3G26Q9Z0AKYDwqDdCsmGh6MxR0yy4W3EdB5TUeBFVJUCyLLOttUOSYabNsuOFVhQMxz62/1ecVa0ZgBrhngzqURmEE4L7udnjBMhuKAz8FvyCh9yTirh2o1iSw1tjqUg2BaewRYNw/Os/DwKemLFzyGxXw3o+hlNSebPyskTgIe50A2pVqujVDnkjAQkGbwYdVdlZUvzPUlNwIDAQAB</ns3:rsa-public-key>
         </ns3:client-credentials-in-use>
         <ns3:server-credentials-in-use>
-            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkYW3RnHRVIAVrz+CSEByTvBXWdYgTFJ1FCqjg6qdZUTNy9wz/uyj/JDTixRToDdNxoaPTG5pbRNx7fIccR+rvR1eiMlSal7USUgWgrFl4F9V8LvYOqaGifTCTnXpI1Be2+aoTkZ+998NYeOe1s9RSjF8oB8VZOSDOtICLTS8OIYzhl+MF0zTqbpZT75LafyyBprImSy05R9bNxXYxL7dpk8k4BlmBMguL8LEjMvVlS6y3N2ClzbMycDysk1yEAK07zW2nLuJAMNm7yNl+RrL5YXTR/RJUSVGCJb+fCDxdmTjOKnSMovusDX5q7pJn0Zr2XxV0yxLMnH1HvwXFyGmeQIDAQAB</ns3:rsa-public-key>
+            <ns3:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiDBYvMXe0Urpt+z/U50oMHsU8Vd2sKTcI3mPFxmVta5jakWxRmP31p/5kcACfeZqzmz26OnJMxSAZZjOPxmog/8ip1KDRzeCTqXXQnLq8mXY8YLeJYxifSrb+U8QPjTNs5itBHQFu3G26Q9Z0AKYDwqDdCsmGh6MxR0yy4W3EdB5TUeBFVJUCyLLOttUOSYabNsuOFVhQMxz62/1ecVa0ZgBrhngzqURmEE4L7udnjBMhuKAz8FvyCh9yTirh2o1iSw1tjqUg2BaewRYNw/Os/DwKemLFzyGxXw3o+hlNSebPyskTgIe50A2pVqujVDnkjAQkGbwYdVdlZUvzPUlNwIDAQAB</ns3:rsa-public-key>
         </ns3:server-credentials-in-use>
     </ns3:host>
 </ns3:manifest>
