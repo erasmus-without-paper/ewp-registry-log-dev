@@ -10,6 +10,7 @@
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:lac="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -141,6 +142,19 @@
                 </f2:http-security>
                 <f2:url>https://czuewp.is4u.cz/ewp/file.pl</f2:url>
             </f2:file>
+            <lac:omobility-la-cnr version="1.1.0">
+                <lac:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </lac:http-security>
+                <lac:url>https://czuewp.is4u.cz/ewp/las/cnr.pl</lac:url>
+                <lac:max-omobility-ids>1</lac:max-omobility-ids>
+            </lac:omobility-la-cnr>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.czu.cz">
