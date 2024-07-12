@@ -10,6 +10,8 @@
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:la="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:lac="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -116,6 +118,35 @@
                 <iaap:url>https://vseewp.is4u.cz/ewp/iias/approval.pl</iaap:url>
                 <iaap:max-iia-ids>1</iaap:max-iia-ids>
             </iaap:iias-approval>
+            <la:omobility-las version="1.2.0">
+                <la:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </la:http-security>
+                <la:get-url>https://vseewp.is4u.cz/ewp/las/get.pl</la:get-url>
+                <la:index-url>https://vseewp.is4u.cz/ewp/las/index.pl</la:index-url>
+                <la:update-url>https://vseewp.is4u.cz/ewp/las/update.pl</la:update-url>
+                <la:stats-url>https://vseewp.is4u.cz/ewp/las/stats.pl</la:stats-url>
+                <la:max-omobility-ids>1</la:max-omobility-ids>
+            </la:omobility-las>
+            <lac:omobility-la-cnr version="1.1.0">
+                <lac:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </lac:http-security>
+                <lac:url>https://vseewp.is4u.cz/ewp/las/cnr.pl</lac:url>
+                <lac:max-omobility-ids>1</lac:max-omobility-ids>
+            </lac:omobility-la-cnr>
             <f1:factsheet version="1.2.0">
                 <f1:http-security>
                     <sec:client-auth-methods>
