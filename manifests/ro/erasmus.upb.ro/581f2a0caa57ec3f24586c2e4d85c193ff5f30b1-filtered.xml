@@ -163,6 +163,24 @@
                 <allows-anonymous-access>false</allows-anonymous-access>
                 <supports-modified-since>true</supports-modified-since>
             </simple-course-replication>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://erasmus.upb.ro/dev/ewp/iias/get</get-url>
+                <max-iia-ids>2</max-iia-ids>
+                <index-url>https://erasmus.upb.ro/dev/ewp/iias/index</index-url>
+                <stats-url>https://erasmus.upb.ro/dev/ewp/iias/stats</stats-url>
+            </iias>
             <iia-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.3"
