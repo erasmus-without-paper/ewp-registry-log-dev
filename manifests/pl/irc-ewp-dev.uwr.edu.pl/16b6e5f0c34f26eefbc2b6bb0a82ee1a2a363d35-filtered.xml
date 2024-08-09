@@ -48,7 +48,7 @@
         <ewp:admin-notes>Test for uwr.edu.pl</ewp:admin-notes>
         <apis:apis-implemented>
             <discovery:discovery version="6.0.0">
-                <discovery:url>https://irc-ewp.uwr.edu.pl/manifest.xml</discovery:url>
+                <discovery:url>https://irc-ewp-dev.uwr.edu.pl/manifest.xml</discovery:url>
             </discovery:discovery>
             <echo:echo version="2.0.1">
                 <ewp:admin-email>international@uwr.edu.pl</ewp:admin-email>
@@ -61,20 +61,8 @@
                         <server-sig:httpsig/>
                     </sec:server-auth-methods>
                 </echo:http-security>
-                <echo:url>https://irc-ewp.uwr.edu.pl/ewp/echo</echo:url>
+                <echo:url>https://irc-ewp-dev.uwr.edu.pl/ewp/echo</echo:url>
             </echo:echo>
-            <omobility-la-cnr:omobility-la-cnr version="1.1.0">
-                <omobility-la-cnr:http-security>
-                    <sec:client-auth-methods>
-                        <client-sig:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <server-sig:httpsig/>
-                    </sec:server-auth-methods>
-                </omobility-la-cnr:http-security>
-                <omobility-la-cnr:url>https://irc-ewp.uwr.edu.pl/ewp/omobility-la-cnr</omobility-la-cnr:url>
-                <omobility-la-cnr:max-omobility-ids>10</omobility-la-cnr:max-omobility-ids>
-            </omobility-la-cnr:omobility-la-cnr>
         </apis:apis-implemented>
         <manifest:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <apis:hei id="uwr.edu.pl">
@@ -84,10 +72,10 @@
             </apis:hei>
         </manifest:institutions-covered>
         <manifest:client-credentials-in-use>
-            <manifest:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0NndPLRXoAVsTbGk8Q+Kyqqm+Rqp3fk5PydzIkq2QR07XdIaHvOyJHx4nFUcjOMW2ZpFl2ynMAKI8QRGBiwXBp3Y7rhX4Mb+AJL7N348hOnnWmSzMx6mj1O0x2UmF5QpwHrqvsnjmclQU1L0tmNhrjcQtL5+xvosPySSZwUFKa9IsalTwimyFlMwUnQD9NCqiOysgdl/VmszL1BgjDuWIQR2j42l/BEk7aoq8qkd00cEHvyxBFbl0n+RmGKbClKPhDXLXm+34aj52QXPJK7YseWp72QaqpotJ+qjShuS+QK2R5OMPCm2Urhr7PjIAAuXXinDbH55BvJs3dahNcYKswIDAQAB</manifest:rsa-public-key>
+            <manifest:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymWkEUMeEI2o5UtfkeTDkGgUG3DiHhiHJwJt3PSF7FpPpcSESrpa0zzQySIDLIAS8Aynsoez8j/0TEFaTEHHi5mNuR6GHEZ7hokQxXgulsLhjTldK5YGwPJcM6prYGJs29+bdEv5yMQJGpsyQU3H8C0/i8QW/7pQfxacjNGLEIHjttBcwS0yvq4Yvrw8NutKw/jYDJJwQ/4lkAISR6OoFsBmtcELajMfECH0lBdCppxB0za2UITgKxDNidYzjwCWBoLP54870ILeFq38I75tM2LHxxzJrWQpsqRfjWa0lAGb3fKLue+vJ+FBW9V9FsHbO1DEmeJbZLSbEeoXbfZqTwIDAQAB</manifest:rsa-public-key>
         </manifest:client-credentials-in-use>
         <manifest:server-credentials-in-use>
-            <manifest:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0NndPLRXoAVsTbGk8Q+Kyqqm+Rqp3fk5PydzIkq2QR07XdIaHvOyJHx4nFUcjOMW2ZpFl2ynMAKI8QRGBiwXBp3Y7rhX4Mb+AJL7N348hOnnWmSzMx6mj1O0x2UmF5QpwHrqvsnjmclQU1L0tmNhrjcQtL5+xvosPySSZwUFKa9IsalTwimyFlMwUnQD9NCqiOysgdl/VmszL1BgjDuWIQR2j42l/BEk7aoq8qkd00cEHvyxBFbl0n+RmGKbClKPhDXLXm+34aj52QXPJK7YseWp72QaqpotJ+qjShuS+QK2R5OMPCm2Urhr7PjIAAuXXinDbH55BvJs3dahNcYKswIDAQAB</manifest:rsa-public-key>
+            <manifest:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymWkEUMeEI2o5UtfkeTDkGgUG3DiHhiHJwJt3PSF7FpPpcSESrpa0zzQySIDLIAS8Aynsoez8j/0TEFaTEHHi5mNuR6GHEZ7hokQxXgulsLhjTldK5YGwPJcM6prYGJs29+bdEv5yMQJGpsyQU3H8C0/i8QW/7pQfxacjNGLEIHjttBcwS0yvq4Yvrw8NutKw/jYDJJwQ/4lkAISR6OoFsBmtcELajMfECH0lBdCppxB0za2UITgKxDNidYzjwCWBoLP54870ILeFq38I75tM2LHxxzJrWQpsqRfjWa0lAGb3fKLue+vJ+FBW9V9FsHbO1DEmeJbZLSbEeoXbfZqTwIDAQAB</manifest:rsa-public-key>
         </manifest:server-credentials-in-use>
     </manifest:host>
 </manifest:manifest>
