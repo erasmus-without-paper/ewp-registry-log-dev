@@ -1,9 +1,14 @@
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+    xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+    xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
+    xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
@@ -39,36 +44,32 @@
         <ewp:admin-provider>MCI Internationale Hochschule GmbH (Designer)</ewp:admin-provider>
         <ewp:admin-notes>This manifest was created by MCI Designer (14.08.2024)</ewp:admin-notes>
         <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-                version="6.0.0"
-            >
-                <url>https://opendata.mci.edu/api/ewp/dev/discovery/manifest</url>
-            </discovery>
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
-                <http-security>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://opendata.mci.edu/api/ewp/dev/discovery/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://opendata.mci.edu/api/ewp/dev/extern/echo</url>
-            </echo>
+                </e2:http-security>
+                <e2:url>https://opendata.mci.edu/api/ewp/dev/extern/echo</e2:url>
+            </e2:echo>
             <f1:factsheet
                 xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
                 version="1.1.0"
             >
                 <f1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </f1:http-security>
                 <f1:url>https://opendata.mci.edu/api/ewp/dev/extern/factsheet</f1:url>
@@ -80,10 +81,11 @@
             >
                 <iaac2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iaac2:http-security>
                 <iaac2:url>https://opendata.mci.edu/api/ewp/dev/extern/iia/approval/cnr</iaac2:url>
@@ -94,10 +96,11 @@
             >
                 <iac3:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iac3:http-security>
                 <iac3:url>https://opendata.mci.edu/api/ewp/dev/extern/iia/cnr</iac3:url>
@@ -108,10 +111,11 @@
             >
                 <ia7:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </ia7:http-security>
                 <ia7:get-url>https://opendata.mci.edu/api/ewp/dev/extern/iia/get</ia7:get-url>
@@ -125,10 +129,11 @@
             >
                 <iaa2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </iaa2:http-security>
                 <iaa2:url>https://opendata.mci.edu/api/ewp/dev/extern/iia/approval</iaa2:url>
@@ -140,10 +145,11 @@
             >
                 <im1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </im1:http-security>
                 <im1:get-url>https://opendata.mci.edu/api/ewp/dev/extern/imobility/get</im1:get-url>
@@ -156,10 +162,11 @@
             >
                 <imc1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </imc1:http-security>
                 <imc1:url>https://opendata.mci.edu/api/ewp/dev/extern/imobility/cnr</imc1:url>
@@ -171,10 +178,11 @@
             >
                 <in2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </in2:http-security>
                 <in2:url>https://opendata.mci.edu/api/ewp/dev/extern/institutions</in2:url>
@@ -186,10 +194,11 @@
             >
                 <om2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </om2:http-security>
                 <om2:get-url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/get</om2:get-url>
@@ -203,10 +212,11 @@
             >
                 <omc1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </omc1:http-security>
                 <omc1:url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/cnr</omc1:url>
@@ -218,10 +228,11 @@
             >
                 <oml1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </oml1:http-security>
                 <oml1:get-url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/la/get</oml1:get-url>
@@ -236,10 +247,11 @@
             >
                 <omlc1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-A2:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </omlc1:http-security>
                 <omlc1:url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/la/cnr</omlc1:url>
