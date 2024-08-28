@@ -3,7 +3,20 @@
     xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+    xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+    xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
+    xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
@@ -57,10 +70,7 @@
                 </e2:http-security>
                 <e2:url>https://opendata.mci.edu/api/ewp/dev/extern/echo</e2:url>
             </e2:echo>
-            <f1:factsheet
-                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="1.1.0"
-            >
+            <f1:factsheet version="1.1.0">
                 <f1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -72,10 +82,7 @@
                 <f1:url>https://opendata.mci.edu/api/ewp/dev/extern/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <iaac2:iia-approval-cnr
-                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
+            <iaac2:iia-approval-cnr version="2.0.0">
                 <iaac2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -86,10 +93,7 @@
                 </iaac2:http-security>
                 <iaac2:url>https://opendata.mci.edu/api/ewp/dev/extern/iia/approval/cnr</iaac2:url>
             </iaac2:iia-approval-cnr>
-            <iac3:iia-cnr
-                xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
-                version="3.0.0"
-            >
+            <iac3:iia-cnr version="3.0.0">
                 <iac3:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -100,10 +104,7 @@
                 </iac3:http-security>
                 <iac3:url>https://opendata.mci.edu/api/ewp/dev/extern/iia/cnr</iac3:url>
             </iac3:iia-cnr>
-            <ia7:iias
-                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
-                version="7.0.0"
-            >
+            <ia7:iias version="7.0.0">
                 <ia7:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -117,10 +118,7 @@
                 <ia7:index-url>https://opendata.mci.edu/api/ewp/dev/extern/iia/index</ia7:index-url>
                 <ia7:stats-url>https://opendata.mci.edu/api/ewp/dev/extern/iia/stats</ia7:stats-url>
             </ia7:iias>
-            <iaa2:iias-approval
-                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
+            <iaa2:iias-approval version="2.0.0">
                 <iaa2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -132,10 +130,7 @@
                 <iaa2:url>https://opendata.mci.edu/api/ewp/dev/extern/iia/approval</iaa2:url>
                 <iaa2:max-iia-ids>1</iaa2:max-iia-ids>
             </iaa2:iias-approval>
-            <im1:imobilities
-                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
+            <im1:imobilities version="1.0.0">
                 <im1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -148,10 +143,7 @@
                 <im1:max-omobility-ids>1</im1:max-omobility-ids>
                 <im1:sends-notifications/>
             </im1:imobilities>
-            <imc1:imobility-cnr
-                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
+            <imc1:imobility-cnr version="1.0.0">
                 <imc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -163,10 +155,7 @@
                 <imc1:url>https://opendata.mci.edu/api/ewp/dev/extern/imobility/cnr</imc1:url>
                 <imc1:max-omobility-ids>1</imc1:max-omobility-ids>
             </imc1:imobility-cnr>
-            <in2:institutions
-                xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-                version="2.2.0"
-            >
+            <in2:institutions version="2.2.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -178,10 +167,7 @@
                 <in2:url>https://opendata.mci.edu/api/ewp/dev/extern/institutions</in2:url>
                 <in2:max-hei-ids>1</in2:max-hei-ids>
             </in2:institutions>
-            <om2:omobilities
-                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
+            <om2:omobilities version="2.0.0">
                 <om2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -195,10 +181,7 @@
                 <om2:max-omobility-ids>1</om2:max-omobility-ids>
                 <om2:sends-notifications/>
             </om2:omobilities>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
+            <omc1:omobility-cnr version="1.0.0">
                 <omc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -210,10 +193,7 @@
                 <omc1:url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/cnr</omc1:url>
                 <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
             </omc1:omobility-cnr>
-            <oml1:omobility-las
-                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-                version="1.2.0"
-            >
+            <oml1:omobility-las version="1.2.0">
                 <oml1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -228,10 +208,7 @@
                 <oml1:stats-url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/la/stats</oml1:stats-url>
                 <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
             </oml1:omobility-las>
-            <omlc1:omobility-la-cnr
-                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.1.0"
-            >
+            <omlc1:omobility-la-cnr version="1.1.0">
                 <omlc1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
@@ -244,6 +221,19 @@
                 <omlc1:stats-url>https://opendata.mci.edu/api/ewp/dev/extern/omobility/la/cnr/stats</omlc1:stats-url>
                 <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
             </omlc1:omobility-la-cnr>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://opendata.mci.edu/api/ewp/dev/extern/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="mci4me.at">
