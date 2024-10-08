@@ -142,6 +142,24 @@
                 </http-security>
                 <url>https://erasmusmobility.unipi.it/ewp-test/api/iia_approval_cnr.aspx</url>
             </iia-approval-cnr>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://erasmusmobility.unipi.it/ewp-test/api/iia.aspx</get-url>
+                <max-iia-ids>3</max-iia-ids>
+                <index-url>https://erasmusmobility.unipi.it/ewp-test/api/iia_index.aspx</index-url>
+                <stats-url>https://erasmusmobility.unipi.it/ewp-test/api/iia_stats.aspx</stats-url>
+            </iias>
             <omobility-las
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.2.0"
