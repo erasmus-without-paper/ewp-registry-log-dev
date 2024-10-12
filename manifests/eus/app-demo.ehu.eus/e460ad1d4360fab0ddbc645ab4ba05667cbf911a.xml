@@ -317,4 +317,54 @@
 				<get-url>https://app-demo.ehu.eus/ewp/api/mobility/get</get-url>
 				<index-url>https://app-demo.ehu.eus/ewp/api/mobility/index</index-url>
 				<update-url>https://app-demo.ehu.eus/ewp/api/mobility/update</update-url>
-				<stats-url>https://app-demo.ehu.eus/ewp/api/mobility/outg
+				<stats-url>https://app-demo.ehu.eus/ewp/api/mobility/outgoingStats</stats-url>
+				<max-omobility-ids>10</max-omobility-ids>
+			</omobility-las>
+			<omobility-la-cnr
+				xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+				version="1.0.0">
+
+				<ewp:admin-email>ewp@ehu.es</ewp:admin-email>
+				<ewp:admin-notes></ewp:admin-notes>
+
+				
+				<http-security>
+					<sec:client-auth-methods>
+						<!-- <tlscert -->
+						<!-- xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" -->
+						<!-- allows-self-signed="true" /> -->
+						<httpsig
+							xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+					</sec:client-auth-methods>
+					<sec:server-auth-methods>
+						<tlscert
+							xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" />
+						<httpsig
+							xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+					</sec:server-auth-methods>
+				</http-security>
+				<url>https://app-demo.ehu.eus/ewp/api/mobility/cnr</url>
+				<stats-url>https://app-demo.ehu.eus/ewp/api/mobility/incomingStats</stats-url>
+				<max-omobility-ids>10</max-omobility-ids>
+			</omobility-la-cnr>
+		</r:apis-implemented>
+		<mf:institutions-covered
+			xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+			<hei id="ehu.eus">
+				<other-id type="pic">999865234</other-id>
+				<other-id type="erasmus">E  BILBAO01</other-id>
+				<name xml:lang="en">University of The Basque Country</name>
+				<name xml:lang="es">UNIVERSIDAD DEL PAIS VASCO/ EUSKAL HERRIKO UNIBERTSITATEA</name>
+			</hei>
+		</mf:institutions-covered>
+
+		<client-credentials-in-use>
+			<certificate>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</certificate>
+			<rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1stlAldjexgPwkK2XFFSfpXl0PNX2XG6pYtDTLnQnJgVRInklWGNZ1IFnPFNMREO66rzOZpDUiAQhqVgMyE8K8Nmhbx2i6T2aOmoJJhK0fHLLJ8cMIXCN9kyLYb0k473lv+qKBeGCJgGpF2lu9jBJhPymqpmj77SIw+fUjBdhkcwSYj3H2tArmsw7nGfToLvxcuv5Ieyi0elOUY6bh+en4DlI6SjC9Yfyn5+nek3TpYfoW7nSYTxT1uYBwqz2zcW1RtuvoW47BG1173LFosf0984/VY0ZDSzkdCX9MkzYkgg1t47kc6BEaoYpKW3zcSXbhGI5iDK8KIZx2ITf8DG/QIDAQAB</rsa-public-key>
+		</client-credentials-in-use>
+
+		<server-credentials-in-use>
+			<rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1stlAldjexgPwkK2XFFSfpXl0PNX2XG6pYtDTLnQnJgVRInklWGNZ1IFnPFNMREO66rzOZpDUiAQhqVgMyE8K8Nmhbx2i6T2aOmoJJhK0fHLLJ8cMIXCN9kyLYb0k473lv+qKBeGCJgGpF2lu9jBJhPymqpmj77SIw+fUjBdhkcwSYj3H2tArmsw7nGfToLvxcuv5Ieyi0elOUY6bh+en4DlI6SjC9Yfyn5+nek3TpYfoW7nSYTxT1uYBwqz2zcW1RtuvoW47BG1173LFosf0984/VY0ZDSzkdCX9MkzYkgg1t47kc6BEaoYpKW3zcSXbhGI5iDK8KIZx2ITf8DG/QIDAQAB</rsa-public-key>
+		</server-credentials-in-use>
+	</host>
+</manifest>
