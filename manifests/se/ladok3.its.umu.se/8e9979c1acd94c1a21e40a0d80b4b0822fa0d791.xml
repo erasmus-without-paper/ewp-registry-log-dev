@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+  <host>
+    <ewp:admin-email>its-ladok-ops@lists.umu.se</ewp:admin-email>
+    <ewp:admin-provider>Ladokkonsortiet</ewp:admin-provider>
+    <r:apis-implemented>
+      <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" version="6.0.0">
+        <url>https://ladok3.its.umu.se/ewp/manifest.xml</url>
+      </discovery>
+      <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
+        <http-security>
+          <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </client-auth-methods>
+          <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </server-auth-methods>
+        </http-security>
+        <url>https://ladok3.its.umu.se/ewp/echo/</url>
+      </echo>
+      <omobility-la-cnr xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" version="1.1.0">
+        <http-security>
+          <client-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </client-auth-methods>
+          <server-auth-methods xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </server-auth-methods>
+        </http-security>
+        <url>https://ladok3.its.umu.se/ewp/la/cnr/</url>
+        <stats-url>https://ladok3.its.umu.se/ewp/la/cnr/stats/</stats-url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </omobility-la-cnr>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="umu.se">
+        <r:other-id type="erasmus">S  UMEA01</r:other-id>
+        <r:other-id type="pic">999881821</r:other-id>
+        <r:name xml:lang="en">Ume&#xE5; University</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+      <!-- Used for HTTP Signature Authentication -->
+      <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsHWf1tV6TrnjdypsX5Rl
+IVL1yfgC+q9Cwo6okc3Ta7U6fTPZbwRQ4sJRLobSKPVY+iY1AA8oEaYoZlAXRvTm
+gGP6L3rINF9QA6BS6JI4vqt6uauzqklEbfqxJi29T+nFJlFx4RLhYqpHpQsjKkWL
+YJYKPPjUeJv667M58ocwMp9vWq1N3prRsnLFcDqMuUHT+qkWl90+1ZV0ZAH3iRv/
+QCSB6Xz4OZB91GBWdDJRoP9q+vXySbTbZ7kf8O7A9iEExPqUiNtBxidBZt11S4zQ
+lvxeaLkcZWeehNCk3MOFBHmgxc+y6L6b5qROGyJzjAylnIDDinBRBOwaF2WYfgKn
+3QIDAQAB</rsa-public-key>
+    </client-credentials-in-use>
+  </host>
+</manifest>
