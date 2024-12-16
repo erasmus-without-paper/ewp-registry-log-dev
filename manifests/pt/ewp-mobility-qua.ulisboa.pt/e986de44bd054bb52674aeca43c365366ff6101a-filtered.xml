@@ -25,54 +25,6 @@
         <admin-provider>UNIVERSIDADE DE LISBOA (EWP Node)</admin-provider>
         <admin-notes>ULisboa EWP node used for tests</admin-notes>
         <ns2:apis-implemented>
-            <ns24:iia-cnr version="3.0.0">
-                <ns24:http-security>
-                    <ns5:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns24:http-security>
-                <ns24:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/cnr/v3/ulisboa.pt</ns24:url>
-            </ns24:iia-cnr>
-            <ns26:iia-approval-cnr version="2.0.0">
-                <ns26:http-security>
-                    <ns5:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns26:http-security>
-                <ns26:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/approvals/cnr/v2/ulisboa.pt</ns26:url>
-            </ns26:iia-approval-cnr>
-            <ns28:iias-approval version="2.0.0">
-                <ns28:http-security>
-                    <ns5:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns28:http-security>
-                <ns28:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/approval/v2/ulisboa.pt</ns28:url>
-                <ns28:max-iia-ids>1</ns28:max-iia-ids>
-            </ns28:iias-approval>
-            <ns30:iias version="7.0.0">
-                <ns30:http-security>
-                    <ns5:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns30:http-security>
-                <ns30:get-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v7/ulisboa.pt/get</ns30:get-url>
-                <ns30:max-iia-ids>1</ns30:max-iia-ids>
-                <ns30:index-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v7/ulisboa.pt/index</ns30:index-url>
-                <ns30:stats-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v7/ulisboa.pt/stats</ns30:stats-url>
-            </ns30:iias>
             <ns23:courses version="0.7.1">
                 <ns23:http-security>
                     <ns5:client-auth-methods>
@@ -99,6 +51,20 @@
                 <ns22:allows-anonymous-access>false</ns22:allows-anonymous-access>
                 <ns22:supports-modified-since>false</ns22:supports-modified-since>
             </ns22:simple-course-replication>
+            <ns37:discovery version="6.0.0">
+                <ns37:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/manifest</ns37:url>
+            </ns37:discovery>
+            <ns36:echo version="2.0.1">
+                <ns36:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns36:http-security>
+                <ns36:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/echo</ns36:url>
+            </ns36:echo>
             <ns33:file version="1.0.0">
                 <ns33:http-security>
                     <ns5:client-auth-methods>
@@ -110,6 +76,66 @@
                 </ns33:http-security>
                 <ns33:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/files/v1/ulisboa.pt</ns33:url>
             </ns33:file>
+            <ns30:iias version="7.0.0">
+                <ns30:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns30:http-security>
+                <ns30:get-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v7/ulisboa.pt/get</ns30:get-url>
+                <ns30:max-iia-ids>1</ns30:max-iia-ids>
+                <ns30:index-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v7/ulisboa.pt/index</ns30:index-url>
+                <ns30:stats-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/v7/ulisboa.pt/stats</ns30:stats-url>
+            </ns30:iias>
+            <ns28:iias-approval version="2.0.0">
+                <ns28:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns28:http-security>
+                <ns28:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/approval/v2/ulisboa.pt</ns28:url>
+                <ns28:max-iia-ids>1</ns28:max-iia-ids>
+            </ns28:iias-approval>
+            <ns26:iia-approval-cnr version="2.0.0">
+                <ns26:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns26:http-security>
+                <ns26:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/approvals/cnr/v2/ulisboa.pt</ns26:url>
+            </ns26:iia-approval-cnr>
+            <ns24:iia-cnr version="3.0.0">
+                <ns24:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns24:http-security>
+                <ns24:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/iias/cnr/v3/ulisboa.pt</ns24:url>
+            </ns24:iia-cnr>
+            <ns15:imobility-cnr version="1.0.0">
+                <ns15:http-security>
+                    <ns5:client-auth-methods>
+                        <ns9:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns11:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns15:http-security>
+                <ns15:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/imobilities/cnr/v1</ns15:url>
+                <ns15:max-omobility-ids>1</ns15:max-omobility-ids>
+            </ns15:imobility-cnr>
             <ns35:institutions version="2.2.0">
                 <ns35:http-security>
                     <ns5:client-auth-methods>
@@ -122,32 +148,6 @@
                 <ns35:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/institutions/v2</ns35:url>
                 <ns35:max-hei-ids>1</ns35:max-hei-ids>
             </ns35:institutions>
-            <ns34:organizational-units version="2.1.1">
-                <ns34:http-security>
-                    <ns5:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns34:http-security>
-                <ns34:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/ounits/v2</ns34:url>
-                <ns34:max-ounit-ids>2</ns34:max-ounit-ids>
-                <ns34:max-ounit-codes>2</ns34:max-ounit-codes>
-            </ns34:organizational-units>
-            <ns18:omobility-la-cnr version="1.1.0">
-                <ns18:http-security>
-                    <ns5:client-auth-methods>
-                        <ns9:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns11:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns18:http-security>
-                <ns18:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/omobilities/las/cnr/v1</ns18:url>
-                <ns18:stats-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/omobilities/las/cnr/v1/ulisboa.pt/stats</ns18:stats-url>
-                <ns18:max-omobility-ids>1</ns18:max-omobility-ids>
-            </ns18:omobility-la-cnr>
             <ns19:omobility-las version="1.2.0">
                 <ns19:http-security>
                     <ns5:client-auth-methods>
@@ -163,32 +163,32 @@
                 <ns19:stats-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/omobilities/las/v1/ulisboa.pt/stats</ns19:stats-url>
                 <ns19:max-omobility-ids>1</ns19:max-omobility-ids>
             </ns19:omobility-las>
-            <ns15:imobility-cnr version="1.0.0">
-                <ns15:http-security>
+            <ns18:omobility-la-cnr version="1.1.0">
+                <ns18:http-security>
                     <ns5:client-auth-methods>
                         <ns9:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
                         <ns11:httpsig/>
                     </ns5:server-auth-methods>
-                </ns15:http-security>
-                <ns15:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/imobilities/cnr/v1</ns15:url>
-                <ns15:max-omobility-ids>1</ns15:max-omobility-ids>
-            </ns15:imobility-cnr>
-            <ns37:discovery version="6.0.0">
-                <ns37:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/manifest</ns37:url>
-            </ns37:discovery>
-            <ns36:echo version="2.0.1">
-                <ns36:http-security>
+                </ns18:http-security>
+                <ns18:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/omobilities/las/cnr/v1</ns18:url>
+                <ns18:stats-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/omobilities/las/cnr/v1/ulisboa.pt/stats</ns18:stats-url>
+                <ns18:max-omobility-ids>1</ns18:max-omobility-ids>
+            </ns18:omobility-la-cnr>
+            <ns34:organizational-units version="2.1.1">
+                <ns34:http-security>
                     <ns5:client-auth-methods>
                         <ns9:httpsig/>
                     </ns5:client-auth-methods>
                     <ns5:server-auth-methods>
                         <ns11:httpsig/>
                     </ns5:server-auth-methods>
-                </ns36:http-security>
-                <ns36:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/echo</ns36:url>
-            </ns36:echo>
+                </ns34:http-security>
+                <ns34:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/ounits/v2</ns34:url>
+                <ns34:max-ounit-ids>2</ns34:max-ounit-ids>
+                <ns34:max-ounit-codes>2</ns34:max-ounit-codes>
+            </ns34:organizational-units>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="ulisboa.pt">
