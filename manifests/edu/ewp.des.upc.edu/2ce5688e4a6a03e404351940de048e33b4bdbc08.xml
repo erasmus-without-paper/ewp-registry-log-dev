@@ -6,6 +6,8 @@
  xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
  xmlns:inst="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
  xmlns:ounits="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+ xmlns:cour="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+ xmlns:cou="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
  xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
  xmlns:cliauthsig1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
  xmlns:cliauthtls1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
@@ -84,6 +86,34 @@
   <ounits:max-ounit-ids>10</ounits:max-ounit-ids>
   <ounits:max-ounit-codes>10</ounits:max-ounit-codes>
  </ounits:organizational-units>
+ <cou:courses version="0.7.1">
+  <cou:http-security>
+   <sec:client-auth-methods>
+    <cliauthsig1:httpsig/>
+   </sec:client-auth-methods>
+   <sec:server-auth-methods>
+    <srvauthtls1:tlscert/>
+    <srvauthsig1:httpsig/>
+   </sec:server-auth-methods>
+  </cou:http-security>
+  <cou:url>https://ewp.des.upc.edu/api/courses</cou:url>
+  <cou:max-los-ids>10</cou:max-los-ids>
+  <cou:max-los-codes>10</cou:max-los-codes>
+ </cou:courses>
+ <cour:simple-course-replication version="1.0.0">
+  <cour:http-security>
+   <sec:client-auth-methods>
+    <cliauthsig1:httpsig/>
+   </sec:client-auth-methods>
+   <sec:server-auth-methods>
+    <srvauthtls1:tlscert/>
+    <srvauthsig1:httpsig/>
+   </sec:server-auth-methods>
+  </cour:http-security>
+  <cour:url>https://ewp.des.upc.edu/api/courserep</cour:url>
+  <cour:allows-anonymous-access>false</cour:allows-anonymous-access>
+  <cour:supports-modified-since>true</cour:supports-modified-since>
+ </cour:simple-course-replication>
  <fact:factsheet version="1.2.0">
   <fact:http-security>
    <sec:client-auth-methods>
@@ -196,7 +226,7 @@
    </sec:server-auth-methods>
   </imob:http-security>
   <imob:get-url>https://ewp.des.upc.edu/api/incomings/get</imob:get-url>
-  <imob:max-omobility-ids>10</imob:max-omobility-ids>
+  <imob:max-omobility-ids>5</imob:max-omobility-ids>
   <imob:sends-notifications/>
  </imob:imobilities>
  <imcnr:imobility-cnr version="1.0.0">
