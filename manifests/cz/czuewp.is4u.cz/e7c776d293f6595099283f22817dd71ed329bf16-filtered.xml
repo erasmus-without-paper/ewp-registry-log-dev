@@ -1,6 +1,7 @@
 <ns1:manifest
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd"
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
@@ -173,6 +174,20 @@
                 <lac:stats-url>https://czuewp.is4u.cz/ewp/las/cnr_stats.pl</lac:stats-url>
                 <lac:max-omobility-ids>1</lac:max-omobility-ids>
             </lac:omobility-la-cnr>
+            <c1:courses version="0.7.1">
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://czuewp.is4u.cz/ewp/courses/courses.pl</c1:url>
+                <c1:max-los-ids>10000</c1:max-los-ids>
+                <c1:max-los-codes>1</c1:max-los-codes>
+            </c1:courses>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.czu.cz">
