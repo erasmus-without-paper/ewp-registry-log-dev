@@ -1,6 +1,8 @@
 <ns1:manifest
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd"
+    xmlns:cr="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/master/manifest-entry.xsd"
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
@@ -91,6 +93,34 @@
                 <iaap:url>https://is-test.czu.cz/ewp/iias/approval.pl</iaap:url>
                 <iaap:max-iia-ids>1</iaap:max-iia-ids>
             </iaap:iias-approval>
+            <c1:courses version="0.7.1">
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://is-test.czu.cz/ewp/courses/courses.pl</c1:url>
+                <c1:max-los-ids>1</c1:max-los-ids>
+                <c1:max-los-codes>1</c1:max-los-codes>
+            </c1:courses>
+            <cr:simple-course-replication version="1.0.0">
+                <cr:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </cr:http-security>
+                <cr:url>https://is-test.czu.cz/ewp/courses/course_replication.pl</cr:url>
+                <cr:allows-anonymous-access>1</cr:allows-anonymous-access>
+                <cr:supports-modified-since>0</cr:supports-modified-since>
+            </cr:simple-course-replication>
             <ia2:iias version="7.0.0">
                 <ia2:http-security>
                     <sec:client-auth-methods>
