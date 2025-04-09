@@ -32,9 +32,37 @@
         <admin-provider>UNIVERSIDAD DE MALAGA</admin-provider>
         <admin-notes>This is a EWP reference connector instance.</admin-notes>
         <ns2:apis-implemented>
-            <ns23:discovery version="6.0.0">
-                <ns23:url>https://ewp-test.uma.es/rest/manifest</ns23:url>
-            </ns23:discovery>
+            <ns12:omobility-las version="1.2.0">
+                <ns12:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns12:http-security>
+                <ns12:get-url>https://ewp-test.uma.es/rest/omobilities/las/get</ns12:get-url>
+                <ns12:index-url>https://ewp-test.uma.es/rest/omobilities/las/index</ns12:index-url>
+                <ns12:update-url>https://ewp-test.uma.es/rest/omobilities/las/update</ns12:update-url>
+                <ns12:stats-url>https://ewp-test.uma.es/rest/omobilities/las/stats</ns12:stats-url>
+                <ns12:max-omobility-ids>1</ns12:max-omobility-ids>
+            </ns12:omobility-las>
+            <ns19:iias version="7.0.0">
+                <ns19:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns19:http-security>
+                <ns19:get-url>https://ewp-test.uma.es/rest/iias/get</ns19:get-url>
+                <ns19:max-iia-ids>100</ns19:max-iia-ids>
+                <ns19:index-url>https://ewp-test.uma.es/rest/iias/index</ns19:index-url>
+                <ns19:stats-url>https://ewp-test.uma.es/rest/iias/stats</ns19:stats-url>
+            </ns19:iias>
             <ns22:echo version="2.0.1">
                 <ns22:http-security>
                     <ns5:client-auth-methods>
@@ -47,8 +75,8 @@
                 </ns22:http-security>
                 <ns22:url>https://ewp-test.uma.es/rest/echo</ns22:url>
             </ns22:echo>
-            <ns6:omobility-la-cnr version="1.0.0">
-                <ns6:http-security>
+            <ns20:organizational-units version="2.1.1">
+                <ns20:http-security>
                     <ns5:client-auth-methods>
                         <ns25:httpsig/>
                     </ns5:client-auth-methods>
@@ -56,10 +84,24 @@
                         <ns27:tlscert/>
                         <ns26:httpsig/>
                     </ns5:server-auth-methods>
-                </ns6:http-security>
-                <ns6:url>https://ewp-test.uma.es/rest/omobilities/las/cnr</ns6:url>
-                <ns6:max-omobility-ids>1</ns6:max-omobility-ids>
-            </ns6:omobility-la-cnr>
+                </ns20:http-security>
+                <ns20:url>https://ewp-test.uma.es/rest/ounits</ns20:url>
+                <ns20:max-ounit-ids>100</ns20:max-ounit-ids>
+                <ns20:max-ounit-codes>1</ns20:max-ounit-codes>
+            </ns20:organizational-units>
+            <ns21:institutions version="2.2.0">
+                <ns21:http-security>
+                    <ns5:client-auth-methods>
+                        <ns25:httpsig/>
+                    </ns5:client-auth-methods>
+                    <ns5:server-auth-methods>
+                        <ns27:tlscert/>
+                        <ns26:httpsig/>
+                    </ns5:server-auth-methods>
+                </ns21:http-security>
+                <ns21:url>https://ewp-test.uma.es/rest/institutions</ns21:url>
+                <ns21:max-hei-ids>100</ns21:max-hei-ids>
+            </ns21:institutions>
             <ns18:iia-cnr version="3.0.0">
                 <ns18:http-security>
                     <ns5:client-auth-methods>
@@ -97,8 +139,8 @@
                 </ns16:http-security>
                 <ns16:url>https://ewp-test.uma.es/rest/iiasApproval/cnr</ns16:url>
             </ns16:iia-approval-cnr>
-            <ns19:iias version="7.0.0">
-                <ns19:http-security>
+            <ns6:omobility-la-cnr version="1.0.0">
+                <ns6:http-security>
                     <ns5:client-auth-methods>
                         <ns25:httpsig/>
                     </ns5:client-auth-methods>
@@ -106,55 +148,13 @@
                         <ns27:tlscert/>
                         <ns26:httpsig/>
                     </ns5:server-auth-methods>
-                </ns19:http-security>
-                <ns19:get-url>https://ewp-test.uma.es/rest/iias/get</ns19:get-url>
-                <ns19:max-iia-ids>100</ns19:max-iia-ids>
-                <ns19:index-url>https://ewp-test.uma.es/rest/iias/index</ns19:index-url>
-                <ns19:stats-url>https://ewp-test.uma.es/rest/iias/stats</ns19:stats-url>
-            </ns19:iias>
-            <ns21:institutions version="2.2.0">
-                <ns21:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns27:tlscert/>
-                        <ns26:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns21:http-security>
-                <ns21:url>https://ewp-test.uma.es/rest/institutions</ns21:url>
-                <ns21:max-hei-ids>100</ns21:max-hei-ids>
-            </ns21:institutions>
-            <ns20:organizational-units version="2.1.1">
-                <ns20:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns27:tlscert/>
-                        <ns26:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns20:http-security>
-                <ns20:url>https://ewp-test.uma.es/rest/ounits</ns20:url>
-                <ns20:max-ounit-ids>100</ns20:max-ounit-ids>
-                <ns20:max-ounit-codes>1</ns20:max-ounit-codes>
-            </ns20:organizational-units>
-            <ns12:omobility-las version="1.2.0">
-                <ns12:http-security>
-                    <ns5:client-auth-methods>
-                        <ns25:httpsig/>
-                    </ns5:client-auth-methods>
-                    <ns5:server-auth-methods>
-                        <ns27:tlscert/>
-                        <ns26:httpsig/>
-                    </ns5:server-auth-methods>
-                </ns12:http-security>
-                <ns12:get-url>https://ewp-test.uma.es/rest/omobilities/las/get</ns12:get-url>
-                <ns12:index-url>https://ewp-test.uma.es/rest/omobilities/las/index</ns12:index-url>
-                <ns12:update-url>https://ewp-test.uma.es/rest/omobilities/las/update</ns12:update-url>
-                <ns12:stats-url>https://ewp-test.uma.es/rest/omobilities/las/stats</ns12:stats-url>
-                <ns12:max-omobility-ids>1</ns12:max-omobility-ids>
-            </ns12:omobility-las>
+                </ns6:http-security>
+                <ns6:url>https://ewp-test.uma.es/rest/omobilities/las/cnr</ns6:url>
+                <ns6:max-omobility-ids>1</ns6:max-omobility-ids>
+            </ns6:omobility-la-cnr>
+            <ns23:discovery version="6.0.0">
+                <ns23:url>https://ewp-test.uma.es/rest/manifest</ns23:url>
+            </ns23:discovery>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="test.uma.es">
