@@ -216,6 +216,22 @@
                 <max-los-ids>100</max-los-ids>
                 <max-los-codes>100</max-los-codes>
             </courses>
+            <simple-course-replication
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.kalasoft.pl/api/ewp/host/courses/replication</url>
+                <allows-anonymous-access>false</allows-anonymous-access>
+                <supports-modified-since>true</supports-modified-since>
+            </simple-course-replication>
             <omobility-las
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.2.0"
