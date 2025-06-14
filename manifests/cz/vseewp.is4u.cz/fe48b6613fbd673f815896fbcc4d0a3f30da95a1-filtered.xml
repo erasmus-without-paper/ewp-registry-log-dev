@@ -1,8 +1,6 @@
 <ns1:manifest
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-    xmlns:cr="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
@@ -163,34 +161,6 @@
                 <f1:url>https://vseewp.is4u.cz/ewp/factsheet_api.pl</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <c1:courses version="0.7.1">
-                <c1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </c1:http-security>
-                <c1:url>https://vseewp.is4u.cz/ewp/courses/courses.pl</c1:url>
-                <c1:max-los-ids>1000</c1:max-los-ids>
-                <c1:max-los-codes>1</c1:max-los-codes>
-            </c1:courses>
-            <cr:simple-course-replication version="1.0.0">
-                <cr:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </cr:http-security>
-                <cr:url>https://vseewp.is4u.cz/ewp/courses/course_replication.pl</cr:url>
-                <cr:allows-anonymous-access>1</cr:allows-anonymous-access>
-                <cr:supports-modified-since>0</cr:supports-modified-since>
-            </cr:simple-course-replication>
             <f2:file version="1.0.0">
                 <f2:http-security>
                     <sec:client-auth-methods>
@@ -206,8 +176,6 @@
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.vse.cz">
-                <ns2:other-id type="erasmus">CZ PRAHA09</ns2:other-id>
-                <ns2:other-id type="pic">998733341</ns2:other-id>
                 <ns2:name xml:lang="cz">Vysoká škola ekonomická v Praze</ns2:name>
                 <ns2:name xml:lang="sk">Vysoká škola ekonomická v Prahe</ns2:name>
                 <ns2:name xml:lang="en">Prague University of Economics and Business</ns2:name>
