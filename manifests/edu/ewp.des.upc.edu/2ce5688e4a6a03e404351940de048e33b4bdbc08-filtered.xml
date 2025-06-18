@@ -218,6 +218,19 @@
                 <olascnr:stats-url>https://ewp.des.upc.edu/api/omobility-las-cnr/stats</olascnr:stats-url>
                 <olascnr:max-omobility-ids>10</olascnr:max-omobility-ids>
             </olascnr:omobility-la-cnr>
+            <imob:imobilities version="2.0.0">
+                <imob:http-security>
+                    <sec:client-auth-methods>
+                        <cliauthsig1:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <srvauthtls1:tlscert/>
+                        <srvauthsig1:httpsig/>
+                    </sec:server-auth-methods>
+                </imob:http-security>
+                <imob:get-url>https://ewp.des.upc.edu/api/incomings/get</imob:get-url>
+                <imob:max-omobility-ids>5</imob:max-omobility-ids>
+            </imob:imobilities>
             <imcnr:imobility-cnr version="2.0.0">
                 <imcnr:http-security>
                     <sec:client-auth-methods>
