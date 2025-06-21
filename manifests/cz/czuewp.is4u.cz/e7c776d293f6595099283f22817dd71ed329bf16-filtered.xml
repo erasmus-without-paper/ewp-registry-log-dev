@@ -1,8 +1,6 @@
 <ns1:manifest
     xmlns:ns1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
-    xmlns:cr="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
@@ -12,8 +10,6 @@
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:iapc="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:la="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-    xmlns:lac="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -93,34 +89,6 @@
                 <iaap:url>https://czuewp.is4u.cz/ewp/iias/approval.pl</iaap:url>
                 <iaap:max-iia-ids>1</iaap:max-iia-ids>
             </iaap:iias-approval>
-            <c1:courses version="0.7.1">
-                <c1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </c1:http-security>
-                <c1:url>https://czuewp.is4u.cz/ewp/courses/courses.pl</c1:url>
-                <c1:max-los-ids>1000</c1:max-los-ids>
-                <c1:max-los-codes>1</c1:max-los-codes>
-            </c1:courses>
-            <cr:simple-course-replication version="1.0.0">
-                <cr:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </cr:http-security>
-                <cr:url>https://czuewp.is4u.cz/ewp/courses/course_replication.pl</cr:url>
-                <cr:allows-anonymous-access>1</cr:allows-anonymous-access>
-                <cr:supports-modified-since>0</cr:supports-modified-since>
-            </cr:simple-course-replication>
             <ia2:iias version="7.0.0">
                 <ia2:http-security>
                     <sec:client-auth-methods>
@@ -173,41 +141,9 @@
                 </f2:http-security>
                 <f2:url>https://czuewp.is4u.cz/ewp/file.pl</f2:url>
             </f2:file>
-            <la:omobility-las version="1.2.0">
-                <la:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </la:http-security>
-                <la:get-url>https://czuewp.is4u.cz/ewp/las/get.pl</la:get-url>
-                <la:index-url>https://czuewp.is4u.cz/ewp/las/index.pl</la:index-url>
-                <la:update-url>https://czuewp.is4u.cz/ewp/las/update.pl</la:update-url>
-                <la:stats-url>https://czuewp.is4u.cz/ewp/las/stats.pl</la:stats-url>
-                <la:max-omobility-ids>1</la:max-omobility-ids>
-            </la:omobility-las>
-            <lac:omobility-la-cnr version="1.1.0">
-                <lac:http-security>
-                    <sec:client-auth-methods>
-                        <sec-cs:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-sc:tlscert/>
-                        <sec-ss:httpsig/>
-                    </sec:server-auth-methods>
-                </lac:http-security>
-                <lac:url>https://czuewp.is4u.cz/ewp/las/cnr.pl</lac:url>
-                <lac:stats-url>https://czuewp.is4u.cz/ewp/las/cnr_stats.pl</lac:stats-url>
-                <lac:max-omobility-ids>1</lac:max-omobility-ids>
-            </lac:omobility-la-cnr>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.czu.cz">
-                <ns2:other-id type="erasmus">CZ PRAHA02</ns2:other-id>
-                <ns2:other-id type="pic">999912570</ns2:other-id>
                 <ns2:name xml:lang="cz">Česká zemědělská univerzita v Praze</ns2:name>
                 <ns2:name xml:lang="sk">Česká poľnohospodárska univerzita v Prahe</ns2:name>
                 <ns2:name xml:lang="en">Czech University of Life Sciences Prague</ns2:name>
