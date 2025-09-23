@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
+  <host>
+    <ewp:admin-email>aroundlink.app@gmail.com</ewp:admin-email>
+    <ewp:admin-provider>AroundLink</ewp:admin-provider>
+    <ewp:admin-notes>Aroundlink SaaS Platform - Serving: Tokyo International University</ewp:admin-notes>
+    <r:apis-implemented>
+      <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" version="6.0.0">
+        <url>https://test.aroundlink.com/ewp/AL-test-univ-1/manifest.xml</url>
+      </discovery>
+      <echo xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" version="2.0.1">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://test.aroundlink.com/ewp/echo</url>
+      </echo>
+      <institutions xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" version="2.2.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://test.aroundlink.com/ewp/institutions</url>
+        <max-hei-ids>10</max-hei-ids>
+      </institutions>
+      <omobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd" version="3.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://test.aroundlink.com/ewp/omobilities/get</get-url>
+        <index-url>https://test.aroundlink.com/ewp/omobilities/index</index-url>
+        <update-url>https://test.aroundlink.com/ewp/omobilities/update</update-url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </omobilities>
+      <omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" version="1.2.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://test.aroundlink.com/ewp/omobility-las/get</get-url>
+        <index-url>https://test.aroundlink.com/ewp/omobility-las/index</index-url>
+        <update-url>https://test.aroundlink.com/ewp/omobility-las/update</update-url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </omobility-las>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="AL-test-univ-1">
+        <r:name>Tokyo International University</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use/>
+    <server-credentials-in-use/>
+  </host>
+</manifest>
