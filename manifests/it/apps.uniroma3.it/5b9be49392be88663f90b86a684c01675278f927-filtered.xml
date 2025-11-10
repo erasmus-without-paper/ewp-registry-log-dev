@@ -38,18 +38,67 @@
     "
 >
     <host>
-        <ewp:admin-email>marino@cantierinformatici.com</ewp:admin-email>
+        <ewp:admin-email>outgoing.students@uniroma3.it</ewp:admin-email>
         <ewp:admin-provider>Cantieri Informatici Srl</ewp:admin-provider>
-        <ewp:admin-notes>Manifest file for University of Roma Tre</ewp:admin-notes>
+        <ewp:admin-notes>EWP API for Roma Tre University</ewp:admin-notes>
         <r:apis-implemented>
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.0"
             >
-                <url>https://apps.uniroma3.it/public/erasmus/ewp-test/manifest.xml</url>
+                <url>https://apps.uniroma3.it/ewp-test/manifest.xml</url>
             </discovery>
-            <institutions
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://apps.uniroma3.it/ewp-test/api/iia.aspx</get-url>
+                <max-iia-ids>1</max-iia-ids>
+                <index-url>https://apps.uniroma3.it/ewp-test/api/iia_index.aspx</index-url>
+                <stats-url>https://apps.uniroma3.it/ewp-test/api/iia_stats.aspx</stats-url>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://apps.uniroma3.it/ewp-test/api/IIA_CNR.aspx</url>
+            </iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://apps.uniroma3.it/ewp-test/api/iia_approval.aspx</url>
+                <max-iia-ids>1</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
             >
                 <http-security>
@@ -66,12 +115,11 @@
                         <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </sec:response-encryption-methods>
                 </http-security>
-                <url>https://apps.uniroma3.it/public/erasmus/ewp-test/api/institutions.aspx</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
-            <organizational-units
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-                version="2.1.1"
+                <url>https://apps.uniroma3.it/ewp-test/api/iia_approval_cnr.aspx</url>
+            </iia-approval-cnr>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
             >
                 <http-security>
                     <sec:client-auth-methods>
@@ -87,40 +135,28 @@
                         <tls xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1"/>
                     </sec:response-encryption-methods>
                 </http-security>
-                <url>https://apps.uniroma3.it/public/erasmus/ewp-test/api/ounits.aspx</url>
-                <max-ounit-ids>10</max-ounit-ids>
-                <max-ounit-codes>10</max-ounit-codes>
-            </organizational-units>
+                <url>https://apps.uniroma3.it/ewp-test/api/factsheet.aspx</url>
+                <max-hei-ids>1</max-hei-ids>
+            </factsheet>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="uniroma3.it">
                 <other-id type="pic">999866107</other-id>
-                <other-id type="erasmus">I  ROMA16</other-id>
-                <other-id type="erasmus-charter">28978-EPP-1-2014-1-IT-EPPKA3-ECHE</other-id>
+                <other-id type="erasmus">I ROMA16</other-id>
                 <name xml:lang="en">Roma Tre University</name>
-                <name xml:lang="it">Università degli Studi Roma Tre</name>
+                <name xml:lang="it">Universita degli Studi Roma Tre</name>
             </hei>
         </mf:institutions-covered>
-        <client-credentials-in-use>
-            <rsa-public-key>
-        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvOT6Tjlau+cPRZldYGFl
-		/fayTamfPmHWLTCBHGowbxOy7UU9xY9DDCZWRB0EqG7dSTghKGqTTntRXGn5+0nj
-		kyyM5QacdgSGjCig27xdAbxfD5R7R6kqil+EFcyg7qZxlrtCpw3LpVTK0RCb6ZbL
-		VfA5Xw6Cb3xORo/u14x7j6W/4kWeZXx6XJ0WgiLeSdJpiZWOvwQqFWrryg2q44lP
-		RjmzHShYWSHplpxXUxKbAr8b4hsQB+kbpAIvPBbG0c99N6Cr40k6z7rG3VfkBSvB
-		ic4i4vcVUw6Hyi1qp05cCMownVv8FnUY5G1658kkRyaeM/1adh6ydgd/V9KAx5fw
-		bQIDAQAB
-      </rsa-public-key>
-        </client-credentials-in-use>
+        <client-credentials-in-use/>
         <server-credentials-in-use>
             <rsa-public-key>
-        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvOT6Tjlau+cPRZldYGFl
-		/fayTamfPmHWLTCBHGowbxOy7UU9xY9DDCZWRB0EqG7dSTghKGqTTntRXGn5+0nj
-		kyyM5QacdgSGjCig27xdAbxfD5R7R6kqil+EFcyg7qZxlrtCpw3LpVTK0RCb6ZbL
-		VfA5Xw6Cb3xORo/u14x7j6W/4kWeZXx6XJ0WgiLeSdJpiZWOvwQqFWrryg2q44lP
-		RjmzHShYWSHplpxXUxKbAr8b4hsQB+kbpAIvPBbG0c99N6Cr40k6z7rG3VfkBSvB
-		ic4i4vcVUw6Hyi1qp05cCMownVv8FnUY5G1658kkRyaeM/1adh6ydgd/V9KAx5fw
-		bQIDAQAB
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsCMUECXSZJRouDxz2DZt
+        WuJJATWWxGSyMJowF9V8VsoISXSOM4zIGcyHPEUjeRHfRwFgOHi71AJwCoERvXAs
+        ycwrsttsYG/1Hx5o1q4Ex9GnHlolw8jWPxv0IuAyUrxzNte2HDRQ82Hs5osC/DI8
+        ordYd9G+EzmSU9m2bD9KI/H0NiiWGIFmTGS4gvJkIZv3Rx6LiZOKQ7A6E+qHsT2l
+        046Tfxc8WQOX21kGdor8LFmF8z3n/t2E4g2jvaC3zyAnkUBzuNpKLu9FUHIs/FCt
+        xP7/98HvemtrAW7kvIXaxtouSmyH15tFD5C55ZXqE1rDxfY5tjfMhMK3Qsrobspb
+        JQIDAQAB
       </rsa-public-key>
         </server-credentials-in-use>
     </host>
