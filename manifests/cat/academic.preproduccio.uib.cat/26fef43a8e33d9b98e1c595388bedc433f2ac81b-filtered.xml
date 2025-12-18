@@ -22,10 +22,11 @@
     xmlns:ns28="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
     xmlns:ns29="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns3="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-    xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-monitoring/blob/stable-v1/manifest-entry.xsd"
-    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+    xmlns:ns30="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns31="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns32="https://github.com/erasmus-without-paper/ewp-specs-api-monitoring/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns33="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:ns34="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1"
@@ -37,11 +38,11 @@
         <ns10:admin-email>ewp@uib.es</ns10:admin-email>
         <ns10:admin-provider>SIGMA Gestión Universitaria, AIE (MP)</ns10:admin-provider>
         <ns11:apis-implemented>
-            <ns33:discovery version="6.0.0">
-                <ns33:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/manifest.xml</ns33:url>
-            </ns33:discovery>
-            <ns32:echo version="2.0.1">
-                <ns32:http-security>
+            <ns34:discovery version="6.0.0">
+                <ns34:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/manifest.xml</ns34:url>
+            </ns34:discovery>
+            <ns33:echo version="2.0.1">
+                <ns33:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
                     </ns14:client-auth-methods>
@@ -55,10 +56,29 @@
                     <ns14:response-encryption-methods>
                         <ns8:tls/>
                     </ns14:response-encryption-methods>
-                </ns32:http-security>
-                <ns32:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/echo</ns32:url>
-            </ns32:echo>
-            <ns30:institutions version="2.2.0">
+                </ns33:http-security>
+                <ns33:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/echo</ns33:url>
+            </ns33:echo>
+            <ns31:institutions version="2.2.0">
+                <ns31:http-security>
+                    <ns14:client-auth-methods>
+                        <ns3:httpsig/>
+                    </ns14:client-auth-methods>
+                    <ns14:server-auth-methods>
+                        <ns4:tlscert/>
+                        <ns5:httpsig/>
+                    </ns14:server-auth-methods>
+                    <ns14:request-encryption-methods>
+                        <ns6:tls/>
+                    </ns14:request-encryption-methods>
+                    <ns14:response-encryption-methods>
+                        <ns8:tls/>
+                    </ns14:response-encryption-methods>
+                </ns31:http-security>
+                <ns31:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/institutions/get</ns31:url>
+                <ns31:max-hei-ids>1</ns31:max-hei-ids>
+            </ns31:institutions>
+            <ns30:factsheet version="1.2.0">
                 <ns30:http-security>
                     <ns14:client-auth-methods>
                         <ns3:httpsig/>
@@ -74,9 +94,9 @@
                         <ns8:tls/>
                     </ns14:response-encryption-methods>
                 </ns30:http-security>
-                <ns30:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/institutions/get</ns30:url>
+                <ns30:url>https://academic.preproduccio.uib.cat:2443/ewp/rest/factsheet/get</ns30:url>
                 <ns30:max-hei-ids>1</ns30:max-hei-ids>
-            </ns30:institutions>
+            </ns30:factsheet>
             <ns29:organizational-units version="2.1.1">
                 <ns29:http-security>
                     <ns14:client-auth-methods>
