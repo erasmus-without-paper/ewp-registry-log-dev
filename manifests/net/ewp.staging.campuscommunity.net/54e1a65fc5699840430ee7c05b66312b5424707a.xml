@@ -3,12 +3,7 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:sec-cli-anon="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
-    xmlns:sec-cli-http="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
-    xmlns:sec-cli-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
-    xmlns:sec-svr-http="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
-    xmlns:sec-svr-tls="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1">
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2">
     <host>
         <ewp:admin-email>jan@campuscommunity.io</ewp:admin-email>
         <ewp:admin-provider>Campus Community</ewp:admin-provider>
@@ -23,10 +18,10 @@
                 version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </e2:http-security>
                 <e2:url>https://ewp.staging.campuscommunity.net/api/ewp/echo</e2:url>
@@ -36,10 +31,10 @@
                 version="2.2.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </in2:http-security>
                 <in2:url>https://ewp.staging.campuscommunity.net/api/ewp/institutions</in2:url>
@@ -50,10 +45,10 @@
                 version="1.2.0">
                 <f1:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </f1:http-security>
                 <f1:url>https://ewp.staging.campuscommunity.net/api/ewp/factsheet</f1:url>
@@ -64,10 +59,10 @@
                 version="7.0.0">
                 <ia7:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </ia7:http-security>
                 <ia7:get-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/get</ia7:get-url>
@@ -80,10 +75,10 @@
                 version="3.0.0">
                 <iac3:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </iac3:http-security>
                 <iac3:url>https://ewp.staging.campuscommunity.net/api/ewp/iias/cnr</iac3:url>
@@ -93,13 +88,13 @@
                 version="2.0.0">
                 <iaa2:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </iaa2:http-security>
-                <iaa2:url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval</iaa2:url>
+                <iaa2:url>https://ewp.staging.campuscommunity.net/api/ewp/iias-approval</iaa2:url>
                 <iaa2:max-iia-ids>1</iaa2:max-iia-ids>
             </iaa2:iias-approval>
             <iaac2:iia-approval-cnr
@@ -107,13 +102,13 @@
                 version="2.0.0">
                 <iaac2:http-security>
                     <sec:client-auth-methods>
-                        <sec-cli-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <sec-svr-http:httpsig/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
                 </iaac2:http-security>
-                <iaac2:url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval-cnr</iaac2:url>
+                <iaac2:url>https://ewp.staging.campuscommunity.net/api/ewp/iias-approval-cnr</iaac2:url>
             </iaac2:iia-approval-cnr>
         </r:apis-implemented>
         <institutions-covered>
