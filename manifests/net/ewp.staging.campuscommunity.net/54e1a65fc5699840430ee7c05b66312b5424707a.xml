@@ -13,6 +13,11 @@
         <ewp:admin-email>jan@campuscommunity.io</ewp:admin-email>
         <ewp:admin-provider>Campus Community</ewp:admin-provider>
         <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0">
+                <url>https://ewp.staging.campuscommunity.net/api/ewp/manifest</url>
+            </discovery>
             <echo
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.1">
@@ -69,6 +74,7 @@
                 <max-iia-ids>1</max-iia-ids>
                 <index-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/index</index-url>
                 <stats-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/stats</stats-url>
+                <sends-notifications>true</sends-notifications>
             </iias>
             <iia-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
@@ -97,7 +103,7 @@
                 <url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval</url>
                 <max-iia-ids>1</max-iia-ids>
             </iias-approval>
-            <iia-approval-cnr
+            <iias-approval-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0">
                 <http-security>
@@ -109,7 +115,7 @@
                     </sec:server-auth-methods>
                 </http-security>
                 <url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval-cnr</url>
-            </iia-approval-cnr>
+            </iias-approval-cnr>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="epitech.eu">
