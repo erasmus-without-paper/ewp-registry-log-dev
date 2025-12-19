@@ -13,108 +13,108 @@
         <ewp:admin-email>jan@campuscommunity.io</ewp:admin-email>
         <ewp:admin-provider>Campus Community</ewp:admin-provider>
         <r:apis-implemented>
-            <discovery
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+            <d6:discovery
+                xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
                 version="6.0.0">
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/manifest</url>
-            </discovery>
-            <echo
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                <d6:url>https://ewp.staging.campuscommunity.net/api/ewp/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo
+                xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.1">
-                <http-security>
+                <e2:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/echo</url>
-            </echo>
-            <institutions
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+                </e2:http-security>
+                <e2:url>https://ewp.staging.campuscommunity.net/api/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions
+                xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
                 version="2.2.0">
-                <http-security>
+                <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/institutions</url>
-                <max-hei-ids>1</max-hei-ids>
-            </institutions>
-            <factsheet
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                </in2:http-security>
+                <in2:url>https://ewp.staging.campuscommunity.net/api/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
                 version="1.2.0">
-                <http-security>
+                <f1:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/factsheet</url>
-                <max-hei-ids>1</max-hei-ids>
-            </factsheet>
-            <iias
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                </f1:http-security>
+                <f1:url>https://ewp.staging.campuscommunity.net/api/ewp/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <ia7:iias
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
                 version="7.0.0">
-                <http-security>
+                <ia7:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <get-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/get</get-url>
-                <max-iia-ids>1</max-iia-ids>
-                <index-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/index</index-url>
-                <stats-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/stats</stats-url>
-            </iias>
-            <iia-cnr
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+                </ia7:http-security>
+                <ia7:get-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/get</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:index-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/index</ia7:index-url>
+                <ia7:stats-url>https://ewp.staging.campuscommunity.net/api/ewp/iias/stats</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr
+                xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
                 version="3.0.0">
-                <http-security>
+                <iac3:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/iias/cnr</url>
-            </iia-cnr>
-            <iias-approval
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                </iac3:http-security>
+                <iac3:url>https://ewp.staging.campuscommunity.net/api/ewp/iias/cnr</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0">
-                <http-security>
+                <iaa2:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval</url>
-                <max-iia-ids>1</max-iia-ids>
-            </iias-approval>
-            <iias-approval-cnr
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                </iaa2:http-security>
+                <iaa2:url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval</iaa2:url>
+                <iaa2:max-iia-ids>1</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0">
-                <http-security>
+                <iaac2:http-security>
                     <sec:client-auth-methods>
                         <sec-cli-http:httpsig/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-svr-http:httpsig/>
                     </sec:server-auth-methods>
-                </http-security>
-                <url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval-cnr</url>
-            </iias-approval-cnr>
+                </iaac2:http-security>
+                <iaac2:url>https://ewp.staging.campuscommunity.net/api/ewp/iias/approval-cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="epitech.eu">
