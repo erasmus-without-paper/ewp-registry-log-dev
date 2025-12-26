@@ -3,15 +3,15 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
     xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
-    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns13="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns14="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"
     xmlns:ns15="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:ns16="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
     xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:ns4="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
-    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+    xmlns:ns5="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns6="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns7="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:ns8="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
@@ -65,8 +65,8 @@
                 <ns10:index-url>https://ewp-staging.aau.at/ewp/iias/index</ns10:index-url>
                 <ns10:stats-url>https://ewp-staging.aau.at/ewp/iias/stats</ns10:stats-url>
             </ns10:iias>
-            <ns5:iia-cnr version="3.0.0">
-                <ns5:http-security>
+            <ns12:iia-cnr version="3.0.0">
+                <ns12:http-security>
                     <ns4:client-auth-methods>
                         <ns15:httpsig/>
                     </ns4:client-auth-methods>
@@ -74,9 +74,9 @@
                         <ns16:tlscert/>
                         <ns17:httpsig/>
                     </ns4:server-auth-methods>
-                </ns5:http-security>
-                <ns5:url>https://ewp-staging.aau.at/ewp/iias/cnr</ns5:url>
-            </ns5:iia-cnr>
+                </ns12:http-security>
+                <ns12:url>https://ewp-staging.aau.at/ewp/iias/cnr</ns12:url>
+            </ns12:iia-cnr>
             <ns6:iias-approval version="2.0.0">
                 <ns6:http-security>
                     <ns4:client-auth-methods>
@@ -102,8 +102,8 @@
                 </ns7:http-security>
                 <ns7:url>https://ewp-staging.aau.at/ewp/iias/approval/cnr</ns7:url>
             </ns7:iia-approval-cnr>
-            <ns13:factsheet version="1.2.0">
-                <ns13:http-security>
+            <ns5:factsheet version="1.2.0">
+                <ns5:http-security>
                     <ns4:client-auth-methods>
                         <ns15:httpsig/>
                     </ns4:client-auth-methods>
@@ -111,10 +111,10 @@
                         <ns16:tlscert/>
                         <ns17:httpsig/>
                     </ns4:server-auth-methods>
-                </ns13:http-security>
-                <ns13:url>https://ewp-staging.aau.at/ewp/factsheets</ns13:url>
-                <ns13:max-hei-ids>1</ns13:max-hei-ids>
-            </ns13:factsheet>
+                </ns5:http-security>
+                <ns5:url>https://ewp-staging.aau.at/ewp/factsheets</ns5:url>
+                <ns5:max-hei-ids>1</ns5:max-hei-ids>
+            </ns5:factsheet>
         </ns2:apis-implemented>
         <ns3:institutions-covered>
             <ns2:hei id="uni-klu.ac.at">
