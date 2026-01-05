@@ -22,6 +22,7 @@
     xmlns:imt3="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
     xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:imtc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:imts1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:mf1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
@@ -138,6 +139,9 @@
 
         https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tors/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/stable-v1/manifest-entry.xsd
 
         https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/stable-v2/manifest-entry.xsd
@@ -359,18 +363,6 @@
                 <om3:update-url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityUpdate/</om3:update-url>
                 <om3:max-omobility-ids>1</om3:max-omobility-ids>
             </om3:omobilities>
-            <oms1:omobility-stats version="1.0.0">
-                <oms1:http-security>
-                    <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-                    </sec:server-auth-methods>
-                </oms1:http-security>
-                <oms1:url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityStats/</oms1:url>
-            </oms1:omobility-stats>
             <omc2:omobility-cnr version="2.0.0">
                 <omc2:http-security>
                     <sec:client-auth-methods>
@@ -384,6 +376,18 @@
                 <omc2:url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityCnr/</omc2:url>
                 <omc2:max-omobility-ids>1</omc2:max-omobility-ids>
             </omc2:omobility-cnr>
+            <oms1:omobility-stats version="1.0.0">
+                <oms1:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </oms1:http-security>
+                <oms1:url>https://test.vste.isois.ois.muni.cz/en/ewp/omobilityStats/</oms1:url>
+            </oms1:omobility-stats>
             <omlas1:omobility-las version="1.2.0">
                 <omlas1:http-security>
                     <sec:client-auth-methods>
@@ -440,8 +444,8 @@
                 <imc2:url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityCnr/</imc2:url>
                 <imc2:max-omobility-ids>1</imc2:max-omobility-ids>
             </imc2:imobility-cnr>
-            <imt2:imobility-tors version="2.0.0">
-                <imt2:http-security>
+            <imt3:imobility-tors version="3.0.0">
+                <imt3:http-security>
                     <sec:client-auth-methods>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
                     </sec:client-auth-methods>
@@ -449,12 +453,11 @@
                         <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
                         <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
                     </sec:server-auth-methods>
-                </imt2:http-security>
-                <imt2:get-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorGet/</imt2:get-url>
-                <imt2:index-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorIndex/</imt2:index-url>
-                <imt2:max-omobility-ids>1</imt2:max-omobility-ids>
-                <imt2:sends-notifications/>
-            </imt2:imobility-tors>
+                </imt3:http-security>
+                <imt3:get-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorGet/</imt3:get-url>
+                <imt3:index-url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorIndex/</imt3:index-url>
+                <imt3:max-omobility-ids>1</imt3:max-omobility-ids>
+            </imt3:imobility-tors>
             <imtc2:imobility-tor-cnr version="2.0.0">
                 <imtc2:http-security>
                     <sec:client-auth-methods>
@@ -468,6 +471,18 @@
                 <imtc2:url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorCnr/</imtc2:url>
                 <imtc2:max-omobility-ids>1</imtc2:max-omobility-ids>
             </imtc2:imobility-tor-cnr>
+            <imts1:imobility-tor-stats version="1.0.0">
+                <imts1:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </imts1:http-security>
+                <imts1:url>https://test.vste.isois.ois.muni.cz/en/ewp/imobilityTorStats/</imts1:url>
+            </imts1:imobility-tor-stats>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="vstecb.cz">
