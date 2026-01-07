@@ -1,0 +1,56 @@
+<manifest 
+                xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" 
+                xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" 
+                xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" 
+                xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd" 
+                xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd" 
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" 
+                xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
+                xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" 
+                xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
+                xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" 
+                xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" 
+                xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" 
+                xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" 
+                xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" 
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6">
+ <host> <ewp:admin-email>ewp@ua.gov.tr</ewp:admin-email>
+                                <ewp:admin-provider>TURNA</ewp:admin-provider>
+                                <ewp:admin-notes> Erasmus Without Paper API module provided by Turkish National Agency</ewp:admin-notes>
+                                 <r:apis-implemented> 
+                            <d5:discovery version="6.0.0">
+                                <d5:url>https://ewptest.ua.gov.tr/api/manifest/UADemo</d5:url>
+                                </d5:discovery>
+                            <e2:echo version="2.0.1">
+                            <e2:http-security>
+                            <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                            </sec:client-auth-methods>
+                            <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                            </sec:server-auth-methods>
+                            </e2:http-security>
+                            <e2:url>https://ewptest.ua.gov.tr/api/echo/UADemo</e2:url>
+                            </e2:echo> 
+                            </r:apis-implemented>
+                                 <institutions-covered>
+                                        <r:hei id="ua-demo.ua.gov.tr">
+                                        <r:other-id type="pic">15487456</r:other-id>
+                                        <r:other-id type="erasmus">TR UA 01</r:other-id>
+                                        <r:name xml:lang="tr">UA Demo Üniversitesi</r:name>
+                                        <r:name xml:lang="en">UA Demo University</r:name>
+                                        </r:hei>
+                                        </institutions-covered>
+                                 <client-credentials-in-use>
+                                    <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwGQ3LJfFg0qf9cdkCmp6CckcyAI0LmKQemxrtB1KFPV7AIyYr4FJayG91fwIKhd7fpiWClYgBqHB7fV0328svz/EgG4TFQwEpmF4LObBqpLTj/z/3FwmebM2626B92Nw7IE9+/6jcaiUCsRb2hNwDKuITIkN0M7941uLVNVCcX8BkYcLlBV8wgK7E/MSGdtlTx1rG8XcSiPrtrhjknDtbjmYLD9VmwpP4SICKJZ2wge/xF0UZVpBonyp8GmAgi3B1vhXUyJrrNpNjubrz9spa2vp4oc/jIZrcUHBwladg5WPSuzew3hbKFUR3R8OQmITnMqGqoMoo4FnmhzMIX52kQIDAQAB</rsa-public-key>
+                                </client-credentials-in-use>
+                                <server-credentials-in-use>
+                                    <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwGQ3LJfFg0qf9cdkCmp6CckcyAI0LmKQemxrtB1KFPV7AIyYr4FJayG91fwIKhd7fpiWClYgBqHB7fV0328svz/EgG4TFQwEpmF4LObBqpLTj/z/3FwmebM2626B92Nw7IE9+/6jcaiUCsRb2hNwDKuITIkN0M7941uLVNVCcX8BkYcLlBV8wgK7E/MSGdtlTx1rG8XcSiPrtrhjknDtbjmYLD9VmwpP4SICKJZ2wge/xF0UZVpBonyp8GmAgi3B1vhXUyJrrNpNjubrz9spa2vp4oc/jIZrcUHBwladg5WPSuzew3hbKFUR3R8OQmITnMqGqoMoo4FnmhzMIX52kQIDAQAB</rsa-public-key>
+                                </server-credentials-in-use>
+                        </host> 
+ </manifest>
