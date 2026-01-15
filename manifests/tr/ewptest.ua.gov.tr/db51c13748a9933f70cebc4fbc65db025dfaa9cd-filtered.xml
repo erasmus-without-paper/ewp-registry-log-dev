@@ -40,6 +40,19 @@
                 </e2:http-security>
                 <e2:url>https://ewptest.ua.gov.tr/api/echo/ua-demo.ua.gov.tr</e2:url>
             </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewptest.ua.gov.tr/api/ua-demo.ua.gov.tr</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="ua-demo.ua.gov.tr">
