@@ -16,6 +16,7 @@
     xmlns:omc2="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
     xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:oms1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -92,6 +93,20 @@
                 </iac3:http-security>
                 <iac3:url>https://ewp100-ewp.staging.moveon4.com/v1/iia/cnr</iac3:url>
             </iac3:iia-cnr>
+            <om3:omobilities version="3.0.0">
+                <om3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om3:http-security>
+                <om3:get-url>https://ewp100-ewp.staging.moveon4.com/v1/omobility/get</om3:get-url>
+                <om3:index-url>https://ewp100-ewp.staging.moveon4.com/v1/omobility/index</om3:index-url>
+                <om3:update-url>https://ewp100-ewp.staging.moveon4.com/v1/omobility/update</om3:update-url>
+                <om3:max-omobility-ids>10</om3:max-omobility-ids>
+            </om3:omobilities>
             <omc2:omobility-cnr version="2.0.0">
                 <omc2:http-security>
                     <sec:client-auth-methods>
@@ -104,6 +119,17 @@
                 <omc2:url>https://ewp100-ewp.staging.moveon4.com/v1/omobility/cnr</omc2:url>
                 <omc2:max-omobility-ids>10</omc2:max-omobility-ids>
             </omc2:omobility-cnr>
+            <oms1:omobility-stats version="1.0.0">
+                <oms1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oms1:http-security>
+                <oms1:url>https://ewp100-ewp.staging.moveon4.com/v1/omobility/stats</oms1:url>
+            </oms1:omobility-stats>
             <im2:imobilities version="2.0.0">
                 <im2:http-security>
                     <sec:client-auth-methods>
