@@ -1,5 +1,6 @@
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd"
     xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
@@ -66,6 +67,21 @@
                 <f1:url>https://ewptest.ua.gov.tr/api/factsheet/ua-demo.ua.gov.tr</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <c1:courses version="1.0.1">
+                <c1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </c1:http-security>
+                <c1:url>https://ewptest.ua.gov.tr/api/courses/ua-demo.ua.gov.tr</c1:url>
+                <c1:max-hei-ids>1</c1:max-hei-ids>
+                <c1:max-los-ids>1</c1:max-los-ids>
+                <c1:max-los-codes>1</c1:max-los-codes>
+            </c1:courses>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="ua-demo.ua.gov.tr">

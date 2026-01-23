@@ -10,6 +10,7 @@
                 xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" 
+                xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/master/manifest-entry.xsd" 
                 xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
                 xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" 
                 xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
@@ -64,6 +65,21 @@
                                 <f1:url>https://ewptest.ua.gov.tr/api/factsheet/ua-demo.ua.gov.tr</f1:url>
                                 <f1:max-hei-ids>1</f1:max-hei-ids>
                                 </f1:factsheet>
+                            <c1:courses version="1.0.1">
+                                <c1:http-security>
+                                <sec:client-auth-methods>
+                                <sec-A2:httpsig/>
+                                </sec:client-auth-methods>
+                                <sec:server-auth-methods>
+                                <sec-B1:tlscert/>
+                                <sec-B2:httpsig/>
+                                </sec:server-auth-methods>
+                                </c1:http-security>
+                                <c1:url>https://ewptest.ua.gov.tr/api/courses/ua-demo.ua.gov.tr</c1:url>
+                                <c1:max-hei-ids>1</c1:max-hei-ids>
+                                <c1:max-los-ids>1</c1:max-los-ids>
+                                <c1:max-los-codes>1</c1:max-los-codes>
+                                </c1:courses>
                             </r:apis-implemented>
                                  <institutions-covered>
                                         <r:hei id="ua-demo.ua.gov.tr">
