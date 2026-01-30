@@ -20,40 +20,19 @@
     xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
     xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
-    xsi:schemaLocation="
-        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
-
-        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
-        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
-    "
+    xmlns:facs="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+    xsi:schemaLocation="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/stable-v1/security-entries.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+                        https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1 https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+                        "
 >
     <!-- This example doesn't contain many comments, but its XML Schema does! -->
     <host>
@@ -93,11 +72,14 @@
                             xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
                             allows-self-signed="true"
                         />-->
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <!--<tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>-->
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <!--<tlscert
+                        xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>-->
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </http-security>
 
@@ -109,10 +91,12 @@
             <in2:institutions version="2.2.0">
                 <in2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </in2:http-security>
                 <in2:url>https://ewp.pre.url.edu/api/institutions220</in2:url>
@@ -122,10 +106,12 @@
             <ou2:organizational-units version="2.1.1">
                 <ou2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </ou2:http-security>
                 <ou2:url>https://ewp.pre.url.edu/api/ounits211</ou2:url>
@@ -133,13 +119,31 @@
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
 
+            <facs:factsheet version="1.0.0">
+                <facs:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
+                    </sec:server-auth-methods>
+                </facs:http-security>
+
+                <facs:url>https://ewp.pre.url.edu/api/factsheet100</facs:url>
+                <facs:max-hei-ids>1</facs:max-hei-ids>
+            </facs:factsheet>
+
             <om3:omobilities version="3.0.0">
                 <om3:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </om3:http-security>
                 <om3:get-url>https://ewp.pre.url.edu/api/outmobilities300/get</om3:get-url>
@@ -151,10 +155,12 @@
             <omc2:omobility-cnr version="2.0.0">
                 <omc2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </omc2:http-security>
                 <omc2:url>https://ewp.pre.url.edu/api/outmobilities/cnr200</omc2:url>
@@ -164,10 +170,12 @@
             <oms1:omobility-stats version="1.0.0">
                 <oms1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </oms1:http-security>
                 <oms1:url>https://ewp.pre.url.edu/api/stats/outmobilities100</oms1:url>
@@ -176,10 +184,12 @@
             <im2:imobilities version="2.0.0">
                 <im2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </im2:http-security>
                 <im2:get-url>https://ewp.pre.url.edu/api/incmobilities200/get</im2:get-url>
@@ -189,10 +199,12 @@
             <imc2:imobility-cnr version="2.0.0">
                 <imc2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </imc2:http-security>
                 <imc2:url>https://ewp.pre.url.edu/api/incmobilities/cnr200</imc2:url>
@@ -202,10 +214,12 @@
             <oml1:omobility-las version="1.2.0">
                 <oml1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </oml1:http-security>
                 <oml1:get-url>https://ewp.pre.url.edu/api/omla101/get</oml1:get-url>
@@ -218,10 +232,12 @@
             <omlc1:omobility-la-cnr version="1.1.0">
                 <omlc1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </omlc1:http-security>
                 <omlc1:url>https://ewp.pre.url.edu/api/omla/cnr100</omlc1:url>
@@ -232,10 +248,12 @@
             <ia7:iias version="7.0.0">
                 <ia7:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </ia7:http-security>
                 <ia7:get-url>https://ewp.pre.url.edu/api/iia700/get</ia7:get-url>
@@ -247,10 +265,12 @@
             <iac3:iia-cnr version="3.0.0">
                 <iac3:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </iac3:http-security>
                 <iac3:url>https://ewp.pre.url.edu/api/iia/cnr300</iac3:url>
@@ -259,10 +279,12 @@
             <iaa2:iias-approval version="2.0.0">
                 <iaa2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </iaa2:http-security>
                 <iaa2:url>https://ewp.pre.url.edu/api/iia/approval200</iaa2:url>
@@ -272,10 +294,12 @@
             <iaac2:iia-approval-cnr version="2.0.0">
                 <iaac2:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </iaac2:http-security>
                 <iaac2:url>https://ewp.pre.url.edu/api/iia/approval/cnr200</iaac2:url>
@@ -284,10 +308,12 @@
             <file1:file version="1.0.0">
                 <file1:http-security>
                     <sec:client-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" />
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
-                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <httpsig
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" />
                     </sec:server-auth-methods>
                 </file1:http-security>
                 <file1:url>https://ewp.pre.url.edu/api/files100</file1:url>
@@ -295,7 +321,8 @@
 
         </r:apis-implemented>
 
-        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+        <mf:institutions-covered
+            xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="url.edu">
                 <other-id type="erasmus">E  BARCELO16</other-id>
                 <name xml:lang="es">Universitat Ramon Llull</name>
@@ -306,58 +333,58 @@
 
             <!-- This one is used for TLS Client Authentication (optional) -->
             <certificate>MIIHxzCCBa+gAwIBAgIQDFZPdLYD82kFwDCwLrIHdzANBgkqhkiG9w0BAQwFADBEMQswCQYDVQQG
-EwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENB
-IDQwHhcNMjAwNzE1MDAwMDAwWhcNMjIwNzE1MjM1OTU5WjCBvjELMAkGA1UEBhMCRVMxDjAMBgNV
-BBETBTA4MDIyMRIwEAYDVQQIEwlCYXJjZWxvbmExEjAQBgNVBAcTCUJhcmNlbG9uYTEcMBoGA1UE
-CRMTQ2FsbGUgQ2xhcmF2YWxsIDEtMzEgMB4GA1UEChMXVW5pdmVyc2l0YXQgUmFtb24gTGx1bGwx
-HTAbBgNVBAsMFFNlcnZlaXMgSW5mb3Jtw6B0aWNzMRgwFgYDVQQDEw9idXMtZGV2LnVybC5lZHUw
-ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKYdocP6lvclPwquEg2oA2MtWa56iVvdim
-FSmw3dOQq8gzMUpDsp0WNpNOm4TuLgD4TqTW3QsViiNyqDqtjc+/TdJJp6636st97BvCp+nFqPYM
-B/7oNi8lhlJbfsthh3b1k7ky5Y/Duc+8ZHKPQuySTI8nL7rRj4lVXrzk85DjTxvqvww9cHaDv297
-vtbt5uAuoGDybgpMDjylZegkXDyZna1gS1Jxo2BHN8lUKHksV8fNljYa4GQS3EHWZPMxBJ3a3hVF
-sJqr4geXqGEPCjucvqwJLMAyxQkgOGyU52ftYz7OifXaNBn7JZ5FT9O2jlqTD0at91ZonBBD+2kT
-BHchAgMBAAGjggM4MIIDNDAfBgNVHSMEGDAWgBRvHTVJEGwy+lmgnryK6B+VvnF6DDAdBgNVHQ4E
-FgQUMt5lD+vnP26K/qDr8rLNRFR1AbkwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYD
-VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAk8wJTAj
-BggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMD8GA1UdHwQ4MDYw
-NKAyoDCGLmh0dHA6Ly9HRUFOVC5jcmwuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcmwwdQYI
-KwYBBQUHAQEEaTBnMDoGCCsGAQUFBzAChi5odHRwOi8vR0VBTlQuY3J0LnNlY3RpZ28uY29tL0dF
-QU5UT1ZSU0FDQTQuY3J0MCkGCCsGAQUFBzABhh1odHRwOi8vR0VBTlQub2NzcC5zZWN0aWdvLmNv
-bTAvBgNVHREEKDAmgg9idXMtZGV2LnVybC5lZHWCE3d3dy5idXMtZGV2LnVybC5lZHUwggF/Bgor
-BgEEAdZ5AgQCBIIBbwSCAWsBaQB1AEalVet1+pEgMLWiiWn0830RLEF0vv1JuIWr8vxw/m1HAAAB
-c1L3dnwAAAQDAEYwRAIgBaNCYa8mtoT0SnDD8n0/N7+GsKqIrZusiKKr1y+0BmkCIE40odCUImY1
-oEHwODEAoLmsXLv/MwPYVQePDGSxBNAMAHcA36Veq2iCTx9sre64X04+WurNohKkal6OOxLAIERc
-KnMAAAFzUvd2pAAABAMASDBGAiEAkCr2tgX3KSEiLnnlr3kR8SsBxIy0pUQasNG+n/2NhvMCIQDv
-cM95i/v/fciRAD7AnPlA5L3FIhA+zgUwTT3TUYClwwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEA
-KQaNsgiaN9kTAAABc1L3dnUAAAQDAEgwRgIhAKHghJL0v/W1Jq6QhwGZ49oEhTled5q5Z1CL8JCy
-hgoFAiEAnedJRtd7qKC1ZknZVInYSvG0LpydmFoDuef3iIFqQ2UwDQYJKoZIhvcNAQEMBQADggIB
-AFptvPpggqdr9nH44KuwqhcMQaO0YoCSIGIYpP9MI7E53wBpwr1EjgtzELiskmaMK2T8wt2H9haX
-DCe23cV48K2eF95zTIIpOjvT9cIdu6/8Px4lHZclFCt6DHdel6QoAdoV1jmUDGGvZapwsxOIYK1q
-OxtyMW62TmZuO8Wg+zfIsYO0YAfLDkZAowW1ulETl6WMST1a/Jm5xPKS9QzWKBdoCGoXQzenTpNK
-Ac8quCgQY9oEyOohA6ctEqRK/o0zGHksgWLOQF7401FliX63Q0/Zvu0xywy+k9LJXLCz4uDVgtgG
-BDm++M0mseJfusPra+yTi06/L/dsVoLbaSFCJeV99KcAO/bKWPAVn9bmEcfKpTFKJC9VwS+CFwka
-/yZp/qHxpdVkHoPb2GSYyf271VpkUHA8vZE9D14C2Zca0W/dDn4B8k+zPuv0ta/eiHBnjH6aWPPa
-9W8hm5MG0l8eBNZVMiXBRu2zPhIguoDRtXeo1I1U5rjMTFf+tArcpQoRFuxPSF8Kk8vnrzndyzX3
-VtdJn9tdmR/YXhQyO/3iUJtw8uRzZc4K+JRk2geVdcKKBCBs9x0hwYhJWs+3aNFyp/w0UZGF1Vtw
-5x9z2HTlvV2OY9tCCJXJU0+y7fbnuP3bEqHjpRqCn2BIbh/fyTLpjTVonPnTD7UvTIOvZcSKoVdC</certificate>
+                EwJOTDEZMBcGA1UEChMQR0VBTlQgVmVyZW5pZ2luZzEaMBgGA1UEAxMRR0VBTlQgT1YgUlNBIENB
+                IDQwHhcNMjAwNzE1MDAwMDAwWhcNMjIwNzE1MjM1OTU5WjCBvjELMAkGA1UEBhMCRVMxDjAMBgNV
+                BBETBTA4MDIyMRIwEAYDVQQIEwlCYXJjZWxvbmExEjAQBgNVBAcTCUJhcmNlbG9uYTEcMBoGA1UE
+                CRMTQ2FsbGUgQ2xhcmF2YWxsIDEtMzEgMB4GA1UEChMXVW5pdmVyc2l0YXQgUmFtb24gTGx1bGwx
+                HTAbBgNVBAsMFFNlcnZlaXMgSW5mb3Jtw6B0aWNzMRgwFgYDVQQDEw9idXMtZGV2LnVybC5lZHUw
+                ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKYdocP6lvclPwquEg2oA2MtWa56iVvdim
+                FSmw3dOQq8gzMUpDsp0WNpNOm4TuLgD4TqTW3QsViiNyqDqtjc+/TdJJp6636st97BvCp+nFqPYM
+                B/7oNi8lhlJbfsthh3b1k7ky5Y/Duc+8ZHKPQuySTI8nL7rRj4lVXrzk85DjTxvqvww9cHaDv297
+                vtbt5uAuoGDybgpMDjylZegkXDyZna1gS1Jxo2BHN8lUKHksV8fNljYa4GQS3EHWZPMxBJ3a3hVF
+                sJqr4geXqGEPCjucvqwJLMAyxQkgOGyU52ftYz7OifXaNBn7JZ5FT9O2jlqTD0at91ZonBBD+2kT
+                BHchAgMBAAGjggM4MIIDNDAfBgNVHSMEGDAWgBRvHTVJEGwy+lmgnryK6B+VvnF6DDAdBgNVHQ4E
+                FgQUMt5lD+vnP26K/qDr8rLNRFR1AbkwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYD
+                VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAk8wJTAj
+                BggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQICMD8GA1UdHwQ4MDYw
+                NKAyoDCGLmh0dHA6Ly9HRUFOVC5jcmwuc2VjdGlnby5jb20vR0VBTlRPVlJTQUNBNC5jcmwwdQYI
+                KwYBBQUHAQEEaTBnMDoGCCsGAQUFBzAChi5odHRwOi8vR0VBTlQuY3J0LnNlY3RpZ28uY29tL0dF
+                QU5UT1ZSU0FDQTQuY3J0MCkGCCsGAQUFBzABhh1odHRwOi8vR0VBTlQub2NzcC5zZWN0aWdvLmNv
+                bTAvBgNVHREEKDAmgg9idXMtZGV2LnVybC5lZHWCE3d3dy5idXMtZGV2LnVybC5lZHUwggF/Bgor
+                BgEEAdZ5AgQCBIIBbwSCAWsBaQB1AEalVet1+pEgMLWiiWn0830RLEF0vv1JuIWr8vxw/m1HAAAB
+                c1L3dnwAAAQDAEYwRAIgBaNCYa8mtoT0SnDD8n0/N7+GsKqIrZusiKKr1y+0BmkCIE40odCUImY1
+                oEHwODEAoLmsXLv/MwPYVQePDGSxBNAMAHcA36Veq2iCTx9sre64X04+WurNohKkal6OOxLAIERc
+                KnMAAAFzUvd2pAAABAMASDBGAiEAkCr2tgX3KSEiLnnlr3kR8SsBxIy0pUQasNG+n/2NhvMCIQDv
+                cM95i/v/fciRAD7AnPlA5L3FIhA+zgUwTT3TUYClwwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEA
+                KQaNsgiaN9kTAAABc1L3dnUAAAQDAEgwRgIhAKHghJL0v/W1Jq6QhwGZ49oEhTled5q5Z1CL8JCy
+                hgoFAiEAnedJRtd7qKC1ZknZVInYSvG0LpydmFoDuef3iIFqQ2UwDQYJKoZIhvcNAQEMBQADggIB
+                AFptvPpggqdr9nH44KuwqhcMQaO0YoCSIGIYpP9MI7E53wBpwr1EjgtzELiskmaMK2T8wt2H9haX
+                DCe23cV48K2eF95zTIIpOjvT9cIdu6/8Px4lHZclFCt6DHdel6QoAdoV1jmUDGGvZapwsxOIYK1q
+                OxtyMW62TmZuO8Wg+zfIsYO0YAfLDkZAowW1ulETl6WMST1a/Jm5xPKS9QzWKBdoCGoXQzenTpNK
+                Ac8quCgQY9oEyOohA6ctEqRK/o0zGHksgWLOQF7401FliX63Q0/Zvu0xywy+k9LJXLCz4uDVgtgG
+                BDm++M0mseJfusPra+yTi06/L/dsVoLbaSFCJeV99KcAO/bKWPAVn9bmEcfKpTFKJC9VwS+CFwka
+                /yZp/qHxpdVkHoPb2GSYyf271VpkUHA8vZE9D14C2Zca0W/dDn4B8k+zPuv0ta/eiHBnjH6aWPPa
+                9W8hm5MG0l8eBNZVMiXBRu2zPhIguoDRtXeo1I1U5rjMTFf+tArcpQoRFuxPSF8Kk8vnrzndyzX3
+                VtdJn9tdmR/YXhQyO/3iUJtw8uRzZc4K+JRk2geVdcKKBCBs9x0hwYhJWs+3aNFyp/w0UZGF1Vtw
+                5x9z2HTlvV2OY9tCCJXJU0+y7fbnuP3bEqHjpRqCn2BIbh/fyTLpjTVonPnTD7UvTIOvZcSKoVdC</certificate>
 
             <!-- And this one is used for HTTP Signature Authentication -->
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
-phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
-DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
-e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
-RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
-EwR3IQIDAQAB</rsa-public-key>
+                phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
+                DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
+                e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
+                RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
+                EwR3IQIDAQAB</rsa-public-key>
         </client-credentials-in-use>
 
         <server-credentials-in-use>
             <!-- Used for HTTP Signature Authentication -->
             <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAymHaHD+pb3JT8KrhINqANjLVmueolb3Y
-phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
-DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
-e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
-RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
-EwR3IQIDAQAB</rsa-public-key>
+                phUpsN3TkKvIMzFKQ7KdFjaTTpuE7i4A+E6k1t0LFYojcqg6rY3Pv03SSaeut+rLfewbwqfpxaj2
+                DAf+6DYvJYZSW37LYYd29ZO5MuWPw7nPvGRyj0LskkyPJy+60Y+JVV685POQ408b6r8MPXB2g79v
+                e77W7ebgLqBg8m4KTA48pWXoJFw8mZ2tYEtScaNgRzfJVCh5LFfHzZY2GuBkEtxB1mTzMQSd2t4V
+                RbCaq+IHl6hhDwo7nL6sCSzAMsUJIDhslOdn7WM+zon12jQZ+yWeRU/Tto5akw9GrfdWaJwQQ/tp
+                EwR3IQIDAQAB</rsa-public-key>
         </server-credentials-in-use>
     </host>
 </manifest>
