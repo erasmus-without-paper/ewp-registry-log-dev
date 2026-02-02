@@ -1,5 +1,5 @@
-<v:manifest
-    xmlns:v="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+<x:manifest
+    xmlns:x="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:a="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
     xmlns:b="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
     xmlns:c="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
@@ -17,16 +17,18 @@
     xmlns:o="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:p="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:q="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
-    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-    xmlns:s="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
-    xmlns:t="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
-    xmlns:u="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
-    xmlns:w="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+    xmlns:s="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    xmlns:t="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:u="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    xmlns:v="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+    xmlns:w="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    xmlns:y="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 >
-    <v:host>
-        <w:admin-email>ewp.admin@uliege.be</w:admin-email>
-        <w:admin-provider>University of Liège</w:admin-provider>
-        <s:apis-implemented>
+    <x:host>
+        <y:admin-email>ewp.admin@uliege.be</y:admin-email>
+        <y:admin-provider>University of Liège</y:admin-provider>
+        <t:apis-implemented>
             <e:discovery version="6.0.0">
                 <e:url>https://myproxy-demo.uliege.be/ws_penelope/EWP/manifest</e:url>
             </e:discovery>
@@ -53,33 +55,33 @@
                 <p:url>https://myproxy-demo.uliege.be/ws_penelope/EWP/institutions</p:url>
                 <p:max-hei-ids>10</p:max-hei-ids>
             </p:institutions>
-            <r:organizational-units version="2.1.1">
-                <r:http-security>
+            <s:organizational-units version="2.1.1">
+                <s:http-security>
                     <k:client-auth-methods>
                         <b:httpsig/>
                     </k:client-auth-methods>
                     <k:server-auth-methods>
                         <d:tlscert/>
                     </k:server-auth-methods>
-                </r:http-security>
-                <r:url>https://myproxy-demo.uliege.be/ws_penelope/EWP/ounits</r:url>
-                <r:max-ounit-ids>10</r:max-ounit-ids>
-                <r:max-ounit-codes>10</r:max-ounit-codes>
-            </r:organizational-units>
-            <t:iias version="7.0.0">
-                <t:http-security>
+                </s:http-security>
+                <s:url>https://myproxy-demo.uliege.be/ws_penelope/EWP/ounits</s:url>
+                <s:max-ounit-ids>10</s:max-ounit-ids>
+                <s:max-ounit-codes>10</s:max-ounit-codes>
+            </s:organizational-units>
+            <u:iias version="7.0.0">
+                <u:http-security>
                     <k:client-auth-methods>
                         <b:httpsig/>
                     </k:client-auth-methods>
                     <k:server-auth-methods>
                         <d:tlscert/>
                     </k:server-auth-methods>
-                </t:http-security>
-                <t:get-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/iias/get</t:get-url>
-                <t:max-iia-ids>10</t:max-iia-ids>
-                <t:index-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/iias/index</t:index-url>
-                <t:stats-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/iias/stats</t:stats-url>
-            </t:iias>
+                </u:http-security>
+                <u:get-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/iias/get</u:get-url>
+                <u:max-iia-ids>10</u:max-iia-ids>
+                <u:index-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/iias/index</u:index-url>
+                <u:stats-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/iias/stats</u:stats-url>
+            </u:iias>
             <i:iia-cnr version="3.0.0">
                 <i:http-security>
                     <k:client-auth-methods>
@@ -149,20 +151,20 @@
                 <n:get-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/imobilities/get</n:get-url>
                 <n:max-omobility-ids>10</n:max-omobility-ids>
             </n:imobilities>
-            <u:omobilities version="3.0.0">
-                <u:http-security>
+            <v:omobilities version="3.0.0">
+                <v:http-security>
                     <k:client-auth-methods>
                         <b:httpsig/>
                     </k:client-auth-methods>
                     <k:server-auth-methods>
                         <d:tlscert/>
                     </k:server-auth-methods>
-                </u:http-security>
-                <u:get-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/get</u:get-url>
-                <u:index-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/index</u:index-url>
-                <u:update-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/update</u:update-url>
-                <u:max-omobility-ids>10</u:max-omobility-ids>
-            </u:omobilities>
+                </v:http-security>
+                <v:get-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/get</v:get-url>
+                <v:index-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/index</v:index-url>
+                <v:update-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/update</v:update-url>
+                <v:max-omobility-ids>10</v:max-omobility-ids>
+            </v:omobilities>
             <q:omobility-cnr version="2.0.0">
                 <q:http-security>
                     <k:client-auth-methods>
@@ -198,18 +200,45 @@
                 </j:http-security>
                 <j:url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities/stats</j:url>
             </j:omobility-stats>
-        </s:apis-implemented>
-        <v:institutions-covered>
-            <s:hei id="uliege.be">
-                <s:other-id type="pic">999976105</s:other-id>
-                <s:other-id type="erasmus">B  LIEGE01</s:other-id>
-                <s:other-id type="oid">E10209384</s:other-id>
-                <s:name xml:lang="fr">Université de Liège</s:name>
-                <s:name xml:lang="en">University of Liège</s:name>
-            </s:hei>
-        </v:institutions-covered>
-        <v:client-credentials-in-use>
-            <v:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyutQPUOCAgg9HAZrLsal86hUf8IAano174k5QNeRUO2PrdY0Z275Pp76NIMYJ8mQyrbh2X6jm24UWiiN4rsAOQVy+7AJa+EUoxmH8niQI9eAWKiNHrFubonrLet3tnrVPUB2tbN9UNv3YFaHNLLrHViObBPxSeeVHmUhM9YKujlDf5MBFtCFagjUrbGilyU1CFb/nYj3dHQW4XNBa+hTubv3TvjFxNVwpsx3cr8nz+Quh4TU8iGa/Q6o5GlsA6ZCLFraFr1rMkljnVtP2IBqjCihnO/tQnBryAzpmHK+co5z8QocOyb8FVNw2S3pbcp7P8zcqogClphrGe29O2ZFpwIDAQAB</v:rsa-public-key>
-        </v:client-credentials-in-use>
-    </v:host>
-</v:manifest>
+            <w:omobility-las version="1.2.0">
+                <w:http-security>
+                    <k:client-auth-methods>
+                        <b:httpsig/>
+                    </k:client-auth-methods>
+                    <k:server-auth-methods>
+                        <d:tlscert/>
+                    </k:server-auth-methods>
+                </w:http-security>
+                <w:get-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities-las/get</w:get-url>
+                <w:index-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities-las/index</w:index-url>
+                <w:update-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities-las/update</w:update-url>
+                <w:stats-url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities-las/stats</w:stats-url>
+                <w:max-omobility-ids>10</w:max-omobility-ids>
+            </w:omobility-las>
+            <r:omobility-la-cnr version="1.1.0">
+                <r:http-security>
+                    <k:client-auth-methods>
+                        <b:httpsig/>
+                    </k:client-auth-methods>
+                    <k:server-auth-methods>
+                        <d:tlscert/>
+                    </k:server-auth-methods>
+                </r:http-security>
+                <r:url>https://myproxy-demo.uliege.be/ws_penelope/EWP/omobilities-la/cnr</r:url>
+                <r:max-omobility-ids>10</r:max-omobility-ids>
+            </r:omobility-la-cnr>
+        </t:apis-implemented>
+        <x:institutions-covered>
+            <t:hei id="uliege.be">
+                <t:other-id type="pic">999976105</t:other-id>
+                <t:other-id type="erasmus">B  LIEGE01</t:other-id>
+                <t:other-id type="oid">E10209384</t:other-id>
+                <t:name xml:lang="fr">Université de Liège</t:name>
+                <t:name xml:lang="en">University of Liège</t:name>
+            </t:hei>
+        </x:institutions-covered>
+        <x:client-credentials-in-use>
+            <x:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyutQPUOCAgg9HAZrLsal86hUf8IAano174k5QNeRUO2PrdY0Z275Pp76NIMYJ8mQyrbh2X6jm24UWiiN4rsAOQVy+7AJa+EUoxmH8niQI9eAWKiNHrFubonrLet3tnrVPUB2tbN9UNv3YFaHNLLrHViObBPxSeeVHmUhM9YKujlDf5MBFtCFagjUrbGilyU1CFb/nYj3dHQW4XNBa+hTubv3TvjFxNVwpsx3cr8nz+Quh4TU8iGa/Q6o5GlsA6ZCLFraFr1rMkljnVtP2IBqjCihnO/tQnBryAzpmHK+co5z8QocOyb8FVNw2S3pbcp7P8zcqogClphrGe29O2ZFpwIDAQAB</x:rsa-public-key>
+        </x:client-credentials-in-use>
+    </x:host>
+</x:manifest>
