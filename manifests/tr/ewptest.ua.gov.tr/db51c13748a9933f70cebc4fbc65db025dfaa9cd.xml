@@ -10,12 +10,11 @@
                 xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd" 
                 xmlns:c1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd" 
                 xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd" 
-                xmlns:iap1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v1/manifest-entry.xsd" 
+                xmlns:iap2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:iapc2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
 
                 xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" 
-
                 xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
                 xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" 
                 xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" 
@@ -137,8 +136,8 @@
                                 </iac3:http-security>
                                 <iac3:url>https://ewptest.ua.gov.tr/api/iias/cnr?hei_id=ua-demo.ua.gov.tr</iac3:url>
                                 </iac3:iia-cnr>
-                            <iap1:iias-approval version="1.1.0">
-                                <iap1:http-security>
+                            <iap2:iias-approval version="2.0.0">
+                                <iap2:http-security>
                                 <sec:client-auth-methods>
                                 <sec-A2:httpsig/>
                                 </sec:client-auth-methods>
@@ -146,9 +145,10 @@
                                 <sec-B1:tlscert/>
                                 <sec-B2:httpsig/>
                                 </sec:server-auth-methods>
-                                </iap1:http-security>
-                                <iap1:url>https://ewptest.ua.gov.tr/api/iias-approval/ua-demo.ua.gov.tr</iap1:url>
-                                </iap1:iias-approval>
+                                </iap2:http-security>
+                                <iap2:url>https://ewptest.ua.gov.tr/api/iias-approval/ua-demo.ua.gov.tr</iap2:url>
+                                <iap2:max-iia-ids>10</iap2:max-iia-ids>
+                                </iap2:iias-approval>
                             <iapc2:iia-approval-cnr version="2.0.0">
                                 <iapc2:http-security>
                                 <sec:client-auth-methods>

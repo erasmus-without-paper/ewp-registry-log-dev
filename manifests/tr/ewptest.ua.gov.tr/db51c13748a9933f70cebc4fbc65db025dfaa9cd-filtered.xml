@@ -8,6 +8,8 @@
     xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
     xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
     xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+    xmlns:iap2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+    xmlns:iapc2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -135,6 +137,31 @@
                 </iac3:http-security>
                 <iac3:url>https://ewptest.ua.gov.tr/api/iias/cnr?hei_id=ua-demo.ua.gov.tr</iac3:url>
             </iac3:iia-cnr>
+            <iap2:iias-approval version="2.0.0">
+                <iap2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iap2:http-security>
+                <iap2:url>https://ewptest.ua.gov.tr/api/iias-approval/ua-demo.ua.gov.tr</iap2:url>
+                <iap2:max-iia-ids>10</iap2:max-iia-ids>
+            </iap2:iias-approval>
+            <iapc2:iia-approval-cnr version="2.0.0">
+                <iapc2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iapc2:http-security>
+                <iapc2:url>https://ewptest.ua.gov.tr/api/iias-approval/cnr?hei_id=ua-demo.ua.gov.tr</iapc2:url>
+            </iapc2:iia-approval-cnr>
         </r:apis-implemented>
         <institutions-covered>
             <r:hei id="ua-demo.ua.gov.tr">
