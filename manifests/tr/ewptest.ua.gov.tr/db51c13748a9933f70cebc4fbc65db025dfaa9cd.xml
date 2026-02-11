@@ -1,7 +1,7 @@
-<manifest 
-                xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" 
+<ewp:manifest 
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" 
                 xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" 
-                xmlns:d5="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" 
+                xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" 
                 xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd" 
@@ -14,23 +14,29 @@
                 xmlns:iapc2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd" 
                 xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd" 
                 xmlns:omc2="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:oms1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd" 
+                xmlns:im2="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:imc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" 
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" 
                 xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
 
+                xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" 
                 xmlns:sec-A0="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1" 
                 xmlns:sec-A1="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" 
                 xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" 
                 xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" 
                 xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1" 
                 xmlns:sec-C1="https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1" 
-                xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1" 
-                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6">
- <host> <ewp:admin-email>ewp@ua.gov.tr</ewp:admin-email>
-                                <ewp:admin-provider>TURNA</ewp:admin-provider>
-                                <ewp:admin-notes> Erasmus Without Paper API module provided by Turkish National Agency</ewp:admin-notes>
+                xmlns:sec-C2="https://github.com/erasmus-without-paper/ewp-specs-sec-resencr-tls/tree/stable-v1">
+ <ewp:host> 
+                                <admin-email>ewp@ua.gov.tr</admin-email>
+                                <admin-provider>TURNA</admin-provider>
+                                <admin-notes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MultilineStringWithOptionalLang" xml:lang="en">Erasmus Without Paper API module provided by Turkish National Agency</admin-notes>
                                  <r:apis-implemented> 
-                            <d5:discovery version="6.0.0">
-                                <d5:url>https://ewptest.ua.gov.tr/api/manifest/ua-demo.ua.gov.tr</d5:url>
-                                </d5:discovery>
+                            <d6:discovery version="6.0.0">
+                                <d6:url>https://ewptest.ua.gov.tr/api/manifest/ua-demo.ua.gov.tr</d6:url>
+                                </d6:discovery>
                             <e2:echo version="2.0.1">
                             <e2:http-security>
                             <sec:client-auth-methods>
@@ -169,41 +175,102 @@
                                 <sec-A2:httpsig/>
                                 </sec:client-auth-methods>
                                 <sec:server-auth-methods>
-                                <sec-B1:tlscert/>
                                 <sec-B2:httpsig/>
                                 </sec:server-auth-methods>
                                 </om3:http-security>
-                                <om3:get-url>https://ewptest.ua.gov.tr/api/omobilities/ua-demo.ua.gov.tr/get</om3:get-url>
-                                <om3:index-url>https://ewptest.ua.gov.tr/api/omobilities/ua-demo.ua.gov.tr/index</om3:index-url>
-                                <om3:max-omobility-ids>100</om3:max-omobility-ids>
+                                <om3:get-url>https://ewptest.ua.gov.tr/api/omobilities/get/ua-demo.ua.gov.tr</om3:get-url>
+                                <om3:index-url>https://ewptest.ua.gov.tr/api/omobilities/index/ua-demo.ua.gov.tr</om3:index-url>
+                                <om3:update-url>https://ewptest.ua.gov.tr/api/omobilities/update/ua-demo.ua.gov.tr</om3:update-url>
+                                <om3:max-omobility-ids>1</om3:max-omobility-ids>
                                 </om3:omobilities>
+                            <oms1:omobility-stats version="1.0.0">
+                                <oms1:http-security>
+                                <sec:client-auth-methods>
+                                <sec-A2:httpsig/>
+                                </sec:client-auth-methods>
+                                <sec:server-auth-methods>
+                                <sec-B2:httpsig/>
+                                </sec:server-auth-methods>
+                                </oms1:http-security>
+                                <oms1:url>https://ewptest.ua.gov.tr/api/omobilities/stats/ua-demo.ua.gov.tr</oms1:url>
+                                </oms1:omobility-stats>
                             <omc2:omobility-cnr version="2.0.0">
                                 <omc2:http-security>
                                 <sec:client-auth-methods>
                                 <sec-A2:httpsig/>
                                 </sec:client-auth-methods>
                                 <sec:server-auth-methods>
-                                <sec-B1:tlscert/>
                                 <sec-B2:httpsig/>
                                 </sec:server-auth-methods>
                                 </omc2:http-security>
-                                <omc2:url>https://ewptest.ua.gov.tr/api/omobilities/cnr?hei_id=ua-demo.ua.gov.tr</omc2:url>
-                                <omc2:max-omobility-ids>100</omc2:max-omobility-ids>
+                                <omc2:url>https://ewptest.ua.gov.tr/api/omobilities/cnr/ua-demo.ua.gov.tr</omc2:url>
+                                <omc2:max-omobility-ids>1</omc2:max-omobility-ids>
                                 </omc2:omobility-cnr>
+                            <im2:imobilities version="2.0.0">
+                                <im2:http-security>
+                                <sec:client-auth-methods>
+                                <sec-A2:httpsig/>
+                                </sec:client-auth-methods>
+                                <sec:server-auth-methods>
+                                <sec-B2:httpsig/>
+                                </sec:server-auth-methods>
+                                </im2:http-security>
+                                <im2:get-url>https://ewptest.ua.gov.tr/api/imobilities/get/ua-demo.ua.gov.tr</im2:get-url>
+                                <im2:max-omobility-ids>1</im2:max-omobility-ids>
+                                </im2:imobilities>
+                            <imc2:imobility-cnr version="2.0.0">
+                                <imc2:http-security>
+                                <sec:client-auth-methods>
+                                <sec-A2:httpsig/>
+                                </sec:client-auth-methods>
+                                <sec:server-auth-methods>
+                                <sec-B2:httpsig/>
+                                </sec:server-auth-methods>
+                                </imc2:http-security>
+                                <imc2:url>https://ewptest.ua.gov.tr/api/imobilities/cnr/ua-demo.ua.gov.tr</imc2:url>
+                                <imc2:max-omobility-ids>1</imc2:max-omobility-ids>
+                                </imc2:imobility-cnr>
+                            <oml1:omobility-las version="1.2.0">
+                                <oml1:http-security>
+                                <sec:client-auth-methods>
+                                <sec-A2:httpsig/>
+                                </sec:client-auth-methods>
+                                <sec:server-auth-methods>
+                                <sec-B2:httpsig/>
+                                </sec:server-auth-methods>
+                                </oml1:http-security>
+                                <oml1:get-url>https://ewptest.ua.gov.tr/api/omobilities-las/get/ua-demo.ua.gov.tr</oml1:get-url>
+                                <oml1:index-url>https://ewptest.ua.gov.tr/api/omobilities-las/index/ua-demo.ua.gov.tr</oml1:index-url>
+                                <oml1:update-url>https://ewptest.ua.gov.tr/api/omobilities-las/update/ua-demo.ua.gov.tr</oml1:update-url>
+                                <oml1:stats-url>https://ewptest.ua.gov.tr/api/omobilities-las/stats/ua-demo.ua.gov.tr</oml1:stats-url>
+                                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+                                </oml1:omobility-las>
+                            <omlc1:omobility-la-cnr version="1.1.0">
+                                <omlc1:http-security>
+                                <sec:client-auth-methods>
+                                <sec-A2:httpsig/>
+                                </sec:client-auth-methods>
+                                <sec:server-auth-methods>
+                                <sec-B2:httpsig/>
+                                </sec:server-auth-methods>
+                                </omlc1:http-security>
+                                <omlc1:url>https://ewptest.ua.gov.tr/api/omobilities-las/cnr/ua-demo.ua.gov.tr</omlc1:url>
+                                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+                                </omlc1:omobility-la-cnr>
                             </r:apis-implemented>
-                                 <institutions-covered>
+                                 <ewp:institutions-covered>
                                         <r:hei id="ua-demo.ua.gov.tr">
                                         <r:other-id type="pic">15487456</r:other-id>
                                         <r:other-id type="erasmus">TR UA 01</r:other-id>
                                         <r:name xml:lang="tr">UA Demo Üniversitesi</r:name>
                                         <r:name xml:lang="en">UA Demo University</r:name>
                                         </r:hei>
-                                        </institutions-covered>
-                                 <client-credentials-in-use>
-                                    <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdesvYXB5QfeVEPUytg9FOQ1Vwpz5oBdQpu8Ate6HRpDFoZPqMLz5jJHY2g8fuFo7KsNmiVa4WTfbXuQEZSa7tM2QnXIHoKmTDiNNLB6a0+5fzygVkyGaof4qLgL/2VLHfChX/tp0ntCSvpC5065eJSt18o5rq1LlNGOF47253J/Xc+tFC2vZUjoMr4FuAwXbyoK4RG9jM7PWaMGLE/wRuN0CvBtgshnPUdasbzzHZEX/P9b0Vpcx1YPhzxGn08hmubafoIwgnyC/gHDtQGX8UJMND/umh6gXOdUgVgku5AL6/P+eF7kp3ffuupT2jplHIzJ73fP8lHGmGtsn2lbWQIDAQAB</rsa-public-key>
-                                </client-credentials-in-use>
-                                <server-credentials-in-use>
-                                    <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdesvYXB5QfeVEPUytg9FOQ1Vwpz5oBdQpu8Ate6HRpDFoZPqMLz5jJHY2g8fuFo7KsNmiVa4WTfbXuQEZSa7tM2QnXIHoKmTDiNNLB6a0+5fzygVkyGaof4qLgL/2VLHfChX/tp0ntCSvpC5065eJSt18o5rq1LlNGOF47253J/Xc+tFC2vZUjoMr4FuAwXbyoK4RG9jM7PWaMGLE/wRuN0CvBtgshnPUdasbzzHZEX/P9b0Vpcx1YPhzxGn08hmubafoIwgnyC/gHDtQGX8UJMND/umh6gXOdUgVgku5AL6/P+eF7kp3ffuupT2jplHIzJ73fP8lHGmGtsn2lbWQIDAQAB</rsa-public-key>
-                                </server-credentials-in-use>
-                        </host> 
- </manifest>
+                                        </ewp:institutions-covered>
+                                 <ewp:client-credentials-in-use>
+                                    <ewp:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdesvYXB5QfeVEPUytg9FOQ1Vwpz5oBdQpu8Ate6HRpDFoZPqMLz5jJHY2g8fuFo7KsNmiVa4WTfbXuQEZSa7tM2QnXIHoKmTDiNNLB6a0+5fzygVkyGaof4qLgL/2VLHfChX/tp0ntCSvpC5065eJSt18o5rq1LlNGOF47253J/Xc+tFC2vZUjoMr4FuAwXbyoK4RG9jM7PWaMGLE/wRuN0CvBtgshnPUdasbzzHZEX/P9b0Vpcx1YPhzxGn08hmubafoIwgnyC/gHDtQGX8UJMND/umh6gXOdUgVgku5AL6/P+eF7kp3ffuupT2jplHIzJ73fP8lHGmGtsn2lbWQIDAQAB</ewp:rsa-public-key>
+                                </ewp:client-credentials-in-use>
+                                <ewp:server-credentials-in-use>
+                                    <ewp:rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdesvYXB5QfeVEPUytg9FOQ1Vwpz5oBdQpu8Ate6HRpDFoZPqMLz5jJHY2g8fuFo7KsNmiVa4WTfbXuQEZSa7tM2QnXIHoKmTDiNNLB6a0+5fzygVkyGaof4qLgL/2VLHfChX/tp0ntCSvpC5065eJSt18o5rq1LlNGOF47253J/Xc+tFC2vZUjoMr4FuAwXbyoK4RG9jM7PWaMGLE/wRuN0CvBtgshnPUdasbzzHZEX/P9b0Vpcx1YPhzxGn08hmubafoIwgnyC/gHDtQGX8UJMND/umh6gXOdUgVgku5AL6/P+eF7kp3ffuupT2jplHIzJ73fP8lHGmGtsn2lbWQIDAQAB</ewp:rsa-public-key>
+                                </ewp:server-credentials-in-use>
+                        </ewp:host> 
+ </ewp:manifest>
