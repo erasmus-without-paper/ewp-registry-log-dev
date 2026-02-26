@@ -21,6 +21,7 @@
                 xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd" 
                 xmlns:imtr3="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd" 
                 xmlns:imtc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd" 
+                xmlns:imts1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd" 
                 xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" 
 
                 xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" 
@@ -279,8 +280,20 @@
                                 </imtr3:http-security>
                                 <imtr3:get-url>https://ewptest.ua.gov.tr/api/imobilities/tors/get/ua-demo.ua.gov.tr</imtr3:get-url>
                                 <imtr3:index-url>https://ewptest.ua.gov.tr/api/imobilities/tors/index/ua-demo.ua.gov.tr</imtr3:index-url>
-                                                     <imtr3:max-omobility-ids>10</imtr3:max-omobility-ids>
-                                                     </imtr3:imobility-tors>
+                                                                          <imtr3:max-omobility-ids>10</imtr3:max-omobility-ids>
+                                                                          </imtr3:imobility-tors>
+                                                <imts1:imobility-tor-stats version="1.0.0">
+                                                                         <imts1:http-security>
+                                                                         <sec:client-auth-methods>
+                                                                         <sec-A2:httpsig/>
+                                                                         </sec:client-auth-methods>
+                                                                         <sec:server-auth-methods>
+                                                                         <sec-B1:tlscert/>
+                                                                         <sec-B2:httpsig/>
+                                                                         </sec:server-auth-methods>
+                                                                         </imts1:http-security>
+                                                                         <imts1:url>https://ewptest.ua.gov.tr/api/imobilities/tors/stats/ua-demo.ua.gov.tr</imts1:url>
+                                                                         </imts1:imobility-tor-stats>
                                                 <imtc2:imobility-tor-cnr version="2.0.0">
                                                     <imtc2:http-security>
                                                     <sec:client-auth-methods>
