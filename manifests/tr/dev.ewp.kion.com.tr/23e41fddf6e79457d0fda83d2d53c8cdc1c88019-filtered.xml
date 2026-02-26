@@ -139,7 +139,6 @@
                 <get-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/get/okan</get-url>
                 <index-url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/index/okan</index-url>
                 <max-omobility-ids>25</max-omobility-ids>
-                <sends-notifications/>
             </omobilities>
             <omobility-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
@@ -156,6 +155,21 @@
                 <url>https://dev.ewp.kion.com.tr/api/outgoingmobilities/cnr/okan</url>
                 <max-omobility-ids>25</max-omobility-ids>
             </omobility-cnr>
+            <imobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://dev.ewp.kion.com.tr/api/incomingmobilities/get/okan</get-url>
+                <max-omobility-ids>25</max-omobility-ids>
+            </imobilities>
             <imobility-cnr
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
                 version="2.0.0"
