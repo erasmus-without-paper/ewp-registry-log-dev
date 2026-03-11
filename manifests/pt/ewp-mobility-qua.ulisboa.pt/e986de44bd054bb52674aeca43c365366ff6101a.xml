@@ -1,6 +1,7 @@
 <ns3:manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
               xmlns:ns10="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"
               xmlns:ns11="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"
+              xmlns:ns17="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
               xmlns:ns19="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
               xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
               xmlns:ns20="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
@@ -32,6 +33,19 @@
             </ns41:http-security>
             <ns41:url>https://ewp-mobility-qua.ulisboa.pt/api/ewp/echo</ns41:url>
          </ns41:echo>
+         <ns17:imobilities version="2.0.0">
+            <ns17:http-security>
+               <ns5:client-auth-methods>
+                  <ns9:httpsig/>
+               </ns5:client-auth-methods>
+               <ns5:server-auth-methods>
+                  <ns11:httpsig/>
+                  <ns10:tlscert/>
+               </ns5:server-auth-methods>
+            </ns17:http-security>
+            <ns17:get-url>https://ewp-mobility-qua.ulisboa.pt/api/ewp//stub</ns17:get-url>
+            <ns17:max-omobility-ids>1</ns17:max-omobility-ids>
+         </ns17:imobilities>
          <ns40:institutions version="2.2.0">
             <ns40:http-security>
                <ns5:client-auth-methods>
