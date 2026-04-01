@@ -3,6 +3,7 @@
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     xmlns:d1="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
     xmlns:e1="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+    xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
     xmlns:ia2="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
     xmlns:iaap="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
     xmlns:iac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
@@ -114,11 +115,22 @@
                 <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
                 <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
             </ou2:organizational-units>
+            <f1:factsheet version="1.2.0">
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://tuzvoewp.is4u.cz/ewp/factsheet_api.pl</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
         </ns2:apis-implemented>
         <ns1:institutions-covered>
             <ns2:hei id="dev.tuzvo.sk">
-                <ns2:other-id type="erasmus">SK ZVOLEN01</ns2:other-id>
-                <ns2:other-id type="pic">998208280</ns2:other-id>
                 <ns2:name xml:lang="cz">Technická univerzita ve Zvolenu</ns2:name>
                 <ns2:name xml:lang="sk">Technická univerzita vo Zvolene</ns2:name>
                 <ns2:name xml:lang="en">Technical University in Zvolen</ns2:name>
