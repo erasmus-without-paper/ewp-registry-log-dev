@@ -7,7 +7,7 @@
 >
     <host>
         <admin-email xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">ewp.stic@comillas.edu</admin-email>
-        <admin-provider xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">Universidad Pontificia Comillas</admin-provider>
+        <admin-provider xmlns="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd">Comillas EWP</admin-provider>
         <apis-implemented xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <discovery
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
@@ -62,6 +62,22 @@
                 <max-ounit-ids>10</max-ounit-ids>
                 <max-ounit-codes>10</max-ounit-codes>
             </organizational-units>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewpdes.comillas.edu/comillas/api/MobilityFactSheet</url>
+                <max-hei-ids>1</max-hei-ids>
+            </factsheet>
             <iias
                 xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
                 version="7.0.0"
@@ -153,6 +169,7 @@
                     </server-auth-methods>
                 </http-security>
                 <url>https://ewpdes.comillas.edu/comillas/api/OMobilityLaCNR</url>
+                <stats-url>https://ewpdes.comillas.edu/comillas/api/OMobilityLaCNR/Stats</stats-url>
                 <max-omobility-ids>1</max-omobility-ids>
             </omobility-la-cnr>
             <omobility-cnr
@@ -231,10 +248,10 @@
             </hei>
         </institutions-covered>
         <client-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmuZMwbhn66ofbX5J4sdREgUK4Wc5MwR4Z/Ddk4wuV3PNNBRoYkjFwF0d2nTHJbCr7oV80N3rDSQblUg49S7Vadx6KbUfB9kBER7CgUfvsnhBrAtwVfRc3UwLOjUDNMHYdMycRHKlymTscHsM+zEmVGo6jv6kWzSbhKwB1EsuK8GsdF13InR6SdTHzh052Hnlz0Exgn7Ck2m5qKFkUZeSbfATx9EQThurW3ZFOWE+l80siZZtEL7uifkGSlLK+p/RfIRrGYxT9u0SNqV5hI7hnpZyEJncDXSOVRpivs8Q6iG4BYSV7PuYVyp4oRBnU7fluPUgawUVL4WTUAZKxmIFt8I814NYDtQCNnyu/VmuPmiMFg/uxoZcseXDq2ew6/Xnti/7XScMqH6EqGfvw1WkODhLMaqsje+b2d9JIo9PER5wetR3JylX4eDRjjd/OYyUIGmEZdzLxkJLIXUPoYrTPXkfyR9+cufklR88VDTEHZ4Pa7pvtkuyk0ZWNtAYVLvBrwPpOdByuRzyak8bHrtj2wgXOf+UfBHnGqfPiFBsNnBys6189sWVkinite11jfEU8uQOOrigzrAGry5da8JuvIZXJNP5Kuf3Yj4yM6i5ENc9MJNQpfokniNFAXQxYMN4NtF98qCCefKLYg5Z6ABFDucfic+AW/xR4Ep7l1Tx68ECAwEAAQ==</rsa-public-key>
+            <rsa-public-key>MIICITANBgkqhkiG9w0BAQEFAAOCAg4AMIICCQKCAgB45wS8+JLh8Ppdi5TRmB796Tfl1ODcqb2Jh2x9CIk5QkTmoe127gVRX1xzQbqdZMQKJDuN9XTddYes8oCLhTMB+7WMkD8xziyGZLoi1DqX4YvJfH9Ai4H3h2qkbsM5QvhcBEjK4YzO2ehxwUJClOz9wRKBrdYikKVy2356/LzuEn/zgC69NPCYF8iDsS7Hq4Pa6tcZEkzzmEic6UwIT6lIaFqO1F6BMcIJRkICs8Echvve9dmmgj1yfdfa5dqz9UvUrrAAAk0ZlFWz362an7R6c9BVxs49qxVwN5oZs/MapkWaber6+cZXSwR5NKzQOUZuq4MJsHEexTFanIjwGyGpzsV3TWmqAX97JgMhRMwplEcMR/GfI+ad0iHk0ly4wSecj0rjQY0QyymCe8fHEOHw/n4FRebAHudDryZ5jnXRbfUkVModOLG32CkqSdT5t7Zu/egVfqDzUUlVLZw5UQWn+SMbtGtEYfc4V4FD4sa8CLvXgblGBySJJrGsdkyBRvq9SAPfljMtBi9kjqKJX72ehkhv/PRHyYt63hiSD0l2O4tldQG9aOJ1Mq2s74c+ZIJPn240UPXj48C+p9BIdwx7YQ6LB8LaIhI1AYRFM5q9aQZ2cK3yxEE4Ji8VmP0NCrEXB+zd5mO0LO4l+bk6JbJNgxx4G16qM2aZNMwFat24hQIDAQAB</rsa-public-key>
         </client-credentials-in-use>
         <server-credentials-in-use>
-            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmuZMwbhn66ofbX5J4sdREgUK4Wc5MwR4Z/Ddk4wuV3PNNBRoYkjFwF0d2nTHJbCr7oV80N3rDSQblUg49S7Vadx6KbUfB9kBER7CgUfvsnhBrAtwVfRc3UwLOjUDNMHYdMycRHKlymTscHsM+zEmVGo6jv6kWzSbhKwB1EsuK8GsdF13InR6SdTHzh052Hnlz0Exgn7Ck2m5qKFkUZeSbfATx9EQThurW3ZFOWE+l80siZZtEL7uifkGSlLK+p/RfIRrGYxT9u0SNqV5hI7hnpZyEJncDXSOVRpivs8Q6iG4BYSV7PuYVyp4oRBnU7fluPUgawUVL4WTUAZKxmIFt8I814NYDtQCNnyu/VmuPmiMFg/uxoZcseXDq2ew6/Xnti/7XScMqH6EqGfvw1WkODhLMaqsje+b2d9JIo9PER5wetR3JylX4eDRjjd/OYyUIGmEZdzLxkJLIXUPoYrTPXkfyR9+cufklR88VDTEHZ4Pa7pvtkuyk0ZWNtAYVLvBrwPpOdByuRzyak8bHrtj2wgXOf+UfBHnGqfPiFBsNnBys6189sWVkinite11jfEU8uQOOrigzrAGry5da8JuvIZXJNP5Kuf3Yj4yM6i5ENc9MJNQpfokniNFAXQxYMN4NtF98qCCefKLYg5Z6ABFDucfic+AW/xR4Ep7l1Tx68ECAwEAAQ==</rsa-public-key>
+            <rsa-public-key>MIICITANBgkqhkiG9w0BAQEFAAOCAg4AMIICCQKCAgB45wS8+JLh8Ppdi5TRmB796Tfl1ODcqb2Jh2x9CIk5QkTmoe127gVRX1xzQbqdZMQKJDuN9XTddYes8oCLhTMB+7WMkD8xziyGZLoi1DqX4YvJfH9Ai4H3h2qkbsM5QvhcBEjK4YzO2ehxwUJClOz9wRKBrdYikKVy2356/LzuEn/zgC69NPCYF8iDsS7Hq4Pa6tcZEkzzmEic6UwIT6lIaFqO1F6BMcIJRkICs8Echvve9dmmgj1yfdfa5dqz9UvUrrAAAk0ZlFWz362an7R6c9BVxs49qxVwN5oZs/MapkWaber6+cZXSwR5NKzQOUZuq4MJsHEexTFanIjwGyGpzsV3TWmqAX97JgMhRMwplEcMR/GfI+ad0iHk0ly4wSecj0rjQY0QyymCe8fHEOHw/n4FRebAHudDryZ5jnXRbfUkVModOLG32CkqSdT5t7Zu/egVfqDzUUlVLZw5UQWn+SMbtGtEYfc4V4FD4sa8CLvXgblGBySJJrGsdkyBRvq9SAPfljMtBi9kjqKJX72ehkhv/PRHyYt63hiSD0l2O4tldQG9aOJ1Mq2s74c+ZIJPn240UPXj48C+p9BIdwx7YQ6LB8LaIhI1AYRFM5q9aQZ2cK3yxEE4Ji8VmP0NCrEXB+zd5mO0LO4l+bk6JbJNgxx4G16qM2aZNMwFat24hQIDAQAB</rsa-public-key>
         </server-credentials-in-use>
     </host>
 </manifest>
