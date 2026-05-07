@@ -80,22 +80,21 @@
 
       <!-- 4. Organizational Units v2
            ORDINE CORECTA: max-ounit-ids INAINTE de max-hei-ids -->
-      <ounits
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
-          version="2.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
-        <url>https://ewp.unatc.ro/api/ounits</url>
-        <max-ounit-ids>100</max-ounit-ids>
-        <max-ounit-codes>100</max-ounit-codes>
-        <max-hei-ids>1</max-hei-ids>
-      </ounits>
+<organizational-units
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    version="2.0.0">
+  <http-security>
+    <sec:client-auth-methods>
+      <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+    </sec:client-auth-methods>
+    <sec:server-auth-methods>
+      <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+    </sec:server-auth-methods>
+  </http-security>
+  <url>https://ewp.unatc.ro/api/ounits</url>
+  <max-ounit-ids>100</max-ounit-ids>
+  <max-ounit-codes>100</max-ounit-codes>
+</organizational-units>
 
       <!-- 5. Factsheet v1 -->
       <factsheet
@@ -128,20 +127,11 @@
         <url>https://ewp.unatc.ro/api/file</url>
       </file>
 
-      <!-- 7. IIAs v7 — foloseste get-url in loc de url -->
-      <iias
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
-          version="7.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
+      <!-- 7. -->
+      <!-- iias v7 — fara max-hei-ids -->
+      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd" version="7.0.0">
+        <http-security>...</http-security>
         <get-url>https://ewp.unatc.ro/api/iias</get-url>
-        <max-hei-ids>1</max-hei-ids>
         <max-iia-ids>100</max-iia-ids>
         <sends-notifications>false</sends-notifications>
       </iias>
@@ -195,21 +185,15 @@
       </iia-approval-cnr>
 
       <!-- 11. Outgoing Mobilities v3 — get-url in loc de url -->
-      <omobilities
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
-          version="3.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
+      <!-- omobilities v3 — index-url obligatoriu -->
+      <omobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd" version="3.0.0">
+        <http-security>...</http-security>
         <get-url>https://ewp.unatc.ro/api/omobilities</get-url>
+        <index-url>https://ewp.unatc.ro/api/omobilities/index</index-url>
         <max-omobility-ids>100</max-omobility-ids>
         <sends-notifications>false</sends-notifications>
       </omobilities>
+
 
       <!-- 12. Outgoing Mobility CNR v2 -->
       <omobility-cnr
@@ -228,18 +212,11 @@
       </omobility-cnr>
 
       <!-- 13. Outgoing Mobility LAs v1 — get-url in loc de url -->
-      <omobility-las
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
-          version="1.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
+      <!-- omobility-las v1 — index-url obligatoriu -->
+      <omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
+        <http-security>...</http-security>
         <get-url>https://ewp.unatc.ro/api/omobility-las</get-url>
+        <index-url>https://ewp.unatc.ro/api/omobility-las/index</index-url>
         <max-omobility-ids>100</max-omobility-ids>
         <sends-notifications>false</sends-notifications>
       </omobility-las>
@@ -293,34 +270,27 @@
       </imobilities>
 
       <!-- 17. Incoming Mobility CNR v1 -->
-      <imobility-cnr
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-          version="1.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
-        <url>https://ewp.unatc.ro/api/imobility-cnr</url>
-        <max-omobility-ids>100</max-omobility-ids>
-      </imobility-cnr>
+    <imobility-cnr
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+        version="2.0.0">
+      <http-security>
+        <sec:client-auth-methods>
+          <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+        </sec:client-auth-methods>
+        <sec:server-auth-methods>
+          <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+        </sec:server-auth-methods>
+      </http-security>
+      <url>https://ewp.unatc.ro/api/imobility-cnr</url>
+      <max-omobility-ids>100</max-omobility-ids>
+    </imobility-cnr>
 
       <!-- 18. Incoming Mobility ToRs v3 — get-url in loc de url -->
-      <imobility-tors
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
-          version="3.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
+      <!-- imobility-tors v3 — index-url obligatoriu -->
+      <imobility-tors xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd" version="3.0.0">
+        <http-security>...</http-security>
         <get-url>https://ewp.unatc.ro/api/imobility-tors</get-url>
+        <index-url>https://ewp.unatc.ro/api/imobility-tors/index</index-url>
         <max-omobility-ids>100</max-omobility-ids>
         <sends-notifications>false</sends-notifications>
       </imobility-tors>
