@@ -7,12 +7,6 @@
   URL manifest: https://ewp.unatc.ro/ewp-manifest.xml
   Ultima modificare: 2026-05-08
   ============================================================
-  ATENȚIE: client-credentials și server-credentials folosesc
-  ACEEAȘI cheie RSA. Generați două perechi separate înainte
-  de a trece în PROD:
-    openssl genrsa -out ewp-client-private.key 2048
-    openssl genrsa -out ewp-server-private.key 2048
-  ============================================================
 -->
 <manifest
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
@@ -43,9 +37,6 @@
 
   <host>
 
-    <!-- ================================================
-         Contact administrativ / tehnic
-         ================================================ -->
     <ewp:admin-email>admin@unatc.ro</ewp:admin-email>
     <ewp:admin-provider>UNATC „I.L. Caragiale” din București</ewp:admin-provider>
     <ewp:admin-notes>
@@ -54,24 +45,20 @@
       Contactați admin@unatc.ro pentru probleme tehnice.
     </ewp:admin-notes>
 
-    <!-- ================================================
-         API-uri implementate (toate verificate în DEV)
-         ================================================ -->
     <r:apis-implemented>
 
-      <!-- 1. Discovery API — auto-referință obligatorie -->
+      <!-- 1. Discovery v6 -->
       <discovery
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
           version="6.0.0">
         <url>https://ewp.unatc.ro/ewp-manifest.xml</url>
       </discovery>
 
-      <!-- 2. Echo API — testare conectivitate și autentificare -->
+      <!-- 2. Echo v2 -->
       <echo
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
           version="2.0.0">
         <ewp:admin-email>admin@unatc.ro</ewp:admin-email>
-        <ewp:admin-notes>Endpoint Echo pentru validarea conectivității EWP. DEV only.</ewp:admin-notes>
         <http-security>
           <sec:client-auth-methods>
             <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
@@ -85,7 +72,7 @@
         <url>https://ewp.unatc.ro/api/echo</url>
       </echo>
 
-      <!-- 3. Institutions API v2 -->
+      <!-- 3. Institutions v2 -->
       <institutions
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
           version="2.0.0">
@@ -101,8 +88,8 @@
         <max-hei-ids>1</max-hei-ids>
       </institutions>
 
-      <!-- 4. Organizational Units API v2 -->
-      <ounits
+      <!-- 4. Organizational Units v2 -->
+      <organizational-units
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
           version="2.0.0">
         <http-security>
@@ -117,9 +104,9 @@
         <max-hei-ids>1</max-hei-ids>
         <max-ounit-ids>100</max-ounit-ids>
         <max-ounit-codes>100</max-ounit-codes>
-      </ounits>
+      </organizational-units>
 
-      <!-- 5. Factsheet API v1 -->
+      <!-- 5. Factsheet v1 -->
       <factsheet
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
           version="1.0.0">
@@ -135,7 +122,7 @@
         <max-hei-ids>1</max-hei-ids>
       </factsheet>
 
-      <!-- 6. File API v1 -->
+      <!-- 6. File v1 -->
       <file
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
           version="1.0.0">
@@ -150,7 +137,7 @@
         <url>https://ewp.unatc.ro/api/file</url>
       </file>
 
-      <!-- 7. IIAs API v7 -->
+      <!-- 7. IIAs v7 -->
       <iias
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
           version="7.0.0">
@@ -168,7 +155,7 @@
         <sends-notifications>false</sends-notifications>
       </iias>
 
-      <!-- 8. IIAs Approval API v2 -->
+      <!-- 8. IIAs Approval v2 -->
       <iias-approval
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
           version="2.0.0">
@@ -185,7 +172,7 @@
         <max-iia-ids>100</max-iia-ids>
       </iias-approval>
 
-      <!-- 9. IIA CNR API v3 — primești notificări când partenerii modifică IIA-uri -->
+      <!-- 9. IIA CNR v3 -->
       <iia-cnr
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
           version="3.0.0">
@@ -200,7 +187,7 @@
         <url>https://ewp.unatc.ro/api/iia-cnr</url>
       </iia-cnr>
 
-      <!-- 10. IIA Approval CNR API v2 -->
+      <!-- 10. IIA Approval CNR v2 -->
       <iia-approval-cnr
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
           version="2.0.0">
@@ -215,10 +202,10 @@
         <url>https://ewp.unatc.ro/api/iia-approval-cnr</url>
       </iia-approval-cnr>
 
-      <!-- 11. Outgoing Mobilities API v2 -->
+      <!-- 11. Outgoing Mobilities v3 -->
       <omobilities
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
-          version="2.0.0">
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+          version="3.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -233,10 +220,10 @@
         <sends-notifications>false</sends-notifications>
       </omobilities>
 
-      <!-- 12. Outgoing Mobility CNR API v1 -->
+      <!-- 12. Outgoing Mobility CNR v2 -->
       <omobility-cnr
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-          version="1.0.0">
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -248,7 +235,7 @@
         <url>https://ewp.unatc.ro/api/omobility-cnr</url>
       </omobility-cnr>
 
-      <!-- 13. Outgoing Mobility Learning Agreements API v1 -->
+      <!-- 13. Outgoing Mobility LAs v1 -->
       <omobility-las
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
           version="1.0.0">
@@ -265,7 +252,7 @@
         <sends-notifications>false</sends-notifications>
       </omobility-las>
 
-      <!-- 14. Outgoing Mobility LA CNR API v1 -->
+      <!-- 14. Outgoing Mobility LA CNR v1 -->
       <omobility-la-cnr
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
           version="1.0.0">
@@ -280,10 +267,26 @@
         <url>https://ewp.unatc.ro/api/omobility-la-cnr</url>
       </omobility-la-cnr>
 
-      <!-- 15. Incoming Mobilities API v1 -->
-      <imobilities
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+      <!-- 15. Outgoing Mobility Stats v1 — NOU -->
+      <omobility-stats
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
           version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://ewp.unatc.ro/api/omobility-stats</url>
+        <max-hei-ids>1</max-hei-ids>
+      </omobility-stats>
+
+      <!-- 16. Incoming Mobilities v2 -->
+      <imobilities
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -297,10 +300,10 @@
         <max-omobility-ids>100</max-omobility-ids>
       </imobilities>
 
-      <!-- 16. Incoming Mobility CNR API v1 -->
+      <!-- 17. Incoming Mobility CNR v1 -->
       <imobility-cnr
           xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-          version="1.0.0">
+          version="2.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -312,10 +315,10 @@
         <url>https://ewp.unatc.ro/api/imobility-cnr</url>
       </imobility-cnr>
 
-      <!-- 17. Incoming Mobility ToRs API v2 -->
+      <!-- 18. Incoming Mobility ToRs v3 -->
       <imobility-tors
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v2/manifest-entry.xsd"
-          version="2.0.0">
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
+          version="3.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -330,10 +333,10 @@
         <sends-notifications>false</sends-notifications>
       </imobility-tors>
 
-      <!-- 18. Incoming Mobility ToR CNR API v1 -->
+      <!-- 19. Incoming Mobility ToR CNR v2 -->
       <imobility-tor-cnr
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
-          version="1.0.0">
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
         <http-security>
           <sec:client-auth-methods>
             <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
@@ -345,11 +348,24 @@
         <url>https://ewp.unatc.ro/api/imobility-tor-cnr</url>
       </imobility-tor-cnr>
 
+      <!-- 20. Incoming Mobility ToR Stats v1 — NOU -->
+      <imobility-tor-stats
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd"
+          version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://ewp.unatc.ro/api/imobility-tor-stats</url>
+        <max-hei-ids>1</max-hei-ids>
+      </imobility-tor-stats>
+
     </r:apis-implemented>
 
-    <!-- ================================================
-         Instituție acoperită — UNATC
-         ================================================ -->
     <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
       <hei id="unatc.ro">
         <other-id type="erasmus">RO BUCURES33</other-id>
@@ -360,12 +376,6 @@
       </hei>
     </mf:institutions-covered>
 
-    <!--
-      ⚠️  ATENȚIE — CHEI IDENTICE (DEV only)
-      În producție generați două perechi distincte:
-        client  → folosită când UNATC face request-uri către parteneri
-        server  → folosită când UNATC semnează răspunsurile proprii
-    -->
     <client-credentials-in-use>
       <rsa-public-key>
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkksXGBd5Z7AHhA1EL4PD
