@@ -127,14 +127,18 @@
         <url>https://ewp.unatc.ro/api/file</url>
       </file>
 
-      <!-- 7. -->
-      <!-- iias v7 — fara max-hei-ids -->
-      <iias xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd" version="7.0.0">
-        <http-security>...</http-security>
-        <get-url>https://ewp.unatc.ro/api/iias</get-url>
-        <max-iia-ids>100</max-iia-ids>
-        <sends-notifications>false</sends-notifications>
-      </iias>
+<!-- 7. IIAs v7 — ordine exactă din XSD -->
+<iias
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    version="7.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://ewp.unatc.ro/api/iias</get-url>
+  <max-iia-ids>100</max-iia-ids>
+  <index-url>https://ewp.unatc.ro/api/iias/index</index-url>
+</iias>
 
       <!-- 8. IIAs Approval v2 — fara max-hei-ids, doar max-iia-ids -->
       <iias-approval
@@ -184,15 +188,19 @@
         <max-iia-ids>100</max-iia-ids>
       </iia-approval-cnr>
 
-      <!-- 11. Outgoing Mobilities v3 — get-url in loc de url -->
-      <!-- omobilities v3 — index-url obligatoriu -->
-      <omobilities xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd" version="3.0.0">
-        <http-security>...</http-security>
-        <get-url>https://ewp.unatc.ro/api/omobilities</get-url>
-        <index-url>https://ewp.unatc.ro/api/omobilities/index</index-url>
-        <max-omobility-ids>100</max-omobility-ids>
-        <sends-notifications>false</sends-notifications>
-      </omobilities>
+<!-- 11. Outgoing Mobilities v3 -->
+<omobilities
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+    version="3.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://ewp.unatc.ro/api/omobilities</get-url>
+  <index-url>https://ewp.unatc.ro/api/omobilities/index</index-url>
+  <update-url>https://ewp.unatc.ro/api/omobilities/update</update-url>
+  <max-omobility-ids>100</max-omobility-ids>
+</omobilities>
 
 
       <!-- 12. Outgoing Mobility CNR v2 -->
@@ -211,15 +219,19 @@
         <max-omobility-ids>100</max-omobility-ids>
       </omobility-cnr>
 
-      <!-- 13. Outgoing Mobility LAs v1 — get-url in loc de url -->
-      <!-- omobility-las v1 — index-url obligatoriu -->
-      <omobility-las xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
-        <http-security>...</http-security>
-        <get-url>https://ewp.unatc.ro/api/omobility-las</get-url>
-        <index-url>https://ewp.unatc.ro/api/omobility-las/index</index-url>
-        <max-omobility-ids>100</max-omobility-ids>
-        <sends-notifications>false</sends-notifications>
-      </omobility-las>
+<!-- 13. Outgoing Mobility LAs v1 -->
+<omobility-las
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    version="1.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://ewp.unatc.ro/api/omobility-las</get-url>
+  <index-url>https://ewp.unatc.ro/api/omobility-las/index</index-url>
+  <update-url>https://ewp.unatc.ro/api/omobility-las/update</update-url>
+  <max-omobility-ids>100</max-omobility-ids>
+</omobility-las>
 
       <!-- 14. Outgoing Mobility LA CNR v1 -->
       <omobility-la-cnr
@@ -285,15 +297,18 @@
       <max-omobility-ids>100</max-omobility-ids>
     </imobility-cnr>
 
-      <!-- 18. Incoming Mobility ToRs v3 — get-url in loc de url -->
-      <!-- imobility-tors v3 — index-url obligatoriu -->
-      <imobility-tors xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd" version="3.0.0">
-        <http-security>...</http-security>
-        <get-url>https://ewp.unatc.ro/api/imobility-tors</get-url>
-        <index-url>https://ewp.unatc.ro/api/imobility-tors/index</index-url>
-        <max-omobility-ids>100</max-omobility-ids>
-        <sends-notifications>false</sends-notifications>
-      </imobility-tors>
+<!-- 18. Incoming Mobility ToRs v3 -->
+<imobility-tors
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
+    version="3.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://ewp.unatc.ro/api/imobility-tors</get-url>
+  <index-url>https://ewp.unatc.ro/api/imobility-tors/index</index-url>
+  <max-omobility-ids>100</max-omobility-ids>
+</imobility-tors>
 
       <!-- 19. Incoming Mobility ToR CNR v2 -->
       <imobility-tor-cnr
