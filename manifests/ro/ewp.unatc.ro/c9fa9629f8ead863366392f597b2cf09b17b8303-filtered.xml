@@ -1,0 +1,112 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-echo/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>admin@unatc.ro</ewp:admin-email>
+        <ewp:admin-provider>UNATC „I.L. Caragiale” din București</ewp:admin-provider>
+        <ewp:admin-notes>
+      Nod EWP al Universității Naționale de Artă Teatrală și Cinematografică
+      "I.L. Caragiale" București. Mediu de testare DEV. Contactați admin@unatc.ro
+      pentru probleme tehnice sau întrebări legate de implementare.
+    </ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://ewp.unatc.ro/ewp-manifest.xml</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <ewp:admin-email>admin@unatc.ro</ewp:admin-email>
+                <ewp:admin-notes>
+          Endpoint Echo pentru validarea conectivității în rețeaua EWP.
+          Mediu DEV — nu conține date reale.
+        </ewp:admin-notes>
+                <http-security>
+                    <sec:client-auth-methods>
+                        <tlscert
+                            xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1"
+                            allows-self-signed="true"
+                        />
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://ewp.unatc.ro/api/echo</url>
+            </echo>
+        </r:apis-implemented>
+        <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+            <hei id="unatc.ro">
+                <other-id type="erasmus">RO BUCURES22</other-id>
+                <name xml:lang="ro">
+          Universitatea Națională de Artă Teatrală și Cinematografică
+          "I.L. Caragiale" din București
+        </name>
+                <name xml:lang="en">
+          National University of Theatre and Film "I.L. Caragiale" Bucharest
+        </name>
+            </hei>
+        </mf:institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkksXGBd5Z7AHhA1EL4PD
+oVJ35rmp6NO7KVsaeIagKiAqZkL8ucs3rzTD0S3h286G+N9HDlw+ZzAiGTwTlOzI
+dKgAFYd8QG1aIwrUjik/ombZLLAzOokZpCbBd/GawI0RECHNXebMgpnpRHqit0pP
++bpGFwz9XhSQB1CTtsu86TgxhnGfb7LtNawEWz4wSe+aRTUjT8XgUh5qhX6ocUN4
+ICR7OkVuqSugGUlMA2aE3Sr8nO60a+XOvbVFmI6ZxpUjdFqK5StrjH2A1QiKBZmi
+oQFpMXE3w8mXjkzOgUwLEShV++q7VI7Vhuc+FnDKXOyABI3Vhi+B90pxuCifRbHU
+BQIDAQAB
+  </rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkksXGBd5Z7AHhA1EL4PD
+oVJ35rmp6NO7KVsaeIagKiAqZkL8ucs3rzTD0S3h286G+N9HDlw+ZzAiGTwTlOzI
+dKgAFYd8QG1aIwrUjik/ombZLLAzOokZpCbBd/GawI0RECHNXebMgpnpRHqit0pP
++bpGFwz9XhSQB1CTtsu86TgxhnGfb7LtNawEWz4wSe+aRTUjT8XgUh5qhX6ocUN4
+ICR7OkVuqSugGUlMA2aE3Sr8nO60a+XOvbVFmI6ZxpUjdFqK5StrjH2A1QiKBZmi
+oQFpMXE3w8mXjkzOgUwLEShV++q7VI7Vhuc+FnDKXOyABI3Vhi+B90pxuCifRbHU
+BQIDAQAB
+  </rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
