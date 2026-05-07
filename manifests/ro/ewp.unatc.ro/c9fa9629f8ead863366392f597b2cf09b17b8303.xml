@@ -185,6 +185,7 @@
           </sec:server-auth-methods>
         </http-security>
         <url>https://ewp.unatc.ro/api/iia-cnr</url>
+        <max-iia-ids>100</max-iia-ids>
       </iia-cnr>
 
       <!-- 10. IIA Approval CNR v2 -->
@@ -200,6 +201,7 @@
           </sec:server-auth-methods>
         </http-security>
         <url>https://ewp.unatc.ro/api/iia-approval-cnr</url>
+        <max-iia-ids>100</max-iia-ids>
       </iia-approval-cnr>
 
       <!-- 11. Outgoing Mobilities v3 -->
@@ -302,19 +304,21 @@
       </imobilities>
 
       <!-- 17. Incoming Mobility CNR v1 -->
-      <imobility-cnr
-          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
-          version="2.0.0">
-        <http-security>
-          <sec:client-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
-          </sec:client-auth-methods>
-          <sec:server-auth-methods>
-            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
-          </sec:server-auth-methods>
-        </http-security>
-        <url>https://ewp.unatc.ro/api/imobility-cnr</url>
-      </imobility-cnr>
+<!-- 17. Incoming Mobility CNR v1 -->
+<imobility-cnr
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+    version="1.0.0">
+  <http-security>
+    <sec:client-auth-methods>
+      <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+    </sec:client-auth-methods>
+    <sec:server-auth-methods>
+      <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+    </sec:server-auth-methods>
+  </http-security>
+  <url>https://ewp.unatc.ro/api/imobility-cnr</url>
+  <max-omobility-ids>100</max-omobility-ids>
+</imobility-cnr>
 
       <!-- 18. Incoming Mobility ToRs v3 -->
       <imobility-tors
@@ -347,6 +351,7 @@
           </sec:server-auth-methods>
         </http-security>
         <url>https://ewp.unatc.ro/api/imobility-tor-cnr</url>
+        <max-omobility-ids>100</max-omobility-ids>
       </imobility-tor-cnr>
 
       <!-- 20. Incoming Mobility ToR Stats v1 — NOU -->
