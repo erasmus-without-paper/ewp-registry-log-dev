@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  EWP Discovery Manifest — UNATC "I.L. Caragiale" București
+  Versiune spec: stable-v6 | Mediu: DEV | 2026-05-08
+-->
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-registry/stable-v1/catalogue.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/stable-v1/security-entries.xsd
+    "
+>
+  <host>
+
+    <ewp:admin-email>admin@unatc.ro</ewp:admin-email>
+    <ewp:admin-provider>UNATC „I.L. Caragiale” din București</ewp:admin-provider>
+    <ewp:admin-notes>Nod EWP UNATC — mediu DEV. Contact: admin@unatc.ro</ewp:admin-notes>
+
+    <r:apis-implemented>
+
+      <!-- 1. Discovery v6 -->
+      <discovery
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+          version="6.0.0">
+        <url>https://student.unatc.tarainteractive.com/.well-known/ewp-manifest.xml</url>
+      </discovery>
+
+      <!-- 2. Echo v2 -->
+      <echo
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <ewp:admin-email>admin@unatc.ro</ewp:admin-email>
+        <http-security>
+          <sec:client-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-tlscert/tree/stable-v1" allows-self-signed="true"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/echo</url>
+      </echo>
+
+      <!-- 3. Institutions v2 — url simplu, fara get-url -->
+      <institutions
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/institutions</url>
+        <max-hei-ids>1</max-hei-ids>
+      </institutions>
+
+      <!-- 4. Organizational Units v2
+           ORDINE CORECTA: max-ounit-ids INAINTE de max-hei-ids -->
+<organizational-units
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+    version="2.0.0">
+  <http-security>
+    <sec:client-auth-methods>
+      <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+    </sec:client-auth-methods>
+    <sec:server-auth-methods>
+      <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+    </sec:server-auth-methods>
+  </http-security>
+  <url>https://student.unatc.tarainteractive.com/api/ewp/ounits</url>
+  <max-ounit-ids>100</max-ounit-ids>
+  <max-ounit-codes>100</max-ounit-codes>
+</organizational-units>
+
+      <!-- 5. Factsheet v1 -->
+      <factsheet
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+          version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/factsheet</url>
+      </factsheet>
+
+      <!-- 6. File v1 -->
+      <file
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
+          version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/file</url>
+      </file>
+
+<!-- 7. IIAs v7 — ordine exactă din XSD -->
+<iias
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+    version="7.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://student.unatc.tarainteractive.com/api/ewp/iias</get-url>
+  <max-iia-ids>100</max-iia-ids>
+  <index-url>https://student.unatc.tarainteractive.com/api/ewp/iias/index</index-url>
+</iias>
+
+      <!-- 8. IIAs Approval v2 — fara max-hei-ids, doar max-iia-ids -->
+      <iias-approval
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/iias-approval</url>
+        <max-iia-ids>100</max-iia-ids>
+      </iias-approval>
+
+      <!-- 9. IIA CNR v3 -->
+      <iia-cnr
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+          version="3.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/iia-cnr</url>
+        <max-iia-ids>100</max-iia-ids>
+      </iia-cnr>
+
+      <!-- 10. IIA Approval CNR v2 -->
+      <iia-approval-cnr
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/iia-approval-cnr</url>
+        <max-iia-ids>100</max-iia-ids>
+      </iia-approval-cnr>
+
+<!-- 11. Outgoing Mobilities v3 -->
+<omobilities
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+    version="3.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://student.unatc.tarainteractive.com/api/ewp/omobilities</get-url>
+  <index-url>https://student.unatc.tarainteractive.com/api/ewp/omobilities/index</index-url>
+  <update-url>https://student.unatc.tarainteractive.com/api/ewp/omobilities/update</update-url>
+  <max-omobility-ids>100</max-omobility-ids>
+</omobilities>
+
+
+      <!-- 12. Outgoing Mobility CNR v2 -->
+      <omobility-cnr
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/omobility-cnr</url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </omobility-cnr>
+
+<!-- 13. Outgoing Mobility LAs v1 -->
+<omobility-las
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+    version="1.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://student.unatc.tarainteractive.com/api/ewp/omobility-las</get-url>
+  <index-url>https://student.unatc.tarainteractive.com/api/ewp/omobility-las/index</index-url>
+  <update-url>https://student.unatc.tarainteractive.com/api/ewp/omobility-las/update</update-url>
+  <max-omobility-ids>100</max-omobility-ids>
+</omobility-las>
+
+      <!-- 14. Outgoing Mobility LA CNR v1 -->
+      <omobility-la-cnr
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+          version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/omobility-la-cnr</url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </omobility-la-cnr>
+
+      <!-- 15. Outgoing Mobility Stats v1 -->
+      <omobility-stats
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
+          version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/omobility-stats</url>
+      </omobility-stats>
+
+      <!-- 16. Incoming Mobilities v2 — get-url in loc de url -->
+      <imobilities
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <get-url>https://student.unatc.tarainteractive.com/api/ewp/imobilities</get-url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </imobilities>
+
+      <!-- 17. Incoming Mobility CNR v1 -->
+    <imobility-cnr
+        xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+        version="2.0.0">
+      <http-security>
+        <sec:client-auth-methods>
+          <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+        </sec:client-auth-methods>
+        <sec:server-auth-methods>
+          <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+        </sec:server-auth-methods>
+      </http-security>
+      <url>https://student.unatc.tarainteractive.com/api/ewp/imobility-cnr</url>
+      <max-omobility-ids>100</max-omobility-ids>
+    </imobility-cnr>
+
+<!-- 18. Incoming Mobility ToRs v3 -->
+<imobility-tors
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
+    version="3.0.0">
+  <http-security>
+    <sec:client-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/></sec:client-auth-methods>
+    <sec:server-auth-methods><httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/></sec:server-auth-methods>
+  </http-security>
+  <get-url>https://student.unatc.tarainteractive.com/api/ewp/imobility-tors</get-url>
+  <index-url>https://student.unatc.tarainteractive.com/api/ewp/imobility-tors/index</index-url>
+  <max-omobility-ids>100</max-omobility-ids>
+</imobility-tors>
+
+      <!-- 19. Incoming Mobility ToR CNR v2 -->
+      <imobility-tor-cnr
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd"
+          version="2.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/imobility-tor-cnr</url>
+        <max-omobility-ids>100</max-omobility-ids>
+      </imobility-tor-cnr>
+
+      <!-- 20. Incoming Mobility ToR Stats v1 -->
+      <imobility-tor-stats
+          xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd"
+          version="1.0.0">
+        <http-security>
+          <sec:client-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+          </sec:server-auth-methods>
+        </http-security>
+        <url>https://student.unatc.tarainteractive.com/api/ewp/imobility-tor-stats</url>
+      </imobility-tor-stats>
+
+    </r:apis-implemented>
+
+    <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+      <hei id="unatc.ro">
+        <other-id type="erasmus">RO BUCURES33</other-id>
+        <other-id type="pic">946787222</other-id>
+        <other-id type="oid">E10130267</other-id>
+        <name xml:lang="ro">Universitatea Națională de Artă Teatrală și Cinematografică "I.L. Caragiale" din București</name>
+        <name xml:lang="en">National University of Theatre and Film "I.L. Caragiale" Bucharest</name>
+      </hei>
+    </mf:institutions-covered>
+
+    <client-credentials-in-use>
+      <rsa-public-key>
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkksXGBd5Z7AHhA1EL4PD
+oVJ35rmp6NO7KVsaeIagKiAqZkL8ucs3rzTD0S3h286G+N9HDlw+ZzAiGTwTlOzI
+dKgAFYd8QG1aIwrUjik/ombZLLAzOokZpCbBd/GawI0RECHNXebMgpnpRHqit0pP
++bpGFwz9XhSQB1CTtsu86TgxhnGfb7LtNawEWz4wSe+aRTUjT8XgUh5qhX6ocUN4
+ICR7OkVuqSugGUlMA2aE3Sr8nO60a+XOvbVFmI6ZxpUjdFqK5StrjH2A1QiKBZmi
+oQFpMXE3w8mXjkzOgUwLEShV++q7VI7Vhuc+FnDKXOyABI3Vhi+B90pxuCifRbHU
+BQIDAQAB
+      </rsa-public-key>
+    </client-credentials-in-use>
+
+    <server-credentials-in-use>
+      <rsa-public-key>
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkksXGBd5Z7AHhA1EL4PD
+oVJ35rmp6NO7KVsaeIagKiAqZkL8ucs3rzTD0S3h286G+N9HDlw+ZzAiGTwTlOzI
+dKgAFYd8QG1aIwrUjik/ombZLLAzOokZpCbBd/GawI0RECHNXebMgpnpRHqit0pP
++bpGFwz9XhSQB1CTtsu86TgxhnGfb7LtNawEWz4wSe+aRTUjT8XgUh5qhX6ocUN4
+ICR7OkVuqSugGUlMA2aE3Sr8nO60a+XOvbVFmI6ZxpUjdFqK5StrjH2A1QiKBZmi
+oQFpMXE3w8mXjkzOgUwLEShV++q7VI7Vhuc+FnDKXOyABI3Vhi+B90pxuCifRbHU
+BQIDAQAB
+      </rsa-public-key>
+    </server-credentials-in-use>
+
+  </host>
+</manifest>
