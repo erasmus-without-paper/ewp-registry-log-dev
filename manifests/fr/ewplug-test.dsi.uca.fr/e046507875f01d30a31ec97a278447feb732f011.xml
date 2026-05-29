@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+          xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+          xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+          xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+          xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+          xmlns:i2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+          xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
+          xmlns:im2="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+          xmlns:imc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+          xmlns:imt3="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
+          xmlns:imtc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd"
+          xmlns:imts1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd"
+          xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+          xmlns:omc2="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
+          xmlns:oms1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
+          xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+          xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+          xmlns:iia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+          xmlns:iiaa1="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+          xmlns:iiaac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd" xmlns:iiac1="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+          xmlns:fs1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+          xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+          xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+          xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+          xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"
+          xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
+
+    <host>
+        <ewp:admin-email>pierre.raynaud@uca.fr</ewp:admin-email>
+        <ewp:admin-provider>SIRIUS</ewp:admin-provider>
+        <r:apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://ewplug-test.dsi.uca.fr/uca.fr/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewplug-test.dsi.uca.fr/uca.fr/echo</e2:url>
+            </e2:echo>
+                        <i2:institutions version="2.1.1">
+                <i2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </i2:http-security>
+                <i2:url>https://ewplug-test.dsi.uca.fr/uca.fr/institutions</i2:url>
+                <i2:max-hei-ids>1</i2:max-hei-ids>
+            </i2:institutions>
+                                    <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewplug-test.dsi.uca.fr/uca.fr/ounits</ou2:url>
+                <ou2:max-ounit-ids>2</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>2</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+                                        <co1:courses version="0.7.1">
+                    <co1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </co1:http-security>
+                    <co1:url>https://ewplug-test.dsi.uca.fr/uca.fr/courses</co1:url>
+                    <co1:max-los-ids>2</co1:max-los-ids>
+                    <co1:max-los-codes>2</co1:max-los-codes>
+                </co1:courses>
+                                        <cr1:simple-course-replication version="1.0.0">
+                    <cr1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </cr1:http-security>
+                    <cr1:url>https://ewplug-test.dsi.uca.fr/uca.fr/courseReplication</cr1:url>
+                    <cr1:allows-anonymous-access>true</cr1:allows-anonymous-access>
+                    <cr1:supports-modified-since>true</cr1:supports-modified-since>
+                </cr1:simple-course-replication>
+                                        <iia7:iias version="7.0.0">
+                    <iia7:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </iia7:http-security>
+                    <iia7:get-url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/get</iia7:get-url>
+                    <iia7:max-iia-ids>2</iia7:max-iia-ids>
+                    <iia7:index-url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/index</iia7:index-url>
+                    <iia7:stats-url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/stats</iia7:stats-url>
+                </iia7:iias>
+                                        <iiaa1:iias-approval version="2.0.0">
+                    <iiaa1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </iiaa1:http-security>
+                    <iiaa1:url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/approval</iiaa1:url>
+                    <iiaa1:max-iia-ids>2</iiaa1:max-iia-ids>
+                </iiaa1:iias-approval>
+                                        <iiaac1:iia-approval-cnr version="2.0.0">
+                    <iiaac1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </iiaac1:http-security>
+                    <iiaac1:url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/approval/cnr</iiaac1:url>
+                </iiaac1:iia-approval-cnr>
+                                        <iiac1:iia-cnr version="3.0.0">
+                    <iiac1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </iiac1:http-security>
+                    <iiac1:url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/cnr</iiac1:url>
+                </iiac1:iia-cnr>
+                                        <fs1:factsheet version="1.2.0">
+                    <fs1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </fs1:http-security>
+                    <fs1:url>https://ewplug-test.dsi.uca.fr/uca.fr/iias/factsheet</fs1:url>
+                    <fs1:max-hei-ids>1</fs1:max-hei-ids>
+                </fs1:factsheet>
+                                        <om3:omobilities version="3.0.0">
+                    <om3:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </om3:http-security>
+                    <om3:get-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobilities/get</om3:get-url>
+                    <om3:index-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobilities/index</om3:index-url>
+                    <om3:update-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobilities/update</om3:update-url>
+                    <om3:max-omobility-ids>2</om3:max-omobility-ids>
+                </om3:omobilities>
+                                        <omc2:omobility-cnr version="2.0.0">
+                    <omc2:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </omc2:http-security>
+                    <omc2:url>https://ewplug-test.dsi.uca.fr/uca.fr/omobilities/cnr</omc2:url>
+                    <omc2:max-omobility-ids>2</omc2:max-omobility-ids>
+                </omc2:omobility-cnr>
+                                        <oms1:omobility-stats version="1.0.0">
+                    <oms1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </oms1:http-security>
+                    <oms1:url>https://ewplug-test.dsi.uca.fr/uca.fr/omobilities/stats</oms1:url>
+                </oms1:omobility-stats>
+                                        <oml1:omobility-las version="1.2.0">
+                    <oml1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </oml1:http-security>
+                    <oml1:get-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobility-las/get</oml1:get-url>
+                    <oml1:index-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobility-las/index</oml1:index-url>
+                    <oml1:update-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobility-las/update</oml1:update-url>
+                    <oml1:stats-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobility-las/stats</oml1:stats-url>
+                    <oml1:max-omobility-ids>2</oml1:max-omobility-ids>
+                </oml1:omobility-las>
+                                        <omlc1:omobility-la-cnr version="1.10.0">
+                    <omlc1:http-security>
+                        <sec:client-auth-methods>
+                            <sec-A2:httpsig/>
+                        </sec:client-auth-methods>
+                        <sec:server-auth-methods>
+                            <sec-B2:httpsig/>
+                        </sec:server-auth-methods>
+                    </omlc1:http-security>
+                    <omlc1:url>https://ewplug-test.dsi.uca.fr/uca.fr/omobility-las/cnr</omlc1:url>
+                    <omlc1:stats-url>https://ewplug-test.dsi.uca.fr/uca.fr/omobility-las/cnr/stats</omlc1:stats-url>
+                    <omlc1:max-omobility-ids>2</omlc1:max-omobility-ids>
+                </omlc1:omobility-la-cnr>
+                                    <im2:imobilities version="2.0.0">
+                <im2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im2:http-security>
+                <im2:get-url>https://ewplug-test.dsi.uca.fr/uca.fr/imobilities/get</im2:get-url>
+                <im2:max-omobility-ids>2</im2:max-omobility-ids>
+            </im2:imobilities>
+                                    <imc2:imobility-cnr version="2.0.0">
+                <imc2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc2:http-security>
+                <imc2:url>https://ewplug-test.dsi.uca.fr/uca.fr/imobilities/cnr</imc2:url>
+                <imc2:max-omobility-ids>2</imc2:max-omobility-ids>
+            </imc2:imobility-cnr>
+                                    <imt3:imobility-tors version="3.0.0">
+                <imt3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt3:http-security>
+                <imt3:get-url>https://ewplug-test.dsi.uca.fr/uca.fr/imobility-tors/get</imt3:get-url>
+                <imt3:index-url>https://ewplug-test.dsi.uca.fr/uca.fr/imobility-tors/index</imt3:index-url>
+                <imt3:max-omobility-ids>2</imt3:max-omobility-ids>
+            </imt3:imobility-tors>
+                                    <imtc2:imobility-tor-cnr version="2.0.0">
+                <imtc2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc2:http-security>
+                <imtc2:url>https://ewplug-test.dsi.uca.fr/uca.fr/imobility-tors/cnr</imtc2:url>
+                <imtc2:max-omobility-ids>2</imtc2:max-omobility-ids>
+            </imtc2:imobility-tor-cnr>
+                                    <imts1:imobility-tor-stats version="1.0.0">
+                <imts1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imts1:http-security>
+                <imts1:url>https://ewplug-test.dsi.uca.fr/uca.fr/imobility-tors/stats</imts1:url>
+            </imts1:imobility-tor-stats>
+                    </r:apis-implemented>
+
+        <institutions-covered>
+                        <r:hei id="uca.fr">
+                                <r:other-id type="erasmus">F CLERMON02</r:other-id>
+                                <r:other-id type="pic">891878141</r:other-id>
+                                                <r:name xml:lang="en">Universite Clermont Auvergne</r:name>
+                                <r:name xml:lang="fr">Université Clermont Auvergne</r:name>
+                            </r:hei>
+        </institutions-covered>
+
+        <client-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2/l3EQEjUyaISjZ08D8X
+jryN/qmKMH8aFVFxA/7YuPj/kZn/CgQOUVRxQkWYvzR/aRsi9WNIFr4O3rDw0jDk
+V1Z7tSkXW+J4ipcSPrBi8cnn1K0vR9N2JmCsocsx1jlmKeESn241lXpkCn2SguM3
+W5673jc7bUFwHJb+vtZWEFf1yebVtpyyLtKgawde0shhKs2g7phSRwE/G/KNevqC
+C7ma50+xf+hqxYDRR3vFsaIr1bQmwjyR4oRsXSO7lsMNPMAcFyrywUG9m6rO90Xq
+F0VSrysspjkhsVSmKURGSq+2nvccTnAlAYKTCmN6onbLhjs1YZlDghorsta0gbFQ
+UtAG7aQBF0QE7WpJaTanFqmm2U8XEyo007kKfl7jNFpoPwdAc42SqQInZ2Br3gwB
+mauieSDlVhLRNyrW3Yhk5tKXV4p3DOFo2fApAKvXAXTaglr4amjWCt2tUl/uJxTt
+NE//CAu6dela5HmZ95JeUXy1SZE/jcKZUiEFW1ISelqXNNQ4gLG9MBKtvSpzJx/u
+QlzOmXQ4Yp1Jgtfu+04Vn/zpWtex+n8IkM6AWeaEaJpR1is1PhhdRMaMNzDpRZvm
+w5sHVmXj6xDCNYBbNF7IkQ4Uxo9AEeQ2n59glZcdl8qKjNQ+hJGoRZtghjPH0fU0
+NeUyzXo8InA0GEzTuZCBZvkCAwEAAQ==</rsa-public-key>
+        </client-credentials-in-use>
+
+        <server-credentials-in-use>
+            <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2/l3EQEjUyaISjZ08D8X
+jryN/qmKMH8aFVFxA/7YuPj/kZn/CgQOUVRxQkWYvzR/aRsi9WNIFr4O3rDw0jDk
+V1Z7tSkXW+J4ipcSPrBi8cnn1K0vR9N2JmCsocsx1jlmKeESn241lXpkCn2SguM3
+W5673jc7bUFwHJb+vtZWEFf1yebVtpyyLtKgawde0shhKs2g7phSRwE/G/KNevqC
+C7ma50+xf+hqxYDRR3vFsaIr1bQmwjyR4oRsXSO7lsMNPMAcFyrywUG9m6rO90Xq
+F0VSrysspjkhsVSmKURGSq+2nvccTnAlAYKTCmN6onbLhjs1YZlDghorsta0gbFQ
+UtAG7aQBF0QE7WpJaTanFqmm2U8XEyo007kKfl7jNFpoPwdAc42SqQInZ2Br3gwB
+mauieSDlVhLRNyrW3Yhk5tKXV4p3DOFo2fApAKvXAXTaglr4amjWCt2tUl/uJxTt
+NE//CAu6dela5HmZ95JeUXy1SZE/jcKZUiEFW1ISelqXNNQ4gLG9MBKtvSpzJx/u
+QlzOmXQ4Yp1Jgtfu+04Vn/zpWtex+n8IkM6AWeaEaJpR1is1PhhdRMaMNzDpRZvm
+w5sHVmXj6xDCNYBbNF7IkQ4Uxo9AEeQ2n59glZcdl8qKjNQ+hJGoRZtghjPH0fU0
+NeUyzXo8InA0GEzTuZCBZvkCAwEAAQ==</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+
+</manifest>
