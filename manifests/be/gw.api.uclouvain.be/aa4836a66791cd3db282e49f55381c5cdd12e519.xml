@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:d6="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" xmlns:e2="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd" xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd" xmlns:oms1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1" xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2" xmlns:sec-A2="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1" xmlns:sec-B1="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1" xmlns:sec-B2="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1">
+  <host>
+    <ewp:admin-email>support-ewp@uclouvain.be</ewp:admin-email>
+    <ewp:admin-provider>UNIVERSITE CATHOLIQUE DE LOUVAIN</ewp:admin-provider>
+    <ewp:admin-notes>UCLouvain EWP QA environment - v0.1</ewp:admin-notes>
+    <r:apis-implemented>
+      <d6:discovery version="6.0.0">
+        <d6:url>https://gw.api.uclouvain.be/ewp/public/v1/dev/manifest</d6:url>
+      </d6:discovery>
+      <e2:echo version="2.0.1">
+        <e2:http-security>
+          <sec:client-auth-methods>
+            <sec-A2:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec-B2:httpsig/>
+          </sec:server-auth-methods>
+        </e2:http-security>
+        <e2:url>https://gw.api.uclouvain.be/ewp/public/v1/dev/echo</e2:url>
+      </e2:echo>
+      <oml1:omobility-las version="1.2.0">
+        <oml1:http-security>
+          <sec:client-auth-methods>
+            <sec-A2:httpsig/>
+          </sec:client-auth-methods>
+          <sec:server-auth-methods>
+            <sec-B2:httpsig/>
+          </sec:server-auth-methods>
+        </oml1:http-security>
+        <oml1:get-url>https://gw.api.uclouvain.be/ewp/public/v1/dev/omobility-las/get</oml1:get-url>
+        <oml1:index-url>https://gw.api.uclouvain.be/ewp/public/v1/dev/omobility-las/index</oml1:index-url>
+        <oml1:update-url>https://gw.api.uclouvain.be/ewp/public/v1/dev/omobility-las/update</oml1:update-url>
+        <oml1:stats-url>https://gw.api.uclouvain.be/ewp/public/v1/dev/omobility-las/stats</oml1:stats-url>
+        <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+      </oml1:omobility-las>
+    </r:apis-implemented>
+    <institutions-covered>
+      <r:hei id="uclouvain.be">
+        <r:other-id type="pic">999980664</r:other-id>
+        <r:other-id type="erasmus">B LOUVAIN01</r:other-id>
+        <r:other-id type="euc">27936-IC-1-2007-1-BE-ERASMUS-EUCX-1</r:other-id>
+        <r:name xml:lang="fr">UNIVERSITE CATHOLIQUE DE LOUVAIN</r:name>
+        <r:name xml:lang="nl">UNIVERSITE CATHOLIQUE DE LOUVAIN</r:name>
+        <r:name xml:lang="en">UCLouvain</r:name>
+      </r:hei>
+    </institutions-covered>
+    <client-credentials-in-use>
+      <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA5AJv8RROWRH9yimb2za4FecKlrwOMqt2LP/HsBRTg93B95iQZXNEACDrVRscgSBee+HyJVul7KGl6oXbYfukMOXylpUkYQbcoyPLllDKyF/HThTzK2B897CF2pNFmNZ3FJ36yuX6ceLqJ+FlBEGR84crhAcLxfC0fDuORW4/Krb8KSyfdiel/3V2q9P0g/JpbEAL2sladS8vWx7lKTCsy2POJyB9HK6d9iBVNNBvIvpzgrCcEj4VnjK+lmyblLRV2NM+2yttcr+81KuoUbSdbeb3MilRg9hAbUQu6stgRwelpAiyIoQ7W5ErKzRQPKdaAjZ+tXmmCIdGpcord+Bj64J+/pYRjpWh+ZoDLMqHKAumlkDqsGkuEMtpIm3afkn2m6N3eX/9TotUam5W3CCDXsQAv3ZNaH9pe5QGCYLoEcFn5/Anwt6LFkw4BIIYh7qh6aSt0iW0yqJLmxO5nZOhbZq/KCHvcHUUOGZUFha/zRW7JR03Wjm6AfAfHCM2RP8ZwO7M3qlAaOQOrpqVAbio5ApRCtK1C8EaQBO3y14LMzC2n34fS3DXzRYjRq16/vHvyzNrkPs7BHB1SCwcLWmw0zq8EflYFDXguYsfR6q9bntsOmQZmGOjLquBTE1RYIrZ8gJmnjAvFCgF4BWbY0eif+0ZX6S9ycRu4ZlAWyOgELUCAwEAAQ==</rsa-public-key>
+    </client-credentials-in-use>
+    <server-credentials-in-use>
+      <rsa-public-key>MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA5AJv8RROWRH9yimb2za4FecKlrwOMqt2LP/HsBRTg93B95iQZXNEACDrVRscgSBee+HyJVul7KGl6oXbYfukMOXylpUkYQbcoyPLllDKyF/HThTzK2B897CF2pNFmNZ3FJ36yuX6ceLqJ+FlBEGR84crhAcLxfC0fDuORW4/Krb8KSyfdiel/3V2q9P0g/JpbEAL2sladS8vWx7lKTCsy2POJyB9HK6d9iBVNNBvIvpzgrCcEj4VnjK+lmyblLRV2NM+2yttcr+81KuoUbSdbeb3MilRg9hAbUQu6stgRwelpAiyIoQ7W5ErKzRQPKdaAjZ+tXmmCIdGpcord+Bj64J+/pYRjpWh+ZoDLMqHKAumlkDqsGkuEMtpIm3afkn2m6N3eX/9TotUam5W3CCDXsQAv3ZNaH9pe5QGCYLoEcFn5/Anwt6LFkw4BIIYh7qh6aSt0iW0yqJLmxO5nZOhbZq/KCHvcHUUOGZUFha/zRW7JR03Wjm6AfAfHCM2RP8ZwO7M3qlAaOQOrpqVAbio5ApRCtK1C8EaQBO3y14LMzC2n34fS3DXzRYjRq16/vHvyzNrkPs7BHB1SCwcLWmw0zq8EflYFDXguYsfR6q9bntsOmQZmGOjLquBTE1RYIrZ8gJmnjAvFCgF4BWbY0eif+0ZX6S9ycRu4ZlAWyOgELUCAwEAAQ==</rsa-public-key>
+    </server-credentials-in-use>
+  </host>
+</manifest>
