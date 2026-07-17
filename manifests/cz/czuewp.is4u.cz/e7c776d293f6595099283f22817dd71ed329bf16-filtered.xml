@@ -18,6 +18,7 @@
     xmlns:lac="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
     xmlns:ns2="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
     xmlns:om="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+    xmlns:omc="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
     xmlns:oms="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
     xmlns:ou2="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/blob/stable-v2/manifest-entry.xsd"
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
@@ -87,6 +88,19 @@
                 <om:update-url>https://czuewp.is4u.cz/ewp/omobilities/update.pl</om:update-url>
                 <om:max-omobility-ids>1</om:max-omobility-ids>
             </om:omobilities>
+            <omc:omobility-cnr version="2.0.0">
+                <omc:http-security>
+                    <sec:client-auth-methods>
+                        <sec-cs:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-sc:tlscert/>
+                        <sec-ss:httpsig/>
+                    </sec:server-auth-methods>
+                </omc:http-security>
+                <omc:url>https://czuewp.is4u.cz/ewp/omobilities/cnr.pl</omc:url>
+                <omc:max-omobility-ids>1</omc:max-omobility-ids>
+            </omc:omobility-cnr>
             <iapc:iia-approval-cnr version="2.0.0">
                 <iapc:http-security>
                     <sec:client-auth-methods>
