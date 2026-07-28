@@ -107784,65 +107784,6 @@
         <ewp:admin-provider>UNIVERSIDAD DE MALAGA</ewp:admin-provider>
         <ewp:admin-notes>University of Malaga EWP Node.</ewp:admin-notes>
         <apis-implemented>
-            <ou2:organizational-units version="2.1.1">
-                <ou2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </ou2:http-security>
-                <ou2:url>https://ewp-test.uma.es/rest/ounits</ou2:url>
-                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
-                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
-            </ou2:organizational-units>
-            <iac3:iia-cnr version="3.0.0">
-                <iac3:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iac3:http-security>
-                <iac3:url>https://ewp-test.uma.es/rest/iias/cnr</iac3:url>
-            </iac3:iia-cnr>
-            <cr1:simple-course-replication
-                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
-            >
-                <cr1:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </cr1:http-security>
-                <cr1:url>https://ewp-test.uma.es/rest/courses/replication</cr1:url>
-                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
-                <cr1:supports-modified-since>true</cr1:supports-modified-since>
-            </cr1:simple-course-replication>
-            <iaa2:iias-approval
-                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
-                <iaa2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaa2:http-security>
-                <iaa2:url>https://ewp-test.uma.es/rest/iiasApproval/get</iaa2:url>
-                <iaa2:max-iia-ids>100</iaa2:max-iia-ids>
-            </iaa2:iias-approval>
             <co1:courses
                 xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
                 version="0.7.1"
@@ -107860,11 +107801,8 @@
                 <co1:max-los-ids>1</co1:max-los-ids>
                 <co1:max-los-codes>1</co1:max-los-codes>
             </co1:courses>
-            <omlc1:omobility-la-cnr
-                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.1.0"
-            >
-                <omlc1:http-security>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -107872,11 +107810,85 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </omlc1:http-security>
-                <omlc1:url>https://ewp-test.uma.es/rest/omobilities/las/cnr</omlc1:url>
-                <omlc1:stats-url>https://ewp-test.uma.es/rest/omobilities/las/cnr/stats</omlc1:stats-url>
-                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
-            </omlc1:omobility-la-cnr>
+                </in2:http-security>
+                <in2:url>https://ewp-test.uma.es/rest/institutions</in2:url>
+                <in2:max-hei-ids>100</in2:max-hei-ids>
+            </in2:institutions>
+            <cr1:simple-course-replication
+                xmlns:cr1="https://github.com/erasmus-without-paper/ewp-specs-api-course-replication/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <cr1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </cr1:http-security>
+                <cr1:url>https://ewp-test.uma.es/rest/courses/replication</cr1:url>
+                <cr1:allows-anonymous-access>false</cr1:allows-anonymous-access>
+                <cr1:supports-modified-since>true</cr1:supports-modified-since>
+            </cr1:simple-course-replication>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://ewp-test.uma.es/rest/iias/cnr</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://ewp-test.uma.es/rest/iiasApproval/get</iaa2:url>
+                <iaa2:max-iia-ids>100</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ewp-test.uma.es/rest/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp-test.uma.es/rest/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.2.0"
@@ -107896,9 +107908,6 @@
                 <oml1:stats-url>https://ewp-test.uma.es/rest/omobilities/las/stats</oml1:stats-url>
                 <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
             </oml1:omobility-las>
-            <d6:discovery version="6.0.0">
-                <d6:url>https://ewp-test.uma.es/rest/manifest</d6:url>
-            </d6:discovery>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -107911,11 +107920,14 @@
                 </e2:http-security>
                 <e2:url>https://ewp-test.uma.es/rest/echo</e2:url>
             </e2:echo>
-            <f1:factsheet
-                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
-                version="1.2.0"
+            <d6:discovery version="6.0.0">
+                <d6:url>https://ewp-test.uma.es/rest/manifest</d6:url>
+            </d6:discovery>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
             >
-                <f1:http-security>
+                <iaac2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -107923,10 +107935,26 @@
                         <sec-B1:tlscert/>
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
-                </f1:http-security>
-                <f1:url>https://ewp-test.uma.es/rest/factsheet</f1:url>
-                <f1:max-hei-ids>1</f1:max-hei-ids>
-            </f1:factsheet>
+                </iaac2:http-security>
+                <iaac2:url>https://ewp-test.uma.es/rest/iiasApproval/cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ewp-test.uma.es/rest/omobilities/las/cnr</omlc1:url>
+                <omlc1:stats-url>https://ewp-test.uma.es/rest/omobilities/las/cnr/stats</omlc1:stats-url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
             <ia7:iias
                 xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
                 version="7.0.0"
@@ -107945,34 +107973,6 @@
                 <ia7:index-url>https://ewp-test.uma.es/rest/iias/index</ia7:index-url>
                 <ia7:stats-url>https://ewp-test.uma.es/rest/iias/stats</ia7:stats-url>
             </ia7:iias>
-            <iaac2:iia-approval-cnr
-                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
-            >
-                <iaac2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </iaac2:http-security>
-                <iaac2:url>https://ewp-test.uma.es/rest/iiasApproval/cnr</iaac2:url>
-            </iaac2:iia-approval-cnr>
-            <in2:institutions version="2.2.0">
-                <in2:http-security>
-                    <sec:client-auth-methods>
-                        <sec-A2:httpsig/>
-                    </sec:client-auth-methods>
-                    <sec:server-auth-methods>
-                        <sec-B1:tlscert/>
-                        <sec-B2:httpsig/>
-                    </sec:server-auth-methods>
-                </in2:http-security>
-                <in2:url>https://ewp-test.uma.es/rest/institutions</in2:url>
-                <in2:max-hei-ids>100</in2:max-hei-ids>
-            </in2:institutions>
         </apis-implemented>
         <institutions-covered>
             <hei-id>test.uma.es</hei-id>
