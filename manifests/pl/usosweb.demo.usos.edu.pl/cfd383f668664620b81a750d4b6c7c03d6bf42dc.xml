@@ -1,251 +1,47 @@
-<!DOCTYPE html>
-<html class="login-pf" lang="pl" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="color-scheme" content="light dark">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Zaloguj się do usos.edu.pl</title>
-        <link rel="icon" href="/resources/yyj3f/login/keycloak.v2/img/favicon.ico" />
-        <link href="/resources/yyj3f/common/keycloak/vendor/patternfly-v5/patternfly.min.css" rel="stylesheet" />
-        <link href="/resources/yyj3f/common/keycloak/vendor/patternfly-v5/patternfly-addons.css" rel="stylesheet" />
-        <link href="/resources/yyj3f/login/keycloak.v2/css/styles.css" rel="stylesheet" />
-    <script type="importmap">
-        {
-            "imports": {
-                "rfc4648": "/resources/yyj3f/common/keycloak/vendor/rfc4648/rfc4648.js"
-            }
-        }
-    </script>
-      <script type="module" async blocking="render">
-          const DARK_MODE_CLASS = "pf-v5-theme-dark";
-          const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-          updateDarkMode(mediaQuery.matches);
-          mediaQuery.addEventListener("change", (event) => updateDarkMode(event.matches));
-
-          function updateDarkMode(isEnabled) {
-            const { classList } = document.documentElement;
-
-            if (isEnabled) {
-              classList.add(DARK_MODE_CLASS);
-            } else {
-              classList.remove(DARK_MODE_CLASS);
-            }
-          }
-      </script>
-    <script type="module" src="/resources/yyj3f/login/keycloak.v2/js/passwordVisibility.js"></script>
-    <script type="module">
-        import { startSessionPolling } from "/resources/yyj3f/login/keycloak.v2/js/authChecker.js";
-
-        startSessionPolling(
-            "/realms/usos.edu.pl/login-actions/restart?client_id=demo21-apps&tab_id=PtoyjD1Amks&client_data=eyJydSI6Imh0dHBzOi8vdXNvc3dlYi5kZW1vLnVzb3MuZWR1LnBsL29hdXRoMmNhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiJESDh6Yk1BX0Zxd2NxMUhzSHZjdFdLRVVoYkEifQ&skip_logout=true"
-        );
-    </script>
-    <script type="module">
-        document.addEventListener("click", (event) => {
-            const link = event.target.closest("a[data-once-link]");
-
-            if (!link) {
-                return;
-            }
-
-            if (link.getAttribute("aria-disabled") === "true") {
-                event.preventDefault();
-                return;
-            }
-
-            const { disabledClass } = link.dataset;
-
-            if (disabledClass) {
-                link.classList.add(...disabledClass.trim().split(/\s+/));
-            }
-
-            link.setAttribute("role", "link");
-            link.setAttribute("aria-disabled", "true");
-        });
-    </script>
-        <script type="module">
-            import { checkAuthSession } from "/resources/yyj3f/login/keycloak.v2/js/authChecker.js";
-
-            checkAuthSession(
-                "/f7Vi78fu8/gok2MZf2I1zNmeYhDok9cFEa7PzLTUzWCcwHanLGO2vSLr/4qX7Uy"
-            );
-        </script>
-    <script>
-      // Workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
-      const isFirefox = true;
-    </script>
-</head>
-
-<body id="keycloak-bg" class="" data-page-id="login-login">
-<div class="pf-v5-c-login">
-  <div class="pf-v5-c-login__container">
-    <header id="kc-header" class="pf-v5-c-login__header">
-      <div id="kc-header-wrapper"
-              class="pf-v5-c-brand">usos.edu.pl</div>
-    </header>
-    <main class="pf-v5-c-login__main">
-      <div class="pf-v5-c-login__main-header">
-        <h1 class="pf-v5-c-title pf-m-3xl" id="kc-page-title"><!-- template: login.ftl -->
-
-        Zaloguj się na swoje konto
-
-</h1>
-        <div class="pf-v5-c-login__main-header-utilities">
-          <div class="pf-v5-c-form-control">
-            <select
-              aria-label="languages"
-              id="login-select-toggle"
-              onchange="if (this.value) window.location.href=this.value"
-            >
-                <option
-                  value="/realms/usos.edu.pl/login-actions/authenticate?client_id=demo21-apps&amp;tab_id=PtoyjD1Amks&amp;client_data=eyJydSI6Imh0dHBzOi8vdXNvc3dlYi5kZW1vLnVzb3MuZWR1LnBsL29hdXRoMmNhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiJESDh6Yk1BX0Zxd2NxMUhzSHZjdFdLRVVoYkEifQ&amp;execution=6ebff756-51de-4a8b-ae57-5b3aebe1d4c5&amp;kc_locale=en"
-                  
-                >
-                  Angielski (English)
-                </option>
-                <option
-                  value="/realms/usos.edu.pl/login-actions/authenticate?client_id=demo21-apps&amp;tab_id=PtoyjD1Amks&amp;client_data=eyJydSI6Imh0dHBzOi8vdXNvc3dlYi5kZW1vLnVzb3MuZWR1LnBsL29hdXRoMmNhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiJESDh6Yk1BX0Zxd2NxMUhzSHZjdFdLRVVoYkEifQ&amp;execution=6ebff756-51de-4a8b-ae57-5b3aebe1d4c5&amp;kc_locale=pl"
-                  selected
-                >
-                  Polski
-                </option>
-            </select>
-            <span class="pf-v5-c-form-control__utilities">
-              <span class="pf-v5-c-form-control__toggle-icon">
-                <svg
-                  class="pf-v5-svg"
-                  viewBox="0 0 320 512"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  role="img"
-                  width="1em"
-                  height="1em"
-                >
-                  <path
-                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                  >
-                  </path>
-                </svg>
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="pf-v5-c-login__main-body">
-
-
-<!-- template: login.ftl -->
-
-        <div id="kc-form">
-          <div id="kc-form-wrapper">
-                <form id="kc-form-login" class="pf-v5-c-form pf-v5-u-w-100" onsubmit="login.disabled = true; return true;" action="https://kc.usos.edu.pl/realms/usos.edu.pl/login-actions/authenticate?session_code=bhG0NedpLN0TFlZMOyc7U-gGG5TDue_4yyREJEdpnPg&amp;execution=6ebff756-51de-4a8b-ae57-5b3aebe1d4c5&amp;client_id=demo21-apps&amp;tab_id=PtoyjD1Amks&amp;client_data=eyJydSI6Imh0dHBzOi8vdXNvc3dlYi5kZW1vLnVzb3MuZWR1LnBsL29hdXRoMmNhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiJESDh6Yk1BX0Zxd2NxMUhzSHZjdFdLRVVoYkEifQ" method="post" novalidate="novalidate">
-
-<div class="pf-v5-c-form__group">
-    <div class="pf-v5-c-form__group-label pf-v5-u-pb-xs">
-        <label for="username" class="pf-v5-c-form__label">
-        <span class="pf-v5-c-form__label-text">
-                                        Nazwa użytkownika lub e-mail
-
-        </span>
-        </label>
-    </div>
-
-    <span class="pf-v5-c-form-control ">
-        <input id="username" name="username" value="" type="text" autocomplete="username" autofocus
-                
-                aria-invalid=""/>
-    </span>
-
-    <div id="input-error-container-username">
-    </div>
-</div>
-
-
-<div class="pf-v5-c-form__group">
-    <div class="pf-v5-c-form__group-label pf-v5-u-pb-xs">
-        <label for="password" class="pf-v5-c-form__label">
-        <span class="pf-v5-c-form__label-text">
-            Hasło
-        </span>
-        </label>
-    </div>
-
-    <div class="pf-v5-c-input-group">
-      <div class="pf-v5-c-input-group__item pf-m-fill">
-        <span class="pf-v5-c-form-control ">
-          <input id="password" name="password" value="" type="password" autocomplete="current-password" 
-                  aria-invalid=""/>
-        </span>
-      </div>
-      <div class="pf-v5-c-input-group__item">
-        <button class="pf-v5-c-button pf-m-control" type="button" aria-label="Pokaż hasło"
-                aria-controls="password" data-password-toggle
-                data-icon-show="fa-eye fas" data-icon-hide="fa-eye-slash fas"
-                data-label-show="Pokaż hasło" data-label-hide="Ukryj hasło" id="password-show-password">
-            <i class="fa-eye fas" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-    <div class="pf-v5-c-form__helper-text" aria-live="polite">
-        <div class="pf-v5-c-helper-text pf-v5-u-display-flex pf-v5-u-justify-content-space-between">
-  <div class="pf-v5-c-check">
-    <label for="rememberMe" class="pf-v5-c-check">
-      <input
-        class="pf-v5-c-check__input"
-        type="checkbox"
-        id="rememberMe"
-        name="rememberMe"
-        
-      />
-      <span class="pf-v5-c-check__label">Zapamiętaj mnie</span>
-    </label>
-  </div>
-                <div class="pf-v5-c-helper-text__item">
-                  <span class="pf-v5-c-helper-text__item-text">
-                      <a href="/realms/usos.edu.pl/login-actions/reset-credentials?client_id=demo21-apps&amp;tab_id=PtoyjD1Amks&amp;client_data=eyJydSI6Imh0dHBzOi8vdXNvc3dlYi5kZW1vLnVzb3MuZWR1LnBsL29hdXRoMmNhbGxiYWNrIiwicnQiOiJjb2RlIiwic3QiOiJESDh6Yk1BX0Zxd2NxMUhzSHZjdFdLRVVoYkEifQ">Nie pamiętasz hasła?</a>
-                  </span>
-                </div>
-        </div>
-    </div>
-
-
-    <div id="input-error-container-password">
-    </div>
-</div>
-
-
-                    <input type="hidden" id="id-hidden-input" name="credentialId" />
-  <div class="pf-v5-c-form__group">
-    <div class="pf-v5-c-form__actions pf-v5-u-pt-xs pf-v5-u-flex-wrap">
-  <button class="pf-v5-c-button pf-m-primary pf-m-block" name="login" id="kc-login"
-          type="submit" >
-  Logowanie
-  </button>
-    </div>
-  </div>
-                </form>
-            </div>
-        </div>
-
-
-
-
-          <div class="pf-v5-c-login__main-footer">
-<!-- template: login.ftl -->
-
-
-
-          </div>
-      </div>
-
-        <div class="pf-v5-c-login__main-footer">
-        </div>
-    </main>
-  </div>
-</div>
-</body>
-</html>
+<?xml version="1.0"?>
+<manifest xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6" xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
+  <host>
+    <ewp:admin-email>usos@usos.edu.pl</ewp:admin-email>
+    <ewp:admin-provider>MUCI (USOS)</ewp:admin-provider>
+    <r:apis-implemented>
+      <discovery xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd" version="6.0.0">
+        <url>https://usosweb.demo.usos.edu.pl/api/manifest.php</url>
+      </discovery>
+      <emrex-data-access-point xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-emrex-data-access-point/blob/stable-v1/manifest-entry.xsd" version="1.0.0">
+        <url>https://usosweb.demo.usos.edu.pl/emp_endpoint.php</url>
+        <name/>
+        <country-code>PL</country-code>
+        <institution>University of Warsaw</institution>
+        <certificate>MIIFWjCCBEKgAwIBAgIQCPi+I8JH1zA1Pgqc77w4YzANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xNzAyMTMwMDAwMDBaFw0yMDAyMTgxMjAwMDBaMIGbMQswCQYDVQQG
+EwJQTDEUMBIGA1UECBMLTWF6b3dpZWNraWUxETAPBgNVBAcTCFdhcnN6YXdhMR8w
+HQYDVQQKExZVbml3ZXJzeXRldCBXYXJzemF3c2tpMSIwIAYDVQQLExlEemlhbCBT
+aWVjaSBLb21wdXRlcm93eWNoMR4wHAYDVQQDExV1c29zd2VidGVzdC51dy5lZHUu
+cGwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/lPps9lLbv+vYccrq
+DSgTNaR6GnF+0JKhZ3OrsRt93demAz68cGNJthVDPP+zRBWFJzjE2IFBBZ+b+A6K
+vTQo+AqszKbE4S3nEMmqVkOoQ0zsDIW7B7Xi1Lfrax76cefdPnKLWXp54PpbTbet
+md8qWcbVpm025DnNj0nTGO8/JksSa0wbtA6SaBurpusF1tNA0g8i73SXuU0Se1+x
+DGv4KLRyZyYQTmzYFJV2FtP/to5TIDhz7TlTK/JkGaBQta7zf/3zBAl1kJeCpRXY
+e05x5eohSCewV/QkwuyUOtadt2+9RL/M1jnHAoNVdqZFRZ/i9YdwLj4s8C5WMrTu
+OhYjAgMBAAGjggHOMIIByjAfBgNVHSMEGDAWgBRn/YggFCeYxwnSJRm76VERY3VQ
+YjAdBgNVHQ4EFgQUFxOKEuInqOW0j/wE1IDJr9rh2pUwIAYDVR0RBBkwF4IVdXNv
+c3dlYnRlc3QudXcuZWR1LnBsMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4YpaHR0cDovL2NybDMu
+ZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwL6AtoCuGKWh0dHA6Ly9jcmw0
+LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMEwGA1UdIARFMEMwNwYJYIZI
+AYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9D
+UFMwCAYGZ4EMAQICMG4GCCsGAQUFBwEBBGIwYDAkBggrBgEFBQcwAYYYaHR0cDov
+L29jc3AuZGlnaWNlcnQuY29tMDgGCCsGAQUFBzAChixodHRwOi8vY2FjZXJ0cy5k
+aWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqG
+SIb3DQEBCwUAA4IBAQB44xfpFJJ0LPmg1VQtIVVs/pMSy+X1OalLQYOa/NpmN0WA
+Fv0FCIUyZsnGSdqZb57sGFWRJoXrayY7L0oM6jFk0zRSwwN/RSAb96Evha91iGVT
+aAwABYYUEkfBEkdmY2k0MsDZEHBmqLjmtfNu0HS/RVa46kIaKdDoFz8NNWyLHD3k
+KLmERZm76XV/kEJ/0QcKb8feb0ITLTnJe2A2gbHPG+cMqSSz4p/zhN8pxmwlbAUI
+2X36oi1jnLft3T6inuoCn6L6l/ZI8IX0EsBZA4/cyyqwWiWAzyWkgOusnSsCQ/oF
+iFMSzS2zyKNhVskx2ir+ji3+CxPSTVmSTrvQmTD6</certificate>
+      </emrex-data-access-point>
+    </r:apis-implemented>
+  </host>
+</manifest>
