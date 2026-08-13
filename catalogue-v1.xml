@@ -122386,6 +122386,244 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>hostmaster@usos.edu.pl</ewp:admin-email>
+        <ewp:admin-provider>MUCI (USOS)</ewp:admin-provider>
+        <ewp:admin-notes>Base build version: 8.0.0</ewp:admin-notes>
+        <apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://ewp.hei.usos.edu.pl/ewp/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.hei.usos.edu.pl/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.hei.usos.edu.pl/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp.hei.usos.edu.pl/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>100</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>100</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <co1:courses
+                xmlns:co1="https://github.com/erasmus-without-paper/ewp-specs-api-courses/blob/stable-v1/manifest-entry.xsd"
+                version="0.7.1"
+            >
+                <co1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </co1:http-security>
+                <co1:url>https://ewp.hei.usos.edu.pl/ewp/courses</co1:url>
+                <co1:max-los-ids>100</co1:max-los-ids>
+                <co1:max-los-codes>100</co1:max-los-codes>
+            </co1:courses>
+            <ia7:iias
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://ewp.hei.usos.edu.pl/ewp/iia/get</ia7:get-url>
+                <ia7:max-iia-ids>100</ia7:max-iia-ids>
+                <ia7:index-url>https://ewp.hei.usos.edu.pl/ewp/iia/index</ia7:index-url>
+                <ia7:stats-url>https://ewp.hei.usos.edu.pl/ewp/iia/stats</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://ewp.hei.usos.edu.pl/ewp/iia/cnr</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://ewp.hei.usos.edu.pl/ewp/iia/approval</iaa2:url>
+                <iaa2:max-iia-ids>100</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://ewp.hei.usos.edu.pl/ewp/iia/approval/cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ewp.hei.usos.edu.pl/ewp/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <im1:imobilities
+                xmlns:im1="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <im1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im1:http-security>
+                <im1:get-url>https://ewp.hei.usos.edu.pl/ewp/imobilities/get</im1:get-url>
+                <im1:max-omobility-ids>100</im1:max-omobility-ids>
+                <im1:sends-notifications/>
+            </im1:imobilities>
+            <imc1:imobility-cnr
+                xmlns:imc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc1:http-security>
+                <imc1:url>https://ewp.hei.usos.edu.pl/ewp/imobilities/cnr</imc1:url>
+                <imc1:max-omobility-ids>100</imc1:max-omobility-ids>
+            </imc1:imobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewp.hei.usos.edu.pl/ewp/la/get</oml1:get-url>
+                <oml1:index-url>https://ewp.hei.usos.edu.pl/ewp/la/index</oml1:index-url>
+                <oml1:update-url>https://ewp.hei.usos.edu.pl/ewp/la/update</oml1:update-url>
+                <oml1:stats-url>https://ewp.hei.usos.edu.pl/ewp/la/stats</oml1:stats-url>
+                <oml1:max-omobility-ids>100</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <imt1:imobility-tors
+                xmlns:imt1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imt1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imt1:http-security>
+                <imt1:get-url>https://ewp.hei.usos.edu.pl/ewp/tors/get</imt1:get-url>
+                <imt1:index-url>https://ewp.hei.usos.edu.pl/ewp/tors/index</imt1:index-url>
+                <imt1:max-omobility-ids>10</imt1:max-omobility-ids>
+                <imt1:sends-notifications/>
+            </imt1:imobility-tors>
+            <imtc1:imobility-tor-cnr
+                xmlns:imtc1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <imtc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imtc1:http-security>
+                <imtc1:url>https://ewp.hei.usos.edu.pl/ewp/tors/cnr</imtc1:url>
+                <imtc1:max-omobility-ids>10</imtc1:max-omobility-ids>
+            </imtc1:imobility-tor-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>hei.demo.usos.edu.pl</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="b3b3e4660f9373070162692bb9775474e1f9ba8ebf04d897ed8bfa7224484db8"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="b3b3e4660f9373070162692bb9775474e1f9ba8ebf04d897ed8bfa7224484db8"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>ewp-tech@lists.erasmuswithoutpaper.eu</ewp:admin-email>
         <ewp:admin-provider>ESCI consortium (EWP Stats Portal)</ewp:admin-provider>
         <apis-implemented>
@@ -124707,6 +124945,12 @@ DEMO AKDENİZ ÜNİVERSİTESİ</name>
             <other-id type="pic">986237704</other-id>
             <name xml:lang="en">College Charlemagne</name>
             <name xml:lang="fr">Haute École Charlemagne</name>
+        </hei>
+        <hei id="hei.demo.usos.edu.pl">
+            <other-id type="erasmus">PL WARSZAW01</other-id>
+            <other-id type="pic">999572294</other-id>
+            <name xml:lang="en">University of Warsaw</name>
+            <name xml:lang="pl">Uniwersytet Warszawski</name>
         </hei>
         <hei id="hei.in4matic.it">
             <name xml:lang="en">Test Uni</name>
@@ -132065,6 +132309,14 @@ DEMO AKDENİZ ÜNİVERSİTESİ</name>
             sTn73TIyoUB5dRsbDgENv/zjCdof37sC+Vovl/DWMJOb1pQU/RQDWTCRyMj3jRAc/s7m5pfG87VU
             wyauw/svDIXBSLxc8eMhF8Jzt0bo70ATDveyblqrCa826fyUnSZV/RrmAGCj5hceh/L8oKy2EGS7
             iYvSGwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="b3b3e4660f9373070162692bb9775474e1f9ba8ebf04d897ed8bfa7224484db8">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRoADKMCjc3Hmlj92xPQm7YLpIwImTQ4
+            s7Z2++zqgcemxeBq9S2wAeW7l7R+VgK7h7qhe3ebw28hIUw2oP7wx3hwHTs0jLTPIa0+3CkO5tM9
+            pXGmyVsPWAJ0YP+b8C4vIy75qlnv5jpUp7JMrokpra+0nfS8zFdQlat72T0s+IPeyA2btUyFDggN
+            3+ASGsN/h9Kz6o5MnrfDqg8XgcKBgKr2xwuYlCwzhxITtZcS+8SToAdikgKDzRprw58joXpLhOoE
+            jC3F7b/dzJqSBhbpH+RV+/kt9F1PkTbe/DtyK4oXurDuCUlGiENZXx0985HuvQysMg9y3dNG30Ic
+            l7zdXwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="b3e79b017ee5bacdf85bb35118ec642201081aff38c1fc7271168d9741b8f0d2">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAonFBBDaztHl8PWu4y1xstJRFIqVf8rQM
