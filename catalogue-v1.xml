@@ -111409,6 +111409,67 @@
             <d6:discovery version="6.0.0">
                 <d6:url>https://service-test.hok.ac.at/testmobility/mainfest-test.xml</d6:url>
             </d6:discovery>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://service-test.hok.ac.at/testmobility/ewp/iia_approval_cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://service-test.hok.ac.at/testmobility/ewp/iia_cnr</iac3:url>
+            </iac3:iia-cnr>
+            <ia7:iias
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://service-test.hok.ac.at/testmobility/iia/iia_get</ia7:get-url>
+                <ia7:max-iia-ids>7</ia7:max-iia-ids>
+                <ia7:index-url>https://service-test.hok.ac.at/testmobility/iia/iias_index</ia7:index-url>
+                <ia7:stats-url>https://service-test.hok.ac.at/testmobility/iia/stats</ia7:stats-url>
+            </ia7:iias>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://service-test.hok.ac.at/testmobility/ewp/iias-approval</iaa2:url>
+                <iaa2:max-iia-ids>7</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
             <e2:echo version="2.0.1">
                 <e2:http-security>
                     <sec:client-auth-methods>
@@ -111421,6 +111482,49 @@
                 </e2:http-security>
                 <e2:url>https://service-test.hok.ac.at/testmobility/ewp/echo</e2:url>
             </e2:echo>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://service-test.hok.ac.at/testmobility/ewp/ounits/list</ou2:url>
+                <ou2:max-ounit-ids>7</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>7</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://service-test.hok.ac.at/testmobility/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://service-test.hok.ac.at/testmobility/ewp/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
         </apis-implemented>
         <institutions-covered>
             <hei-id>fh-kufstein.ac.at</hei-id>
