@@ -62174,6 +62174,24 @@
                 <f1:url>https://stag-demo.zcu.cz/ws/services/ewp/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
+            <om3:omobilities
+                xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <om3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om3:http-security>
+                <om3:get-url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/get</om3:get-url>
+                <om3:index-url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/index</om3:index-url>
+                <om3:update-url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/update</om3:update-url>
+                <om3:max-omobility-ids>10</om3:max-omobility-ids>
+            </om3:omobilities>
             <omc1:omobility-cnr
                 xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
