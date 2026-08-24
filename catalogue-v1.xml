@@ -61802,6 +61802,244 @@
                         <sec-B2:httpsig/>
                     </sec:server-auth-methods>
                 </e2:http-security>
+                <e2:url>https://stag-demo.zcu.cz/ws/services/ewp/echo</e2:url>
+            </e2:echo>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://stag-demo.zcu.cz/ws/services/ewp/manifest</d6:url>
+            </d6:discovery>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://stag-demo.zcu.cz/ws/services/ewp/institutions</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://stag-demo.zcu.cz/ws/services/ewp/ounits</ou2:url>
+                <ou2:max-ounit-ids>10</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>10</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia7:iias
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://stag-demo.zcu.cz/ws/services/ewp/iias/get</ia7:get-url>
+                <ia7:max-iia-ids>10</ia7:max-iia-ids>
+                <ia7:index-url>https://stag-demo.zcu.cz/ws/services/ewp/iias/index</ia7:index-url>
+                <ia7:stats-url>https://stag-demo.zcu.cz/ws/services/ewp/iias/stats</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://stag-demo.zcu.cz/ws/services/ewp/iias/cnr</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://stag-demo.zcu.cz/ws/services/ewp/iias/approval</iaa2:url>
+                <iaa2:max-iia-ids>10</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://stag-demo.zcu.cz/ws/services/ewp/iias/approval/cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://stag-demo.zcu.cz/ws/services/ewp/factsheet</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <om3:omobilities
+                xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <om3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </om3:http-security>
+                <om3:get-url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/get</om3:get-url>
+                <om3:index-url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/index</om3:index-url>
+                <om3:update-url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/update</om3:update-url>
+                <om3:max-omobility-ids>10</om3:max-omobility-ids>
+            </om3:omobilities>
+            <omc1:omobility-cnr
+                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <omc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omc1:http-security>
+                <omc1:url>https://stag-demo.zcu.cz/ws/services/ewp/omobilities/cnr</omc1:url>
+                <omc1:max-omobility-ids>10</omc1:max-omobility-ids>
+            </omc1:omobility-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://stag-demo.zcu.cz/ws/services/ewp/las/get</oml1:get-url>
+                <oml1:index-url>https://stag-demo.zcu.cz/ws/services/ewp/las/index</oml1:index-url>
+                <oml1:update-url>https://stag-demo.zcu.cz/ws/services/ewp/las/update</oml1:update-url>
+                <oml1:stats-url>https://stag-demo.zcu.cz/ws/services/ewp/las/stats</oml1:stats-url>
+                <oml1:max-omobility-ids>10</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://stag-demo.zcu.cz/ws/services/ewp/las/cnr</omlc1:url>
+                <omlc1:stats-url>https://stag-demo.zcu.cz/ws/services/ewp/las/cnr/stats</omlc1:stats-url>
+                <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <im2:imobilities
+                xmlns:im2="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <im2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im2:http-security>
+                <im2:get-url>https://stag-demo.zcu.cz/ws/services/ewp/imobilities/get</im2:get-url>
+                <im2:max-omobility-ids>10</im2:max-omobility-ids>
+            </im2:imobilities>
+            <imc2:imobility-cnr
+                xmlns:imc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <imc2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc2:http-security>
+                <imc2:url>https://stag-demo.zcu.cz/ws/services/ewp/imobilities/cnr</imc2:url>
+                <imc2:max-omobility-ids>10</imc2:max-omobility-ids>
+            </imc2:imobility-cnr>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>zcu.cz</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="896ee79408d94f818997c5410b2cc52499fed4d9fcde49cc25312d841dacac1d"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="896ee79408d94f818997c5410b2cc52499fed4d9fcde49cc25312d841dacac1d"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
+        <ewp:admin-email>ewpstag@civ.zcu.cz</ewp:admin-email>
+        <ewp:admin-provider>University of West Bohemia (IS/STAG)</ewp:admin-provider>
+        <apis-implemented>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
                 <e2:url>https://wstag-test.jcu.cz/ws/services/ewp/echo</e2:url>
             </e2:echo>
             <d6:discovery version="6.0.0">
@@ -127868,6 +128106,13 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             <other-id type="erasmus">UK YORK01</other-id>
             <name xml:lang="en">University of York</name>
         </hei>
+        <hei id="zcu.cz">
+            <other-id type="erasmus">CZ PLZEN01</other-id>
+            <other-id type="erasmus-charter">51707-EPP-1-2014-1-CZ-EPPKA3-ECHE</other-id>
+            <other-id type="pic">999843894</other-id>
+            <name xml:lang="cs">ZÁPADOČESKÁ UNIVERZITA V PLZNI</name>
+            <name xml:lang="en">University of West Bohemia in Pilsen</name>
+        </hei>
         <hei id="zhaw.ch">
             <other-id type="erasmus">CH WINTERT03</other-id>
             <other-id type="pic">998291506</other-id>
@@ -131150,6 +131395,14 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             pEoQMRsUgQvwO0ZGdeBoyZ2udPnqxd83SwNdWWqCY8SBhhIX+Gu1aR+Y+VVOHL4tNW92pcZ+LuEo
             Lo690BVuwIIkerDLI5FHw/dRAkiJK/aki4HbLPS3Aw1xEkq2v9gvJ6HyLs1svvcWEKLr6zK2u5R/
             xf5qa6+i2N6y049KSvqcWMuY9+58VxNdsL35VMdKqKcCAwEAAQ==
+        </rsa-public-key>
+        <rsa-public-key sha-256="896ee79408d94f818997c5410b2cc52499fed4d9fcde49cc25312d841dacac1d">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1yF6w3/iqa23cUFczuN2Tv7Ra17vJS8
+            zKK/NsvFC3Z6+IdcqC+w129j8Q+SbxgwCffurYfggdlTz/KjLOang3zL8NnDGlGgYi3iBDa54Gpl
+            V4HOnD+VqMVaFkn0e4XU8TtTL2pIPyVRz7APBaJsu+ifP2i5n8ZyZjVjmlTMu4DWhSQdH+n1v9Qz
+            YtrjptkD7oTTjGYl9g/jS1jHpJu3xaLhdl83SMyktUCkEurlUS8JS2QjhRLSYy1cD6tfLqKLKZis
+            A+V0YVmtYvKOX3ndl2FRhTLphrHVqTtuh9hYIDN9yEJKtfsrKpGJ8IEVqCq+0zC6JDNeXmYU/IcS
+            LqhubQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="89b5d04629446ce2706a558c6d5879382b6d193931699921a668a230d5378790">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAshJiZ+JzUUNYCO9Gh39DXSwDwo+C0Yd7
