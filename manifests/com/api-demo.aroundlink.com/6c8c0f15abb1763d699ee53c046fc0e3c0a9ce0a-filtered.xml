@@ -1,0 +1,259 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+>
+    <host>
+        <ewp:admin-email>aroundlink.app@gmail.com</ewp:admin-email>
+        <ewp:admin-provider>AroundLink</ewp:admin-provider>
+        <ewp:admin-notes>Aroundlink SaaS Platform - Serving: University A (Local)</ewp:admin-notes>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/manifest.xml</url>
+            </discovery>
+            <echo
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-echo/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/echo</url>
+            </echo>
+            <institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+                version="2.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/institutions</url>
+                <max-hei-ids>10</max-hei-ids>
+            </institutions>
+            <omobilities
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobilities/get</get-url>
+                <index-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobilities/index</index-url>
+                <update-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobilities/update</update-url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </omobilities>
+            <omobility-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobility-cnr</url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </omobility-cnr>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobility-las/get</get-url>
+                <index-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobility-las/index</index-url>
+                <update-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobility-las/update</update-url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </omobility-las>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/omobility-la-cnr</url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </omobility-la-cnr>
+            <iias
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.1"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/iias/get</get-url>
+                <max-iia-ids>100</max-iia-ids>
+                <index-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/iias/index</index-url>
+                <stats-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/iias/stats</stats-url>
+            </iias>
+            <iia-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/iia-cnr</url>
+            </iia-cnr>
+            <iias-approval
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/iias/approval</url>
+                <max-iia-ids>100</max-iia-ids>
+            </iias-approval>
+            <iia-approval-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/iia-approval-cnr</url>
+            </iia-approval-cnr>
+            <imobility-tors
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/imobility-tors/get</get-url>
+                <index-url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/imobility-tors/index</index-url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </imobility-tors>
+            <imobility-tor-stats
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/imobility-tors/stats</url>
+            </imobility-tor-stats>
+            <imobility-tor-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/imobility-tor-cnr</url>
+                <max-omobility-ids>100</max-omobility-ids>
+            </imobility-tor-cnr>
+            <factsheet
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <anonymous xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-none/tree/stable-v1"/>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://api-demo.aroundlink.com/ewp/test-hei-a.aroundlink.com/factsheet</url>
+                <max-hei-ids>1</max-hei-ids>
+            </factsheet>
+        </r:apis-implemented>
+        <institutions-covered>
+            <r:hei id="test-hei-a.aroundlink.com">
+                <r:name>University A (Local)</r:name>
+            </r:hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3O1ga0x10RD8ysoL0JxDi5qTc8Gsch10c+8jCdl9yVbjjoR5AiBYO2EKaqheATFXvhmD9qXI9PvFqodChIMktN+0iaxEJfBuDDzHs1AU7ulYgS4k/5Sw+Ij2x6M6GDjYaTHt0REY7mYB6t8ZGKEWHSM/kkNup+f6NUosPRIuBDzZDPFczEzJQjd7Vw2MUzZuYOV590zDVN+kh7lDZBJ6SZOKmWn9qqxT5TbIHAoHegIlb9aYYjd8RDJMzyQ2+jEeILrrPmXFbJnfohUUBv93c1KzKdc6QHSPdm7/b2NVIZot72g43HbL9GouRtimQ0fxBvD9UnZSIWHZDkbRBAaNFQIDAQAB</rsa-public-key>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3O1ga0x10RD8ysoL0JxDi5qTc8Gsch10c+8jCdl9yVbjjoR5AiBYO2EKaqheATFXvhmD9qXI9PvFqodChIMktN+0iaxEJfBuDDzHs1AU7ulYgS4k/5Sw+Ij2x6M6GDjYaTHt0REY7mYB6t8ZGKEWHSM/kkNup+f6NUosPRIuBDzZDPFczEzJQjd7Vw2MUzZuYOV590zDVN+kh7lDZBJ6SZOKmWn9qqxT5TbIHAoHegIlb9aYYjd8RDJMzyQ2+jEeILrrPmXFbJnfohUUBv93c1KzKdc6QHSPdm7/b2NVIZot72g43HbL9GouRtimQ0fxBvD9UnZSIWHZDkbRBAaNFQIDAQAB</rsa-public-key>
+        </server-credentials-in-use>
+    </host>
+</manifest>
