@@ -9,6 +9,9 @@
     xmlns:iac3="https://github.com/erasmus-without-paper/ewp-specs-api-iia-cnr/blob/stable-v3/manifest-entry.xsd"
     xmlns:im2="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
     xmlns:imc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:imt3="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
+    xmlns:imtc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd"
+    xmlns:imts1="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd"
     xmlns:in2="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
     xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
     xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
@@ -53,6 +56,15 @@
 
         https://github.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/tree/stable-v1
         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-reqencr-tls/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tors/stable-v3/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tor-cnr/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tor-stats/stable-v1/manifest-entry.xsd
     "
 >
     <host>
@@ -267,6 +279,42 @@
                 </file1:http-security>
                 <file1:url>https://ewp.pre.url.edu/api/files100</file1:url>
             </file1:file>
+            <imt3:imobility-tors version="3.0.0">
+                <imt3:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </imt3:http-security>
+                <imt3:get-url>https://ewp.pre.url.edu/api/imobilitytors300/get</imt3:get-url>
+                <imt3:index-url>https://ewp.pre.url.edu/api/imobilitytors300/index</imt3:index-url>
+                <imt3:max-omobility-ids>1</imt3:max-omobility-ids>
+            </imt3:imobility-tors>
+            <imtc2:imobility-tor-cnr version="2.0.0">
+                <imtc2:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </imtc2:http-security>
+                <imtc2:url>https://ewp.pre.url.edu/api/imobilitytors/cnr200</imtc2:url>
+                <imtc2:max-omobility-ids>1</imtc2:max-omobility-ids>
+            </imtc2:imobility-tor-cnr>
+            <imts1:imobility-tor-stats version="1.0.0">
+                <imts1:http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-httpsig/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </imts1:http-security>
+                <imts1:url>https://ewp.pre.url.edu/api/stats/imobilitytors</imts1:url>
+            </imts1:imobility-tor-stats>
         </r:apis-implemented>
         <mf:institutions-covered xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1">
             <hei id="url.edu">
