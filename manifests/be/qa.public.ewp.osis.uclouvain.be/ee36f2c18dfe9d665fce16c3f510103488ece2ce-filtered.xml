@@ -31,6 +31,22 @@
                 </e2:http-security>
                 <e2:url>https://qa.public.ewp.osis.uclouvain.be/api/external/echo</e2:url>
             </e2:echo>
+            <ns12:omobility-la-cnr
+                xmlns:ns12="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <ns12:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ns12:http-security>
+                <ns12:url>https://qa.public.ewp.osis.uclouvain.be/api/external/omobility-la/cnr</ns12:url>
+                <ns12:stats-url>https://qa.public.ewp.osis.uclouvain.be/api/external/omobility-la/cnr/stats</ns12:stats-url>
+                <ns12:max-omobility-ids>1</ns12:max-omobility-ids>
+            </ns12:omobility-la-cnr>
             <oml1:omobility-las version="1.2.0">
                 <oml1:http-security>
                     <sec:client-auth-methods>
