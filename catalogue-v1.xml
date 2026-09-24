@@ -62099,6 +62099,38 @@
                 <omlc1:stats-url>https://stag-demo.zcu.cz/ws/services/ewp/las/cnr/stats</omlc1:stats-url>
                 <omlc1:max-omobility-ids>10</omlc1:max-omobility-ids>
             </omlc1:omobility-la-cnr>
+            <im2:imobilities
+                xmlns:im2="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <im2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </im2:http-security>
+                <im2:get-url>https://stag-demo.zcu.cz/ws/services/ewp/imobilities/get</im2:get-url>
+                <im2:max-omobility-ids>10</im2:max-omobility-ids>
+            </im2:imobilities>
+            <imc2:imobility-cnr
+                xmlns:imc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <imc2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </imc2:http-security>
+                <imc2:url>https://stag-demo.zcu.cz/ws/services/ewp/imobilities/cnr</imc2:url>
+                <imc2:max-omobility-ids>10</imc2:max-omobility-ids>
+            </imc2:imobility-cnr>
         </apis-implemented>
         <institutions-covered>
             <hei-id>zcu.cz</hei-id>
