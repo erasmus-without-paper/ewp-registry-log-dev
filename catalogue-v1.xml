@@ -97490,6 +97490,191 @@
         </client-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp@tbs-education.fr</ewp:admin-email>
+        <ewp:admin-provider>Toulouse Business School GSE</ewp:admin-provider>
+        <ewp:admin-notes>Toulouse Business School in-house software</ewp:admin-notes>
+        <apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://ewp.webservices.test.tbs-education.fr/manifest</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://ewp.webservices.test.tbs-education.fr/api/echo</e2:url>
+            </e2:echo>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://ewp.webservices.test.tbs-education.fr/api/la/get</oml1:get-url>
+                <oml1:index-url>https://ewp.webservices.test.tbs-education.fr/api/la/index</oml1:index-url>
+                <oml1:update-url>https://ewp.webservices.test.tbs-education.fr/api/la/update</oml1:update-url>
+                <oml1:stats-url>https://ewp.webservices.test.tbs-education.fr/api/la/stats/out</oml1:stats-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://ewp.webservices.test.tbs-education.fr/api/la/cnr</omlc1:url>
+                <omlc1:stats-url>https://ewp.webservices.test.tbs-education.fr/api/la/stats/in</omlc1:stats-url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <ia7:iias
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://ewp.webservices.test.tbs-education.fr/api/iia/get</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:index-url>https://ewp.webservices.test.tbs-education.fr/api/iia/index</ia7:index-url>
+                <ia7:stats-url>https://ewp.webservices.test.tbs-education.fr/api/iia/stats</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://ewp.webservices.test.tbs-education.fr/api/iia/cnr</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://ewp.webservices.test.tbs-education.fr/api/iia/approval</iaa2:url>
+                <iaa2:max-iia-ids>1</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://ewp.webservices.test.tbs-education.fr/api/iia/approval/cnr</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://ewp.webservices.test.tbs-education.fr/api/institution/get</in2:url>
+                <in2:max-hei-ids>1</in2:max-hei-ids>
+            </in2:institutions>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://ewp.webservices.test.tbs-education.fr/api/factsheet/get</f1:url>
+                <f1:max-hei-ids>1</f1:max-hei-ids>
+            </f1:factsheet>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://ewp.webservices.test.tbs-education.fr/api/orgunits/get</ou2:url>
+                <ou2:max-ounit-ids>1</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>1</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <om3:omobilities
+                xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <om3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A0:anonymous/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                </om3:http-security>
+                <om3:get-url>https://ewp.webservices.test.tbs-education.fr/api/omobilities/get</om3:get-url>
+                <om3:index-url>https://ewp.webservices.test.tbs-education.fr/api/omobilities/index</om3:index-url>
+                <om3:update-url>https://ewp.webservices.test.tbs-education.fr/api/omobilities/update</om3:update-url>
+                <om3:max-omobility-ids>1</om3:max-omobility-ids>
+            </om3:omobilities>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>tbs-education.fr</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="dfa22b48cd1ac9b28d7e9841a1dec95d1b2f450c674e34642dea0d1610c0abb9"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="89147aad6bb527e77de0f23d7b2465e90a73b9a79af1a391eceaad5a80476022"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>support@solemove.fi</ewp:admin-email>
         <ewp:admin-provider>SoleMove</ewp:admin-provider>
         <apis-implemented>
@@ -126469,6 +126654,11 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             <name xml:lang="en">Türkisch-Deutsche Universität</name>
             <name xml:lang="tr">Türk Alman Üniversitesi</name>
         </hei>
+        <hei id="tbs-education.fr">
+            <other-id type="erasmus">F  TOULOUS23</other-id>
+            <other-id type="pic">914831930</other-id>
+            <name xml:lang="fr">Toulouse Business School</name>
+        </hei>
         <hei id="tcd.ie">
             <other-id type="erasmus">IRLDUBLIN01</other-id>
             <name xml:lang="en">TCD School of Medicine</name>
@@ -131266,6 +131456,14 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             0gwLQxvsUH82vQ12+bb6q1mHa7rD3Xh6QGBJ9aOD+fBGXCX/wA0kTlDQaAdjibTBg4FtfxgFjXrq
             UfWPowIDAQAB
         </rsa-public-key>
+        <rsa-public-key sha-256="89147aad6bb527e77de0f23d7b2465e90a73b9a79af1a391eceaad5a80476022">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxrAkmx8hdhlp1yCVEQoTNG0aXlN+S1wn
+            iZfcq6FeQaBzmvA0VMUDL4qtRYQR/kqpjJxl/DghHSMPD6lU32hIeuRcFoIDgSQ9pZ7Md7s11jXk
+            rboF0cQA8U/7MuCnKBJ5wRpzpA9DSH56wjmI6D5gNJsRxQwzev55zm3MSxkZGagHOI3A/bm7fNNM
+            YNldElb2rWLWKkJ4OTWei4cvI8GswHXAVV5ra5jvlByQJNllxwDWez9Gz6Tce0MI1YKSfDpTT14+
+            pJAsl1I7lSSTuB4pFApkxfycnIgPrAGHydAUvj+5c/km4s3rkTjedXuBTLZP3Tp84Nv7RFDiLZZH
+            HRORsQIDAQAB
+        </rsa-public-key>
         <rsa-public-key sha-256="896134e5e1954b4804f5465dd42a594452a04060831e2d1a25400f2af145726f">
             MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA60YiBgCiDHqBV0utj//honoOoL34tkN1
             tQk67XxQBphGyS0BsfGX0np4qyzjakBoJa2NYDVEodSSvgvJ4M/CXNBAObwt6umv99AMlOkjYi6p
@@ -133239,6 +133437,14 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             h64O127FNbtiqKFsMO2cnm1pDRb1i/3nRzcWCDP8oolsYTLZbZXX0aa9+YKi1IRPq53fjDlWKDyM
             +A28XuXN3oIWKd0G7t2CgnewqGGI5NYJaCbui7zXgtrAvtm/V5Rtdbo7UE/UBveq1zUQmIQekMfS
             MlmMRwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="dfa22b48cd1ac9b28d7e9841a1dec95d1b2f450c674e34642dea0d1610c0abb9">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqEXOUH1U0IswgrFgSLVolQAFM5ZrLd76
+            D3dBXMQgwmtGbJQIzWZgQ3f1xjU6Unz43bmmXMek9sMSILr2P6ZStme+Sw8ndkN3nRT372veRsrT
+            WDtszFssJnUfwW+ufbbyrBG/7QdWCMrIIDboFeTAxuABLty+d3VFCI5OxIxrVaJDCye5+iLhpqTf
+            8uCnGDNcG/AREhoD43gJ/dy7pCpFp4uT2pq62GRxdNh+0+U0pNnIBWy52O5/rbJCamkF73gtcPak
+            tWruQFAMB1tN0JPw+Jj/wcu7C4dsNOi8M/H/Zoj9LDLDngIdzowycliG6lx2ORFxbrvOuYftFn5P
+            D2wNwQIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="e03cdb006abfd25ba4ec7e5d75088d52538cf4144e33edcb286b38ba7c55ccfd">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiuhvshSCDBvmTOMWKQ8N7romiEFnEKFk
