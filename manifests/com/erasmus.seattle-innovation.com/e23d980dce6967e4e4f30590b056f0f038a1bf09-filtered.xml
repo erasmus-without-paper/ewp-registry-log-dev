@@ -1,0 +1,127 @@
+<manifest
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:mf="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:r="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+    xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v6
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v6/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-intro/stable-v2/schema.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-omobility-las/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-institutions/stable-v2/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-imobility-tors/stable-v3/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/stable-v1/manifest-entry.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/stable-v1/security-entries.xsd
+
+        https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/stable-v1/security-entries.xsd
+    "
+>
+    <host>
+        <ewp:admin-email>mduque@air-institute.com</ewp:admin-email>
+        <ewp:admin-provider>seattle</ewp:admin-provider>
+        <r:apis-implemented>
+            <discovery
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/blob/stable-v6/manifest-entry.xsd"
+                version="6.0.0"
+            >
+                <url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/manifest.xml</url>
+            </discovery>
+            <omobility-las
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/omobility/las/get</get-url>
+                <index-url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/omobility/las/index</index-url>
+                <update-url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/omobility/las/update</update-url>
+                <stats-url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/omobility/las/stats</stats-url>
+                <max-omobility-ids>50</max-omobility-ids>
+            </omobility-las>
+            <omobility-la-cnr
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/omobility/la/cnr</url>
+                <max-omobility-ids>50</max-omobility-ids>
+            </omobility-la-cnr>
+            <institutions
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-institutions/blob/stable-v2/manifest-entry.xsd"
+                version="2.2.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/institutions</url>
+                <max-hei-ids>50</max-hei-ids>
+            </institutions>
+            <imobility-tors
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-tors/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
+            >
+                <http-security>
+                    <sec:client-auth-methods>
+                        <httpsig xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-cliauth-httpsig/tree/stable-v1"/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <tlscert xmlns="https://github.com/erasmus-without-paper/ewp-specs-sec-srvauth-tlscert/tree/stable-v1"/>
+                    </sec:server-auth-methods>
+                </http-security>
+                <get-url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/imobility/tors/get</get-url>
+                <index-url>https://erasmus.seattle-innovation.com/ewp/hosts/c00337b2-1bdd-46e1-bc7d-6a8e80c7596c/imobility/tors/index</index-url>
+                <max-omobility-ids>50</max-omobility-ids>
+            </imobility-tors>
+        </r:apis-implemented>
+        <institutions-covered>
+            <hei
+                xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
+                id="ewp-a.seattle-innovation.com"
+            >
+                <name xml:lang="en">EWP Test University A</name>
+            </hei>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key>MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAvDZqDCc5o64wx7wq3SIEUYckRIsP0Zer+xrDOmBGLwZSDiWR5CM78zmc3Pe69if3bem3O0+fQzMhWev2IR/v5tGXopNOD2fxDyixTLI2WcQbNUthVB2v2wbiJLM//Mg0hyAhLCoRnQAWQdLoAF3jCfS+es7F2+1yOV94n/n2PUzmUMq+taPcqmJAzN4ACpzECNamGnxVv9P8JjYorAZVgUKih7YfmVb5Jw4yp0RA+oUEWMVgtOE7uCAA0xnaRXmobbbFtqdC/MQ/O3XWs7UJLV5ZRyR9EBGdfzD6MCIFHB9PtWBaE8h+qslXMqHHVjg5j/PkX5dACwKXAUWiK0avlWXsh5pUEzY5VEO982RhyJkNqnCQA/QnZhPWolyAljonO/6HnOhrLTfxyybo+yBIn5H7IcRfAklAU7tMR/K422/24EZBDDJ2FGLveQ63Kbw/d/ImrNzD7n1p2TH9EPPLO0Qquyq1V3Sd+wQmGj1DwSx9dLLgrPUfnTCyCYxNngMVAgMBAAE=</rsa-public-key>
+        </client-credentials-in-use>
+    </host>
+</manifest>
