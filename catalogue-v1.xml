@@ -124246,11 +124246,12 @@
                 <f1:url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/factsheet</f1:url>
                 <f1:max-hei-ids>1</f1:max-hei-ids>
             </f1:factsheet>
-            <om2:omobilities
-                xmlns:om2="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v2/manifest-entry.xsd"
-                version="2.0.0"
+            <om3:omobilities
+                xmlns:om3="https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/blob/stable-v3/manifest-entry.xsd"
+                version="3.0.0"
             >
-                <om2:http-security>
+                <ewp:admin-email>ewp@digitalis.pt</ewp:admin-email>
+                <om3:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -124264,11 +124265,12 @@
                     <sec:response-encryption-methods>
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
-                </om2:http-security>
-                <om2:get-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobilities_get</om2:get-url>
-                <om2:index-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobilities_index</om2:index-url>
-                <om2:max-omobility-ids>1</om2:max-omobility-ids>
-            </om2:omobilities>
+                </om3:http-security>
+                <om3:get-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobilities_get</om3:get-url>
+                <om3:index-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobilities_index</om3:index-url>
+                <om3:update-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobilities_update</om3:update-url>
+                <om3:max-omobility-ids>1</om3:max-omobility-ids>
+            </om3:omobilities>
             <oml1:omobility-las
                 xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
                 version="1.2.0"
@@ -124294,12 +124296,12 @@
                 <oml1:stats-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobility_la_stats</oml1:stats-url>
                 <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
             </oml1:omobility-las>
-            <omc1:omobility-cnr
-                xmlns:omc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v1/manifest-entry.xsd"
-                version="1.0.0"
+            <omc2:omobility-cnr
+                xmlns:omc2="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
             >
                 <ewp:admin-email>ewp@digitalis.pt</ewp:admin-email>
-                <omc1:http-security>
+                <omc2:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
                     </sec:client-auth-methods>
@@ -124313,10 +124315,10 @@
                     <sec:response-encryption-methods>
                         <sec-D1:tls/>
                     </sec:response-encryption-methods>
-                </omc1:http-security>
-                <omc1:url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobility_cnr</omc1:url>
-                <omc1:max-omobility-ids>1</omc1:max-omobility-ids>
-            </omc1:omobility-cnr>
+                </omc2:http-security>
+                <omc2:url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobility_cnr</omc2:url>
+                <omc2:max-omobility-ids>1</omc2:max-omobility-ids>
+            </omc2:omobility-cnr>
             <omlc1:omobility-la-cnr
                 xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
                 version="1.1.0"
@@ -124341,6 +124343,74 @@
                 <omlc1:stats-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobility_la_cnr_stats</omlc1:stats-url>
                 <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
             </omlc1:omobility-la-cnr>
+            <oms1:omobility-stats
+                xmlns:oms1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-stats/blob/stable-v1/manifest-entry.xsd"
+                version="1.0.0"
+            >
+                <ewp:admin-email>ewp@digitalis.pt</ewp:admin-email>
+                <oms1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </oms1:http-security>
+                <oms1:url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/omobility_stats</oms1:url>
+            </oms1:omobility-stats>
+            <im2:imobilities
+                xmlns:im2="https://github.com/erasmus-without-paper/ewp-specs-api-imobilities/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <ewp:admin-email>ewp@digitalis.pt</ewp:admin-email>
+                <im2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </im2:http-security>
+                <im2:get-url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/imobilities_get</im2:get-url>
+                <im2:max-omobility-ids>1</im2:max-omobility-ids>
+            </im2:imobilities>
+            <imc2:imobility-cnr
+                xmlns:imc2="https://github.com/erasmus-without-paper/ewp-specs-api-imobility-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <ewp:admin-email>ewp@digitalis.pt</ewp:admin-email>
+                <imc2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                        <sec-B1:tlscert/>
+                    </sec:server-auth-methods>
+                    <sec:request-encryption-methods>
+                        <sec-C1:tls/>
+                    </sec:request-encryption-methods>
+                    <sec:response-encryption-methods>
+                        <sec-D1:tls/>
+                    </sec:response-encryption-methods>
+                </imc2:http-security>
+                <imc2:url>https://international-teste.ualg.pt/mobilidadenet/ewp/ewpstage/imobility_cnr</imc2:url>
+                <imc2:max-omobility-ids>1</imc2:max-omobility-ids>
+            </imc2:imobility-cnr>
             <file1:file
                 xmlns:file1="https://github.com/erasmus-without-paper/ewp-specs-api-file/blob/stable-v1/manifest-entry.xsd"
                 version="1.0.0"
@@ -124348,7 +124418,6 @@
                 <file1:http-security>
                     <sec:client-auth-methods>
                         <sec-A2:httpsig/>
-                        <sec-A0:anonymous/>
                     </sec:client-auth-methods>
                     <sec:server-auth-methods>
                         <sec-B2:httpsig/>
