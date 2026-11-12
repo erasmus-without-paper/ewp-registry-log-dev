@@ -124572,6 +124572,50 @@
         </client-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>info@pim-plattform.de</ewp:admin-email>
+        <ewp:admin-provider>PIM</ewp:admin-provider>
+        <ewp:admin-notes>Test host of PIM in the EWP DEV network. Implements discovery, echo and institutions; omobility-las will follow.</ewp:admin-notes>
+        <apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://test.pim-plattform.de/ewp/manifest.xml</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.1">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://test.pim-plattform.de/ewp/echo</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B1:tlscert/>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://test.pim-plattform.de/ewp/institutions</in2:url>
+                <in2:max-hei-ids>2</in2:max-hei-ids>
+            </in2:institutions>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>test.pim-plattform.de</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="3f802d8fb7cd9d96ada6f0e8f8cb783425ba200417d93e6956f4012acc66b9f0"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="3f802d8fb7cd9d96ada6f0e8f8cb783425ba200417d93e6956f4012acc66b9f0"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>ewp-tech@lists.erasmuswithoutpaper.eu</ewp:admin-email>
         <ewp:admin-provider>ESCI consortium (EWP Stats Portal)</ewp:admin-provider>
         <apis-implemented>
@@ -128450,6 +128494,9 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             <name xml:lang="en">Mendel University in Brno</name>
             <name xml:lang="sk">Mendelova univerzita v Brne</name>
         </hei>
+        <hei id="test.pim-plattform.de">
+            <name xml:lang="en">PIM Test University</name>
+        </hei>
         <hei id="test.uma.es">
             <other-id type="erasmus">E  MALAGA99</other-id>
             <other-id type="local">test.uma.es</other-id>
@@ -131348,6 +131395,14 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             DEOixW3puD5ueaW1o/08Q1IdTKBHl+WNnyJGeT+cLGqVlJ0QT7JO3sFrqZzDTt6ULSaSr/LtjZ1n
             Inu9xFvNYeNgDm9fCj1Ta0jm2LPbVM0knY2wIJrbm0JbOfkHpYewISfrcz/Zh5bcZ8DS5FKWm4Nl
             7sU2GwIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="3f802d8fb7cd9d96ada6f0e8f8cb783425ba200417d93e6956f4012acc66b9f0">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsmhhje72QIkDop7R3jKiVwqrgyEPN3Pl
+            ESL71i/DC3To5xnIfyIlkUwv5fY23dRWBUXYB1HpuQu6VBS+PM4fwzdVsnK0o6Hpt30bUj9UieUE
+            tf++0CJHrA/C9thANDWdPQAxyt8Nb7sKdW7efd9wQlZAszCqIZrDqjplEYWGHGKpezQUhEHdpxse
+            aJaMF5//RI2AYDgBvD33szKEvMhhDvq48R2Odjo2I9E5r/P/C0QjTXgITGAKJL6GQfIDpzETpnT2
+            eYHi14H5dszER4wb9K5HUpBm5MIqzwOdlHaQHovlJQBlI2RIpzaWNNEpPSBwC0YVlOrZGq7NPh2z
+            iKpKYwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="3f9eebaa615b0e6fae340e84dd7483897ac5d186bfa7f70b0ade09e53f13647f">
             MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAnFSDsAhzFjZJ376u/sfTc93th/7anqJX
