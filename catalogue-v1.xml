@@ -124145,6 +124145,167 @@
         </server-credentials-in-use>
     </host>
     <host>
+        <ewp:admin-email>ewp@sop.co.at</ewp:admin-email>
+        <ewp:admin-provider>Mobility-Online</ewp:admin-provider>
+        <ewp:admin-notes>stable v2.22930 (09/11/2026)</ewp:admin-notes>
+        <apis-implemented>
+            <d6:discovery version="6.0.0">
+                <d6:url>https://mobility.it.helsinki.fi/helsinki_test/ewp/manifest/helsinki.fi?api=all</d6:url>
+            </d6:discovery>
+            <e2:echo version="2.0.0">
+                <e2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </e2:http-security>
+                <e2:url>https://mobility.it.helsinki.fi/mobility_test/ewp/echo/helsinki.fi</e2:url>
+            </e2:echo>
+            <in2:institutions version="2.2.0">
+                <in2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </in2:http-security>
+                <in2:url>https://mobility.it.helsinki.fi/mobility_test/ewp/institutions/helsinki.fi</in2:url>
+                <in2:max-hei-ids>3</in2:max-hei-ids>
+            </in2:institutions>
+            <ou2:organizational-units version="2.1.1">
+                <ou2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ou2:http-security>
+                <ou2:url>https://mobility.it.helsinki.fi/mobility_test/ewp/ounits/helsinki.fi</ou2:url>
+                <ou2:max-ounit-ids>3</ou2:max-ounit-ids>
+                <ou2:max-ounit-codes>3</ou2:max-ounit-codes>
+            </ou2:organizational-units>
+            <ia7:iias
+                xmlns:ia7="https://github.com/erasmus-without-paper/ewp-specs-api-iias/blob/stable-v7/manifest-entry.xsd"
+                version="7.0.0"
+            >
+                <ia7:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </ia7:http-security>
+                <ia7:get-url>https://mobility.it.helsinki.fi/mobility_test/ewp/iias/get/helsinki.fi</ia7:get-url>
+                <ia7:max-iia-ids>1</ia7:max-iia-ids>
+                <ia7:index-url>https://mobility.it.helsinki.fi/mobility_test/ewp/iias/index/helsinki.fi</ia7:index-url>
+                <ia7:stats-url>https://mobility.it.helsinki.fi/mobility_test/ewp/iias/stats/helsinki.fi</ia7:stats-url>
+            </ia7:iias>
+            <iac3:iia-cnr version="3.0.0">
+                <iac3:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iac3:http-security>
+                <iac3:url>https://mobility.it.helsinki.fi/mobility_test/ewp/iias/cnr/helsinki.fi</iac3:url>
+            </iac3:iia-cnr>
+            <iaa2:iias-approval
+                xmlns:iaa2="https://github.com/erasmus-without-paper/ewp-specs-api-iias-approval/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaa2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaa2:http-security>
+                <iaa2:url>https://mobility.it.helsinki.fi/mobility_test/ewp/iias-approval/get/helsinki.fi</iaa2:url>
+                <iaa2:max-iia-ids>1</iaa2:max-iia-ids>
+            </iaa2:iias-approval>
+            <iaac2:iia-approval-cnr
+                xmlns:iaac2="https://github.com/erasmus-without-paper/ewp-specs-api-iia-approval-cnr/blob/stable-v2/manifest-entry.xsd"
+                version="2.0.0"
+            >
+                <iaac2:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </iaac2:http-security>
+                <iaac2:url>https://mobility.it.helsinki.fi/mobility_test/ewp/iias-approval-cnr/cnr/helsinki.fi</iaac2:url>
+            </iaac2:iia-approval-cnr>
+            <oml1:omobility-las
+                xmlns:oml1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-las/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <oml1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </oml1:http-security>
+                <oml1:get-url>https://mobility.it.helsinki.fi/mobility_test/ewp/mobility_out_la/get/helsinki.fi</oml1:get-url>
+                <oml1:index-url>https://mobility.it.helsinki.fi/mobility_test/ewp/mobility_out_la/index/helsinki.fi</oml1:index-url>
+                <oml1:update-url>https://mobility.it.helsinki.fi/mobility_test/ewp/mobility_out_la/update/helsinki.fi</oml1:update-url>
+                <oml1:stats-url>https://mobility.it.helsinki.fi/mobility_test/ewp/mobility_out_la/get/stats/helsinki.fi</oml1:stats-url>
+                <oml1:max-omobility-ids>1</oml1:max-omobility-ids>
+            </oml1:omobility-las>
+            <omlc1:omobility-la-cnr
+                xmlns:omlc1="https://github.com/erasmus-without-paper/ewp-specs-api-omobility-la-cnr/blob/stable-v1/manifest-entry.xsd"
+                version="1.1.0"
+            >
+                <omlc1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </omlc1:http-security>
+                <omlc1:url>https://mobility.it.helsinki.fi/mobility_test/ewp/mobility_out_la/cnr/helsinki.fi</omlc1:url>
+                <omlc1:stats-url>https://mobility.it.helsinki.fi/mobility_test/ewp/mobility_out_la/cnr/stats/helsinki.fi</omlc1:stats-url>
+                <omlc1:max-omobility-ids>1</omlc1:max-omobility-ids>
+            </omlc1:omobility-la-cnr>
+            <f1:factsheet
+                xmlns:f1="https://github.com/erasmus-without-paper/ewp-specs-api-factsheet/blob/stable-v1/manifest-entry.xsd"
+                version="1.2.0"
+            >
+                <f1:http-security>
+                    <sec:client-auth-methods>
+                        <sec-A2:httpsig/>
+                    </sec:client-auth-methods>
+                    <sec:server-auth-methods>
+                        <sec-B2:httpsig/>
+                    </sec:server-auth-methods>
+                </f1:http-security>
+                <f1:url>https://mobility.it.helsinki.fi/mobility_test/ewp/factsheets/helsinki.fi</f1:url>
+                <f1:max-hei-ids>3</f1:max-hei-ids>
+            </f1:factsheet>
+        </apis-implemented>
+        <institutions-covered>
+            <hei-id>helsinki.fi</hei-id>
+        </institutions-covered>
+        <client-credentials-in-use>
+            <rsa-public-key sha-256="33c7ab0080cbf123faebd6b73a8320fc45b1f1933e7ee34c7ab33b8cacf47ccc"/>
+        </client-credentials-in-use>
+        <server-credentials-in-use>
+            <rsa-public-key sha-256="33c7ab0080cbf123faebd6b73a8320fc45b1f1933e7ee34c7ab33b8cacf47ccc"/>
+        </server-credentials-in-use>
+    </host>
+    <host>
         <ewp:admin-email>ewp-tech@lists.erasmuswithoutpaper.eu</ewp:admin-email>
         <ewp:admin-provider>ESCI consortium (EWP Stats Portal)</ewp:admin-provider>
         <apis-implemented>
@@ -126486,6 +126647,12 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             <other-id type="pic">949660071</other-id>
             <name xml:lang="en">Haute Ecole Libre Mosane - HELMO</name>
             <name xml:lang="nl">HAUTE ECOLE LIBRE MOSANE</name>
+        </hei>
+        <hei id="helsinki.fi">
+            <other-id type="erasmus">SF HELSINK01</other-id>
+            <other-id type="pic">999994535</other-id>
+            <name xml:lang="en">HELSINGIN YLIOPISTO</name>
+            <name xml:lang="fi">HELSINGIN YLIOPISTO</name>
         </hei>
         <hei id="henallux.be">
             <other-id type="erasmus">B  NAMUR15</other-id>
@@ -130659,6 +130826,14 @@ M6As4RB4k+K8+wKP4xQtTjPx9QXc9eVJEZT4oVJXnEsT6PPBWRYcpA==</certificate>
             t1rz9zaRceMV5sB7Dz1GXgHxYIBwNhuNgHxRtDm/k5E6OzygiJM1zePEGUMnWG8tKq677OSinMt1
             I851taY5U5UPKS4HbLMTvaBaryW4lFtSVDvGYsx4AcfLSqTDoN3HARQDvCTcD7QwmJkq54uQmAg7
             AWJagQIDAQAB
+        </rsa-public-key>
+        <rsa-public-key sha-256="33c7ab0080cbf123faebd6b73a8320fc45b1f1933e7ee34c7ab33b8cacf47ccc">
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArIiy9FAfwsiq24iMPZidVgUiPMN3nylm
+            e7hJGWE/qrljcYRLDvEv7cBiJPEnbBzUHMAtfjmiN2mDDxtXxGWxag7i2gYexjHohLOIZwa/OlVF
+            qg7uScmOeKru4zJuxJFiD4D/3V3ZjORiCGE3Y8hpdW4VPl0bdOxqosWu+iP+TfxdTP3PJYF7718r
+            6JA7U4rpNIzM3Q7h6FSMw3k6zYrBzXg2nziEiAAHuMPDuie6gaGXlKPOrT2tV53L+sNT7KzKbFG1
+            SlC4aUx0l5DIWc4Mec0dCl7cQhwQPaDVFbSI/ON7fuA4GAC5peQq6uId73Ml4xZazvjI6X7g2BkB
+            vmMjwwIDAQAB
         </rsa-public-key>
         <rsa-public-key sha-256="3416df926c133c713027630a2afd8a226882700d3ffb2105ceb746673f3728e6">
             MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7wWiB6epvCjixWDidGVYu/CSBbfOwTFB
